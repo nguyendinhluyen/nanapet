@@ -218,5 +218,6 @@
         'left_facebook_page_plugin' => $left_facebook_page_plugin,
     ));	
     
-    $xtemplate->show($html);				
+    $xtemplate->show($html);	
+    
 ?>
