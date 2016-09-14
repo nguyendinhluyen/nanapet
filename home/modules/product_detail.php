@@ -701,4 +701,5 @@
         'display_realtion_news'                         => $display_realtion_news
     ));	
     $content = $productdetail;	
+    
 ?>
