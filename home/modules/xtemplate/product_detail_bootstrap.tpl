@@ -361,7 +361,6 @@
                                     margin-bottom: 15px;
                                     border-width:1px;                                                
                                     border-color:#cccccc; width:100%; float:left"/>    
-                        
                         <div style = "line-height: 25px; 
                                     width: 100%; 
                                     float: left;
@@ -371,15 +370,19 @@
                                     padding-top: 10px">
                             <ul style="padding-left: 0px">
                                 <li>
-                                    <span style="font-size: 14px;                                                   
-                                                 color: #101010;">CHI TIẾT SẢN PHẤM</span>    
+                                    <span style="color: #101010;">
+                                        CHI TIẾT SẢN PHẤM
+                                    </span>    
                                 </li>
                             </ul>
                             <ul style="padding-left: 0px">
                                 <li>
-                                    <span style ="font-size: 14px; margin-right: 155px">Thương hiệu </span>
+                                    <span style ="width: 250px; 
+                                                  float:left">
+                                        Thương hiệu 
+                                    </span>
                                     <span>
-                                        <a href="{linknsx}" 
+                                        <a href="{linknsx}"
                                            target="_blank" 
                                            style ="font-size: 14px; outline:none; color:black">{nsx}</a>
                                     </span>
@@ -387,7 +390,10 @@
                             </ul>
                             <ul style="padding-left: 0px">
                                 <li>
-                                    <span style ="font-size: 14px; margin-right: 190px">Xuất xứ </span>
+                                    <span style ="width: 250px; 
+                                                  float:left">
+                                        Xuất xứ
+                                    </span>
                                     <span>
                                         <a href="{linknsx}" 
                                            target="_blank" 
@@ -397,10 +403,54 @@
                             </ul>
                             {product_color}
                             {product_type}
-                                    
-
+                            <ul style="padding-left: 0px">
+                                <li>
+                                    <span style ="width: 250px; 
+                                                  float:left">
+                                        Tình trạng
+                                    </span>
+                                    <span>
+                                        {status}
+                                    </span>
+                                </li>
+                            </ul>
+                            <ul style="padding-left: 0px">
+                                <li>
+                                    <span style ="width: 250px; 
+                                                  float:left">
+                                        Số lần đánh giá
+                                    </span>
+                                    <span style="font-weight:bold;">
+                                        {rate_count}
+                                    </span>
+                                </li>
+                            </ul>
+                            <ul style="padding-left: 0px">
+                                <li>
+                                    <span style ="width: 250px; 
+                                                  float:left">
+                                        Đánh giá trung bình
+                                    </span>
+                                    <span id="count_rates"> 
+                                        {count_rates} 
+                                    </span>
+                                </li>
+                            </ul>
+                            <ul style="padding-left: 0px">
+                                <li>
+                                    <a href="#addToMyFavorite" 
+                                       onClick="addToMyFavorite();" 
+                                       style ="outline:none">
+                                        {them_vao_ua_thich}
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
                         
+                                    
+                                    
+                                    
+                                    
                         
                         <table style = "line-height: 30px; 
                                         width: 100%; 
@@ -418,7 +468,8 @@
                                     <span style = "font-size: 14px">{xuatxu}</span>
                                 </td>
                             </tr>
-                            
+                            {product_color}
+                            {product_type}
                             <tr>
                                 <td>
                                     <span style="font-size: 14px">Tình trạng</span>
@@ -471,7 +522,6 @@
                             <tr>
                         </table>    
                                     
-
                                     
                         <div>
                             <div class="hidden-xs hidden-sm">
@@ -1005,7 +1055,6 @@
 </script>		
 	
 <script type="text/javascript">  
-    
     function addToMyFavorite()
     {
         if ($("#type").index() !== -1) 
