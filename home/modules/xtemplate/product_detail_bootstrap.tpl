@@ -158,11 +158,13 @@
                                         line-height: 30px">
                 {breadcrumbs_path}
             </div>
-            <div class="col1_content">                                
+            <div class="col1_content">
                 <div class = "col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <div id="detail1">                        
-                        <div style="font-weight:500; text-align:center; 
-                                    padding-bottom: 10px">                                       
+                        <div style="font-weight:500; 
+                                    text-align:center; 
+                                    padding-bottom: 20px;
+                                    padding-top: 20px">
                                 <span style="color: #428bca; 
                                             line-height: 30px;
                                             text-transform: uppercase;
@@ -195,18 +197,17 @@
                 <div class = "col-sm-12 col-sx-12 col-md-12 col-lg-12" style="padding:0px">
                     <form name='cart' action="{linkS}gio-hang/{product_key}/add" method="post">                        
                         <div style="font-family:RobotoSlabRegular;">                            
-                            <div class="col-sm-12 col-sx-12 col-md-6 col-lg-6" style="float:left; padding: 0px">
+                            <div class="col-sm-12 col-sx-12 col-md-6 col-lg-6" 
+                                 style="float:left; padding: 0px;">
                                 <img alt="{product_name}"
                                     src="{linkS}upload/product/thumb/{product_image}"                           
                                     style="width: 300px;
                                            height: 300px;">
                             </div>
                             <div class="col-sm-12 col-sx-12 col-md-6 col-lg-6" style="float:left">
-                                <table style = "float:left;                                       
-                                                line-height: 30px;
-                                                margin-bottom: 5px;">
+                                <div style="font-size: 14px">
                                     {khuyenmai}                                                                                                           
-                                </table>
+                                </div>
                                 <hr  style = "margin-top: 10px;
                                     margin-bottom: 15px;
                                     border-width:1px;                                                
@@ -368,14 +369,14 @@
                                     line-height: 30px;
                                     font-size: 14px;
                                     padding-top: 10px">
-                            <ul style="padding-left: 0px">
+                            <ul style="padding-left: 0px; clear: both">
                                 <li>
                                     <span style="color: #101010;">
                                         CHI TIẾT SẢN PHẤM
                                     </span>    
                                 </li>
                             </ul>
-                            <ul style="padding-left: 0px">
+                            <ul style="padding-left: 0px; clear: both">
                                 <li>
                                     <span style ="width: 250px; 
                                                   float:left">
@@ -388,7 +389,7 @@
                                     </span>
                                 </li>
                             </ul>
-                            <ul style="padding-left: 0px">
+                            <ul style="padding-left: 0px; clear: both">
                                 <li>
                                     <span style ="width: 250px; 
                                                   float:left">
@@ -403,7 +404,7 @@
                             </ul>
                             {product_color}
                             {product_type}
-                            <ul style="padding-left: 0px">
+                            <ul style="padding-left: 0px; clear: both">
                                 <li>
                                     <span style ="width: 250px; 
                                                   float:left">
@@ -414,7 +415,7 @@
                                     </span>
                                 </li>
                             </ul>
-                            <ul style="padding-left: 0px">
+                            <ul style="padding-left: 0px; clear: both">
                                 <li>
                                     <span style ="width: 250px; 
                                                   float:left">
@@ -425,7 +426,7 @@
                                     </span>
                                 </li>
                             </ul>
-                            <ul style="padding-left: 0px">
+                            <ul style="padding-left: 0px; clear: both">
                                 <li>
                                     <span style ="width: 250px; 
                                                   float:left">
@@ -436,7 +437,9 @@
                                     </span>
                                 </li>
                             </ul>
-                            <ul style="padding-left: 0px">
+                            <ul style="padding-left: 0px;
+                                       clear: both;
+                                       margin-bottom: 30px">
                                 <li>
                                     <a href="#addToMyFavorite" 
                                        onClick="addToMyFavorite();" 
@@ -446,83 +449,6 @@
                                 </li>
                             </ul>
                         </div>
-                        
-                                    
-                                    
-                                    
-                                    
-                        
-                        <table style = "line-height: 30px; 
-                                        width: 100%; 
-                                        float: left;
-                                        font-family: RobotoSlabRegular;
-                                        line-height: 30px;
-                                        font-size: 14px;
-                                        padding-top: 10px">
-                            <tr>
-                                <!-- Xuat xu -->
-                                <td>
-                                    <span style = "font-size: 14px">Xuất xứ </span>
-                                </td>
-                                <td>
-                                    <span style = "font-size: 14px">{xuatxu}</span>
-                                </td>
-                            </tr>
-                            {product_color}
-                            {product_type}
-                            <tr>
-                                <td>
-                                    <span style="font-size: 14px">Tình trạng</span>
-                                </td>
-                                <td>
-                                    <span style="color: #00acd7;font-size: 14px">
-                                        <div>{status}</div>
-                                    </span>
-                                </td>
-                            </tr>    
-                            <tr>
-                                <td style="float: left">
-                                    <span style="text-align:left">
-                                        Số lần đánh giá
-                                    </span>                                
-                                </td>
-                                <td>
-                                    <div id = "rate_count" 
-                                         style="font-size: 14px;                                                                 
-                                                font-weight:bold;"> 
-                                        {rate_count}
-                                    </div>			   				
-                                </td>
-                            </tr>
-                             <tr>                                        
-                                <td style="float: left">
-                                    <span style="text-align:left">
-                                        Đánh giá trung bình
-                                    </span>
-                                </td>                                        
-                                <td>
-                                    <span id="count_rates" style="font-size: 14px;"> 
-                                        {count_rates} 
-                                    </span>
-                                </td>                            
-                            </tr>
-                            <tr>
-                                <td>                                           
-                                    <a href="#addToMyFavorite" 
-                                       onClick="addToMyFavorite();" 
-                                       style ="font-size: 14px; outline:none">
-                                        {them_vao_ua_thich}
-                                    </a>
-                                </td>                            
-                            </tr>
-                            <tr>
-                                <td colspan="2">
-                                    <br/>
-                                </td>
-                            <tr>
-                        </table>    
-                                    
-                                    
                         <div>
                             <div class="hidden-xs hidden-sm">
                                 <br/>
