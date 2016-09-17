@@ -1,5 +1,4 @@
 <?php
-    //include 'category.php';
     $news = new News();
     $user_name = $_SESSION['username'];
     $hidden = '';
@@ -86,39 +85,36 @@
     $colorTemplate = '';
     $p_attribute = $product_detail['p_attribute'];
 
-    if ($p_attribute == '') {
-        $p_attribute = "Đặc Điểm :";
+    if (empty($p_attribute)) {
+        $p_attribute = "Đặc Điểm ";
     }
 
-    if ($proColor[0] != '') {
-        $colorTemplate .='<tr>
-                                <td>
-                                    <span style ="font-size:14px">' . $p_attribute . '</span>
-                                </td>
-                                <td align="right">
-                                    <span>';
-        $colorTemplate .='<table align="left">';
+    if (!empty($proColor[0])) {
         $i = 0;
         foreach ($proColor as $val) {
-            $colorTemplate .='<tr><td>';
+            $colorTemplate .='<ul style="padding-left: 0px; clear: both"><li>';
             if ($i == 0) {
+                $colorTemplate .='<span style ="float:left; width: 250px">' 
+                                    . $p_attribute 
+                                . '</span>';
                 $colorTemplate .='<input type="radio"
-                                             name="color"
-                                             id="color"
-                                             checked 
-                                             align="left" value="' . $val . '" />' . '</td> <td align="left" style="font-size:14px">&nbsp' . $val;
+                                                name="color"
+                                                id="color"
+                                                checked 
+                                                align="left" value="' . $val . '" />'
+                                . '&nbsp; <span>' . $val .'</span>';
             } else {
-                $colorTemplate .='<input type="radio"
-                                             name="color"
-                                             id="color"
-                                             align="left"
-                                             value="' . $val . '" />' . '</td> <td align="left" style="font-size:14px">&nbsp' . $val;
+                $colorTemplate .= '<span style="width: 250px; float:left">&nbsp;</span>';
+                $colorTemplate .= '<input type="radio"
+                                        name="color"
+                                        id="color"
+                                        align="left"
+                                        value="' . $val . '" />'
+                                . '&nbsp; <span>' . $val . '</span>';
             }
-            $colorTemplate .='</td></tr>';
+            $colorTemplate .='</li></ul>';
             $i ++;
         }
-        $colorTemplate .='</table>';
-        $colorTemplate .= '</span></td></tr>';
     }
 
     $typeTemplate = '';
@@ -129,15 +125,17 @@
             if ($pri == '') {
                 $pri = $product_detail['products_price'];
             }
-            $typeTemplate .='<ul style="padding-left: 0px"><li>';
+            $typeTemplate .='<ul style="padding-left: 0px; clear: both"><li>';
             if ($i == 0) {
-                $typeTemplate .= '<span style="width: 250px; float:left">Loại : </span>';
-                $typeTemplate .=$val['type'] . '&nbsp; (=' . $pri . ')' . '&nbsp; <span width="10px;">
-                    <input type="radio" id="type" name="type" checked value="' . $val['type'] . '::' . $pri . '" />';
+                $typeTemplate .= '<span style="width: 250px; float:left">Loại </span>';
+                $typeTemplate .= '<span width="10px;">'
+                    . '<input type="radio" id="type" name="type" checked value="' . $val['type'] . '::' . $pri . '" />'
+                    . '&nbsp; '.$val['type'] . '&nbsp; (=' . $pri . ')' ;
             } else {
                 $typeTemplate .= '<span style="width: 250px; float:left">&nbsp;</span>';
-                $typeTemplate .=$val['type'] . '&nbsp; (=' . $pri . ')' . '&nbsp;<span width="10px;">
-                    <input type="radio" style = "font-size: 14px" id="type" name="type"  value="' . $val['type'] . '::' . $pri . '" />';
+                $typeTemplate .= '&nbsp;<span width="10px;">'
+                    . '<input type="radio" id="type" name="type"  value="' . $val['type'] . '::' . $pri . '" />'
+                    . '&nbsp; ' . $val['type'] . '&nbsp; (=' . $pri . ')' ;
             }
             $typeTemplate .='</li></ul>';
             $i++;
@@ -176,32 +174,26 @@
         }
 
         if ($levelOfCustomer != 'normal' && $levelOfCustomer != 'Normal') {
-            $khuyenmai = '<tr>
-                                <td style="width: 200px">
-                                    <span style = "color:#f24d23; font-size:14px">
-                                        Giá khuyến mãi <span>(' . $levelOfCustomer . ')</span>
-                                    </span>
-                                </td>
-                                <td>
-                                    <span style="color: #ED1B24; font-size:20px;">' . $price_encourage . '</span>
-                                </td>
-                            </tr>      
-                            <tr>
-                                <td>
-                                    <span style="font-size:14px">Giá sản phẩm  </span>
-                                </td>
-                                <td>
-                                    <span style="font-size:14px; text-decoration: line-through;">' . $product_detail['products_price'] . '</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <span style="font-size:14px;">Tiết kiệm</span>
-                                </td>
-                                <td>
-                                    <span style="font-size: 14px">' . $disCountVIPCustomer . '%</span>
-                                </td>
-                            </tr>';
+            $khuyenmai= '<ul style="clear:both; float:left; padding-left: 0px">
+                            <li>
+                                <span style = "color:#f24d23; width: 250px; float:left; font-size: 18px">
+                                    Giá khuyến mãi (' . $levelOfCustomer . ')
+                                </span>
+                                <span style="color: #ED1B24; font-size:18px;">' . $price_encourage . '</span>
+                            </li>
+                        </ul>
+                        <ul style="clear:both; float:left;  padding-left: 0px">
+                            <li>
+                                <span style="width: 250px; float: left">Giá sản phẩm</span>
+                                <span style="text-decoration: line-through;">' . $product_detail['products_price'] . '</span>
+                            </li>
+                        </ul>
+                        <ul style="clear:both; float:left; padding-left: 0px">
+                            <li>
+                                <span style="width: 250px; float:left">Tiết kiệm </span>' 
+                                . $disCountVIPCustomer . '%
+                            </li>
+                        </ul>';
         }
     } else if ($product_detail['product_encourage'] != '' && $product_detail['p_type'] == '') {
         $price_encourage = (int) str_replace(".", "", $product_detail['product_encourage']);
@@ -238,34 +230,27 @@
         }
 
         if ($levelOfCustomer != 'normal' && $levelOfCustomer != 'Normal' && !empty($levelOfCustomer)) {
-            $khuyenmai = '<tr>
-                                <td style="width: 200px">
-                                    <span class="rect" style = "color:#f24d23;font-size:14px">
+            $khuyenmai =    '<ul style="clear:both; float:left; padding-left: 0px">
+                                <li>
+                                    <span style = "color:#f24d23; font-size: 18px">
                                         Giá khuyến mãi <span>(' . $levelOfCustomer . ')</span>
                                     </span>
-                                </td>
-                                <td>
-                                    <span class="promotion" 
-                                          style="color:#f24d23;font-size:20px;">' . $price_encourage . '</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
+                                    <span style="color:#f24d23; font-size:18px;">' . $price_encourage . '</span>
+                                </li>
+                            </ul>
+                            <ul style="clear: both">
+                                <li>
                                     <span style="font-size:14px;">Giá sản phẩm</span>
-                                </td>
-                                <td>
                                     <span class="promotion" style="font-size:14px; text-decoration: line-through;">'
-                    . $product_detail['products_price'] . '</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
+                                        . $product_detail['products_price'] . '</span>
+                                </li>
+                            </ul>
+                            <ul style="clear: both">
+                                <li>
                                     <span style="font-size:14px;">Tiết kiệm</span>
-                                </td>
-                                <td>
                                     <span class="promotion" style="font-size:14px">' . $produce_discount . '</span>
-                                </td>
-                            </tr>';
+                                </li>
+                            </ul>';
         } else {
             $khuyenmai = '<tr>
                                 <td style="width: 150px">
@@ -301,14 +286,14 @@
             $product_detail['products_price'] .= " VNĐ";
         }
 
-        $khuyenmai = '<tr>
-                            <td style="width: 150px">
-                                <span style="font-size:14px; color:#f24d23">Giá sản phẩm</span>
-                            </td>
-                            <td>
-                                <span style="font-size:20px; color:#f24d23;">' . $product_detail['products_price'] . '</span>
-                            </td>  
-                        </tr>';
+        $khuyenmai= '<tr>
+                        <td style="width: 150px">
+                            <span style="font-size:14px; color:#f24d23">Giá sản phẩm</span>
+                        </td>
+                        <td>
+                            <span style="font-size:20px; color:#f24d23;">' . $product_detail['products_price'] . '</span>
+                        </td>  
+                    </tr>';
     }
 
     if ($product_detail['products_id'] > 0) {
