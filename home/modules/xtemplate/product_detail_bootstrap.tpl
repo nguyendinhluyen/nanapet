@@ -25,7 +25,6 @@
         $('#jqxRating').jqxRating({singleVote:true});											
         $("#jqxRating").on('change', function (event)
         {																					
-            debugger;
             var user_name = document.getElementById("user_name").innerHTML;								
             if(user_name === " ")
             {																										  						
