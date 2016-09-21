@@ -92,7 +92,7 @@
     if (!empty($proColor[0])) {
         $i = 0;
         foreach ($proColor as $val) {
-            $colorTemplate .='<ul style="padding-left: 0px; clear: both"><li>';
+            $colorTemplate .='<li>';
             if ($i == 0) {
                 $colorTemplate .='<span style ="float:left; width: 250px">' 
                                     . $p_attribute 
@@ -112,7 +112,7 @@
                                         value="' . $val . '" />'
                                 . '&nbsp; <span>' . $val . '</span>';
             }
-            $colorTemplate .='</li></ul>';
+            $colorTemplate .='</li>';
             $i ++;
         }
     }
@@ -133,7 +133,7 @@
                     . '&nbsp; '.$val['type'] . '&nbsp; (=' . $pri . ')' ;
             } else {
                 $typeTemplate .= '<span style="width: 250px; float:left">&nbsp;</span>';
-                $typeTemplate .= '&nbsp;<span width="10px;">'
+                $typeTemplate .= '<span width="10px;">'
                     . '<input type="radio" id="type" name="type"  value="' . $val['type'] . '::' . $pri . '" />'
                     . '&nbsp; ' . $val['type'] . '&nbsp; (=' . $pri . ')' ;
             }
@@ -174,28 +174,24 @@
         }
 
         if ($levelOfCustomer != 'normal' && $levelOfCustomer != 'Normal') {
-            $khuyenmai= '<ul style="clear:both; float:left; padding-left: 0px">
+            $khuyenmai= '<ul style="clear:both; float:left; padding-left: 0px; line-height: 30px">
                             <li>
                                 <span style = "color:#f24d23; width: 250px; float:left; font-size: 18px">
                                     Giá khuyến mãi (' . $levelOfCustomer . ')
                                 </span>
                                 <span style="color: #ED1B24; font-size:18px;">' . $price_encourage . '</span>
                             </li>
-                        </ul>
-                        <ul style="clear:both; float:left;  padding-left: 0px">
                             <li>
                                 <span style="width: 250px; float: left">Giá sản phẩm</span>
                                 <span style="text-decoration: line-through;">' . $product_detail['products_price'] . '</span>
                             </li>
-                        </ul>
-                        <ul style="clear:both; float:left; padding-left: 0px">
                             <li>
                                 <span style="width: 250px; float:left">Tiết kiệm </span>' 
                                 . $disCountVIPCustomer . '%
                             </li>
                         </ul>';
         }
-    } else if ($product_detail['product_encourage'] != '' && $product_detail['p_type'] == '') {
+    } else if (!empty($product_detail['product_encourage']) && empty($product_detail['p_type'])) {
         $price_encourage = (int) str_replace(".", "", $product_detail['product_encourage']);
         $price_of_product = (int) str_replace(".", "", $product_detail['products_price']);
         $priceDiscountVIPCustomer = ($price_of_product * $disCountVIPCustomer) / 100;
@@ -230,52 +226,40 @@
         }
 
         if ($levelOfCustomer != 'normal' && $levelOfCustomer != 'Normal' && !empty($levelOfCustomer)) {
-            $khuyenmai =    '<ul style="clear:both; float:left; padding-left: 0px">
-                                <li>
-                                    <span style = "color:#f24d23; font-size: 18px">
-                                        Giá khuyến mãi <span>(' . $levelOfCustomer . ')</span>
-                                    </span>
-                                    <span style="color:#f24d23; font-size:18px;">' . $price_encourage . '</span>
-                                </li>
-                            </ul>
-                            <ul style="clear: both">
-                                <li>
-                                    <span style="font-size:14px;">Giá sản phẩm</span>
-                                    <span class="promotion" style="font-size:14px; text-decoration: line-through;">'
-                                        . $product_detail['products_price'] . '</span>
-                                </li>
-                            </ul>
-                            <ul style="clear: both">
-                                <li>
-                                    <span style="font-size:14px;">Tiết kiệm</span>
-                                    <span class="promotion" style="font-size:14px">' . $produce_discount . '</span>
-                                </li>
-                            </ul>';
+            $khuyenmai= '<ul style="clear:both; float:left; padding-left: 0px; line-height: 30px">
+                            <li>
+                                <span style = "color:#f24d23; font-size: 18px; float:left; width: 250px">
+                                    Giá khuyến mãi <span>(' . $levelOfCustomer . ')</span>
+                                </span>
+                                <span style="color:#f24d23; font-size:18px;">' . $price_encourage . '</span>
+                            </li>
+                            <li>
+                                <span style="width: 250px; float:left">Giá sản phẩm</span>
+                                <span class="promotion" style="text-decoration: line-through;">'
+                                    . $product_detail['products_price'] . '</span>
+                            </li>
+                            <li>
+                                <span style="width: 250px; float:left">Tiết kiệm</span>
+                                <span class="promotion" style="font-size:14px">' . $produce_discount . '</span>
+                            </li>
+                        </ul>';
         } else {
-            $khuyenmai = '<tr>
-                                <td style="width: 150px">
-                                    <span style="font-size:14px; color: #f24d23">Giá khuyến mãi</span>
-                                </td>
-                                <td>
-                                    <span style="color:#f24d23;font-size:20px;">' . $price_encourage . '</span>
-                                </td>
-                            </tr>      
-                            <tr>
-                                <td>
-                                    <span style="font-size:14px;">Giá sản phẩm </span>
-                                </td>
-                                <td>
-                                    <span style="font-size:14px; text-decoration: line-through;">' . $product_detail['products_price'] . '</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <span style="font-size:14px;">Tiết kiệm</span>
-                                </td>
-                                <td>
-                                    <span class="promotion" style="font-size:14px">' . $produce_discount . '</span>
-                                </td>
-                            </tr>';
+            $khuyenmai= '<ul style="clear: both; float:left; padding-left: 0px; line-height: 30px">
+                            <li>
+                                <span style = "color:#f24d23; font-size: 18px; float:left; width: 200px">
+                                    Giá khuyến mãi </span>
+                                <span style="color:#f24d23; font-size:20px;">' . $price_encourage . '</span>
+                            </li>
+                            <li>
+                                <span style="width: 200px; float:left"> Giá sản phẩm </span>
+                                <span style="text-decoration: line-through;">' 
+                                    . $product_detail['products_price'] . '</span>
+                            </li>
+                            <li>
+                                <span style="width: 200px; float:left">Tiết kiệm</span>
+                                <span>' . $produce_discount . '</span>
+                            </li>
+                        </ul>';
         }
     } else {
         if ($product_detail['products_price'] == 0 || $product_detail['products_price'] == "") {
@@ -286,14 +270,13 @@
             $product_detail['products_price'] .= " VNĐ";
         }
 
-        $khuyenmai= '<tr>
-                        <td style="width: 150px">
-                            <span style="font-size:14px; color:#f24d23">Giá sản phẩm</span>
-                        </td>
-                        <td>
-                            <span style="font-size:20px; color:#f24d23;">' . $product_detail['products_price'] . '</span>
-                        </td>  
-                    </tr>';
+        $khuyenmai= '<ul style="clear: both; float:left; padding-left: 0px; line-height: 30px">
+                        <li>
+                            <span style="font-size: 18px; color:#f24d23; width: 200px; float:left">Giá sản phẩm</span>
+                            <span style="font-size: 18px; color:#f24d23;">' 
+                                . $product_detail['products_price'] . '</span>
+                        </li>
+                    </ul>';
     }
 
     if ($product_detail['products_id'] > 0) {
@@ -381,41 +364,49 @@
         $product_status_name = 'Còn Hàng';
     }
 
-    if (empty($product_detail['product_detail']) && empty($product_detail['product_detail_tacdung']) && empty($product_detail['product_detail_phuhopcho']) && empty($product_detail['product_detail_nguyenlieu_thanhphan']) && empty($product_detail['product_detail_phantichdambao']) && empty($product_detail['product_detail_huongdansudung']) && empty($product_detail['product_detail_huongdanbaoquan']) && empty($product_detail['product_detail_luuy']) && empty($product_detail['product_detail_khuyenkhich']) && empty($product_detail['product_detail_donggoi_thetich']) && empty($product_detail['product_detail_nhasanxuat']) && empty($product_detail['product_detail_xuatxu'])) {
+    if (empty($product_detail['product_detail']) 
+            && empty($product_detail['product_detail_tacdung']) 
+            && empty($product_detail['product_detail_phuhopcho']) 
+            && empty($product_detail['product_detail_nguyenlieu_thanhphan']) 
+            && empty($product_detail['product_detail_phantichdambao']) 
+            && empty($product_detail['product_detail_huongdansudung']) 
+            && empty($product_detail['product_detail_huongdanbaoquan']) 
+            && empty($product_detail['product_detail_luuy']) 
+            && empty($product_detail['product_detail_khuyenkhich']) 
+            && empty($product_detail['product_detail_donggoi_thetich']) 
+            && empty($product_detail['product_detail_nhasanxuat']) 
+            && empty($product_detail['product_detail_xuatxu'])) {
         $product_detail['product_detail'] = "Chưa có thông tin chi tiết về sản phẩm " . $product_detail['products_name'];
     }
 
-    $facebook_comment = '<table>						
-                                <tr>
-                                    <td>
-                                        <span style="font-family:RobotoSlabRegular; 
-                                                     font-size: 14px;                                                                                                  
-                                                     float:left;
-                                                     margin-left:10px">
-                                            Đánh giá sản phẩm :&nbsp;&nbsp;                                        
-                                        </span>                                    
-                                    </td>
-                                    <td>
-                                        <div id="jqxRating" style="float:left; padding-top: 5px"/>
-                                    </td>                               
-                                </tr>
-                                <tr>								                               					
-                                    <td colspan="2" style="padding-top:5px">                                                                      
-                                        <span style="font-family:RobotoSlabRegular;
-                                                    font-size:14px;                                                                                                
-                                                    width: 100%;
-                                                    margin-left:10px">
-                                            Hãy cho ý kiến về sản phẩm
-                                        </span>	                                    
-                                    </td>							                                
-                                </tr>
-                            </table>
-                            <br/>
-                            <div class="fb-comments" 
-                                    data-href="{linkSf}{link_san-pham}"
-                                    data-numposts="3"
-                                    data-width ="100%">
-                            </div>';
+    $facebook_comment = '<table>
+                            <tr>
+                                <td>
+                                    <span style="font-family:RobotoSlabRegular; 
+                                                 font-size: 14px;                                                                                                  
+                                                 float:left;
+                                                 margin-left:10px">
+                                        Đánh giá sản phẩm :&nbsp;&nbsp;                                        
+                                    </span>                                    
+                                </td>
+                                <td>
+                                    <div id="jqxRating" style="float:left; padding-top: 5px"/> 
+                                </td>
+                            </tr>
+                        </table>    
+                        <div style="padding-top:5px">                                                                      
+                            <span style="font-family:RobotoSlabRegular;
+                                        font-size:14px;                                                                                                
+                                        width: 100%;
+                                        margin-left:10px">
+                                Hãy cho ý kiến về sản phẩm
+                            </span>	                                    
+                        </div>							                                
+                        <div class="fb-comments"
+                                data-href="{linkSf}{link_san-pham}"
+                                data-numposts="3"
+                                data-width ="100%">
+                        </div>';
     $category_key = $_GET['category_key'];
     $display_product_detail = "block";
     $display_product_detail_tacdung = "block";
@@ -501,21 +492,21 @@
         $display_realtion_news = 'style="display:block"';
         for ($i = 0; $i < count($list_news); $i++) {
             $relation_news .= '<td style="padding-right: 28px">'
-                    . '<table>'
-                    . '<tr><td>'
-                    . '<a class = "news_name" href="{linkS}thu-vien/' . $list_news[$i]['news_key'] . '/" 
-                                                  style = "color:#929292;">'
-                    . '<img src="{linkS}upload/news/' . $list_news[$i]['news_image'] . '"'
-                    . 'alt="{news_name}" style="width:180px;height:180px; cursor:pointer; border-radius: 10px">'
-                    . '</a></td></tr>'
-                    . '<tr><td>'
-                    . '<a class = "news_name" href="{linkS}thu-vien/' . $list_news[$i]['news_key'] . '/" 
-                                                     style = "color:#929292;">'
-                    . '<div class="product_main_title" style="width: 180px; text-align: center; margin-top: 15px">'
-                    . $list_news[$i]['news_name'] . '</a></div>'
-                    . '</td></tr>'
-                    . '</table>'
-                    . '</td>';
+                            . '<table>'
+                            . '<tr><td>'
+                            . '<a class = "news_name" href="{linkS}thu-vien/' . $list_news[$i]['news_key'] . '/" 
+                                                          style = "color:#929292;">'
+                            . '<img src="{linkS}upload/news/' . $list_news[$i]['news_image'] . '"'
+                            . 'alt="{news_name}" style="width:180px;height:180px; cursor:pointer; border-radius: 10px">'
+                            . '</a></td></tr>'
+                            . '<tr><td>'
+                            . '<a class = "news_name" href="{linkS}thu-vien/' . $list_news[$i]['news_key'] . '/" 
+                                                             style = "color:#929292;">'
+                            . '<div class="product_main_title" style="width: 180px; text-align: center; margin-top: 15px">'
+                            . $list_news[$i]['news_name'] . '</a></div>'
+                            . '</td></tr>'
+                            . '</table>'
+                            . '</td>';
         }
     }
 
@@ -581,14 +572,24 @@
                                         <ul>';
         }
     }
+    
     $productdetail = $xtemplate->assign_blocks_content($productdetail, array(
         'PRODUCTS' => $tpl
-            ));
+    ));
 
     // meta description
     // remove all tags in text
     $description = strip_tags($product_detail['product_detail']);
-    $productdetail = $xtemplate->replace($productdetail, array(
+    
+    if (empty($product_detail['manufacturer'])) {
+        $product_detail['manufacturer'] = "Đang cập nhật";
+    }
+
+    if (empty($product_detail['origin'])) {
+        $product_detail['origin'] = "Đang cập nhật";
+    }
+
+$productdetail = $xtemplate->replace($productdetail, array(
         'list_advs' => $list_advs,
         'form_comment' => $facebook_comment,
         'link_san-pham' => $category_key . "/" . $product_detail['products_key'] . ".htm",
