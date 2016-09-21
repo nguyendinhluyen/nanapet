@@ -25,6 +25,7 @@
         $('#jqxRating').jqxRating({singleVote:true});											
         $("#jqxRating").on('change', function (event)
         {																					
+            debugger;
             var user_name = document.getElementById("user_name").innerHTML;								
             if(user_name === " ")
             {																										  						
@@ -163,8 +164,8 @@
                     <div id="detail1">                        
                         <div style="font-weight:500; 
                                     text-align:center; 
-                                    padding-bottom: 20px;
-                                    padding-top: 20px">
+                                    padding-top:10px;
+                                    padding-bottom:30px">
                                 <span style="color: #428bca; 
                                             line-height: 30px;
                                             text-transform: uppercase;
@@ -212,151 +213,122 @@
                                     margin-bottom: 15px;
                                     border-width:1px;                                                
                                     border-color:#cccccc; width:100%; float:left">    
-                                <table style=" clear:both">
-                                    <tr>                                        
-                                        <td 
-                                            <span style="font-size: 14px; line-height: 25px">
-                                                Số lượng
-                                            </span> 
-                                        </td>
-                                    </tr>
-                                    <tr>                                                                            
-                                        <td style="padding-top: 5px;
-                                                   padding-bottom: 10px;">                                            
-                                            <span>
-                                                <select name='quantity' 
-                                                        id='quantity'                                                        
-                                                        style = "-webkit-border-radius: 10px;
-                                                                -moz-border-radius: 10px;                                                                
-                                                                height: 35px;
-                                                                width: 80px;
-                                                                outline: none;
-                                                                padding: 5px;
-                                                                font-family: RobotoSlabRegular;
-                                                                font-size: 14px;
-                                                                border: 1px solid #ddd;
-                                                                font-weight: lighter;
-                                                                margin-right: 45px"
-                                                        class="form-control">
-                                                    <option value="1">1</option>
-                                                    <option value="2">2</option>
-                                                    <option value="3">3</option>
-                                                    <option value="4">4</option>
-                                                    <option value="5">5</option>
-                                                    <option value="6">6</option>
-                                                    <option value="7">7</option>
-                                                    <option value="8">8</option>
-                                                    <option value="9">9</option>
-                                                    <option value="10">10</option>
-                                                </select>   
-                                            </span>
-                                        </td>
-                                        <td>
-                                            <input type="submit" 
+                                <div style=" clear:both">
+                                    <div style="clear:both; padding-left: 0px">
+                                        <span style="font-size: 14px; 
+                                                    line-height: 25px;">
+                                            Số lượng
+                                        </span>
+                                    </div>
+                                    <div style="clear:both; padding-left: 0px;"
+                                         class="row">
+                                        <div style="padding-top: 5px;
+                                                   padding-bottom: 10px;
+                                                   float:left;"
+                                            class="col-lg-4 col-md-4">
+                                            <select name='quantity' 
+                                                    id='quantity'
+                                                    style = "-webkit-border-radius: 10px;
+                                                            -moz-border-radius: 10px;                                                                
+                                                            height: 35px;
+                                                            width: 90px;
+                                                            outline: none;
+                                                            padding: 5px;
+                                                            font-family: RobotoSlabRegular;
+                                                            font-size: 14px;
+                                                            border: 1px solid #ddd;
+                                                            font-weight: lighter;"
+                                                    class="form-control">
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                                <option value="8">8</option>
+                                                <option value="9">9</option>
+                                                <option value="10">10</option>
+                                            </select>   
+                                        </div>
+                                        <div style="padding-top: 5px;
+                                                   padding-bottom: 10px;
+                                                   margin-left: 10px"
+                                            class="col-lg-5 col-md-5">
+                                            <input type="submit"
                                                    class="addcart" {hidden} 
                                                    name="addcart"                                                   
+                                                   value=""
                                                    style="outline:none;
-                                                          height:40px"
-                                                   value=""/>
-                                        </td>
-                                    </tr>
-                                </table>
-                                <table style=" clear:both; margin-top: 10px">
-                                <!-- Ngan Luong, Bao Kiem -->
-                                    <tr>                                         
-                                        <td>                                            
-                                            <!--<a class="nganluong" 
-                                               style="margin-right:15px; outline:none" 
-                                               target="_blank"
-                                               href="https://www.nganluong.vn/button_payment.php?receiver=support@nanapet.com&amp;product_name={product_name}&amp;price={product_price_nodot}&amp;return_url=http://nanapet.com">
-                                                <img src="https://www.nganluong.vn/data/images/merchant/button/btn-paynow-125.png" 
-                                                     width="107px" 
-                                                     height= "70px" 
-                                                     border="0" 
-                                                     title="Thanh toán trực tuyến AN TOÀN và ĐƯỢC BẢO VỆ, 
-                                                        sử dụng thẻ ngân hàng trong và ngoài nước hoặc nhiều hình 
-                                                        thức tiện lợi khác.Được bảo hộ & cấp phép bởi 
-                                                        NGÂN HÀNG NHÀ NƯỚC, ví điện tử duy 
-                                                        nhất được cộng đồng ƯA THÍCH NHẤT 2 
-                                                        năm liên tiếp, Bộ Thông tin Truyền thông trao giải thưởng Sao Khuê.">
-                                            </a>-->
-                                            <a href="{linkS}tro-giup/cach-thuc-thanh-toan.html" 
-                                               rel="nofollow"
-                                               target="_blank">
-                                                <span style="outline:none;
-                                                            float:right;
-                                                            background-color: #00acd7;
-                                                            border: none;
-                                                            color: #fff;
-                                                            font-family:PoetsenOne;
-                                                            -webkit-border-radius: 20px;
-                                                            -moz-border-radius: 20px;
-                                                            border-radius: 20px;
-                                                            padding: 10px 20px 10px 20px;
-                                                            cursor: pointer;
-                                                            font-size: 14px"
-                                                            title="Thanh toán tiền mặt (COD), Thanh toán chuyển khoản 
-                                                            và Thanh toán qua nhà xe.">
-                                                    PT Thanh toán</span>
-                                            </a>                                                
-                                        </td>
-                                        <td>
-                                            <!--<a class="baokim" style="margin-right:15px; outline:none" 
-                                                href="https://www.baokim.vn/payment/customize_payment/product?business=support@nanapet.com&product_name={product_name}&product_price={product_price_nodot}&product_quantity={product_quantity}&total_amount={total_amount}" 
-                                                target="_blank"/>
-                                                <img src="https://www.baokim.vn/application/uploads/buttons/btn_safety_payment_3.png" 
-                                                     width="107px" 
-                                                     height= "70px" 
-                                                     alt="Thanh toán an toàn với Bảo Kim !" 
-                                                     width="100px" 
-                                                     width="100px" 
-                                                     border="1" 
-                                                     title="Thanh toán trực tuyến an toàn dùng tài khoản Ngân hàng 
-                                                            (VietcomBank, TechcomBank, Đông Á, VietinBank, Quân Đội, VIB, SHB,... 
-                                                            và thẻ Quốc tế (Visa, Master Card...) qua Cổng thanh toán trực tuyến BảoKim.vn"/>
-                                            </a>-->
-                                            <a href="{linkS}tro-giup/dich-vu-van-chuyen.html" 
-                                               rel="nofollow"
-                                               target="_blank">
-                                                <span style="outline:none;
-                                                            float:right;
-                                                            background-color: #00acd7;
-                                                            border: none;
-                                                            color: #fff;
-                                                            font-family:PoetsenOne;
-                                                            -webkit-border-radius: 20px;
-                                                            -moz-border-radius: 20px;
-                                                            border-radius: 20px;
-                                                            padding: 10px 20px 10px 20px;
-                                                            cursor: pointer;
-                                                            margin-left: 10px;
-                                                            font-size: 14px"
-                                                        title="Dịch vụ vận chuyển tận nhà tiện lợi.">
-                                                    PT Vận chuyển</span>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                </table>
-                                <table style="margin-top: 20px">
-                                    <tr>
-                                        <td>
-                                            <div class="fb-like" 
-                                                 data-href="https://www.facebook.com/NanaPetOnline" 
-                                                 data-layout="standard" 
-                                                 data-action="like" 
-                                                 data-show-faces="true" 
-                                                 data-width="380"
-                                                 data-share="true"></div>
-                                        </td>
-                                    </tr>
-                                        
-                                </table>
+                                                          height:40px;">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-5 col-md-5" 
+                                    style="margin-top: 5px">
+                                    <a href="{linkS}tro-giup/cach-thuc-thanh-toan.html" 
+                                       rel="nofollow"
+                                       target="_blank">
+                                        <span style="-webkit-border-radius: 20px;
+                                                    -moz-border-radius: 20px;
+                                                    outline:none;
+                                                    float:right;
+                                                    background-color: #00acd7;
+                                                    border: none;
+                                                    color: #fff;
+                                                    font-family:PoetsenOne;
+                                                    border-radius: 20px;
+                                                    padding: 10px 20px 10px 20px;
+                                                    cursor: pointer;
+                                                    font-size: 14px;
+                                                    width: 140px;
+                                                    text-align: center"
+                                            title="Thanh toán tiền mặt (COD), Thanh toán chuyển khoản và Thanh toán qua nhà xe.">
+                                            PT Thanh toán
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="col-lg-5 col-md-5"
+                                    style="margin-top: 5px">
+                                    <a href="{linkS}tro-giup/dich-vu-van-chuyen.html" 
+                                       rel="nofollow"
+                                       target="_blank">
+                                        <span style="-webkit-border-radius: 20px;
+                                                    -moz-border-radius: 20px;
+                                                    outline:none;
+                                                    float:right;
+                                                    background-color: #00acd7;
+                                                    border: none;
+                                                    color: #fff;
+                                                    font-family:PoetsenOne;
+                                                    border-radius: 20px;
+                                                    padding: 10px 20px 10px 20px;
+                                                    cursor: pointer;
+                                                    margin-left: 10px;
+                                                    font-size: 14px;
+                                                    width: 140px;
+                                                    text-align: center"
+                                                title="Dịch vụ vận chuyển tận nhà tiện lợi.">
+                                            PT Vận chuyển
+                                        </span>
+                                    </a>
+                                </div>
+                                <div style="margin-top: 70px">
+                                    <div class="fb-like" 
+                                         data-href="https://www.facebook.com/NanaPetOnline" 
+                                         data-layout="standard" 
+                                         data-action="like" 
+                                         data-show-faces="true" 
+                                         data-width="380"
+                                         data-share="true">
+                                    </div>
+                                </div>
                             </div>
                         </div><!-- end detail2 -->
                     </form>                                                 
                 </div>
-                <div class ="row">                        
-                    <div class = "col-xs-12 col-sm-12 col-md-12 col-lg-12">                                                
+                <div class ="row">
+                    <div class = "col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <!--Thong tin san pham -->
                         <hr  style = "margin-top: 30px;
                                     margin-bottom: 15px;
@@ -367,20 +339,19 @@
                                     float: left;
                                     font-family: RobotoSlabRegular;
                                     line-height: 30px;
-                                    font-size: 14px;
-                                    padding-top: 10px">
+                                    font-size: 15px;
+                                    padding-top: 10px;
+                                    padding-bottom: 30px">
                             <ul style="padding-left: 0px; clear: both">
                                 <li>
                                     <span style="color: #101010;">
-                                        CHI TIẾT SẢN PHẤM
-                                    </span>    
+                                        <h2 style="font-size: 15px; font-weight: bold">CHI TIẾT SẢN PHẤM</h2>
+                                    </span>
                                 </li>
-                            </ul>
-                            <ul style="padding-left: 0px; clear: both">
                                 <li>
-                                    <span style ="width: 250px; 
-                                                  float:left">
-                                        Thương hiệu 
+                                    <span style ="width: 250px;
+                                                  float: left">
+                                        Thương hiệu
                                     </span>
                                     <span>
                                         <a href="{linknsx}"
@@ -388,8 +359,6 @@
                                            style ="font-size: 14px; outline:none; color:black">{nsx}</a>
                                     </span>
                                 </li>
-                            </ul>
-                            <ul style="padding-left: 0px; clear: both">
                                 <li>
                                     <span style ="width: 250px; 
                                                   float:left">
@@ -401,32 +370,27 @@
                                            style ="font-size: 14px; outline:none; color:black">{xuatxu}</a>
                                     </span>
                                 </li>
-                            </ul>
-                            {product_color}
-                            {product_type}
-                            <ul style="padding-left: 0px; clear: both">
+                                {product_color}
+                                {product_type}
                                 <li>
                                     <span style ="width: 250px; 
                                                   float:left">
                                         Tình trạng
                                     </span>
-                                    <span>
+                                    <span style="color: red">
                                         {status}
                                     </span>
                                 </li>
-                            </ul>
-                            <ul style="padding-left: 0px; clear: both">
                                 <li>
                                     <span style ="width: 250px; 
                                                   float:left">
                                         Số lần đánh giá
                                     </span>
-                                    <span style="font-weight:bold;">
+                                    <span id="rate_count"
+                                          style="font-weight:bold;">
                                         {rate_count}
                                     </span>
                                 </li>
-                            </ul>
-                            <ul style="padding-left: 0px; clear: both">
                                 <li>
                                     <span style ="width: 250px; 
                                                   float:left">
@@ -436,10 +400,6 @@
                                         {count_rates} 
                                     </span>
                                 </li>
-                            </ul>
-                            <ul style="padding-left: 0px;
-                                       clear: both;
-                                       margin-bottom: 30px">
                                 <li>
                                     <a href="#addToMyFavorite" 
                                        onClick="addToMyFavorite();" 
@@ -451,7 +411,6 @@
                         </div>
                         <div>
                             <div class="hidden-xs hidden-sm">
-                                <br/>
                                 <a  href="#section1" style="font-size:14px; 
                                                             color:#A00; 
                                                             font-weight:bold; 
@@ -467,7 +426,6 @@
                                                             outline:none">
                                     Thông tin sản phẩm 
                                 </a>
-
                                 <a href="#section2" style="font-size:14px; 
                                                            color:#A00; 
                                                            font-weight:bold; 
@@ -501,7 +459,6 @@
                             </div>                                       
                                                         
                             <div class="visible-xs-block visible-sm-block">
-                                <br/>
                                 <a  href="#section1" style="font-size:14px;
                                                             color:#A00; 
                                                             font-weight:bold; 
@@ -518,14 +475,12 @@
                                     Thông tin sản phẩm 
                                 </a>                               
                             </div>                                                                   
-                                                        
                             <div id = "line_customer" style=" box-shadow: 1px 1px 1px #DDF; 
                                                               width: 100%; 
                                                               height: 1px; 
                                                               margin-bottom:20px; 
                                                               margin-top:7px;">                                    
                             </div>	                                              
-                            
                             <div id="tab_container" style="margin-right:5px">
                                 <div>                     
                                     <a name ="section1"></a>
@@ -732,9 +687,8 @@
                                                     line-height: 25px">
                                             {product_detail_xuatxu}
                                         </div>                 
-
-                                        <a name = "section2"/>
-                                        <a name = "section3"/>      
+                                        <a name = "section2" > </a>
+                                        <a name = "section3" > </a>
                                         <div {display_realtion_news}>
                                             <hr style="margin-top: 10px;
                                                        margin-bottom: 5px;
@@ -743,20 +697,13 @@
                                                        color: #999999">
                                             <div style="padding-top: 2px ; padding-bottom: 20px">
                                                 <div style="background-color: #f1fdfb; padding-top: 10px; padding-bottom: 10px">
-                                                    <table style="text-align: left;">
-                                                        <tr>                                
-                                                            <td>
-                                                                <span style="color: #48817a;
-                                                                             font-size: 14px;
-                                                                             font-family: RobotoSlabRegular;
-                                                                             margin-left: 10px;">
-                                                                    BÀI VIẾT LIÊN QUAN
-                                                                </span>
-                                                            </td>
-                                                        </tr>                            
-                                                    </table>                        
+                                                    <span style="color: #48817a;
+                                                                font-size: 14px;
+                                                                font-family: RobotoSlabRegular;
+                                                                margin-left: 10px;">
+                                                        BÀI VIẾT LIÊN QUAN
+                                                    </span>                      
                                                 </div>   
-
                                                 <table style="margin-top: 20px">
                                                     <tr>
                                                         {relation_news}
@@ -769,20 +716,19 @@
                                                     margin-left: auto;
                                                     margin-right: auto;                                                           
                                                     color: #999999">
-                                        <div style="background-color: #f1fdfb; padding-top: 10px; padding-bottom: 10px; margin-bottom: 10px">
-                                            <table style="text-align: left;">
-                                                <tr>                                
-                                                    <td>
-                                                        <span style="color: #48817a;
-                                                                     font-size: 14px;
-                                                                     font-family: RobotoSlabRegular;
-                                                                     margin-left: 10px;">
-                                                            BÌNH LUẬN SẢN PHẨM
-                                                        </span>
-                                                    </td>
-                                                 </tr>                            
-                                            </table>                        
-                                         </div>                                         
+                                        <div style="background-color: #f1fdfb; 
+                                                    padding-top: 10px; 
+                                                    padding-bottom: 10px;
+                                                    margin-bottom: 10px">
+                                            <div style="text-align: left;">
+                                                <span style="color: #48817a;
+                                                             font-size: 14px;
+                                                             font-family: RobotoSlabRegular;
+                                                             margin-left: 10px;">
+                                                    BÌNH LUẬN SẢN PHẨM
+                                                </span>
+                                            </div>                        
+                                        </div>  
                                         {form_comment}
                                     </div>                                         
                                 </div><!-- end tab_container -->
@@ -816,9 +762,6 @@
         </div>                                        
     </div>
 </div>   
-
-
-
 
 <!-- Begin San Pham Theo Nhan Hieu-->
 <div class = "container" style="padding-left: 50px; padding-right: 50px">
