@@ -191,6 +191,8 @@
                             </li>
                         </ul>';
         }
+        // Get price for SEO
+        $price_java_script = $price_encourage;
     } else if (!empty($product_detail['product_encourage']) && empty($product_detail['p_type'])) {
         $price_encourage = (int) str_replace(".", "", $product_detail['product_encourage']);
         $price_of_product = (int) str_replace(".", "", $product_detail['products_price']);
@@ -261,6 +263,8 @@
                             </li>
                         </ul>';
         }
+        // Get price for SEO 
+        $price_java_script = $price_encourage;
     } else {
         if ($product_detail['products_price'] == 0 || $product_detail['products_price'] == "") {
             $product_detail['products_price'] = "Liên hệ";
@@ -277,8 +281,10 @@
                                 . $product_detail['products_price'] . '</span>
                         </li>
                     </ul>';
+        // Get price for SEO 
+        $price_java_script = $product_detail['products_price'];
     }
-
+   
     if ($product_detail['products_id'] > 0) {
         $imgs = $Product->getProductImagessByProductId($product_detail['products_id']);
         $k = count($imgs);
@@ -579,7 +585,8 @@
 
     // meta description
     // remove all tags in text
-    $description = strip_tags($product_detail['product_detail']);
+    $description = addslashes(strip_tags($product_detail['product_detail']));
+    $description = trim(preg_replace( "/\r|\n/", "", $description ));
     
     if (empty($product_detail['manufacturer'])) {
         $product_detail['manufacturer'] = "Đang cập nhật";
@@ -589,7 +596,27 @@
         $product_detail['origin'] = "Đang cập nhật";
     }
 
-$productdetail = $xtemplate->replace($productdetail, array(
+    // script for SEO
+    $script_product_detail = '<script type="application/ld+json"> {
+        "@context": "http://schema.org/",
+        "@type": "Product",
+        "name": "'.$product_detail["products_name"].'",
+        "image": "{linkS}upload/product/'.$product_detail["products_image"].'",
+        "description": "'.addslashes($description).'", "brand": {
+        "@type": "Thing",
+        "name": "'.$product_detail["manufacturer"].'" },
+        "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.4", "reviewCount": "89"
+        }, "offers": {
+        "@type": "Offer",
+        "priceCurrency": "VND",
+        "price": "'.$price_java_script.'",
+        "itemCondition": "http://schema.org/UsedCondition", "availability": "http://schema.org/InStock",
+        "seller": {
+        "@type": "Organization", "name": "NanaPet"
+        } }
+        } </script>';
+    
+    $productdetail = $xtemplate->replace($productdetail, array(
         'list_advs' => $list_advs,
         'form_comment' => $facebook_comment,
         'link_san-pham' => $category_key . "/" . $product_detail['products_key'] . ".htm",
