@@ -492,14 +492,14 @@
                                                     margin-left: 2px;">
                                             Giới thiệu
                                         </div>
-
-                                        <div style="margin-bottom:10px; 
+                                                    
+                                        <h2 style="margin-bottom:10px; 
                                                     margin-left: 2px;
                                                     font-family: RobotoSlabLight;
                                                     font-size: 14px;
                                                     line-height: 25px">
                                             {product_detail}
-                                        </div>
+                                        </h2>
 
                                         <div align="justify" 
                                              style=" margin-bottom:10px;                                                      
