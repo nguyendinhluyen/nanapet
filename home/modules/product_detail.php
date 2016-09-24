@@ -587,7 +587,8 @@
     // remove all tags in text
     $description = addslashes(strip_tags($product_detail['product_detail']));
     $description = trim(preg_replace( "/\r|\n/", "", $description ));
-    $description = preg_replace('/[ ]{2,}|[\t]/', ' ', $description);
+    // $description = preg_replace('/[ ]{2,}|[\t]/', ' ', $description);
+    $description = preg_replace("/[\t\s]+/", " ", $description);
     
     if (empty($product_detail['manufacturer'])) {
         $product_detail['manufacturer'] = "Đang cập nhật";
@@ -603,7 +604,7 @@
         "@type": "Product",
         "name": "'.$product_detail["products_name"].'",
         "image": "{linkS}upload/product/'.$product_detail["products_image"].'",
-        "description": "'.addslashes($description).'", "brand": {
+        "description": "'.$description.'", "brand": {
         "@type": "Thing",
         "name": "'.$product_detail["manufacturer"].'" },
         "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.4", "reviewCount": "89"
