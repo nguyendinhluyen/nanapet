@@ -10,6 +10,7 @@
         <meta name="description" content="{description}">
         <meta name="keywords" content="{keywords}">
         <meta name="author" content="NanaPet">
+        {script_product_detail}
         <!-- Begin control message facebook-->
         <meta property="fb:admins" content="1119844474"/>
         <meta property="fb:admins" content="100000096874902"/>

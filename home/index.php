@@ -139,7 +139,6 @@
                 (
                 'chatlive' => "",
             ));
-
             break;
 
         case 'info':
@@ -186,7 +185,7 @@
                 'chatlive' => $chatlive,
             ));
     }
-
+    
     $html = $xtemplate->replace($html, array(
         'category' => $category,
         'hidden-banner-left' => $hiddenbannerleft,
@@ -201,7 +200,6 @@
         'main_banner' => $main_banner,
         'left_banner_1' => $left_banner_1,
         'left_banner_2' => $left_banner_2,
-        'linkS' => $linkS,
         'introduce' => $introduce,
         'product_menu' => $product,
         'service' => $service,
@@ -216,6 +214,8 @@
         'left_facebook_box' => $left_facebook_box,
         'linkSf' => "http://nanapet.com/",
         'left_facebook_page_plugin' => $left_facebook_page_plugin,
+        'script_product_detail' => $script_product_detail,
+        'linkS' => $linkS
     ));
 
     $xtemplate->show($html);
