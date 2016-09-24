@@ -587,6 +587,7 @@
     // remove all tags in text
     $description = addslashes(strip_tags($product_detail['product_detail']));
     $description = trim(preg_replace( "/\r|\n/", "", $description ));
+    $description = preg_replace('/[ ]{2,}|[\t]/', ' ', $description);
     
     if (empty($product_detail['manufacturer'])) {
         $product_detail['manufacturer'] = "Đang cập nhật";
