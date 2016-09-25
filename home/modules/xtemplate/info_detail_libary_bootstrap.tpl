@@ -158,7 +158,6 @@
                                 </span>
                             </td>                        
                         </tr>
-                        
                     </table> 
                     <div style="float:left;                                 
                                 margin-right: 0px;
@@ -169,41 +168,41 @@
                         <span id = "sharefacebook_icon" 
                               style = "margin-right:5px">
                             <a  target="_blank"
-                                href="http://www.facebook.com/sharer/sharer.php?s=100&amp;p[url]={linkSf}{news_key}&amp;p[images][0]= {linkSf}layout/images/logo/banner01.jpg&amp;p[title]={news_name}+&amp;p[summary]={news_shortcontent}">
+                                href="http://www.facebook.com/sharer/sharer.php?s=100&amp;p[url]={linkSf}{news_key}&amp;p[images][0]= {linkSf}layout/images/logo/banner01.jpg&amp;p[title]={news_name}+&amp;p[summary]={news_shortcontent}"
+                                ref="nofollow">
                                 <img alt="facebook" 
                                     src="{linkS}layout/images/facebook-icon.png" 
                                     title="Chia sẻ Facebook"
                                     width="40px"/>
                             </a>
                         </span>
-
                         <span id = "sharefacebook_icon" 
                               style = "margin-right:5px">
                             <a  href="https://plus.google.com/share?url={linkSf}{news_key}"
-                                onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');;return false;">
+                                onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');;return false;"
+                                ref="nofollow">
                                 <img alt="google+" 
                                     src="{linkS}layout/images/google-plus-icon.png"                                
                                     title="Chia sẻ Google+"
                                     width="40px"/>
                             </a>
                         </span>
-
                         <span id = "sharefacebook_icon"
                               style = "margin-right:5px">
-                            <a href="https://twitter.com/intent/tweet?text={news_name_twitter}&url={linkSf}{news_key}&related=episod">
+                            <a href="https://twitter.com/intent/tweet?text={news_name_twitter}&url={linkSf}{news_key}&related=episod"
+                               ref="nofollow">
                                 <img alt="tweet" 
                                     src="{linkS}layout/images/twitter-icon.png"
                                     title="Chia sẻ Tweet"
                                     width="40px"/>
                             </a>
                         </span>		                                                                    
-
                         <span id = "sharefacebook_icon">
                             <a href="http://www.linkedin.com/shareArticle?mini=true&url={linkSf}{news_key}&title={news_name}&summary={news_shortcontent}&source=nanapet.com" 
-                               rel="nofollow" 
                                onclick="NewWindow(this.href,'template_window','550','400','yes','center');return false" 
                                onfocus="this.blur()"
-                               target="_blank"> 
+                               target="_blank"
+                               rel="nofollow"> 
                                 <img alt="linkedIn" 
                                     src="{linkS}layout/images/linkedIn-icon.png" 
                                     title="Chia sẻ LinkedIn"
@@ -223,7 +222,8 @@
                                margin-right: 15px">
                     
                     <div class="col-sx-12 col-sm-12 col-md-3 col-lg-3" style="float:left; padding-top: 45px">
-                        <a href="{linkS}cong-tac-vien/{idadmin}.html/page=0">
+                        <a href="{linkS}cong-tac-vien/{idadmin}.html/page=0"
+                           ref="nofollow">
                             <img alt="{name}"
                                 class="img-circle"
                                 src="{linkS}upload/avatar/{avata}"
@@ -235,7 +235,8 @@
                                     line-height: 30px;
                                     margin-top: 10px">
                             <a style="color: black; text-transform: uppercase"
-                               href="{linkS}cong-tac-vien/{idadmin}.html/page=0">
+                               href="{linkS}cong-tac-vien/{idadmin}.html/page=0"
+                               ref="nofollow">
                                 {name}
                             </a>
                         </div>
@@ -477,7 +478,8 @@
                                             <span id = "sharefacebook_icon" 
                                                   style = "margin-right:5px">
                                                 <a  target="_blank" 
-                                                    href="http://www.facebook.com/sharer/sharer.php?s=100&amp;p[url]={linkSf}{news_key}&amp;p[images][0]= {linkSf}layout/images/logo/banner01.jpg&amp;p[title]={news_name}+&amp;p[summary]={news_shortcontent}">
+                                                    href="http://www.facebook.com/sharer/sharer.php?s=100&amp;p[url]={linkSf}{news_key}&amp;p[images][0]= {linkSf}layout/images/logo/banner01.jpg&amp;p[title]={news_name}+&amp;p[summary]={news_shortcontent}"
+                                                    ref="nofollow">
                                                     <img alt="facebook" 
                                                         src="{linkS}layout/images/facebook-icon.png" 
                                                         title="Chia sẻ Facebook"
@@ -489,7 +491,8 @@
                                             <span id = "sharefacebook_icon" 
                                                   style = "margin-right:5px">
                                                 <a  href="https://plus.google.com/share?url={linkSf}{news_key}"
-                                                    onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');;return false;">
+                                                    onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');;return false;"
+                                                    ref="nofollow">
                                                     <img alt="google+" 
                                                         src="{linkS}layout/images/google-plus-icon.png"                                
                                                         title="Chia sẻ Google+"
@@ -500,7 +503,8 @@
                                         <td>
                                             <span id = "sharefacebook_icon"
                                                   style = "margin-right:5px">
-                                                <a href="https://twitter.com/intent/tweet?text={news_name_twitter}&url={linkSf}{news_key}&related=episod">
+                                                <a href="https://twitter.com/intent/tweet?text={news_name_twitter}&url={linkSf}{news_key}&related=episod"
+                                                   ref="nofollow">
                                                     <img alt="tweet" 
                                                         src="{linkS}layout/images/twitter-icon.png"
                                                         title="Chia sẻ Tweet"
@@ -512,10 +516,10 @@
                                         <td>
                                         <span id = "sharefacebook_icon">
                                                 <a href="http://www.linkedin.com/shareArticle?mini=true&url={linkSf}{news_key}&title={news_name}&summary={news_shortcontent}&source=nanapet.com" 
-                                                   rel="nofollow" 
                                                    onclick="NewWindow(this.href,'template_window','550','400','yes','center');return false" 
                                                    onfocus="this.blur()"
-                                                   target="_blank"> 
+                                                   target="_blank"
+                                                   rel="nofollow" > 
                                                     <img alt="linkedIn" 
                                                         src="{linkS}layout/images/linkedIn-icon.png" 
                                                         title="Chia sẻ LinkedIn"
@@ -529,7 +533,6 @@
                         </div>
                     </div>    
                 </div>
-                      
                 <hr style="margin-top: 10px;
                            margin-bottom: 5px;
                            margin-left: auto;
@@ -717,17 +720,7 @@
                                                     </span>
                                                 </td>                                            
                                             </tr>
-                                            <tr>
-                                                <td style="font-family:RobotoSlabLight; 
-                                                           font-size: 12px;">
-                                                    <a style="text-transform: initial;
-                                                              color: #05b4fa;">
-                                                        Xem chi tiết
-                                                    </a>
-                                                </td>
-                                            </tr>                                                                            
-                                        </table> 
-
+                                        </table>
                                     </td>
                                 </tr>
                             </table>

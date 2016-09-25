@@ -234,7 +234,8 @@
                                     <span  style="outline: none; 
                                             font-size: 14px;
                                             font-family: PoetsenOne;
-                                            color: #848484;">
+                                            color: #848484;
+                                            line-height: 20px">
                                      {news_name}
                                      </span>
                                 </div>
