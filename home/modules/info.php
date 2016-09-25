@@ -24,7 +24,7 @@
             $info = $xtemplate->load('libary_bootstrap');
             $total = count($libaries);
 
-            //Phan trang			
+            // Phan trang
             $pp = 10;
             $p_now = intval($_GET ['page']);
             $numofpages = $total / $pp;
@@ -67,7 +67,7 @@
                         'date'          =>  $date_array[2],                        
                         'month'         =>  $date_array[1],                        
                         'year'          =>  $date_array[0],                        
-                        'person_up'     =>  'Tác giả :&nbsp; <a href="{linkS}cong-tac-vien/'.$idadmin.'.html/page=0">'
+                        'person_up'     =>  'Tác giả :&nbsp; <a ref="nofollow" href="{linkS}cong-tac-vien/'.$idadmin.'.html/page=0">'
                                             .'<b style= "font-family:RobotoSlabRegular; text-transform: uppercase; color: #337ab7">'
                                             .$libaries[$i]['translator'].'</a>&nbsp;&nbsp;|&nbsp;&nbsp;</b>',
                     ));
@@ -75,14 +75,22 @@
             }
 
             $breadcrumbs_path .= '<a href="{linkS}">NanaPet</a>';            
-            $breadcrumbs_path .= ' &raquo; '.'Đời sống Pets';            
-            $tilte_page =   'Đời sống Pets'. " | NanaPet";            
+            $breadcrumbs_path .= ' &raquo; '.'Đời sống Pets';
+            if (!empty($category_selected)) {
+                $breadcrumbs_path .= ' &raquo; '.$category_selected;
+                $tilte_page = $category_selected. " | NanaPet";
+            } else {
+                $tilte_page = 'Đời sống Pets'. " | NanaPet";
+                $category_selected = "Đời sống Pets";
+            }
+            
             $info  = $xtemplate->assign_blocks_content($info ,array(                
                 'PROMOTION'     =>  $tpl
-            ));					
+            ));
             
             $info = $xtemplate->replace($info,array(
-                'category'      =>  $category_libary
+                'category' =>  $category_libary,
+                'category_selected' => $category_selected
             ));					
 
             if(!empty($_GET['choose3'])){

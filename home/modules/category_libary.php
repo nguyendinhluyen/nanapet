@@ -23,6 +23,7 @@
         $id_danhmuc_main = $categories[$i]['categorieslibary_id'];
         if($category_key === $categories[$i]['categorieslibary_key']) {
             $id_danhmuc_main = "selected";
+            $category_selected = $categories[$i]['categorieslibary_name'];
         }
         $tpl.= $xtemplate->assign_vars($block,array(
             'category_name'     => $categories[$i]['categorieslibary_name'],
@@ -42,6 +43,7 @@
             if($category_key === $categories_sub[$j]['categorieslibary_key']) {
                 $id_danhmuc_sub = "selected";
                 $img_danhmuc_sub_display = " display:inline; margin-left: -15px";
+                $category_selected = $categories_sub[$j]['categorieslibary_name'];
             }
             
             $tpl2.= $xtemplate->assign_vars($block_sub,array(

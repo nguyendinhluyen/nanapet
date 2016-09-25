@@ -50,7 +50,7 @@
         }			
        	var source = [
             "Lọc bài viết...",
-            "Tất cả",
+            //"Tất cả",
             "Chó",
             "Mèo"
         ];
@@ -115,6 +115,14 @@
             </div>                 
                         
             <div class="news_main" style ="margin-top: 30px">
+                <h1 style="margin-top: 20px;
+                        margin-bottom: 25px; 
+                        font-size: 23px;
+                        font-family:PoetsenOne;
+                        color: #ff767c;
+                        text-transform: uppercase">
+                    {category_selected}
+                </h1>
                 <!--BEGINLIST_PROMOTION-->
                 <!--BEGIN_PROMOTION-->			                
                 <div class="contentpaneopen">
@@ -132,69 +140,53 @@
                                       style="color:#5b5b5b;
                                             font-size:13px;
                                             font-family:RobotoSlabLight;">
-                                    {person_up} <span style ="color: #999999">Ngày {date}, Tháng {month}, Năm {year}</span>
+                                    {person_up} 
+                                    <span style ="color: #999999">Ngày {date}, Tháng {month}, Năm {year}</span>
                                 </span>
                             </div>
                         </div>
                     </div>					
                     <div class="article-content">                         
-                        <table>
-                            <tr>
-                                <td style="padding-right:15px">
-                                    <h4>
-                                        <a href="{linkS}thu-vien/{news_key}/" 
-                                           class="previews">
-                                            <img alt="{news_name}" 
-                                                src="{linkS}upload/news/{news_image}" 
-                                                width="200" 
-                                                height="200"
-                                                style ="-moz-border-radius:20px; 
-                                                        -webkit-border-radius:20px;
-                                                        border-radius: 20px;
-                                                        margin-top: 10px"/>
-                                        </a>
-                                    </h4>                        
-                                </td>
-                                <td style="width:100%;">
-                                    <h3 style="text-align:justify;
-                                                font-family:RobotoSlabLight;
-                                                font-size:14px;
-                                                line-height: 23px;
-                                                margin-top:10px;
-                                                height: 170px;">
-                                        <div>
-                                            <span>
-                                                {news_short}
-                                            </span>
-                                        </div>
-                                    </h3>                                                      
-                                    <div class="fb-like" 
-                                        data-href="{linkS}thu-vien/{news_key}/" 
-                                        data-layout="button_count"
-                                        data-action="like"
-                                        data-show-faces="true" 
-                                        data-share="true"> 
-                                    </div>                                    
-                                </td>                                  
-                                <td>                                        
-                                </td>
-                            </tr>                                            
-                            <tr>
-                                <td>
-                                </td>                         
-                                <td class = "linkDetail" 
-                                    style="text-align:right">
-                                    <a href="{linkS}thu-vien/{news_key}/" 
-                                       class="readon" 
-                                       style="color: #337ab7;
-                                            font-size:14px;
-                                            font-family:RobotoSlabRegular;
-                                            outline: none">
-                                        Xem chi tiết
-                                    </a>                                     
-                                </td>                                                        
-                            </tr>
-                        </table>                   					
+                        <div class="row">
+                            <div class="col-md-3 col-lg-3">
+                                <h4>
+                                    <a href="{linkS}thu-vien/{news_key}/"
+                                       class="previews">
+                                        <img alt="{news_name}"
+                                            src="{linkS}upload/news/{news_image}" 
+                                            width="200" 
+                                            height="200"
+                                            style ="-moz-border-radius:20px; 
+                                                    -webkit-border-radius:20px;
+                                                    border-radius: 20px;
+                                                    margin-top: 10px"/>
+                                    </a>
+                                </h4> 
+                            </div>
+                            <div class="col-md-9 col-lg-9">
+                                <h3 style="text-align:justify;
+                                        font-family:RobotoSlabLight;
+                                        font-size:14px;
+                                        line-height: 23px;
+                                        margin-top:15px;
+                                        height: 170px;
+                                        margin-left: 20px">
+                                    <div>
+                                        <span>
+                                            {news_short}
+                                        </span>
+                                    </div>
+                                </h3>  
+                                <div class="fb-like" 
+                                    data-href="{linkS}thu-vien/{news_key}/" 
+                                    data-layout="button_count"
+                                    data-action="like"
+                                    data-show-faces="true" 
+                                    data-share="true"
+                                    style="margin-left: 20px"> 
+                                </div>  
+                            </div>
+                        </div>
                     </div>
                     <hr style = "margin-bottom: 30px"/>                    
                 </div>
@@ -221,51 +213,32 @@
                            clear: both; 
                            width: 100%; 
                            margin-top: 30px;
-                           margin-bottom: 5px;"/>
+                           margin-bottom: 25px;"/>
                 <ul style = "padding-left: 15px; clear:both">
                     <!--BEGINLIST_NEWSCATEGORY-->
                     <!--BEGIN_NEWSCATEGORY-->
                     <a href="{linkS}thu-vien/{news_key}/">
                         <li class="danhmuc_main">
-                            <table>
-                                <tr>
-                                    <td>                                    
-                                        <img alt="{news_name}" 
-                                            src="{linkS}upload/news/{news_image}"
-                                            width="100"
-                                            height="90"
-                                            style ="-moz-border-radius:10px; 
-                                                    -webkit-border-radius:10px;
-                                                    border-radius: 10px;
-                                                    margin-top: 20px;
-                                                    margin-right: 10px"/>
-                                    </td>
-                                    <td>
-
-                                        <table>
-                                            <tr>
-                                                <td style="height: 90px; padding-top: 0px; line-height: 20px;">
-                                                    <span  style="outline: none; 
-                                                               font-size: 14px;
-                                                               font-family: PoetsenOne;
-                                                               color: #848484">
-                                                        {news_name}
-                                                    </span>
-                                                </td>                                            
-                                            </tr>
-                                            <tr>
-                                                <td style="font-family:RobotoSlabLight; 
-                                                           font-size: 12px;">
-                                                    <a style="text-transform: initial;color: #05b4fa;">
-                                                        Xem chi tiết
-                                                    </a>
-                                                </td>
-                                            </tr>                                                                            
-                                        </table> 
-
-                                    </td>
-                                </tr>
-                            </table>
+                            <div class="row" style="margin-top: 20px">
+                                <div class="col-md-6 col-lg-6">
+                                    <img alt="{news_name}" 
+                                        src="{linkS}upload/news/{news_image}"
+                                        width="100"
+                                        height="100"
+                                        style ="-moz-border-radius:10px; 
+                                                -webkit-border-radius:10px;
+                                                border-radius: 10px;
+                                                margin-right: 10px"/>
+                                </div>
+                                <div class="col-md-6 col-lg-6">
+                                    <span  style="outline: none; 
+                                            font-size: 14px;
+                                            font-family: PoetsenOne;
+                                            color: #848484;">
+                                     {news_name}
+                                     </span>
+                                </div>
+                            </div>
                         </li>
                     </a>
                     <!--END_NEWSCATEGORY-->
