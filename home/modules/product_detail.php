@@ -599,6 +599,8 @@
     }
 
     // script for SEO
+    $price_java_script = str_replace(" VNĐ","",$price_java_script);
+    $price_java_script = str_replace("Liên hệ","",$price_java_script);
     $script_product_detail = '<script type="application/ld+json"> {
         "@context": "http://schema.org/",
         "@type": "Product",

@@ -493,13 +493,13 @@
                                             Giới thiệu
                                         </div>
                                                     
-                                        <h2 style="margin-bottom:10px; 
+                                        <div style="margin-bottom:10px; 
                                                     margin-left: 2px;
                                                     font-family: RobotoSlabLight;
                                                     font-size: 14px;
                                                     line-height: 25px">
                                             {product_detail}
-                                        </h2>
+                                        </div>
 
                                         <div align="justify" 
                                              style=" margin-bottom:10px;                                                      
