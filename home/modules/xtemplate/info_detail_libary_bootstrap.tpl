@@ -37,7 +37,10 @@
         width:80px !important;
     }    
     #___plusone_0{
-        width:62px !important;
+        width:57px !important;
+    }    
+    #___plusone_1{
+        width:55px !important;
     }    
 </style>
 
@@ -86,132 +89,104 @@
                         margin-top: 30px;
                         margin-bottom: 15px">
                 {breadcrumbs_path}
-            </div>                         	        
+            </div>            
+            <!--Main content page-->
             <div class="news_main_libary">
-                <div id = "ShareButton">
-                    <h1 class="contentheading" 
-                        style="padding-top:5px;                                
-                               font-family:PoetsenOne;
-                               font-size: 30px"> 
-                            {news_name}
-                    </h1>														
-                    <table>
-                        <tr>
-                            <td>
-                                <div style="margin-bottom:10px;                                                
-                                            color:black;
-                                            font-size:14px;
-                                            font-family: RobotoSlabRegular">                            
-                                    <span style="color:#999999; font-family:RobotoSlabLight">{date_added}</span>
-                                </div>
-                            </td>    
-                        </tr>
-                        <tr>
-                            <td colspan="3">
-                                <h1 style="color:blue;                                    
-                                           font-size:14px;                               
-                                           font-family:RobotoSlabRegular;">
-                                    <span style="color:black;">Chuyên Mục:&nbsp;</span> 
-                                    <span style="text-decoration: none; 
-                                                 line-height: 20px;
-                                                 color: #999999">{chuyen_muc}</span>
-                                </h1>
-                            </td>                                                    
-                        </tr>    
-                        
-                    </table>
-                    <table>
-                        <tr>                                
-                            <td style="color:black;                                                                                       
-                                       font-size:14px;                                         
-                                       line-height:30px;
-                                       font-family:RobotoSlabRegular;
-                                       width: 120px">
-                                Từ khóa bài viết:
-                            </td>
-                            <td style = "font-size:14px;
-                                        color:#999999;
-                                        line-height:25px;                                        
-                                        text-transform: capitalize">
-                                {author}
-                            </td>
-                        </tr>    
-                    </table>
-                    <table style="margin-top:10px; float:left;"
-                           class="col-lg-8">
-                        <tr>
-                            <td style="width: 95px"> 
-                                <span class="fb-like"                                     
-                                      data-href="{linkSf}{news_key}"
-                                      data-layout="button_count" 
-                                      data-action="like" 
-                                      data-show-faces="false" 
-                                      data-share="false">
-                                </span>   
-                            </td>
-                            <td style="width: 65px">
-                                <span class="g-plusone" data-size="medium"></span>
-                            </td>
-                            <td> 
-                                <span>
-                                    <a href="{linkSf}{news_key}" class="twitter-share-button">Tweet</a>               
-                                </span>
-                            </td>                        
-                        </tr>
-                    </table> 
-                    <div style="float:left;                                 
-                                margin-right: 0px;
-                                text-align: right;
-                                padding-right: 0px;
-                                padding-bottom: 10px"
-                        class="col-lg-4">
-                        <span id = "sharefacebook_icon" 
-                              style = "margin-right:5px">
-                            <a  target="_blank"
-                                href="http://www.facebook.com/sharer/sharer.php?s=100&amp;p[url]={linkSf}{news_key}&amp;p[images][0]= {linkSf}layout/images/logo/banner01.jpg&amp;p[title]={news_name}+&amp;p[summary]={news_shortcontent}"
-                                ref="nofollow">
-                                <img alt="facebook" 
-                                    src="{linkS}layout/images/facebook-icon.png" 
-                                    title="Chia sẻ Facebook"
-                                    width="40px"/>
-                            </a>
-                        </span>
-                        <span id = "sharefacebook_icon" 
-                              style = "margin-right:5px">
-                            <a  href="https://plus.google.com/share?url={linkSf}{news_key}"
-                                onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');;return false;"
-                                ref="nofollow">
-                                <img alt="google+" 
-                                    src="{linkS}layout/images/google-plus-icon.png"                                
-                                    title="Chia sẻ Google+"
-                                    width="40px"/>
-                            </a>
-                        </span>
-                        <span id = "sharefacebook_icon"
-                              style = "margin-right:5px">
-                            <a href="https://twitter.com/intent/tweet?text={news_name_twitter}&url={linkSf}{news_key}&related=episod"
-                               ref="nofollow">
-                                <img alt="tweet" 
-                                    src="{linkS}layout/images/twitter-icon.png"
-                                    title="Chia sẻ Tweet"
-                                    width="40px"/>
-                            </a>
-                        </span>		                                                                    
-                        <span id = "sharefacebook_icon">
-                            <a href="http://www.linkedin.com/shareArticle?mini=true&url={linkSf}{news_key}&title={news_name}&summary={news_shortcontent}&source=nanapet.com" 
-                               onclick="NewWindow(this.href,'template_window','550','400','yes','center');return false" 
-                               onfocus="this.blur()"
-                               target="_blank"
-                               rel="nofollow"> 
-                                <img alt="linkedIn" 
-                                    src="{linkS}layout/images/linkedIn-icon.png" 
-                                    title="Chia sẻ LinkedIn"
-                                    width="40px"/>
-                            </a>
-                        </span>   
-                    </div>
+                <h1 class="contentheading"
+                    style="padding-top:5px;
+                           font-family:PoetsenOne;
+                           font-size: 30px">
+                    {news_name}
+                </h1>
+                <div style="margin-bottom:10px;
+                            color:black;
+                            font-size:14px;
+                            font-family: RobotoSlabRegular">                            
+                    <span style="color:#999999; font-family:RobotoSlabLight">{date_added}</span>
                 </div>
-                                     
+                <div style="color:blue;                                    
+                           font-size:14px;
+                           font-family:RobotoSlabRegular;
+                           margin-top:20px">
+                    <span style="color:black;">Chuyên Mục:&nbsp;</span> 
+                    <span style="text-decoration: none; 
+                                 line-height: 20px;
+                                 color: #999999">{chuyen_muc}</span>
+                </div>
+                <div style="color:blue;                                    
+                           font-size:14px;
+                           font-family:RobotoSlabRegular;
+                           margin-top: 10px">
+                    <span style="color:black;">Từ khóa bài viết:&nbsp;</span> 
+                    <span style="text-decoration: none; 
+                                 line-height: 20px;
+                                 color: #999999">{author}</span>
+                </div>
+                <div style="margin-top:10px; float:left; padding-left: 0px"
+                     class="col-lg-8">
+                    <span class="fb-like"
+                          data-href="{linkSf}{news_key}"
+                          data-layout="button_count" 
+                          data-action="like" 
+                          data-show-faces="false" 
+                          data-share="false">
+                    </span>
+                    <span class="g-plusone" data-size="medium"></span>
+                    <span>
+                        <a href="{linkSf}{news_key}" class="twitter-share-button">Tweet</a>               
+                    </span>
+                </div> 
+                <div style="float:left;                                 
+                            margin-right: 0px;
+                            text-align: right;
+                            padding-right: 0px;
+                            padding-bottom: 10px"
+                    class="col-lg-4">
+                    <span id = "sharefacebook_icon" 
+                          style = "margin-right:5px">
+                        <a  target="_blank"
+                            href="http://www.facebook.com/sharer/sharer.php?s=100&amp;p[url]={linkSf}{news_key}&amp;p[images][0]= {linkSf}layout/images/logo/banner01.jpg&amp;p[title]={news_name}+&amp;p[summary]={news_shortcontent}"
+                            ref="nofollow">
+                            <img alt="facebook"
+                                src="{linkS}layout/images/facebook-icon.png" 
+                                title="Chia sẻ Facebook"
+                                width="40px"/>
+                        </a>
+                    </span>
+                    <span id = "sharefacebook_icon" 
+                          style = "margin-right:5px">
+                        <a  href="https://plus.google.com/share?url={linkSf}{news_key}"
+                            onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');;return false;"
+                            ref="nofollow">
+                            <img alt="google+" 
+                                src="{linkS}layout/images/google-plus-icon.png"                                
+                                title="Chia sẻ Google+"
+                                width="40px"/>
+                        </a>
+                    </span>
+                    <span id = "sharefacebook_icon"
+                          style = "margin-right:5px">
+                        <a href="https://twitter.com/intent/tweet?text={news_name_twitter}&url={linkSf}{news_key}&related=episod"
+                           ref="nofollow">
+                            <img alt="tweet" 
+                                src="{linkS}layout/images/twitter-icon.png"
+                                title="Chia sẻ Tweet"
+                                width="40px"/>
+                        </a>
+                    </span>		                                                                    
+                    <span id = "sharefacebook_icon">
+                        <a href="http://www.linkedin.com/shareArticle?mini=true&url={linkSf}{news_key}&title={news_name}&summary={news_shortcontent}&source=nanapet.com" 
+                           onclick="NewWindow(this.href,'template_window','550','400','yes','center');return false" 
+                           onfocus="this.blur()"
+                           target="_blank"
+                           rel="nofollow"> 
+                            <img alt="linkedIn" 
+                                src="{linkS}layout/images/linkedIn-icon.png" 
+                                title="Chia sẻ LinkedIn"
+                                width="40px"/>
+                        </a>
+                    </span>   
+                </div>
                 <div class ="row" style="float:left">
                     <hr style="margin-top: 0.5em;
                                margin-bottom: 0.5em;
@@ -255,280 +230,221 @@
                             {short_content}
                         </div>
                         <div style="padding-bottom: 10px">
-                            <table>
-                                <tr>
-                                    <td {display_1}>
-                                        <img alt="blue point" 
-                                            src="{linkS}layout/bootstrap/images/bluePoint.png" 
-                                            style="width: 15px; margin-right: 10px">
-                                    </td>
-                                    <td>
-                                        <a style="font-family: RobotoSlabRegular; 
-                                                  text-align: justify; 
-                                                  font-size: 14px; 
-                                                  line-height: 25px;" 
-                                            href="{linkS}thu-vien/{relation_news_key_1}/">{relation_news_1}</a>
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-                                    
-                        <div style="padding-bottom: 10px">
-                            <table>
-                                <tr>
-                                    <td {display_2}>
-                                        <img alt="blue point" 
-                                            src="{linkS}layout/bootstrap/images/bluePoint.png" 
-                                            style="width: 15px; margin-right: 10px">
-                                    </td>
-                                    <td>
-                                        <a  style="font-family: RobotoSlabRegular;
-                                                  text-align: justify; 
-                                                  font-size: 14px; 
-                                                  line-height: 25px;" 
-                                            href="{linkS}thu-vien/{relation_news_key_2}/">{relation_news_2}</a>
-                                    </td>
-                                </tr>
-                            </table>                                                        
+                            <span {display_1}>
+                                <img alt="blue point" 
+                                    src="{linkS}layout/bootstrap/images/bluePoint.png" 
+                                    style="width: 15px; margin-right: 10px">
+                            </span>
+                            <span>
+                                <a style="font-family: RobotoSlabRegular; 
+                                          text-align: justify; 
+                                          font-size: 14px; 
+                                          line-height: 25px;" 
+                                    href="{linkS}thu-vien/{relation_news_key_1}/">{relation_news_1}</a>
+                            </span>
                         </div>
                         <div style="padding-bottom: 10px">
-                            <table>
-                                <tr>
-                                    <td {display_3}>
-                                        <img alt="blue point"  
-                                            src="{linkS}layout/bootstrap/images/bluePoint.png" 
-                                            style="width: 15px; margin-right: 10px">
-                                    </td>
-                                    <td>
-                                        <a  style="font-family: RobotoSlabRegular; 
-                                                  text-align: justify; 
-                                                  font-size: 14px; 
-                                                  line-height: 25px;" 
-                                            href="{linkS}thu-vien/{relation_news_key_3}/">{relation_news_3}</a>
-                                    </td>
-                                </tr>
-                            </table>                                                        
+                            <span {display_2}>
+                                <img alt="blue point" 
+                                    src="{linkS}layout/bootstrap/images/bluePoint.png" 
+                                    style="width: 15px; margin-right: 10px">
+                            </span>
+                            <span>
+                                <a style="font-family: RobotoSlabRegular;
+                                          text-align: justify; 
+                                          font-size: 14px; 
+                                          line-height: 25px;" 
+                                    href="{linkS}thu-vien/{relation_news_key_2}/">{relation_news_2}</a>
+                            </span>
                         </div>
                         <div style="padding-bottom: 10px">
-                            <table>
-                                <tr>
-                                    <td {display_4}>
-                                        <img alt="blue point" 
-                                            src="{linkS}layout/bootstrap/images/bluePoint.png" 
-                                            style="width: 15px; margin-right: 10px">
-                                    </td>
-                                    <td>
-                                        <a  style="font-family: RobotoSlabRegular; 
-                                                  text-align: justify; 
-                                                  font-size: 14px; 
-                                                  line-height: 25px;" 
-                                            href="{linkS}thu-vien/{relation_news_key_4}/">{relation_news_4}</a>
-                                    </td>
-                                </tr>
-                            </table>                                                        
+                            <span {display_3}>
+                                <img alt="blue point"
+                                    src="{linkS}layout/bootstrap/images/bluePoint.png" 
+                                    style="width: 15px; margin-right: 10px">
+                            </span>
+                            <span>
+                                <a style="font-family: RobotoSlabRegular;
+                                          text-align: justify; 
+                                          font-size: 14px; 
+                                          line-height: 25px;" 
+                                    href="{linkS}thu-vien/{relation_news_key_3}/">{relation_news_3}</a>
+                            </span>
                         </div>
                         <div style="padding-bottom: 10px">
-                            <table>
-                                <tr>
-                                    <td {display_5}>
-                                        <img alt="blue point"
-                                            src="{linkS}layout/bootstrap/images/bluePoint.png" 
-                                            style="width: 15px; margin-right: 10px">
-                                    </td>
-                                    <td>
-                                        <a  style="font-family: RobotoSlabRegular; 
-                                                  text-align: justify; 
-                                                  font-size: 14px; 
-                                                  line-height: 25px;" 
-                                            href="{linkS}thu-vien/{relation_news_key_5}/">{relation_news_5}</a>
-                                    </td>
-                                </tr>
-                            </table>                                                        
+                            <span {display_4}>
+                                <img alt="blue point" 
+                                    src="{linkS}layout/bootstrap/images/bluePoint.png" 
+                                    style="width: 15px; margin-right: 10px">
+                            </span>
+                            <span>
+                                <a  style="font-family: RobotoSlabRegular; 
+                                          text-align: justify; 
+                                          font-size: 14px; 
+                                          line-height: 25px;" 
+                                    href="{linkS}thu-vien/{relation_news_key_4}/">{relation_news_4}</a>
+                            </span>
+                        </div>
+                        <div style="padding-bottom: 10px">
+                            <span {display_5}>
+                                <img alt="blue point"
+                                    src="{linkS}layout/bootstrap/images/bluePoint.png" 
+                                    style="width: 15px; margin-right: 10px">
+                            </span>
+                            <span>
+                                <a style="font-family: RobotoSlabRegular; 
+                                          text-align: justify; 
+                                          font-size: 14px;
+                                          line-height: 25px;" 
+                                    href="{linkS}thu-vien/{relation_news_key_5}/">{relation_news_5}</a>
+                            </span>
                         </div>                    
                     </div>
                     <div class="article-content col-sm-12 col-xs-12 col-md-9 col-lg-9"
                          style="line-height:25px;
-                                font-size: 14px;                                
-                                padding-top: 5px;">                        
+                                font-size: 14px;
+                                padding-top: 5px;">
                         <p>
                             <span style="text-align:justify;
                                          font-family:RobotoSlabRegular;">
                                 {news_content}
                             </span>
-                        </p> 
-                        <!--<A href="#section0">
-                            <b style="font-family:RobotoSlabLight;
-                                      font-size:14px;">
-                                Về đầu trang
-                            </b>
-                        </A>
-                        <br/>-->
+                        </p>
                         <div style="margin-bottom:10px; 
                                 padding-top:10px;
                                 color:#7F1F00; 
                                 font-size:14px; 
                                 font-family:RobotoSlabRegular">
-                            <table style="text-align:left;">
+                            <div style="text-align:left;">
                                 <hr style="margin-top: 0.5em;
                                            margin-bottom: 0.5em;
                                            margin-left: auto;
                                            margin-right: auto;                                                           
                                            color: #999999;
                                            {display_disclaimer}">
-                                <tr style="{display_disclaimer}">
-                                    <td>
-                                        <table>
-                                            <tr>
-                                                <td>
-                                                    <img alt="disclamer"
-                                                        src="{linkS}layout/images/disclamer.png"
-                                                        title="Disclaimer"
-                                                        width="30px"/>
-                                                </td>
-                                                <td style="color:black;
-                                                    font-size:15px; 
-                                                    width: 100%; 
-                                                    line-height: 20px;
-                                                    font-family: RobotoSlabLight;
-                                                    text-align: justify;
-                                                    font-style: italic;
-                                                    padding-left: 10px">
-                                                    Disclaimer
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </td>
-                                </tr>
-                                <tr>                                                                        
-                                    <td style="color:black;
-                                               font-size:12px; 
-                                               width: 100%; 
-                                               line-height: 25px;
-                                               font-family: RobotoSlabLight;
-                                               text-align: justify">
-                                        {disclaimer}
-                                    </td>
-                                </tr>  
-                                <tr style="{display_disclaimer}">
-                                    <td>
+                                <div style="{display_disclaimer}">
+                                    <span>
+                                        <img alt="disclamer"
+                                            src="{linkS}layout/images/disclamer.png"
+                                            title="Disclaimer"
+                                            width="25px"/>
+                                    </span>
+                                    <span style="color:black;
+                                        font-size:15px; 
+                                        width: 100%; 
+                                        line-height: 25px;
+                                        font-family: RobotoSlabLight;
+                                        text-align: justify;
+                                        font-style: italic;
+                                        padding-left: 10px">
+                                        Thông báo
+                                    </span>
+                                </div>
+                                <div style="color:black;
+                                           font-size:13px; 
+                                           width: 100%; 
+                                           line-height: 25px;
+                                           font-family: RobotoSlabLight;
+                                           text-align: justify">
+                                    {disclaimer}
+                                </div>
+                                <div style="{display_disclaimer}">
+                                    <div>
                                         <hr style="margin-top: 0.5em;
                                                   margin-bottom: 0.5em;
                                                   margin-left: auto;
                                                   margin-right: auto;                                                           
                                                   color: #999999;">  
-                                    </td>
-                                </tr>
+                                    </div>
+                                </div>
                                 <hr style="margin-top: 0.5em;
                                         margin-bottom: 0.5em;
                                         margin-left: auto;
                                         margin-right: auto;                                                           
                                         color: #999999;
-                                        {display_resource}">  
-                                <tr>
-                                    <td style="color:black;                                                                                       
+                                        {display_resource}">
+                                <div>
+                                    <div style="color:black;                                                                                       
                                                font-size:14px; 
                                                width: 100%; 
                                                line-height: 35px">
                                         Nguồn tham khảo:&nbsp;
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style = "font-size:14px;
+                                    </div>
+                                </div>
+                                <div>
+                                    <div style = "font-size:14px;
                                                  color:#337ab7;
                                                  line-height:25px;">
                                         {linkResource}
-                                    </td>
-                                </tr>                                    
-                            </table>   
+                                    </div>
+                                </div>                                    
+                            </div>
                             <hr style="margin-top: 0.5em;
                                     margin-bottom: 0.5em;
                                     margin-left: auto;
                                     margin-right: auto;                                                           
                                     color: #999999">
-                            
                             <div class="col-sm-12 col-sx-12 col-md-8 col-lg-8" 
                                  style="padding-left: 0px; margin-top: 10px">
-                                <table>
-                                    <tr>
-                                        <td style="width: 95px"> 
-                                        <span class="fb-like"                                     
-                                              data-href="{linkSf}{news_key}"
-                                              data-layout="button_count" 
-                                              data-action="like" 
-                                              data-show-faces="false" 
-                                              data-share="false">
-                                        </span>   
-                                    </td>
-                                    <td style="max-width: 67px; min-width: 67px">
-                                        <span class="g-plusone" data-size="medium" ></span>
-                                    </td>
-                                    <td> 
-                                        <span>
-                                            <a href="{linkSf}{news_key}" class="twitter-share-button">Tweet</a>               
-                                        </span>
-                                    </td>
-                                    </tr>
-                                </table>                                
+                                <span class="fb-like"                                     
+                                      data-href="{linkSf}{news_key}"
+                                      data-layout="button_count" 
+                                      data-action="like" 
+                                      data-show-faces="false"
+                                      data-share="false">
+                                </span>   
+                                <span class="g-plusone" data-size="medium" ></span>
+                                <span>
+                                    <a href="{linkSf}{news_key}" class="twitter-share-button">Tweet</a>               
+                                </span>
                             </div>
                             <div class="col-sm-12 col-sx-12 col-md-4 col-lg-4" style="padding-right: 0px">
-                                <table style="margin-bottom: 10px; margin-top: 10px">
-                                    <tr>                                                                       
-
-                                        <td>                                       
-                                            <span id = "sharefacebook_icon" 
-                                                  style = "margin-right:5px">
-                                                <a  target="_blank" 
-                                                    href="http://www.facebook.com/sharer/sharer.php?s=100&amp;p[url]={linkSf}{news_key}&amp;p[images][0]= {linkSf}layout/images/logo/banner01.jpg&amp;p[title]={news_name}+&amp;p[summary]={news_shortcontent}"
-                                                    ref="nofollow">
-                                                    <img alt="facebook" 
-                                                        src="{linkS}layout/images/facebook-icon.png" 
-                                                        title="Chia sẻ Facebook"
-                                                        width="40px"/>
-                                                </a>
-                                            </span>                                                                           
-                                        </td>
-                                        <td>
-                                            <span id = "sharefacebook_icon" 
-                                                  style = "margin-right:5px">
-                                                <a  href="https://plus.google.com/share?url={linkSf}{news_key}"
-                                                    onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');;return false;"
-                                                    ref="nofollow">
-                                                    <img alt="google+" 
-                                                        src="{linkS}layout/images/google-plus-icon.png"                                
-                                                        title="Chia sẻ Google+"
-                                                        width="40px"/>
-                                                </a>
-                                            </span>                                       
-                                        </td>
-                                        <td>
-                                            <span id = "sharefacebook_icon"
-                                                  style = "margin-right:5px">
-                                                <a href="https://twitter.com/intent/tweet?text={news_name_twitter}&url={linkSf}{news_key}&related=episod"
-                                                   ref="nofollow">
-                                                    <img alt="tweet" 
-                                                        src="{linkS}layout/images/twitter-icon.png"
-                                                        title="Chia sẻ Tweet"
-                                                        width="40px"/>
-                                                </a>
-                                            </span>		                                                                    
-
-                                        </td>
-                                        <td>
-                                        <span id = "sharefacebook_icon">
-                                                <a href="http://www.linkedin.com/shareArticle?mini=true&url={linkSf}{news_key}&title={news_name}&summary={news_shortcontent}&source=nanapet.com" 
-                                                   onclick="NewWindow(this.href,'template_window','550','400','yes','center');return false" 
-                                                   onfocus="this.blur()"
-                                                   target="_blank"
-                                                   rel="nofollow" > 
-                                                    <img alt="linkedIn" 
-                                                        src="{linkS}layout/images/linkedIn-icon.png" 
-                                                        title="Chia sẻ LinkedIn"
-                                                        width="40px"/>
-                                                </a>
-                                            </span>   
-                                        </td>
-                                    </tr>
-                                </table>
+                                <div style="margin-bottom: 10px; margin-top: 10px">
+                                    <span id = "sharefacebook_icon" 
+                                          style = "margin-right:5px">
+                                        <a  target="_blank" 
+                                            href="http://www.facebook.com/sharer/sharer.php?s=100&amp;p[url]={linkSf}{news_key}&amp;p[images][0]= {linkSf}layout/images/logo/banner01.jpg&amp;p[title]={news_name}+&amp;p[summary]={news_shortcontent}"
+                                            ref="nofollow">
+                                            <img alt="facebook" 
+                                                src="{linkS}layout/images/facebook-icon.png" 
+                                                title="Chia sẻ Facebook"
+                                                width="40px"/>
+                                        </a>
+                                    </span>                                                                           
+                                    <span id = "sharefacebook_icon" 
+                                          style = "margin-right:5px">
+                                        <a  href="https://plus.google.com/share?url={linkSf}{news_key}"
+                                            onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');;return false;"
+                                            ref="nofollow">
+                                            <img alt="google+" 
+                                                src="{linkS}layout/images/google-plus-icon.png"                                
+                                                title="Chia sẻ Google+"
+                                                width="40px"/>
+                                        </a>
+                                    </span>                                       
+                                    <span id = "sharefacebook_icon"
+                                          style = "margin-right:5px">
+                                        <a href="https://twitter.com/intent/tweet?text={news_name_twitter}&url={linkSf}{news_key}&related=episod"
+                                           ref="nofollow">
+                                            <img alt="tweet" 
+                                                src="{linkS}layout/images/twitter-icon.png"
+                                                title="Chia sẻ Tweet"
+                                                width="40px"/>
+                                        </a>
+                                    </span>		                                                                    
+                                    <span id = "sharefacebook_icon">
+                                        <a href="http://www.linkedin.com/shareArticle?mini=true&url={linkSf}{news_key}&title={news_name}&summary={news_shortcontent}&source=nanapet.com" 
+                                           onclick="NewWindow(this.href,'template_window','550','400','yes','center');return false" 
+                                           onfocus="this.blur()"
+                                           target="_blank"
+                                           rel="nofollow" > 
+                                            <img alt="linkedIn" 
+                                                src="{linkS}layout/images/linkedIn-icon.png" 
+                                                title="Chia sẻ LinkedIn"
+                                                width="40px"/>
+                                        </a>
+                                    </span>   
+                                </div>
                             </div>                                                            
                         </div>
                     </div>    
@@ -547,19 +463,12 @@
                                    color: #999999;
                                    clear: both">
                         <div style="background-color: #f1fdfb; padding-top: 10px; padding-bottom: 10px; clear:both">
-                             
-                            <table style="text-align: left;">
-                                <tr>                                
-                                    <td>
-                                        <span style="color: #48817a;
-                                                     font-size: 14px;
-                                                     font-family: RobotoSlabRegular;
-                                                     margin-left: 10px;">
-                                            SẢN PHẨN LIÊN QUAN
-                                        </span>
-                                    </td>
-                                </tr>                            
-                            </table>                        
+                            <span style="color: #48817a;
+                                         font-size: 14px;
+                                         font-family: RobotoSlabRegular;
+                                         margin-left: 10px;">
+                                SẢN PHẨN LIÊN QUAN
+                            </span>
                         </div>  
                         <div style="padding-top: 30px ; padding-bottom: 40px">
                             <table>
@@ -603,7 +512,7 @@
                                                  color: black;
                                                  text-transform: initial;
                                                  color: #337ab7">
-                                            > &nbsp;{news_name}
+                                            {news_name}
                                         </a>   
                                     </li>
                                     <!--END_NEWSCHUYENMUC-->
@@ -640,7 +549,7 @@
                                                  color: black;
                                                  text-transform: initial;
                                                  color: #337ab7">
-                                            > &nbsp;{news_name}
+                                            {news_name}
                                         </a>   
                                     </li>
                                     <!--END_LASTETSNEWS-->
@@ -648,27 +557,20 @@
                                 </ul>
                             </div>                            
                         </div>
-                    </div>                                
+                    </div>
                     <hr style="margin-top: 10px;
                                margin-bottom: 5px;
                                margin-left: auto;
                                margin-right: auto;                                                           
                                color: #999999;">
                     <div style="background-color: #f1fdfb; padding-top: 10px; padding-bottom: 10px">
-                        <table style="text-align: left;">
-                            <tr>                                
-                                <td>
-                                    <span style="color: #48817a;
-                                                 font-size: 14px;
-                                                 font-family: RobotoSlabRegular;
-                                                 margin-left: 10px;">
-                                        THẢO LUẬN BÀI VIẾT
-                                    </span>
-                                </td>
-                            </tr>
-                        </table>                        
+                        <span style="color: #48817a;
+                                     font-size: 14px;
+                                     font-family: RobotoSlabRegular;
+                                     margin-left: 10px;">
+                            THẢO LUẬN BÀI VIẾT
+                        </span>
                     </div>
-                    <br/>
                     <div class="fb-comments"                       
                         data-href="{linkSf}{news_key}"
                         data-numposts="5"
@@ -676,8 +578,7 @@
                     </div>
                 </div>
             </div><!-- end product_main -->
-            <br/>
-            <br/>
+            <!--End main content page-->
         </div>
         <div class = "hidden-xs hidden-sm col-md-3 col-lg-3" 
              style="padding-right: 50px">
@@ -694,36 +595,28 @@
                     <!--BEGIN_NEWSCATEGORY-->
                     <a href="{linkS}thu-vien/{news_key}/">
                         <li class="danhmuc_main">
-                            <table>
-                                <tr>
-                                    <td>                                    
-                                        <img alt="{news_name}" 
-                                            src="{linkS}upload/news/{news_image}"
-                                            width="100"
-                                            height="90"
-                                            style ="-moz-border-radius:10px; 
-                                                    -webkit-border-radius:10px;
-                                                    border-radius: 10px;
-                                                    margin-top: 20px;
-                                                    margin-right: 10px"/>
-                                    </td>
-                                    <td>
-
-                                        <table>
-                                            <tr>
-                                                <td style="height: 90px; padding-top: 0px; line-height: 20px;">
-                                                    <span  style="outline: none; 
-                                                               font-size: 14px;
-                                                               font-family: PoetsenOne;
-                                                               color: #848484">
-                                                        {news_name}
-                                                    </span>
-                                                </td>                                            
-                                            </tr>
-                                        </table>
-                                    </td>
-                                </tr>
-                            </table>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <img alt="{news_name}" 
+                                        src="{linkS}upload/news/{news_image}"
+                                        width="100"
+                                        height="90"
+                                        style ="-moz-border-radius:10px; 
+                                                -webkit-border-radius:10px;
+                                                border-radius: 10px;
+                                                margin-top: 20px;
+                                                margin-right: 10px"/>
+                                </div>
+                                <div class="col-lg-6" style="margin-top: 15px">
+                                    <span style="outline: none; 
+                                            font-size: 14px;
+                                            font-family: PoetsenOne;
+                                            color: #848484;
+                                            line-height: 25px;">
+                                        {news_name}
+                                    </span>
+                                </div>
+                            </div>
                         </li>
                     </a>
                     <!--END_NEWSCATEGORY-->
@@ -744,7 +637,6 @@
                         {left_banner_1}
                     </div>
                     <script type="text/javascript">
-                        <!--fades,traight,swirl,snake-->
                         effectsDemo2_1 = 'fades,traight,swirl,snake';
                         var demoSlider_2_1 = Sliderman2.slider({container: 'SliderNameBannerLeft', 
                                                                 width: 235, 
