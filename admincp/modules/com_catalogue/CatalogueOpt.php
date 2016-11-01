@@ -103,7 +103,7 @@
                                    . $catorder . "," 
                                    . $status . "," 
                                    . time() . ",'" 
-                                   . $text_seo() . "','" 
+                                   . $text_seo . "','" 
                                    . $_SESSION['lag'] . "')";
                 $mysql->setQuery($sql);
                 $mysql->query();
