@@ -81,6 +81,14 @@
             $status_update = $row['status'];
             $current_publisher = $row['flag_publisher'];
             
+            // Only superadmin can change date publish
+            if  ($_SESSION['admin'][0] == "dinhluyen"
+                || $_SESSION['admin'][0] == "nanapet" 
+                || $_SESSION['admin'][0] == "hapham"
+                || $_SESSION['admin'][0] == "annhy"
+                || $_SESSION['admin'][0] == "bichngan") {
+                $current_publisher = "0";
+            }
             // Get value of relation
             $sql = "SELECT id_news, id_product
                     FROM relation_news_product
@@ -198,6 +206,7 @@
                     if($translator !== "Đình Luyến"
                             && $translator !== "NanaPet" 
                             && $translator !== "Hà Phạm"
+                            && $translator !== "Bích Nhi"
                             && $translator !== "Ngân Nguyễn") {
                         $sql =  "UPDATE news
                                 SET news_key ='".$news_key."',
