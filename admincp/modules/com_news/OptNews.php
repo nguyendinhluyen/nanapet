@@ -206,7 +206,7 @@
                     if($translator !== "Đình Luyến"
                             && $translator !== "NanaPet" 
                             && $translator !== "Hà Phạm"
-                            && $translator !== "Bích Nhi"
+                            // && $translator !== "Bích Nhi"
                             && $translator !== "Ngân Nguyễn") {
                         $sql =  "UPDATE news
                                 SET news_key ='".$news_key."',

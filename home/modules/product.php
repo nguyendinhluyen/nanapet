@@ -32,32 +32,35 @@
     $PromotionSale = '';
     $breadcrumbs = $Category->getCategoryPath($category_key);
     $breadcrumbs_path = '<a style = "outline:none" href="{linkS}">NanaPet</a> &raquo; '
-            . '<a style = "outline:none" href="{linkS}san-pham.htmls">Sản Phẩm</a>';
+            . '<a style = "outline:none" href="{linkS}san-pham/">Sản Phẩm</a>';
     $k = count($breadcrumbs);
     $tilte_page = '';
     for ($i = $k; $i >= 0; $i--) {
         if ($breadcrumbs[$i]['name'] != '') {
             if ($i > 0) {
-                $linkPage .= $breadcrumbs[$i]['key'] . '/';
-                $breadcrumbs_path .= ' &raquo; <a style = "outline:none" href="{linkS}' . $breadcrumbs[$i]['key'] . '.htm">' . $breadcrumbs[$i]['name'] . '</a>';
-                $tilte_page .= $breadcrumbs[$i]['name'] . " | NanaPet";
+                // $linkPage .= $breadcrumbs[$i]['key'] . '/';
+                $breadcrumbs_path .= ' &raquo; <a style = "outline:none" href="{linkS}' 
+                        . $breadcrumbs[$i]['key'] . '/">' . $breadcrumbs[$i]['name'] . '</a>';
+                $tilte_page .= $breadcrumbs[$i]['name'] . " | ";
             } else {
-                $linkPage .= $breadcrumbs[$i]['key'];
+                // $linkPage .= $breadcrumbs[$i]['key'];
                 $breadcrumbs_path .= ' &raquo; ' . $breadcrumbs[$i]['name'];
                 $tilte_page .= $breadcrumbs[$i]['name'] . " | NanaPet";
                 $category_name = $breadcrumbs[$i]['name'];
             }
         }
     }
+    $linkPage .= $breadcrumbs[0]['key'] . '/';
 
     if ($category_key == 'sale-off') {
         $breadcrumbs_path .= ' &raquo; Sản phẩm giảm giá';
-        $linkPage = 'sale-off';
+        $tilte_page .= "Sản phẩm giảm giá | NanaPet";
+        $linkPage = 'sale-off/';
     }
 
-    if ($k == 1) {
+    /*if ($k == 1) {
         $linkPage .= '.htm';
-    }
+    }*/
 
     //Get all products
     $products_t = $Product->getProductsByCategoryKey($category_key);
@@ -70,23 +73,16 @@
         <?php
     }
 
-    //Phan trang
-    if (isset($_GET['num'])) {
-        $pp_quan = input($_GET['num']);
-        $_SESSION['pp_quan'] = $pp_quan;
+    // Navigation
+    // Total products display
+    $pp = 24; 
+    $p_now = 0;
+    if (isset($_GET['trang'])) {
+        $p_now = intval($_GET['trang']);
     }
-
-    $pp_quan = $_SESSION['pp_quan'];
-    $pp = 24;
-
-    if ($pp_quan > 0) {
-        $pp = $pp_quan;
-    }
-
-    $p_now = intval($_GET ['page']);
     $numofpages = $total / $pp;
     $page = 0;
-    if ($p_now <= 0) {
+    if ($p_now == 0) {
         $page = 1;
     } else {
         if ($p_now <= ceil($numofpages)) {
@@ -95,16 +91,16 @@
             $page = 1;
         }
     }
-
-    $limitvalue = $page * $pp - ($pp);
-    //End phan trang
+    $limitvalue = ($page - 1)* $pp;
+    // End navigation
 
     if (isset($_GET['order_by'])) {
         $order_by = input($_GET['order_by']);
         $_SESSION['order_by'] = $order_by;
     }
 
-    $products = $Product->getProductsByCategoryKeyLimitOrderBy($products_t, $category_key, $limitvalue, $pp, $_SESSION['order_by']);
+    $products = $Product->getProductsByCategoryKeyLimitOrderBy($products_t, 
+                            $category_key, $limitvalue, $pp, $_SESSION['order_by']);
     $n = count($products);
     $tpl = '';
 
@@ -167,18 +163,23 @@
 
     $product = $xtemplate->assign_blocks_content($product, array(
         'PRODUCTS' => $tpl
-            ));
+    ));
 
     $url = getFullUrlNotParameter();
     $url .= '/';
     $url1 = $url . 'order/';
 
-    if ($pp_quan > 0) {
-        $nav_page = pagination($linkS . $linkPage . "/" . $pp . '/', ceil($numofpages), $page);
+    /* if ($pp_quan > 0) {
+    $nav_page = pagination($linkS . $linkPage . "/" . $pp . '/', ceil($numofpages), $page);
     } else {
-        $nav_page = pagination($linkS . $linkPage . "/", ceil($numofpages), $page);
-    }
-
+    $nav_page = pagination($linkS . $linkPage . "/", ceil($numofpages), $page);
+    } */
+    
+    // Product SEO 
+    $nav_page = pagination($linkS . $linkPage , ceil($numofpages), $page);
+    $nav_page = str_replace("page=", "trang-", $nav_page);
+    // End product SEO
+    
     // Load dog news
     $News = new News();
     $news = $News->getNewsNewest("4");
@@ -208,7 +209,7 @@
 
     $product = $xtemplate->assign_blocks_content($product, array(
         'NEWS' => $tpl
-            ));
+    ));
 
     //List advs
     $arrAdvs = GetRows('adver_id,adver_logo,adver_link', 'ads', "adver_pos = 1 and adver_status = 1");
@@ -221,6 +222,29 @@
                 . '</div>';
     }
     
+    // Pagination product for SEO 
+    // Please check index.php for more info $link_product_navigation
+    if (ceil($numofpages) > 1) {
+        if ($page == 1) {
+            // First page
+            $showpage = $page + 1;
+            $link_product_navigation .= "<link rel='canonical' href='" . $linkS . $linkPage . "'/>";
+            $link_product_navigation .= "<link rel='next' href='" . $linkS . $linkPage . "trang-$showpage'/>";
+        } else if ($page > 1 && $page < ceil($numofpages)) {
+            // From page 2 of product
+            $showprepage = $page - 1;
+            $shownextpage = $page + 1;
+            $link_product_navigation .= "<link rel='prev' href='" . $linkS . $linkPage . "trang-$showprepage'/>";
+            $link_product_navigation .= "<link rel='next' href='" . $linkS . $linkPage . "trang-$shownextpage'/>";
+            $link_product_navigation .= "<meta name='robots' content='noindex,follow'/>";
+        } else {
+            // Last page
+            $showprepage = $page - 1;
+            $link_product_navigation .= "<link rel='prev' href='" . $linkS . $linkPage . "trang-$showprepage'/>";
+            $link_product_navigation .= "<meta name='robots' content='noindex,follow'/>";
+        }
+    }
+
     $product = $xtemplate->replace($product, array(
         'page' => $nav_page,
         'url' => $url,

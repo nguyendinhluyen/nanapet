@@ -1,9 +1,9 @@
 <?php
     $category_key = input($_GET['category_key']);
-    if(isset($_GET['category_sub_key'])){
+    if (isset($_GET['category_sub_key'])) {
         $category_key = input($_GET['category_sub_key']);
-    }    
-    
+    }
+
     $category = $xtemplate->load('category');
     $Cate = new Category();
     $categories = $Cate->getCategoriesParent();
@@ -67,7 +67,8 @@
                             . "border-color:#79afc4;"
                             . "width:100%;"
                             . "float:left'>"
-                            .'<li class="danhmuc_main"><a href="{linkS}sale-off.htm" class="'.$sale_off.'">Sale Off - Mua Ngay Kẻo Lỡ</a></li>';
+                            .'<li class="danhmuc_main"><a href="{linkS}sale-off/" class="'
+            .$sale_off.'">Sale Off - Mua Ngay Kẻo Lỡ</a></li>';
     $category = $xtemplate -> assign_blocks_content($category,array(
         'CATEGORY'  =>  $tpl
     ));	

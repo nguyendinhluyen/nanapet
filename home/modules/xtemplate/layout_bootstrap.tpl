@@ -38,6 +38,10 @@
         <!--Begin Mask Phone-->
         <script type="text/javascript" src="{linkS}layout/js/jquery.maskedinput.js"></script>                 
         <!--End Mask Phone-->
+        <!--Begin product navigation-->
+        {link_product_navigation}
+        <!--End product navigation-->
+        
         <script>
               (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
               (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -46,7 +50,6 @@
               ga('create', 'UA-48947150-1', 'nanapet.com');
               ga('send', 'pageview');
         </script>    	
-        
         <script type="text/javascript">		
             jQuery(function($)
             {														
@@ -66,7 +69,6 @@
           fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));</script>
         <!--End Facebook Code-->
-                            
         <!-- Piwik 
         <script type="text/javascript">
           var _paq = _paq || [];
@@ -362,7 +364,7 @@
                                         </li>
                                         <li><a class="{introduce}" href="{linkS}gioi-thieu"
                                                style="padding-top: 10px; height: 60px; outline: none">Giới thiệu</a></li>
-                                        <li><a class="{product_menu}" href="{linkS}san-pham.htmls"
+                                        <li><a class="{product_menu}" href="{linkS}san-pham/"
                                                style="padding-top: 10px; height: 60px; outline: none">Sản phẩm</a></li>                                        
                                         <li><a class="{blog}" href="{linkS}thu-vien"
                                                style="padding-top: 10px; height: 60px; outline: none">Đời sống Pets</a></li>                 
@@ -422,7 +424,7 @@
                                                        href="{linkS}gioi-thieu" 
                                                        style="outline: none">Giới thiệu</a></li>
                                                 <li><a class="product" 
-                                                       href="{linkS}san-pham.htmls"
+                                                       href="{linkS}san-pham/"
                                                        style="outline: none">Sản phẩm</a></li>                                                
                                                 <li><a class="blog" 
                                                        href="{linkS}thu-vien"
@@ -823,7 +825,7 @@
                 </div>
             </div>
         </footer>
-        {chatlive}
+        <!--{chatlive}-->
         <a href="#0" class="cd-top">Top</a>
     </body>    
 </html>

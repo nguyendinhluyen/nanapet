@@ -4,7 +4,8 @@
     $tilte_page = 'Welcome to NanaPet Shop';
     $description = 'Thức ăn chó | Thức ăn mèo';
     $keywords = 'thức ăn chó, thức ăn mèo, thức ăn cún cưng, thức ăn mèo cưng';
-
+    $link_product_navigation ="";
+    
     include('home_start.php');
     include('process/loadModel.php');
     include('process/process_frame.php');
@@ -215,8 +216,8 @@
         'linkSf' => "http://nanapet.com/",
         'left_facebook_page_plugin' => $left_facebook_page_plugin,
         'script_product_detail' => $script_product_detail,
+        'link_product_navigation' => $link_product_navigation,
         'linkS' => $linkS
     ));
-
     $xtemplate->show($html);
 ?>

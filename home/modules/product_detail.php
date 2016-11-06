@@ -52,7 +52,15 @@
     }
 
     $product_detail = $Product->getProductsByProductKey($product_key);
-    $proType = $Product->getProductsType($product_detail['p_type']);
+    if (empty($product_detail) || !isset($product_detail)) {
+        ?>
+            <script>
+                window.location='<?php echo $linkS; ?>';
+            </script>
+        <?php
+    }
+
+$proType = $Product->getProductsType($product_detail['p_type']);
     $proColor = $Product->getProductsColor($product_detail['p_color']);
     $breadcrumbs = $Product->getProductPath($_GET['category_key']);
     $breadcrumbs_path = '';
@@ -64,7 +72,8 @@
     for ($i = $k; $i >= 0; $i--) {
         if ($breadcrumbs[$i]['name'] != '') {
             $tilte[] = $breadcrumbs[$i]['name'];
-            $breadcrumbs_path .= ' &raquo; <a style = "outline:none" href="{linkS}' . $breadcrumbs[$i]['key'] . '.htm">' . $breadcrumbs[$i]['name'] . '</a>';
+            $breadcrumbs_path .= ' &raquo; <a style = "outline:none" href="{linkS}' 
+                    . $breadcrumbs[$i]['key'] . '.htm">' . $breadcrumbs[$i]['name'] . '</a>';
         }
     }
 
@@ -129,7 +138,8 @@
             if ($i == 0) {
                 $typeTemplate .= '<span style="width: 250px; float:left">Loại </span>';
                 $typeTemplate .= '<span width="10px;">'
-                    . '<input type="radio" id="type" name="type" checked value="' . $val['type'] . '::' . $pri . '" />'
+                    . '<input type="radio" id="type" name="type" checked value="' 
+                    . $val['type'] . '::' . $pri . '" />'
                     . '&nbsp; '.$val['type'] . '&nbsp; (=' . $pri . ')' ;
             } else {
                 $typeTemplate .= '<span style="width: 250px; float:left">&nbsp;</span>';
@@ -301,15 +311,19 @@
         if ($k > 0) {
             $tpl_imgs = '<a href="' . $linkS . 'upload/product/thumb/'
                     . $product_detail['products_image'] . '" class="cloud-zoom-gallery" title="Red" rel="useZoom: \'zoom1\', smallImage: \''
-                    . $linkS . 'upload/product/thumb/image.php?file=' . $product_detail['products_image'] . '&sizex=200\' "><img  src="'
-                    . $linkS . 'upload/product/thumb/image.php?file=' . $product_detail['products_image'] . '&sizex=40&sizey=50" /></a>'
+                    . $linkS . 'upload/product/thumb/image.php?file=' 
+                    . $product_detail['products_image'] . '&sizex=200\' "><img  src="'
+                    . $linkS . 'upload/product/thumb/image.php?file=' 
+                    . $product_detail['products_image'] . '&sizex=40&sizey=50" /></a>'
                     . $tpl_imgs;
         }
     }
 
     $category_key = input($_GET['category_key']);
-    $product_name_prev = $Product->getProductsInfoPrevByProductKey($product_key, $breadcrumbs[0]['key']); // $category_key
-    $product_name_next = $Product->getProductsInfoNextByProductKey($product_key, $breadcrumbs[0]['key']); //$category_key
+    $product_name_prev = $Product->getProductsInfoPrevByProductKey($product_key, 
+                                            $breadcrumbs[0]['key']); // $category_key
+    $product_name_next = $Product->getProductsInfoNextByProductKey($product_key, 
+                                            $breadcrumbs[0]['key']); //$category_key
     $pro_price_nodot = common::convertFormatMoneyToInt($price_encourage);
     $species = $product_detail['species'];
     $img_catdog = '';
@@ -382,7 +396,8 @@
             && empty($product_detail['product_detail_donggoi_thetich']) 
             && empty($product_detail['product_detail_nhasanxuat']) 
             && empty($product_detail['product_detail_xuatxu'])) {
-        $product_detail['product_detail'] = "Chưa có thông tin chi tiết về sản phẩm " . $product_detail['products_name'];
+        $product_detail['product_detail'] = "Chưa có thông tin chi tiết về sản phẩm " 
+                                        . $product_detail['products_name'];
     }
 
     $facebook_comment = '<table>
