@@ -155,8 +155,7 @@
             break;
 
         case 'info_detail':
-
-            if (input($_GET['cate']) == 'thuvien') {
+            if (input($_GET['cate']) == 'doisongpets') {
                 $hidden = 'style="display: none"';
                 $category = $category_libary;
                 $hiddenbannerleft = "style = 'margin-top:15px'";
@@ -169,7 +168,7 @@
             break;
 
         case 'info_detail_libary':
-            if (input($_GET['cate']) == 'thuvien') {
+            if (input($_GET['cate']) == 'doisongpets') {
                 $hidden = 'style="display: none"';
                 $category = $category_libary;
                 $hiddenbannerleft = "style = 'margin-top:15px'";

@@ -10,7 +10,7 @@
         }
         $_SESSION['search_key'] = addslashes(input($_POST['search_box']));
         $_SESSION['orginal_search_key'] = $_POST['search_box'];
-        header('Location: '.$linkS.'tim-kiem/page=1');
+        header('Location: '.$linkS.'tim-kiem/trang-1');
     }        
     
     // Load searching layout
@@ -177,7 +177,7 @@
             $linkHelp =".html";
         }
         elseif($listnews[$i]['flag_publisher'] == 1){
-            $news_category = "thu-vien";
+            $news_category = "doi-song-pets";
             $linkHelp="";
         }
         $tpl_temp .= $xtemplate->assign_vars($block,array(            
@@ -215,7 +215,8 @@
         'display_realtion_news'     => $display_realtion_news,
         'display_no_relation'       => $display_no_relation,
         'search_key'                => $key_not_found,
-        'page'                      => pagination($linkS."tim-kiem/",ceil($numofpages), $page),
+        'page'                      => str_replace("page=", "trang-", 
+                                    pagination($linkS."tim-kiem/",ceil($numofpages), $page)),
     ));	
 
     $content = $template;

@@ -126,7 +126,8 @@
     ));            
                    
     $template = $xtemplate->replace($template,array(                                
-        'page' => pagination($linkS."tim-kiem/tat-ca-san-pham.htmls/",ceil($numofpages), $page),
+        'page' => str_replace("page=", "trang-"
+                        , pagination($linkS."tim-kiem/tat-ca-san-pham/",ceil($numofpages), $page)),
     ));	
 
     $content = $template;

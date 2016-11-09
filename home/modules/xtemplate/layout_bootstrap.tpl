@@ -255,7 +255,7 @@
 
                     <div class ="col-md-6 col-lg-6">
                         <div id="search" class ="hidden-xs hidden-sm">
-                            <form name ="form_search" action="{linkS}tim-kiem/page=1" method="POST">
+                            <form name ="form_search" action="{linkS}tim-kiem/trang-1" method="POST">
                                 <table style=" width:100%">
                                     <tr>
                                         <td>
@@ -366,7 +366,7 @@
                                                style="padding-top: 10px; height: 60px; outline: none">Giới thiệu</a></li>
                                         <li><a class="{product_menu}" href="{linkS}san-pham/"
                                                style="padding-top: 10px; height: 60px; outline: none">Sản phẩm</a></li>                                        
-                                        <li><a class="{blog}" href="{linkS}thu-vien"
+                                        <li><a class="{blog}" href="{linkS}doi-song-pets"
                                                style="padding-top: 10px; height: 60px; outline: none">Đời sống Pets</a></li>                 
                                         <li><a class="{service}" href="{linkS}tro-giup"
                                                style="padding-top: 10px; height: 60px; outline: none">Hỗ trợ</a></li>
@@ -427,7 +427,7 @@
                                                        href="{linkS}san-pham/"
                                                        style="outline: none">Sản phẩm</a></li>                                                
                                                 <li><a class="blog" 
-                                                       href="{linkS}thu-vien"
+                                                       href="{linkS}doi-song-pets"
                                                        style="outline: none">Đời sống Pets</a></li>                 
                                                 <li><a class="service" 
                                                        href="{linkS}tro-giup"

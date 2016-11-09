@@ -527,10 +527,6 @@
                             <span style="color: #fb7224;">
                                 Tin tức về cún
                             </span>
-                            <!--<a href="{linkS}thu-vien/giong-loai-26/cho-27" 
-                               style="color: #fb7224;">
-                                Tin tức về cún 
-                            </a>-->
                         </td>
                         <td style="width: 87%">
                             <hr style="color: #dde7e9;
@@ -548,7 +544,7 @@
                 <li>
                     <div class="news_detail">                                            
                         <div class="news_col" style = "float:left">                    
-                            <a href="{linkS}thu-vien/{news_key}/" style = "outline:none">
+                            <a href="{linkS}doi-song-pets/{news_key}/" style = "outline:none">
                                 <img src="{linkS}upload/news/{news_image}"
                                      width="130"
                                      height="130"
@@ -558,7 +554,7 @@
                         </div><!-- end product_right_col -->
                         <div class="news_title">
                             <div style="font-size: 14px; color: #929292;">
-                                <a class = "news_name" href="{linkS}thu-vien/{news_key}/" 
+                                <a class = "news_name" href="{linkS}doi-song-pets/{news_key}/" 
                                    style="line-height: 25px;                                
                                         font-family: RobotoSlabRegular;
                                         font-size: 14px;
@@ -730,10 +726,6 @@
                             <span style="color: #fb7224;">
                                 Tin tức về mèo cưng
                             </span>
-                            <!--<a href="{linkS}thu-vien/giong-loai-26/meo-28"
-                               style="color: #fb7224;"> 
-                                Tin tức về mèo cưng
-                            </a>-->
                         </td>
                         <td style="width: 84%">
                             <hr style="color: #dde7e9;
@@ -751,7 +743,7 @@
                 <li>
                     <div class="news_detail">                                            
                         <div class="news_col" style = "float:left">                    
-                            <a href="{linkS}thu-vien/{news_key}/" style = "outline:none">
+                            <a href="{linkS}doi-song-pets/{news_key}/" style = "outline:none">
                                 <img src="{linkS}upload/news/{news_image}"
                                      width="130"
                                      height="130"
@@ -762,7 +754,7 @@
 
                         <div class="news_title">
                             <div style="font-size: 14px; color: #929292;">
-                                <a class = "news_name" href="{linkS}thu-vien/{news_key}/" 
+                                <a class = "news_name" href="{linkS}doi-song-pets/{news_key}/" 
                                    style="line-height: 25px;                                
                                         font-family: RobotoSlabRegular;
                                         font-size: 14px;

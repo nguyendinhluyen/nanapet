@@ -233,7 +233,7 @@
         'news_name'                 => $promotionNews['news_name'],
         'news_content'              => $promotionNews['news_content'],
         'news_shortcontent'         => $promotionNews['news_shortcontent'],
-        'news_key'                  => "thu-vien/".$promotionNews['news_key']."/",
+        'news_key'                  => "doi-song-pets/".$promotionNews['news_key'],
         'news_name_twitter'         => $promotionNews['news_name']." - ",
         'linkResource'              => $promotionNews['resource'],
         'author'                    => $promotionNews['author'],
@@ -266,7 +266,7 @@
     ));	    
     $library_active = 'library_active';
     $bread = "Đời sống Pets";
-    $link = "{linkS}thu-vien";
+    $link = "{linkS}doi-song-pets";
     $breadcrumbs_path .= '<a href="{linkS}">NanaPet</a>';
     if($news_key != ''){
         $breadcrumbs_path .= ' &raquo; <a href="'.$link.'">'.$bread.'</a>'.'&nbsp;&raquo;&nbsp;'.$promotionNews['news_name'];

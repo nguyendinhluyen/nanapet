@@ -105,7 +105,7 @@
                                         font-family: RobotoSlabRegular;
                                         font-size: 15px;
                                         float: left">
-                                <a href="{linkS}thu-vien" style="color: #ffffff;">Tìm Hiểu Đời Sống Pet</a>
+                                <a href="{linkS}doi-song-pets" style="color: #ffffff;">Tìm Hiểu Đời Sống Pet</a>
                             </div>
                         </td>
                     </tr>

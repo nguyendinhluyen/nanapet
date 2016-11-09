@@ -264,7 +264,7 @@
             'last_modified'     =>  ($row[$i]['last_modified']=='')?'0':date('G:i d/m/Y',$row[$i]['last_modified']),
             'color'             =>  $color,                   
             'flag_publish'      =>  $flag_publish,                        
-            'link_preview'      =>  '/thu-vien/'.$row[$i]['news_key']."/"
+            'link_preview'      =>  '/doi-song-pets/'.$row[$i]['news_key'].".htm"
         ));
     }
 

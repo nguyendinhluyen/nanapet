@@ -113,7 +113,7 @@
                 <div style="margin-top:10px; float:left; padding-left: 0px"
                      class="col-lg-8">
                     <span class="fb-like"
-                          data-href="{linkSf}{news_key}"
+                          data-href="{linkSf}{news_key}.htm"
                           data-layout="button_count" 
                           data-action="like" 
                           data-show-faces="false" 
@@ -121,7 +121,7 @@
                     </span>
                     <span class="g-plusone" data-size="medium"></span>
                     <span>
-                        <a href="{linkSf}{news_key}" class="twitter-share-button">Tweet</a>               
+                        <a href="{linkSf}{news_key}.htm" class="twitter-share-button">Tweet</a>               
                     </span>
                 </div> 
                 <div style="float:left;                                 
@@ -133,7 +133,7 @@
                     <span id = "sharefacebook_icon" 
                           style = "margin-right:5px">
                         <a  target="_blank"
-                            href="http://www.facebook.com/sharer/sharer.php?s=100&amp;p[url]={linkSf}{news_key}&amp;p[images][0]= {linkSf}layout/images/logo/banner01.jpg&amp;p[title]={news_name}+&amp;p[summary]={news_shortcontent}"
+                            href="http://www.facebook.com/sharer/sharer.php?s=100&amp;p[url]={linkSf}{news_key}.htm&amp;p[images][0]= {linkSf}layout/images/logo/banner01.jpg&amp;p[title]={news_name}+&amp;p[summary]={news_shortcontent}"
                             ref="nofollow">
                             <img alt="facebook"
                                 src="{linkS}layout/images/facebook-icon.png" 
@@ -143,7 +143,7 @@
                     </span>
                     <span id = "sharefacebook_icon" 
                           style = "margin-right:5px">
-                        <a  href="https://plus.google.com/share?url={linkSf}{news_key}"
+                        <a  href="https://plus.google.com/share?url={linkSf}{news_key}.htm"
                             onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');;return false;"
                             ref="nofollow">
                             <img alt="google+" 
@@ -154,7 +154,7 @@
                     </span>
                     <span id = "sharefacebook_icon"
                           style = "margin-right:5px">
-                        <a href="https://twitter.com/intent/tweet?text={news_name_twitter}&url={linkSf}{news_key}&related=episod"
+                        <a href="https://twitter.com/intent/tweet?text={news_name_twitter}&url={linkSf}{news_key}.htm&related=episod"
                            ref="nofollow">
                             <img alt="tweet" 
                                 src="{linkS}layout/images/twitter-icon.png"
@@ -163,7 +163,7 @@
                         </a>
                     </span>		                                                                    
                     <span id = "sharefacebook_icon">
-                        <a href="http://www.linkedin.com/shareArticle?mini=true&url={linkSf}{news_key}&title={news_name}&summary={news_shortcontent}&source=nanapet.com" 
+                        <a href="http://www.linkedin.com/shareArticle?mini=true&url={linkSf}{news_key}.htm&title={news_name}&summary={news_shortcontent}&source=nanapet.com" 
                            onclick="NewWindow(this.href,'template_window','550','400','yes','center');return false" 
                            onfocus="this.blur()"
                            target="_blank"
@@ -228,7 +228,7 @@
                                           text-align: justify; 
                                           font-size: 14px; 
                                           line-height: 25px;" 
-                                    href="{linkS}thu-vien/{relation_news_key_1}/">{relation_news_1}</a>
+                                    href="{linkS}doi-song-pets/{relation_news_key_1}/">{relation_news_1}</a>
                             </span>
                         </div>
                         <div style="padding-bottom: 10px">
@@ -242,7 +242,7 @@
                                           text-align: justify; 
                                           font-size: 14px; 
                                           line-height: 25px;" 
-                                    href="{linkS}thu-vien/{relation_news_key_2}/">{relation_news_2}</a>
+                                    href="{linkS}doi-song-pets/{relation_news_key_2}/">{relation_news_2}</a>
                             </span>
                         </div>
                         <div style="padding-bottom: 10px">
@@ -256,7 +256,7 @@
                                           text-align: justify; 
                                           font-size: 14px; 
                                           line-height: 25px;" 
-                                    href="{linkS}thu-vien/{relation_news_key_3}/">{relation_news_3}</a>
+                                    href="{linkS}doi-song-pets/{relation_news_key_3}/">{relation_news_3}</a>
                             </span>
                         </div>
                         <div style="padding-bottom: 10px">
@@ -270,7 +270,7 @@
                                           text-align: justify; 
                                           font-size: 14px; 
                                           line-height: 25px;" 
-                                    href="{linkS}thu-vien/{relation_news_key_4}/">{relation_news_4}</a>
+                                    href="{linkS}doi-song-pets/{relation_news_key_4}/">{relation_news_4}</a>
                             </span>
                         </div>
                         <div style="padding-bottom: 10px">
@@ -284,7 +284,7 @@
                                           text-align: justify; 
                                           font-size: 14px;
                                           line-height: 25px;" 
-                                    href="{linkS}thu-vien/{relation_news_key_5}/">{relation_news_5}</a>
+                                    href="{linkS}doi-song-pets/{relation_news_key_5}/">{relation_news_5}</a>
                             </span>
                         </div>                    
                     </div>
@@ -375,7 +375,7 @@
                             <div class="col-sm-12 col-sx-12 col-md-8 col-lg-8" 
                                  style="padding-left: 0px; margin-top: 10px">
                                 <span class="fb-like"                                     
-                                      data-href="{linkSf}{news_key}"
+                                      data-href="{linkSf}{news_key}.htm"
                                       data-layout="button_count" 
                                       data-action="like" 
                                       data-show-faces="false"
@@ -383,7 +383,7 @@
                                 </span>   
                                 <span class="g-plusone" data-size="medium" ></span>
                                 <span>
-                                    <a href="{linkSf}{news_key}" class="twitter-share-button">Tweet</a>               
+                                    <a href="{linkSf}{news_key}.htm" class="twitter-share-button">Tweet</a>               
                                 </span>
                             </div>
                             <div class="col-sm-12 col-sx-12 col-md-4 col-lg-4" style="padding-right: 0px">
@@ -391,7 +391,7 @@
                                     <span id = "sharefacebook_icon" 
                                           style = "margin-right:5px">
                                         <a  target="_blank" 
-                                            href="http://www.facebook.com/sharer/sharer.php?s=100&amp;p[url]={linkSf}{news_key}&amp;p[images][0]= {linkSf}layout/images/logo/banner01.jpg&amp;p[title]={news_name}+&amp;p[summary]={news_shortcontent}"
+                                            href="http://www.facebook.com/sharer/sharer.php?s=100&amp;p[url]={linkSf}{news_key}.htm&amp;p[images][0]= {linkSf}layout/images/logo/banner01.jpg&amp;p[title]={news_name}+&amp;p[summary]={news_shortcontent}"
                                             ref="nofollow">
                                             <img alt="facebook" 
                                                 src="{linkS}layout/images/facebook-icon.png" 
@@ -401,7 +401,7 @@
                                     </span>                                                                           
                                     <span id = "sharefacebook_icon" 
                                           style = "margin-right:5px">
-                                        <a  href="https://plus.google.com/share?url={linkSf}{news_key}"
+                                        <a  href="https://plus.google.com/share?url={linkSf}{news_key}.htm"
                                             onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');;return false;"
                                             ref="nofollow">
                                             <img alt="google+" 
@@ -412,7 +412,7 @@
                                     </span>                                       
                                     <span id = "sharefacebook_icon"
                                           style = "margin-right:5px">
-                                        <a href="https://twitter.com/intent/tweet?text={news_name_twitter}&url={linkSf}{news_key}&related=episod"
+                                        <a href="https://twitter.com/intent/tweet?text={news_name_twitter}&url={linkSf}{news_key}.htm&related=episod"
                                            ref="nofollow">
                                             <img alt="tweet" 
                                                 src="{linkS}layout/images/twitter-icon.png"
@@ -421,7 +421,7 @@
                                         </a>
                                     </span>		                                                                    
                                     <span id = "sharefacebook_icon">
-                                        <a href="http://www.linkedin.com/shareArticle?mini=true&url={linkSf}{news_key}&title={news_name}&summary={news_shortcontent}&source=nanapet.com" 
+                                        <a href="http://www.linkedin.com/shareArticle?mini=true&url={linkSf}{news_key}.htm&title={news_name}&summary={news_shortcontent}&source=nanapet.com" 
                                            onclick="NewWindow(this.href,'template_window','550','400','yes','center');return false" 
                                            onfocus="this.blur()"
                                            target="_blank"
@@ -493,7 +493,7 @@
                                     <!--BEGINLIST_NEWSCHUYENMUC-->
                                     <!--BEGIN_NEWSCHUYENMUC-->
                                     <li class="danhmuc_main">
-                                        <a href="{linkS}thu-vien/{news_key}/" 
+                                        <a href="{linkS}doi-song-pets/{news_key}.htm" 
                                             style="outline: none; 
                                                  font-size: 14px;
                                                  font-family: RobotoSlabLight;
@@ -530,7 +530,7 @@
                                     <!--BEGINLIST_LASTETSNEWS-->
                                     <!--BEGIN_LASTETSNEWS-->
                                     <li class="danhmuc_main">
-                                        <a href="{linkS}thu-vien/{news_key}/" 
+                                        <a href="{linkS}doi-song-pets/{news_key}.htm" 
                                             style="outline: none; 
                                                  font-size: 14px;
                                                  font-family: RobotoSlabLight;
@@ -560,7 +560,7 @@
                         </span>
                     </div>
                     <div class="fb-comments"                       
-                        data-href="{linkSf}{news_key}"
+                        data-href="{linkSf}{news_key}.htm"
                         data-numposts="5"
                         data-width ="810">
                     </div>
@@ -581,7 +581,7 @@
                 <ul style = "padding-left: 15px; clear:both">
                     <!--BEGINLIST_NEWSCATEGORY-->
                     <!--BEGIN_NEWSCATEGORY-->
-                    <a href="{linkS}thu-vien/{news_key}/">
+                    <a href="{linkS}doi-song-pets/{news_key}.htm">
                         <li class="danhmuc_main">
                             <div class="row">
                                 <div class="col-lg-6">

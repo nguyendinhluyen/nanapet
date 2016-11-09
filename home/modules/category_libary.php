@@ -1,5 +1,5 @@
 <?php
-    $category_key = input($_GET['choose3']);
+    $category_key = input($_GET['choose']);
     if(isset($_GET['choose2'])){
         $category_key = input($_GET['choose2']);
     }    

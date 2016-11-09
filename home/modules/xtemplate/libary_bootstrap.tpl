@@ -27,30 +27,18 @@
 </style>
 
 <script type="text/javascript">
-    
     $val = 0;
-    
     $(document).ready(function (){
-        
         $link = location.href;
-        
         var str = $link;
-        
-        if(str.search("thu-vien/choose-all.html") > 0)
-        {
+        if(str.search("doi-song-pets/bai-viet-cho/") > 0) {
             $val = 1;
-        }						
-        else if(str.search("thu-vien/choose-dog.html") > 0)
-        {
-            $val = 2;
         }		
-        else if(str.search("thu-vien/choose-cat.html") > 0)
-        {
-            $val = 3;
+        else if(str.search("doi-song-pets/bai-viet-meo/") > 0) {
+            $val = 2;
         }			
        	var source = [
             "Lọc bài viết...",
-            //"Tất cả",
             "Chó",
             "Mèo"
         ];
@@ -60,30 +48,17 @@
                                         width: '110px',
                                         height: '25px', 
                                         theme: 'bootstrap' });                                     
-                                    
         $("#jqxComboBox").jqxComboBox({autoDropDownHeight: true});
-        
-        $('#jqxComboBox').on('select', function (event)
-        {
+        $('#jqxComboBox').on('select', function (event) {
             var args = event.args;
-            
-            if (args)
-            {                
+            if (args) {                
                 var item = args.item;
-                                                
                 var value = item.value;
-                
-                if(value === 'Chó')
-                {
-                    window.location='{linkS}thu-vien/choose-dog.html';
+                if(value === 'Chó') {
+                    window.location='{linkS}doi-song-pets/bai-viet-cho/';
                 }
-                else if(value === 'Mèo')
-                {
-                    window.location='{linkS}thu-vien/choose-cat.html';
-                }
-                else if (value === 'Tất cả')
-                {
-                    window.location='{linkS}thu-vien/choose-all.html';
+                else if(value === 'Mèo') {
+                    window.location='{linkS}doi-song-pets/bai-viet-meo/';
                 }
             }
         }); 
@@ -101,7 +76,6 @@
                     <div id='jqxComboBox'></div>
                 </span>                                                                                                  
             </div>                 
-                        
             <div class="news_main" style ="margin-top: 30px">
                 <h1 style="margin-top: 20px;
                         margin-bottom: 25px; 
@@ -115,7 +89,7 @@
                 <!--BEGIN_PROMOTION-->			                
                 <div class="contentpaneopen">
                     <h2 class="contentheading" style="padding-bottom:10px">
-                        <a  href = "{linkS}thu-vien/{news_key}/" 
+                        <a  href = "{linkS}doi-song-pets/{news_key}.htm" 
                             style= "color:#000;
                                     font-size:23px;
                                     font-family:PoetsenOne;
@@ -138,7 +112,7 @@
                         <div class="row">
                             <div class="col-md-3 col-lg-3">
                                 <h4>
-                                    <a href="{linkS}thu-vien/{news_key}/"
+                                    <a href="{linkS}doi-song-pets/{news_key}.htm"
                                        class="previews">
                                         <img alt="{news_name}"
                                             src="{linkS}upload/news/{news_image}" 
@@ -166,7 +140,7 @@
                                     </div>
                                 </h3>  
                                 <div class="fb-like" 
-                                    data-href="{linkS}thu-vien/{news_key}/" 
+                                    data-href="{linkS}doi-song-pets/{news_key}.htm" 
                                     data-layout="button_count"
                                     data-action="like"
                                     data-show-faces="true" 
@@ -205,7 +179,7 @@
                 <ul style = "padding-left: 15px; clear:both">
                     <!--BEGINLIST_NEWSCATEGORY-->
                     <!--BEGIN_NEWSCATEGORY-->
-                    <a href="{linkS}thu-vien/{news_key}/">
+                    <a href="{linkS}doi-song-pets/{news_key}.htm">
                         <li class="danhmuc_main">
                             <div class="row" style="margin-top: 20px">
                                 <div class="col-md-6 col-lg-6">
@@ -289,12 +263,6 @@
                     </script>
                 </div>                                                           
             </div>-->           
-            <!--<div style="margin-left: 15px; 
-                        margin-top: 20px; 
-                        margin-bottom: 20px">
-                {left_facebook_box}
-            </div>-->
-                
             <div style="margin-left: 5px;
                         margin-bottom: 40px;
                         width: 245px">

@@ -66,7 +66,7 @@
                             line-height:30px;
                             font-family:RobotoSlabRegular;
                             color:#05b3fc;">
-                    <a class="see_all" href="{linkS}tim-kiem/tat-ca-san-pham.htmls/page=1">Xem tất cả >></a>
+                    <a class="see_all" href="{linkS}tim-kiem/tat-ca-san-pham/trang-1">Xem tất cả >></a>
                 </div>
                 <hr style = "margin-top: 10px;
                             margin-bottom: 30px;
@@ -171,7 +171,7 @@
                                         font-family: RobotoSlabRegular;
                                         clear:both">                                
                                 <a class="news_name" 
-                                   href="{linkS}{news_category}/{news_key}/">{news_name}</a>
+                                   href="{linkS}{news_category}/{news_key}.htm">{news_name}</a>
                                 
                             </div>
                             <div class="news_content"
