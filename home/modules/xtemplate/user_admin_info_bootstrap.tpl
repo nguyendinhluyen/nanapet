@@ -104,7 +104,7 @@
             <!--BEGIN_PROMOTION-->			                
             <div class="contentpaneopen">
                 <h2 class="contentheading" style="padding-bottom:10px">
-                    <a  href = "{linkS}doi-song-pets/{news_key}/" 
+                    <a  href = "{linkS}doi-song-pets/{news_key}.htm" 
                         style= "color:#000;
                                 font-size:23px;
                                 font-family:PoetsenOne;
@@ -127,7 +127,7 @@
                         <tr>
                             <td style="padding-right:15px">
                                 <h4>
-                                    <a href="{linkS}doi-song-pets/{news_key}/" 
+                                    <a href="{linkS}doi-song-pets/{news_key}.htm" 
                                        class="previews">
                                         <img alt="{news_name}"
                                             src="{linkS}upload/news/{news_image}" 
@@ -154,7 +154,7 @@
                                     </div>
                                 </h3>                                                      
                                 <div class="fb-like" 
-                                    data-href="{linkS}doi-song-pets/{news_key}/" 
+                                    data-href="{linkS}doi-song-pets/{news_key}.htm" 
                                     data-layout="button_count"
                                     data-action="like"
                                     data-show-faces="true" 
@@ -164,21 +164,6 @@
                             <td>                                        
                             </td>
                         </tr>                                            
-                        <tr>
-                            <td>
-                            </td>                         
-                            <td class = "linkDetail" 
-                                style="text-align:right">
-                                <a href="{linkS}doi-song-pets/{news_key}/" 
-                                   class="readon" 
-                                   style="color: #6699ff;
-                                        font-size:14px;
-                                        font-family:RobotoSlabRegular;
-                                        outline: none">
-                                    Xem chi tiết
-                                </a>                                     
-                            </td>                                                        
-                        </tr>
                     </table>                   					
                 </div>
                 <hr style = "margin-bottom: 30px"/>                    

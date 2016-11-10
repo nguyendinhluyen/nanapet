@@ -63,7 +63,7 @@
             'color' => $color,
             'flag_publish' => $flag_publish,
             'date_publisher' => $row[$i]['date_publisher'],
-            'link_preview' => '/doi-song-pets/' . $row[$i]['news_key'] . "/",
+            'link_preview' => '/doi-song-pets/' . $row[$i]['news_key'] . ".htm",
         ));
     }
     $content = $xtemplate->assign_blocks_content($content, array("NEWS" => $temp));
