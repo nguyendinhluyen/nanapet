@@ -20,6 +20,7 @@
         }
     }
 
+    // Title for page all product SEO
     $title_page = '';
     $page_now = intval($_GET['trang']);
     if (!isset($page_now) || $page_now === 1 || $page_now === 0) {
@@ -27,6 +28,9 @@
     } else {
         $title_page = "Thức ăn cho chó và mèo - trang $page_now";     
     }
+    
+    // Description
+    $description = $title_page;
     
     $breadcrumbs_path = '<a href="{linkS}">NanaPet</a> » Sản Phẩm';
     $products = $Product->getProductsNewCount();

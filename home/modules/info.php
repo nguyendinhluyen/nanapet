@@ -85,7 +85,9 @@
             $title_page = 'Đời sống Pets' . " - trang $p_now";
         }
     }
-
+    
+    // Description
+    $description = $title_page;
 
     $info = $xtemplate->assign_blocks_content($info, array(
         'PROMOTION' => $tpl

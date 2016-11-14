@@ -44,6 +44,9 @@
         $title_page = $breadcrumbs[0]['name'] . " - trang $page_now";
     }
     
+    // Description
+    $description = $title_page;
+    
     /*$k = count($breadcrumbs);
     for ($i = $k; $i >= 0; $i--) {
         if ($breadcrumbs[$i]['name'] != '') {

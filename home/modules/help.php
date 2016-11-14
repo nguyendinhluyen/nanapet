@@ -17,13 +17,17 @@
         $news_detail['news_content'] = 'Hiện đang cập nhật ... </br>';
     }
     
+    // Title for SEO
     $title_page = '';
     if (!empty($news_detail['news_name'])) {
         $title_page =  $news_detail['news_name'];
     } else {
         $title_page =  "Hỗ trợ";
     }
-
+    
+    // Description
+    $description = $title_page;
+    
     $breadcrumbs_path .= '<a href="{linkS}">NanaPet</a>';
     if ($news_key != '') {
         $breadcrumbs_path .= ' &raquo; ' . '<a href="{linkS}tro-giup">Hỗ Trợ</a>';
