@@ -1,5 +1,5 @@
 <?php	                
-    $tilte_page =  'Tất cả sản phẩm';
+    $title_page =  'Tất cả sản phẩm';
     $breadcrumbs_path = '<a href="{linkS}">Trang chủ</a>';
     $breadcrumbs_path .= ' &raquo; Tất cả sản phẩm';                 
     

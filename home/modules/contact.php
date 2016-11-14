@@ -45,7 +45,7 @@
 
     $breadcrumbs_path .= ' &raquo; '.'Liên Hệ';
 
-    $tilte_page =   'Liên Hệ'. " | NanaPet";
+    $title_page =   'Liên Hệ';
 
     $content = $xtemplate->load('contact_bootstrap');
 

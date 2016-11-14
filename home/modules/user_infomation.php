@@ -162,7 +162,7 @@
             
             $breadcrumbs_path .= ' &raquo; '.'Sản phẩm ưa thích';
             
-            $tilte_page ='Sản phẩm ưa thích | '.'NanaPet';
+            $title_page ='Sản phẩm ưa thích';
 		
             $user_infomation = $xtemplate->replace($user_infomation,array(
                 'content_infomation' 	=> $tpl_favorite,
@@ -229,7 +229,7 @@
             
             $breadcrumbs_path .= ' &raquo; '.'Đơn hàng của tôi';
             
-            $tilte_page ='Đơn hàng của tôi | '.'NanaPet';
+            $title_page ='Đơn hàng của tôi';
 		
             $user_infomation = $xtemplate->replace($user_infomation,array(
                 'content_infomation'    =>  $orderCart,
@@ -265,7 +265,7 @@
             
             $breadcrumbs_path .= ' &raquo; '.'Thú cưng của tôi';
             
-            $tilte_page ='Thú cưng của tôi | '.'NanaPet';
+            $title_page ='Thú cưng của tôi';
 
             $blocks = $xtemplate->get_block_from_str($re_pet_profile,'PET');
             
@@ -687,7 +687,7 @@
             
             $breadcrumbs_path .= ' &raquo; '.'Sổ địa chỉ';
             
-            $tilte_page ='Sổ địa chỉ | '.'NanaPet';
+            $title_page ='Sổ địa chỉ';
 	}
 	
         // San pham toi danh gia
@@ -767,7 +767,7 @@
             
             $breadcrumbs_path .= ' &raquo; '.'Sản phẩm tôi đánh giá';
             
-            $tilte_page ='Sản phẩm tôi đánh giá | '.'NanaPet';
+            $title_page ='Sản phẩm tôi đánh giá';
 	}
     }
     else

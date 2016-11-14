@@ -33,28 +33,38 @@
     $breadcrumbs = $Category->getCategoryPath($category_key);
     $breadcrumbs_path = '<a style = "outline:none" href="{linkS}">NanaPet</a> &raquo; '
             . '<a style = "outline:none" href="{linkS}san-pham/">Sản Phẩm</a>';
-    $k = count($breadcrumbs);
-    $tilte_page = '';
+    
+    // Title for page product SEO
+    $title_page = '';
+    $page_now = intval($_GET['trang']);
+    if (!empty($breadcrumbs[0]['name']) 
+            && (!isset($page_now) || $page_now === 1 || $page_now === 0)) {
+        $title_page = $breadcrumbs[0]['name'];
+    } else if (!empty($breadcrumbs[0]['name']) && isset($page_now)) {
+        $title_page = $breadcrumbs[0]['name'] . " - trang $page_now";
+    }
+    
+    /*$k = count($breadcrumbs);
     for ($i = $k; $i >= 0; $i--) {
         if ($breadcrumbs[$i]['name'] != '') {
             if ($i > 0) {
                 // $linkPage .= $breadcrumbs[$i]['key'] . '/';
                 $breadcrumbs_path .= ' &raquo; <a style = "outline:none" href="{linkS}' 
                         . $breadcrumbs[$i]['key'] . '/">' . $breadcrumbs[$i]['name'] . '</a>';
-                $tilte_page .= $breadcrumbs[$i]['name'] . " | ";
+                $title_page .= $breadcrumbs[$i]['name'] . " | ";
             } else {
                 // $linkPage .= $breadcrumbs[$i]['key'];
                 $breadcrumbs_path .= ' &raquo; ' . $breadcrumbs[$i]['name'];
-                $tilte_page .= $breadcrumbs[$i]['name'] . " | NanaPet";
+                $title_page .= $breadcrumbs[$i]['name'];
                 $category_name = $breadcrumbs[$i]['name'];
             }
         }
-    }
+    }*/
+    
     $linkPage .= $breadcrumbs[0]['key'] . '/';
-
     if ($category_key == 'sale-off') {
         $breadcrumbs_path .= ' &raquo; Sản phẩm giảm giá';
-        $tilte_page .= "Sản phẩm giảm giá | NanaPet";
+        $title_page .= "Sản phẩm giảm giá";
         $linkPage = 'sale-off/';
     }
 
@@ -77,8 +87,8 @@
     // Total products display
     $pp = 24; 
     $p_now = 0;
-    if (isset($_GET['trang'])) {
-        $p_now = intval($_GET['trang']);
+    if (isset($page_now)) {
+        $p_now = intval($page_now);
     }
     $numofpages = $total / $pp;
     $page = 0;
@@ -257,7 +267,7 @@
         'category' => $category,
         'list_advs' => $list_advs,
         'category_name' => $category_name,
-        'text_seo' => $text_seo // Check category.php for data text seo
+        'text_seo' => $text_seo // Check category.php for SEO
     ));
     $content = $product;
 ?>

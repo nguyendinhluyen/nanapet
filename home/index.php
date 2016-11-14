@@ -1,7 +1,7 @@
 <?php
     header('Content-Type: text/html; charset=utf-8');
     date_default_timezone_set('Asia/Ho_Chi_Minh');
-    $tilte_page = 'Welcome to NanaPet Shop';
+    $title_page = 'Welcome to NanaPet Shop';
     $description = 'Thức ăn chó | Thức ăn mèo';
     $keywords = 'thức ăn chó, thức ăn mèo, thức ăn cún cưng, thức ăn mèo cưng';
     $link_product_navigation ="";
@@ -194,7 +194,7 @@
         'content' => $content,
         'breadcrumbs_path' => $breadcrumbs_path,
         'acount' => $acount,
-        'title' => $tilte_page,
+        'title' => $title_page,
         'giohang' => $giohang,
         'cart_right' => $cart_right,
         'main_banner' => $main_banner,

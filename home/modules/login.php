@@ -6,7 +6,7 @@
 
     $breadcrumbs_path .= ' &raquo; '.'Đăng nhập tài khoản';
 
-    $tilte_page ='Đăng nhập tài khoản | '.'NanaPet';
+    $title_page ='Đăng nhập tài khoản';
 
     $content = $login;
 ?>

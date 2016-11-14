@@ -1,5 +1,5 @@
 <?php	                
-    $tilte_page =  'Tìm kiếm';
+    $title_page =  'Tìm kiếm';
     $breadcrumbs_path = '<a href="{linkS}">Trang chủ</a>';
     $breadcrumbs_path .= ' &raquo; Tìm kiếm';
              

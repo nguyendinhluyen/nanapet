@@ -106,6 +106,6 @@
     
     $breadcrumbs_path .= '<a href="{linkS}">NanaPet</a>';
     $breadcrumbs_path .= ' &raquo; '.'Thông Tin Cộng Tác Viên';
-    $tilte_page ='Thông Tin Cộng Tác Viên | '.'NanaPet';
+    $title_page ='Thông Tin Cộng Tác Viên';
     $content = $user_info;	
 ?>

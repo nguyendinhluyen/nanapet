@@ -441,7 +441,7 @@
 
     $breadcrumbs_path .= ' &raquo; '.'Thông Tin Tài Khoản';
 
-    $tilte_page ='Thông Tin Tài Khoản | '.'NanaPet';
+    $title_page ='Thông Tin Tài Khoản';
 
     $content = $user_info;	
 ?>

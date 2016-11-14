@@ -38,7 +38,7 @@
     $promotionNews['resource'] = str_replace('endnanapet','</a>', $promotionNews['resource']);
 
     // Update for $title_page and meta
-    $tilte_page = $promotionNews['title_page']; 
+    $title_page = $promotionNews['title_page']; 
     $description = $promotionNews['meta_description'];
     $keywords = $promotionNews['meta_keyword'];			       
     $array_date = split("-",$promotionNews['date_publisher']);

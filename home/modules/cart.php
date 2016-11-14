@@ -423,7 +423,7 @@
 
         $breadcrumbs_path .= ' &raquo; '.'Giỏ hàng';
 
-        $tilte_page =   'Giỏ hàng'. " | Nanapet";
+        $title_page =   'Giỏ hàng';
 
         $content = $cart;
     }

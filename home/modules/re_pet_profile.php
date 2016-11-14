@@ -94,7 +94,7 @@
 
     $breadcrumbs_path .= ' &raquo; '.'Đăng ký thú cưng';
 
-    $tilte_page ='Đăng ký thú cưng | '.'NanaPet';
+    $title_page ='Đăng ký thú cưng';
     
     $user= $_SESSION['username'];
     

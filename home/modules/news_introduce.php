@@ -18,9 +18,14 @@
         $news_detail['newsintroduce_content'] = 'Hiện đang cập nhật ... </br>';
     }
 	
+    $title_page = '';
+    if (!empty($news_detail['newsintroduce_name'])) {
+        $title_page = $news_detail['newsintroduce_name'];
+    } else {
+        $title_page = "Giới thiệu";
+    }
+    
     $breadcrumbs_path .= '<a href="{linkS}">NanaPet</a>';
-    $tilte_page =  'Giới Thiệu'. " | NanaPet";
-
     if($news_key != '') {
         $breadcrumbs_path .= ' &raquo; '.'<a href="{linkS}gioi-thieu">Giới Thiệu</a>';
         $breadcrumbs_path .= ' &raquo; '.$news_detail['newsintroduce_name'];

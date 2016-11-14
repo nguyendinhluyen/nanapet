@@ -27,7 +27,7 @@
 	
 	$breadcrumbs_path .= '<a href="{linkS}">Nanapet</a>';
 
-	$tilte_page =  'Giới thiệu'. " | Nanapet";
+	$title_page =  'Giới thiệu';
 
 	if($news_key != '')
 	{

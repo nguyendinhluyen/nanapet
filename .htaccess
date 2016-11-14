@@ -133,7 +133,7 @@ RewriteRule ^tro-giup/([a-zA-Z0-9-]*).html/$ home/index.php?show=help&news_key=$
 
 #gioi thieu
 RewriteRule ^gioi-thieu$ home/index.php?show=introduce [L]
-RewriteRule ^gioi-thieu/([a-zA-Z0-9-]*).html$ home/index.php?show=introduce&news_key=$1 [L]
+RewriteRule ^gioi-thieu/([a-zA-Z0-9-]*).htm$ home/index.php?show=introduce&news_key=$1 [L]
 
 #nhan nuoi pet
 RewriteRule ^nhan-nuoi-pet$ home/index.php?show=adoption [L]

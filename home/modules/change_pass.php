@@ -101,7 +101,7 @@
 
     $breadcrumbs_path .= ' &raquo; '.'Đổi Mật Khẩu';
 
-    $tilte_page ='Đổi Mật Khẩu | '.'NanaPet';
+    $title_page ='Đổi Mật Khẩu';
 
     $content = $user_info;	
 ?>

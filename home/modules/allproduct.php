@@ -20,18 +20,23 @@
         }
     }
 
-    $Category = new Category();
-    $tilte_page = 'Sản Phẩm | NanaPet';
+    $title_page = '';
+    $page_now = intval($_GET['trang']);
+    if (!isset($page_now) || $page_now === 1 || $page_now === 0) {
+        $title_page = 'Thức ăn cho chó và mèo';
+    } else {
+        $title_page = "Thức ăn cho chó và mèo - trang $page_now";     
+    }
+    
     $breadcrumbs_path = '<a href="{linkS}">NanaPet</a> » Sản Phẩm';
     $products = $Product->getProductsNewCount();
     $total = count($products);
 
-    // Navigation
-    // Total products display
+    // Navigation for 24 products each page
     $p_now = 0;
     $pp = 24;
-    if (isset($_GET['trang'])) {
-        $p_now = intval($_GET['trang']);
+    if (isset($page_now)) {
+        $p_now = intval($page_now);
     }
     $numofpages = $total / $pp;
     $page = 0;
@@ -89,8 +94,9 @@
         } else {
             $PromotionSale = '';
         }
+        
+        $Category = new Category();
         $category_key = $Category->getCategoryKeyByProductKey($products[$i]['products_key']);
-
         $tpl_temp .= $xtemplate->assign_vars($block, array(
             'product_img' => $products[$i]['products_image'],
             'product_name' => $products[$i]['products_name'],
@@ -195,4 +201,3 @@
         'text_seo' => $text_seo // Check category.php for data text seo
     ));
 ?>
-

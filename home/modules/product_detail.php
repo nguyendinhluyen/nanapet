@@ -67,11 +67,10 @@ $proType = $Product->getProductsType($product_detail['p_type']);
     $breadcrumbs_path .= '<a style = "outline:none" href="{linkS}">NanaPet</a> &raquo; '
             . '<a style = "outline:none" href="{linkS}san-pham.htmls">Sản Phẩm</a>';
     $k = count($breadcrumbs);
-    $tilte = array();
-
+    $title = array();
     for ($i = $k; $i >= 0; $i--) {
         if ($breadcrumbs[$i]['name'] != '') {
-            $tilte[] = $breadcrumbs[$i]['name'];
+            $title[] = $breadcrumbs[$i]['name'];
             $breadcrumbs_path .= ' &raquo; <a style = "outline:none" href="{linkS}' 
                     . $breadcrumbs[$i]['key'] . '.htm">' . $breadcrumbs[$i]['name'] . '</a>';
         }
@@ -79,16 +78,20 @@ $proType = $Product->getProductsType($product_detail['p_type']);
 
     $category_c = $breadcrumbs[0]['key'] . ".htm";
     $breadcrumbs_path .= ' &raquo; ' . $product_detail['products_name'];
-    $tilte_page = $product_detail['products_name'] . " | ";
-    $k = count($tilte);
 
+    // Title Page
+    $title_page = $product_detail['products_name'] . " | ";
+    $k = count($title);
     for ($i = $k; $i >= 0; $i--) {
-        if ($tilte[$i] != '') {
-            $tilte_page .= $tilte[$i] . " | ";
-        }
+        if (!empty($title[$i])) {
+            if ($i > 0) {
+                $title_page .= $title[$i] . " | ";
+            } else {
+                $title_page .= $title[$i];
+            }
+        }                    
     }
 
-    $tilte_page .='NanaPet';
     $n = count($proColor);
     $m = count($proType);
     $colorTemplate = '';
