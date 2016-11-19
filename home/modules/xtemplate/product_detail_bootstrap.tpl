@@ -172,26 +172,6 @@
                                     <h1 style="font-size: 18px">{product_name}</h1>
                                 </span>
                         </div> 
-                        <!--<div class="list_images">
-                            <a href="{linkS}upload/product/thumb/{product_image}"
-                               style ="outline:none"
-                               class ="cloud-zoom" 
-                               id="zoom1" 
-                               rel="tint: '#666',
-                                    tintOpacity:0.5,
-                                    smoothMove:5,
-                                    zoomWidth:355, 
-                                    zoomHeight:325, 
-                                    adjustY:-4, 
-                                    adjustX:10"/>                                
-                                <img src="{linkS}upload/product/thumb/image.php?file={product_image}&sizex=220px" 
-                                     class="img_big" 
-                                     alt="{product_name}"
-                                     style="width: 220px; margin-top: 13%; height: 220px"/>
-                                
-                            </a>
-                            {list_img_product}
-                        </div>-->
                     </div><!-- end detail1 -->
                 </div>                                        
                 <div class = "col-sm-12 col-sx-12 col-md-12 col-lg-12" style="padding:0px">
@@ -778,73 +758,6 @@
     </div>
 </div>
 <!-- End San Pham Theo Nhan Hieu-->
-
-<!-- Begin Logo Slider
-<div class = "container" style="padding-left: 50px; padding-right: 50px">
-    <div class="row">
-        <div class ="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="height: 80px;">
-            <div class="responsive" style="height: 80px;">
-                {list_advs}
-            </div>
-            <style>
-                .slick-prev
-                {
-                    background-image: url({linkS}layout/bootstrap/images/line.png);
-                    height: 40px;
-                    margin-top: -20px;
-                    border-radius: 5px;
-                }
-                .slick-prev:hover
-                {
-                    background-color: #0099ff;
-                    border-radius: 5px;
-                }
-
-                .slick-next
-                {
-                    background-image: url({linkS}layout/bootstrap/images/line.png);
-                    height: 40px;
-                    margin-top: -20px;
-                    border-radius: 5px;
-                }
-                 .slick-next:hover
-                {
-                    background-color:#0099ff;
-                    border-radius: 5px;
-                }
-            </style>
-            <script type="text/javascript">
-                $('.responsive').slick({
-                    slidesToShow: 10,
-                    slidesToScroll: 3,
-                    autoplay: true,
-                    autoplaySpeed: 2000
-                });
-            </script>
-        </div>
-    </div>
-    <div class ="row">
-        <div class ="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <div style = "float: right;
-                           font-weight: 300;
-                           font-family: RobotoSlabRegular;
-                           width: 100px;
-                           text-align: right;
-                           margin-right: 10px">
-                <a href="#" style ="color: #45b6fe;">Xem tất cả<a>
-            </div>
-            <br/>
-            <div style = "height: 2px;
-                          background-color:#edf8fb;
-                          margin-left: 10px;
-                          margin-right: 10px">
-            </div>
-        </div>
-    </div>
-    <br/>
-    <br/>
-</div>
-<!-- End Logo Slider-->
 
 <!--Begin product lien quan -->
 <div class="container" style="padding-top: 40px">

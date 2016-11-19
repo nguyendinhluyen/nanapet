@@ -255,9 +255,7 @@
                 <textarea name = "decription"
                           cols = "79"
                           rows = "7"
-                          maxlength="450">
-                    {txtdecripton}
-                </textarea>
+                          maxlength="450">{txtdecripton}</textarea>
             </p>
             <p>
                 <label>{news_detail}</label>

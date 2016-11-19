@@ -10,21 +10,7 @@
     include('process/loadModel.php');
     include('process/process_frame.php');
     $html = $xtemplate->load('layout_bootstrap');
-    $chatlive = "<script type='text/javascript'>
-                    (function () {	 
-                        var done = false;
-                        var script = document.createElement('script'); script.async = true;
-                        script.type = 'text/javascript';
-                        script.src = 'https://app.purechat.com/VisitorWidget/WidgetScript';
-                        document.getElementsByTagName('HEAD').item(0).appendChild(script);
-                        script.onreadystatechange = script.onload = function (e)
-                        {
-                            if (!done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete'))
-                            { 
-                                var w = new PCWidget({ c: 'f94415ed-ed1a-42fd-b68e-4d636bb02288', f: true }); done = true;}
-                            };	 
-                            })();
-                    </script>";
+    $chatlive = "";
 
     $giohang = '{cart_right}';
     $hidden = "";

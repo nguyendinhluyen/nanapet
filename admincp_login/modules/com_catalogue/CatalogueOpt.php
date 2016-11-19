@@ -13,7 +13,7 @@
         $update = 1;
         $sql = "SELECT categories_name,description,
                        keywords,parent_id,sort_order
-                       ,categories_status,text_seo
+                       ,categories_status,text_seo,title_category
                 FROM categories WHERE categories_id = '" . $id . "'";
         $mysql->setQuery($sql);
         $row = $mysql->loadOneRow();
@@ -25,6 +25,7 @@
         $catorder = $row['sort_order'];
         $check_do = ($row['categories_status'] == '1') ? 'checked' : '';
         $text_seo = $row['text_seo'];
+        $title_category = $row['title_category'];
     }
 
     if (isset($_POST['btnadd'])) {
@@ -34,6 +35,7 @@
         $description = $_POST['description'];
         $parent_id = intval($_POST['dl_subcats']);
         $text_seo = output($_POST['txtSEO']);
+        $title_category = output($_POST['title_category']);
         
         if ($parent_id != 0) {
             $level = getLevel($parent_id) + 1;
@@ -66,15 +68,16 @@
                 // UPDATE
                 $sql = "UPDATE categories 
                         SET categories_name = '" . input($catname)
-                        . "',keywords='" . $keywords
-                        . "',description='" . $description
-                        . "',categories_key = '" . input($catkey) . '-' . $id
-                        . "',parent_id = " . intval($parent_id)
-                        . ",level ='" . $level
-                        . "',sort_order = '" . $catorder
-                        . "',categories_status = '" . $status
-                        . "',text_seo = '" . $text_seo
-                        . "',modified_date = " . time() .
+                            . "',keywords='" . $keywords
+                            . "',description='" . $description
+                            . "',categories_key = '" . input($catkey) . '-' . $id
+                            . "',parent_id = " . intval($parent_id)
+                            . ",level ='" . $level
+                            . "',sort_order = '" . $catorder
+                            . "',categories_status = '" . $status
+                            . "',text_seo = '" . trim($text_seo)
+                            . "',title_category = '" . trim($title_category)
+                            . "',modified_date = " . time() .
                         " WHERE categories_id = " . $id . "";
                 $mysql->setQuery($sql);
                 $mysql->query();
@@ -94,16 +97,18 @@
                                         categories_status,
                                         date_added,
                                         text_seo,
+                                        title_category,
                                         language)
                         VALUES ('" . input($catname) . "','" 
-                                   . $keywords . "','" 
-                                   . $description . "'," 
+                                   . trim($keywords) . "','" 
+                                   . trim($description) . "'," 
                                    . intval($parent_id) . ",'" 
                                    . intval($level) . "'," 
                                    . $catorder . "," 
                                    . $status . "," 
                                    . time() . ",'" 
-                                   . $text_seo . "','" 
+                                   . trim($text_seo) . "','"
+                                   . trim($title_category) . "','" 
                                    . $_SESSION['lag'] . "')";
                 $mysql->setQuery($sql);
                 $mysql->query();
@@ -138,5 +143,6 @@
         'ofcatalogue' => $arr_lang['ofcatalogue'],
         'error' => $error,
         'text_seo' => $text_seo,
+        'title_category' => $title_category
     ));
 ?>

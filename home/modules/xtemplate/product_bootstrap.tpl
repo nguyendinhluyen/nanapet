@@ -186,12 +186,13 @@
             
             <!--BEGIN SEO CATEGORY-->
             <div class ="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <p style="text-align: center;
+                <p style="text-align:left;
                           font-family: RobotoSlabRegular;
-                          font-size: 17px;
+                          font-size: 15px;
                           color:#929292;
-                          margin-top: 30px;
-                          margin-bottom: 30px">
+                          margin-top: 10px;
+                          margin-bottom: 30px;
+                          line-height: 25px">
                     {text_seo}
                 </p>
             </div>

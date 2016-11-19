@@ -69,29 +69,6 @@
           fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));</script>
         <!--End Facebook Code-->
-        <!-- Piwik 
-        <script type="text/javascript">
-          var _paq = _paq || [];
-          _paq.push(['trackPageView']);
-          _paq.push(['enableLinkTracking']);
-          (function() {
-            var u="//nanapet.com/piwik/";
-            _paq.push(['setTrackerUrl', u+'piwik.php']);
-            _paq.push(['setSiteId', 1]);
-            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-            g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-          })();
-        </script>
-        <noscript><p><img src="//nanapet.com/piwik/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>
-        <!-- End Piwik Code -->
-
-        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
-            <script type="text/javascript" src="{linkS}layout/bootstrap/css/css3-mediaqueries.js"></script>    
-            <script type='text/javascript' src="{linkS}layout/bootstrap/css/html5.js"></script>             
-            <script type='text/javascript' src="{linkS}layout/bootstrap/css/respond.js"></script>     
-        <![endif]-->
     </head>
     <style>        
         input[type=search], div.button {
