@@ -22,6 +22,9 @@
         if($category_key === $categories[$i]['categories_key']) {
             $id_danhmuc_main = "selected";
             $text_seo = $categories[$i]['text_seo'];
+            $title_page = $categories[$i]['title_category'];
+            $description = $categories[$i]['description'];
+            $keywords = $categories[$i]['keywords'];
         }
         
         $tpl.= $xtemplate->assign_vars($block,array(
@@ -42,6 +45,9 @@
                 $id_danhmuc_sub = "selected";
                 $img_danhmuc_sub_display = " display:inline; margin-left: -15px";
                 $text_seo = $categories_sub[$j]['text_seo'];
+                $title_page = $categories_sub[$j]['title_category'];
+                $description = $categories_sub[$j]['description'];
+                $keywords = $categories_sub[$j]['keywords'];
             }
             
             $tpl2.= $xtemplate->assign_vars($block_sub,array(

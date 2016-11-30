@@ -4,9 +4,10 @@ class Category {
         $categories = GetRows('categories_key,
                             categories_id,
                             categories_name,
-                            keywords,
+                            text_seo,
+                            title_category,
                             description,
-                            text_seo'
+                            keywords'
                         , 'categories'
                         , 'categories_status = 1 AND level=1 ORDER BY sort_order ASC');
         return $categories;
@@ -16,8 +17,9 @@ class Category {
         $categories = GetRows('categorieshelp_key,
                             categorieshelp_id,
                             categorieshelp_name,
-                            keywordshelp,
-                            descriptionhelp'
+                            title_category,
+                            descriptionhelp,
+                            keywordshelp'
                         , 'categorieshelp'
                         , 'categorieshelp_status = 1 AND levelhelp = 1 ORDER BY sorthelp_order ASC');
         return $categories;
@@ -27,7 +29,9 @@ class Category {
         $categories = GetRows('categoriesintroduce_key,
                             categoriesintroduce_id,
                             categoriesintroduce_name,
-                            keywordsintroduce'
+                            title_category,
+                            keywordsintroduce,
+                            descriptionintroduce'
                         , 'categoriesintroduce'
                         , 'categoriesintroduce_status = 1 AND levelintroduce = 1 ORDER BY sortintroduce_order ASC');
         return $categories;
@@ -47,6 +51,7 @@ class Category {
         $categories = GetRows('categorieslibary_key,
                             categorieslibary_id,
                             categorieslibary_name,
+                            title_category,
                             keywordslibary,
                             descriptionlibary'
                         , 'categorieslibary'
@@ -58,6 +63,7 @@ class Category {
         $categories_sub = GetRows('categorieshelp_key,
                                 categorieshelp_id,
                                 categorieshelp_name,
+                                title_category,
                                 keywordshelp,
                                 descriptionhelp'
                             , 'categorieshelp'
@@ -70,10 +76,13 @@ class Category {
         $categories_sub = GetRows('categoriesintroduce_key,
                                 categoriesintroduce_id,
                                 categoriesintroduce_name,
-                                keywordsintroduce'
+                                title_category,
+                                keywordsintroduce,
+                                descriptionintroduce'
                             , 'categoriesintroduce'
                             , 'categoriesintroduce_status = 1 AND levelintroduce = 2
-                            AND parentintroduce_id = ' . $id_category_parent . ' ORDER BY sortintroduce_order ASC');
+                            AND parentintroduce_id = ' . $id_category_parent 
+                            . ' ORDER BY sortintroduce_order ASC');
         return $categories_sub;
     }
 
@@ -84,7 +93,8 @@ class Category {
                                 keywordsadoption'
                             , 'categoriesadoption'
                             , 'categoriesadoption_status = 1 AND leveladoption = 2
-                            AND parentadoption_id = ' . $id_category_parent . ' ORDER BY sortadoption_order ASC');
+                            AND parentadoption_id = ' . $id_category_parent 
+                            . ' ORDER BY sortadoption_order ASC');
         return $categories_sub;
     }
 
@@ -95,7 +105,8 @@ class Category {
                                 keywords,
                                 description,
                                 categories_key,
-                                text_seo'
+                                text_seo,
+                                title_category'
                             , 'categories'
                             , 'categories_status = 1 AND  level = 2
                             AND parent_id = ' . $id_category_parent . ' ORDER BY sort_order ASC');
@@ -107,6 +118,7 @@ class Category {
         $categories_sub = GetRows('categorieslibary_key,
                                 categorieslibary_id,
                                 categorieslibary_name,
+                                title_category,
                                 keywordslibary,
                                 descriptionlibary'
                             , 'categorieslibary'

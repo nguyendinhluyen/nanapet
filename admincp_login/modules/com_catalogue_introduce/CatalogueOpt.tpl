@@ -51,7 +51,6 @@
             <p style="margin-bottom: 50px">
                 <label>&nbsp;</label>
                 <input class = "button" type = "submit" name = "btnadd" value = "{btn}"/>
-                <input class = "button" type = "reset" value = "{reset}"/>
             </p>
         </div>
     </form>

@@ -34,46 +34,45 @@
     $breadcrumbs_path = '<a style = "outline:none" href="{linkS}">NanaPet</a> &raquo; '
             . '<a style = "outline:none" href="{linkS}san-pham/">Sản Phẩm</a>';
     
+    $page_now = intval($_GET['trang']); 
     // Title for page product SEO
-    $title_page = '';
-    $page_now = intval($_GET['trang']);
-    if (!empty($breadcrumbs[0]['name']) 
-            && (!isset($page_now) || $page_now === 1 || $page_now === 0)) {
-        $title_page = $breadcrumbs[0]['name'];
-    } else if (!empty($breadcrumbs[0]['name']) && isset($page_now)) {
-        $title_page = $breadcrumbs[0]['name'] . " - trang $page_now";
+    if(empty($title_page)) {
+        if (!empty($breadcrumbs[0]['name'])
+                && (!isset($page_now) || $page_now == 1 || $page_now == 0)) {
+            $title_page = $breadcrumbs[0]['name'];
+        } else if (!empty($breadcrumbs[0]['name']) && isset($page_now)) {
+            $title_page = $breadcrumbs[0]['name'] . " - trang $page_now";
+        }
+    } else {
+        if(isset($page_now) && $page_now != 0) {
+            $title_page .= " - trang $page_now";
+        }
     }
     
     // Description
-    $description = $title_page;
-    
-    /*$k = count($breadcrumbs);
-    for ($i = $k; $i >= 0; $i--) {
-        if ($breadcrumbs[$i]['name'] != '') {
-            if ($i > 0) {
-                // $linkPage .= $breadcrumbs[$i]['key'] . '/';
-                $breadcrumbs_path .= ' &raquo; <a style = "outline:none" href="{linkS}' 
-                        . $breadcrumbs[$i]['key'] . '/">' . $breadcrumbs[$i]['name'] . '</a>';
-                $title_page .= $breadcrumbs[$i]['name'] . " | ";
-            } else {
-                // $linkPage .= $breadcrumbs[$i]['key'];
-                $breadcrumbs_path .= ' &raquo; ' . $breadcrumbs[$i]['name'];
-                $title_page .= $breadcrumbs[$i]['name'];
-                $category_name = $breadcrumbs[$i]['name'];
-            }
+    if(empty($description)) {
+        $description = $title_page;
+    } else {
+        if(isset($page_now) && $page_now != 0) {
+            $description .= " - trang $page_now";
         }
-    }*/
+    }
+
+    if (empty($keywords)) {
+        $keywords = "thức ăn cho chó, thức ăn cho mèo";
+    }
     
     $linkPage .= $breadcrumbs[0]['key'] . '/';
     if ($category_key == 'sale-off') {
         $breadcrumbs_path .= ' &raquo; Sản phẩm giảm giá';
-        $title_page .= "Sản phẩm giảm giá";
+        $title_page = "Sản phẩm giảm giá";
+        if(isset($page_now) && $page_now != 0) {
+            $title_page .= " - trang $page_now";
+        }
+        $description = $title_page;
+        $keywords = "thức ăn cho chó, thức ăn cho mèo";
         $linkPage = 'sale-off/';
     }
-
-    /*if ($k == 1) {
-        $linkPage .= '.htm';
-    }*/
 
     //Get all products
     $products_t = $Product->getProductsByCategoryKey($category_key);
@@ -182,12 +181,6 @@
     $url .= '/';
     $url1 = $url . 'order/';
 
-    /* if ($pp_quan > 0) {
-    $nav_page = pagination($linkS . $linkPage . "/" . $pp . '/', ceil($numofpages), $page);
-    } else {
-    $nav_page = pagination($linkS . $linkPage . "/", ceil($numofpages), $page);
-    } */
-    
     // Product SEO 
     $nav_page = pagination($linkS . $linkPage , ceil($numofpages), $page);
     $nav_page = str_replace("page=", "trang-", $nav_page);
@@ -201,8 +194,8 @@
     // Load news
     $tpl = '';
     $tpl_temp = '<div class="row" id="news_home">
-                            <div class = "col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                <ul>';
+                    <div class = "col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <ul>';
 
     $block = $xtemplate->get_block_from_str($product, 'NEWS');
     $flag = 0;

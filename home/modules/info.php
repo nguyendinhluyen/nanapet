@@ -70,25 +70,44 @@
 
     $breadcrumbs_path .= '<a href="{linkS}">NanaPet</a>';
     $breadcrumbs_path .= ' &raquo; ' . 'Đời sống Pets';
-    if (!empty($category_selected)) {
-        $breadcrumbs_path .= ' &raquo; ' . $category_selected;
-        if (!isset($p_now) || $p_now === 0 || $p_now === 1) {
-            $title_page = $category_selected;
+    
+    // Title Page
+    if (empty($title_page)) {
+        if (!empty($category_selected)) {
+            $breadcrumbs_path .= ' &raquo; ' . $category_selected;
+            if (!isset($p_now) || $p_now === 0 || $p_now === 1) {
+                $title_page = $category_selected;
+            } else {
+                $title_page = $category_selected ." - trang $p_now";
+            }
         } else {
-            $title_page = $category_selected ." - trang $p_now";
+            $category_selected = "Đời sống Pets";
+            if (!isset($p_now) || $p_now === 0 || $p_now === 1) {
+                $title_page = 'Đời sống Pets';
+            } else {
+                $title_page = 'Đời sống Pets' . " - trang $p_now";
+            }
         }
     } else {
-        $category_selected = "Đời sống Pets";
-        if (!isset($p_now) || $p_now === 0 || $p_now === 1) {
-            $title_page = 'Đời sống Pets';
-        } else {
-            $title_page = 'Đời sống Pets' . " - trang $p_now";
+        if(isset($p_now) && $p_now !== 0 && $p_now !== 1) {
+            $title_page .= " - trang $p_now";
         }
     }
     
     // Description
-    $description = $title_page;
+    if(empty($description)) {
+        $description = $title_page;
+    } else {
+        if(isset($p_now) && $p_now != 0 && $p_now != 1) {
+            $description .= " - trang $p_now";
+        }
+    }
 
+    // Keywords
+    if(empty($keywords)) {
+        $keywords = $title_page;
+    }
+    
     $info = $xtemplate->assign_blocks_content($info, array(
         'PROMOTION' => $tpl
     ));

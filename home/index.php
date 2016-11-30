@@ -2,7 +2,7 @@
     header('Content-Type: text/html; charset=utf-8');
     date_default_timezone_set('Asia/Ho_Chi_Minh');
     $title_page = 'Welcome to NanaPet Shop';
-    $description = 'Thức ăn chó | Thức ăn mèo';
+    $description = 'thức ăn cho chó, thức ăn cho mèo';
     $keywords = 'thức ăn chó, thức ăn mèo, thức ăn cún cưng, thức ăn mèo cưng';
     $link_product_navigation ="";
     

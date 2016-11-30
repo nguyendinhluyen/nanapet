@@ -18,16 +18,24 @@
     }
 
     // Title page
-    $title_page = '';
-    if (!empty($news_detail['newsintroduce_name'])) {
-        $title_page = $news_detail['newsintroduce_name'];
-    } else {
-        $title_page = "Giới thiệu";
+    if(empty($title_page)) {
+        if (!empty($news_detail['newsintroduce_name'])) {
+            $title_page = $news_detail['newsintroduce_name'];
+        } else {
+            $title_page = "Giới thiệu";
+        }
     }
 
     // Description
-    $description = $title_page;
+    if (empty($description)) {
+        $description = $title_page;
+    }
 
+    // Keywords
+    if (empty($keywords)) {
+        $keywords = $title_page;
+    }
+    
     $breadcrumbs_path .= '<a href="{linkS}">NanaPet</a>';
     if ($news_key != '') {
         $breadcrumbs_path .= ' &raquo; ' . '<a href="{linkS}gioi-thieu">Giới Thiệu</a>';
@@ -55,11 +63,6 @@
     $news_detail['newsintroduce_content'] = str_replace('toppage', '<A href="#section0" style="text-decoration:underline;">'
             . '<span style="outline:none">Về đầu trang</span> </A>', $news_detail['newsintroduce_content']);
 
-    //Thay cho dau trang cuoi doan trang
-    /* $news_detail['newsintroduce_content'] = $news_detail['newsintroduce_content']
-      .'<p style = "margin-top: 10px;"><A href="#section0">'
-      .'<span style = "font-family:RobotoSlabRegular; font-size:15px; outline:none">'
-      .'Về đầu trang</span></A></p>'; */
     $news_detail['newsintroduce_content'] = str_replace('Arial', 'RobotoSlabLight', $news_detail['newsintroduce_content']);
     $news_detail['newsintroduce_content'] = str_replace('size="2"', "", $news_detail['newsintroduce_content']);
     $news_detail['newsintroduce_content'] = str_replace('size="3"', "", $news_detail['newsintroduce_content']);
@@ -76,6 +79,6 @@
     $content = $xtemplate->replace($content, array(
         'tieude' => $news_detail['newsintroduce_name'],
         'noidung' => $news_detail['newsintroduce_content'],
-        'category' => $category,
+        'category' => $category
     ));
 ?>

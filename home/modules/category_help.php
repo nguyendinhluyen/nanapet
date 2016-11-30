@@ -12,7 +12,7 @@
     $block = $xtemplate->get_block_from_str($category,'CATEGORY');
     for($i=0 ; $i<$n ; ++$i) {
         $categories_sub = $Cate -> getCategoriesSub_help($categories[$i]['categorieshelp_id']);
-        $m = count($categories_sub);        
+        $m = count($categories_sub);
         if($i !=0 ) {
             $tpl .= "<hr style = 'margin-top: 10px;"
                                 . "margin-bottom: 10px;"
@@ -20,37 +20,39 @@
                                 . "border-color:#79afc4; width:95%; float:left'>";
         }
 
-        if($m > 0){		
-            //Thu muc cha co duong link con dau tien
+        if($m > 0){
+            // Parent has the children category
             $tpl.= $xtemplate->assign_vars($block,array(
                 'category_name'	=>  $categories[$i]['categorieshelp_name'],
                 'category_key'	=>  $categories_sub[0]['categorieshelp_key']
             ));
-        }
-        else {
+        } else {
             $tpl.= $xtemplate->assign_vars($block,array(
                 'category_name'	=> $categories[$i]['categorieshelp_name'],
-                'category_key'	=> $categories[$i]['categorieshelp_key'],
+                'category_key'	=> $categories[$i]['categorieshelp_key']
             ));
         }
 
         $block_sub = $xtemplate -> get_block_from_str($category,'SUBCATEGORY');		
         $tpl2 = '';
-        if($m > 0) {									
-            for($j = 0 ; $j < $m ; ++$j) {
+        if ($m > 0) {
+            for ($j = 0; $j < $m; ++$j) {
                 $id_danhmuc_sub = $categories_sub[$j]['categorieshelp_id'];
                 $img_danhmuc_sub_display = "display:none";
-                if( $news_key === $categories_sub[$j]['categorieshelp_key']) {
+                if ($news_key == $categories_sub[$j]['categorieshelp_key']) {
                     $id_danhmuc_sub = "selected";
                     $img_danhmuc_sub_display = " display:inline; margin-left: -15px";
+                    $title_page = $categories_sub[$j]['title_category'];
+                    $description = $categories_sub[$j]['descriptionhelp'];
+                    $keywords = $categories_sub[$j]['keywordshelp'];
                 }
-                
-                $tpl2.= $xtemplate->assign_vars($block_sub,array(
-                    'category_sub_name'         =>  $categories_sub[$j]['categorieshelp_name'],
-                    'category_sub_key'          =>  $categories_sub[$j]['categorieshelp_key'],
-                    'category_key'              =>  $categories[$i]['categorieshelp_key'],
-                    'id_danhmuc_sub'            =>  $id_danhmuc_sub,
-                    'img_danhmuc_sub_display'   =>  $img_danhmuc_sub_display
+
+                $tpl2.= $xtemplate->assign_vars($block_sub, array(
+                    'category_sub_name' => $categories_sub[$j]['categorieshelp_name'],
+                    'category_sub_key' => $categories_sub[$j]['categorieshelp_key'],
+                    'category_key' => $categories[$i]['categorieshelp_key'],
+                    'id_danhmuc_sub' => $id_danhmuc_sub,
+                    'img_danhmuc_sub_display' => $img_danhmuc_sub_display
                 ));
             }
         }

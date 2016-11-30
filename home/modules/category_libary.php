@@ -10,7 +10,9 @@
     $n = count($categories);
     $tpl = '';
     $block = $xtemplate->get_block_from_str($category_libary,'CATEGORY');
-
+    $title_page = "Đời sống Pets";
+    $description = "Những bài viết cho chó và mèo";
+    $keywords = "bài viết chó, bài viết mèo, bài viết cún con, bài viết mèo con";
     for($i = 0; $i < $n; ++$i){
         if($i !=0 ){
             $tpl .= "<hr style = 'margin-top: 10px;"
@@ -24,6 +26,9 @@
         if($category_key === $categories[$i]['categorieslibary_key']) {
             $id_danhmuc_main = "selected";
             $category_selected = $categories[$i]['categorieslibary_name'];
+            $title_page = $categories[$i]['title_category'];
+            $description = $categories[$i]['descriptionlibary'];
+            $keywords = $categories[$i]['keywordslibary'];
         }
         $tpl.= $xtemplate->assign_vars($block,array(
             'category_name'     => $categories[$i]['categorieslibary_name'],
@@ -36,24 +41,27 @@
         $m = count($categories_sub); 
         $tpl2 = '';
 
-        for($j=0 ; $j<$m ; ++$j){            
+        for ($j = 0; $j < $m; ++$j) {
             // Check the selected category
             $id_danhmuc_sub = $categories_sub[$j]['categorieslibary_id'];
             $img_danhmuc_sub_display = "display:none";
-            if($category_key === $categories_sub[$j]['categorieslibary_key']) {
+            if ($category_key === $categories_sub[$j]['categorieslibary_key']) {
                 $id_danhmuc_sub = "selected";
                 $img_danhmuc_sub_display = " display:inline; margin-left: -15px";
                 $category_selected = $categories_sub[$j]['categorieslibary_name'];
+                $title_page = $categories_sub[$j]['title_category'];
+                $description = $categories_sub[$j]['descriptionlibary'];
+                $keywords = $categories_sub[$j]['keywordslibary'];
             }
-            
-            $tpl2.= $xtemplate->assign_vars($block_sub,array(
-                'category_sub_name'         => $categories_sub[$j]['categorieslibary_name'],
-                'category_sub_key'          => $categories_sub[$j]['categorieslibary_key'],
-                'category_key'              => $categories[$i]['categorieslibary_key'],
-                'id_danhmuc_sub'            => $id_danhmuc_sub,
-                'img_danhmuc_sub_display'   => $img_danhmuc_sub_display
+
+            $tpl2.= $xtemplate->assign_vars($block_sub, array(
+                'category_sub_name' => $categories_sub[$j]['categorieslibary_name'],
+                'category_sub_key' => $categories_sub[$j]['categorieslibary_key'],
+                'category_key' => $categories[$i]['categorieslibary_key'],
+                'id_danhmuc_sub' => $id_danhmuc_sub,
+                'img_danhmuc_sub_display' => $img_danhmuc_sub_display
             ));
-        }
+    }
 
         $tpl = $xtemplate->assign_blocks_content($tpl,array(
             'SUBCATEGORY' => $tpl2

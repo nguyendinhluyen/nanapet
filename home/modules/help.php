@@ -18,16 +18,24 @@
     }
     
     // Title for SEO
-    $title_page = '';
-    if (!empty($news_detail['news_name'])) {
-        $title_page =  $news_detail['news_name'];
-    } else {
-        $title_page =  "Hỗ trợ";
+    if (empty($title_page)) {
+        if (!empty($news_detail['news_name'])) {
+            $title_page =  $news_detail['news_name'];
+        } else {
+            $title_page =  "Hỗ trợ";
+        }
     }
     
     // Description
-    $description = $title_page;
+    if (empty($description)) {
+        $description = $title_page;
+    }
     
+    // Keywords
+    if (empty($keywords)) {
+        $keywords = $title_page;
+    }
+
     $breadcrumbs_path .= '<a href="{linkS}">NanaPet</a>';
     if ($news_key != '') {
         $breadcrumbs_path .= ' &raquo; ' . '<a href="{linkS}tro-giup">Hỗ Trợ</a>';
@@ -54,11 +62,6 @@
     $news_detail['news_content'] = str_replace('toppage', '<A href="#section0" style="outline:none"> '
             . 'Về đầu trang</A>', $news_detail['news_content']);
 
-    //Thay cho dau trang cuoi doan trang
-    /* $news_detail['news_content'] = $news_detail['news_content']
-      .'<p style = "margin-top: 10px;"><A href="#section0" '
-      .'style="outline:none; font-size: 14px;">'
-      .'Về đầu trang</A></p>'; */
     $news_detail['news_content'] = str_replace('Arial', 'RobotoSlabLight', $news_detail['news_content']);
     $news_detail['news_content'] = str_replace('size="2"', "", $news_detail['news_content']);
     $news_detail['news_content'] = str_replace('size="3"', "", $news_detail['news_content']);
@@ -75,6 +78,6 @@
     $content = $xtemplate->replace($content, array(
         'tieude' => $news_detail['news_name'],
         'noidung' => $news_detail['news_content'],
-        'category' => $category,
+        'category' => $category
     ));
 ?>

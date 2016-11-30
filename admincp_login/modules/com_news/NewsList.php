@@ -165,8 +165,8 @@
     $mysql -> setQuery($sql);
     $mysql -> query();
     $total = $mysql -> getNumRows();
-    $numofpages = $total / $pp;
     
+    $numofpages = $total / $pp;
     if ($p_now <= 0){
         $page = 1;
     }
@@ -303,7 +303,8 @@
         'lag_page'              =>  $arr_lang['page'],
         'p'			=>  ($_GET['p']=='')?'1':intval($_GET['p']),
         'oderby'                =>  $_GET['order'],
-        'page'                  =>  page_div("./?show=newsList&p=%d_pg&order=".$_GET['order'], "10", ceil ($numofpages), $page),
+        'page'                  =>  page_div("./?show=newsList&p=%d_pg&order="
+                                    .$_GET['order'], "10", ceil ($numofpages), $page),
         'lag_delete'		=>  $arr_lang['del'],
         'lag_edit'		=>  $arr_lang['edit'],
         'lag_date_create'	=>  $arr_lang['date_added'],
