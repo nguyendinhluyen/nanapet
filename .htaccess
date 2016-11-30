@@ -147,9 +147,19 @@ RewriteRule ^cong-tac-vien/([0-9]*).html/page=([0-9]*)$ home/index.php?show=user
 RewriteRule ^san-pham/$ home/index.php?show=allproduct&type=allproduct [L]
 RewriteRule ^san-pham/trang-([0-9]*)$ home/index.php?show=allproduct&type=allproduct&trang=$1 [L]
 
+# Redirect from thu vien to doi song pets
+Rewriterule ^thu-vien$ http://nanapet.com/doi-song-pets [r=301,nc]
+RewriteRule ^thu-vien/page=([0-9]*)$ http://nanapet.com/doi-song-pets [r=301,nc]
+RewriteRule ^thu-vien/([a-zA-Z0-9-]*)/$ http://nanapet.com/doi-song-pets [r=301,nc]
+RewriteRule ^thu-vien/([a-zA-Z0-9-]*)/page=([0-9]*)$ http://nanapet.com/doi-song-pets [r=301,nc]
+RewriteRule ^thu-vien/([a-zA-Z0-9-]*)/([a-zA-Z0-9-]*)$ http://nanapet.com/doi-song-pets [r=301,nc]
+RewriteRule ^thu-vien/([a-zA-Z0-9-]*)/([a-zA-Z0-9-]*)/page=([0-9]*)$ http://nanapet.com/doi-song-pets [r=301,nc]
+Rewriterule ^thu-vien/([a-zA-Z0-9-]*).htm$ http://nanapet.com/doi-song-pets [r=301,nc]
+
 # List products by category
 RewriteRule ^([a-zA-Z0-9-]*)/$ home/index.php?show=product&category_key=$1 [L]
 RewriteRule ^([a-zA-Z0-9-]*)/trang-([0-9]*)$ home/index.php?show=product&category_key=$1&trang=$2 [L]
+
 #show product detail
 RewriteRule ^([a-zA-Z0-9-]*)/([a-zA-Z0-9-]*).htm$ home/index.php?show=product_detail&category_key=$1&product_key=$2 [L]
 
