@@ -103,7 +103,28 @@
                     {category_name}
                 </h1>
             </div>
-                    
+            <!--BEGIN SEO CATEGORY-->
+            <div class ="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="{display_seo}">
+                <p style="text-align:left;
+                          font-family: RobotoSlabLight;
+                          font-size: 17px;
+                          color:#929292;
+                          line-height: 25px;
+                          font-weight: bold">
+                    Có thể bạn chưa biết
+                </p>
+                <p style="text-align:left;
+                          font-family: RobotoSlabRegular;
+                          font-size: 15px;
+                          color:#929292;
+                          line-height: 25px">
+                    {text_seo}
+                </p>
+                <hr style = "border-width:1px;                                
+                            border-color:#929292; width:100%; float:left">
+            </div>
+            <!--END SEO CATEGORY-->
+                
             <div class="product_main">
                 <!--BEGINLIST_PRODUCTS-->
                 <!--BEGIN_PRODUCT-->
@@ -183,20 +204,6 @@
                 </div> 
             </div>
             <!-- END PAGE NAVIGATION -->    
-            
-            <!--BEGIN SEO CATEGORY-->
-            <div class ="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <p style="text-align:left;
-                          font-family: RobotoSlabRegular;
-                          font-size: 15px;
-                          color:#929292;
-                          margin-top: 10px;
-                          margin-bottom: 30px;
-                          line-height: 25px">
-                    {text_seo}
-                </p>
-            </div>
-            <!--END SEO CATEGORY-->
         </div>
     </div>
 </div><!-- End Product -->
@@ -209,7 +216,8 @@
                 src="{linkS}layout/bootstrap/images/doi_song_pet.png" 
                 style = "margin-left: auto;
                         margin-right: auto; 
-                        display: block;"/>                                    
+                        display: block;
+                        margin-top: 20px"/>                                    
         </div>
     </div>
 </div>

@@ -251,6 +251,11 @@
         }
     }
 
+    if (empty($text_seo)) {
+        $display_seo ="display:none";
+    } else {
+        $display_seo ="display:block";
+    }
     $product = $xtemplate->replace($product, array(
         'page' => $nav_page,
         'url' => $url,
@@ -263,6 +268,7 @@
         'category' => $category,
         'list_advs' => $list_advs,
         'category_name' => $category_name,
+        'display_seo' => $display_seo,
         'text_seo' => $text_seo // Check category.php for SEO
     ));
     $content = $product;

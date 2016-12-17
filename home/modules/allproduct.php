@@ -202,6 +202,7 @@
         'category' => $category,
         'list_advs' => $list_advs,
         'category_name' => $category_name,
+        'display_seo' => 'display:none',
         'text_seo' => $text_seo // Check category.php for data text seo
     ));
 ?>
