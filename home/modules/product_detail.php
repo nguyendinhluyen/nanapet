@@ -65,18 +65,18 @@ $proType = $Product->getProductsType($product_detail['p_type']);
     $breadcrumbs = $Product->getProductPath($_GET['category_key']);
     $breadcrumbs_path = '';
     $breadcrumbs_path .= '<a style = "outline:none" href="{linkS}">NanaPet</a> &raquo; '
-            . '<a style = "outline:none" href="{linkS}san-pham.htmls">Sản Phẩm</a>';
+            . '<a style = "outline:none" href="{linkS}san-pham/">Sản Phẩm</a>';
     $k = count($breadcrumbs);
     $title = array();
     for ($i = $k; $i >= 0; $i--) {
         if ($breadcrumbs[$i]['name'] != '') {
             $title[] = $breadcrumbs[$i]['name'];
             $breadcrumbs_path .= ' &raquo; <a style = "outline:none" href="{linkS}' 
-                    . $breadcrumbs[$i]['key'] . '.htm">' . $breadcrumbs[$i]['name'] . '</a>';
+                    . $breadcrumbs[$i]['key'] . '/">' . $breadcrumbs[$i]['name'] . '</a>';
         }
     }
 
-    $category_c = $breadcrumbs[0]['key'] . ".htm";
+    $category_c = $breadcrumbs[0]['key'] . "/";
     $breadcrumbs_path .= ' &raquo; ' . $product_detail['products_name'];
 
     // Title Page
