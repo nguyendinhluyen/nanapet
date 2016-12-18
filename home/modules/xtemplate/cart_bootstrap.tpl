@@ -258,7 +258,7 @@
                                     <input class="order"
                                            type="button"                                           
                                            value="Tiếp Tục Mua Hàng"
-                                           onclick="window.location='{linkS}san-pham.htmls'"
+                                           onclick="window.location='{linkS}san-pham/'"
                                            style="-webkit-border-radius: 10px;
                                                   -moz-border-radius: 10px;
                                                   border-radius: 10px;

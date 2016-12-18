@@ -90,7 +90,7 @@
                                         font-family: RobotoSlabRegular;
                                         font-size: 15px;
                                         float: right">
-                                <a href="{linkS}san-pham.htmls" style="color: #ffffff;">Mua Sản Phẩm</a>
+                                <a href="{linkS}san-pham/" style="color: #ffffff;">Mua Sản Phẩm</a>
                             </div>
                         </td>
                         <td class="col-md-6 col-lg-6"
