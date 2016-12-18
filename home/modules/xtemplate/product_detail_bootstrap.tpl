@@ -183,13 +183,38 @@
                                     src="{linkS}upload/product/thumb/{product_image}"                           
                                     style="width: 300px;
                                            height: 300px;">
+                                <div style="font-size: 14px; 
+                                            text-align: left;
+                                            line-height: 50px;
+                                            font-style: italic">
+                                    Hình ảnh mình hoạ được chụp từ sản phẩm thật
+                                </div>
                             </div>
-                            <div class="col-sm-12 col-sx-12 col-md-6 col-lg-6" style="float:left">
+                            <div class="col-sm-12 col-sx-12 col-md-6 col-lg-6" 
+                                 style="float:left; font-size: 14px; line-height: 35px">
+                                <div style ="width: 250px;
+                                            float: left">
+                                    Thương hiệu
+                                </div>
+                                <div>
+                                    <a href="{linknsx}"
+                                       target="_blank" 
+                                       style ="font-size: 14px; outline:none; color:black">{nsx}</a>
+                                </div>
+                                <div style ="width: 250px; 
+                                              float:left">
+                                    Xuất xứ
+                                </div>
+                                <div>
+                                    <a href="{linknsx}" 
+                                       target="_blank" 
+                                       style ="font-size: 14px; outline:none; color:black">{xuatxu}</a>
+                                </div>
                                 <div style="font-size: 14px">
                                     {khuyenmai}                                                                                                           
                                 </div>
                                 <hr  style = "margin-top: 10px;
-                                    margin-bottom: 15px;
+                                    margin-bottom: 14px;
                                     border-width:1px;                                                
                                     border-color:#cccccc; width:100%; float:left">    
                                 <div style=" clear:both">
@@ -243,74 +268,41 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-5 col-md-5" 
-                                    style="margin-top: 5px">
-                                    <a href="{linkS}tro-giup/cach-thuc-thanh-toan.html" 
-                                       rel="nofollow"
-                                       target="_blank">
-                                        <span style="-webkit-border-radius: 20px;
-                                                    -moz-border-radius: 20px;
-                                                    outline:none;
-                                                    float:right;
-                                                    background-color: #00acd7;
-                                                    border: none;
-                                                    color: #fff;
-                                                    font-family:PoetsenOne;
-                                                    border-radius: 20px;
-                                                    padding: 10px 20px 10px 20px;
-                                                    cursor: pointer;
-                                                    font-size: 14px;
-                                                    width: 140px;
-                                                    text-align: center"
-                                            title="Thanh toán tiền mặt (COD), Thanh toán chuyển khoản và Thanh toán qua nhà xe.">
-                                            PT Thanh toán
-                                        </span>
-                                    </a>
-                                </div>
-                                <div class="col-lg-5 col-md-5"
-                                    style="margin-top: 5px">
-                                    <a href="{linkS}tro-giup/dich-vu-van-chuyen.html" 
-                                       rel="nofollow"
-                                       target="_blank">
-                                        <span style="-webkit-border-radius: 20px;
-                                                    -moz-border-radius: 20px;
-                                                    outline:none;
-                                                    float:right;
-                                                    background-color: #00acd7;
-                                                    border: none;
-                                                    color: #fff;
-                                                    font-family:PoetsenOne;
-                                                    border-radius: 20px;
-                                                    padding: 10px 20px 10px 20px;
-                                                    cursor: pointer;
-                                                    margin-left: 10px;
-                                                    font-size: 14px;
-                                                    width: 140px;
-                                                    text-align: center"
-                                                title="Dịch vụ vận chuyển tận nhà tiện lợi.">
-                                            PT Vận chuyển
-                                        </span>
-                                    </a>
-                                </div>
-                                <div style="margin-top: 70px">
-                                    <div class="fb-like" 
-                                         data-href="https://www.facebook.com/NanaPetOnline" 
-                                         data-layout="standard" 
-                                         data-action="like" 
-                                         data-show-faces="true" 
-                                         data-width="380"
-                                         data-share="true">
-                                    </div>
-                                </div>
+                            </div>
+                            <div class="col-sm-12 col-sx-12 col-md-6 col-lg-6" 
+                                 style="float:left;
+                                        line-height: 25px;
+                                        font-family: RobotoSlabRegular;
+                                        font-size: 14px;">
+                                Free ship nội thành Hồ Chí Minh cho hoá đơn từ 
+                                <span style="color:red">400.000 VNĐ</span> <br>
+                                Miễn phí đổi trả sản phẩm đến 10 ngày - 
+                                <a href="{linkS}tro-giup/doi-tra-san-pham.html" target="_blank">chi tiết</a> <br>
+                                Nhận giao hàng và COD toàn quốc - 
+                                <a href="{linkS}tro-giup/cach-thuc-thanh-toan.html" target="_blank">chi tiết</a> <br>
+                                Khách hàng có thể đến mua trực tiếp tại Văn Phòng Giao Nhận
+                                của NanaPet tại 21/11 Tự Lập Phường 4 Quận Tân Bình Hồ Chí Minh <br>                                
                             </div>
                         </div><!-- end detail2 -->
                     </form>                                                 
                 </div>
                 <div class ="row">
+                    <div class="col-sm-12 col-sx-12 col-md-6 col-lg-6"> 
+                        <div class="fb-like" 
+                             data-href="https://www.facebook.com/NanaPetOnline" 
+                             data-layout="standard" 
+                             data-action="like" 
+                             data-show-faces="true" 
+                             data-width="380"
+                             data-share="true">
+                        </div>
+                    </div>
+                </div>
+                <div class ="row">
                     <div class = "col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <!--Thong tin san pham -->
                         <hr  style = "margin-top: 30px;
-                                    margin-bottom: 15px;
+                                    margin-bottom: 14px;
                                     border-width:1px;                                                
                                     border-color:#cccccc; width:100%; float:left"/>    
                         <div style = "line-height: 25px; 
@@ -318,35 +310,13 @@
                                     float: left;
                                     font-family: RobotoSlabRegular;
                                     line-height: 30px;
-                                    font-size: 15px;
+                                    font-size: 14px;
                                     padding-top: 10px;
                                     padding-bottom: 30px">
                             <ul style="padding-left: 0px; clear: both">
                                 <li>
                                     <span style="color: #101010;">
-                                        <h2 style="font-size: 15px; font-weight: bold">CHI TIẾT SẢN PHẤM</h2>
-                                    </span>
-                                </li>
-                                <li>
-                                    <span style ="width: 250px;
-                                                  float: left">
-                                        Thương hiệu
-                                    </span>
-                                    <span>
-                                        <a href="{linknsx}"
-                                           target="_blank" 
-                                           style ="font-size: 14px; outline:none; color:black">{nsx}</a>
-                                    </span>
-                                </li>
-                                <li>
-                                    <span style ="width: 250px; 
-                                                  float:left">
-                                        Xuất xứ
-                                    </span>
-                                    <span>
-                                        <a href="{linknsx}" 
-                                           target="_blank" 
-                                           style ="font-size: 14px; outline:none; color:black">{xuatxu}</a>
+                                        <h2 style="font-size: 14px; font-weight: bold">CHI TIẾT SẢN PHẤM</h2>
                                     </span>
                                 </li>
                                 {product_color}

@@ -261,17 +261,17 @@ $proType = $Product->getProductsType($product_detail['p_type']);
         } else {
             $khuyenmai= '<ul style="clear: both; float:left; padding-left: 0px; line-height: 30px">
                             <li>
-                                <span style = "color:#f24d23; font-size: 18px; float:left; width: 200px">
+                                <span style = "color:#f24d23; font-size: 18px; float:left; width: 250px">
                                     Giá khuyến mãi </span>
                                 <span style="color:#f24d23; font-size:20px;">' . $price_encourage . '</span>
                             </li>
                             <li>
-                                <span style="width: 200px; float:left"> Giá sản phẩm </span>
+                                <span style="width: 250px; float:left"> Giá sản phẩm </span>
                                 <span style="text-decoration: line-through;">' 
                                     . $product_detail['products_price'] . '</span>
                             </li>
                             <li>
-                                <span style="width: 200px; float:left">Tiết kiệm</span>
+                                <span style="width: 250px; float:left">Tiết kiệm</span>
                                 <span>' . $produce_discount . '</span>
                             </li>
                         </ul>';
@@ -289,7 +289,7 @@ $proType = $Product->getProductsType($product_detail['p_type']);
 
         $khuyenmai= '<ul style="clear: both; float:left; padding-left: 0px; line-height: 30px">
                         <li>
-                            <span style="font-size: 18px; color:#f24d23; width: 200px; float:left">Giá sản phẩm</span>
+                            <span style="font-size: 18px; color:#f24d23; width: 250px; float:left">Giá sản phẩm</span>
                             <span style="font-size: 18px; color:#f24d23;">' 
                                 . $product_detail['products_price'] . '</span>
                         </li>
