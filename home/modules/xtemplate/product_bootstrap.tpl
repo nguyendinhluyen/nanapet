@@ -121,7 +121,7 @@
                     {text_seo}
                 </p>
                 <hr style = "border-width:1px;                                
-                            border-color:#929292; width:100%; float:left">
+                            border-color:#eee; width:100%; float:left">
             </div>
             <!--END SEO CATEGORY-->
                 

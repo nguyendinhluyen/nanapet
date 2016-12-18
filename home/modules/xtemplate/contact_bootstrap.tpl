@@ -21,9 +21,40 @@
                 </div> 
             </div>
             <div class ="col-sx-12 col-sm-12 col-md-12 col-lg-12" 
+                 style="padding-left: 35px">
+                <div class="col-sx-12 col-lg-6" 
+                     style="line-height: 30px; 
+                            font-family: RobotoSlabRegular;
+                            font-size: 15px;
+                            margin-top: 20px">
+                    <span style="font-size: 20px;">
+                        Hộ Kinh Doanh Cá Thể NanaPet
+                    </span> <br/>
+                    Địa chỉ: Trầng trệt 22/11 Tự Lập P4 Quận Tân Bình Hồ Chí Minh <br/>
+                    Thời gian làm việc: 09:00 - 16:30 từ T2 đến T7 <br/>
+                    Hotline: (08) 2212.8888 <br/>
+                    Mobile: 0933.15.25.35 (Ms Chi)<br/>
+                    Email: support@nanapet.com<br/>
+                </div>
+                <div class="col-sx-12 col-lg-6" style="margin-left: -35px">
+                    <img alt="Bản đồ liên hệ NanaPet"  
+                            src="{linkS}layout/bootstrap/images/map_lienhe.jpg" 
+                            width="100%"
+                            style = "margin-left: auto; 
+                                     margin-right: auto;
+                                     display: block">
+                </div>
+                <hr style = "border-width:1px;                                
+                            border-color:#eee; 
+                            width:94%; 
+                            float:left;
+                            margin-left:15px;
+                            margin-top: 50px">
+            </div>
+            <div class ="col-sx-12 col-sm-12 col-md-12 col-lg-12" 
                  style="padding-right: 50px">
                 <form method="post" name="contact" id="contact" enctype="multipart/form-data">
-                    <div class ="col-sx-12 col-sm-12 col-md-5 col-lg-5" style="margin-top: 30px">
+                    <div class ="col-sx-12 col-lg-6" style="margin-top: 30px">
                         <img alt="Liên hệ NanaPet"  
                             src="{linkS}layout/bootstrap/images/lien_he.png" 
                             height="250" 
@@ -31,55 +62,13 @@
                             style = "margin-left: auto;
                                      margin-right: auto;
                                      display: block">
-                        <div style="font-family:RobotoSlabRegular;
-                                    font-size: 20px;
-                                    font-weight: bold;
-                                    text-align: center">
-                            NanaPet Online Shop                        
-                        </div>
-                        <div style="font-family:RobotoSlabLight;
-                                    font-size: 13px;
-                                    font-weight: bold; 
-                                    line-height: 30px;
-                                    text-align: center">
-                            <span style = "font-family:RobotoSlabRegular; 
-                                           font-weight: bold">
-                                Hotline:
-                            </span>                         
-                            <span>0933.103.203</span>
-                        </div>
-                        <div style="font-family:RobotoSlabLight;
-                                    font-size: 13px;
-                                    line-height: 30px;
-                                    text-align: center">
-                            <span style = "font-family:RobotoSlabRegular; 
-                                           font-weight: bold">
-                                Email:
-                            </span> 
-                            <span>support@nanapet.com</span>
-                        </div>
-                        <div style="font-family:RobotoSlabLight;
-                                    font-size: 13px;
-                                    font-weight: bold;
-                                    line-height: 30px;
-                                    text-align: center">
-                            <span style = "font-family:RobotoSlabRegular; 
-                                           font-weight: bold">
-                                Thời gian làm việc
-                            </span>                                                 
-                        </div>
-                        <div style="font-family:RobotoSlabLight;
-                                    font-size: 13px;
-                                    font-weight: bold;
-                                    text-align: center">
-                            9:00 - 22:00 các ngày trong tuần
-                        </div>
-                        <br/>
-                        <br/>
                     </div>
 
-                    <div class ="col-sx-12 col-sm-12 col-md-5 col-lg-5 col-md-offset-1 col-lg-offset-1">                            
-                        <div style="margin-top:40px; margin-left: -10px; margin-bottom: 20px">
+                    <div class ="col-sx-12 col-lg-6" 
+                         style="padding-right: 25px">                            
+                        <div style="margin-top:40px; 
+                                    margin-left: -10px; 
+                                    margin-bottom: 20px">
                             {success}
                         </div>                        
                         <div class ="form-horizontal">
@@ -179,7 +168,9 @@
                                            -webkit-border-radius: 20px;
                                            -moz-border-radius: 20px;
                                            border-radius: 20px;
-                                           padding: 10px;">
+                                           padding: 10px;
+                                           margin-bottom: 50px;
+                                           font-size: 15px">
                             </div>                                                
                         </div>                                                                                                                          
                     </div>
