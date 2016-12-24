@@ -20,11 +20,11 @@
 <div class ="container">
     <div class ="row">   
         <div class = "hidden-xs hidden-sm col-md-3 col-lg-3" 
-             style="padding-left: 50px; padding-bottom: 40px">
+             style="padding-left: 20px; padding-bottom: 40px">
             <img alt="giới thiệu" 
                 src="{linkS}layout/bootstrap/images/gioi_thieu.png"
                 style="clear: both;
-                       width: 100%;
+                       width: 90%;
                        margin-top: 30px;
                        margin-bottom: 20px;">
             {category}

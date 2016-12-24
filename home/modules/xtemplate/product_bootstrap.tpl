@@ -54,11 +54,11 @@
 <div class = "container">
     <div class ="row">
         <div class = "hidden-xs hidden-sm col-md-3 col-lg-3"
-             style="padding-left: 50px;padding-top: 10px">
+             style="padding-left: 20px;padding-top: 10px">
             <img alt="danh mục sản phẩm" 
                 src="{linkS}layout/bootstrap/images/category.png" 
                 style="clear: both; 
-                       width: 100%"/>
+                       width: 90%"/>
             {category}
             {left_facebook_page_plugin}
         </div>    

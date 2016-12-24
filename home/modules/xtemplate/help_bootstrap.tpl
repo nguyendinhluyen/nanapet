@@ -21,12 +21,13 @@
 
 <div class ="container">
     <div class ="row">
-        <div class = "hidden-xs hidden-sm col-md-3 col-lg-3" style="padding-left: 50px; margin-bottom: 30px ">            
-            <img alt="danh mục" 
+        <div class = "hidden-xs hidden-sm col-md-3 col-lg-3" 
+             style="padding-left: 20px; margin-bottom: 30px ">            
+            <img alt="Hỗ trợ" 
                 src="{linkS}layout/bootstrap/images/ho_tro.png"
                 style="float: left;
                        clear: both; 
-                       width: 100%; 
+                       width: 90%; 
                        margin-top: 30px;
                        margin-bottom: 20px;"/>
             {category}
