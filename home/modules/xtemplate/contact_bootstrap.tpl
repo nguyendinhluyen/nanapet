@@ -22,27 +22,29 @@
             </div>
             <div class ="col-sx-12 col-sm-12 col-md-12 col-lg-12" 
                  style="padding-left: 35px">
-                <div class="col-sx-12 col-lg-6" 
+                <div class="col-sx-12 col-lg-12" 
                      style="line-height: 30px; 
                             font-family: RobotoSlabRegular;
                             font-size: 15px;
-                            margin-top: 20px">
-                    <span style="font-size: 20px;">
-                        Hộ Kinh Doanh Cá Thể NanaPet
-                    </span> <br/>
-                    Địa chỉ: Trầng trệt 22/11 Tự Lập P4 Quận Tân Bình Hồ Chí Minh <br/>
-                    Thời gian làm việc: 09:00 - 16:30 từ T2 đến T7 <br/>
-                    Hotline: (08) 2212.8888 <br/>
-                    Mobile: 0933.15.25.35 (Ms Chi)<br/>
-                    Email: support@nanapet.com<br/>
+                            margin-top: 20px;
+                            margin-bottom: 20px">
+                    <span style="font-size: 20px;">NanaPet Shop</span> <br>
+                    - Văn phòng kho: Trầng trệt, 21/11 Tự Lập, P.4, Q.Tân Bình, TP Hồ Chí Minh <br>
+                    - Thời gian làm việc: 09:00 - 16:30 từ T2 đến T7 <br/>
+                    - Hotline: (08) 2212.8888 <br>
+                    - Mobile: 0933.103.203 (Ms Chi) <br>
+                    - Website: <a href="http://nanapet.com"> nanapet.com </a> <br>
+                    - Email: support@nanapet.com<br>
+                    <span style="font-style:italic">* Quý khách vui lòng liên hệ trước khi đến để được 
+                        đón tiếp chu đáo và phục vụ nhanh chóng hơn * </span>
                 </div>
-                <div class="col-sx-12 col-lg-6" style="margin-left: -35px">
-                    <img alt="Bản đồ liên hệ NanaPet"  
-                            src="{linkS}layout/bootstrap/images/map_lienhe.jpg" 
-                            width="100%"
-                            style = "margin-left: auto; 
-                                     margin-right: auto;
-                                     display: block">
+                <div class="col-sx-12 col-lg-12">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3919.243964663456!2d106.6532502!3d10.7926176!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc389e32bb83ac615!2sNanaPet+Shop!5e0!3m2!1sen!2s!4v1482570247573" 
+                            width="97%" 
+                            height="500" 
+                            frameborder="0" 
+                            style="border:0; " 
+                            allowfullscreen></iframe>
                 </div>
                 <hr style = "border-width:1px;                                
                             border-color:#eee; 
