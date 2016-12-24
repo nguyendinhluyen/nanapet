@@ -44,19 +44,20 @@
     };
 		
     function cart_finish_items(){
-        // Kiem tra don han hon 200.000 VND
+        // Kiem tra don han hon 0 VND
         var total_money_product = document.getElementById("total_money_product").innerHTML;
         total_money_product = total_money_product.replaceAll('.','');
         total_money_product = total_money_product.replace(' VNĐ','');        
-        if(parseFloat(total_money_product) >= 200000){            
+        if(parseFloat(total_money_product) > 0){            
             var code_coupon = document.getElementById("code_coupon").value;
-            if (code_coupon !== "")
+            if (code_coupon !== "") {
                 window.location='{linkS}ket-thuc-mua-hang/' + code_coupon + '.html/';						
-            else
+            } else {
                 window.location='{linkS}ket-thuc-mua-hang' ;
+            }
         }
         else{
-            alert('Đơn hàng tối thiếu >= 200.000 VNĐ');
+            alert('Đơn hàng tối thiếu > 0 VNĐ');
         }		
     }
     function myFunctionSubmit(){
