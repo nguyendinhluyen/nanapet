@@ -263,7 +263,7 @@ $proType = $Product->getProductsType($product_detail['p_type']);
                             <li>
                                 <span style = "color:#f24d23; font-size: 18px; float:left; width: 250px">
                                     Giá khuyến mãi </span>
-                                <span style="color:#f24d23; font-size:20px;">' . $price_encourage . '</span>
+                                <span style="color:#f24d23; font-size:19px;">' . $price_encourage . '</span>
                             </li>
                             <li>
                                 <span style="width: 250px; float:left"> Giá sản phẩm </span>

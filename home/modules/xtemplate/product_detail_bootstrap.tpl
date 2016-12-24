@@ -274,14 +274,12 @@
                                         line-height: 25px;
                                         font-family: RobotoSlabRegular;
                                         font-size: 14px;">
-                                Free ship nội thành Hồ Chí Minh cho hoá đơn từ 
-                                <span style="color:red">400.000 VNĐ</span> <br>
-                                Miễn phí đổi trả sản phẩm đến 10 ngày - 
+                                - Free ship nội thành HCM cho HĐ từ <span style="color:red">400K</span> <br>
+                                - Miễn phí đổi trả sản phẩm đến 10 ngày - 
                                 <a href="{linkS}tro-giup/doi-tra-san-pham.html" target="_blank">chi tiết</a> <br>
-                                Nhận giao hàng và COD toàn quốc - 
-                                <a href="{linkS}tro-giup/cach-thuc-thanh-toan.html" target="_blank">chi tiết</a> <br>
-                                Khách hàng có thể đến mua trực tiếp tại Văn Phòng Giao Nhận
-                                của NanaPet tại 21/11 Tự Lập Phường 4 Quận Tân Bình Hồ Chí Minh <br>                                
+                                - Nhận giao hàng và COD toàn quốc - 
+                                <a href="{linkS}tro-giup/dich-vu-van-chuyen.html" target="_blank">chi tiết</a> <br>
+                                - Khách hàng có thể đến mua trực tiếp tại Văn Phòng Kho, 21/11 Tự Lập P.4 Q. Tân Bình, TP HCM <br>                                
                             </div>
                         </div><!-- end detail2 -->
                     </form>                                                 
