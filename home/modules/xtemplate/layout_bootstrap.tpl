@@ -41,7 +41,12 @@
         <!--Begin product navigation-->
         {link_product_navigation}
         <!--End product navigation-->
-        
+        <!--Begin jqxRating-->   
+        <link rel="stylesheet" href="{linkS}layout/jqwidgets/styles/jqx.base.css" type="text/css"/>
+        <link rel="stylesheet" href="{linkS}layout/jqwidgets/styles/jqx.arctic.css" type="text/css"/>
+        <script type="text/javascript" src="{linkS}layout/jqwidgets/jqxcore.js"></script>
+        <script type="text/javascript" src="{linkS}layout/jqwidgets/jqxrating.js"></script>
+        <!--End jqxRating-->
         <script>
               (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
               (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -61,15 +66,18 @@
         </script>
         <!-- Facebook -->
         <div id="fb-root"></div>
-            <script>(function(d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) return;
-          js = d.createElement(s); js.id = id;
-          js.src = "http://connect.facebook.net/vi_VN/sdk.js#xfbml=1&appId=1491869401059003&version=v2.5";
-          fjs.parentNode.insertBefore(js, fjs);
+        <script>(function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "http://connect.facebook.net/vi_VN/sdk.js#xfbml=1&appId=1491869401059003&version=v2.5";
+            fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));</script>
         <!--End Facebook Code-->
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+        <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     </head>
+    
     <style>        
         input[type=search], div.button {
             -moz-box-sizing: border-box;
@@ -195,6 +203,12 @@
             });
         });
         // End JS TOP button
+        
+        $(function() {
+            $( "#search_box" ).autocomplete({
+                source: '{linkS}home/modules/ajax/search.php'
+            });
+        });
     </script>
     <body>
         <header style="padding-top: 10px;">	
@@ -249,6 +263,7 @@
                                                             outline:none;
                                                             margin-left:10%"
                                                     maxlength="50">
+                                            
                                         </td>
                                         <td>
                                             <input class="search_button"
@@ -429,8 +444,9 @@
                                           
         <!-- content-->
         {content}
-        <!-- footer -->
+        <!--End content-->
         
+        <!-- footer -->
         <footer>
             <div class ="container-fluid hidden-sm hidden-xs" 
                  style = "background-color: #ff767c; 

@@ -29,7 +29,7 @@
                             margin-top: 20px;
                             margin-bottom: 20px">
                     <span style="font-size: 20px;">NanaPet Shop</span> <br>
-                    - Văn phòng kho: Trầng trệt, 21/11 Tự Lập, P.4, Q.Tân Bình, TP Hồ Chí Minh <br>
+                    - Văn phòng kho: Tầng trệt, 21/11 Tự Lập, P.4, Q.Tân Bình, TP Hồ Chí Minh <br>
                     - Thời gian làm việc: 09:00 - 16:30 từ T2 đến T7 <br/>
                     - Hotline: (08) 2212.8888 <br>
                     - Mobile: 0933.103.203 (Ms Chi) <br>

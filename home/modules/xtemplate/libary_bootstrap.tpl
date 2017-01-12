@@ -1,16 +1,3 @@
-<!--Use for combobox-->
-<head>
-    <link rel="stylesheet" href="{linkS}layout/jqwidgets/styles/jqx.base.css" type="text/css"/>
-    <link rel="stylesheet" href="{linkS}layout/jqwidgets/styles/jqx.bootstrap.css" type="text/css"/>
-    <script type="text/javascript" src="{linkS}layout/scripts/jquery-1.10.2.min.js"></script>
-    <script type="text/javascript" src="{linkS}layout/jqwidgets/jqxcore.js"></script>
-    <script type="text/javascript" src="{linkS}layout/jqwidgets/jqxbuttons.js"></script>
-    <script type="text/javascript" src="{linkS}layout/jqwidgets/jqxscrollbar.js"></script>
-    <script type="text/javascript" src="{linkS}layout/jqwidgets/jqxlistbox.js"></script>
-    <script type="text/javascript" src="{linkS}layout/jqwidgets/jqxcombobox.js"></script>
-</head>
-<!--End use for combobox-->
-
 <style type="text/css">
     .contentheading a:hover 
     {

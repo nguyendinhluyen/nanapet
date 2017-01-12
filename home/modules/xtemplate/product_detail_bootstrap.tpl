@@ -1,20 +1,7 @@
 <head>
-    <!--Begin jqxRating-->   
-    <link rel="stylesheet" href="{linkS}layout/jqwidgets/styles/jqx.base.css" type="text/css"/>
-    <link rel="stylesheet" href="{linkS}layout/jqwidgets/styles/jqx.arctic.css" type="text/css"/>
-    <script type="text/javascript" src="{linkS}layout/scripts/jquery-1.10.2.min.js"></script>
-    <script type="text/javascript" src="{linkS}layout/jqwidgets/jqxcore.js"></script>
-    <script type="text/javascript" src="{linkS}layout/jqwidgets/jqxrating.js"></script>
-    <!--End jqxRating-->              
     
-    <!--Chua biet vi tri su dung -->
-    <script type="text/javascript" src="{linkS}layout/js/jquery-ui-1.8.16.custom.min.js"></script>
     
-    <!--Begin Logo Slick-->
-    <link rel="stylesheet" type="text/css" href="{linkS}layout/bootstrap/css/slick/slick/slick.css"/>        
-    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script type="text/javascript" src="{linkS}layout/bootstrap/css/slick/slick/slick.min.js"></script>
-    <!--End Logo Slick-->       
+    
 </head>
 
 <script type="text/javascript">
