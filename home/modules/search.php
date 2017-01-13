@@ -13,9 +13,6 @@
         header('Location: '.$linkS.'tim-kiem/trang-1');
     }        
     
-    // Load searching layout
-    $template = $xtemplate->load('search_bootstrap');
-    
     // Load product
     $elements = 'products_id,
                 products_image,
@@ -24,13 +21,24 @@
                 products_price,
                 product_encourage';
     $from_table = 'products';
-    $where = "products_status = 1 AND CONCAT(' ',products_name,' ') LIKE '% ".$_SESSION['search_key']." %' ORDER BY products_date_added DESC";
+    $where = "products_status = 1 AND CONCAT(' ',products_name,' ') LIKE '% "
+            .$_SESSION['search_key']." %' ORDER BY products_date_added DESC";
     $sql = "SELECT $elements FROM $from_table WHERE $where LIMIT 0, 10";
     global $mysql;
     $products = $mysql->query_command($sql);
     $sum_product = count($products);
+    
+    $Category = new Category();
+    if ($sum_product == 1) {
+        $category_key = $Category->getCategoryKeyByProductKey($products[0]['products_key']);
+        header('Location: '.$linkS.$category_key."/".$products[0]['products_key'].".htm");
+        exit;
+    }
+    
     $tpl = '';
     $tpl_temp = '<ul>';
+    // Load searching layout
+    $template = $xtemplate->load('search_bootstrap');
     $block = $xtemplate->get_block_from_str($template,'PRODUCT');
             
     // Discount VIP
@@ -44,9 +52,8 @@
     }
     
     // Show products
-    $Category = new Category();
     $flag = 0;
-    for($i=0 ; $i<$sum_product ; ++$i){
+    for($i=0 ; $i<$sum_product ; ++$i) {
         $flag ++;
         if(intval($products[$i]['products_price']) > 0){
             $pro_price = $products[$i]['products_price']. ' VNĐ';
@@ -55,8 +62,9 @@
             $pro_price = "";
         }
         
-        if(!empty($products[$i]['product_encourage']) && intval($products[$i]['product_encourage']) > 0 && $products[$i]['p_type'] == ''){            
-            
+        if(!empty($products[$i]['product_encourage']) 
+                && intval($products[$i]['product_encourage']) > 0 
+                && $products[$i]['p_type'] == '') {            
             if($disCountVIPCustomer != 0){
                 // Initialize values
                 $encourage_price = 0;
@@ -111,13 +119,15 @@
     $elements = 'news_id,
                 MATCH(news_name, news_content) AGAINST("'.$_SESSION['search_key'].'") AS score';
     $from_table = 'news';
-    $where = 'status=1 AND (flag_publisher=1 OR help_flag=1) AND MATCH(news_name, news_content) AGAINST ("'.$_SESSION['search_key'].'") ORDER BY score DESC';
+    $where = 'status=1 AND (flag_publisher=1 OR help_flag=1) AND MATCH(news_name, news_content) AGAINST ("'
+            .$_SESSION['search_key'].'") ORDER BY score DESC';
     $sql = 'SELECT '.$elements.' FROM '.$from_table.' WHERE '.$where;
     $listnews = $mysql->query_command($sql);
     $total = count($listnews);        
     if($total == 0){
         $elements = 'news_id';
-        $where = "status = 1 AND (flag_publisher=1 OR help_flag=1) AND CONCAT(' ',news_name,' ') LIKE '% ".$_SESSION['search_key']." %'";
+        $where = "status = 1 AND (flag_publisher=1 OR help_flag=1) AND CONCAT(' ',news_name,' ') LIKE '% "
+                .$_SESSION['search_key']." %'";
         $sql = 'SELECT '.$elements.' FROM '.$from_table.' WHERE '.$where;
         $listnews = $mysql->query_command($sql);
         $total = count($listnews);
@@ -150,7 +160,8 @@
                 news_shortcontent,
                 help_flag,
                 flag_publisher, MATCH(news_name, news_content) AGAINST("'.$_SESSION['search_key'].'") AS score';
-    $where = 'status=1 AND (flag_publisher=1 OR help_flag=1) AND MATCH(news_name, news_content) AGAINST ("'.$_SESSION['search_key'].'") ORDER BY score DESC';
+    $where = 'status=1 AND (flag_publisher=1 OR help_flag=1) AND MATCH(news_name, news_content) AGAINST ("'
+            .$_SESSION['search_key'].'") ORDER BY score DESC';
     $sql = 'select '.$elements.' from '.$from_table.' where '.$where.' limit '.$limitvalue .',' .$pp;
     $listnews = $mysql->query_command($sql);
     $sum_news = count($listnews);
@@ -163,7 +174,8 @@
                     news_shortcontent,
                     help_flag,
                     flag_publisher';        
-        $where = "status = 1 AND (flag_publisher=1 OR help_flag=1) AND CONCAT(' ',news_name,' ') LIKE '% ".$_SESSION['search_key']." %' ORDER BY date_added DESC";
+        $where = "status = 1 AND (flag_publisher=1 OR help_flag=1) AND CONCAT(' ',news_name,' ') LIKE '% "
+                .$_SESSION['search_key']." %' ORDER BY date_added DESC";
         $sql = 'select '.$elements.' from '.$from_table.' where '.$where.' limit '.$limitvalue .',' .$pp;        
         $listnews = $mysql->query_command($sql);
         $sum_news = count($listnews);
