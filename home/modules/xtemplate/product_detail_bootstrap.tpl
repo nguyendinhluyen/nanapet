@@ -688,7 +688,7 @@
 
 <!--Begin product relationship -->
 <div class="container" style="padding-top: 40px">
-    <div class="row" style="padding-bottom: 10px">
+    <div class="row" style="padding-bottom: 40px">
         <!--BEGINLIST_PRODUCTS-->
         <!--BEGIN_PRODUCTS-->
         <li>

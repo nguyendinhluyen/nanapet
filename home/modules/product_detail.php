@@ -514,7 +514,6 @@ $proType = $Product->getProductsType($product_detail['p_type']);
 
     if (!empty($list_news)) {
         $display_realtion_news = 'style="display:block; '
-                                . 'padding-top: 20px; '
                                 . 'padding-bottom: 80px; '
                                 . 'padding-left: 50px;'
                                 . 'padding-right: 50px"';
