@@ -1,9 +1,3 @@
-<head>
-    
-    
-    
-</head>
-
 <script type="text/javascript">
     $(document).ready(function () 
     {
@@ -622,34 +616,12 @@
                                             {product_detail_xuatxu}
                                         </div>                 
                                         <a name = "section2" > </a>
-                                        <a name = "section3" > </a>
-                                        <div {display_realtion_news}>
-                                            <hr style="margin-top: 10px;
-                                                       margin-bottom: 5px;
-                                                       margin-left: auto;
-                                                       margin-right: auto;                                                           
-                                                       color: #999999">
-                                            <div style="padding-top: 2px ; padding-bottom: 20px">
-                                                <div style="background-color: #f1fdfb; padding-top: 10px; padding-bottom: 10px">
-                                                    <span style="color: #48817a;
-                                                                font-size: 14px;
-                                                                font-family: RobotoSlabRegular;
-                                                                margin-left: 10px;">
-                                                        BÀI VIẾT LIÊN QUAN
-                                                    </span>                      
-                                                </div>   
-                                                <table style="margin-top: 20px">
-                                                    <tr>
-                                                        {relation_news}
-                                                    </tr>
-                                                </table>
-                                            </div>
-                                        </div>
+                                        <a name = "section3" > </a>luận
                                         <hr style="margin-top: 20px;
-                                                    margin-bottom: 5px;
-                                                    margin-left: auto;
-                                                    margin-right: auto;                                                           
-                                                    color: #999999">
+                                            margin-bottom: 5px;
+                                            margin-left: auto;
+                                            margin-right: auto;                                                           
+                                            color: #999999">
                                         <div style="background-color: #f1fdfb; 
                                                     padding-top: 10px; 
                                                     padding-bottom: 10px;
@@ -714,7 +686,7 @@
 </div>
 <!-- End San Pham Theo Nhan Hieu-->
 
-<!--Begin product lien quan -->
+<!--Begin product relationship -->
 <div class="container" style="padding-top: 40px">
     <div class="row" style="padding-bottom: 10px">
         <!--BEGINLIST_PRODUCTS-->
@@ -762,7 +734,30 @@
         <!--ENDLIST_PRODUCTS-->
     </div>
 </div>
-<!--End prouducts lien quan-->
+<!--End prouducts relationship-->
+
+<!--News relationship-->
+<div {display_realtion_news} 
+    class="container">
+    <hr style="margin-top: 10px;
+               margin-bottom: 5px;
+               margin-left: auto;
+               margin-right: auto;                                                           
+               color: #999999">
+    <div style="background-color: #f1fdfb; padding-top: 10px; padding-bottom: 10px">
+        <span style="color: #48817a;
+                    font-size: 14px;
+                    font-family: RobotoSlabRegular;
+                    margin-left: 10px;">BÀI VIẾT LIÊN QUAN
+        </span>                      
+    </div>   
+    <table style="margin-top: 20px">
+        <tr>
+            {relation_news}
+        </tr>
+    </table>
+</div>
+<!--End news relationship-->
         
 <link rel="stylesheet" href="{linkS}layout/css/postfinal.css" type="text/css" />     
 <link rel="stylesheet" href="{linkS}plugins/jrating_v2.1/jquery/jRating.jquery.css" type="text/css" />

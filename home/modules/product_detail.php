@@ -513,9 +513,13 @@ $proType = $Product->getProductsType($product_detail['p_type']);
     $display_realtion_news = 'style="display:none"';
 
     if (!empty($list_news)) {
-        $display_realtion_news = 'style="display:block"';
+        $display_realtion_news = 'style="display:block; '
+                                . 'padding-top: 20px; '
+                                . 'padding-bottom: 80px; '
+                                . 'padding-left: 50px;'
+                                . 'padding-right: 50px"';
         for ($i = 0; $i < count($list_news); $i++) {
-            $relation_news .= '<td style="padding-right: 28px">'
+            $relation_news .= '<td style="padding-right: 42px">'
                             . '<table>'
                             . '<tr><td>'
                             . '<a class = "news_name" href="{linkS}doi-song-pets/' . $list_news[$i]['news_key'] . '.htm" 

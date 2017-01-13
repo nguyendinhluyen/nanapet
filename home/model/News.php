@@ -8,7 +8,7 @@ class News {
                 , 'products_key = "' . $products_key . '"');
         $id_news = GetRows('id_news'
                 , 'relation_news_product'
-                , 'id_product = ' . $product['products_id'] . " limit 4");
+                , 'id_product = ' . $product['products_id'] . " limit 5");
         if (!empty($id_news)) {
             $news_list = "";
             for ($i = 0; $i < count($id_news) - 1; $i++) {
