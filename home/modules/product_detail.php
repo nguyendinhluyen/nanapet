@@ -515,7 +515,7 @@ $proType = $Product->getProductsType($product_detail['p_type']);
 
     if (!empty($list_news)) {
         $display_realtion_news = 'style="display:block; '
-                                . 'padding-bottom: 80px; '
+                                . 'padding-bottom: 45px; '
                                 . 'padding-left: 50px;'
                                 . 'padding-right: 50px"';
         for ($i = 0; $i < count($list_news); $i++) {
