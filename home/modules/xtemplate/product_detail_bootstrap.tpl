@@ -198,7 +198,7 @@
                                     margin-bottom: 14px;
                                     border-width:1px;                                                
                                     border-color:#cccccc; width:100%; float:left">    
-                                <div style=" clear:both">
+                                <div style=" clear:both" {hidden}>
                                     <div style="clear:both; padding-left: 0px">
                                         <span style="font-size: 14px; 
                                                     line-height: 25px;">
@@ -241,7 +241,7 @@
                                                    margin-left: 10px"
                                             class="col-lg-5 col-md-5">
                                             <input type="submit"
-                                                   class="addcart" {hidden} 
+                                                   class="addcart"
                                                    name="addcart"                                                   
                                                    value=""
                                                    style="outline:none;

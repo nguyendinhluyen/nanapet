@@ -383,6 +383,7 @@ $proType = $Product->getProductsType($product_detail['p_type']);
         $hidden = 'hidden = "hidden"';
     } else if ($product_status == 'Dat Hang Truoc') {
         $product_status_name = 'Đặt Trước';
+        $hidden = 'hidden = "hidden"';
     } else {
         $product_status_name = 'Còn Hàng';
     }
