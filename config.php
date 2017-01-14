@@ -9,7 +9,7 @@ class config {
 	var $host = '127.0.0.1:3306';
 	var $user = 'root';
 	var $password = '';
-	var $db = 'nanapet';
+	var $db = 'nanapet_db';
 	var $display_error =0;
 }
 ?>

@@ -4,7 +4,7 @@
     $dbHost = '127.0.0.1:3306';
     $dbUsername = 'root';
     $dbPassword = '';
-    $dbName = 'nanapet';
+    $dbName = 'nanapet_db';
 
     /*// nanapet server
     $dbHost = 'localhost';
