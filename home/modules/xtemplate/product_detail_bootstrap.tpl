@@ -158,7 +158,7 @@
                 <div class = "col-sm-12 col-sx-12 col-md-12 col-lg-12" style="padding:0px">
                     <form name='cart' action="{linkS}gio-hang/{product_key}/add" method="post">                        
                         <div style="font-family:RobotoSlabRegular;">                            
-                            <div class="col-sm-12 col-sx-12 col-md-6 col-lg-6" 
+                            <div class="col-sm-12 col-sx-12 col-md-5 col-lg-5" 
                                  style="float:left; padding: 0px;">
                                 <img alt="{product_name}"
                                     src="{linkS}upload/product/thumb/{product_image}"                           
@@ -171,17 +171,33 @@
                                     Hình ảnh mình hoạ được chụp từ sản phẩm thật
                                 </div>
                             </div>
-                            <div class="col-sm-12 col-sx-12 col-md-6 col-lg-6" 
-                                 style="float:left; font-size: 14px; line-height: 35px">
-                                <div style ="width: 250px;
-                                            float: left">
-                                    Thương hiệu
-                                </div>
-                                <div>
-                                    <a href="{linknsx}"
-                                       target="_blank" 
-                                       style ="font-size: 14px; outline:none; color:black">{nsx}</a>
-                                </div>
+                            <div class="col-sm-12 col-sx-12 col-md-7 col-lg-7" 
+                                 style="float:left; 
+                                        font-size: 14px; 
+                                        line-height:35px;
+                                        padding-left:40px">
+                                <table> 
+                                    <tr>
+                                        <td>
+                                            <div style ="width: 250px;
+                                                         float: left;
+                                                         font-size: 14px;
+                                                         line-height: 30px">
+                                                Thương hiệu
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <a href="{linknsx}"
+                                                   target="_blank"
+                                                   style ="font-size: 14px; 
+                                                           outline:none; 
+                                                           color:black;
+                                                           line-height: 25px">{nsx}</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
                                 <div style ="width: 250px; 
                                               float:left">
                                     Xuất xứ
@@ -253,9 +269,7 @@
                                                 border-width:1px;                                                
                                                 border-color:#cccccc; width:100%; float:left">
                                 </div>
-                            </div>
-                            <div class="col-sm-12 col-sx-12 col-md-6 col-lg-6" 
-                                 style="float:left;
+                                <div style="float:left;
                                         line-height: 25px;
                                         font-family: RobotoSlabRegular;
                                         font-size: 14px;">
@@ -265,6 +279,7 @@
                                 - Nhận giao hàng và COD toàn quốc - 
                                 <a href="{linkS}tro-giup/dich-vu-van-chuyen.html" target="_blank">chi tiết</a> <br>
                                 - Khách hàng có thể đến mua trực tiếp tại Văn Phòng Kho, 21/11 Tự Lập P.4 Q. Tân Bình, TP HCM <br>                                
+                                </div>  
                             </div>
                         </div><!-- end detail2 -->
                     </form>                                                 
