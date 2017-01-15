@@ -31,11 +31,11 @@
             <a href="{linkS}lien-he">
                 <img alt="liên hệ" 
                     src="{linkS}layout/bootstrap/images/product_contact.png"
-                    style="float: right;
+                    style="float: left;
                            clear: both;
-                           width: 100%;
+                           width: 95%;
                            margin-top: 10px;
-                           padding-left: 11px">
+                           padding-left: 15px">
             </a>
         </div>
         <div class ="col-xs-6 col-sm-6 col-md-6 col-lg-6"
