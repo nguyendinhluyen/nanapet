@@ -248,6 +248,10 @@
                                                           height:40px;">
                                         </div>
                                     </div>
+                                    <hr style = "margin-top: 10px;
+                                                margin-bottom: 14px;
+                                                border-width:1px;                                                
+                                                border-color:#cccccc; width:100%; float:left">
                                 </div>
                             </div>
                             <div class="col-sm-12 col-sx-12 col-md-6 col-lg-6" 
