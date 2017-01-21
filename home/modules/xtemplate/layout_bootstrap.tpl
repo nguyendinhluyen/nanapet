@@ -719,7 +719,7 @@
                              style="font-family: RobotoSlabRegular;  
                                     padding-left: 105px;
                                     line-height: 20px">
-                            <span style="font-family: RobotoSlabBold">© 2017 - Bản quyền thuộc về Hộ Kinh Doanh Thú Cưng Na Na - NanaPet.com</span>
+                            <span>© 2017 - Bản quyền thuộc về Hộ Kinh Doanh Thú Cưng Na Na - NanaPet.com</span>
                             <br>Giấy chứng nhận Đăng ký Hộ kinh doanh số 41N8033112 do Ủy Ban Nhân Dân  
                             <br>Quận Tân Bình cấp ngày 11/01/2017
                         </div>
