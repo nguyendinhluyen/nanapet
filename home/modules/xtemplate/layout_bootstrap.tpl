@@ -457,7 +457,7 @@
                     <div class ="row">
                         <!--NanaPet Support-->
                         <div class ="col-xs-12 col-sm-12 col-md-3 col-lg-3" 
-                             style="padding-left: 30px; line-height: 25px">
+                             style="padding-left: 20px; line-height: 25px">
                             <div style ="font-family:RobotoSlabBold;
                                         font-weight:bold;
                                         font-size:14px;
@@ -643,7 +643,7 @@
                                            color:#000;
                                            font-size:14px;
                                            outline:none">
-                                    <b>Hotline:</b> (08) 2212.8888
+                                    <span style="font-family:RobotoSlabBold">Hotline:</span> (08) 2212.8888
                                 </span>
                             </div>
                             <div style ="margin-top: 5px">
@@ -651,7 +651,7 @@
                                            color:#000;
                                            font-size:14px;
                                            outline:none">
-                                    <b>Mobile:</b> 0933.103.203 (Zalo Viber)
+                                    <span style="font-family:RobotoSlabBold">Mobile:</span> 0933.103.203 (Zalo Viber)
                                 </span>
                             </div>
                             <div style ="margin-top: 5px">
@@ -660,7 +660,7 @@
                                            color:#000;
                                            font-size:14px;
                                            outline:none">
-                                    <b>Văn Phòng Kho:</b> tầng trệt, 21/11 
+                                    <span style="font-family:RobotoSlabBold">Văn Phòng Kho:</span> tầng trệt, 21/11 
                                     <br>Tự Lập P4 Tân Bình TP HCM 
                                     <br>Thứ 2 - Thứ 7, 09:00 - 16:30
                                 </span>
@@ -673,7 +673,7 @@
                                 border-color:white;  
                                 float:left;
                                 width: 98%;
-                                margin-left: 15px;">  
+                                margin-left: 5px;">  
                 </div>
                 <div class="container">
                     <div class="row center-block" style="width: 80%">
@@ -717,7 +717,7 @@
                          style="margin-top: 20px; margin-bottom:20px">
                         <div class="col-md-9 col-lg-9" 
                              style="font-family: RobotoSlabRegular;  
-                                    padding-left: 105px;
+                                    padding-left: 97px;
                                     line-height: 20px">
                             <span>© 2017 - Bản quyền thuộc về Hộ Kinh Doanh Thú Cưng Na Na - NanaPet.com</span>
                             <br>Giấy chứng nhận Đăng ký Hộ kinh doanh số 41N8033112 do Ủy Ban Nhân Dân  

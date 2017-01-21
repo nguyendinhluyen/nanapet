@@ -167,8 +167,20 @@
                                 <div style="font-size: 14px; 
                                             text-align: left;
                                             line-height: 50px;
-                                            font-style: italic">
+                                            font-style: italic;">
                                     Hình ảnh mình hoạ được chụp từ sản phẩm thật
+                                </div>
+                                <div class="col-sm-12 col-sx-12 col-md-6 col-lg-6"
+                                     style="padding-left: 0px;
+                                            margin-top: 10px"> 
+                                    <div class="fb-like" 
+                                         data-href="https://www.facebook.com/NanaPetOnline" 
+                                         data-layout="standard" 
+                                         data-action="like" 
+                                         data-show-faces="true" 
+                                         data-width="380"
+                                         data-share="true">
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-sm-12 col-sx-12 col-md-7 col-lg-7" 
@@ -285,22 +297,10 @@
                     </form>                                                 
                 </div>
                 <div class ="row">
-                    <div class="col-sm-12 col-sx-12 col-md-6 col-lg-6"> 
-                        <div class="fb-like" 
-                             data-href="https://www.facebook.com/NanaPetOnline" 
-                             data-layout="standard" 
-                             data-action="like" 
-                             data-show-faces="true" 
-                             data-width="380"
-                             data-share="true">
-                        </div>
-                    </div>
-                </div>
-                <div class ="row">
                     <div class = "col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <!--Thong tin san pham -->
                         <hr  style = "margin-top: 30px;
-                                    margin-bottom: 14px;
+                                    margin-bottom: 0px;
                                     border-width:1px;                                                
                                     border-color:#cccccc; width:100%; float:left"/>    
                         <div style = "line-height: 25px; 
@@ -310,11 +310,12 @@
                                     line-height: 30px;
                                     font-size: 14px;
                                     padding-top: 10px;
-                                    padding-bottom: 30px">
+                                    padding-bottom: 15px">
                             <ul style="padding-left: 0px; clear: both">
                                 <li>
                                     <span style="color: #101010;">
-                                        <h2 style="font-size: 14px; font-weight: bold">CHI TIẾT SẢN PHẤM</h2>
+                                        <h2 style="font-size: 14px; font-family: RobotoSlabBold">
+                                            CHI TIẾT SẢN PHẤM</h2>
                                     </span>
                                 </li>
                                 {product_color}
@@ -432,6 +433,15 @@
                                 <div>                     
                                     <a name ="section1"></a>
                                     <div id = "info_product">
+                                        <div align="justify" 
+                                            style=" margin-bottom:10px;                                                      
+                                                    font-size:14px;
+                                                    font-family: RobotoSlabBold;
+                                                    margin-left: 2px;">
+                                            THÔNG TIN SẢN PHẨM
+                                        </div>
+                                                    
+                                        
                                         <div align="justify" 
                                             style=" margin-bottom:10px;                                                      
                                                     font-size:14px;
@@ -635,7 +645,7 @@
                                             {product_detail_xuatxu}
                                         </div>                 
                                         <a name = "section2" > </a>
-                                        <a name = "section3" > </a>luận
+                                        <a name = "section3" > </a>
                                         <hr style="margin-top: 20px;
                                             margin-bottom: 5px;
                                             margin-left: auto;
