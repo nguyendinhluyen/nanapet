@@ -448,346 +448,281 @@
         
         <!-- footer -->
         <footer>
-            <div class ="container-fluid hidden-sm hidden-xs" 
-                 style = "background-color: #ff767c; 
-                          height: 70px;">
-                <div class = "container" 
-                     style="padding-left:50px; padding-right: 50px">
-                    <div class = "row">
-                        <div class ="col-md-5 col-lg-5" style = "float:left">
-                            <br/>
-                            <span style ="font-family:RobotoSlabRegular; 
-                                          font-weight: 500; 
-                                          font-size: 18px; 
-                                          color: white;">
-                                Nhận các thông tin bổ ích từ NanaPet 
-                            </span>
-                        </div>
-                        <div class =" visible-xs-block visible-sm-block col-xs-5 col-sm-5" style = "float:left">
-                            <br/>
-                            <span style ="font-family:RobotoSlabRegular; 
-                                          font-weight: 500; 
-                                          font-size: 18px; 
-                                          color: white;">
-                                Nhận thông tin từ NanaPet
-                            </span>
-                        </div>
-                        <div class ="col-xs-7 col-sm-7 col-md-7 col-lg-7">
-                            <br/>
-                            <span>
-                                <div id="search">                                                               
-                                    <input type='search'
-                                           placeholder='Email của bạn ...'
-                                           style ="font-family:RobotoSlabRegular; 
-                                                   color: #a88c79;
-                                                   width: 90%;
-                                                   font-size: 14px;
-                                                   float: left;
-                                                   outline: none">
-                                    <span>
-                                        <a style = "outline:none">
-                                            <img alt="nhận thông tin từ nanapet" 
-                                                src="{linkS}layout/bootstrap/images/send.png" 
-                                                width="47px" 
-                                                height="37px" 
-                                                style="float:left; margin-left: -10px; margin-top: -1px"
-                                                onclick="share();"/>
-                                        </a>
-                                    </span>
-                                </div><!-- end search -->
-                            </span>
-                        </div>
-                    </div>            
-                </div>                                                                                                                                                                    
-            </div>
-
             <div class="container-fluid"
-                 style="background-color:#e1fbf8;
+                 style="background-color: #ff767c;
                         height:auto;
                         padding:0px">
-                <div class ="container" 
+                <div class ="container"
                      style ="padding-top: 40px; padding-left: 50px; padding-right: 50px">
-                    <div class ="row hidden-sm hidden-xs">
-                        <div class ="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-                            <img alt="logo nanapet" 
-                                src="{linkS}layout/bootstrap/images/logo.png" width="80%"/>
-                            
-                            <div style="color:#777c7b; 
-                                        font-weight: 500; 
-                                        font-size: 14px; 
-                                        margin-top: 20px">
-                                {left_facebook_box}
-                            </div>
-                        </div>
+                    <div class ="row">
+                        <!--NanaPet Support-->
                         <div class ="col-xs-12 col-sm-12 col-md-3 col-lg-3" 
                              style="padding-left: 30px; line-height: 25px">
-                            <div style ="font-family:RobotoSlabRegular;
-                                        color:#5c5c5c; 
+                            <div style ="font-family:RobotoSlabBold;
                                         font-weight:bold;
                                         font-size:14px;
-                                        margin-top: 10px;
-                                        padding-right: 20px">
-                                THÔNG TIN LIÊN HỆ
+                                        margin-bottom: 10px;
+                                        padding-right: 20px;
+                                        font-weight: bold;
+                                        color:#000;">
+                                HỖ TRỢ KHÁCH HÀNG
                             </div>
-                            <div style ="font-family:RobotoSlabRegular; 
-                                          color:#5c5c5c; 
-                                          font-weight:500;
-                                          font-size:14px;
-                                          margin-top: 20px">
-                                Email: support@nanapet.com
-                            </div>
-                             <div style ="font-family:RobotoSlabRegular; 
-                                          color:#5c5c5c; 
-                                          font-weight:500;
-                                          font-size:14px;
-                                          margin-top: 10px">
-                                Điện thoại: 0933 103 203
-                            </div>
-                        </div>
-
-                        <!--San pham -->
-                        <div class ="hidden-xs hidden-sm col-md-3 col-lg-3" 
-                             style="background:url({linkS}layout/bootstrap/images/line_footer.png) no-repeat;
-                                    padding-left: 52px;
-                                    line-height: 25px">
-                            <div style ="margin-top: 10px">
-                                <a href="{linkS}danh-rieng-cho-cho-cung-319.htm"
-                                   style="font-family:RobotoSlabRegular;
-                                          color:#5c5c5c;
-                                          font-weight:500;
-                                          font-size:14px;
-                                          outline:none">
-                                    Sản phẩm dành cho chó
-                                </a>
-                            </div>
-                            <div style ="margin-top: 10px">
-                                <a href="{linkS}danh-rieng-cho-meo-yeu-321.htm" 
-                                   style ="font-family:RobotoSlabRegular; 
-                                           color:#5c5c5c; 
-                                           font-weight:500;
-                                           font-size:14px;
-                                           outline:none">
-                                    Sản phẩm dành cho mèo
-                                </a>
-                            </div>
-                            <div style ="margin-top: 10px">
-                                <a href="{linkS}san-pham-khuyen-mai.htmls" 
-                                   style ="font-family:RobotoSlabRegular; 
-                                           color:#5c5c5c; 
-                                           font-weight:500;
-                                           font-size:14px;
-                                           outline:none">
-                                    Sản phẩm được khuyến mãi
-                                </a>
-                            </div>
-                            <div style ="margin-top: 10px">
-                                <a href="{linkS}san-pham-ban-chay.htmls" 
-                                   style ="font-family:RobotoSlabRegular; 
-                                           color:#5c5c5c; 
-                                           font-weight:500;
-                                           font-size:14px;
-                                           outline:none">
-                                    Sản phẩm bán chạy nhất
-                                </a>
-                            </div>
-                            <div style ="margin-top: 10px">
-                                <a href="{linkS}san-pham-moi.htmls" 
-                                   style ="font-family:RobotoSlabRegular; 
-                                           color:#5c5c5c; 
-                                           font-weight:500;
-                                           font-size:14px;
-                                           outline:none">
-                                    Sản phẩm mới nhất
-                                </a>
-                            </div>
-                        </div>                    
-
-                        <!--Van chuyen-->
-                        <div class ="hidden-xs hidden-sm col-md-3 col-lg-3" 
-                             style="background:url({linkS}layout/bootstrap/images/line_footer.png) no-repeat;
-                                    padding-left: 52px;
-                                    line-height: 25px">                          
-                            <div style ="margin-top: 10px">
+                            <div style ="margin-top: 5px; clear:both">
                                 <a href="{linkS}tro-giup/dich-vu-van-chuyen.html" 
                                    style ="font-family:RobotoSlabRegular; 
-                                           color:#5c5c5c; 
                                            font-weight:500;
+                                           color:#000;
                                            font-size:14px;
                                            outline:none">
-                                    Dịch vụ vận chuyển
+                                    Phương thức vận chuyển
                                 </a>
                             </div>
-                            <div style ="margin-top: 10px">
+                            <div style ="margin-top: 5px">
                                 <a href="{linkS}tro-giup/cach-thuc-thanh-toan.html"
                                    style ="font-family:RobotoSlabRegular;
-                                           color:#5c5c5c;
                                            font-weight:500;
+                                           color:#000;
                                            font-size:14px;
                                            outline:none">
                                     Cách thức thanh toán
                                 </a>
                             </div>
-                            <div style ="margin-top: 10px">
-                                <a href="{linkS}tro-giup/huong-dan-mua-hang.html" 
+                            <div style ="margin-top: 5px">
+                                <a href="{linkS}tro-giup/doi-tra-san-pham.html" 
                                    style ="font-family:RobotoSlabRegular; 
-                                           color:#5c5c5c; 
                                            font-weight:500;
+                                           color:#000;
                                            font-size:14px;
                                            outline:none">
-                                    Hướng dẫn mua hàng
+                                    Chính sách đổi trả
                                 </a>
-                            </div>
-                            <div style ="margin-top: 10px">
+                            </div>       
+                            <div style ="margin-top: 5px">
                                 <a href="{linkS}tro-giup/cau-hoi-thuong-gap.html" 
                                    style ="font-family:RobotoSlabRegular; 
-                                           color:#5c5c5c; 
                                            font-weight:500;
+                                           color:#000;
                                            font-size:14px;
                                            outline:none">
                                     Câu hỏi thường gặp
                                 </a>
                             </div>
-                            <div style ="margin-top: 10px">
-                                <a href="{linkS}tro-giup" 
+                            <div style ="margin-top: 5px">
+                                <a href="{linkS}tro-giup/huong-dan-mua-hang.html" 
                                    style ="font-family:RobotoSlabRegular; 
-                                           color:#5c5c5c; 
                                            font-weight:500;
+                                           color:#000;
                                            font-size:14px;
                                            outline:none">
-                                    Trợ giúp
+                                    Hướng dẫn đặt hàng
                                 </a>
                             </div>
-                        </div>                                                                                                                                
-                    </div>                                                                                                                               
+                        </div>
 
-                    <!--San pham Mobile-->
-                    <div class ="visible-sm-block visible-xs-block col-xs-12 col-sm-12"
-                         style ="padding-left: 0px">
-                        <div style ="margin-top: 0px">
-                            <a href="{linkS}danh-rieng-cho-cho-cung-319.htm"
-                               style="font-family:RobotoSlabRegular;
-                                      color:#5c5c5c;
-                                      font-weight:500;
-                                      font-size:14px;
-                                      outline:none">
-                                Sản phẩm cho chó
-                            </a>
+                        <!--NanaPet Shop-->
+                        <div class ="col-xs-12 col-sm-12 col-md-3 col-lg-3" 
+                             style="padding-left: 30px; line-height: 25px">
+                            <div style ="font-family:RobotoSlabBold;
+                                        font-weight:bold;
+                                        font-size:14px;
+                                        margin-bottom: 10px;
+                                        padding-right: 20px;
+                                        font-weight: bold;
+                                        color:#000;">
+                                VỀ NANAPET SHOP
+                            </div>
+                            <div style ="margin-top: 5px; clear:both">
+                                <a href="{linkS}gioi-thieu/doi-net-ve-chung-toi.htm" 
+                                   style ="font-family:RobotoSlabRegular; 
+                                           font-weight:500;
+                                           color:#000;
+                                           font-size:14px;
+                                           outline:none">
+                                    Đôi nét về chúng tôi
+                                </a>
+                            </div>
+                            <div style ="margin-top: 5px">
+                                <a href="{linkS}gioi-thieu/cam-hung-va-dong-luc.htm"
+                                   style ="font-family:RobotoSlabRegular;
+                                           font-weight:500;
+                                           color:#000;
+                                           font-size:14px;
+                                           outline:none">
+                                    Cảm hứng & động lực
+                                </a>
+                            </div>
+                            <div style ="margin-top: 5px">
+                                <a href="{linkS}tro-giup/chinh-sach-bao-mat.html" 
+                                   style ="font-family:RobotoSlabRegular; 
+                                           font-weight:500;
+                                           color:#000;
+                                           font-size:14px;
+                                           outline:none">
+                                    Chính sách bảo mật
+                                </a>
+                            </div>       
+                            <div style ="margin-top: 5px">
+                                <a href="{linkS}tro-giup/dieu-khoan-su-dung.html" 
+                                   style ="font-family:RobotoSlabRegular; 
+                                           font-weight:500;
+                                           color:#000;
+                                           font-size:14px;
+                                           outline:none">
+                                    Điều khoản sử dụng
+                                </a>
+                            </div>
                         </div>
-                        <div style ="margin-top: 10px">
-                            <a href="{linkS}danh-rieng-cho-meo-yeu-321.htm" 
-                               style ="font-family:RobotoSlabRegular; 
-                                       color:#5c5c5c; 
-                                       font-weight:500;
-                                       font-size:14px;
-                                       outline:none">
-                                Sản phẩm cho mèo
-                            </a>
+                        <!--Partner NanaPet -->
+                        <div class ="col-xs-12 col-sm-12 col-md-3 col-lg-3" 
+                             style="padding-left: 30px; line-height: 25px">
+                            <div style ="font-family:RobotoSlabBold;
+                                        font-weight:bold;
+                                        font-size:14px;
+                                        margin-bottom: 10px;
+                                        padding-right: 20px;
+                                        font-weight: bold;
+                                        color:#000;">
+                                LIÊN KẾT & HỢP TÁC
+                            </div>
+                            <div style ="margin-top: 5px; clear:both">
+                                <a href="{linkS}tro-giup/ky-gui-san-pham.html" 
+                                   style ="font-family:RobotoSlabRegular; 
+                                           font-weight:500;
+                                           color:#000;
+                                           font-size:14px;
+                                           outline:none">
+                                    Ký gửi sản phẩm
+                                </a>
+                            </div>
+                            <div style ="margin-top: 5px">
+                                <a href="{linkS}tro-giup/lien-ket-doi-tac.html"
+                                   style ="font-family:RobotoSlabRegular;
+                                           font-weight:500;
+                                           color:#000;
+                                           font-size:14px;
+                                           outline:none">
+                                    Liên kết - Đối tác
+                                </a>
+                            </div>
+                            <div style ="margin-top: 5px">
+                                <a href="{linkS}tro-giup/dai-ly-phan-phoi.html" 
+                                   style ="font-family:RobotoSlabRegular; 
+                                           font-weight:500;
+                                           color:#000;
+                                           font-size:14px;
+                                           outline:none">
+                                    Đại lý - Phân phối
+                                </a>
+                            </div>
+                            <div style ="margin-top: 5px">
+                                <a href="{linkS}tro-giup/gia-nhap-nacol-team.html" 
+                                   style ="font-family:RobotoSlabRegular; 
+                                           font-weight:500;
+                                           color:#000;
+                                           font-size:14px;
+                                           outline:none;">
+                                    Gia nhập NaCol Team
+                                </a>
+                            </div>
+                        </div>                                   
+                                   
+                        <!--THÔNG TIN LIÊN HỆ-->
+                        <div class ="col-xs-12 col-sm-12 col-md-3 col-lg-3" 
+                             style="padding-left: 30px; line-height: 25px">
+                            <div style ="font-family:RobotoSlabBold;
+                                        font-weight:bold;
+                                        font-size:14px;
+                                        margin-bottom: 10px;
+                                        padding-right: 20px;
+                                        font-weight: bold;
+                                        color:#000;">
+                                THÔNG TIN LIÊN HỆ
+                            </div>
+                            <div style ="margin-top: 5px; clear:both">
+                                <span style ="font-family:RobotoSlabRegular; 
+                                           color:#000;
+                                           font-size:14px;
+                                           outline:none">
+                                    <b>Hotline:</b> (08) 2212.8888
+                                </span>
+                            </div>
+                            <div style ="margin-top: 5px">
+                                <span style ="font-family:RobotoSlabRegular; 
+                                           color:#000;
+                                           font-size:14px;
+                                           outline:none">
+                                    <b>Mobile:</b> 0933.103.203 (Zalo Viber)
+                                </span>
+                            </div>
+                            <div style ="margin-top: 5px">
+                                <span style ="font-family:RobotoSlabRegular; 
+                                           font-weight:500;
+                                           color:#000;
+                                           font-size:14px;
+                                           outline:none">
+                                    <b>Văn Phòng Kho:</b> tầng trệt, 21/11 
+                                    <br>Tự Lập P4 Tân Bình TP HCM 
+                                    <br>Thứ 2 - Thứ 7, 09:00 - 16:30
+                                </span>
+                            </div>
                         </div>
-                        <div style ="margin-top: 10px">
-                            <a href="{linkS}san-pham-khuyen-mai.htmls" 
-                               style ="font-family:RobotoSlabRegular; 
-                                       color:#5c5c5c; 
-                                       font-weight:500;
-                                       font-size:14px;
-                                       outline:none">
-                                Sản phẩm khuyến mãi
-                            </a>
-                        </div>
-                        <div style ="margin-top: 10px">
-                            <a href="{linkS}san-pham-ban-chay.htmls" 
-                               style ="font-family:RobotoSlabRegular; 
-                                       color:#5c5c5c; 
-                                       font-weight:500;
-                                       font-size:14px;
-                                       outline:none">
-                                Sản phẩm bán chạy
-                            </a>
-                        </div>
-                        <div style ="margin-top: 10px">
-                            <a href="{linkS}san-pham-moi.htmls" 
-                               style ="font-family:RobotoSlabRegular; 
-                                       color:#5c5c5c; 
-                                       font-weight:500;
-                                       font-size:14px;
-                                       outline:none">
-                                Sản phẩm mới nhất
-                            </a>
-                        </div>
-                    </div>                    
-
-                    <!--Van chuyen Mobile-->
-                    <div class ="visible-sm-block visible-xs-block col-xs-12 col-sm-12"
-                         style ="padding-left: 0px">
-                        <div style ="margin-top: 10px">
-                            <a href="{linkS}tro-giup/dich-vu-van-chuyen.html" 
-                               style ="font-family:RobotoSlabRegular; 
-                                       color:#5c5c5c; 
-                                       font-weight:500;
-                                       font-size:14px;
-                                       outline:none">
-                                Dịch vụ vận chuyển
-                            </a>
-                        </div>
-                        <div style ="margin-top: 10px">
-                            <a href="{linkS}tro-giup/cach-thuc-thanh-toan.html"
-                               style ="font-family:RobotoSlabRegular;
-                                       color:#5c5c5c;
-                                       font-weight:500;
-                                       font-size:14px;
-                                       outline:none">
-                                Cách thức thanh toán
-                            </a>
-                        </div>
-                        <div style ="margin-top: 10px">
-                            <a href="{linkS}tro-giup/huong-dan-mua-hang.html" 
-                               style ="font-family:RobotoSlabRegular; 
-                                       color:#5c5c5c; 
-                                       font-weight:500;
-                                       font-size:14px;
-                                       outline:none">
-                                Hướng dẫn mua hàng
-                            </a>
-                        </div>
-                        <div style ="margin-top: 10px">
-                            <a href="{linkS}tro-giup/cau-hoi-thuong-gap.html" 
-                               style ="font-family:RobotoSlabRegular; 
-                                       color:#5c5c5c; 
-                                       font-weight:500;
-                                       font-size:14px;
-                                       outline:none">
-                                Câu hỏi thường gặp
-                            </a>
-                        </div>
-                        <div style ="margin-top: 10px">
-                            <a href="{linkS}tro-giup" 
-                               style ="font-family:RobotoSlabRegular; 
-                                       color:#5c5c5c; 
-                                       font-weight:500;
-                                       font-size:14px;
-                                       outline:none">
-                                Trợ giúp
-                            </a>
-                        </div>
-                        <br/>
+                    </div> 
+                    <hr  style = "margin-top: 20px;
+                                margin-bottom: 14px;
+                                border-width:1px;                                                
+                                border-color:white;  
+                                float:left;
+                                width: 98%;
+                                margin-left: 15px;">  
+                </div>
+                <div class="container">
+                    <div class="row center-block" style="width: 80%">
+                        <ul class="nav_menu_bottom">
+                            <li><a href="{linkS}"
+                                   style="height: 50px; outline: none; width:90px">Trang chủ</a></li>
+                            <li><a href=""
+                                   style="height: 50px; outline: none; width:3px">|</a></li>
+                            <li><a href="{linkS}gioi-thieu"
+                                   style="height: 50px; outline: none; width:90px">Giới thiệu</a></li>
+                            <li><a href=""
+                                   style="height: 50px; outline: none; width:3px">|</a></li>
+                            <li><a  href="{linkS}san-pham/"
+                                   style="height: 50px; outline: none; width:90px">Sản phẩm</a></li>                                        
+                            <li><a href=""
+                                   style="height: 50px; outline: none; width:4px">|</a></li>
+                            <li><a href="{linkS}doi-song-pets"
+                                   style="height: 50px; outline: none; width:115px">Đời sống Pets</a></li>                 
+                            <li><a href=""
+                                   style="height: 50px; outline: none; width:3px">|</a></li>
+                            <li><a href="{linkS}tro-giup"
+                                   style="height: 50px; outline: none;width:65px">Hỗ trợ</a></li>
+                            <li><a href=""
+                                   style="height: 50px; outline: none; width:3px">|</a></li>
+                            <li><a c href="{linkS}lien-he" rel='nofollow'
+                                   style="height: 50px; outline: none; width:75px">Liên hệ</a></li>
+                            <li><a href=""
+                                   style="height: 50px; outline: none; width:4px">|</a></li>
+                            <li><a c href="{linkS}tro-giup/chinh-sach-bao-mat.html"
+                                   style="height: 50px; outline: none; width:162px">Chính sách bảo mật</a></li>
+                            <li><a href=""
+                                   style="height: 50px; outline: none; width:4px">|</a></li>
+                            <li><a c href="{linkS}tro-giup/quy-dinh-dmca.html"
+                                   style="height: 50px; outline: none; width:145px">Quy định sử dụng</a></li>
+                        </ul>
                     </div>
                 </div>
-
-                <div class="container hidden-sm hidden-xs"
-                     style="margin-top:20px;
-                            margin-bottom:40px;">
-                    <div class ="row">
-                        <div class="col-sm-12 col-xs-12 col-md-6 col-lg-6">                            
-                            <a href="{linkS}" height="10%" style = "outline:none">
-                                <img alt="logo nanapet"
-                                    src="{linkS}layout/bootstrap/images/foot.png"
-                                    width="190px"
-                                    height="57px"
-                                    style = "display: block;
-                                            float: right" />
-                            </a>
+                <div class="container-fluid"
+                     style="background-color:#b2d9d4;">
+                    <div class ="container row" 
+                         style="margin-top: 20px; margin-bottom:20px">
+                        <div class="col-md-9 col-lg-9" 
+                             style="font-family: RobotoSlabRegular;  
+                                    padding-left: 105px">
+                            <span style="font-family: RobotoSlabBold">© 2017 - Bản quyền thuộc về Hộ Kinh Doanh Thú Cưng Na Na - NanaPet.com</span>
+                            <br>Giấy chứng nhận Đăng ký Hộ kinh doanh số 41N8033112 do Ủy Ban Nhân Dân  
+                            <br>Quận Tân Bình cấp ngày 11/01/2017
                         </div>
-                                         
-                        <div class="col-sm-12 col-xs-12 col-md-6 col-lg-6">
+                        <div class="col-sm-3 col-xs-3 col-md-3 col-lg-3">
                             <a href="http://www.dmca.com/Protection/Status.aspx?ID=4902d07b-8b1f-4ad7-8f66-7eb96d066e80" 
                                title="DMCA"
                                target="_blank"> 
@@ -798,21 +733,6 @@
                                     style="float:left;
                                            display: block"/>
                             </a>
-                        </div>
-                    </div>
-                </div> 
-                <div class="container-fluid"
-                     style="background-color:#b2d9d4">
-                    <div class="container"
-                         style="margin-top:10px; 
-                                margin-bottom:10px">
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"
-                                 style="text-align: center;">
-                                <span style = "color: #5c5c5c; font-size: 12px; font-family:RobotoSlabRegular">
-                                    Copyright @ 2016 nanapet.com, all rights reserved. Design by luyen.nguyen.itbb@jvn.edu.vn
-                                </span>
-                            </div>
                         </div>
                     </div>
                 </div>

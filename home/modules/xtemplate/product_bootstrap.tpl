@@ -90,11 +90,10 @@
             <!--BEGIN SEO CATEGORY-->
             <div class ="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="{display_seo}">
                 <p style="text-align:left;
-                          font-family: RobotoSlabLight;
+                          font-family: RobotoSlabBold;
                           font-size: 15px;
                           color:#929292;
-                          line-height: 25px;
-                          font-weight: bold">
+                          line-height: 25px;">
                     CÓ THỂ BẠN CHƯA BIẾT
                 </p>
                 <p style="text-align:left;
