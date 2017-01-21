@@ -309,8 +309,7 @@
                                     font-family: RobotoSlabRegular;
                                     line-height: 30px;
                                     font-size: 14px;
-                                    padding-top: 10px;
-                                    padding-bottom: 15px">
+                                    padding-top: 10px;">
                             <ul style="padding-left: 0px; clear: both">
                                 <li>
                                     <span style="color: #101010;">
@@ -357,55 +356,66 @@
                                 </li>
                             </ul>
                         </div>
+                        <hr  style="margin-top: 10px;
+                                    margin-bottom: 25px;
+                                    border-width:1px;                                                
+                                    border-color:#cccccc; width:100%; float:left"/>    
+                        <div style=" font-size:14px;
+                                    font-family: RobotoSlabBold;
+                                    margin-left: 2px;">
+                                SẢN PHẨM THƯỜNG ĐƯỢC MUA CÙNG
+                            </div>
+                        <!--Begin product relationship -->
+                        <div class="container" style="padding-top: 30px">
+                            <div class="row" style="padding-bottom: 5px">
+                                <!--BEGINLIST_PRODUCTS_SUPPORT-->
+                                <!--BEGIN_PRODUCTS_SUPPORT-->
+                                <li>
+                                    <a  class = "list_product_name"
+                                        href="{linkS}{category}/{product_key}.htm"
+                                        style = "outline:none;">
+                                        <div class="product_detail" style="width: 210px">
+                                            <div class="product_name">
+                                                <!--{promotion_Sale}-->
+                                                <img alt="{product_name}"
+                                                    src="{linkS}upload/product/{product_img}"
+                                                    width="140"
+                                                    height="140"
+                                                    style = "margin-left: 28px; cursor: pointer"/>
+                                                <div class="textbox"  
+                                                     style = "padding-top: 65px; padding-left: 33px">
+                                                    <img alt="Xem chi tiết" 
+                                                        src="{linkS}layout/bootstrap/images/xem_chi_tiet.png"
+                                                        width="110px"
+                                                        style = "cursor: pointer; 
+                                                                 margin-bottom: 5px">
+                                                </div>
+                                            </div><!-- End product_name_col -->
+
+                                            <div class="product_tit">
+                                                <div style="font-size: 14px;
+                                                            color: #929292;
+                                                            cursor: pointer;
+                                                            font-family: RobotoSlabRegular;">
+                                                    {product_name}
+                                                </div>
+                                            </div>
+                                            <div class="product_price"
+                                                 style = "cursor: pointer;
+                                                          font-family:RobotoSlabRegular;
+                                                          font-size: 14px;">
+                                                {product_price} VNĐ
+                                            </div>
+                                        </div><!-- end product_detail -->
+                                    </a>
+                                </li>
+                                <!--END_PRODUCTS_SUPPORT-->
+                                <!--ENDLIST_PRODUCTS_SUPPORT-->
+                            </div>
+                        </div>
+                        <!--End prouducts relationship-->
+
                         <div>
-                            <div class="hidden-xs hidden-sm">
-                                <a  href="#section1" style="font-size:14px; 
-                                                            color:#A00; 
-                                                            font-weight:bold; 
-                                                            margin-right:10px; 
-                                                            padding-top:10px; 
-                                                            padding-bottom:10px; 
-                                                            padding-left: 10px; 
-                                                            padding-right:10px;
-                                                            background:#FFF2F2; 
-                                                            -moz-border-radius: 7px 7px 0px 0px; 
-                                                            border-radius: 7px 7px 0px 0px;
-                                                            font-family: RobotoSlabLight;
-                                                            outline:none">
-                                    Thông tin sản phẩm 
-                                </a>
-                                <a href="#section2" style="font-size:14px; 
-                                                           color:#A00; 
-                                                           font-weight:bold; 
-                                                           margin-right:10px; 
-                                                           padding-top:10px; 
-                                                           padding-bottom:10px; 
-                                                           padding-left: 10px; 
-                                                           padding-right:10px;
-                                                           background:#FFF2F2; 
-                                                           -moz-border-radius: 7px 7px 0px 0px; 
-                                                           border-radius: 7px 7px 0px 0px;
-                                                           font-family: RobotoSlabLight;
-                                                           outline:none">
-                                    Ý kiến khách hàng 
-                                </a>     
-                                <a href="#section3" style="font-size:14px; 
-                                                           color:#A00; 
-                                                           font-weight:bold; 
-                                                           margin-right:10px; 
-                                                           padding-top:10px; 
-                                                           padding-bottom:10px; 
-                                                           padding-left: 10px; 
-                                                           padding-right:10px;
-                                                           background:#FFF2F2; 
-                                                           -moz-border-radius: 7px 7px 0px 0px; 
-                                                           border-radius: 7px 7px 0px 0px;
-                                                           font-family: RobotoSlabLight;
-                                                           outline:none">
-                                    Đánh giá sản phẩm
-                                </a>                         
-                            </div>                                       
-                                                        
                             <div class="visible-xs-block visible-sm-block">
                                 <a  href="#section1" style="font-size:14px;
                                                             color:#A00; 
@@ -423,12 +433,10 @@
                                     Thông tin sản phẩm 
                                 </a>                               
                             </div>                                                                   
-                            <div id = "line_customer" style=" box-shadow: 1px 1px 1px #DDF; 
-                                                              width: 100%; 
-                                                              height: 1px; 
-                                                              margin-bottom:20px; 
-                                                              margin-top:7px;">                                    
-                            </div>	                                              
+                            <hr  style="margin-top: 10px;
+                                        margin-bottom: 30px;
+                                        border-width:1px;                                                
+                                        border-color:#cccccc; width:100%; float:left"/>
                             <div id="tab_container" style="margin-right:5px">
                                 <div>                     
                                     <a name ="section1"></a>
@@ -440,8 +448,6 @@
                                                     margin-left: 2px;">
                                             THÔNG TIN SẢN PHẨM
                                         </div>
-                                                    
-                                        
                                         <div align="justify" 
                                             style=" margin-bottom:10px;                                                      
                                                     font-size:14px;

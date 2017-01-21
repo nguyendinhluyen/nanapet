@@ -541,15 +541,19 @@ $proType = $Product->getProductsType($product_detail['p_type']);
     // Get products by category
     $products_t = $Product->getProductsByCategoryKey($_GET['category_key']);
     $products = $Product->getProductsByCategoryKeyLimitOrderBy($products_t, $category_key, 0, 10, $_SESSION['order_by']);
-
     $n = count($products);
 
-    // Show products
+    // Begin relationship product
     $tpl = '';
     $tpl_temp = '<div class="row" id="product_home" style="float:left">
                             <div class = "col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                 <ul>';
+    $tpl_support = '';
+    $tpl_temp_support = '<div class="row" id="product_home" style="float:left; margin-left: -55px">
+                            <div class = "col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                <ul>';
     $block = $xtemplate->get_block_from_str($productdetail, 'PRODUCTS');
+    $block_support = $xtemplate->get_block_from_str($productdetail, 'PRODUCTS_SUPPORT');
     $flag = 0;
     for ($i = 0; $i < $n; ++$i) {
         $flag ++;
@@ -599,12 +603,36 @@ $proType = $Product->getProductsType($product_detail['p_type']);
                                     <div class = "col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                         <ul>';
         }
+        
+        $tpl_temp_support .= $xtemplate->assign_vars($block_support, array(
+            'product_img' => $products[$i]['products_image'],
+            'product_name' => common::limitContent($products[$i]['products_name'], 60),
+            'promotion_Sale' => $PromotionSale,
+            'product_price' => $price_encourage,
+            'price_not_discount_product' => $price_not_discount_product,
+            'product_short' => common::limitContent($products[$i]['description'], 50),
+            'product_key' => $products[$i]['products_key'],
+            'category' => $category_key
+        ));
+        if ($i <= 3) {
+            if ($flag % 4 == 0) {
+                $tpl_temp_support .= ' </ul>';
+                $tpl_support .= $tpl_temp_support . '</div></div>';
+                $tpl_temp_support = '<div class="row" id="product_home" style="float:left">
+                                        <div class = "col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                            <ul>';
+            }
+        }
+        
     }
     
     $productdetail = $xtemplate->assign_blocks_content($productdetail, array(
-        'PRODUCTS' => $tpl
+        'PRODUCTS' => $tpl,
+        'PRODUCTS_SUPPORT' => $tpl_support,
     ));
-
+    //End relationship product
+    
+    
     // meta description
     // remove all tags in text
     $description = addslashes(strip_tags($product_detail['product_detail']));
