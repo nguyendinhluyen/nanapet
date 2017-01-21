@@ -9,6 +9,16 @@
     font-style: normal;
 }
 @font-face{    
+    font-family: "RobotoSlabBold";
+    src: url("fonts/RobotoSlab-Bold.eot");
+    src: url("fonts/RobotoSlab-Bold.eot?#iefix") format("embedded-opentype"),
+         url("fonts/RobotoSlab-Bold.woff") format("woff"),
+         url("fonts/RobotoSlab-Bold.ttf") format("truetype"),
+         url("fonts/RobotoSlab-Bold.svg#abril_fatfaceregular") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{    
     font-family: "RobotoSlabRegular";
     src: url("fonts/RobotoSlab-Regular.eot");
     src: url("fonts/RobotoSlab-Regular.eot?#iefix") format("embedded-opentype"),
@@ -550,4 +560,24 @@ a.che-bas-item-name{
 .collapsed-image
 {
     margin-left: 48.15px !important;
+}
+
+.nav_menu_bottom {   
+    text-align: center;
+    color: #FFF;    
+    font-family:RobotoSlabRegular;
+    font-size: 14px;
+    padding-top: 10px;   
+}
+
+ul.nav_menu_bottom li a,ul.nav_menu_bottom li{ 
+    display: inline; 
+    float: left;
+    color: #FFF;
+    font-family: RobotoSlabRegular;
+    font-weight: bold;
+    font-size: 14px;
+}
+ul.nav_menu_bottom li a:hover {
+    text-decoration: none;
 }
