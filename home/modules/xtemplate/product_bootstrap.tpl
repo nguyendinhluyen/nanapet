@@ -71,7 +71,7 @@
             </div>
                     
             <div style="padding-top: 25px; padding-right: 0px; margin-left: -5px">
-                <a href="{linkS}combo-sieu-tiet-kiem-317.htm">
+                <a href="{linkS}combo-sieu-tiet-kiem-317/">
                     <img alt="compo siêu tiết kiệm"
                         src="{linkS}layout/bootstrap/images/product_combo.png" 
                         width="100%"
