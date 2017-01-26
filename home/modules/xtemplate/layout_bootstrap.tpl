@@ -453,7 +453,7 @@
                         height:auto;
                         padding:0px">
                 <div class ="container"
-                     style ="padding-top: 40px; padding-left: 50px; padding-right: 50px">
+                     style ="padding-top: 40px; padding-left: 40px; padding-right: 40px">
                     <div class ="row">
                         <!--NanaPet Support-->
                         <div class ="col-xs-12 col-sm-12 col-md-3 col-lg-3" 
@@ -712,29 +712,39 @@
                     </div>
                 </div>
                 <div class="container-fluid"
-                     style="background-color:#b2d9d4;">
-                    <div class ="container row" 
-                         style="margin-top: 20px; margin-bottom:20px">
-                        <div class="col-md-9 col-lg-9" 
-                             style="font-family: RobotoSlabRegular;  
-                                    padding-left: 97px;
-                                    line-height: 20px">
-                            <span>© 2017 - Bản quyền thuộc về Hộ Kinh Doanh Thú Cưng Na Na - NanaPet.com</span>
-                            <br>Giấy chứng nhận Đăng ký Hộ kinh doanh số 41N8033112 do Ủy Ban Nhân Dân  
-                            <br>Quận Tân Bình cấp ngày 11/01/2017
-                        </div>
-                        <div class="col-sm-3 col-xs-3 col-md-3 col-lg-3">
-                            <a href="http://www.dmca.com/Protection/Status.aspx?ID=4902d07b-8b1f-4ad7-8f66-7eb96d066e80" 
-                               title="DMCA"
-                               target="_blank"> 
-                                <img src ="http://images.dmca.com/Badges/DMCA_logo-green150w.png?ID=4902d07b-8b1f-4ad7-8f66-7eb96d066e80" 
-                                    alt="DMCA.com"
-                                    width="145px"
-                                    height="57px"
-                                    style="float:left;
-                                           display: block"/>
-                            </a>
-                        </div>
+                     style="background-color:#b2d9d4;
+                            padding-top: 10px;
+                            padding-bottom: 10px">
+                    <div class="row" 
+                         style="font-family: RobotoSlabRegular;  
+                                line-height: 20px;
+                                text-align: center;
+                                font-size: 14px">
+                        © 2017 - Bản quyền thuộc về Hộ Kinh Doanh Thú Cưng Na Na - NanaPet.com
+                        <br>Giấy chứng nhận Đăng ký Hộ kinh doanh số 41N8033112 do Ủy Ban Nhân Dân Quận Tân Bình cấp ngày 11/01/2017
+                    </div>
+                    <div class="row center-block" style="width: 320px; margin-top: 10px">
+                        <a href="http://online.gov.vn/HomePage/CustomWebsiteDisplay.aspx?DocId=30853" 
+                           title="bộ công thương"
+                           target="_blank"> 
+                            <img src ="{linkS}layout/bootstrap/images/bocongthuong.png" 
+                                alt="bộ công thương"
+                                width="145px"
+                                height="57px"
+                                style="float:left;
+                                       display: block;"/>
+                        </a>
+                        <a href="http://www.dmca.com/Protection/Status.aspx?ID=4902d07b-8b1f-4ad7-8f66-7eb96d066e80" 
+                           title="DMCA"
+                           target="_blank"> 
+                            <img src ="http://images.dmca.com/Badges/DMCA_logo-green150w.png?ID=4902d07b-8b1f-4ad7-8f66-7eb96d066e80" 
+                                alt="DMCA.com"
+                                width="145px"
+                                height="57px"
+                                style="float:left;
+                                       display: block;
+                                       margin-left: 20px"/>
+                        </a>
                     </div>
                 </div>
             </div>

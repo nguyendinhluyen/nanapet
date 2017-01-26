@@ -409,8 +409,7 @@ $proType = $Product->getProductsType($product_detail['p_type']);
                                 <td>
                                     <span style="font-family:RobotoSlabRegular; 
                                                  font-size: 14px;                                                                                                  
-                                                 float:left;
-                                                 margin-left:10px">
+                                                 float:left;">
                                         Đánh giá sản phẩm :&nbsp;&nbsp;                                        
                                     </span>                                    
                                 </td>
@@ -422,15 +421,15 @@ $proType = $Product->getProductsType($product_detail['p_type']);
                         <div style="padding-top:5px">                                                                      
                             <span style="font-family:RobotoSlabRegular;
                                         font-size:14px;                                                                                                
-                                        width: 100%;
-                                        margin-left:10px">
+                                        width: 100%;">
                                 Hãy cho ý kiến về sản phẩm
                             </span>	                                    
                         </div>							                                
                         <div class="fb-comments"
                                 data-href="{linkSf}{link_san-pham}"
                                 data-numposts="3"
-                                data-width ="100%">
+                                data-width ="100%"
+                                style="margin-left: -10px">
                         </div>';
     $category_key = $_GET['category_key'];
     $display_product_detail = "block";

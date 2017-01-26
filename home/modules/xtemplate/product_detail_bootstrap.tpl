@@ -298,7 +298,7 @@
                 </div>
                 <div class ="row">
                     <div class = "col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                        <!--Thong tin san pham -->
+                        <!--Thong tin san pham 
                         <hr  style = "margin-top: 30px;
                                     margin-bottom: 0px;
                                     border-width:1px;                                                
@@ -355,8 +355,8 @@
                                     </a>
                                 </li>
                             </ul>
-                        </div>
-                        <hr  style="margin-top: 10px;
+                        </div>-->
+                        <hr  style="margin-top: 30px;
                                     margin-bottom: 25px;
                                     border-width:1px;                                                
                                     border-color:#cccccc; width:100%; float:left"/>    
@@ -657,19 +657,14 @@
                                             margin-left: auto;
                                             margin-right: auto;                                                           
                                             color: #999999">
-                                        <div style="background-color: #f1fdfb; 
-                                                    padding-top: 10px; 
-                                                    padding-bottom: 10px;
+                                        <div style="text-align: left;
+                                                    margin-top: 30px;
                                                     margin-bottom: 10px">
-                                            <div style="text-align: left;">
-                                                <span style="color: #48817a;
-                                                             font-size: 14px;
-                                                             font-family: RobotoSlabRegular;
-                                                             margin-left: 10px;">
-                                                    BÌNH LUẬN SẢN PHẨM
-                                                </span>
-                                            </div>                        
-                                        </div>  
+                                            <span style="font-size: 14px;
+                                                         font-family: RobotoSlabBold;">
+                                                BÌNH LUẬN SẢN PHẨM
+                                            </span>
+                                        </div>                        
                                         {form_comment}
                                     </div>                                         
                                 </div><!-- end tab_container -->
@@ -709,12 +704,13 @@
     <br/>    
     <div class ="row">
         <div class ="col-xs-12 col-sm-12 col-md-12 col-lg-12">            
-            <img alt="liên quan" 
+            <img alt="sản phẩm liên quan" 
                 src="{linkS}layout/bootstrap/images/san_pham_lien_quan.png"
                 style = "display:block; 
                          margin-left: auto; 
                          margin-right: auto;
-                         width: 100%;"/>
+                         width: 100%;
+                         margin-left: -10px"/>
             
         </div>
     </div>
