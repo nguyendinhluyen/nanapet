@@ -29,7 +29,8 @@
             }
 
             // Load old product
-            $old_products = $Product->getProductsLimitOrderById($start_limit_old_product, $n_old_product, $condition);
+            $old_products = $Product->getProductsLimitOrderById($start_limit_old_product
+                    , $n_old_product, $condition);
             $products = array_merge($lastest_products, $old_products);
         }
         return $products;
@@ -76,7 +77,8 @@
     $n_display_product = 5;
     $lastest_best_sale_products = $Product->getProductsInWeek(7, $condition);
     $n_all_best_sale_product = $Product->countAllWithConditionProduct($condition);
-    $products = getOldProducts($lastest_best_sale_products, $n_display_product, $config_name, $n_all_best_sale_product, $condition);
+    $products = getOldProducts($lastest_best_sale_products, $n_display_product
+            , $config_name, $n_all_best_sale_product, $condition);
     $n = count($products);
     if ($n > $n_display_product) {
         $n = $n_display_product;
@@ -104,8 +106,9 @@
                 $priceVIPCustomer = $priceVIPCustomer * 1000;
                 $price_encourage = common::convertIntToFormatMoney($priceVIPCustomer);
                 $PromotionSale = '<span class="promotion">
-                                            <span class="promotion_sale">-' . $disCountVIPCustomer . '%' . '</span>
-                                        </span>';
+                                            <span class="promotion_sale">-' . $disCountVIPCustomer 
+                                    . '%' . '</span>
+                                </span>';
             } else {
                 $price_encourage = common::convertIntToFormatMoney($price_encourage);
                 $percent = getpercent($products[$i]['products_price'], $price_encourage);
@@ -149,7 +152,8 @@
     $n_display_product = 10;
     $lastest_best_sale_products = $Product->getProductsInWeek(7, $condition);
     $n_all_best_sale_product = $Product->countAllWithConditionProduct($condition);
-    $products = getOldProducts($lastest_best_sale_products, $n_display_product, $config_name, $n_all_best_sale_product, $condition);
+    $products = getOldProducts($lastest_best_sale_products, $n_display_product
+            , $config_name, $n_all_best_sale_product, $condition);
     $n = count($products);
     if ($n > $n_display_product) {
         $n = $n_display_product;
@@ -177,7 +181,8 @@
                 $priceVIPCustomer = $priceVIPCustomer * 1000;
                 $price_encourage = common::convertIntToFormatMoney($priceVIPCustomer);
                 $PromotionSale = '<span class="promotion">
-                                            <span class="promotion_sale">-' . $disCountVIPCustomer . '%' . '</span>
+                                            <span class="promotion_sale">-' . $disCountVIPCustomer 
+                                            . '%' . '</span>
                                         </span>';
             } else {
                 $price_encourage = common::convertIntToFormatMoney($price_encourage);
@@ -221,7 +226,8 @@
     $n_display_product = 6;
     $lastest_best_sale_products = $Product->getProductsInWeek(7, $condition);
     $n_all_product = $Product->countAllWithConditionProduct($condition);
-    $products = getOldProducts($lastest_best_sale_products, $n_display_product, $config_name, $n_all_product, $condition);
+    $products = getOldProducts($lastest_best_sale_products, $n_display_product
+                , $config_name, $n_all_product, $condition);
     $n = count($products);
     if ($n > $n_display_product) {
         $n = $n_display_product;
@@ -249,7 +255,8 @@
                 $priceVIPCustomer = $priceVIPCustomer * 1000;
                 $price_encourage = common::convertIntToFormatMoney($priceVIPCustomer);
                 $PromotionSale = '<span class="promotion">
-                                            <span class="promotion_sale">-' . $disCountVIPCustomer . '%' . '</span>
+                                            <span class="promotion_sale">-' . $disCountVIPCustomer 
+                                            . '%' . '</span>
                                         </span>';
             } else {
                 $price_encourage = common::convertIntToFormatMoney($price_encourage);
@@ -309,8 +316,9 @@
                 $priceVIPCustomer = $priceVIPCustomer * 1000;
                 $price_encourage = common::convertIntToFormatMoney($priceVIPCustomer);
                 $PromotionSale = '<span class="promotion">
-                                            <span class="promotion_sale">-' . $disCountVIPCustomer . '%' . '</span>
-                                        </span>';
+                                            <span class="promotion_sale">-' 
+                                    . $disCountVIPCustomer . '%' . '</span>
+                                </span>';
             } else {
                 $price_encourage = common::convertIntToFormatMoney($price_encourage);
                 $percent = getpercent($products[$i]['products_price'], $price_encourage);
@@ -384,7 +392,8 @@
     $n_display_product = 6;
     $lastest_best_sale_products = $Product->getProductsInWeek(7, $condition);
     $n_all_product = $Product->countAllWithConditionProduct($condition);
-    $products = getOldProducts($lastest_best_sale_products, $n_display_product, $config_name, $n_all_product, $condition);
+    $products = getOldProducts($lastest_best_sale_products, $n_display_product, 
+            $config_name, $n_all_product, $condition);
     $n = count($products);
     if ($n > $n_display_product) {
         $n = $n_display_product;
@@ -412,7 +421,8 @@
                 $priceVIPCustomer = $priceVIPCustomer * 1000;
                 $price_encourage = common::convertIntToFormatMoney($priceVIPCustomer);
                 $PromotionSale = '<span class="promotion">
-                                            <span class="promotion_sale">-' . $disCountVIPCustomer . '%' . '</span>
+                                            <span class="promotion_sale">-' . $disCountVIPCustomer 
+                                            . '%' . '</span>
                                         </span>';
             } else {
                 $price_encourage = common::convertIntToFormatMoney($price_encourage);
@@ -472,7 +482,8 @@
                 $priceVIPCustomer = $priceVIPCustomer * 1000;
                 $price_encourage = common::convertIntToFormatMoney($priceVIPCustomer);
                 $PromotionSale = '<span class="promotion">
-                                            <span class="promotion_sale">-' . $disCountVIPCustomer . '%' . '</span>
+                                            <span class="promotion_sale">-' . $disCountVIPCustomer 
+                                        . '%' . '</span>
                                         </span>';
             } else {
                 $price_encourage = common::convertIntToFormatMoney($price_encourage);
@@ -549,7 +560,8 @@
     $n_display_product = 5;
     $lastest_best_sale_products = $Product->getProductsInWeek(7, $condition);
     $n_all_product = $Product->countAllWithConditionProduct($condition);
-    $products = getOldProducts($lastest_best_sale_products, $n_display_product, $config_name, $n_all_product, $condition);
+    $products = getOldProducts($lastest_best_sale_products, $n_display_product, 
+            $config_name, $n_all_product, $condition);
 
     $n = count($products);
     if ($n > $n_display_product) {
@@ -578,7 +590,8 @@
                 $priceVIPCustomer = $priceVIPCustomer * 1000;
                 $price_encourage = common::convertIntToFormatMoney($priceVIPCustomer);
                 $PromotionSale = '<span class="promotion">
-                                            <span class="promotion_sale">-' . $disCountVIPCustomer . '%' . '</span>
+                                            <span class="promotion_sale">-' 
+                                            . $disCountVIPCustomer . '%' . '</span>
                                         </span>';
             } else {
                 $price_encourage = common::convertIntToFormatMoney($price_encourage);
@@ -625,12 +638,15 @@
     ));
 
     // List advs home
-    $arrAdvs = GetRows('adver_id, adver_logo, adver_link, adver_webname', 'ads', "adver_pos = 1 and adver_status = 1");
+    $arrAdvs = GetRows('adver_id, adver_logo, adver_link, adver_webname'
+            , 'ads'
+            , "adver_pos = 1 and adver_status = 1");
     $list_advs = '';
     foreach ($arrAdvs as $adv) {
         $list_advs .= '<div>'
                 . '<a target="_blank" rel="nofollow" style = "outline: none" href="' . $adv['adver_link'] . '">'
-                . '<img alt="' . $adv['adver_webname'] . '" src="{linkS}upload/adver/thumb/' . $adv['adver_logo'] . '" width = "110px" height= "90px"/>'
+                . '<img alt="' . $adv['adver_webname'] . '" src="{linkS}upload/adver/thumb/' 
+                . $adv['adver_logo'] . '" width = "110px" height= "90px"/>'
                 . '</a> '
                 . '</div>';
     }
