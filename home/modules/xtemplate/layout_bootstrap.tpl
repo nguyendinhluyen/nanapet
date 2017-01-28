@@ -677,7 +677,7 @@
                 </div>
                 <div class="container">
                     <div class="row center-block" style="width: 80%">
-                        <ul class="nav_menu_bottom">
+                        <ul class="nav_menu_bottom" style="padding-left: 20px">
                             <li><a href="{linkS}"
                                    style="height: 50px; outline: none; width:90px">Trang chủ</a></li>
                             <li><a href=""
