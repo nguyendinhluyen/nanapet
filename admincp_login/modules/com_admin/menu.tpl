@@ -61,8 +61,8 @@
 <!-- Thư viện ảnh-->	
 <div class  = "menu">
     <ul>
-        <div style = "display:block; {display_all_5}" class = 'title_menu'>Thư viện ảnh</div>
-        <li style = "display:none; {display_21}"><a href = "./?show=Ads">Danh sách ảnh</a></li>
+        <div style = "display:block; {display_all_5}" class = 'title_menu'>Thương hiệu sản phẩm</div>
+        <li style = "display:none; {display_21}"><a href = "./?show=Ads">Danh sách thương hiệu</a></li>
     </ul>
 </div>
 <!-- End Thư viện ảnh -->
@@ -76,7 +76,7 @@
 </div>
 <!-- End Tài khoản -->
 
-<!-- Hỗ trợ-->	
+<!-- Hỗ trợ
 <div class  = "menu">
     <ul>
         <div style = "display:block; {display_all_7}" class = 'title_menu'>{custommer}</div>

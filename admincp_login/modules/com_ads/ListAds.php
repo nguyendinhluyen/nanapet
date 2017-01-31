@@ -22,7 +22,7 @@
 
     // Navigation
     $p_now = intval($_GET ['p']);
-    $mysql->setQuery('SELECT adver_id FROM ads WHERE adver_pos <>3');
+    $mysql->setQuery('SELECT adver_id FROM ads');
     $mysql->query();
     $total = $mysql->getNumRows();
     $numofpages = $total / $pp;
@@ -42,9 +42,6 @@
         case 'name':
             $orderby = ' adver_webname';
             break;
-        case 'pos':
-            $orderby = ' adver_pos';
-            break;
         case 'status':
             $orderby = ' adver_status';
             break;
@@ -55,19 +52,23 @@
             $orderby = ' date_modifile';
             break;
         default:
-            $orderby = ' adver_id desc';
+            $orderby = ' adver_id DESC';
             break;
     }
 
-    $sql = "SELECT adver_id,adver_webname,adver_logo,adver_order,"
-                . "adver_pos,adver_status,date_added,	"
+    $sql = "SELECT adver_id,"
+                . "adver_webname,"
+                . "adver_logo,"
+                . "adver_order,"
+                . "adver_status,"
+                . "date_added,"
                 . "date_modifile "
             . "FROM ads "
-            . "WHERE adver_pos <>3 ORDER BY $orderby LIMIT $limitvalue,$pp";
-
+            . "WHERE 1=1 ORDER BY $orderby LIMIT $limitvalue,$pp";
     $mysql->setQuery($sql);
     $row = $mysql->loadAllRow();
     $n = count($row);
+
     $temp = '';
     for ($i = 0; $i < $n; ++$i) {
         $color = ($i % 2 == 0) ? '#d5d5d5' : '#e5e5e5';
@@ -87,8 +88,6 @@
         $temp.= $xtemplate->assign_vars($code_adver, array(
             'id' => $row[$i]['adver_id'],
             'adver_webname' => $row[$i]['adver_webname'],
-            'adverpos_c' => cut_string(get_adver_pos_name($row[$i]['adver_pos']), 20, '...'),
-            'adverpos' => get_adver_pos_name($row[$i]['adver_pos']),
             'adver_logo' => $logo,
             'adver_order' => $row[$i]['adver_order'],
             'adver_status' => ($row[$i]['adver_status'] == '1') ? $arr_lang['show'] : '<i>' . $arr_lang['hidden'] . '</i>',
