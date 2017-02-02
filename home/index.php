@@ -193,8 +193,6 @@
         'share' => $share,
         'contact' => $contact,
         'logo_web' => $logo_web,
-        'img_adv_lelf' => $img_adv_lelf,
-        'img_adv_bottom' => $img_adv_bottom,
         'description' => $description,
         'keywords' => $keywords,
         'left_facebook_box' => $left_facebook_box,

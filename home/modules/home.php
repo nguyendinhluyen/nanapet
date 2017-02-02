@@ -262,8 +262,8 @@
                 $price_encourage = common::convertIntToFormatMoney($price_encourage);
                 $percent = getpercent($products[$i]['products_price'], $price_encourage);
                 $PromotionSale = '<span class="promotion">
-                                            <span class="promotion_sale">-' . $percent . '</span>
-                                        </span>';
+                                    <span class="promotion_sale">-' . $percent . '</span>
+                                </span>';
             }
             $price_not_discount_product = $price_not_discount_product . " VNĐ";
         } else {
@@ -640,7 +640,7 @@
     // List advs home
     $arrAdvs = GetRows('adver_id, adver_logo, adver_link, adver_webname'
             , 'ads'
-            , "adver_pos = 1 and adver_status = 1");
+            , "adver_status = 1");
     $list_advs = '';
     foreach ($arrAdvs as $adv) {
         $list_advs .= '<div>'

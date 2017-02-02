@@ -483,7 +483,7 @@ $proType = $Product->getProductsType($product_detail['p_type']);
     }
 
     //list advs product
-    $arrAdvs = GetRows('adver_id,adver_logo,adver_link', 'ads', "adver_pos = 1 and adver_status = 1");
+    $arrAdvs = GetRows('adver_id,adver_logo,adver_link', 'ads', "adver_status = 1");
     $list_advs = '';
     foreach ($arrAdvs as $adv) {
         $list_advs .= '<div>'
