@@ -66,10 +66,6 @@
                 <br>
             </p>
             <p>
-                <label>Sắp xếp</label>
-                <input name = 'txtorder' value = "{txtorder}" maxlength = '3' />
-            </p>
-            <p>
                 <label>Hiển thị</label>
                 <input type = 'checkbox' name = 'cbstatus' {checked}/>
             </p>
