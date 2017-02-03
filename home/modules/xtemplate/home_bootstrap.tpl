@@ -397,10 +397,12 @@
         <div class = "hidden-xs hidden-sm hidden-md col-lg-4">
             <a href="{linkS}danh-rieng-cho-cho-cung-319.htm">
             <img alt="{brand_dog}" 
-                 src="{linkS}layout/bootstrap/images/san_pham_banner_cun_cung.png" 
-                 width="480" 
-                 height="485"
-                 style = "margin-left: 0px; cursor: pointer;"/>
+                src="{linkS}layout/bootstrap/images/san_pham_banner_cun_cung.jpg" 
+                width="480" 
+                height="505"
+                style = "margin-left: -12px; 
+                         cursor: pointer;"
+                class="img-rounded"/>
             </a>
         </div>
         <div class = "hidden-xs hidden-sm hidden-md col-lg-8" 
@@ -593,11 +595,13 @@
     <div class="row">
         <div class = "hidden-xs hidden-sm hidden-md col-lg-4">
             <a href="{linkS}danh-rieng-cho-meo-yeu-321.htm">
-                <img src="{linkS}layout/bootstrap/images/san_pham_banner_meo_cung.png"
-                     width="480" 
-                     height="485"
-                     alt="{brand_cat}"
-                     style = "margin-left: 0px; cursor: pointer;"/>
+                <img src="{linkS}layout/bootstrap/images/san_pham_banner_meo_cung.jpg"
+                    width="480" 
+                    height="505"
+                    alt="{brand_cat}"
+                    style = "margin-left: -12px; 
+                             cursor: pointer;"
+                    class="img-rounded"/>
             </a>
         </div>
         
