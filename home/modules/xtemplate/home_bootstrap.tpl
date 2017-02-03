@@ -383,7 +383,7 @@
              style = "padding-bottom: 40px;
                       padding-left: 0px;
                       padding-right: 0px">
-            <a href="{linkS}danh-rieng-cho-cho-cung-319.htm">
+            <a href="{linkS}danh-rieng-cho-cho-cung-319/">
             <img alt="sản phẩm cún cưng"
                  src="{linkS}layout/bootstrap/images/san_pham_cun_cung.png"
                  style = "display:block;
@@ -395,7 +395,7 @@
     </div>        
     <div class="row">
         <div class = "hidden-xs hidden-sm hidden-md col-lg-4">
-            <a href="{linkS}danh-rieng-cho-cho-cung-319.htm">
+            <a href="{linkS}danh-rieng-cho-cho-cung-319/">
             <img alt="{brand_dog}" 
                 src="{linkS}layout/bootstrap/images/san_pham_banner_cun_cung.jpg" 
                 width="480" 
@@ -508,7 +508,7 @@
                     background-color: #white;
                     line-height: 50px;
                     width: 100%;">
-            <a href="{linkS}danh-rieng-cho-cho-cung-319.htm" 
+            <a href="{linkS}danh-rieng-cho-cho-cung-319/" 
                style="color:#ff767d;">
                Xem tất cả sản phẩm cún cưng >>
             </a>
@@ -582,7 +582,7 @@
              style = "padding-bottom: 40px;
                       padding-left: 0px;
                       padding-right: 0px">
-            <a href="{linkS}danh-rieng-cho-meo-yeu-321.htm">
+            <a href="{linkS}danh-rieng-cho-meo-yeu-321/">
                 <img alt="sản phẩm cún cưng"
                      src="{linkS}layout/bootstrap/images/san_pham_meo_cung.png"
                      style = "display:block; 
@@ -594,7 +594,7 @@
     </div>
     <div class="row">
         <div class = "hidden-xs hidden-sm hidden-md col-lg-4">
-            <a href="{linkS}danh-rieng-cho-meo-yeu-321.htm">
+            <a href="{linkS}danh-rieng-cho-meo-yeu-321/">
                 <img src="{linkS}layout/bootstrap/images/san_pham_banner_meo_cung.jpg"
                     width="480" 
                     height="505"
@@ -709,7 +709,7 @@
                     background-color: white;
                     line-height: 50px;
                     width: 100%">
-            <a href="{linkS}danh-rieng-cho-meo-yeu-321.htm" 
+            <a href="{linkS}danh-rieng-cho-meo-yeu-321/" 
                style="color:#ff767d;">
                 Xem tất cả sản phẩm mèo cưng >>
             </a>
@@ -784,7 +784,7 @@
              style = "padding-bottom: 40px; 
                       padding-left: 0px; 
                       padding-right: 0px">
-            <a href="{linkS}tu-thuoc-gia-dinh-303.htm">
+            <a href="{linkS}tu-thuoc-pet-phong-than-339/">
                 <img alt="tủ thuốc phòng thân cho thú cưng"
                      src="{linkS}layout/bootstrap/images/tu_thuoc_phong_than.png"
                      style = "display:block; 
@@ -845,7 +845,7 @@
                     text-align: center;                    
                     line-height: 50px;
                     width: 100%">
-            <a href="{linkS}tu-thuoc-gia-dinh-303.htm" 
+            <a href="{linkS}tu-thuoc-pet-phong-than-339/" 
                style="color:#ff767d;">
                 <img alt="xem tất cả"
                      src="{linkS}layout/bootstrap/images/xem_tat_ca_thuoc.png" 
