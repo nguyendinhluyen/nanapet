@@ -8,11 +8,9 @@
         border:solid 1px #c0c0c0;
         overflow-y:scroll;
     }
-
     .multiselect label {
         display:block;
     }
-
     .multiselect-on {
         color:#ffffff;
         background-color:#000099;
@@ -39,49 +37,38 @@
             });
         });
     };
-
     $(function () {
         $(".multiselect").multiselect();
     });
-
-
     var count1 = 0;
     var count2 = 0;
-    function insertOptionBeforeColor(pos)
-    {
+    function insertOptionBeforeColor(pos) {
         var content = document.getElementById('color_name').value;
         var elSel = document.getElementById('color');
         var elOptNew = document.createElement('option');
         elOptNew.text = content;
         elOptNew.value = content;
-        try
-        {
+        try {
             elSel.add(elOptNew, pos); //elOptOld); standards compliant; doesn't work in IE
-        } catch (ex)
-        {
+        } catch (ex) {
             elSel.add(elOptNew, elSel.selectedIndex); // IE only
         }
     }
-
-    function insertOptionBeforeType()
-    {
+    
+    function insertOptionBeforeType() {
         var content1 = document.getElementById('type_name').value;
         var content2 = document.getElementById('type_price').value;
         var elSel = document.getElementById('type');
         var elOptNew = document.createElement('option');
         elOptNew.text = content1 + "::" + content2;
         elOptNew.value = content1 + "::" + content2;
-        try
-        {
+        try {
             elSel.add(elOptNew, 0);//elOptOld); standards compliant; doesn't work in IE
-        } catch (ex)
-        {
+        } catch (ex) {
             elSel.add(elOptNew, elSel.selectedIndex); // IE only
-        }
     }
-
-    function removeOptionSelectedColor()
-    {
+    
+    function removeOptionSelectedColor() {
         var elSel = document.getElementById('color');
         var i;
         for (i = elSel.length - 1; i >= 0; i--) {
@@ -91,8 +78,8 @@
             }
         }
     }
-    function removeOptionSelectedType()
-    {
+    
+    function removeOptionSelectedType() {
         var elSel = document.getElementById('type');
         var i;
         for (i = elSel.length - 1; i >= 0; i--) {
@@ -102,9 +89,8 @@
             }
         }
     }
-
-    function onSelectedColor()
-    {
+    
+    function onSelectedColor() {
         var elSel = document.getElementById('color');
         var i;
         for (i = elSel.length - 1; i >= 0; i--) {
@@ -115,9 +101,8 @@
             }
         }
     }
-
-    function onSelectedType()
-    {
+    
+    function onSelectedType() {
         var elSel = document.getElementById('type');
         var i;
         for (i = elSel.length - 1; i >= 0; i--) {
@@ -128,9 +113,8 @@
             }
         }
     }
-
-    function appendOptionLast(num)
-    {
+    
+    function appendOptionLast(num) {
         var elOptNew = document.createElement('option');
         elOptNew.text = 'Append' + num;
         elOptNew.value = 'append' + num;
@@ -143,8 +127,7 @@
         }
     }
 
-    function removeOptionLast()
-    {
+    function removeOptionLast() {
         var elSel = document.getElementById('selectX');
         if (elSel.length > 0)
         {
@@ -152,8 +135,7 @@
         }
     }
 
-    function editOptionColor()
-    {
+    function editOptionColor() {
         var elSel = document.getElementById('color');
         var i;
         for (i = elSel.length - 1; i >= 0; i--) {
@@ -169,8 +151,7 @@
         }
     }
 
-    function editOptionType()
-    {
+    function editOptionType() {
         var elSel = document.getElementById('type');
         var i;
         for (i = elSel.length - 1; i >= 0; i--) {
@@ -193,8 +174,7 @@
 
     $(document).ready(function () {
         $("#show_list_img").html("{list_img}");
-        $('#image_list').live('change', function ()
-        {
+        $('#image_list').live('change', function () {
             $("#show_list_img").html('');
             $("#show_list_img").html('<img src="loader.gif" alt="Uploading...."/>');
             $("#frm_img").ajaxForm({
@@ -204,43 +184,29 @@
     });
 
     function deleteImg(id) {
-        $.ajax
-                ({
-                    type: "GET",
-                    url: "com_product/delete_img.php",
-                    data: "id_product_detail=" + id + "&id_product=" + {id_product},
-                    success: function (msg)
-                    {
-                        $("#show_list_img").html('');
-                        $("#show_list_img").html(msg);
-                    }
-                });
+        $.ajax ({
+            type: "GET",
+            url: "com_product/delete_img.php",
+            data: "id_product_detail=" + id + "&id_product=" + {id_product},
+            success: function (msg) {
+                $("#show_list_img").html('');
+                $("#show_list_img").html(msg);
+            }
+        });
     }
 
-    function submitForm2()
-    {
+    function submitForm2() {
         document.getElementById("txtdetail").value = oEdit1.getXHTMLBody();
-
         document.getElementById("product_detail_tacdung").value = oEdit2.getXHTMLBody();
-
         document.getElementById("product_detail_phuhopcho").value = oEdit3.getXHTMLBody();
-
         document.getElementById("product_detail_nguyenlieu_thanhphan").value = oEdit4.getXHTMLBody();
-
         document.getElementById("product_detail_phantichdambao").value = oEdit5.getXHTMLBody();
-
         document.getElementById("product_detail_huongdansudung").value = oEdit6.getXHTMLBody();
-
         document.getElementById("product_detail_huongdanbaoquan").value = oEdit7.getXHTMLBody();
-
         document.getElementById("product_detail_luuy").value = oEdit8.getXHTMLBody();
-
         document.getElementById("product_detail_khuyenkhich").value = oEdit9.getXHTMLBody();
-
         document.getElementById("product_detail_donggoi_thetich").value = oEdit10.getXHTMLBody();
-
         document.getElementById("product_detail_nhasanxuat").value = oEdit11.getXHTMLBody();
-
         document.getElementById("product_detail_xuatxu").value = oEdit12.getXHTMLBody();
     }
 
@@ -310,7 +276,7 @@
         <div style = "width:135px; height:135px; margin-top:20px">
             {imagesrc}
         </div>
-        <br/>
+        <!-- <br/>
         <br/>
         <br/>
         <form method='POST' enctype='multipart/form-data' 
@@ -329,38 +295,25 @@
             <input type="hidden" 
                    name = "id_product" 
                    value="{id_product}"/>
-        </form>
+        </form>-->
     </div>
     <form method='POST' enctype='multipart/form-data' 
           id = "frm" 
           name = "frm" 
           onsubmit="submitForm2()" 
           style="float:left; width:80%">
-
         <input type="hidden" name="txtdetail" id="txtdetail"> </input>
-
         <input type="hidden" name="product_detail_tacdung" id="product_detail_tacdung"> </input>
-
         <input type="hidden" name="product_detail_phuhopcho" id="product_detail_phuhopcho"> </input>
-
         <input type="hidden" name="product_detail_nguyenlieu_thanhphan" id="product_detail_nguyenlieu_thanhphan"> </input>
-
         <input type="hidden" name="product_detail_phantichdambao" id="product_detail_phantichdambao"> </input>
-
         <input type="hidden" name="product_detail_huongdansudung" id="product_detail_huongdansudung"> </input>
-
         <input type="hidden" name="product_detail_huongdanbaoquan" id="product_detail_huongdanbaoquan"> </input>
-
         <input type="hidden" name="product_detail_luuy" id="product_detail_luuy"> </input>
-
         <input type="hidden" name="product_detail_khuyenkhich" id="product_detail_khuyenkhich"> </input>
-
         <input type="hidden" name="product_detail_donggoi_thetich" id="product_detail_donggoi_thetich"> </input>
-
         <input type="hidden" name="product_detail_nhasanxuat" id="product_detail_nhasanxuat"> </input>
-
         <input type="hidden" name="product_detail_xuatxu" id="product_detail_xuatxu"> </input>
-
         <div style="float:left;padding-left:25px; font-family:Arial, Helvetica, sans-serif; font-size:12px;">			
             {error}            
             <p>
@@ -377,14 +330,13 @@
                 <label>
                     <b>Nhà sản xuất</b>
                 </label>
-                <input size ='50' 
-                       maxlength = '50' 
-                       type = 'text' 
+                {select_brand_produc_name_list}
+                <input type = 'text' 
                        name = 'txtnsx' 
                        value ="{txtnsx}" 
-                       style="margin-left: 2px; width:140px"/>
+                       style="margin-left: 2px; width:120px;" readonly/>
             </p>
-            <p>
+            <!--<p>
                 <label>
                     <b>Link</b>
                 </label>
@@ -394,7 +346,7 @@
                        name = 'txtlinknsx' 
                        value ='{txtlinknsx}' 
                        style="width:260px">
-            </p>
+            </p>-->
             <p>
                 <label><b>Xuất xứ</b></label>
                 <input size ='50' 
@@ -417,15 +369,12 @@
             <p>
                 <label>File/{image}</label>
                 <input size ='50' name = 'image' type ="file" />
-            </p>                        
-            <p>
-            <div id="show_list_img" style="border: 1px solid; width: 480px;" >
-                <img width="60px;" height="80px;" src="../style/images/back.gif" />
-            </div>
             </p>
-            <p>
-                <span style="color: red"> (Giá sản phẩm > 0. Trường hợp ko có thì bỏ trống) </span>
-            </p>
+            <!--<p>
+                <div id="show_list_img" style="border: 1px solid; width: 480px;" >
+                    <img width="60px;" height="80px;" src="../style/images/back.gif" />
+                </div>
+            </p>-->
             <p>
                 <label>Giá sản phẩm</label>
                 <input size ='20' 
@@ -438,9 +387,6 @@
                     <option value="VND" {vnd}>VND</option>
                     <!--<option value="USD" {usd}>USD</option>-->
                 </select>
-            </p>
-            <p>
-                <span style="color: red"> (Giá khuyến mãi > 0. Trường hợp ko có thì bỏ trống) </span>
             </p>
             <p>
                 <label>Giá khuyến mãi</label> 

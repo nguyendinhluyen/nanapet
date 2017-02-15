@@ -1,4 +1,31 @@
 <?php
+function selectBrandProductNameList($brand_name) {
+    global $mysql;
+    $sql = "SELECT adver_id, adver_webname
+            FROM ads
+            WHERE adver_status = '1' OR adver_status = '0' ORDER BY adver_webname";
+    $mysql->setQuery($sql);
+    $result = $mysql->query();
+    $flag_band_product_name = 0;
+    $select = '<select name="brandnamelist" id="brandnamelist">';
+    while ($row = mysql_fetch_assoc($result)) {
+        if ($brand_name !== $row['adver_webname']) {
+            $select .= '<option value = "' . $row['adver_webname'] 
+                    . '">' . $row['adver_webname'] . '</option>';
+        } else {
+            $flag_band_product_name = 1;
+            $select .= '<option value = "' . $row['adver_webname'] 
+                    . '" selected="selected">' . $row['adver_webname'] . '</option>';
+        }
+    }
+    if ($flag_band_product_name == 0) {
+        $select .= '<option value = "' . $row['adver_webname'] 
+                . '" selected="selected">' . $row['adver_webname'] . '</option>';
+    }
+    $select .= '</select>';
+    return $select;
+}
+
 function selectRow($f, $table, $where) {
     global $mysql;
     $sql = "SELECT " . $f . " FROM " . $table . ' WHERE ' . $where;
@@ -173,43 +200,31 @@ function getLevel_libary($id) {
 
 function getLevel_help($id) {
     global $mysql;
-
     $mysql->setQuery("SELECT levelhelp 
-					   FROM categorieshelp 
-					   WHERE categorieshelp_id='" . $id . "'");
-
+                    FROM categorieshelp 
+                    WHERE categorieshelp_id='" . $id . "'");
     $mysql->query();
-
     $row = $mysql->loadOneRow();
-
     return $row['levelhelp'];
 }
 
 function getLevel_introduce($id) {
     global $mysql;
-
     $mysql->setQuery("SELECT levelintroduce 
-					   FROM categoriesintroduce 
-					   WHERE categoriesintroduce_id ='" . $id . "'");
-
+                    FROM categoriesintroduce 
+                    WHERE categoriesintroduce_id ='" . $id . "'");
     $mysql->query();
-
     $row = $mysql->loadOneRow();
-
     return $row['levelintroduce'];
 }
 
 function getLevel_adoption($id) {
     global $mysql;
-
     $mysql->setQuery("SELECT leveladoption
-					   FROM categoriesadoption
-					   WHERE categoriesadoption_id ='" . $id . "'");
-
+                    FROM categoriesadoption
+                    WHERE categoriesadoption_id ='" . $id . "'");
     $mysql->query();
-
     $row = $mysql->loadOneRow();
-
     return $row['leveladoption'];
 }
 

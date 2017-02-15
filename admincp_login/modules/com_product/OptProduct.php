@@ -86,6 +86,7 @@
             $p_unit = $row['p_unit'];
             $commodity_name = $row['status'];
             $nsx = $row['manufacturer'];
+            $brand_product_name = $row['manufacturer'];
             $p_attribute = output($row['p_attribute']);
             $Xuatxu = $row['origin'];
             $txtlinknsx = $row['manufacturer_link'];
@@ -198,7 +199,7 @@
             $product_detail_nhasanxuat = output($_POST['product_detail_nhasanxuat']);
             $product_detail_xuatxu = output($_POST['product_detail_xuatxu']);
             $image = $_FILES ["image"]["name"];
-            $nsx = output($_POST['txtnsx']);
+            $nsx = output($_POST['brandnamelist']);
             $Xuatxu = input($_POST['txtXuatxu']);
             $txtlinknsx = input($_POST['txtlinknsx']);
             //duoctt attribute
@@ -448,8 +449,9 @@
 
         $content = $xtemplate->replace($content, array(
             'error' => $error,
-            //'cat_list'	=> catlist($categories_id),
+            // 'cat_list' => catlist($categories_id),
             'cat_list' => CatlistUpgrade($categories_id),
+            'select_brand_produc_name_list' => selectBrandProductNameList($brand_product_name),
             'commodity_list' => commoditylist($commodity_id),
             'imagesrc' => $imagesrc,
             'ImgThumb' => $ImgThumb,
