@@ -236,11 +236,26 @@
                 }
             }
 
-            if (!isset($categories_id{0})) {
-                $error = $arr_lang['err_select_cat'];
-            } else if (!isset($products_name{0}))
-                $error = $arr_lang['err_product_name_short'];
+            if (empty($products_name)) {
+                $error .= $arr_lang['err_product_name_short']."<br>";
+            }
 
+            if ($price === '0') {
+                $error .= "Giá sản phẩm > 0" ."<br>";
+            }
+            
+            if ($encourage === '0') {
+                $error .= "Giá khuyến mãi > 0"."<br>";
+            }
+            
+            if ($encourage > 0 && $price > 0 && $encourage >= $price) {
+                $error .= "Giá khuyến mãi < giá sản phẩm"."<br>";
+            }
+            
+            if ($categories_id === ",,") {
+                $error .= $arr_lang['err_select_cat']."<br>";
+            } 
+            
             if (empty($error)) {
                 if ($update == 1) {
                     //CHINH SUA THEM status tai cho nay
