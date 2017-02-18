@@ -52,6 +52,8 @@ RewriteRule ^tim-kiem/tat-ca-san-pham/trang-([0-9]*)$ home/index.php?show=search
 #RewriteRule ^tim-kiem/search_key=([a-zA-Z0-9-]*)/product_page=([0-9]*)&news_page=([0-9]*)$ home/index.php?show=search&product_page=$2&news_page=$3&search_key=$1 [L]
 #RewriteRule ^tim-kiem/key=(.*)/product_page=([0-9]*)&news_page=([0-9]*)&entertainment_page=([0-9]*)&tabID=([0-9]*)$ home/index.php?show=search&product_page=$2&news_page=$3&entertainment_page=$4&tabID=$5&search_box=$1 [L]
 
+RewriteRule ^thuong-hieu/([0-9-]*)$ home/index.php?show=brand-name&brandkey=$1[L]
+
 RewriteRule ^dang-ky$ home/index.php?show=register [L]
 RewriteRule ^process-register$ home/index.php?show=process-register [L]
 RewriteRule ^dang-nhap$ home/index.php?show=login [L]
