@@ -9,7 +9,8 @@
     // Get all product from product name
     $elements = 'products_id';
     $from_table = 'products';   
-    $where = "products_status = 1 AND CONCAT(' ',products_name,' ') LIKE '% ".$_SESSION['search_key']." %' ORDER BY products_date_added DESC";
+    $where = "products_status = 1 AND CONCAT(' ',products_name,' ') LIKE '% "
+            .$_SESSION['search_key']." %' ORDER BY products_date_added DESC";
     $sql = "SELECT $elements FROM $from_table WHERE $where";
     global $mysql;
     $products = $mysql->query_command($sql);
