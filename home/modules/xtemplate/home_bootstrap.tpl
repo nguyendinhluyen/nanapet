@@ -43,6 +43,7 @@
         transition: all 0.5s ease;
         cursor: pointer;        
     }
+    
 </style>
 <!-- Begin banner-->
 <div class="container-fluid" style="padding:0px">

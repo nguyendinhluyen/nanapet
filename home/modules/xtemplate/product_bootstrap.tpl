@@ -274,10 +274,11 @@
 <div class = "container">
     <div class="row">                
         <div class ="col-xs-12 col-sm-12 col-md-12 col-lg-12" 
-             style="height: 80px; 
+             style="height: 100px; 
                     padding-left: 50px; 
                     padding-right: 50px">                                    
-            <div class="responsive" style="height: 80px;">                
+            <div class="responsive" 
+                 style="height: 70px; margin-top: 20px ;margin-bottom: 10px">                
                 {list_advs}                             
             </div>
             <style>

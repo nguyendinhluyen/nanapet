@@ -165,8 +165,10 @@
     $arrAdvs = GetRows('adver_id, adver_logo, adver_link, adver_webname', 'ads', "adver_status = 1");
     foreach ($arrAdvs as $adv) {
         $list_advs .= '<div>'
-                . '<a target="_blank" rel="nofollow" style = "outline: none" href="' . $adv['adver_link'] . '">'
-                . '<img alt="' . $adv['adver_webname'] . '" src="{linkS}upload/adver/thumb/' . $adv['adver_logo'] . '" width = "110px" height= "90px"/>'
+                . '<a rel="nofollow" style = "outline: none" href="{linkS}thuong-hieu/' 
+                . $adv['adver_id']. '">'
+                . '<img alt="' . $adv['adver_webname'] . '" src="{linkS}upload/adver/thumb/' 
+                . $adv['adver_logo'] . '" width = "90px" height= "70px"/>'
                 . '</a> '
                 . '</div>';
     }

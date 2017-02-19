@@ -638,15 +638,16 @@
     ));
 
     // List advs home
-    $arrAdvs = GetRows('adver_id, adver_logo, adver_link, adver_webname'
+    $arrAdvs = GetRows('adver_id, adver_logo, adver_webname'
             , 'ads'
             , "adver_status = 1");
     $list_advs = '';
     foreach ($arrAdvs as $adv) {
         $list_advs .= '<div>'
-                . '<a target="_blank" rel="nofollow" style = "outline: none" href="' . $adv['adver_link'] . '">'
+                . '<a rel="nofollow" style = "outline: none" href="{linkS}thuong-hieu/' 
+                . $adv['adver_id']. '">'
                 . '<img alt="' . $adv['adver_webname'] . '" src="{linkS}upload/adver/thumb/' 
-                . $adv['adver_logo'] . '" width = "110px" height= "90px"/>'
+                . $adv['adver_logo'] . '" width = "100px" height= "75px"/>'
                 . '</a> '
                 . '</div>';
     }
