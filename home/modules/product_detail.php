@@ -482,17 +482,6 @@ $proType = $Product->getProductsType($product_detail['p_type']);
         $display_product_detail_xuatxu = "none";
     }
 
-    //list advs product
-    $arrAdvs = GetRows('adver_id,adver_logo,adver_link', 'ads', "adver_status = 1");
-    $list_advs = '';
-    foreach ($arrAdvs as $adv) {
-        $list_advs .= '<div>'
-                . '<a target="_blank" style = "outline:none" href="' . $adv['adver_link'] . '">'
-                . '<img src="{linkS}upload/adver/thumb/' . $adv['adver_logo'] . '" width = "110px" height= "90px"/>'
-                . '</a> '
-                . '</div>';
-    }
-
     // Change font-family    
     $product_detail['product_detail'] = str_replace("Arial", "RobotoSlabLight", $product_detail['product_detail']);
     $product_detail['product_detail_tacdung'] = str_replace("Arial", "RobotoSlabLight", $product_detail['product_detail_tacdung']);
@@ -670,7 +659,6 @@ $proType = $Product->getProductsType($product_detail['p_type']);
         } </script>';
     
     $productdetail = $xtemplate->replace($productdetail, array(
-        'list_advs' => $list_advs,
         'form_comment' => $facebook_comment,
         'link_san-pham' => $category_key . "/" . $product_detail['products_key'] . ".htm",
         'khuyenmai' => $khuyenmai,

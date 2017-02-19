@@ -222,8 +222,10 @@
     $list_advs = '';
     foreach ($arrAdvs as $adv) {
         $list_advs .= '<div>'
-                . '<a target="_blank" style = "outline:none" href="' . $adv['adver_link'] . '">'
-                . '<img src="{linkS}upload/adver/thumb/' . $adv['adver_logo'] . '" width = "100%" height= "100%"/>'
+                . '<a rel="nofollow" style = "outline: none" href="{linkS}thuong-hieu/' 
+                . $adv['adver_id']. '">'
+                . '<img alt="' . $adv['adver_webname'] . '" src="{linkS}upload/adver/thumb/' 
+                . $adv['adver_logo'] . '" width = "90px" height= "70px"/>'
                 . '</a> '
                 . '</div>';
     }
