@@ -76,6 +76,9 @@
         case 'search':
             include('modules/search.php');            
             break;
+        case 'brand-name':
+            include('modules/brand_name.php');            
+            break;
         
         case 'search_all_product':            
             include('modules/search_all_product.php');            
