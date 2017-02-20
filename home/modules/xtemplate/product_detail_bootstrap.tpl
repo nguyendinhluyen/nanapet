@@ -201,10 +201,9 @@
                                         <td>
                                             <div>
                                                 <a href="{linknsx}"
-                                                   target="_blank"
-                                                   style ="font-size: 14px; 
+                                                   rel="nofollow"
+                                                   style ="font-size: 17px; 
                                                            outline:none; 
-                                                           color:black;
                                                            line-height: 25px">{nsx}</a>
                                             </div>
                                         </td>
@@ -632,6 +631,25 @@
                                                     font-size: 14px;
                                                     line-height: 25px">
                                             {product_detail_nhasanxuat}
+                                        </div>
+                                        
+                                        <div align="justify"
+                                              style="margin-bottom:10px;                                                      
+                                                    font-size:14px;
+                                                    display:{display_brand_short_description};
+                                                    font-family:RobotoSlabRegular;
+                                                    margin-left:2px">
+                                            Thương hiệu
+                                        </div>
+
+                                        <div style="margin-bottom:10px;
+                                                    margin-left: 2px;
+                                                    font-family: RobotoSlabLight;
+                                                    font-size: 14px;
+                                                    line-height: 25px;
+                                                    display:{display_brand_short_description};">
+                                            {brand_short_description}
+                                            <br><a href="{linknsx}">Xem thêm >></a>
                                         </div>
 
                                         <div align="justify" 

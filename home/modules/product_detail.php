@@ -510,8 +510,8 @@ $proType = $Product->getProductsType($product_detail['p_type']);
             $relation_news .= '<td style="padding-right: 42px">'
                             . '<table>'
                             . '<tr><td>'
-                            . '<a class = "news_name" href="{linkS}doi-song-pets/' . $list_news[$i]['news_key'] . '.htm" 
-                                                          style = "color:#929292;">'
+                            . '<a class = "news_name" href="{linkS}doi-song-pets/' 
+                            . $list_news[$i]['news_key'] . '.htm" style = "color:#929292;">'
                             . '<img src="{linkS}upload/news/' . $list_news[$i]['news_image'] . '"'
                             . 'alt="{news_name}" style="width:180px;height:180px; cursor:pointer; border-radius: 10px">'
                             . '</a></td></tr>'
@@ -528,7 +528,8 @@ $proType = $Product->getProductsType($product_detail['p_type']);
 
     // Get products by category
     $products_t = $Product->getProductsByCategoryKey($_GET['category_key']);
-    $products = $Product->getProductsByCategoryKeyLimitOrderBy($products_t, $category_key, 0, 10, $_SESSION['order_by']);
+    $products = $Product->getProductsByCategoryKeyLimitOrderBy($products_t, $category_key
+            , 0, 10, $_SESSION['order_by']);
     $n = count($products);
 
     // Begin relationship product
@@ -558,7 +559,8 @@ $proType = $Product->getProductsType($product_detail['p_type']);
                 $priceVIPCustomer = $priceVIPCustomer * 1000;
                 $price_encourage = common::convertIntToFormatMoney($priceVIPCustomer);
                 $PromotionSale = '<span class="promotion">
-                                            <span class="promotion_sale">-' . $disCountVIPCustomer . '%' . '</span>
+                                            <span class="promotion_sale">-' 
+                                            . $disCountVIPCustomer . '%' . '</span>
                                         </span>';
             } else {
                 $price_encourage = common::convertIntToFormatMoney($price_encourage);
@@ -611,15 +613,12 @@ $proType = $Product->getProductsType($product_detail['p_type']);
                                             <ul>';
             }
         }
-        
     }
-    
     $productdetail = $xtemplate->assign_blocks_content($productdetail, array(
         'PRODUCTS' => $tpl,
         'PRODUCTS_SUPPORT' => $tpl_support,
     ));
     //End relationship product
-    
     
     // meta description
     // remove all tags in text
@@ -657,6 +656,19 @@ $proType = $Product->getProductsType($product_detail['p_type']);
         "@type": "Organization", "name": "NanaPet"
         } }
         } </script>';
+    
+    // Add brand product
+    $brand_product = GetOneRow("adver_id, short_description"
+                    , "ads"
+                    , "adver_webname ='".$product_detail['manufacturer']."'");
+    $brand_short_description = $brand_product['short_description'];
+    if (empty($brand_short_description)) {
+        $display_brand_short_description = "none";
+    } else {
+        $display_brand_short_description = "block";
+    }
+    $link_brand_product = "{linkS}thuong-hieu/". $brand_product['adver_id'];
+    // End brand product
     
     $productdetail = $xtemplate->replace($productdetail, array(
         'form_comment' => $facebook_comment,
@@ -711,7 +723,7 @@ $proType = $Product->getProductsType($product_detail['p_type']);
         'user' => $_SESSION['username'],
         'id_product' => $product_detail['products_id'],
         'xuatxu' => $product_detail['origin'],
-        'linknsx' => $product_detail['manufacturer_link'],
+        'linknsx' => $link_brand_product,
         'status' => $product_status_name,
         'hidden' => $hidden,
         'user_name' => $user_name,
@@ -719,7 +731,9 @@ $proType = $Product->getProductsType($product_detail['p_type']);
         'rate_count' => $rate_count,
         'category' => $category,
         'relation_news' => $relation_news,
-        'display_realtion_news' => $display_realtion_news
+        'display_realtion_news' => $display_realtion_news,
+        'display_brand_short_description' => $display_brand_short_description,
+        'brand_short_description' => $brand_short_description
     ));
     $content = $productdetail;
 ?>

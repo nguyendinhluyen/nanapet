@@ -112,18 +112,27 @@
             . "AND manufacturer = '".$brand['adver_webname']. "'";
     $sql = "SELECT $elements FROM $from_table WHERE $where";
     $products = $mysql->query_command($sql);
-    
     // Check should display more products
     $link_all_product = "";
     if ($products[0]['total_products'] > $CONST_TOTAL_MAX_DISPLAY) {
         $link_all_product = "<a href='{linkS}tat-ca-thuong-hieu/".$idbrand."/trang-1'>Xem tất cả >></a>";
+    }
+    
+    $no_products = "";
+    if ($sum_product == 0) {
+        $no_products = "Không có sản phẩm thuộc thương hiệu ".$brand['adver_webname'];
+    } 
+    if ($sum_product != 0) {
+        $display_no_product = "display:none";
     }
     $description_ads = $brand['description_ads'];
     $template = $xtemplate->replace($template,array(
         'adver_webname' => $brand['adver_webname'],
         'adver_logo' => $brand['adver_logo'],
         'description_ads' => $description_ads,
-        'link_all_product' => $link_all_product
+        'link_all_product' => $link_all_product,
+        'no_products' => $no_products,
+        'display_no_product' => $display_no_product
     ));
     $content = $template;
 ?>

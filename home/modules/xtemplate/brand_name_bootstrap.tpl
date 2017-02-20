@@ -49,8 +49,8 @@
         <div class ="col-lg-12" style="margin-bottom: 20px">
             <div class ="col-lg-4" style="padding-left: 0px">
                 <img alt="{adver_webname}" src="{linkS}upload/adver/thumb/{adver_logo}" 
-                     width = "300" 
-                     height="250"/>
+                     width = "250" 
+                     height="200"/>
             </div>
             <div class ="col-lg-8" 
                  style="font-family: RobotoSlabRegular; 
@@ -66,7 +66,7 @@
                         border-color:#eee;
                         width:100%;
                         float:left;
-                        margin-bottom: 40px">
+                        margin-bottom: 60px">
             <div class="product_main" {display_realtion_product}>
                 <!--BEGINLIST_PRODUCTS-->
                 <!--BEGIN_PRODUCT-->
@@ -128,6 +128,16 @@
                 </li>
                 <!--END_PRODUCT-->
                 <!--ENDLIST_PRODUCTS-->
+                <div class="col-lg-12">
+                    <div style="font-family: RobotoSlabRegular;
+                                font-size: 17px;
+                                margin-bottom: 50px;
+                                text-align: center;
+                                {display_no_product}">
+                        {no_products}
+                    </div>
+                </div>
+                
                 <hr style = "margin-top: 10px;
                         margin-bottom: 10px;
                         border-width:1px;
@@ -139,13 +149,12 @@
                     <div style="float: right; 
                                 font-family: RobotoSlabRegular;
                                 font-size: 14px;
-                                margin-top: -20px;
+                                margin-top: -10px;
                                 margin-bottom: 30px;
                                 ">
                         {link_all_product}
                     </div>
                 </div>
-                
             </div>
         </div>
     </div>       
