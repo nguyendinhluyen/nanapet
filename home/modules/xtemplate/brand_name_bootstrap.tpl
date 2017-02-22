@@ -149,8 +149,8 @@
                     <div style="float: right; 
                                 font-family: RobotoSlabRegular;
                                 font-size: 14px;
-                                margin-top: -10px;
-                                margin-bottom: 30px;
+                                margin-top: -5px;
+                                margin-bottom: 20px;
                                 ">
                         {link_all_product}
                     </div>

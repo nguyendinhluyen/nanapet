@@ -667,7 +667,11 @@ $proType = $Product->getProductsType($product_detail['p_type']);
     } else {
         $display_brand_short_description = "block";
     }
-    $link_brand_product = "{linkS}thuong-hieu/". $brand_product['adver_id'];
+    
+    $link_brand_product = "";
+    if (!empty($brand_product['adver_id'])) {
+        $link_brand_product = "{linkS}thuong-hieu/". $brand_product['adver_id'];
+    } 
     // End brand product
     
     $productdetail = $xtemplate->replace($productdetail, array(
