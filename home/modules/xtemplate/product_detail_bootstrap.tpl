@@ -201,6 +201,7 @@
                                         <td>
                                             <div>
                                                 <a href="{linknsx}"
+                                                   target="_blank" 
                                                    rel="nofollow"
                                                    style ="font-size: 17px; 
                                                            outline:none; 
@@ -215,6 +216,7 @@
                                 </div>
                                 <div>
                                     <a href="{linknsx}" 
+                                       rel="nofollow"
                                        target="_blank" 
                                        style ="font-size: 14px; outline:none; color:black">{xuatxu}</a>
                                 </div>
