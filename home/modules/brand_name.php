@@ -1,12 +1,11 @@
 <?php	   
     $CONST_TOTAL_MIN_DISPLAY = 0;
     $CONST_TOTAL_MAX_DISPLAY = 15;
-    $title_page =  'Thương hiệu sản phẩm';
     $breadcrumbs_path = '<a href="{linkS}">Trang chủ</a>';
     $idbrand = intval(input($_GET['brandkey']));
     $brand = GetOneRow("adver_webname, adver_logo, description_ads", "ads", 'adver_id='. $idbrand);
     $breadcrumbs_path .= ' &raquo; '.$brand['adver_webname'];
-    
+    $title_page =  'Thương hiệu '.$brand['adver_webname'];
     // Load product
     $elements = 'products_id,
                 products_image,
