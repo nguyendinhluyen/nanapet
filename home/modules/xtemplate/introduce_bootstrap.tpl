@@ -43,8 +43,8 @@
                     padding-right: 0px">
             <div id="breakcrumb" style="font-size:14px;
                                         font-family: RobotoSlabRegular;
-                                        margin-top: 30px;
-                                        margin-bottom: 15px">
+                                        margin-top: 40px;
+                                        margin-bottom: 20px">
                 {breadcrumbs_path}
             </div>
                         
@@ -114,7 +114,7 @@
         </div>
                             
         <div class = "hidden-xs hidden-sm col-md-3 col-lg-3" 
-             style="padding-right: 50px; padding-top: 30px; padding-left: 40px">
+             style="padding-right: 50px; padding-top: 30px; padding-left: 30px">
             <ul class = "main_category">
                 <li class="danhmuc_main">
                     <a href="{linkS}tro-giup/dich-vu-van-chuyen.html" style = "outline:none;">Dịch vụ vận chuyển</a></li>

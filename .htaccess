@@ -52,7 +52,7 @@ RewriteRule ^tim-kiem/tat-ca-san-pham/trang-([0-9]*)$ home/index.php?show=search
 #RewriteRule ^tim-kiem/search_key=([a-zA-Z0-9-]*)/product_page=([0-9]*)&news_page=([0-9]*)$ home/index.php?show=search&product_page=$2&news_page=$3&search_key=$1 [L]
 #RewriteRule ^tim-kiem/key=(.*)/product_page=([0-9]*)&news_page=([0-9]*)&entertainment_page=([0-9]*)&tabID=([0-9]*)$ home/index.php?show=search&product_page=$2&news_page=$3&entertainment_page=$4&tabID=$5&search_box=$1 [L]
 
-RewriteRule ^thuong-hieu/([0-9-]*)$ home/index.php?show=brand-name&brandkey=$1[L]
+RewriteRule ^thuong-hieu/([0-9-]*)$ home/index.php?show=brand_name&brandkey=$1[L]
 RewriteRule ^tat-ca-thuong-hieu/([0-9-]*)/trang-([0-9]*)$ home/index.php?show=search_all_product&brandkey=$1&page=$2 [L]
 
 RewriteRule ^dang-ky$ home/index.php?show=register [L]
@@ -136,6 +136,8 @@ RewriteRule ^tro-giup/([a-zA-Z0-9-]*).html/$ home/index.php?show=help&news_key=$
 
 #gioi thieu
 RewriteRule ^gioi-thieu$ home/index.php?show=introduce [L]
+RewriteRule ^gioi-thieu/tat-ca-thuong-hieu.htm$ home/index.php?show=all_brand_name [L]
+RewriteRule ^gioi-thieu/tat-ca-thuong-hieu/trang-([0-9]*)$ home/index.php?show=all_brand_name&trang=$1 [L]
 RewriteRule ^gioi-thieu/([a-zA-Z0-9-]*).htm$ home/index.php?show=introduce&news_key=$1 [L]
 
 #nhan nuoi pet

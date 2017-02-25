@@ -76,8 +76,15 @@
         case 'search':
             include('modules/search.php');            
             break;
-        case 'brand-name':
+        
+        case 'brand_name':
             include('modules/brand_name.php');            
+            break;
+        
+        case 'all_brand_name':
+            include("modules/category_news_introduce.php");
+            include('modules/all_brand_name.php');             
+            $introduce = "introduce_active";
             break;
         
         case 'search_all_product':            
