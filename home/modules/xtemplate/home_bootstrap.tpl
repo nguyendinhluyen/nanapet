@@ -140,7 +140,8 @@
                     left: 0px;
                     width: 1300px;
                     height: 410px; 
-                    overflow: hidden;">
+                    overflow: hidden;
+                    margin-top: -5px">
             <!-- Loading Screen -->
             <div u="loading" style="position: absolute; 
                                     top: 0px; 
