@@ -53,7 +53,7 @@
                      height="200"/>
             </div>
             <div class ="col-lg-8" 
-                 style="font-family: RobotoSlabRegular; 
+                 style="font-family: RobotoSlabLight; 
                         font-size: 14px !important;">
                 {description_ads}
             </div>
