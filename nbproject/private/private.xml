@@ -20,16 +20,11 @@
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Applications/XAMPP/xamppfiles/htdocs/nanapet/home/index.php</file>
-            <file>file:/Applications/XAMPP/xamppfiles/htdocs/nanapet/include/function.php</file>
             <file>file:/Applications/XAMPP/xamppfiles/htdocs/nanapet/home/modules/xtemplate/all_brand_name_bootstrap.tpl</file>
-            <file>file:/Applications/XAMPP/xamppfiles/htdocs/nanapet/home/modules/brand_name.php</file>
             <file>file:/Applications/XAMPP/xamppfiles/htdocs/nanapet/home/modules/all_brand_name.php</file>
-            <file>file:/Applications/XAMPP/xamppfiles/htdocs/nanapet/admincp_login/include/function_admin.php</file>
             <file>file:/Applications/XAMPP/xamppfiles/htdocs/nanapet/.htaccess</file>
             <file>file:/Applications/XAMPP/xamppfiles/htdocs/nanapet/home/process/process_frame.php</file>
-            <file>file:/Applications/XAMPP/xamppfiles/htdocs/nanapet/index.php</file>
-            <file>file:/Applications/XAMPP/xamppfiles/htdocs/nanapet/home/modules/news_introduce.php</file>
+            <file>file:/Applications/XAMPP/xamppfiles/htdocs/nanapet/home/modules/xtemplate/introduce_bootstrap.tpl</file>
         </group>
     </open-files>
 </project-private>
