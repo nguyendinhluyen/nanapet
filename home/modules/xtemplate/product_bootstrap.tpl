@@ -191,66 +191,6 @@
     </div>
 </div><!-- End Product -->
 
-<!--Begin news -->
-<div class = "container">
-    <div class ="row">
-        <div class ="col-xs-12 col-sm-12 col-md-12 col-lg-12">                    
-           <img alt="banner đời sống pet"
-                src="{linkS}layout/bootstrap/images/doi_song_pet.png" 
-                style = "margin-left: auto;
-                        margin-right: auto; 
-                        display: block;
-                        margin-top: 20px"/>                                    
-        </div>
-    </div>
-</div>
-
-<div class = "container-fluid" style="background-color:#f8f9fb; margin-top: -25px">
-    <div class="container"
-        id="news_container"
-        style="margin-top: 40px; margin-bottom:20px;">
-            <!--BEGINLIST_NEWS-->
-            <!--BEGIN_NEWS-->
-            <li>
-                <div class="news_detail">                                            
-                    <div class="news_col" style = "float:left">
-                        <a href="{linkS}doi-song-pets/{news_key}/" style = "outline:none">
-                            <img alt="{news_name}"
-                                src="{linkS}upload/news/{news_image}"
-                                width="130"
-                                height="130"
-                                style="border-radius: 10px"/>
-                        </a>
-                    </div><!-- end product_right_col -->
-
-                    <div class="news_title">
-                        <div style="font-size: 14px; color: #929292;">
-                            <a class = "news_name" href="{linkS}doi-song-pets/{news_key}/" 
-                               style="line-height: 25px;                                
-                                    font-family: RobotoSlabRegular;
-                                    font-size: 14px;
-                                    outline:none">
-                                {news_name}
-                            </a>
-                        </div>
-                    </div>
-                </div><!-- end news_detail -->
-            </li>
-            <!--END_NEWS-->
-            <!--ENDLIST_NEWS-->
-            <a href="{linkS}doi-song-pets">
-                <img alt="xem nhiều hơn"
-                    src="{linkS}layout/bootstrap/images/xem_nhieu_hon.png"
-                    style = "margin-left: auto;
-                            margin-right: auto;
-                            display: block;
-                            margin-top: 20px;
-                            margin-bottom: 20px"/>
-            </a>
-    </div>
-</div>
-<!--End news -->
-
 <!-- Begin San Pham Theo Nhan Hieu-->
 <div class = "container">
     <br/>    
@@ -331,4 +271,64 @@
     <br/>
     <br/>
 </div>
-<!-- End Logo Slider-->               
+<!-- End Logo Slider-->    
+
+<!--Begin news -->
+<div class = "container">
+    <div class ="row">
+        <div class ="col-xs-12 col-sm-12 col-md-12 col-lg-12">                    
+           <img alt="banner đời sống pet"
+                src="{linkS}layout/bootstrap/images/doi_song_pet.png" 
+                style = "margin-left: auto;
+                        margin-right: auto; 
+                        display: block;
+                        margin-top: 20px"/>                                    
+        </div>
+    </div>
+</div>
+
+<div class = "container-fluid" style="background-color:#f8f9fb; margin-top: -25px">
+    <div class="container"
+        id="news_container"
+        style="margin-top: 40px; margin-bottom:20px;">
+            <!--BEGINLIST_NEWS-->
+            <!--BEGIN_NEWS-->
+            <li>
+                <div class="news_detail">                                            
+                    <div class="news_col" style = "float:left">
+                        <a href="{linkS}doi-song-pets/{news_key}/" style = "outline:none">
+                            <img alt="{news_name}"
+                                src="{linkS}upload/news/{news_image}"
+                                width="130"
+                                height="130"
+                                style="border-radius: 10px"/>
+                        </a>
+                    </div><!-- end product_right_col -->
+
+                    <div class="news_title">
+                        <div style="font-size: 14px; color: #929292;">
+                            <a class = "news_name" href="{linkS}doi-song-pets/{news_key}/" 
+                               style="line-height: 25px;                                
+                                    font-family: RobotoSlabRegular;
+                                    font-size: 14px;
+                                    outline:none">
+                                {news_name}
+                            </a>
+                        </div>
+                    </div>
+                </div><!-- end news_detail -->
+            </li>
+            <!--END_NEWS-->
+            <!--ENDLIST_NEWS-->
+            <a href="{linkS}doi-song-pets">
+                <img alt="xem nhiều hơn"
+                    src="{linkS}layout/bootstrap/images/xem_nhieu_hon.png"
+                    style = "margin-left: auto;
+                            margin-right: auto;
+                            display: block;
+                            margin-top: 20px;
+                            margin-bottom: 20px"/>
+            </a>
+    </div>
+</div>
+<!--End news -->
