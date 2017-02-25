@@ -286,13 +286,13 @@
                                         line-height: 25px;
                                         font-family: RobotoSlabRegular;
                                         font-size: 14px;">
-                                - Free ship nội thành HCM cho HĐ từ <span style="color:red">400K</span> <br>
+                                - Free ship nội thành HCM cho HĐ NanaPet từ 400K* <br>
                                 - Miễn phí đổi trả sản phẩm đến 10 ngày - 
                                 <a href="{linkS}tro-giup/doi-tra-san-pham.html" target="_blank">chi tiết</a> <br>
                                 - Nhận giao hàng và COD toàn quốc - 
                                 <a href="{linkS}tro-giup/dich-vu-van-chuyen.html" target="_blank">chi tiết</a> <br>
                                 - Khách hàng có thể đến mua trực tiếp tại Văn Phòng Kho, 21/11 Tự Lập P.4 Q. Tân Bình, TP HCM <br>                                
-                                </div>  
+                                </div>
                             </div>
                         </div><!-- end detail2 -->
                     </form>                                                 
