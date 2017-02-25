@@ -2,7 +2,7 @@
     // Check link thuong hieu san pham
     $fullUrl = explode("/",$_SERVER['REQUEST_URI']);
     if (isset($fullUrl[2])) {
-        if ($fullUrl[2] === "tat-ca-thuong-hieu.htm") {
+        if ($fullUrl[2] === "tat-ca-thuong-hieu.htm" || $fullUrl[2] === "tat-ca-thuong-hieu") {
             $id_brand_name_main = "selected";
         }
     }

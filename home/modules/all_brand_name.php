@@ -57,7 +57,7 @@
     $content = $xtemplate->load('all_brand_name_bootstrap');
     $tpl_temp = '<div class="row" id="product_main">
                         <div class = "col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                            <ul style ="margin-left: -35px">';
+                            <ul style ="margin-left: -30px">';
     $flag = 0;
     $block = $xtemplate->get_block_from_str($content, 'PRODUCT');
     for ($i = 0; $i < $n; ++$i) {
@@ -73,7 +73,7 @@
             $tpl .= $tpl_temp . '</div></div>';
             $tpl_temp = '<div class="row" id="product_main">
                                 <div class = "col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                    <ul style ="margin-left: -35px">';
+                                    <ul style ="margin-left: -30px">';
         }
     }
 

@@ -34,7 +34,7 @@
             <div id="breakcrumb" style="font-size:14px;
                                         font-family: RobotoSlabRegular;
                                         margin-top: 40px;
-                                        margin-left: 25px">
+                                        margin-left: 32px">
                 {breadcrumbs_path}
             </div>
             <div class="product_main">
