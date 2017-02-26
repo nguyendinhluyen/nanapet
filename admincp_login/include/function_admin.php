@@ -339,69 +339,56 @@ function catlist($id) {
 
 function CatlistUpgrade($id) {
     $array_category = split(",", $id);
-
     global $mysql;
-
     $sql = "SELECT categories_id , categories_name 
-			FROM categories 
-			WHERE level = 1 AND categories_status = '1'
-			                AND language = '" . $_SESSION['lag'] . "'";
-
+            FROM categories 
+            WHERE level = 1 AND categories_status = '1'
+                            AND language = '" . $_SESSION['lag'] . "' ORDER BY sort_order ASC";
     $mysql->setQuery($sql);
-
     $result = $mysql->query();
-
     $select = "<div class='multiselect'>";
-
     while ($row = mysql_fetch_assoc($result)) {
         $sql2 = "SELECT categories_id,categories_name 
-				 FROM categories 
-				 WHERE level = 2 AND categories_status = '1'
-				                 AND parent_id ='" . $row['categories_id']
-                . "' AND language = '" . $_SESSION['lag'] . "'";
-
+                FROM categories 
+                WHERE level = 2 AND categories_status = '1'
+                                AND parent_id ='" . $row['categories_id']
+                                . "' AND language = '" . $_SESSION['lag'] . "' ORDER BY sort_order ASC";
         $mysql->setQuery($sql2);
-
         $result2 = $mysql->query();
-
         if (mysql_num_rows($result2) > 0) {
             $select .= "<label style='width:350px'> <b>" . $row['categories_name'] . "</b></label>";
-
             while ($row2 = mysql_fetch_assoc($result2)) {
                 $flag = 0;
-
                 for ($i = 0; $i < count($array_category); $i++) {
                     if ($array_category[$i] == $row2['categories_id']) {
                         $select .= "<label style = 'width:300px'>
-										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-										<input checked type='checkbox' 										  
-											   name='option[]' 
-											   value='" . $row2['categories_id'] . "'/>" .
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <input checked type='checkbox' 										  
+                                               name='option[]' 
+                                               value='" . $row2['categories_id'] . "'/>" .
                                 $row2['categories_name']
                                 . "</label> ";
                         $flag = 1;
                     }
                 }
-
                 if ($flag == 0) {
                     $select .="<label style = 'width:300px'>	
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-									<input type='checkbox' 										  
-										   name='option[]' 
-										   value='" . $row2['categories_id'] . "'/>" .
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type='checkbox' 										  
+                                       name='option[]' 
+                                       value='" . $row2['categories_id'] . "'/>" .
                             $row2['categories_name']
                             . "</label> ";
                 }
             }
         } else {
             $flag = 0;
-
             for ($i = 0; $i < count($array_category); $i++) {
                 if ($array_category[$i] == $row['categories_id']) {
                     $select .= "<label style = 'width:300px'>	
-									<input checked type='checkbox' 										  
-										   name='option[]' 
-										   value='" . $row['categories_id'] . "'/>" .
+                        <input checked type='checkbox' 										  
+                                   name='option[]' 
+                                   value='" . $row['categories_id'] . "'/>" .
                             "<b>" . $row['categories_name'] . "</b>"
                             . "</label> ";
                     $flag = 1;
@@ -410,17 +397,15 @@ function CatlistUpgrade($id) {
 
             if ($flag == 0) {
                 $select .= "<label style = 'width:300px'>	
-								<input type='checkbox' 										  
-									   name='option[]' 
-									   value='" . $row['categories_id'] . "'/>" .
+                        <input type='checkbox' 										  
+                                   name='option[]' 
+                                   value='" . $row['categories_id'] . "'/>" .
                         "<b>" . $row['categories_name'] . "</b>"
                         . "</label> ";
             }
         }
     }
-
     $select .= "</div>";
-
     return $select;
 }
 
