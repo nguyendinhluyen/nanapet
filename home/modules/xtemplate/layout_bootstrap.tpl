@@ -137,7 +137,7 @@
             opacity: 1;
         }
         @media only screen and (min-width: 768px) {
-            .cd-top {                
+            .cd-top {
                 right: 5px;            
                 bottom: 220px;
             }
@@ -213,7 +213,7 @@
     <body>
         <header style="padding-top: 10px;">	
             <!-- begin div header-->
-            <div class ="container" style="padding-bottom:10px">
+            <div class ="container" style="padding-bottom:40px">
                 <div class ="row" 
                      style="margin-left: auto; 
                             margin-right: auto; 
@@ -221,27 +221,10 @@
                             margin-top: 5px">
                     <div class ="col-xs-5 col-sm-5 col-md-2 col-lg-2"
                          style="padding-left: 20px">
-                        <table>
-                            <tr>                    
-                                <td>
-                                    <img src="{linkS}layout/bootstrap/images/zalo.png" 
-                                         alt="zalo" 
-                                         height="17px"/>&nbsp;&nbsp;
-                                </td>
-                                <td>
-                                    <img src="{linkS}layout/bootstrap/images/viber.png"
-                                         alt="viber" 
-                                         height="17px"/>&nbsp;&nbsp;
-                                </td>
-                                <td>
-                                    <span style="font-family: RobotoSlabRegular;
-                                                 font-size: 14px;
-                                                 color: #a88c79;">
-                                        <b><A name="section0">0933 103 203</A></b>
-                                    </span>
-                                </td>
-                            </tr>
-                        </table>                                                            
+                        <A name="section0">
+                            <img src="{linkS}layout/bootstrap/images/support_free.jpg" 
+                                alt="Tư vấn miễn phí" />
+                        </A>
                     </div>
 
                     <div class ="col-md-6 col-lg-6">
@@ -272,12 +255,27 @@
                                                    name="submit"
                                                    style="outline:none;                                              
                                                           border:0px;  
-                                                          width: 20px;
+                                                          width: 35px;
+                                                          height: 32px;
                                                           margin-left: -10px;
                                                           background:url('{linkS}layout/bootstrap/images/search_button.png') no-repeat left center;"
                                                    onclick="checkForm();">
                                         </td>
-                                    </tr>                                    
+                                    </tr>    
+                                    <tr>
+                                        <td style="color: #a88c79; 
+                                                    padding-top: 15px;
+                                                    font-family: RobotoSlabLight;
+                                                    font-size: 14px;
+                                                    padding-left: 50px;">
+                                            <img alt="giao hàng"
+                                                src="{linkS}layout/bootstrap/images/deliver.png" 
+                                                style = "float:left; margin-top: -2px;"> 
+                                            <span style="margin-left: 7px">
+                                            FREE SHIP nội thành SG cho HĐ từ 400k & hỗ trợ cho HĐ từ 200k
+                                            </span>
+                                        </td>
+                                    </tr>
                                 </table>                                                                
                             </form>
                         </div><!-- end search -->
@@ -453,7 +451,9 @@
                         height:auto;
                         padding:0px">
                 <div class ="container"
-                     style ="padding-top: 40px; padding-left: 40px; padding-right: 40px">
+                     style ="padding-top: 40px; 
+                            padding-left: 40px; 
+                            padding-right: 40px">
                     <div class ="row">
                         <!--NanaPet Support-->
                         <div class ="col-xs-12 col-sm-12 col-md-3 col-lg-3" 
@@ -667,8 +667,73 @@
                             </div>
                         </div>
                     </div> 
-                    <hr  style = "margin-top: 20px;
-                                margin-bottom: 14px;
+                    <div class ="row">
+                        <div class ="col-xs-12 col-sm-12 col-md-8 col-lg-8" 
+                             style="padding-left: 20px; line-height: 25px">
+                            <div style ="font-family:RobotoSlabBold;
+                                        font-weight:bold;
+                                        font-size:14px;
+                                        margin-top: 20px;
+                                        margin-bottom: 10px;
+                                        padding-right: 20px;
+                                        font-weight: bold;
+                                        color:#000;">
+                                CHẤP NHẬN THANH TOÁN VỚI NGÂN HÀNG
+                            </div>
+                            <div style="clear:both">
+                                <a href="{linkS}tro-giup/cach-thuc-thanh-toan.html"
+                                   target ="_blank">
+                                    <img alt="ngân hàng"
+                                        src="{linkS}layout/bootstrap/images/bank.jpg" 
+                                        style = "float:left; 
+                                                 margin-top: -2px;
+                                                 margin-left: -10px"> 
+                                </a>
+                            </div>
+                            <div style ="font-family:RobotoSlabBold;
+                                        font-weight:bold;
+                                        font-size:14px;
+                                        padding-top: 10px;
+                                        margin-bottom: 10px;
+                                        padding-right: 20px;
+                                        font-weight: bold;
+                                        color:#000;
+                                        clear:both">
+                                ĐỐI TÁC / DỊCH VỤ GIAO HÀNG 
+                            </div>
+                            <div style="clear:both">
+                                <a href="{linkS}tro-giup/dich-vu-van-chuyen.html"
+                                    target ="_blank">
+                                     <img alt="ngân hàng"
+                                         src="{linkS}layout/bootstrap/images/shipping.jpg" 
+                                         style = "float:left; 
+                                                  margin-top: -2px;
+                                                  margin-left: -10px"> 
+                                </a>                            
+                            </div>
+                        </div>
+                        <div class ="col-xs-12 col-sm-12 col-md-4 col-lg-4" 
+                             style="padding-left: 20px; 
+                                    line-height: 25px; 
+                                    margin-top:25px; 
+                                    margin-left: -15px">
+                            <div class="fb-page" 
+                                data-href="https://www.facebook.com/NanaPetOnline" 
+                                data-tabs="timeline" 
+                                data-small-header="false" 
+                                data-adapt-container-width="true" 
+                                data-hide-cover="false" 
+                                data-show-facepile="true"
+                                data-width = "338"
+                                data-height = "370">
+                                <blockquote cite="https://www.facebook.com/NanaPetOnline" 
+                                class="fb-xfbml-parse-ignore">
+                                <a href="https://www.facebook.com/NanaPetOnline">NanaPet</a></blockquote>
+                            </div>
+                        </div>
+                    </div>       
+                    <hr  style = "margin-top: 40px;
+                                margin-bottom: 20px;
                                 border-width:1px;                                                
                                 border-color:white;  
                                 float:left;
@@ -714,7 +779,7 @@
                 <div class="container-fluid"
                      style="background-color:#b2d9d4;
                             padding-top: 10px;
-                            padding-bottom: 10px">
+                            padding-bottom: 20px">
                     <div class="row" 
                          style="font-family: RobotoSlabRegular;  
                                 line-height: 20px;
