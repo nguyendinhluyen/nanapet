@@ -49,13 +49,12 @@
         <div class ="col-lg-12" style="margin-bottom: 20px">
             <div class ="col-lg-4" style="padding-left: 0px">
                 <img alt="{adver_webname}" src="{linkS}upload/adver/thumb/{adver_logo}" 
-                     width = "250" 
+                     width = "250"
                      height="200"/>
             </div>
             <div class ="col-lg-8" 
-                 style="font-family: RobotoSlabLight; 
-                        font-size: 14px !important;">
-                {description_ads}
+                 style="font-family: RobotoSlabLight; ">
+                <h1 style="font-size: 14px !important;">{description_ads}</h1>
             </div>
         </div>
            
