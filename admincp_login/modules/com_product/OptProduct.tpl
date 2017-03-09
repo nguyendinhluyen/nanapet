@@ -66,6 +66,7 @@
             elSel.add(elOptNew, 0);//elOptOld); standards compliant; doesn't work in IE
         } catch (ex) {
             elSel.add(elOptNew, elSel.selectedIndex); // IE only
+        }
     }
     
     function removeOptionSelectedColor() {
