@@ -44,7 +44,7 @@
 .nav {   
     text-align: center;
     line-height: 35px;
-    color: #5b5b5b;    
+    color: #5b5b5b;
     font-family:PoetsenOne;
     font-size: 20px;
     padding-top: 10px;    
@@ -57,7 +57,7 @@ ul.nav li a,ul.nav li{
     color: #5b5b5b;
 }
 ul.nav li a.home{
-  width: 50px;  
+    width: 50px;  
 }
 ul.nav li a.home:hover{  
     background-color: transparent;
@@ -580,4 +580,8 @@ ul.nav_menu_bottom li a,ul.nav_menu_bottom li{
 }
 ul.nav_menu_bottom li a:hover {
     text-decoration: none;
+}
+
+#cfacebook {
+    right: 0px !important;
 }

@@ -122,8 +122,7 @@
         case 'cart':
         case 'register':
         case 'login':
-            $html = $xtemplate->replace($html, array
-                (
+            $html = $xtemplate->replace($html, array (
                 'chatlive' => "",
             ));
             break;
