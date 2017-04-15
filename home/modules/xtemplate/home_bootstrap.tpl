@@ -404,7 +404,7 @@
             <a href="{linkS}danh-rieng-cho-cho-cung-319/">
                 <img alt="{brand_dog}" 
                     src="{linkS}layout/bootstrap/images/san_pham_banner_cun_cung.jpg" 
-                    width="480" 
+                    width="460" 
                     height="505"
                     style = "margin-left: -12px; 
                             cursor: pointer;"
@@ -554,7 +554,7 @@
         <div class = "hidden-xs hidden-sm hidden-md col-lg-4">
             <a href="{linkS}danh-rieng-cho-meo-yeu-321/">
                 <img src="{linkS}layout/bootstrap/images/san_pham_banner_meo_cung.jpg"
-                     width="480" 
+                     width="460" 
                      height="505"
                      alt="{brand_cat}"
                      style="margin-left: -12px; 
