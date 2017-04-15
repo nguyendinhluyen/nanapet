@@ -259,16 +259,22 @@
 
 <!--Begin combo Ban Chay Nhat-->
 <div class="container">
-    <div class="row" style="padding-bottom: 10px; margin-right: 0px">
+    <div class="row"
+         style="padding-bottom: 10px; padding-right: 0px">
         <div class = "col-xs-12 col-sm-12 col-md-12 col-lg-12" 
-             style = "padding-bottom: 40px;
-             margin-right: 0px">
-            <img alt="sản phẩm bán chạy"
-                 src="{linkS}layout/bootstrap/images/combo_ban_chay_nhat.png"
-                 style = "display:block; 
-                 margin-left: auto;
-                 margin-right: auto;
-                 width: 100%;">
+            style="padding-bottom: 40px;
+                padding-right: 0px;
+                padding-left: 0px">
+            <img class="hidden-xs hidden-sm" 
+                alt="sản phẩm bán chạy"
+                src="{linkS}layout/bootstrap/images/combo_ban_chay_nhat.png"
+                style = "width: 100%;">
+            <img class="hidden-lg hidden-md"
+                alt="sản phẩm bán chạy"
+                src="{linkS}layout/bootstrap/images/combo_ban_chay_nhat_mobile.png"
+                style="width: 100%;
+                    margin-top: 10px;
+                    padding-left: 15px">
         </div>
         <!--BEGINLIST_BESTCOMBOPRODUCTS-->
         <!--BEGIN_BESTCOMBOPRODUCTS-->
@@ -315,15 +321,20 @@
         <!--End combo Ban Chay Nhat-->
 
         <!--Begin San Pham Ban Chay-->
-
         <div class = "col-xs-12 col-sm-12 col-md-12 col-lg-12" 
-             style = "padding-bottom: 40px; margin-right: 0px">
-            <img alt="sản phẩm bán chạy"
-                 src="{linkS}layout/bootstrap/images/san_pham_ban_chay.png"
-                 style = "display:block; 
-                 margin-left: auto; 
-                 margin-right: auto;
-                 width: 100%;"/>
+            style = "padding-bottom: 40px; 
+                    padding-right: 0px;
+                    padding-left: 0px">
+            <img class="hidden-xs hidden-sm"
+                alt="sản phẩm bán chạy"
+                src="{linkS}layout/bootstrap/images/san_pham_ban_chay.png"
+                style = "width: 100%;"/>
+            <img class="hidden-lg hidden-md"
+                alt="sản phẩm bán chạy"
+                src="{linkS}layout/bootstrap/images/san_pham_ban_chay_mobile.png"
+                style="width: 100%;
+                    margin-top: 20px;
+                    padding-left: 15px">
         </div>
         <!--BEGINLIST_HOTPRODUCTSNEW-->
         <!--BEGIN_HOTPRODUCTSNEW-->
@@ -371,31 +382,37 @@
         <!--End San Pham Ban Chay-->
 
         <!--Begin San Pham Cun Cung-->
-        <div class = "col-xs-12 col-sm-12 col-md-12 col-lg-12"
-             style = "padding-bottom: 50px; margin-right: 0px;
-             padding-top: 20px">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"
+             style="padding-top: 20px;
+                    padding-bottom: 50px;
+                    padding-right: 0px;
+                    padding-left: 0px;">
             <a href="{linkS}danh-rieng-cho-cho-cung-319/">
-                <img alt="sản phẩm cún cưng"
-                     src="{linkS}layout/bootstrap/images/san_pham_cun_cung.png"
-                     style = "display:block;
-                     margin-left: auto; 
-                     margin-right: auto;
-                     width: 100%;"/>
+                <img class="hidden-xs hidden-sm"
+                    alt="sản phẩm cún cưng"
+                    src="{linkS}layout/bootstrap/images/san_pham_cun_cung.png"
+                    style="width: 100%;"/>
+                <img class="hidden-lg hidden-md"
+                    alt="sản phẩm bán chạy"
+                    src="{linkS}layout/bootstrap/images/danh_cho_cun_cung_mobile.png"
+                    style="width: 100%;
+                        margin-top:20px;
+                        padding-left: 15px">
             </a>
         </div>
         <div class = "hidden-xs hidden-sm hidden-md col-lg-4">
             <a href="{linkS}danh-rieng-cho-cho-cung-319/">
                 <img alt="{brand_dog}" 
-                     src="{linkS}layout/bootstrap/images/san_pham_banner_cun_cung.jpg" 
-                     width="480" 
-                     height="505"
-                     style = "margin-left: -12px; 
-                     cursor: pointer;"
-                     class="img-rounded"/>
+                    src="{linkS}layout/bootstrap/images/san_pham_banner_cun_cung.jpg" 
+                    width="480" 
+                    height="505"
+                    style = "margin-left: -12px; 
+                            cursor: pointer;"
+                    class="img-rounded"/>
             </a>
         </div>
         <div class = "col-lg-8" 
-             style="padding-left: 10px">    
+            style="padding-left: 10px">
             <!--BEGINLIST_DOGPRODUCTSNEW-->
             <!--BEGIN_DOGPRODUCTSNEW-->
             <li>
@@ -442,12 +459,12 @@
         </div>
         <div class = "col-xs-12 col-sm-12 col-md-12 col-lg-12"
              style="font-family: PoetsenOne; 
-             font-size: 15px;
-             text-align: right;
-             background-color: #FFF;
-             line-height: 50px;
-             width: 100%;
-             margin-right: 0px">
+                    font-size: 15px;
+                    text-align: right;
+                    background-color: #FFF;
+                    line-height: 50px;
+                    width: 100%;
+                    margin-right: 0px">
             <a href="{linkS}danh-rieng-cho-cho-cung-319/" 
                style="color:#ff767d;">
                 Xem tất cả sản phẩm cún cưng >>
@@ -515,16 +532,23 @@
         <!--Begin San Pham Meo Cung-->
         <div class = "col-xs-12 col-sm-12 col-md-12 col-lg-12"
              style = "padding-bottom: 40px;
-             padding-bottom: 10px; 
-             padding-top: 50px;
-             margin-right: 0px">
+                    padding-bottom: 10px; 
+                    padding-right: 0px;
+                    padding-left: 0px">
             <a href="{linkS}danh-rieng-cho-meo-yeu-321/">
-                <img alt="sản phẩm cún cưng"
-                     src="{linkS}layout/bootstrap/images/san_pham_meo_cung.png"
-                     style = "display:block; 
-                     margin-left: auto; 
-                     margin-right: auto;
-                     width: 100%;"/>
+                <img class="hidden-xs hidden-sm"
+                    alt="sản phẩm cún cưng"
+                    src="{linkS}layout/bootstrap/images/san_pham_meo_cung.png"
+                    style="width: 100%;
+                           padding-top: 50px;
+                           padding-bottom: 50px;"/>
+                <img class="hidden-lg hidden-md"
+                    alt="sản phẩm bán chạy"
+                    src="{linkS}layout/bootstrap/images/danh_cho_meo_cung_mobile.png"
+                    style="width: 100%;
+                        margin-top:20px;
+                        margin-bottom: 20px;
+                        padding-left: 15px">
             </a>
         </div>
         <div class = "hidden-xs hidden-sm hidden-md col-lg-4">
@@ -533,8 +557,8 @@
                      width="480" 
                      height="505"
                      alt="{brand_cat}"
-                     style = "margin-left: -12px; 
-                     cursor: pointer;"
+                     style="margin-left: -12px; 
+                            cursor: pointer;"
                      class="img-rounded"/>
             </a>
         </div>
@@ -586,12 +610,12 @@
         </div>
         <div class = "col-xs-12 col-sm-12 col-md-12 col-lg-12"
              style="font-family: PoetsenOne; 
-             font-size: 15px;                     
-             text-align: right;
-             background-color: #FFF;
-             line-height: 50px;
-             width: 100%;
-             margin-right: 0px">
+                    font-size: 15px;                     
+                    text-align: right;
+                    background-color: #FFF;
+                    line-height: 50px;
+                    width: 100%;
+                    margin-right: 0px">
             <a href="{linkS}danh-rieng-cho-meo-yeu-321/" 
                style="color:#ff767d;">
                 Xem tất cả sản phẩm mèo cưng >>
@@ -631,10 +655,10 @@
                         <div class="news_col" style = "float:left">                    
                             <a href="{linkS}doi-song-pets/{news_key}/" style = "outline:none">
                                 <img src="{linkS}upload/news/{news_image}"
-                                     width="130"
-                                     height="130"
-                                     alt="{news_name}"
-                                     style="border-radius: 10px"/>
+                                    width="130"
+                                    height="130"
+                                    alt="{news_name}"
+                                    style="border-radius: 10px"/>
                             </a>
                         </div><!-- end product_right_col -->
 
@@ -642,9 +666,9 @@
                             <div style="font-size: 14px; color: #929292;">
                                 <a class = "news_name" href="{linkS}doi-song-pets/{news_key}/" 
                                    style="line-height: 25px;                                
-                                   font-family: RobotoSlabRegular;
-                                   font-size: 14px;
-                                   outline:none">
+                                        font-family: RobotoSlabRegular;
+                                        font-size: 14px;
+                                        outline:none">
                                     {news_name}
                                 </a>
                             </div>
@@ -660,16 +684,23 @@
         <!--Begin Tu thuoc phong than cho-->
         <div class = "col-xs-12 col-sm-12 col-md-12 col-lg-12" 
              style = "padding-bottom: 40px; 
-             padding-bottom: 10px; 
-             padding-top: 50px;
-             margin-right: 0px">
+                    padding-bottom: 10px; 
+                    padding-right: 0px;
+                    padding-left: 0px">
             <a href="{linkS}tu-thuoc-pet-phong-than-339/">
-                <img alt="tủ thuốc phòng thân cho thú cưng"
-                     src="{linkS}layout/bootstrap/images/tu_thuoc_phong_than.png"
-                     style = "display:block; 
-                     margin-left:auto; 
-                     margin-right:auto;
-                     width: 100%;"/>
+                <img class="hidden-xs hidden-sm" 
+                    alt="tủ thuốc phòng thân cho thú cưng"
+                    src="{linkS}layout/bootstrap/images/tu_thuoc_phong_than.png"
+                    style="width: 100%;
+                           padding-top: 50px;
+                           padding-bottom: 50px"/>
+                <img class="hidden-lg hidden-md"
+                    alt="tủ thuốc phòng thân cho thú cưng"
+                    src="{linkS}layout/bootstrap/images/tu_thuoc_phong_than_mobile.png"
+                    style="width: 100%;
+                        margin-top:20px;
+                        margin-bottom: 20px;
+                        padding-left: 15px">
             </a>
         </div>
         <!--BEGINLIST_MEDICINEPRODUCTSNEW-->
@@ -718,19 +749,19 @@
         <!--ENDLIST_MEDICINEPRODUCTSNEW-->
         <div class = "col-xs-12 col-sm-12 col-md-12 col-lg-12"
              style="font-family: PoetsenOne; 
-             font-size: 17px;                     
-             text-align: center;                    
-             line-height: 50px;
-             width: 100%;
-             margin-right: 0px">
+                    font-size: 17px;                     
+                    text-align: center;                    
+                    line-height: 50px;
+                    width: 100%;
+                    margin-right: 0px">
             <a href="{linkS}tu-thuoc-pet-phong-than-339/" 
                style="color:#ff767d;">
                 <img alt="xem tất cả"
                      src="{linkS}layout/bootstrap/images/xem_tat_ca_thuoc.png" 
                      style= "display:block; 
-                     margin-left: auto; 
-                     margin-right: auto;
-                     width: 180px;"/>
+                        margin-left: auto; 
+                        margin-right: auto;
+                        margin-top: 50px"/>
             </a>
         </div>
         <!--End Tu thuoc phong than cho-->
@@ -740,9 +771,9 @@
             <img alt="sản phẩm theo nhãn hàng"
                  src="{linkS}layout/bootstrap/images/cac_san_pham_theo_nhan_hang.png" 
                  style = "display:block;
-                 margin-left: auto;
-                 margin-right: auto;
-                 width: 100%;"/>       
+                        margin-left: auto;
+                        margin-right: auto;
+                        width: 100%;"/>       
 
         </div>
         <!-- End San Pham Theo Nhan Hieu-->

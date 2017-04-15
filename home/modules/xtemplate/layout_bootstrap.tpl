@@ -359,12 +359,12 @@
                             
                         </div>
                     </div> 
-                    <div class="row" style="margin-top: 10px">
+                    <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="collapse" id="collapsemenu">
-                                <ul style="margin-top: 10px;
-                                           font-family: RobotoSlabBold;
-                                           padding-left: 0px;">
+                                <ul style="font-family: RobotoSlabBold;
+                                           padding-left: 0px;
+                                           margin-top: 7px">
                                     <li><a class="home" 
                                            href="{linkS}"
                                            style="outline: none; color: #000">Trang chủ</a></li>
@@ -417,14 +417,15 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row" style="margin-top: 10px; margin-bottom: 10px">
                         <form name ="form_search" action="{linkS}tim-kiem/trang-1" method="POST">
-                            <div class="col-xs-10 col-sm-10 col-md-10">
+                            <div class="col-xs-10 col-sm-11 col-md-11"
+                                 style="padding-right:0px">
                                 <input type='search'
                                     name="search_box"
                                     id="search_box"
                                     placeholder='Tìm kiếm sản phẩm'
-                                    class ="form-control"phẩm
+                                    class ="form-control"
                                     onkeydown="myKeyDown();"
                                     style ="font-family:RobotoSlabRegular;
                                             color:#a88c79;
@@ -433,13 +434,13 @@
                                             width: 100%;"
                                     maxlength="50">
                             </div>
-                            <div class="col-xs-2 col-sm-2 col-md-2">
+                            <div class="col-xs-2 col-sm-1 col-md-1">
                                 <input class="search_button"
                                     type="submit" 
                                     value=""
                                     name="submit"
                                     style="outline:none;                                              
-                                           float: right;
+                                           float: left;
                                            width: 35px;
                                            border: 0px;
                                            height: 32px;
