@@ -419,7 +419,7 @@
                     </div>
                     <div class="row" style="margin-top: 10px; margin-bottom: 10px">
                         <form name ="form_search" action="{linkS}tim-kiem/trang-1" method="POST">
-                            <div class="col-xs-10 col-sm-11 col-md-11"
+                            <div class="col-xs-10 col-sm-10 col-md-11"
                                  style="padding-right:0px">
                                 <input type='search'
                                     name="search_box"
@@ -434,7 +434,7 @@
                                             width: 100%;"
                                     maxlength="50">
                             </div>
-                            <div class="col-xs-2 col-sm-1 col-md-1">
+                            <div class="col-xs-2 col-sm-2 col-md-1">
                                 <input class="search_button"
                                     type="submit" 
                                     value=""

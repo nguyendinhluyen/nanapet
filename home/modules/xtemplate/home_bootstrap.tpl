@@ -115,7 +115,7 @@
                 var jssor_slider1 = new $JssorSlider$("slider1_container", options);
 
                 //responsive code begin
-                //you can remove responsive code if you don't want the slider scales while window resizes
+                //you can remove responsive code if you don't buttonwant the slider scales while window resizes
                 function ScaleSlider() {
                     var bodyWidth = document.body.clientWidth;
                     if (bodyWidth)
@@ -260,7 +260,7 @@
 <!--Begin combo Ban Chay Nhat-->
 <div class="container">
     <div class="row"
-         style="padding-bottom: 10px; padding-right: 0px">
+         style="padding-bottom: 10px; margin-right: 0px">
         <div class = "col-xs-12 col-sm-12 col-md-12 col-lg-12" 
             style="padding-bottom: 40px;
                 padding-right: 0px;
@@ -756,18 +756,29 @@
                     margin-right: 0px">
             <a href="{linkS}tu-thuoc-pet-phong-than-339/" 
                style="color:#ff767d;">
-                <img alt="xem tất cả"
-                     src="{linkS}layout/bootstrap/images/xem_tat_ca_thuoc.png" 
-                     style= "display:block; 
-                        margin-left: auto; 
+                <img class="hidden-xs hidden-sm hidden-md" 
+                    alt="xem tất cả"
+                    src="{linkS}layout/bootstrap/images/xem_tat_ca_thuoc.png" 
+                    style= "display:block; 
+                       margin-left: auto; 
+                       margin-right: auto;
+                       margin-top: 50px;
+                       margin-bottom: 50px"/>
+                <img class="hidden-lg"
+                    alt="xem tất cả"
+                    src="{linkS}layout/bootstrap/images/xem_tat_ca_thuoc.png" 
+                    style= "display:block; 
+                        margin-left: auto;
                         margin-right: auto;
-                        margin-top: 50px"/>
+                        margin-top: 15px;
+                        margin-bottom: 10px"/>
             </a>
         </div>
         <!--End Tu thuoc phong than cho-->
 
         <!-- Begin San Pham Theo Nhan Hieu-->
-        <div class ="col-lg-12 hidden-xs hidden-sm hidden-md" style="margin-top: 50px;margin-right: 0px">
+        <div class ="col-lg-12 hidden-xs hidden-sm hidden-md" 
+             style="margin-right: 0px">
             <img alt="sản phẩm theo nhãn hàng"
                  src="{linkS}layout/bootstrap/images/cac_san_pham_theo_nhan_hang.png" 
                  style = "display:block;
