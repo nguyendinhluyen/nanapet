@@ -143,7 +143,7 @@ for ($i = 0; $i < $n; ++$i) {
 }
 $home = $xtemplate->assign_blocks_content($home, array(
     'BESTCOMBOPRODUCTS' => $tpl
-        ));
+));
 
 // Get all Best Sell Products
 $Product = new Product();
@@ -218,7 +218,7 @@ for ($i = 0; $i < $n; ++$i) {
 }
 $home = $xtemplate->assign_blocks_content($home, array(
     'HOTPRODUCTSNEW' => $tpl
-        ));
+));
 
 // Show Dog products
 $condition = " AND species='10' "; // 10: Dog, 01: Cat
@@ -292,7 +292,7 @@ for ($i = 0; $i < $n; ++$i) {
 }
 $home = $xtemplate->assign_blocks_content($home, array(
     'DOGPRODUCTSNEW' => $tpl
-        ));
+));
 
 // Load Dog news
 $News = new News();
@@ -323,7 +323,7 @@ for ($i = 0; $i < $n; ++$i) {
 }
 $home = $xtemplate->assign_blocks_content($home, array(
     'DOGNEWS' => $tpl
-        ));
+));
 
 // Show Cat product    
 $condition = " AND species='01' "; // 10: Dog, 01: Cat
@@ -331,7 +331,8 @@ $config_name = "pre_limit_product_cat";
 $n_display_product = 6;
 $lastest_best_sale_products = $Product->getProductsInWeek(7, $condition);
 $n_all_product = $Product->countAllWithConditionProduct($condition);
-$products = getOldProducts($lastest_best_sale_products, $n_display_product, $config_name, $n_all_product, $condition);
+$products = getOldProducts($lastest_best_sale_products, $n_display_product, 
+            $config_name, $n_all_product, $condition);
 $n = count($products);
 if ($n > $n_display_product) {
     $n = $n_display_product;
@@ -396,8 +397,7 @@ for ($i = 0; $i < $n; ++$i) {
 }
 $home = $xtemplate->assign_blocks_content($home, array(
     'CATPRODUCTSNEW' => $tpl
-        ));
-
+));
 
 // Load cat news
 $News = new News();
@@ -429,7 +429,7 @@ for ($i = 0; $i < $n; ++$i) {
 }
 $home = $xtemplate->assign_blocks_content($home, array(
     'CATNEWS' => $tpl
-        ));
+));
 
 // Get all tu thuoc phong than products
 //$products = $Product->getProductsLastestByCategory("271");    
@@ -505,14 +505,13 @@ for ($i = 0; $i < $n; ++$i) {
 }
 $home = $xtemplate->assign_blocks_content($home, array(
     'MEDICINEPRODUCTSNEW' => $tpl,
-        ));
-
+));
 
 $home = $xtemplate->replace($home, array(
     'brand_dog' => "thức ăn cho chó",
     'brand_cat' => "thức ăn cho mèo",
     'introduce_nanapet' => $introduce_nanapet
-        ));
+));
 
 // List advs home
 $arrAdvs = GetRows('adver_id, adver_logo, adver_webname'
