@@ -180,6 +180,7 @@
         'breadcrumbs_path' => $breadcrumbs_path,
         'acount' => $acount,
         'title' => $title_page,
+        'introduce_nanapet' => $introduce_nanapet,
         'giohang' => $giohang,
         'cart_right' => $cart_right,
         'main_banner' => $main_banner,
