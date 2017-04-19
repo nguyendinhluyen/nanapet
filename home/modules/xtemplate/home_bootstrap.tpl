@@ -262,23 +262,23 @@
     <div class="row"
          style="padding-bottom: 10px; margin-right: 0px">
         <div class = "col-xs-12 col-sm-12 col-md-12 col-lg-12" 
-            style="padding-bottom: 40px;
-                padding-right: 0px;
-                padding-left: 0px">
+            style="padding-right: 0px;
+                    padding-left: 0px">
             <img class="hidden-xs hidden-sm" 
                 alt="sản phẩm bán chạy"
                 src="{linkS}layout/bootstrap/images/combo_ban_chay_nhat.png"
-                style = "width: 100%;">
+                style = "width: 100%; padding-bottom: 40px;">
             <img class="hidden-lg hidden-md"
                 alt="sản phẩm bán chạy"
                 src="{linkS}layout/bootstrap/images/combo_ban_chay_nhat_mobile.png"
                 style="width: 100%;
                     margin-top: 10px;
-                    padding-left: 15px">
+                    padding-left: 15px;
+                    padding-bottom: 20px;">
         </div>
         <!--BEGINLIST_BESTCOMBOPRODUCTS-->
         <!--BEGIN_BESTCOMBOPRODUCTS-->
-        <li>
+        <li class="hidden-xs hidden-sm">
             <a class="list_product_name"
                href="{linkS}{category}/{product_key}.htm"
                style = "outline:none;">
@@ -298,47 +298,82 @@
                                  style = "cursor: pointer; 
                                  margin-bottom: 5px">
                         </div>                                                
-                    </div><!-- End product_name_col -->
+                    </div>
                     <div class="product_tit">
                         <div style="font-size: 14px; 
-                             color: #929292;
-                             cursor: pointer;                            
-                             font-family: RobotoSlabRegular;">                    
+                                cursor: pointer;                            
+                                font-family: RobotoSlabRegular;">
                             {product_name}
                         </div>
                     </div>
                     <div class="product_price" 
-                         style = "cursor: pointer;
-                         font-family:RobotoSlabRegular;
-                         font-size: 14px;">
+                        style = "cursor: pointer;
+                            font-family:RobotoSlabRegular;
+                            font-size: 14px;">
                         {product_price} VNĐ
                     </div>
-                </div><!-- end product_detail -->
+                </div>
             </a>
         </li>
         <!--END_BESTCOMBOPRODUCTS-->
         <!--ENDLIST_BESTCOMBOPRODUCTS-->
-        <!--End combo Ban Chay Nhat-->
+        
+        <!--BEGINLIST_BESTCOMBOPRODUCTS_MOBILE-->
+        <!--BEGIN_BESTCOMBOPRODUCTS_MOBILE-->
+        <li class="hidden-lg hidden-md col-xs-6 col-sm-6">
+            <a class="list_product_name"
+               href="{linkS}{category}/{product_key}.htm"
+               style = "outline:none;">
+                <div style="width: 100%;">
+                    <div style="margin-bottom: 10px">
+                        <img class="img-responsive center-block"
+                            alt="{product_name}" 
+                            src="{linkS}upload/product/{product_img}"
+                            style = "cursor: pointer; width: 80%"/>
+                    </div>
+                    <div class="center-block"
+                        style="font-size: 14px; 
+                            color: #929292;
+                            cursor: pointer;                            
+                            font-family: RobotoSlabRegular;
+                            text-align: center;
+                            margin-bottom: 10px;
+                            width: 80%;">
+                        {product_name}
+                    </div>
+                    <div style="cursor: pointer;
+                            font-family:RobotoSlabRegular;
+                            font-size: 14px;
+                            text-align: center;
+                            color: #fe5454;
+                            margin-bottom: 20px">
+                        {product_price} VNĐ
+                    </div>
+                </div>
+            </a>
+        </li>
+        <!--END_BESTCOMBOPRODUCTS_MOBILE-->
+        <!--ENDLIST_BESTCOMBOPRODUCTS_MOBILE-->
 
         <!--Begin San Pham Ban Chay-->
         <div class = "col-xs-12 col-sm-12 col-md-12 col-lg-12" 
-            style = "padding-bottom: 40px; 
-                    padding-right: 0px;
+            style = "padding-right: 0px;
                     padding-left: 0px">
             <img class="hidden-xs hidden-sm"
                 alt="sản phẩm bán chạy"
                 src="{linkS}layout/bootstrap/images/san_pham_ban_chay.png"
-                style = "width: 100%;"/>
+                style = "width: 100%; padding-bottom: 40px;"/>
             <img class="hidden-lg hidden-md"
                 alt="sản phẩm bán chạy"
                 src="{linkS}layout/bootstrap/images/san_pham_ban_chay_mobile.png"
                 style="width: 100%;
                     margin-top: 20px;
-                    padding-left: 15px">
+                    padding-left: 15px; 
+                    padding-bottom: 20px;">
         </div>
         <!--BEGINLIST_HOTPRODUCTSNEW-->
         <!--BEGIN_HOTPRODUCTSNEW-->
-        <li>
+        <li class="hidden-xs hidden-sm">
             <a class="list_product_name"
                href="{linkS}{category}/{product_key}.htm"
                style = "outline:none;">
@@ -374,33 +409,70 @@
                          font-size: 14px;">
                         {product_price} VNĐ
                     </div>
-                </div><!-- end product_detail -->
+                </div>
             </a>    
         </li>  	
         <!--END_HOTPRODUCTSNEW-->
         <!--ENDLIST_HOTPRODUCTSNEW-->
-        <!--End San Pham Ban Chay-->
+        
+        <!--BEGINLIST_HOTPRODUCTSNEW_MOBILE-->
+        <!--BEGIN_HOTPRODUCTSNEW_MOBILE-->
+        <li class="hidden-lg hidden-md col-xs-6 col-sm-6">
+            <a class="list_product_name"
+               href="{linkS}{category}/{product_key}.htm"
+               style = "outline:none;">
+                <div style="width: 100%;">
+                    <div style="margin-bottom: 10px">
+                        <img class="img-responsive center-block"
+                            alt="{product_name}" 
+                            src="{linkS}upload/product/{product_img}"
+                            style = "cursor: pointer; width: 80%"/>
+                    </div>
+                    <div class="center-block"
+                        style="font-size: 14px; 
+                            color: #929292;
+                            cursor: pointer;                            
+                            font-family: RobotoSlabRegular;
+                            text-align: center;
+                            margin-bottom: 10px;
+                            width: 80%;">
+                        {product_name}
+                    </div>
+                    <div style="cursor: pointer;
+                            font-family:RobotoSlabRegular;
+                            font-size: 14px;
+                            text-align: center;
+                            color: #fe5454;
+                            margin-bottom: 20px">
+                        {product_price} VNĐ
+                    </div>
+                </div>
+            </a>
+        </li>
+        <!--END_HOTPRODUCTSNEW_MOBILE-->
+        <!--ENDLIST_HOTPRODUCTSNEW_MOBILE-->
 
         <!--Begin San Pham Cun Cung-->
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"
-             style="padding-top: 20px;
-                    padding-bottom: 50px;
-                    padding-right: 0px;
+             style="padding-right: 0px;
                     padding-left: 0px;">
             <a href="{linkS}danh-rieng-cho-cho-cung-319/">
                 <img class="hidden-xs hidden-sm"
                     alt="sản phẩm cún cưng"
                     src="{linkS}layout/bootstrap/images/san_pham_cun_cung.png"
-                    style="width: 100%;"/>
+                    style="width: 100%;
+                           padding-top: 20px;
+                           padding-bottom: 50px;"/>
                 <img class="hidden-lg hidden-md"
                     alt="sản phẩm bán chạy"
                     src="{linkS}layout/bootstrap/images/danh_cho_cun_cung_mobile.png"
                     style="width: 100%;
                         margin-top:20px;
-                        padding-left: 15px">
+                        padding-left: 15px;
+                        padding-bottom: 20px;">
             </a>
         </div>
-        <div class = "hidden-xs hidden-sm hidden-md col-lg-4">
+        <div class="hidden-xs hidden-sm col-md-4 col-lg-4">
             <a href="{linkS}danh-rieng-cho-cho-cung-319/">
                 <img alt="{brand_dog}" 
                     src="{linkS}layout/bootstrap/images/san_pham_banner_cun_cung.jpg" 
@@ -411,7 +483,7 @@
                     class="img-rounded"/>
             </a>
         </div>
-        <div class = "col-lg-8" 
+        <div class="hidden-xs hidden-sm col-md-8 col-lg-8"
             style="padding-left: 10px">
             <!--BEGINLIST_DOGPRODUCTSNEW-->
             <!--BEGIN_DOGPRODUCTSNEW-->
@@ -457,19 +529,57 @@
             <!--END_DOGPRODUCTSNEW-->
             <!--ENDLIST_DOGPRODUCTSNEW-->
         </div>
-        <div class = "col-xs-12 col-sm-12 col-md-12 col-lg-12"
-             style="font-family: PoetsenOne; 
-                    font-size: 15px;
-                    text-align: right;
-                    background-color: #FFF;
-                    line-height: 50px;
-                    width: 100%;
-                    margin-right: 0px">
+        <div class="hidden-xs hidden-sm col-md-12 col-lg-12"
+            style="font-family: PoetsenOne; 
+                   font-size: 15px;
+                   text-align: right;
+                   background-color: #FFF;
+                   line-height: 50px;
+                   width: 100%;
+                   margin-right: 0px">
             <a href="{linkS}danh-rieng-cho-cho-cung-319/" 
                style="color:#ff767d;">
                 Xem tất cả sản phẩm cún cưng >>
             </a>
         </div>
+               
+        <!--BEGINLIST_DOGPRODUCTSNEW_MOBILE-->
+        <!--BEGIN_DOGPRODUCTSNEW_MOBILE-->
+        <li class="hidden-lg hidden-md col-xs-6 col-sm-6">
+            <a class="list_product_name"
+               href="{linkS}{category}/{product_key}.htm"
+               style = "outline:none;">
+                <div style="width: 100%;">
+                    <div style="margin-bottom: 10px">
+                        <img class="img-responsive center-block"
+                            alt="{product_name}" 
+                            src="{linkS}upload/product/{product_img}"
+                            style = "cursor: pointer; width: 80%"/>
+                    </div>
+                    <div class="center-block"
+                        style="font-size: 14px; 
+                            color: #929292;
+                            cursor: pointer;                            
+                            font-family: RobotoSlabRegular;
+                            text-align: center;
+                            margin-bottom: 10px;
+                            width: 80%;">
+                        {product_name}
+                    </div>
+                    <div style="cursor: pointer;
+                            font-family:RobotoSlabRegular;
+                            font-size: 14px;
+                            text-align: center;
+                            color: #fe5454;
+                            margin-bottom: 20px">
+                        {product_price} VNĐ
+                    </div>
+                </div>
+            </a>
+        </li>
+        <!--END_DOGPRODUCTSNEW_MOBILE-->
+        <!--ENDLIST_DOGPRODUCTSNEW_MOBILE-->
+               
         <div class = "col-lg-12 hidden-xs hidden-sm hidden-md" 
              style="background-color:#e9f4f6; 
              margin-top: 10px;
@@ -551,7 +661,7 @@
                         padding-left: 15px">
             </a>
         </div>
-        <div class = "hidden-xs hidden-sm hidden-md col-lg-4">
+        <div class = "hidden-xs hidden-sm col-md-4 col-lg-4">
             <a href="{linkS}danh-rieng-cho-meo-yeu-321/">
                 <img src="{linkS}layout/bootstrap/images/san_pham_banner_meo_cung.jpg"
                      width="460" 
@@ -562,7 +672,7 @@
                      class="img-rounded"/>
             </a>
         </div>
-        <div class = "col-sm-12 col-sm-12 col-md-12 col-lg-8"
+        <div class = "hidden-xs hidden-sm col-md-8 col-lg-8"
              style="padding-right: 0px; padding-left: 10px">
             <!--BEGINLIST_CATPRODUCTSNEW-->
             <!--BEGIN_CATPRODUCTSNEW-->
@@ -602,13 +712,13 @@
                              font-size: 14px;">
                             {product_price} VNĐ
                         </div>
-                    </div><!-- end product_detail -->
+                    </div>
                 </a>
             </li>  	
             <!--END_CATPRODUCTSNEW-->
             <!--ENDLIST_CATPRODUCTSNEW-->
         </div>
-        <div class = "col-xs-12 col-sm-12 col-md-12 col-lg-12"
+        <div class = "hidden-xs hidden-sm col-md-12 col-lg-12"
              style="font-family: PoetsenOne; 
                     font-size: 15px;                     
                     text-align: right;
@@ -621,6 +731,43 @@
                 Xem tất cả sản phẩm mèo cưng >>
             </a>
         </div>
+        <!--BEGINLIST_CATPRODUCTSNEW_MOBILE-->
+        <!--BEGIN_CATPRODUCTSNEW_MOBILE-->
+        <li class="hidden-lg hidden-md col-xs-6 col-sm-6">
+            <a class="list_product_name"
+               href="{linkS}{category}/{product_key}.htm"
+               style = "outline:none;">
+                <div style="width: 100%;">
+                    <div style="margin-bottom: 10px">
+                        <img class="img-responsive center-block"
+                            alt="{product_name}" 
+                            src="{linkS}upload/product/{product_img}"
+                            style = "cursor: pointer; width: 80%"/>
+                    </div>
+                    <div class="center-block"
+                        style="font-size: 14px; 
+                            color: #929292;
+                            cursor: pointer;                            
+                            font-family: RobotoSlabRegular;
+                            text-align: center;
+                            margin-bottom: 10px;
+                            width: 80%;">
+                        {product_name}
+                    </div>
+                    <div style="cursor: pointer;
+                            font-family:RobotoSlabRegular;
+                            font-size: 14px;
+                            text-align: center;
+                            color: #fe5454;
+                            margin-bottom: 20px">
+                        {product_price} VNĐ
+                    </div>
+                </div>
+            </a>
+        </li>
+        <!--END_CATPRODUCTSNEW_MOBILE-->
+        <!--ENDLIST_CATPRODUCTSNEW_MOBILE-->
+               
         <div class = "col-lg-12 hidden-xs hidden-sm hidden-md" 
              style="background-color:#e9f4f6; 
              margin-top: 20px; 
@@ -681,11 +828,9 @@
         </div>        
         <!--End San Pham Meo Cung-->
 
-        <!--Begin Tu thuoc phong than cho-->
-        <div class = "col-xs-12 col-sm-12 col-md-12 col-lg-12" 
-             style = "padding-bottom: 40px; 
-                    padding-bottom: 10px; 
-                    padding-right: 0px;
+        <!--Begin tu thuoc phong than cho-->
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" 
+             style="padding-right: 0px;
                     padding-left: 0px">
             <a href="{linkS}tu-thuoc-pet-phong-than-339/">
                 <img class="hidden-xs hidden-sm" 
@@ -705,7 +850,7 @@
         </div>
         <!--BEGINLIST_MEDICINEPRODUCTSNEW-->
         <!--BEGIN_MEDICINEPRODUCTSNEW-->
-        <li>
+        <li class="hidden-xs hidden-sm">
             <a class = "list_product_name"
                href="{linkS}{category}/{product_key}.htm"
                style = "outline:none;">
@@ -747,6 +892,44 @@
         </li>  	
         <!--END_MEDICINEPRODUCTSNEW-->
         <!--ENDLIST_MEDICINEPRODUCTSNEW-->
+        
+        <!--BEGINLIST_MEDICINEPRODUCTSNEW_MOBILE-->
+        <!--BEGIN_MEDICINEPRODUCTSNEW_MOBILE-->
+        <li class="hidden-lg hidden-md col-xs-6 col-sm-6">
+            <a class="list_product_name"
+               href="{linkS}{category}/{product_key}.htm"
+               style = "outline:none;">
+                <div style="width: 100%;">
+                    <div style="margin-bottom: 10px">
+                        <img class="img-responsive center-block"
+                            alt="{product_name}" 
+                            src="{linkS}upload/product/{product_img}"
+                            style = "cursor: pointer; width: 80%"/>
+                    </div>
+                    <div class="center-block"
+                        style="font-size: 14px; 
+                            color: #929292;
+                            cursor: pointer;                            
+                            font-family: RobotoSlabRegular;
+                            text-align: center;
+                            margin-bottom: 10px;
+                            width: 80%;">
+                        {product_name}
+                    </div>
+                    <div style="cursor: pointer;
+                            font-family:RobotoSlabRegular;
+                            font-size: 14px;
+                            text-align: center;
+                            color: #fe5454;
+                            margin-bottom: 20px">
+                        {product_price} VNĐ
+                    </div>
+                </div>
+            </a>
+        </li>
+        <!--END_MEDICINEPRODUCTSNEW_MOBILE-->
+        <!--ENDLIST_MEDICINEPRODUCTSNEW_MOBILE-->
+        
         <div class = "col-xs-12 col-sm-12 col-md-12 col-lg-12"
              style="font-family: PoetsenOne; 
                     font-size: 17px;                     
@@ -756,22 +939,13 @@
                     margin-right: 0px">
             <a href="{linkS}tu-thuoc-pet-phong-than-339/" 
                style="color:#ff767d;">
-                <img class="hidden-xs hidden-sm hidden-md" 
+                <img class="hidden-xs hidden-sm" 
                     alt="xem tất cả"
                     src="{linkS}layout/bootstrap/images/xem_tat_ca_thuoc.png" 
                     style= "display:block; 
                        margin-left: auto; 
                        margin-right: auto;
-                       margin-top: 50px;
-                       margin-bottom: 50px"/>
-                <img class="hidden-lg"
-                    alt="xem tất cả"
-                    src="{linkS}layout/bootstrap/images/xem_tat_ca_thuoc.png" 
-                    style= "display:block; 
-                        margin-left: auto;
-                        margin-right: auto;
-                        margin-top: 15px;
-                        margin-bottom: 10px"/>
+                       margin-bottom: 30px">
             </a>
         </div>
         <!--End Tu thuoc phong than cho-->

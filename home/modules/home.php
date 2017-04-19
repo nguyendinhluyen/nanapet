@@ -65,11 +65,13 @@ function getProducts($condition, $config_name, $n_display_product) {
     return $products;
 }
 
-function showProducts(&$home, $areadisplay, $products, $displayofline, $total_display_product) {
+function showProducts(&$home, $areadisplay, $products, $displayofline, $total_display_product, 
+                    $style="float:left; padding-left: 40px") {
     $tpl = '';
-    $tpl_temp = '<div class="row" id="product_home" style="float:right">
-                                <div class = "col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                    <ul>';
+    $tpl_temp = '<div class="row" id="product_home" style="'.$style.'">
+                                <div class = "col-xs-12 col-sm-12 col-md-12 col-lg-12" 
+                                    style="padding-right:0px">
+                                    <ul style="padding:0px">';
     global $xtemplate;
     $block = $xtemplate->get_block_from_str($home, $areadisplay);
     $flag = 0;
@@ -122,9 +124,10 @@ function showProducts(&$home, $areadisplay, $products, $displayofline, $total_di
         if ($flag % $displayofline == 0) {
             $tpl_temp .= ' </ul>';
             $tpl .= $tpl_temp . '</div></div>';
-            $tpl_temp = '<div class="row" id="product_home" style="float:right">
-                                        <div class = "col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                            <ul>';
+            $tpl_temp = '<div class="row" id="product_home" style="'.$style.'">
+                                        <div class = "col-xs-12 col-sm-12 col-md-12 col-lg-12" 
+                                             style="padding-right:0px">
+                                            <ul style="padding:0px">';
         }
     }
     $home = $xtemplate->assign_blocks_content($home, array(
@@ -178,6 +181,14 @@ $areadisplay_combo = 'BESTCOMBOPRODUCTS';
 showProducts($home, $areadisplay_combo, $products_combo, $totaldisplayproduct_combo, $totaldisplayproduct_combo);
 // End combo ban chay nhat
 
+// Begin combo ban chay nhat mobile
+$totaldisplayproduct_mobile = 8;
+$displayofline_mobile = 2;
+$products_combo_mobile = getProducts($condition_combo, $configname_combo, $totaldisplayproduct_mobile);
+$areadisplay_combo_mobile = 'BESTCOMBOPRODUCTS_MOBILE';
+showProducts($home, $areadisplay_combo_mobile, $products_combo_mobile, $displayofline_mobile, $totaldisplayproduct_mobile,"");
+// End combo ban chay nhat mobile
+
 // Begin san pham ban chay
 $condition_bestsale = " AND p_bestsell = 1 ";
 $configname_bestsale = "pre_limit_product";
@@ -188,6 +199,12 @@ $displayofline_bestsale = 5;
 showProducts($home, $areadisplay_bestsale, $products_bestsale, $displayofline_bestsale, $totaldisplayproduct_bestsale);
 // End san pham ban chay
 
+// Begin san pham ban chay nhat mobile
+$products_bestsale_mobile = getProducts($condition_bestsale, $configname_bestsale, $totaldisplayproduct_mobile);
+$areadisplay_bestsale_mobile = 'HOTPRODUCTSNEW_MOBILE';
+showProducts($home, $areadisplay_bestsale_mobile, $products_bestsale_mobile, $displayofline_mobile, $totaldisplayproduct_mobile,"");
+// End san pham ban chay nhat mobile
+
 // Begin danh cho cun cung
 $condition_dog = " AND species='10' "; // 10: Dog, 01: Cat
 $configname_dog = "pre_limit_product_dog";
@@ -195,7 +212,15 @@ $totaldisplayproduct_dog = 6;
 $products_dog = getProducts($condition_dog, $configname_dog, $totaldisplayproduct_dog);
 $areadisplay_dog = 'DOGPRODUCTSNEW';
 $displayofline_dog = 3;
-showProducts($home, $areadisplay_dog, $products_dog, $displayofline_dog, $totaldisplayproduct_dog);
+showProducts($home, $areadisplay_dog, $products_dog, $displayofline_dog, $totaldisplayproduct_dog,"float:right");
+// End danh cho cun cung
+
+// Begin danh cho cun cung mobile
+$products_dog_mobile = getProducts($condition_dog, $configname_dog, $totaldisplayproduct_mobile);
+$areadisplay_dog_mobile = 'DOGPRODUCTSNEW_MOBILE';
+showProducts($home, $areadisplay_dog_mobile, $products_dog_mobile, $displayofline_mobile, $totaldisplayproduct_mobile,"");
+// End danh cho cun cung mobile
+
 
 // Load Dog news
 showNews($home, 'DOGNEWS', "27");
@@ -207,8 +232,14 @@ $totaldisplayproduct_cat = 6;
 $products_cat = getProducts($condition_cat, $configname_cat, $totaldisplayproduct_cat);
 $areadisplay_cat = 'CATPRODUCTSNEW';
 $displayofline_cat = 3;
-showProducts($home, $areadisplay_cat, $products_cat, $displayofline_cat, $totaldisplayproduct_cat);
+showProducts($home, $areadisplay_cat, $products_cat, $displayofline_cat, $totaldisplayproduct_cat, "float:right");
 // End danh cho meo cung
+
+// Begin danh cho meo cung mobile
+$products_cat_mobile = getProducts($condition_cat, $configname_cat, $totaldisplayproduct_mobile);
+$areadisplay_cat_mobile = 'CATPRODUCTSNEW_MOBILE';
+showProducts($home, $areadisplay_cat_mobile, $products_cat_mobile, $displayofline_mobile, $totaldisplayproduct_mobile,"");
+// End danh cho meo cung mobile
 
 // Load cat news
 showNews($home, 'CATNEWS', "28");
@@ -221,6 +252,12 @@ $products_medicine = getProducts($condition_medicine, $configname_medicine, $tot
 $areadisplay_medicine = 'MEDICINEPRODUCTSNEW';
 showProducts($home, $areadisplay_medicine, $products_medicine, $totaldisplayproduct_medicine, $totaldisplayproduct_medicine);
 // End tu thuoc phong than
+
+// Begin tu thuoc phong than mobile
+$products_medicine_mobile = getProducts($condition_medicine, $configname_medicine, $totaldisplayproduct_mobile);
+$areadisplay_medicine_mobile = 'MEDICINEPRODUCTSNEW_MOBILE';
+showProducts($home, $areadisplay_medicine_mobile, $products_medicine_mobile, $displayofline_mobile, $totaldisplayproduct_mobile,"");
+// End tu thuoc phong than mobile
 
 // List advs home
 $arrAdvs = GetRows('adver_id, adver_logo, adver_webname'
