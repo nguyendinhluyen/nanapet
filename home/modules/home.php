@@ -168,8 +168,128 @@ function showNews(&$home, $areadisplay, $category) {
     ));
 }
 
+function showDesktopLayout() {
+    $html_desktop = '<li class="hidden-xs hidden-sm hidden-md">
+                        <a class="list_product_name"
+                           href="{linkS}{category}/{product_key}.htm"
+                           style = "outline:none;">
+                            <div class="product_detail">
+                                <div class="product_name">
+                                    <!--{promotion_Sale}-->     
+                                    <img alt="{product_name}" 
+                                         src="{linkS}upload/product/{product_img}"
+                                         width="140"
+                                         height="140" 
+                                         style = "margin-left: 28px; cursor: pointer"/>
+                                    <div class="textbox"  
+                                         style = "padding-top: 65px; padding-left: 35px">
+                                        <img alt="Xem chi tiết" 
+                                             src="{linkS}layout/bootstrap/images/xem_chi_tiet.png"
+                                             width="110px"
+                                             style = "cursor: pointer; 
+                                             margin-bottom: 5px">
+                                    </div>                                                
+                                </div>
+                                <div class="product_tit">
+                                    <div style="font-size: 14px; 
+                                            cursor: pointer;                            
+                                            font-family: RobotoSlabRegular;">
+                                        {product_name}
+                                    </div>
+                                </div>
+                                <div class="product_price" 
+                                    style = "cursor: pointer;
+                                        font-family:RobotoSlabRegular;
+                                        font-size: 14px;">
+                                    {product_price} VNĐ
+                                </div>
+                            </div>
+                        </a>
+                    </li>';
+    return $html_desktop;
+}
+
+function showTabletLayout() {
+    $html_tablet = '<li class="hidden-xs hidden-sm hidden-lg col-md-3">
+                        <a class="list_product_name"
+                           href="{linkS}{category}/{product_key}.htm"
+                           style = "outline:none;">
+                            <div style="width: 100%;">
+                                <div style="margin-bottom: 10px">
+                                    <img class="img-responsive center-block"
+                                        alt="{product_name}" 
+                                        src="{linkS}upload/product/{product_img}"
+                                        style = "cursor: pointer; width: 80%"/>
+                                </div>
+                                <div class="center-block"
+                                    style="font-size: 14px; 
+                                        color: #929292;
+                                        cursor: pointer;                            
+                                        font-family: RobotoSlabRegular;
+                                        text-align: center;
+                                        margin-bottom: 10px;">
+                                    {product_name}
+                                </div>
+                                <div style="cursor: pointer;
+                                        font-family:RobotoSlabRegular;
+                                        font-size: 14px;
+                                        text-align: center;
+                                        color: #fe5454;
+                                        margin-bottom: 20px">
+                                    {product_price} VNĐ
+                                </div>
+                            </div>
+                        </a>
+                    </li>';
+    return $html_tablet;
+}
+
+function showMobileLayout() {
+    $html_mobile = '<li class="hidden-lg hidden-md col-xs-6 col-sm-6">
+                        <a class="list_product_name"
+                           href="{linkS}{category}/{product_key}.htm"
+                           style = "outline:none;">
+                            <div style="width: 100%;">
+                                <div style="margin-bottom: 10px">
+                                    <img class="img-responsive center-block"
+                                        alt="{product_name}" 
+                                        src="{linkS}upload/product/{product_img}"
+                                        style = "cursor: pointer; width: 80%"/>
+                                </div>
+                                <div class="center-block"
+                                    style="font-size: 14px; 
+                                        color: #929292;
+                                        cursor: pointer;                            
+                                        font-family: RobotoSlabRegular;
+                                        text-align: center;
+                                        margin-bottom: 10px;
+                                        width: 80%;">
+                                    {product_name}
+                                </div>
+                                <div style="cursor: pointer;
+                                        font-family:RobotoSlabRegular;
+                                        font-size: 14px;
+                                        text-align: center;
+                                        color: #fe5454;
+                                        margin-bottom: 20px">
+                                    {product_price} VNĐ
+                                </div>
+                            </div>
+                        </a>
+                    </li>';
+    return $html_mobile;
+}
+
 // Load layout
 $home = $xtemplate->load('home_bootstrap');
+$desktop_layout = showDesktopLayout();
+$tablet_layout = showTabletLayout();
+$mobile_layout = showMobileLayout();
+$home = $xtemplate->replace($home, array(
+    'desktop_layout' => $desktop_layout,
+    'tablet_layout' => $tablet_layout,
+    'mobile_layout' => $mobile_layout
+));
 
 // Begin combo ban chay nhat
 $Product = new Product();
@@ -180,6 +300,14 @@ $products_combo = getProducts($condition_combo, $configname_combo, $totaldisplay
 $areadisplay_combo = 'BESTCOMBOPRODUCTS';
 showProducts($home, $areadisplay_combo, $products_combo, $totaldisplayproduct_combo, $totaldisplayproduct_combo);
 // End combo ban chay nhat
+
+// Begin combo ban chay nhat tablet
+$totaldisplayproduct_combo_tablet = 4;
+$displayofline_tablet = 4;
+$products_combo_tablet = getProducts($condition_combo, $configname_combo, $totaldisplayproduct_combo_tablet);
+$areadisplay_combo_tablet = 'BESTCOMBOPRODUCTS_TABLET';
+showProducts($home, $areadisplay_combo_tablet, $products_combo_tablet, $displayofline_tablet, $totaldisplayproduct_combo_tablet,"");
+// End combo ban chay nhat tablet
 
 // Begin combo ban chay nhat mobile
 $totaldisplayproduct_mobile = 8;
@@ -199,6 +327,13 @@ $displayofline_bestsale = 5;
 showProducts($home, $areadisplay_bestsale, $products_bestsale, $displayofline_bestsale, $totaldisplayproduct_bestsale);
 // End san pham ban chay
 
+// Begin combo ban chay nhat tablet
+$totaldisplayproduct_bestsale_tablet = 8;
+$products_bestsale_tablet = getProducts($condition_bestsale, $configname_bestsale, $totaldisplayproduct_bestsale_tablet);
+$areadisplay_bestsale_tablet = 'HOTPRODUCTSNEW_TABLET';
+showProducts($home, $areadisplay_bestsale_tablet, $products_bestsale_tablet, $displayofline_tablet, $totaldisplayproduct_bestsale_tablet,"");
+// End combo ban chay nhat tablet
+
 // Begin san pham ban chay nhat mobile
 $products_bestsale_mobile = getProducts($condition_bestsale, $configname_bestsale, $totaldisplayproduct_mobile);
 $areadisplay_bestsale_mobile = 'HOTPRODUCTSNEW_MOBILE';
@@ -214,6 +349,12 @@ $areadisplay_dog = 'DOGPRODUCTSNEW';
 $displayofline_dog = 3;
 showProducts($home, $areadisplay_dog, $products_dog, $displayofline_dog, $totaldisplayproduct_dog,"float:right");
 // End danh cho cun cung
+
+// Begin danh cho cun cung tablet
+$products_dog_tablet = getProducts($condition_dog, $configname_dog, $totaldisplayproduct_bestsale_tablet);
+$areadisplay_dog_tablet = 'DOGPRODUCTSNEW_TABLET';
+showProducts($home, $areadisplay_dog_tablet, $products_dog_tablet, $displayofline_tablet, $totaldisplayproduct_bestsale_tablet,"");
+// End danh cho cun cung tablet
 
 // Begin danh cho cun cung mobile
 $products_dog_mobile = getProducts($condition_dog, $configname_dog, $totaldisplayproduct_mobile);
@@ -235,6 +376,12 @@ $displayofline_cat = 3;
 showProducts($home, $areadisplay_cat, $products_cat, $displayofline_cat, $totaldisplayproduct_cat, "float:right");
 // End danh cho meo cung
 
+// Begin danh cho meo cung tablet
+$products_cat_tablet = getProducts($condition_cat, $configname_cat, $totaldisplayproduct_bestsale_tablet);
+$areadisplay_cat_tablet = 'CATPRODUCTSNEW_TABLET';
+showProducts($home, $areadisplay_cat_tablet, $products_cat_tablet, $displayofline_tablet, $totaldisplayproduct_bestsale_tablet,"");
+// End danh cho cun cung tablet
+
 // Begin danh cho meo cung mobile
 $products_cat_mobile = getProducts($condition_cat, $configname_cat, $totaldisplayproduct_mobile);
 $areadisplay_cat_mobile = 'CATPRODUCTSNEW_MOBILE';
@@ -252,6 +399,12 @@ $products_medicine = getProducts($condition_medicine, $configname_medicine, $tot
 $areadisplay_medicine = 'MEDICINEPRODUCTSNEW';
 showProducts($home, $areadisplay_medicine, $products_medicine, $totaldisplayproduct_medicine, $totaldisplayproduct_medicine);
 // End tu thuoc phong than
+
+// Begin tu thuoc phong than tablet
+$products_medicine_tablet = getProducts($condition_medicine, $configname_medicine, $totaldisplayproduct_combo_tablet);
+$areadisplay_medicine_tablet = 'MEDICINEPRODUCTSNEW_TABLET';
+showProducts($home, $areadisplay_medicine_tablet, $products_medicine_tablet, $displayofline_tablet, $totaldisplayproduct_combo_tablet,"");
+// End tu thuoc phong than tablet
 
 // Begin tu thuoc phong than mobile
 $products_medicine_mobile = getProducts($condition_medicine, $configname_medicine, $totaldisplayproduct_mobile);
