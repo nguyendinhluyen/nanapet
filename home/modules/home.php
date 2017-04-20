@@ -210,7 +210,7 @@ function showDesktopLayout() {
 }
 
 function showTabletLayout() {
-    $html_tablet = '<li class="hidden-xs hidden-sm hidden-lg col-md-3">
+    $html_tablet = '<li class="hidden-xs hidden-lg col-sm-3 col-md-3">
                         <a class="list_product_name"
                            href="{linkS}{category}/{product_key}.htm"
                            style = "outline:none;">
@@ -227,7 +227,8 @@ function showTabletLayout() {
                                         cursor: pointer;                            
                                         font-family: RobotoSlabRegular;
                                         text-align: center;
-                                        margin-bottom: 10px;">
+                                        margin-bottom: 10px;
+                                        height:60px">
                                     {product_name}
                                 </div>
                                 <div style="cursor: pointer;
@@ -245,7 +246,7 @@ function showTabletLayout() {
 }
 
 function showMobileLayout() {
-    $html_mobile = '<li class="hidden-lg hidden-md col-xs-6 col-sm-6">
+    $html_mobile = '<li class="hidden-lg hidden-md hidden-sm col-xs-6">
                         <a class="list_product_name"
                            href="{linkS}{category}/{product_key}.htm"
                            style = "outline:none;">
