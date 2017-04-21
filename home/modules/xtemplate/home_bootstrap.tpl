@@ -634,7 +634,7 @@
         <!--End Tu thuoc phong than cho-->
 
         <!-- Begin San Pham Theo Nhan Hieu-->
-        <div class ="col-lg-12 hidden-xs hidden-sm hidden-md" 
+        <div class ="col-lg-12 col-md-12 hidden-xs hidden-sm" 
             style="margin-right: 0px; margin-top: 40px">
             <img alt="sản phẩm theo nhãn hàng"
                 src="{linkS}layout/bootstrap/images/cac_san_pham_theo_nhan_hang.png" 
@@ -645,7 +645,7 @@
         </div>
         <!-- End San Pham Theo Nhan Hieu-->
         <!-- Begin Logo Slider-->
-        <div class ="col-lg-12 hidden-xs hidden-sm hidden-md" style="height: 80px;margin-right: 0px">                                    
+        <div class ="col-lg-12 col-md-12 hidden-xs hidden-sm" style="height: 80px;margin-right: 0px">                                    
             <div class="responsive" style="height: 80px;">                
                 {list_advs}                             
             </div>
@@ -688,7 +688,7 @@
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" 
                  style="margin-right: 0px;
-                        margin-top: 30px">                  
+                        margin-top: 10px">                  
                 <div style="height: 2px; 
                         background-color:#edf8fb;
                         margin-left: 10px; 
