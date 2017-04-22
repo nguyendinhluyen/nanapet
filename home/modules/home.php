@@ -180,7 +180,7 @@ function showDesktopLayout() {
                                          src="{linkS}upload/product/{product_img}"
                                          width="140"
                                          height="140" 
-                                         style = "margin-left: 28px; cursor: pointer"/>
+                                         style = "margin-left:28px; cursor: pointer"/>
                                     <div class="textbox"  
                                          style = "padding-top: 65px; padding-left: 35px">
                                         <img alt="Xem chi tiết" 
@@ -214,29 +214,29 @@ function showTabletLayout() {
                         <a class="list_product_name"
                            href="{linkS}{category}/{product_key}.htm"
                            style = "outline:none;">
-                            <div style="width: 100%;">
-                                <div style="margin-bottom: 10px">
+                            <div style="width:100%;">
+                                <div style="margin-bottom:10px">
                                     <img class="img-responsive center-block"
                                         alt="{product_name}" 
                                         src="{linkS}upload/product/{product_img}"
-                                        style = "cursor: pointer; width: 80%"/>
+                                        style="cursor:pointer; width:80%"/>
                                 </div>
                                 <div class="center-block"
-                                    style="font-size: 14px; 
-                                        color: #929292;
-                                        cursor: pointer;                            
-                                        font-family: RobotoSlabRegular;
-                                        text-align: center;
-                                        margin-bottom: 10px;
+                                    style="font-size:14px; 
+                                        color:#929292;
+                                        cursor:pointer;                            
+                                        font-family:RobotoSlabRegular;
+                                        text-align:center;
+                                        margin-bottom:10px;
                                         height:60px">
                                     {product_name}
                                 </div>
-                                <div style="cursor: pointer;
+                                <div style="cursor:pointer;
                                         font-family:RobotoSlabRegular;
-                                        font-size: 14px;
-                                        text-align: center;
-                                        color: #fe5454;
-                                        margin-bottom: 20px">
+                                        font-size:14px;
+                                        text-align:center;
+                                        color:#fe5454;
+                                        margin-bottom:20px">
                                     {product_price} VNĐ
                                 </div>
                             </div>
