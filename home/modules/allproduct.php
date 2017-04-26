@@ -9,8 +9,75 @@
         $saleoff = $saleoff . '%';
         return $saleoff;
     }
+    
+    function showProducts(&$content, $areadisplayline, $areadisplay, $products, 
+                        $nbdisplayofline, $style="margin-left: -43px") {
+        $n = count($products);
+        $tpl = '';
+        $tpl_temp = '<div class="row" id="product_main">
+                        <div class = "col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <ul style ="'.$style.'">';
+        $flag = 0;
+        global $xtemplate;
+        $block = $xtemplate->get_block_from_str($content, $areadisplayline);
+        for ($i = 0; $i < $n; ++$i) {
+            $flag ++;
+            $price_encourage = $products[$i]['products_price'];
+            $price_not_discount_product = "";
+            if ($products[$i]['product_encourage'] != '' && $products[$i]['p_type'] == '') {
+                $price_not_discount_product = $products[$i]['products_price'];
+                $price_encourage = (int) str_replace(".", "", $products[$i]['product_encourage']);
+                $price_of_product = (int) str_replace(".", "", $price_not_discount_product);
+                global $disCountVIPCustomer;
+                $priceDiscountVIPCustomer = ($price_of_product * $disCountVIPCustomer) / 100;
+                $priceVIPCustomer = $price_of_product - $priceDiscountVIPCustomer;
 
-    $content = $xtemplate->load('product_bootstrap');
+                if ($price_encourage > $priceVIPCustomer) {
+                    $priceVIPCustomer = round($priceVIPCustomer / 1000) * 1000;
+                    $price_encourage = common::convertIntToFormatMoney($priceVIPCustomer);
+                    $PromotionSale = '<span class="promotion">
+                                            <span class="promotion_sale">-' . $disCountVIPCustomer 
+                                        . '%' . '</span>
+                                        </span>';
+                } else {
+                    $price_encourage = common::convertIntToFormatMoney($price_encourage);
+                    $percent = getpercent($products[$i]['products_price'], $price_encourage);
+                    $PromotionSale = '<span class="promotion">
+                                            <span class="promotion_sale">-' . $percent . '</span>
+                                        </span>';
+                }
+                $price_not_discount_product = $price_not_discount_product . " VNĐ";
+            } else {
+                $PromotionSale = '';
+            }
+
+            $Category = new Category();
+            $category_key = $Category->getCategoryKeyByProductKey($products[$i]['products_key']);
+            $tpl_temp .= $xtemplate->assign_vars($block, array(
+                'product_img' => $products[$i]['products_image'],
+                'product_name' => $products[$i]['products_name'],
+                'promotion_Sale' => $PromotionSale,
+                'product_price' => $price_encourage,
+                'product_price_old' => $price_not_discount_product,
+                'product_short' => '',
+                'product_key' => $products[$i]['products_key'],
+                'category' => $category_key,
+                'product_name_nocut' => $products[$i]['products_name']
+            ));
+
+            if ($flag % $nbdisplayofline == 0 || $i > $n - 2) {
+                $tpl_temp .= ' </ul>';
+                $tpl .= $tpl_temp . '</div></div>';
+                $tpl_temp = '<div class="row" id="product_main">
+                                <div class = "col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                    <ul style ="'.$style.'">';
+            }
+        }
+        $content = $xtemplate->assign_blocks_content($content, array(
+            $areadisplay => $tpl,
+        ));
+    }
+
     $Product = new Product();
     if ($_SESSION['username'] != '') {
         // Discount for customer
@@ -19,24 +86,92 @@
             $disCountVIPCustomer = (int) $Discount_honorUser;
         }
     }
+    
+    // Get category of products
+    $category_key = input($_GET['category_key']);
+    if (isset($_GET['category_sub_key'])) {
+        $category_key = input($_GET['category_sub_key']);
+    }
+    
+    // Bread crumbs
+    $Category = new Category();
+     if (!empty($category_key)) {
+        $breadcrumbs = $Category->getCategoryPath($category_key);
+        $breadcrumbs_path = '<a style = "outline:none" href="{linkS}">NanaPet</a> &raquo; '
+                . '<a style = "outline:none" href="{linkS}san-pham/">Sản Phẩm</a>';
+    } else {
+        $breadcrumbs_path = '<a href="{linkS}">NanaPet</a> » Sản Phẩm';     
+    }
 
     // Title for page all product SEO
     $title_page = '';
     $page_now = intval($_GET['trang']);
-    if (!isset($page_now) || $page_now === 1 || $page_now === 0) {
-        $title_page = 'Thức ăn cho chó và mèo';
+    
+    if(empty($title_page)) {
+        if (!empty($breadcrumbs[0]['name'])
+                && (!isset($page_now) || $page_now == 1 || $page_now == 0)) {
+            $title_page = $breadcrumbs[0]['name'];
+        } else if (!empty($breadcrumbs[0]['name']) && isset($page_now)) {
+            $title_page = $breadcrumbs[0]['name'] . " - trang $page_now";
+        } else if (empty($breadcrumbs[0]['name'])) {
+            if (!isset($page_now) || $page_now == 1 || $page_now == 0) {
+                $title_page = 'Thức ăn cho chó và mèo';
+            } else {
+                $title_page = "Thức ăn cho chó và mèo - trang $page_now";     
+            }
+        }
     } else {
-        $title_page = "Thức ăn cho chó và mèo - trang $page_now";     
+        if(isset($page_now) && $page_now != 0) {
+            $title_page .= " - trang $page_now";
+        }
     }
     
     // Description
-    $description = $title_page;
-    
-    $breadcrumbs_path = '<a href="{linkS}">NanaPet</a> » Sản Phẩm';
-    $products = $Product->getProductsNewCount();
-    $total = count($products);
+    if(empty($description)) {
+        $description = $title_page;
+    } else {
+        if(isset($page_now) && $page_now != 0) {
+            $description .= " - trang $page_now";
+        }
+    }
 
-    // Navigation for 24 products each page
+    if (empty($keywords)) {
+        $keywords = "thức ăn cho chó, thức ăn cho mèo";
+    }
+    
+    // Check link page for navigation
+    if (empty($category_key)) {
+        $linkPage = 'san-pham/';
+    } else {
+        $linkPage = $breadcrumbs[0]['key'] . '/';
+        if ($category_key == 'sale-off') {
+            $breadcrumbs_path .= ' &raquo; Sản phẩm giảm giá';
+            $title_page = "Sản phẩm giảm giá";
+            if(isset($page_now) && $page_now != 0) {
+                $title_page .= " - trang $page_now";
+            }
+            $description = $title_page;
+            $keywords = "thức ăn cho chó, thức ăn cho mèo";
+            $linkPage = 'sale-off/';
+        }
+    }
+    
+    // Begin navigation
+    if(empty($category_key)) {
+        $total = intval($Product->getProductsNewCount());
+    } else {
+        $products_t = $Product->getProductsByCategoryKey($category_key); 
+        $total = count($products_t);
+    }
+    
+    if ($total == 0) {
+        ?>
+        <script>
+            window.location = "<?php echo $linkS; ?>";
+        </script>
+        <?php
+    }
+
     $p_now = 0;
     $pp = 24;
     if (isset($page_now)) {
@@ -54,88 +189,34 @@
         }
     }
     $limitvalue = ($page - 1) * $pp;
-    // End navigation
+    // end navigation
 
-    $linkPage = "san-pham";
-    $nav_page = pagination($linkS . $linkPage ."/", ceil($numofpages), $page);
-    $nav_page = str_replace("page=", "trang-", $nav_page);
-    $products = $Product->getProductsNewLimit($limitvalue, $pp);
-    $n = count($products);
-    $tpl = '';
-
-    // Bootstrap
-    $tpl_temp = '<div class="row" id="product_main">
-                        <div class = "col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                            <ul style ="margin-left: -43px">';
-    $flag = 0;
-    $block = $xtemplate->get_block_from_str($content, 'PRODUCT');
-    for ($i = 0; $i < $n; ++$i) {
-        $flag ++;
-        $price_encourage = $products[$i]['products_price'];
-        $price_not_discount_product = "";
-        if ($products[$i]['product_encourage'] != '' && $products[$i]['p_type'] == '') {
-            $price_not_discount_product = $products[$i]['products_price'];
-            $price_encourage = (int) str_replace(".", "", $products[$i]['product_encourage']);
-            $price_of_product = (int) str_replace(".", "", $price_not_discount_product);
-            $priceDiscountVIPCustomer = ($price_of_product * $disCountVIPCustomer) / 100;
-            $priceVIPCustomer = $price_of_product - $priceDiscountVIPCustomer;
-
-            if ($price_encourage > $priceVIPCustomer) {
-                $priceVIPCustomer = round($priceVIPCustomer / 1000);
-                $priceVIPCustomer = $priceVIPCustomer * 1000;
-                $price_encourage = common::convertIntToFormatMoney($priceVIPCustomer);
-                $PromotionSale = '<span class="promotion">
-                                        <span class="promotion_sale">-' . $disCountVIPCustomer . '%' . '</span>
-                                    </span>';
-            } else {
-                $price_encourage = common::convertIntToFormatMoney($price_encourage);
-                $percent = getpercent($products[$i]['products_price'], $price_encourage);
-                $PromotionSale = '<span class="promotion">
-                                        <span class="promotion_sale">-' . $percent . '</span>
-                                    </span>';
-            }
-            $price_not_discount_product = $price_not_discount_product . " VNĐ";
-        } else {
-            $PromotionSale = '';
-        }
-        
-        $Category = new Category();
-        $category_key = $Category->getCategoryKeyByProductKey($products[$i]['products_key']);
-        $tpl_temp .= $xtemplate->assign_vars($block, array(
-            'product_img' => $products[$i]['products_image'],
-            'product_name' => $products[$i]['products_name'],
-            'promotion_Sale' => $PromotionSale,
-            'product_price' => $price_encourage,
-            'product_price_old' => $price_not_discount_product,
-            'product_short' => '',
-            'product_key' => $products[$i]['products_key'],
-            'category' => $category_key,
-            'product_name_nocut' => $products[$i]['products_name']
-        ));
-
-        if ($flag % 4 == 0 || $i > $n - 2) {
-            $tpl_temp .= ' </ul>';
-            $tpl .= $tpl_temp . '</div></div>';
-            $tpl_temp = '<div class="row" id="product_main">
-                                <div class = "col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                    <ul style ="margin-left: -43px">';
-        }
+    // load products
+    if (empty($category_key)) {
+        $products = $Product->getProductsNewLimit($limitvalue, $pp);     
+    } else {
+        $products = $Product->getProductsByCategoryKeyLimitOrderBy($products_t, 
+                            $category_key, $limitvalue, $pp);
     }
+    
+    // show desktop
+    $content = $xtemplate->load('product_bootstrap');
+    $areadisplayline = "PRODUCT";
+    $areadisplay = "PRODUCTS";
+    $nbdisplayofline = 4;
+    showProducts($content, $areadisplayline, $areadisplay, $products, $nbdisplayofline);
 
-    $content = $xtemplate->assign_blocks_content($content, array(
-        'PRODUCTS' => $tpl,
-            ));
-
-    $url = getFullUrl();
-    $url .="/";
-    $url1 = $url . "order/";
-
-    // Load dog news
+    // show mobile
+    $areadisplayline_mobile = "PRODUCT_MOBILE";
+    $areadisplay_mobile = "PRODUCTS_MOBILE";
+    $nbdisplayofline_mobile = 2;
+    showProducts($content, $areadisplayline_mobile, $areadisplay_mobile, 
+            $products, $nbdisplayofline_mobile,"padding:0px");
+    
+    // begin load news
     $News = new News();
     $news = $News->getNewsNewest("4");
     $n = count($news);
-
-    // Load news
     $tpl = '';
     $tpl_temp = '<div class="row" id="news_home">
                                 <div class = "col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -159,8 +240,9 @@
     $content = $xtemplate->assign_blocks_content($content, array(
         'NEWS' => $tpl
     ));
-
-    //List advs
+    // end load news
+    
+    // load advs
     $list_advs = '';
     $arrAdvs = GetRows('adver_id, adver_logo, adver_link, adver_webname', 'ads', "adver_status = 1");
     foreach ($arrAdvs as $adv) {
@@ -173,8 +255,7 @@
                 . '</div>';
     }
     
-    // Pagination product for SEO
-    // Please check index.php for more info
+    // pagination product for SEO - Please check home/index.php for more info
     if (ceil($numofpages) > 1) {
         if ($page == 1) {
             $showpage = $page + 1;
@@ -190,21 +271,24 @@
             $showprepage = $page - 1;
             $link_product_navigation .= "<link rel='prev' href='" . $linkS . $linkPage . "/trang-$showprepage'/>";
             $link_product_navigation .= "<meta name='robots' content='noindex,follow'/>";
-        }    
+        }
     }
     
-    $category_name = "";
+    if (empty($text_seo)) {
+        $display_seo ="display:none";
+    } else {
+        $display_seo ="display:block";
+    }
+    
+    // $nav_page = str_replace("page=", "trang-", pagination($linkS . $linkPage ."/", ceil($numofpages), $page));
+    $nav_page = pagination($linkS . $linkPage , ceil($numofpages), $page);
+    $nav_page = str_replace("page=", "trang-", $nav_page);
     $content = $xtemplate->replace($content, array(
         'page' => $nav_page,
-        'url' => $url,
-        'url1' => $url1,
-        'self_total' => '1 - 32',
-        'total_product' => '32',
-        'style_span' => 'style = "display:none"',
         'category' => $category,
         'list_advs' => $list_advs,
         'category_name' => $category_name,
-        'display_seo' => 'display:none',
+        'display_seo' => $display_seo,
         'text_seo' => $text_seo // Check category.php for data text seo
     ));
 ?>

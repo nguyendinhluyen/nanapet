@@ -52,7 +52,7 @@
                                     'products',
                                     "products_status = '1' AND product_encourage <> ''");
             }
-            else{
+            else {
                 $Category =  new Category();
                 $products = array();
                 $list_where = '( ';
@@ -201,10 +201,10 @@
         }
 
         public static function getProductsNewCount(){
-            $products  = GetRows('products_id'
+            $products = GetRows('count(products_id) as total'
                                 ,'products'
                                 ,'products_status = 1  ORDER BY products_date_added DESC');
-            return $products;
+            return $products[0]['total'];
         }
         
         public static function getProductsPromotion(){	

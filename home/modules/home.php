@@ -312,10 +312,11 @@ showProducts($home, $areadisplay_combo_tablet, $products_combo_tablet, $displayo
 
 // Begin combo ban chay nhat mobile
 $totaldisplayproduct_mobile = 8;
+$totaldisplayproduct_mobile_short = 4;
 $displayofline_mobile = 2;
-$products_combo_mobile = getProducts($condition_combo, $configname_combo, $totaldisplayproduct_mobile);
+$products_combo_mobile = getProducts($condition_combo, $configname_combo, $totaldisplayproduct_mobile_short);
 $areadisplay_combo_mobile = 'BESTCOMBOPRODUCTS_MOBILE';
-showProducts($home, $areadisplay_combo_mobile, $products_combo_mobile, $displayofline_mobile, $totaldisplayproduct_mobile,"");
+showProducts($home, $areadisplay_combo_mobile, $products_combo_mobile, $displayofline_mobile, $totaldisplayproduct_mobile_short,"");
 // End combo ban chay nhat mobile
 
 // Begin san pham ban chay
@@ -408,9 +409,9 @@ showProducts($home, $areadisplay_medicine_tablet, $products_medicine_tablet, $di
 // End tu thuoc phong than tablet
 
 // Begin tu thuoc phong than mobile
-$products_medicine_mobile = getProducts($condition_medicine, $configname_medicine, $totaldisplayproduct_mobile);
+$products_medicine_mobile = getProducts($condition_medicine, $configname_medicine, $totaldisplayproduct_mobile_short);
 $areadisplay_medicine_mobile = 'MEDICINEPRODUCTSNEW_MOBILE';
-showProducts($home, $areadisplay_medicine_mobile, $products_medicine_mobile, $displayofline_mobile, $totaldisplayproduct_mobile,"");
+showProducts($home, $areadisplay_medicine_mobile, $products_medicine_mobile, $displayofline_mobile, $totaldisplayproduct_mobile_short,"");
 // End tu thuoc phong than mobile
 
 // List advs home

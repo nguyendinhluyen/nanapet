@@ -35,47 +35,32 @@
     }
 </style>
 
-<div class = "container">
+<div class = "container hidden-xs hidden-sm hidden-md">
     <div class ="row">
-        <div class = "hidden-xs hidden-sm col-md-3 col-lg-3"
+        <div class = "col-lg-3"
              style="padding-left: 20px;padding-top: 10px">
             <img alt="danh mục sản phẩm" 
                 src="{linkS}layout/bootstrap/images/category.png" 
                 style="clear: both; 
                        width: 90%"/>
             {category}
-            {left_facebook_page_plugin}
-        </div>    
-        <div class ="col-xs-9 col-sm-9 col-md-9 col-lg-9" 
+        </div>
+        <div class ="col-lg-9" 
              style = "padding-right: 50px;
                       padding-left: 10px">
             <div id="breakcrumb" 
-                 style="font-size:14px; 
-                        font-family: RobotoSlabRegular;
-                        margin-top: 30px;">
+                style="font-size:14px; 
+                       font-family: RobotoSlabRegular;
+                       margin-top: 30px;">
                 {breadcrumbs_path}
-                <span class ="hidden-xs hidden-sm hidden-md hidden-lg" 
-                      style="float: right; margin-right: 4%">
-                    <p style="display:none"id ="session_order_by"> {order_by}</p>
-                    <p style="display:none"id ="pp_num"> {quannum}</p>
-                    <span>
-                        <table>
-                            <tr>
-                                <td id='order_by'/>
-                                <td style="width:10px"/>
-                                <td id='num'/>
-                            </tr>
-                        </table>
-                    </span>
-                </span>
             </div>
-                    
             <div style="padding-top: 25px; padding-right: 0px; margin-left: -5px">
                 <a href="{linkS}combo-sieu-tiet-kiem-317/">
-                    <img alt="compo siêu tiết kiệm"
+                    <img class="img-reponsive" 
+                        alt="compo siêu tiết kiệm"
                         src="{linkS}layout/bootstrap/images/product_combo.png" 
+                        alt="combo tiết kiệm"
                         width="100%"
-                        alt="Combo tiết kiệm"
                         style = "cursor: pointer;"/>
                 </a>
                 <h1 style="font-size: 17px; 
@@ -88,7 +73,7 @@
                 </h1>
             </div>
             <!--BEGIN SEO CATEGORY-->
-            <div class ="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="{display_seo}">
+            <div class ="col-lg-12" style="{display_seo}">
                 <p style="text-align:left;
                           font-family: RobotoSlabBold;
                           font-size: 15px;
@@ -189,13 +174,103 @@
             <!-- END PAGE NAVIGATION -->    
         </div>
     </div>
-</div><!-- End Product -->
+</div>
+<!-- End Product -->
 
-<!-- Begin San Pham Theo Nhan Hieu-->
-<div class = "container">
-    <br/>    
+<!-- Begin product mobile -->
+<div class = "container hidden-lg hidden-sm hidden-md">
     <div class ="row">
-        <div class ="col-xs-12 col-sm-12 col-md-12 col-lg-12"
+        <div class="col-xs-12">
+            <div id="breakcrumb" 
+                 style="font-size:14px; 
+                        font-family: RobotoSlabRegular;">
+                {breadcrumbs_path}
+            </div>
+            <div style="padding-top: 20px; 
+                        margin-left: -15px; 
+                        margin-right: -15px">
+                <a href="{linkS}combo-sieu-tiet-kiem-317/">
+                    <img class="img-reponsive" 
+                        alt="compo siêu tiết kiệm"
+                        src="{linkS}layout/bootstrap/images/product_combo.png" 
+                        alt="combo tiết kiệm"
+                        width="100%"
+                        style = "cursor: pointer;"/>
+                </a>
+            </div>
+            <!--BEGIN SEO CATEGORY-->
+            <div class ="col-lg-12" style="{display_seo}">
+                <p style="text-align:left;
+                        font-family: RobotoSlabBold;
+                        font-size: 15px;
+                        color:#929292;
+                        line-height: 25px;
+                        margin-top:20px">
+                    CÓ THỂ BẠN CHƯA BIẾT
+                </p>
+                <p style="text-align:left;
+                        font-family:RobotoSlabRegular;
+                        font-size:15px;
+                        color:#929292;
+                        line-height:25px">
+                    {text_seo}
+                </p>
+                <hr style = "border-width:1px;                               
+                            border-color:#eee; 
+                            width:100%; 
+                            float:left;
+                            margin-top:10px;
+                            margin-bottom: 10px">
+            </div>
+            <!--END SEO CATEGORY-->
+            <div class="product_main">
+                <!--BEGINLIST_PRODUCTS_MOBILE-->
+                <!--BEGIN_PRODUCT_MOBILE-->
+                <li class="col-xs-6" style="margin-top:20px">
+                    <a href="{linkS}{category}/{product_key}.htm" style = "outline:none">
+                        <h4>
+                            <a href="{linkS}{category}/{product_key}.htm" class="preview">
+                                <img class="img-responsive center-block" 
+                                    src="{linkS}upload/product/{product_img}" 
+                                    alt="{product_name_nocut}"
+                                    style="width:100%"/>
+                            </a>
+                        </h4>                                       
+                        <h3 style="text-align:center">
+                            <span class="product_main_title_mobile">
+                                {product_name}
+                            </span>
+                        </h3>
+                        <div class="product_main_price_mobile">{product_price} VNĐ</div> 
+                        <div class="product_main_price_en_mobile">{product_price_old}</div>                                
+                    </a>
+                 </li>
+                <!--END_PRODUCT_MOBILE-->
+                <!--ENDLIST_PRODUCTS_MOBILE-->
+            </div>
+
+            <!-- BEGIN PAGE NAVIGATION -->
+            <div align="center">
+                <div class="pagination" align="center" 
+                     style="margin-left: auto;
+                            margin-right: auto;
+                            font-size:14px;
+                            font-family:RobotoSlabRegular;
+                            margin-top: 20px;
+                            margin-bottom: 20px">
+                    {page}
+                </div> 
+            </div>
+            <!-- END PAGE NAVIGATION -->    
+        </div>
+    </div>
+</div>
+<!-- End product mobile -->
+
+<!-- Begin Logo Slider-->                
+<div class = "container hidden-xs hidden-sm hidden-md">
+    <div class ="row" style="margin-top: 10px">
+        <div class ="col-lg-12"
              style="padding-left: 50px; 
                     padding-right: 50px">
             <img alt="logo nhãn hàng" 
@@ -207,13 +282,8 @@
             
         </div>
     </div>
-</div>
-<!-- End San Pham Theo Nhan Hieu-->
-
-<!-- Begin Logo Slider-->                
-<div class = "container">
     <div class="row">                
-        <div class ="col-xs-12 col-sm-12 col-md-12 col-lg-12" 
+        <div class ="col-lg-12" 
              style="height: 100px; 
                     padding-left: 50px; 
                     padding-right: 50px">                                    
@@ -222,8 +292,8 @@
                 {list_advs}                             
             </div>
             <style>
-                .slick-prev 
-                {                    
+                .slick-prev
+                {
                     background-image: url({linkS}layout/bootstrap/images/line.png);
                     height: 40px;
                     margin-top: -20px;
@@ -257,10 +327,7 @@
                 });
             </script>                      
         </div>                                                                                                                        
-    </div>
-    <div class ="row">
-        <div class ="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <br/>
+        <div class ="col-lg-12">
             <div style = "height: 2px;
                           background-color:#edf8fb;
                           margin-left: 40px;
@@ -268,15 +335,13 @@
             </div>
         </div>
     </div>
-    <br/>
-    <br/>
 </div>
 <!-- End Logo Slider-->    
 
 <!--Begin news -->
-<div class = "container">
-    <div class ="row">
-        <div class ="col-xs-12 col-sm-12 col-md-12 col-lg-12">                    
+<div class = "container hidden-xs hidden-sm hidden-md">
+    <div class ="row" style="margin-top: 20px">
+        <div class ="col-lg-12">                    
            <img alt="banner đời sống pet"
                 src="{linkS}layout/bootstrap/images/doi_song_pet.png" 
                 style = "margin-left: auto;
@@ -287,7 +352,8 @@
     </div>
 </div>
 
-<div class = "container-fluid" style="background-color:#f8f9fb; margin-top: -25px">
+<div class="container-fluid hidden-xs hidden-sm hidden-md" 
+    style="background-color:#f8f9fb; margin-top: -25px">
     <div class="container"
         id="news_container"
         style="margin-top: 40px; margin-bottom:20px;">

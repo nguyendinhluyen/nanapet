@@ -37,7 +37,7 @@
             break;
 
         case 'product':
-            include('modules/product.php');
+            include('modules/allproduct.php');
             $product = 'product_menu_active';
             break;
 

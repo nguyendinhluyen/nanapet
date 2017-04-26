@@ -429,13 +429,18 @@ function pagination($self, $numofpages, $page_num) {
 
         $page_min = ($page_min < 1) ? 1 : $page_min;
         if (($page_num > ($range - $range_min)) && ($numofpages > $range)) {
-            $page_pagination .= '<a title="Ban đầu" style = "outline:none" href="' . $self . 'page=1">Ban đầu</a> ';
+            $page_pagination .= '<a title="Ban đầu" style = "outline:none" href="' . $self . 'page=1">1</a> ';
+            $page_pagination .= '<a style = "outline:none"">...</a> ';
         }
-
-        if ($page_num != 1) {
-            $page_pagination .= '<a style="outline:none" href="' . $self . 'page=' . ($page_num - 1) . '">Trang trước</a> ';
+        
+//        if ($page_num != 1) {
+//            $page_pagination .= '<a style="outline:none" href="' . $self . 'page=' . ($page_num - 1) . '">Trang trước</a> ';
+//        }
+        
+        if ($page_num == 3) {
+            $page_pagination .= '<a title="Ban đầu" style = "outline:none" href="' . $self . 'page=1">1</a> ';
         }
-
+        
         for ($i = $page_min; $i <= $page_max; $i ++) {            
             if ($i == $page_num) {
                 $page_pagination .= "<span class='current'>" . $i . '</span> ';
@@ -444,15 +449,16 @@ function pagination($self, $numofpages, $page_num) {
             }
         }
 
-        if ($page_num < $numofpages) {
-            $page_pagination .= ' <a style = "outline:none" href="' . $self . 'page=' . ($page_num + 1) . '">Tiếp theo</a>';
+        if ($page_num < $numofpages - 3) {
+            // $page_pagination .= ' <a style = "outline:none" href="' . $self . 'page=' . ($page_num + 1) . '">Tiếp theo</a>';
+            $page_pagination .= ' <a style = "outline:none">...</a>';
         }
 
         if (($page_num < ($numofpages - $range_max)) && ($numofpages > $range)) {
-            $page_pagination .= ' <a style = "outline:none" title="Kết thúc" href="' . $self . 'page=' . $numofpages . '">Kết thúc</a> ';
+            $page_pagination .= ' <a style = "outline:none" title="Kết thúc" href="' . $self . 'page=' . $numofpages . '">'.$numofpages.'</a> ';
         }
 
-        $page_pagination = "<span class='sotrang'>Trang " . $page_num . "/" . $numofpages . "</span>" . ' ' . $page_pagination;
+        // $page_pagination = "<span class='sotrang'>Trang " . $page_num . "/" . $numofpages . "</span>" . ' ' . $page_pagination;
     }
     return $page_pagination;
 }

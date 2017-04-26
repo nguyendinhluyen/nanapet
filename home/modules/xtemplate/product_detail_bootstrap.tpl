@@ -636,11 +636,11 @@
                                         </div>
                                         
                                         <div align="justify"
-                                              style="margin-bottom:10px;                                                      
-                                                    font-size:14px;
-                                                    display:{display_brand_short_description};
-                                                    font-family:RobotoSlabRegular;
-                                                    margin-left:2px">
+                                            style="margin-bottom:10px;                                                      
+                                                  font-size:14px;
+                                                  display:{display_brand_short_description};
+                                                  font-family:RobotoSlabRegular;
+                                                  margin-left:2px">
                                             Thương hiệu
                                         </div>
 
@@ -702,7 +702,7 @@
             </div>    
         </div>
         <div class = "hidden-xs hidden-sm col-md-3 col-lg-3"
-             style="padding-right: 50px">
+             style="padding-right: 30px">
             <!-- <img src="{linkS}layout/bootstrap/images/category.png" style="float: right; clear: both; width: 100%"/>
             {category}-->
             <a href="{linkS}lien-he">
@@ -714,7 +714,6 @@
                            margin-top: 45px;
                            padding-left: 8px"/>
             </a>
-            {left_facebook_page_plugin}
         </div>                                        
     </div>
 </div>   
