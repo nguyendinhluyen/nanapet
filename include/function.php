@@ -431,16 +431,16 @@ function pagination($self, $numofpages, $page_num) {
         if (($page_num > ($range - $range_min)) && ($numofpages > $range)) {
             $page_pagination .= '<a title="Ban đầu" style = "outline:none" href="' . $self . 'page=1">1</a> ';
             $page_pagination .= '<a style = "outline:none"">...</a> ';
-        }
+        } 
         
+        if ($page_num == 3 && $page_max > 4) {
+            $page_pagination .= '<a title="Ban đầu" style = "outline:none" href="' . $self . 'page=1">1</a> ';
+        }
+
 //        if ($page_num != 1) {
 //            $page_pagination .= '<a style="outline:none" href="' . $self . 'page=' . ($page_num - 1) . '">Trang trước</a> ';
 //        }
-        
-        if ($page_num == 3) {
-            $page_pagination .= '<a title="Ban đầu" style = "outline:none" href="' . $self . 'page=1">1</a> ';
-        }
-        
+                        
         for ($i = $page_min; $i <= $page_max; $i ++) {            
             if ($i == $page_num) {
                 $page_pagination .= "<span class='current'>" . $i . '</span> ';
