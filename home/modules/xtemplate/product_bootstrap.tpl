@@ -35,6 +35,7 @@
     }
 </style>
 
+<!-- Begin product desktop -->
 <div class = "container hidden-xs hidden-sm hidden-md">
     <div class ="row">
         <div class = "col-lg-3"
@@ -42,7 +43,7 @@
             <img alt="danh mục sản phẩm" 
                 src="{linkS}layout/bootstrap/images/category.png" 
                 style="clear: both; 
-                       width: 90%"/>
+                       width: 90%">
             {category}
         </div>
         <div class ="col-lg-9" 
@@ -61,7 +62,7 @@
                         src="{linkS}layout/bootstrap/images/product_combo.png" 
                         alt="combo tiết kiệm"
                         width="100%"
-                        style = "cursor: pointer;"/>
+                        style = "cursor: pointer;">
                 </a>
                 <h1 style="font-size: 17px; 
                            text-align: center; 
@@ -113,7 +114,7 @@
                                                         style="display: block;
                                                                margin-left: auto;
                                                                margin-right: auto;
-                                                               margin-top: 30px"/>
+                                                               margin-top: 30px">
                                                 </a>
                                             </h4>                                        
                                         </td>
@@ -175,97 +176,15 @@
         </div>
     </div>
 </div>
-<!-- End Product -->
+<!-- End product desktop -->
 
 <!-- Begin product mobile -->
-<div class = "container hidden-lg hidden-sm hidden-md">
-    <div class ="row">
-        <div class="col-xs-12">
-            <div id="breakcrumb" 
-                 style="font-size:14px; 
-                        font-family: RobotoSlabRegular;">
-                {breadcrumbs_path}
-            </div>
-            <div style="padding-top: 20px; 
-                        margin-left: -15px; 
-                        margin-right: -15px">
-                <a href="{linkS}combo-sieu-tiet-kiem-317/">
-                    <img class="img-reponsive" 
-                        alt="compo siêu tiết kiệm"
-                        src="{linkS}layout/bootstrap/images/product_combo.png" 
-                        alt="combo tiết kiệm"
-                        width="100%"
-                        style = "cursor: pointer;"/>
-                </a>
-            </div>
-            <!--BEGIN SEO CATEGORY-->
-            <div class ="col-lg-12" style="{display_seo}">
-                <p style="text-align:left;
-                        font-family: RobotoSlabBold;
-                        font-size: 15px;
-                        color:#929292;
-                        line-height: 25px;
-                        margin-top:20px">
-                    CÓ THỂ BẠN CHƯA BIẾT
-                </p>
-                <p style="text-align:left;
-                        font-family:RobotoSlabRegular;
-                        font-size:15px;
-                        color:#929292;
-                        line-height:25px">
-                    {text_seo}
-                </p>
-                <hr style = "border-width:1px;                               
-                            border-color:#eee; 
-                            width:100%; 
-                            float:left;
-                            margin-top:10px;
-                            margin-bottom: 10px">
-            </div>
-            <!--END SEO CATEGORY-->
-            <div class="product_main">
-                <!--BEGINLIST_PRODUCTS_MOBILE-->
-                <!--BEGIN_PRODUCT_MOBILE-->
-                <li class="col-xs-6" style="margin-top:20px">
-                    <a href="{linkS}{category}/{product_key}.htm" style = "outline:none">
-                        <h4>
-                            <a href="{linkS}{category}/{product_key}.htm" class="preview">
-                                <img class="img-responsive center-block" 
-                                    src="{linkS}upload/product/{product_img}" 
-                                    alt="{product_name_nocut}"
-                                    style="width:100%"/>
-                            </a>
-                        </h4>                                       
-                        <h3 style="text-align:center">
-                            <span class="product_main_title_mobile">
-                                {product_name}
-                            </span>
-                        </h3>
-                        <div class="product_main_price_mobile">{product_price} VNĐ</div> 
-                        <div class="product_main_price_en_mobile">{product_price_old}</div>                                
-                    </a>
-                 </li>
-                <!--END_PRODUCT_MOBILE-->
-                <!--ENDLIST_PRODUCTS_MOBILE-->
-            </div>
-
-            <!-- BEGIN PAGE NAVIGATION -->
-            <div align="center">
-                <div class="pagination" align="center" 
-                     style="margin-left: auto;
-                            margin-right: auto;
-                            font-size:14px;
-                            font-family:RobotoSlabRegular;
-                            margin-top: 20px;
-                            margin-bottom: 20px">
-                    {page}
-                </div> 
-            </div>
-            <!-- END PAGE NAVIGATION -->    
-        </div>
-    </div>
-</div>
+{mobile_layout}
 <!-- End product mobile -->
+
+<!-- Begin product tablet -->
+{tablet_layout}
+<!-- End product tablet -->
 
 <!-- Begin Logo Slider-->                
 <div class = "container hidden-xs hidden-sm hidden-md">
@@ -278,7 +197,7 @@
                 style = "display:block; 
                          margin-left: auto; 
                          margin-right: auto;
-                         width: 100%;"/>       
+                         width: 100%;">       
             
         </div>
     </div>
@@ -347,7 +266,7 @@
                 style = "margin-left: auto;
                         margin-right: auto; 
                         display: block;
-                        margin-top: 20px"/>                                    
+                        margin-top: 20px">                                    
         </div>
     </div>
 </div>
@@ -393,7 +312,7 @@
                             margin-right: auto;
                             display: block;
                             margin-top: 20px;
-                            margin-bottom: 20px"/>
+                            margin-bottom: 20px">
             </a>
     </div>
 </div>
