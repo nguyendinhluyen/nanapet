@@ -761,7 +761,8 @@
                                 margin-top: 20px;
                                 padding-right: 20px;
                                 font-weight: bold;
-                                color:#000;">
+                                color:#000;
+                                cursor: pointer">
                             HỖ TRỢ KHÁCH HÀNG <span class="caret"></span>
                         </div>
                         <div id="dis_hid_support_customer" hidden
@@ -794,7 +795,8 @@
                                     margin-bottom: 10px;
                                     padding-right: 20px;
                                     font-weight: bold;
-                                    color:#000;">
+                                    color:#000;
+                                    cursor: pointer">
                             VỀ NANAPET SHOP <span class="caret"></span>
                         </div>
                         <div id="dis_hid_about_customer" hidden
@@ -825,7 +827,8 @@
                                     margin-bottom: 10px;
                                     padding-right: 20px;
                                     font-weight: bold;
-                                    color:#000;">
+                                    color:#000;
+                                    cursor: pointer">
                             LIÊN KẾT & HỢP TÁC <span class="caret"></span>
                         </div>
                         <div id="dis_hid_partner_customer" hidden
