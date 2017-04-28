@@ -998,7 +998,7 @@
                 <div class="fb-page" 
                      data-tabs="messages" 
                      data-href="https://www.facebook.com/NanaPetOnline/" 
-                     data-width="250" 
+                     data-width="190" 
                      data-height="400" 
                      data-small-header="false" 
                      data-adapt-container-width="true" 
