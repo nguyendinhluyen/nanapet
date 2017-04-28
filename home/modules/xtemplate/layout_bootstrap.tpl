@@ -154,8 +154,7 @@
     <body>
         <header style="padding-top: 10px;">	
             <!-- begin div header-->
-            <div class ="container hidden-xs hidden-sm hidden-md" 
-                 style="padding-bottom:40px">
+            <div class ="container hidden-xs hidden-sm hidden-md">
                 <div class ="row" 
                      style="margin-left: auto;
                             margin-right: auto; 
@@ -938,7 +937,7 @@
                 bottom:0px;
                 right:0px;
                 z-index:999999999999999;
-                width:250px;
+                width:185px;
                 height:auto;
                 border-top-left-radius:5px;
                 border-top-right-radius:5px;
@@ -959,8 +958,8 @@
             }
             #cfacebook a.chat_fb {
                 float:left;
-                padding:0 25px;
-                width:350px;
+                padding:0 10px;
+                width:185px;
                 color:#fff;
                 text-decoration:none;
                 height:40px;
@@ -993,7 +992,7 @@
         <div id="cfacebook">
             <a href="javascript:;" class="chat_fb" 
                onclick="return:false;">
-                <i class="fa fa-facebook-square"></i> Gửi tin nhắn tới NanaPet
+                <i class="fa fa-facebook-square"></i> Tư vấn với NanaPet
             </a>
             <div class="fchat">
                 <div class="fb-page" 
@@ -1003,7 +1002,7 @@
                      data-height="400" 
                      data-small-header="false" 
                      data-adapt-container-width="true" 
-                     data-hide-cover="false" 
+                     data-hide-cover="false"
                      data-show-facepile="true" 
                      data-show-posts="false"></div>
             </div>
