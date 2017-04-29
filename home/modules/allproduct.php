@@ -82,13 +82,7 @@
         $html_mobile = '<div class = "container hidden-lg hidden-sm hidden-md">
                             <div class ="row">
                                 <div class="col-xs-12">
-                                    <div id="breakcrumb" 
-                                         style="font-size:14px; 
-                                                font-family: RobotoSlabRegular;">
-                                        {breadcrumbs_path}
-                                    </div>
-                                    <div style="padding-top: 20px; 
-                                                padding-bottom: 10px;
+                                    <div style="padding-bottom: 10px;
                                                 margin-left: -15px; 
                                                 margin-right: -15px">
                                         <a href="{linkS}combo-sieu-tiet-kiem-317/">
@@ -175,13 +169,7 @@
         $html_tablet = '<div class = "container hidden-lg hidden-xs">
                             <div class ="row">
                                 <div class="col-xs-12">
-                                    <div id="breakcrumb" 
-                                         style="font-size:14px; 
-                                                font-family: RobotoSlabRegular;">
-                                        {breadcrumbs_path}
-                                    </div>
-                                    <div style="padding-top: 20px; 
-                                                padding-bottom: 20px;
+                                    <div style="padding-bottom: 20px;
                                                 margin-left: -50px; 
                                                 margin-right: -50px;">
                                         <a href="{linkS}combo-sieu-tiet-kiem-317/">

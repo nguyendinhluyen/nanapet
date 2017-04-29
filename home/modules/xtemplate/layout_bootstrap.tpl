@@ -312,7 +312,7 @@
             
             <!--Mobile display -->
             <div class="hidden-lg">
-                <div class="container" style="margin-bottom: 20px">
+                <div class="container" style="margin-bottom: 10px">
                     <div class="row" 
                          style="margin-top: 15px; 
                                 margin-bottom: 10px">
