@@ -240,7 +240,7 @@ ul.nav li a.contact:focus{
 ul.main_category{
     padding-left: 5%;
 }
-ul li.danhmuc_main{
+ul li.danhmuc_main {
     list-style-type: none;
     font-family: RobotoSlabRegular;
     font-size: 14px;
@@ -280,6 +280,30 @@ li.danhmuc_sub a.selected{
 }
 li.danhmuc_sub a:hover{
     color:#05b4fa;
+}
+ul.main_category_mobile{
+    padding-left: 0px;
+}
+ul li.danhmuc_main_mobile {
+    list-style-type: none;
+    font-family: RobotoSlabBold;
+    font-size: 14px;
+    line-height: 30px;
+    color: #275d72;
+    width: 100%;    
+    text-transform: uppercase;
+}
+ul li.danhmuc_sub_mobile {
+    list-style-type: none;    
+    font-family: RobotoSlabRegular;
+    font-size: 14px;
+    line-height: 30px;  
+}
+ul li.danhmuc_sub_mobile a{
+    color: #000;
+}
+.main_sub_mobile {
+    padding-left: 0px;
 }
 /* End Category Product*/
 

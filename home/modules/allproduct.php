@@ -88,6 +88,7 @@
                                         {breadcrumbs_path}
                                     </div>
                                     <div style="padding-top: 20px; 
+                                                padding-bottom: 10px;
                                                 margin-left: -15px; 
                                                 margin-right: -15px">
                                         <a href="{linkS}combo-sieu-tiet-kiem-317/">
@@ -99,6 +100,7 @@
                                                 style="cursor: pointer;">
                                         </a>
                                     </div>
+                                    {category_mobile}
                                     <!--BEGIN SEO CATEGORY-->
                                     <div class ="col-lg-12" style="{display_seo}">
                                         <p style="text-align:left;
@@ -179,8 +181,9 @@
                                         {breadcrumbs_path}
                                     </div>
                                     <div style="padding-top: 20px; 
+                                                padding-bottom: 20px;
                                                 margin-left: -50px; 
-                                                margin-right: -50px">
+                                                margin-right: -50px;">
                                         <a href="{linkS}combo-sieu-tiet-kiem-317/">
                                             <img class="img-reponsive" 
                                                 alt="combo siêu tiết kiệm"
@@ -190,6 +193,7 @@
                                                 style="cursor: pointer;">
                                         </a>
                                     </div>
+                                    {category_mobile}
                                     <!--BEGIN SEO CATEGORY-->
                                     <div class ="col-lg-12" style="{display_seo}">
                                         <p style="text-align:left;
@@ -476,11 +480,14 @@
     }
     
     // $nav_page = str_replace("page=", "trang-", pagination($linkS . $linkPage ."/", ceil($numofpages), $page));
-    $nav_page = pagination($linkS . $linkPage , ceil($numofpages), $page);
-    $nav_page = str_replace("page=", "trang-", $nav_page);
+    $nav_page = str_replace("page=", "trang-", pagination($linkS . $linkPage , ceil($numofpages), $page));
+    $categoryProduct = new CategoryProduct();
+    $category = $categoryProduct->generateCategory("category");
+    $category_mobile = $categoryProduct->generateCategory("category_mobile");
     $content = $xtemplate->replace($content, array(
         'page' => $nav_page,
         'category' => $category,
+        'category_mobile' => $category_mobile,
         'list_advs' => $list_advs,
         'category_name' => $category_name,
         'display_seo' => $display_seo,
