@@ -120,7 +120,7 @@
                                                     margin-bottom: 10px">
                                     </div>
                                     <!--END SEO CATEGORY-->
-                                    <div class="product_main">
+                                    <div class="product_main" style="margin-top:-10px">
                                         <!--BEGINLIST_PRODUCTS_MOBILE-->
                                         <!--BEGIN_PRODUCT_MOBILE-->
                                         <li class="col-xs-6" style="margin-top:20px">
@@ -205,7 +205,7 @@
                                                     margin-bottom: 10px">
                                     </div>
                                     <!--END SEO CATEGORY-->
-                                    <div class="product_main">
+                                    <div class="product_main" style="margin-top:-10px">
                                         <!--BEGINLIST_PRODUCTS_TABLET-->
                                         <!--BEGIN_PRODUCT_TABLET-->
                                         <li class="col-sm-3 col-md-3" style="margin-top:20px">
