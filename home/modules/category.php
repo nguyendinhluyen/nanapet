@@ -71,6 +71,7 @@
             $sale_off = "";
             if($category_key === "sale-off") { 
                 $sale_off = "selected";
+                $selected_category = "SALE OFF - MUA NGAY KẺO LỠ";
             }
             $tpl = $tpl."<hr class='hidden-md hidden-sm hidden-xs' "
                         . "style='margin-top: 10px;"
