@@ -181,7 +181,7 @@
                                                 style="cursor: pointer;">
                                         </a>
                                     </div>
-                                    {category_mobile}
+                                    {category_tablet}
                                     <!--BEGIN SEO CATEGORY-->
                                     <div class ="col-lg-12" style="{display_seo}">
                                         <p style="text-align:left;
@@ -467,15 +467,16 @@
         $display_seo ="display:block";
     }
     
-    // $nav_page = str_replace("page=", "trang-", pagination($linkS . $linkPage ."/", ceil($numofpages), $page));
     $nav_page = str_replace("page=", "trang-", pagination($linkS . $linkPage , ceil($numofpages), $page));
     $categoryProduct = new CategoryProduct();
     $category = $categoryProduct->generateCategory("category");
     $category_mobile = $categoryProduct->generateCategory("category_mobile");
+    $category_tablet = $categoryProduct->generateCategory("category_mobile", true);
     $content = $xtemplate->replace($content, array(
         'page' => $nav_page,
         'category' => $category,
         'category_mobile' => $category_mobile,
+        'category_tablet' => $category_tablet,
         'list_advs' => $list_advs,
         'category_name' => $category_name,
         'display_seo' => $display_seo,

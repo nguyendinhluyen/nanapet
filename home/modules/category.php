@@ -1,12 +1,12 @@
 <?php
     class CategoryProduct {
-        public function generateCategory($loadtemplate) {
+        public function generateCategory($template,$istablet=false) {
             $category_key = input($_GET['category_key']);
             if (isset($_GET['category_sub_key'])) {
                 $category_key = input($_GET['category_sub_key']);
             }
             global $xtemplate;
-            $category = $xtemplate->load($loadtemplate);
+            $category = $xtemplate->load($template);
             $Cate = new Category();
             $categories = $Cate->getCategoriesParent();
             $n = count($categories);
@@ -32,7 +32,8 @@
                 $tpl.= $xtemplate->assign_vars($block,array(
                     'category_name'     => $categories[$i]['categories_name'],
                     'category_key'      => $categories[$i]['categories_key'],
-                    'id_danhmuc_main'   => $id_danhmuc_main
+                    'id_danhmuc_main'   => $id_danhmuc_main,
+                    'tablet'            => $istablet == true ? 'tablet' :''
                 ));
 
                 $block_sub = $xtemplate->get_block_from_str($category,'SUBCATEGORY');        
@@ -57,7 +58,7 @@
                         'category_sub_key'          => $categories_sub[$j]['categories_key'],
                         'category_key'              => $categories[$i]['categories_key'],
                         'id_danhmuc_sub'            => $id_danhmuc_sub,
-                        'img_danhmuc_sub_display'   => $img_danhmuc_sub_display
+                        'img_danhmuc_sub_display'   => $img_danhmuc_sub_display,
                     ));
                 }
                 $tpl = $xtemplate->assign_blocks_content($tpl,array(
