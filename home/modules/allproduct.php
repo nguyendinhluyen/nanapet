@@ -169,9 +169,7 @@
         $html_tablet = '<div class = "container hidden-lg hidden-xs">
                             <div class ="row">
                                 <div class="col-xs-12">
-                                    <div style="padding-bottom: 20px;
-                                                margin-left: -50px; 
-                                                margin-right: -50px;">
+                                    <div style="padding-bottom: 20px;">
                                         <a href="{linkS}combo-sieu-tiet-kiem-317/">
                                             <img class="img-reponsive" 
                                                 alt="combo siêu tiết kiệm"

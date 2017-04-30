@@ -305,6 +305,18 @@ ul li.danhmuc_sub_mobile a{
 .main_sub_mobile {
     padding-left: 0px;
 }
+.selected_category {
+    font-family: RobotoSlabBold;
+    font-size: 14px;
+    line-height: 30px;
+    color: #275d72;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.selected_category_text {
+    vertical-align: middle; 
+    
+}
 /* End Category Product*/
 
 /* Begin Product Detail */

@@ -12,6 +12,7 @@
             $n = count($categories);
             $tpl = '';
             $block = $xtemplate->get_block_from_str($category,'CATEGORY');
+            $selected_category = 'Tất cả sản phẩm';
             for($i=0 ; $i<$n ; ++$i) {
                 if($i !=0 ) {
                     $tpl .= "<hr class='hidden-md hidden-sm hidden-xs' style='margin-top: 10px;"
@@ -46,6 +47,7 @@
                     $img_danhmuc_sub_display = "display:none";
                     if($category_key === $categories_sub[$j]['categories_key']) {
                         $id_danhmuc_sub = "selected";
+                        $selected_category = $categories_sub[$j]['categories_name'];
                         $img_danhmuc_sub_display = " display:inline; margin-left: -15px";
                         $text_seo = $categories_sub[$j]['text_seo'];
                         $title_page = $categories_sub[$j]['title_category'];
@@ -80,8 +82,13 @@
                                 .'<li class="danhmuc_main"><a href="{linkS}sale-off/" class="'
                     .$sale_off.'">Sale Off - Mua Ngay Kẻo Lỡ</a></li>';
             $category = $xtemplate -> assign_blocks_content($category,array(
-                'CATEGORY'  =>  $tpl
+                'CATEGORY'  =>  $tpl,
+            
             ));	
+            $category = $xtemplate->replace($category, array(
+                'tablet'    => $istablet == true ? 'tablet' :'',
+                'selected_category' => $selected_category
+            ));
             return $category;
         }
     }
