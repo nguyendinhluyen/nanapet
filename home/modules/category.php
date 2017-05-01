@@ -90,7 +90,8 @@
                 'tablet'    => $istablet == true ? 'tablet' :'',
                 'selected_category' => $selected_category
             ));
-            return $category;
+            $data = array($category, $text_seo, $title_page, $description, $keywords);
+            return $data;
         }
     }
 ?>

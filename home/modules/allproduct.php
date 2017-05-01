@@ -276,9 +276,15 @@
     }
 
     // Title for page all product SEO
-    $title_page = '';
-    $page_now = intval($_GET['trang']);
+    $categoryProduct = new CategoryProduct();
+    $category_desktop = $categoryProduct->generateCategory("category");
+    $category = $category_desktop[0];
+    $text_seo =$category_desktop[1];
+    $title_page = $category_desktop[2];
+    $description = $category_desktop[3];
+    $keywords = $category_desktop[4];
     
+    $page_now = intval($_GET['trang']);
     if(empty($title_page)) {
         if (!empty($breadcrumbs[0]['name'])
                 && (!isset($page_now) || $page_now == 1 || $page_now == 0)) {
@@ -466,10 +472,8 @@
     }
     
     $nav_page = str_replace("page=", "trang-", pagination($linkS . $linkPage , ceil($numofpages), $page));
-    $categoryProduct = new CategoryProduct();
-    $category = $categoryProduct->generateCategory("category");
-    $category_mobile = $categoryProduct->generateCategory("category_mobile");
-    $category_tablet = $categoryProduct->generateCategory("category_mobile", true);
+    $category_mobile = $categoryProduct->generateCategory("category_mobile")[0];
+    $category_tablet = $categoryProduct->generateCategory("category_mobile", true)[0];
     $content = $xtemplate->replace($content, array(
         'page' => $nav_page,
         'category' => $category,
