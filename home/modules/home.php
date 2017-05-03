@@ -336,21 +336,22 @@ showProducts($home, $areadisplay_bestsale_tablet, $products_bestsale_tablet, $di
 // End combo ban chay nhat tablet
 
 // Begin san pham ban chay nhat mobile
-$totaldisplayproduct_mobile = 4;
-$products_bestsale_mobile = array_slice($products_bestsale, 0, 4);
+$totaldisplayproduct_mobile = 8;
+$products_bestsale_mobile = array_slice($products_bestsale, 0, 8);
 $areadisplay_bestsale_mobile = 'HOTPRODUCTSNEW_MOBILE';
 showProducts($home, $areadisplay_bestsale_mobile, $products_bestsale_mobile, $displayofline_mobile, $totaldisplayproduct_mobile,"");
 // End san pham ban chay nhat mobile
 
-// Begin danh cho cun cung
-$condition_dog = " AND species='10' "; // 10: Dog, 01: Cat
+// Begin dog - 10: Dog, 01: Cat
+$condition_dog = " AND species='10' ";
 $configname_dog = "pre_limit_product_dog";
-$totaldisplayproduct_dog = 6;
+$totaldisplayproduct_dog = 8;
 $products_dog = getProducts($condition_dog, $configname_dog, $totaldisplayproduct_dog);
+$products_dog_desktop = array_slice($products_dog, 0, 6);
 $areadisplay_dog = 'DOGPRODUCTSNEW';
 $displayofline_dog = 3;
-showProducts($home, $areadisplay_dog, $products_dog, $displayofline_dog, $totaldisplayproduct_dog,"float:right");
-// End danh cho cun cung
+showProducts($home, $areadisplay_dog, $products_dog_desktop, $displayofline_dog, $totaldisplayproduct_dog,"float:right");
+// End dog
 
 // Begin danh cho cun cung tablet
 $products_dog_tablet = array_slice($products_dog, 0, 8);
@@ -359,7 +360,7 @@ showProducts($home, $areadisplay_dog_tablet, $products_dog_tablet, $displayoflin
 // End danh cho cun cung tablet
 
 // Begin danh cho cun cung mobile
-$products_dog_mobile = array_slice($products_dog, 0, 4);
+$products_dog_mobile = array_slice($products_dog, 0, 8);
 $areadisplay_dog_mobile = 'DOGPRODUCTSNEW_MOBILE';
 showProducts($home, $areadisplay_dog_mobile, $products_dog_mobile, $displayofline_mobile, $totaldisplayproduct_mobile,"");
 // End danh cho cun cung mobile
@@ -367,15 +368,16 @@ showProducts($home, $areadisplay_dog_mobile, $products_dog_mobile, $displayoflin
 // Load Dog news
 showNews($home, 'DOGNEWS', "27");
 
-// Begin danh cho meo cung
-$condition_cat = " AND species='01' "; // 10: Dog, 01: Cat
+// Begin cat - 10: Dog, 01: Cat
+$condition_cat = " AND species='01' "; 
 $configname_cat = "pre_limit_product_cat";
-$totaldisplayproduct_cat = 6;
+$totaldisplayproduct_cat = 8;
 $products_cat = getProducts($condition_cat, $configname_cat, $totaldisplayproduct_cat);
+$products_cat_desktop = array_slice($products_cat, 0, 6);
 $areadisplay_cat = 'CATPRODUCTSNEW';
 $displayofline_cat = 3;
-showProducts($home, $areadisplay_cat, $products_cat, $displayofline_cat, $totaldisplayproduct_cat, "float:right");
-// End danh cho meo cung
+showProducts($home, $areadisplay_cat, $products_cat_desktop, $displayofline_cat, $totaldisplayproduct_cat, "float:right");
+// End cat
 
 // Begin danh cho meo cung tablet
 $products_cat_tablet = array_slice($products_cat, 0, 8);
@@ -384,7 +386,7 @@ showProducts($home, $areadisplay_cat_tablet, $products_cat_tablet, $displayoflin
 // End danh cho cun cung tablet
 
 // Begin danh cho meo cung mobile
-$products_cat_mobile = array_slice($products_cat, 0, 4);
+$products_cat_mobile = array_slice($products_cat, 0, 8);
 $areadisplay_cat_mobile = 'CATPRODUCTSNEW_MOBILE';
 showProducts($home, $areadisplay_cat_mobile, $products_cat_mobile, $displayofline_mobile, $totaldisplayproduct_mobile,"");
 // End danh cho meo cung mobile
