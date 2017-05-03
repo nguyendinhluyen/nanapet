@@ -104,7 +104,6 @@
                                 <table border="0">                                
                                     <tr>
                                         <td> 
-                                            <!--{promotion_Sale}-->
                                             <h4>
                                                 <a href="{linkS}{category}/{product_key}.htm" class="preview">
                                                     <img src="{linkS}upload/product/{product_img}" 
@@ -172,19 +171,19 @@
                     {page}
                 </div> 
             </div>
-            <!-- END PAGE NAVIGATION -->    
+            <!-- END PAGE NAVIGATION -->
         </div>
     </div>
 </div>
 <!-- End product desktop -->
 
-<!-- Begin product mobile -->
-{mobile_layout}
-<!-- End product mobile -->
 
-<!-- Begin product tablet -->
+<!-- Begin product mobile - tablet -->
+{category_mobile}
+{mobile_layout}
 {tablet_layout}
-<!-- End product tablet -->
+{pagination_mobile}
+<!-- End product mobile - tablet -->
 
 <!-- Begin Logo Slider-->                
 <div class = "container hidden-xs hidden-sm hidden-md">

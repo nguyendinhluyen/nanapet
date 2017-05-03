@@ -24,7 +24,7 @@
             $flag ++;
             $price_encourage = $products[$i]['products_price'];
             $price_not_discount_product = "";
-            if ($products[$i]['product_encourage'] != '' && $products[$i]['p_type'] == '') {
+            if (!empty($products[$i]['product_encourage']) && empty($products[$i]['p_type'])) {
                 $price_not_discount_product = $products[$i]['products_price'];
                 $price_encourage = (int) str_replace(".", "", $products[$i]['product_encourage']);
                 $price_of_product = (int) str_replace(".", "", $price_not_discount_product);
@@ -35,28 +35,17 @@
                 if ($price_encourage > $priceVIPCustomer) {
                     $priceVIPCustomer = round($priceVIPCustomer / 1000) * 1000;
                     $price_encourage = common::convertIntToFormatMoney($priceVIPCustomer);
-                    $PromotionSale = '<span class="promotion">
-                                            <span class="promotion_sale">-' . $disCountVIPCustomer 
-                                        . '%' . '</span>
-                                        </span>';
                 } else {
                     $price_encourage = common::convertIntToFormatMoney($price_encourage);
-                    $percent = getpercent($products[$i]['products_price'], $price_encourage);
-                    $PromotionSale = '<span class="promotion">
-                                            <span class="promotion_sale">-' . $percent . '</span>
-                                        </span>';
                 }
                 $price_not_discount_product = $price_not_discount_product . " VNĐ";
-            } else {
-                $PromotionSale = '';
-            }
+            } 
 
             $Category = new Category();
             $category_key = $Category->getCategoryKeyByProductKey($products[$i]['products_key']);
             $tpl_temp .= $xtemplate->assign_vars($block, array(
                 'product_img' => $products[$i]['products_image'],
                 'product_name' => $products[$i]['products_name'],
-                'promotion_Sale' => $PromotionSale,
                 'product_price' => $price_encourage,
                 'product_price_old' => $price_not_discount_product,
                 'product_short' => '',
@@ -78,88 +67,72 @@
         ));
     }
     
-    function showMobileLayout() {
-        $html_mobile = '<div class = "container hidden-lg hidden-sm hidden-md">
-                            <div class ="row">
-                                <div class="col-xs-12">
-                                    <div style="padding-bottom: 10px;
-                                                margin-left: -15px; 
-                                                margin-right: -15px">
-                                        <a href="{linkS}combo-sieu-tiet-kiem-317/">
-                                            <img class="img-reponsive" 
-                                                alt="combo siêu tiết kiệm"
-                                                src="{linkS}layout/bootstrap/images/product_combo.png" 
-                                                alt="combo tiết kiệm"
-                                                width="100%"
-                                                style="cursor: pointer;">
-                                        </a>
-                                    </div>
-                                    {category_mobile}
-                                    <!--BEGIN SEO CATEGORY-->
-                                    <div class ="col-lg-12" style="{display_seo}">
-                                        <p style="text-align:left;
-                                                font-family: RobotoSlabBold;
-                                                font-size: 15px;
-                                                color:#929292;
-                                                line-height: 25px;
-                                                margin-top:20px">
-                                            CÓ THỂ BẠN CHƯA BIẾT
-                                        </p>
-                                        <p style="text-align:left;
-                                                font-family:RobotoSlabRegular;
-                                                font-size:15px;
-                                                color:#929292;
-                                                line-height:25px">
-                                            {text_seo}
-                                        </p>
-                                        <hr style = "border-width:1px;                               
-                                                    border-color:#eee; 
-                                                    width:100%; 
-                                                    float:left;
-                                                    margin-top:10px;
-                                                    margin-bottom: 10px">
-                                    </div>
-                                    <!--END SEO CATEGORY-->
-                                    <div class="product_main" style="margin-top:-10px">
-                                        <!--BEGINLIST_PRODUCTS_MOBILE-->
-                                        <!--BEGIN_PRODUCT_MOBILE-->
-                                        <li class="col-xs-6" style="margin-top:20px">
-                                            <a href="{linkS}{category}/{product_key}.htm" style = "outline:none">
-                                                <h4>
-                                                    <a href="{linkS}{category}/{product_key}.htm" class="preview">
-                                                        <img class="img-responsive center-block" 
-                                                            src="{linkS}upload/product/{product_img}" 
-                                                            alt="{product_name_nocut}"
-                                                            style="width:100%">
-                                                    </a>
-                                                </h4>                                       
-                                                <h3 style="text-align:center">
-                                                    <span class="product_main_title_mobile">
-                                                        {product_name}
-                                                    </span>
-                                                </h3>
-                                                <div class="product_main_price_mobile">{product_price} VNĐ</div> 
-                                                <div class="product_main_price_en_mobile">{product_price_old}</div>                                
-                                            </a>
-                                         </li>
-                                        <!--END_PRODUCT_MOBILE-->
-                                        <!--ENDLIST_PRODUCTS_MOBILE-->
-                                    </div>
+    function showCategory() {
+        $html_category = '<div class = "container hidden-lg">
+                            <a href="{linkS}combo-sieu-tiet-kiem-317/">
+                                <img class="img-reponsive" 
+                                    alt="combo siêu tiết kiệm"
+                                    src="{linkS}layout/bootstrap/images/product_combo.png" 
+                                    alt="combo tiết kiệm"
+                                    width="100%"
+                                    style="cursor: pointer; margin-top:5px">
+                            </a>
+                            <!--BEGIN SEO CATEGORY-->
+                            <div class ="col-lg-12" style="{display_seo}; padding-left:0px; padding-right:0px">
+                                <p style="text-align:left;
+                                        font-family: RobotoSlabBold;
+                                        font-size: 15px;
+                                        color:#929292;
+                                        line-height: 25px;
+                                        margin-top:20px">
+                                    CÓ THỂ BẠN CHƯA BIẾT
+                                </p>
+                                <p style="text-align:left;
+                                        font-family:RobotoSlabRegular;
+                                        font-size:15px;
+                                        color:#929292;
+                                        line-height:25px">
+                                    {text_seo}
+                                </p>
+                                <hr style = "border-width:1px;                               
+                                            border-color:#eee; 
+                                            width:100%; 
+                                            float:left;
+                                            margin-top:10px;
+                                            margin-bottom: 10px">
+                            </div>
+                            <!--END SEO CATEGORY-->
+                            {category_mobile}
+                        </div>';
+        return $html_category;
+    }
 
-                                    <!-- BEGIN PAGE NAVIGATION -->
-                                    <div align="center">
-                                        <div class="pagination" align="center" 
-                                             style="margin-left: auto;
-                                                    margin-right: auto;
-                                                    font-size:14px;
-                                                    font-family:RobotoSlabRegular;
-                                                    margin-top: 20px;
-                                                    margin-bottom: 20px">
-                                            {page}
-                                        </div> 
-                                    </div>
-                                    <!-- END PAGE NAVIGATION -->    
-                                </div>
+function showMobileLayout() {
+        $html_mobile = '<div class = "container hidden-lg hidden-sm hidden-md">
+                            <div class="product_main" style="margin-top:-10px">
+                                <!--BEGINLIST_PRODUCTS_MOBILE-->
+                                <!--BEGIN_PRODUCT_MOBILE-->
+                                <li class="col-xs-6" style="margin-top:20px">
+                                    <a href="{linkS}{category}/{product_key}.htm" style = "outline:none">
+                                        <h4>
+                                            <a href="{linkS}{category}/{product_key}.htm" class="preview">
+                                                <img class="img-responsive center-block" 
+                                                    src="{linkS}upload/product/{product_img}" 
+                                                    alt="{product_name_nocut}"
+                                                    style="width:100%">
+                                            </a>
+                                        </h4>                                       
+                                        <h3 style="text-align:center">
+                                            <span class="product_main_title_mobile">
+                                                {product_name}
+                                            </span>
+                                        </h3>
+                                        <div class="product_main_price_mobile">{product_price} VNĐ</div> 
+                                        <div class="product_main_price_en_mobile">{product_price_old}</div>                                
+                                    </a>
+                                 </li>
+                                <!--END_PRODUCT_MOBILE-->
+                                <!--ENDLIST_PRODUCTS_MOBILE-->
                             </div>
                         </div>';
         return $html_mobile;
@@ -167,71 +140,38 @@
     
     function showTabletLayout() {
         $html_tablet = '<div class = "container hidden-lg hidden-xs">
-                            <div class ="row">
-                                <div class="col-xs-12">
-                                    <div style="padding-bottom: 20px;">
-                                        <a href="{linkS}combo-sieu-tiet-kiem-317/">
-                                            <img class="img-reponsive" 
-                                                alt="combo siêu tiết kiệm"
-                                                src="{linkS}layout/bootstrap/images/product_combo.png" 
-                                                alt="combo tiết kiệm"
-                                                width="100%"
-                                                style="cursor: pointer;">
-                                        </a>
-                                    </div>
-                                    {category_tablet}
-                                    <!--BEGIN SEO CATEGORY-->
-                                    <div class ="col-lg-12" style="{display_seo}">
-                                        <p style="text-align:left;
-                                                font-family: RobotoSlabBold;
-                                                font-size: 15px;
-                                                color:#929292;
-                                                line-height: 25px;
-                                                margin-top:20px">
-                                            CÓ THỂ BẠN CHƯA BIẾT
-                                        </p>
-                                        <p style="text-align:left;
-                                                font-family:RobotoSlabRegular;
-                                                font-size:15px;
-                                                color:#929292;
-                                                line-height:25px">
-                                            {text_seo}
-                                        </p>
-                                        <hr style = "border-width:1px;                               
-                                                    border-color:#eee; 
-                                                    width:100%; 
-                                                    float:left;
-                                                    margin-top:10px;
-                                                    margin-bottom: 10px">
-                                    </div>
-                                    <!--END SEO CATEGORY-->
-                                    <div class="product_main" style="margin-top:-10px">
-                                        <!--BEGINLIST_PRODUCTS_TABLET-->
-                                        <!--BEGIN_PRODUCT_TABLET-->
-                                        <li class="col-sm-3 col-md-3" style="margin-top:20px">
-                                            <a href="{linkS}{category}/{product_key}.htm" style = "outline:none">
-                                                <h4>
-                                                    <a href="{linkS}{category}/{product_key}.htm" class="preview">
-                                                        <img class="img-responsive center-block" 
-                                                            src="{linkS}upload/product/{product_img}" 
-                                                            alt="{product_name_nocut}"
-                                                            style="width:100%">
-                                                    </a>
-                                                </h4>                                       
-                                                <h3 style="text-align:center">
-                                                    <span class="product_main_title_mobile">
-                                                        {product_name}
-                                                    </span>
-                                                </h3>
-                                                <div class="product_main_price_mobile">{product_price} VNĐ</div> 
-                                                <div class="product_main_price_en_mobile">{product_price_old}</div>                                
+                            <div class="product_main" style="margin-top:-10px">
+                                <!--BEGINLIST_PRODUCTS_TABLET-->
+                                <!--BEGIN_PRODUCT_TABLET-->
+                                <li class="col-sm-3 col-md-3" style="margin-top:20px">
+                                    <a href="{linkS}{category}/{product_key}.htm" style = "outline:none">
+                                        <h4>
+                                            <a href="{linkS}{category}/{product_key}.htm" class="preview">
+                                                <img class="img-responsive center-block" 
+                                                    src="{linkS}upload/product/{product_img}" 
+                                                    alt="{product_name_nocut}"
+                                                    style="width:100%">
                                             </a>
-                                         </li>
-                                        <!--END_PRODUCT_TABLET-->
-                                        <!--ENDLIST_PRODUCTS_TABLET-->
-                                    </div>
-
-                                    <!-- BEGIN PAGE NAVIGATION -->
+                                        </h4>                                       
+                                        <h3 style="text-align:center">
+                                            <span class="product_main_title_mobile">
+                                                {product_name}
+                                            </span>
+                                        </h3>
+                                        <div class="product_main_price_mobile">{product_price} VNĐ</div> 
+                                        <div class="product_main_price_en_mobile">{product_price_old}</div>                                
+                                    </a>
+                                 </li>
+                                <!--END_PRODUCT_TABLET-->
+                                <!--ENDLIST_PRODUCTS_TABLET-->
+                            </div>
+                        </div>';
+        return $html_tablet;
+    }
+    
+    function showPagination() {
+        $html_pagination ='<div class="hidden-lg">
+                                <!-- BEGIN PAGE NAVIGATION -->
                                     <div align="center">
                                         <div class="pagination" align="center" 
                                              style="margin-left: auto;
@@ -243,11 +183,10 @@
                                             {page}
                                         </div> 
                                     </div>
-                                    <!-- END PAGE NAVIGATION -->    
-                                </div>
-                            </div>
-                        </div>';
-        return $html_tablet;
+                                <!-- END PAGE NAVIGATION -->
+                            </div>';
+        return $html_pagination;
+                                
     }
 
     $Product = new Product();
@@ -323,8 +262,8 @@
     } else {
         $linkPage = $breadcrumbs[0]['key'] . '/';
         if ($category_key == 'sale-off') {
-            $breadcrumbs_path .= ' &raquo; Sản phẩm giảm giá';
-            $title_page = "Sản phẩm giảm giá";
+            $breadcrumbs_path .= ' &raquo; Sale-off - Mua ngay kẻo lỡ';
+            $title_page = "Sale-off - Mua ngay kẻo lỡ";
             if(isset($page_now) && $page_now != 0) {
                 $title_page .= " - trang $page_now";
             }
@@ -377,13 +316,12 @@
                             $category_key, $limitvalue, $pp);
     }
     
-    // show desktop
     $content = $xtemplate->load('product_bootstrap');
-    $tablet_layout = showTabletLayout();
-    $mobile_layout = showMobileLayout();
     $content = $xtemplate->replace($content, array(
-        'tablet_layout' => $tablet_layout,
-        'mobile_layout' => $mobile_layout
+        'category_mobile' => showCategory(),
+        'tablet_layout' => showTabletLayout(),
+        'mobile_layout' => showMobileLayout(),
+        'pagination_mobile' => showPagination()
     ));
     $areadisplayline = "PRODUCT";
     $areadisplay = "PRODUCTS";
@@ -473,12 +411,10 @@
     
     $nav_page = str_replace("page=", "trang-", pagination($linkS . $linkPage , ceil($numofpages), $page));
     $category_mobile = $categoryProduct->generateCategory("category_mobile")[0];
-    $category_tablet = $categoryProduct->generateCategory("category_mobile", true)[0];
     $content = $xtemplate->replace($content, array(
         'page' => $nav_page,
         'category' => $category,
         'category_mobile' => $category_mobile,
-        'category_tablet' => $category_tablet,
         'list_advs' => $list_advs,
         'category_name' => $category_name,
         'display_seo' => $display_seo,

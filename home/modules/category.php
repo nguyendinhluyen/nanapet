@@ -1,6 +1,6 @@
 <?php
     class CategoryProduct {
-        public function generateCategory($template,$istablet=false) {
+        public function generateCategory($template) {
             $category_key = input($_GET['category_key']);
             if (isset($_GET['category_sub_key'])) {
                 $category_key = input($_GET['category_sub_key']);
@@ -33,8 +33,7 @@
                 $tpl.= $xtemplate->assign_vars($block,array(
                     'category_name'     => $categories[$i]['categories_name'],
                     'category_key'      => $categories[$i]['categories_key'],
-                    'id_danhmuc_main'   => $id_danhmuc_main,
-                    'tablet'            => $istablet == true ? 'tablet' :''
+                    'id_danhmuc_main'   => $id_danhmuc_main
                 ));
 
                 $block_sub = $xtemplate->get_block_from_str($category,'SUBCATEGORY');        
@@ -71,7 +70,7 @@
             $sale_off = "";
             if($category_key === "sale-off") { 
                 $sale_off = "selected";
-                $selected_category = "SALE OFF - MUA NGAY KẺO LỠ";
+                $selected_category = "Sale Off - Mua Ngay Kẻo Lỡ";
             }
             $tpl = $tpl."<hr class='hidden-md hidden-sm hidden-xs' "
                         . "style='margin-top: 10px;"
@@ -87,7 +86,6 @@
             
             ));	
             $category = $xtemplate->replace($category, array(
-                'tablet'    => $istablet == true ? 'tablet' :'',
                 'selected_category' => $selected_category
             ));
             $data = array($category, $text_seo, $title_page, $description, $keywords);

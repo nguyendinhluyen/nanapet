@@ -312,6 +312,7 @@ ul li.danhmuc_sub_mobile a{
     color: #275d72;
     text-transform: uppercase;
     margin-bottom: 10px;
+    margin-top: 40px;
 }
 .selected_category_text {
     vertical-align: middle; 
@@ -567,58 +568,6 @@ a.che-bas-item-name{
     outline: none;
 }
 /* End Gio Hang */
-
-.purechat-enterinfo-container
-{
-    text-align: justify !important; 
-}
-
-.purechat-collapsed-outer
-{
-   float:right;
-   margin-right: -35px !important;
-   background-color:#156fc7 !important;  
-   margin-bottom: 11px !important;
-   
-}
-.purechat-widget-header
-{
-    background-color:#156fc7 !important;
-}
-.purechat-widget .purechat-menu .btn, .purechat-window .purechat-menu .btn
-{
-	background-color:#156fc7 !important;
-}
-.purechat-content-wrapper
-{
-	background-color:#156fc7 !important;
-
-}
-.purechat-widget .purechat-expanded .purechat-widget-inner, .purechat-widget .purechat-collapsed-outer .purechat-widget-inner
-{
-	background-color:#156fc7 !important;
-}
-.purechat-widget .purechat-ended-form .btn, .purechat-window .purechat-ended-form .btn, .purechat-widget .purechat-init-form .btn, .purechat-window .purechat-init-form .btn, .purechat-widget .purechat-email-form .btn, .purechat-window .purechat-email-form .btn
-{
-	background-color:#156fc7 !important;
-	margin-top:20px !important;
-}
-.purechat-widget-title
-{
-	padding: 0px !important;
-}
-.purechat-widget .purechat-widget-header, .purechat-window .purechat-widget-header
-{
-	border-bottom: 1px solid #FFF !important;
-}
-.purechat-widget .btn-toolbar, .purechat-window .btn-toolbar
-{
-	margin-bottom:2px !important;
-}
-.collapsed-image
-{
-    margin-left: 48.15px !important;
-}
 
 .nav_menu_bottom {   
     text-align: center;

@@ -305,16 +305,15 @@ showProducts($home, $areadisplay_combo, $products_combo, $totaldisplayproduct_co
 // Begin combo ban chay nhat tablet
 $totaldisplayproduct_combo_tablet = 4;
 $displayofline_tablet = 4;
-$products_combo_tablet = getProducts($condition_combo, $configname_combo, $totaldisplayproduct_combo_tablet);
+$products_combo_tablet = array_slice($products_combo, 0, 4);
 $areadisplay_combo_tablet = 'BESTCOMBOPRODUCTS_TABLET';
 showProducts($home, $areadisplay_combo_tablet, $products_combo_tablet, $displayofline_tablet, $totaldisplayproduct_combo_tablet,"");
 // End combo ban chay nhat tablet
 
 // Begin combo ban chay nhat mobile
-$totaldisplayproduct_mobile = 8;
 $totaldisplayproduct_mobile_short = 4;
 $displayofline_mobile = 2;
-$products_combo_mobile = getProducts($condition_combo, $configname_combo, $totaldisplayproduct_mobile_short);
+$products_combo_mobile = array_slice($products_combo, 0, 4);
 $areadisplay_combo_mobile = 'BESTCOMBOPRODUCTS_MOBILE';
 showProducts($home, $areadisplay_combo_mobile, $products_combo_mobile, $displayofline_mobile, $totaldisplayproduct_mobile_short,"");
 // End combo ban chay nhat mobile
@@ -331,13 +330,14 @@ showProducts($home, $areadisplay_bestsale, $products_bestsale, $displayofline_be
 
 // Begin combo ban chay nhat tablet
 $totaldisplayproduct_bestsale_tablet = 8;
-$products_bestsale_tablet = getProducts($condition_bestsale, $configname_bestsale, $totaldisplayproduct_bestsale_tablet);
+$products_bestsale_tablet = array_slice($products_bestsale, 0, 8);
 $areadisplay_bestsale_tablet = 'HOTPRODUCTSNEW_TABLET';
 showProducts($home, $areadisplay_bestsale_tablet, $products_bestsale_tablet, $displayofline_tablet, $totaldisplayproduct_bestsale_tablet,"");
 // End combo ban chay nhat tablet
 
 // Begin san pham ban chay nhat mobile
-$products_bestsale_mobile = getProducts($condition_bestsale, $configname_bestsale, $totaldisplayproduct_mobile);
+$totaldisplayproduct_mobile = 4;
+$products_bestsale_mobile = array_slice($products_bestsale, 0, 4);
 $areadisplay_bestsale_mobile = 'HOTPRODUCTSNEW_MOBILE';
 showProducts($home, $areadisplay_bestsale_mobile, $products_bestsale_mobile, $displayofline_mobile, $totaldisplayproduct_mobile,"");
 // End san pham ban chay nhat mobile
@@ -353,17 +353,16 @@ showProducts($home, $areadisplay_dog, $products_dog, $displayofline_dog, $totald
 // End danh cho cun cung
 
 // Begin danh cho cun cung tablet
-$products_dog_tablet = getProducts($condition_dog, $configname_dog, $totaldisplayproduct_bestsale_tablet);
+$products_dog_tablet = array_slice($products_dog, 0, 8);
 $areadisplay_dog_tablet = 'DOGPRODUCTSNEW_TABLET';
 showProducts($home, $areadisplay_dog_tablet, $products_dog_tablet, $displayofline_tablet, $totaldisplayproduct_bestsale_tablet,"");
 // End danh cho cun cung tablet
 
 // Begin danh cho cun cung mobile
-$products_dog_mobile = getProducts($condition_dog, $configname_dog, $totaldisplayproduct_mobile);
+$products_dog_mobile = array_slice($products_dog, 0, 4);
 $areadisplay_dog_mobile = 'DOGPRODUCTSNEW_MOBILE';
 showProducts($home, $areadisplay_dog_mobile, $products_dog_mobile, $displayofline_mobile, $totaldisplayproduct_mobile,"");
 // End danh cho cun cung mobile
-
 
 // Load Dog news
 showNews($home, 'DOGNEWS', "27");
@@ -379,13 +378,13 @@ showProducts($home, $areadisplay_cat, $products_cat, $displayofline_cat, $totald
 // End danh cho meo cung
 
 // Begin danh cho meo cung tablet
-$products_cat_tablet = getProducts($condition_cat, $configname_cat, $totaldisplayproduct_bestsale_tablet);
+$products_cat_tablet = array_slice($products_cat, 0, 8);
 $areadisplay_cat_tablet = 'CATPRODUCTSNEW_TABLET';
 showProducts($home, $areadisplay_cat_tablet, $products_cat_tablet, $displayofline_tablet, $totaldisplayproduct_bestsale_tablet,"");
 // End danh cho cun cung tablet
 
 // Begin danh cho meo cung mobile
-$products_cat_mobile = getProducts($condition_cat, $configname_cat, $totaldisplayproduct_mobile);
+$products_cat_mobile = array_slice($products_cat, 0, 4);
 $areadisplay_cat_mobile = 'CATPRODUCTSNEW_MOBILE';
 showProducts($home, $areadisplay_cat_mobile, $products_cat_mobile, $displayofline_mobile, $totaldisplayproduct_mobile,"");
 // End danh cho meo cung mobile
@@ -403,13 +402,13 @@ showProducts($home, $areadisplay_medicine, $products_medicine, $totaldisplayprod
 // End tu thuoc phong than
 
 // Begin tu thuoc phong than tablet
-$products_medicine_tablet = getProducts($condition_medicine, $configname_medicine, $totaldisplayproduct_combo_tablet);
+$products_medicine_tablet = array_slice($products_medicine, 0, 4);
 $areadisplay_medicine_tablet = 'MEDICINEPRODUCTSNEW_TABLET';
 showProducts($home, $areadisplay_medicine_tablet, $products_medicine_tablet, $displayofline_tablet, $totaldisplayproduct_combo_tablet,"");
 // End tu thuoc phong than tablet
 
 // Begin tu thuoc phong than mobile
-$products_medicine_mobile = getProducts($condition_medicine, $configname_medicine, $totaldisplayproduct_mobile_short);
+$products_medicine_mobile = array_slice($products_medicine, 0, 4);
 $areadisplay_medicine_mobile = 'MEDICINEPRODUCTSNEW_MOBILE';
 showProducts($home, $areadisplay_medicine_mobile, $products_medicine_mobile, $displayofline_mobile, $totaldisplayproduct_mobile_short,"");
 // End tu thuoc phong than mobile
