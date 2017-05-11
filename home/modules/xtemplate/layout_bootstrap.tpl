@@ -160,11 +160,10 @@
                             margin-right: auto; 
                             display: block;
                             margin-top: 5px">
-                    <div class ="col-lg-2"
-                         style="padding-left: 20px">
+                    <div class ="col-lg-2" style="padding-left:0px">
                         <A name="section0">
                             <img src="{linkS}layout/bootstrap/images/support_free.jpg" 
-                                alt="Tư vấn miễn phí" />
+                                 alt="Tư vấn miễn phí">
                         </A>
                     </div>
 
@@ -222,7 +221,7 @@
                         </div><!-- end search -->
                     </div>
                     <div class ="col-lg-2">                                                            
-                        <div id ="account">
+                        <div id ="account" style="padding-left: 40px">
                             <span>
                                 {acount}                            
                             </span>                        
@@ -230,7 +229,7 @@
                     </div>
 
                     <div class ="col-lg-2"
-                         style="padding-right: 35px">
+                         style="padding-right: 0px">
                         <a href ="{linkS}gio-hang" 
                            class ="hidden-xs hidden-sm"
                            rel='nofollow'
@@ -242,7 +241,7 @@
                                   outline:none">
                             <img alt="giỏ hàng"
                                  src="{linkS}layout/bootstrap/images/gio_hang.png" 
-                                 style = "float:left; margin-top: -2px;"/>
+                                 style = "float:left; margin-top: -2px;">
                             &nbsp;Giỏ hàng <span class="cart_score">{giohang}</span>
                         </a>
 
@@ -323,7 +322,7 @@
                                  style = "outline:none; 
                                         margin-left: auto;
                                         margin-right: auto; 
-                                        display: block"/>
+                                        display: block">
                         </a>
                     </div>
                     <div class="row" style="margin-top: 10px"> 
@@ -724,7 +723,7 @@
                                 width="145px"
                                 height="57px"
                                 style="float:left;
-                                       display: block;"/>
+                                       display: block;">
                         </a>
                         <a href="http://www.dmca.com/Protection/Status.aspx?ID=4902d07b-8b1f-4ad7-8f66-7eb96d066e80" 
                            title="DMCA"
@@ -735,7 +734,7 @@
                                 height="57px"
                                 style="float:left;
                                        display: block;
-                                       margin-left: 20px"/>
+                                       margin-left: 20px">
                         </a>
                     </div>
                 </div>
@@ -911,7 +910,7 @@
                            width="130px"
                            height="50px"
                            style="float:left;
-                                  display: block;"/>
+                                  display: block;">
                    </a>
                    <a href="http://www.dmca.com/Protection/Status.aspx?ID=4902d07b-8b1f-4ad7-8f66-7eb96d066e80" 
                       title="DMCA"
@@ -922,7 +921,7 @@
                            height="50px"
                            style="float:left;
                                   display: block;
-                                  margin-left: 20px"/>
+                                  margin-left: 20px">
                    </a>
                </div>
            </div>
