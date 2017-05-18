@@ -19,7 +19,7 @@
         return $number;
     }
 
-    function newFunction($str1, $str2) {
+    function discountMoney($str1, $str2) {
         $encourage = (int) str_replace(".", "", $str1);
         $price = (int) str_replace(".", "", $str2);
         if ($encourage > $price) {
@@ -38,6 +38,60 @@
         return $saleoff;
     }
 
+    function showRelationProducts(&$productdetail, $products, 
+        $disCountVIPCustomer,$area_display, $nb_each_line, $style) {
+        $tpl = '';
+        $tpl_temp = '<div id="product_home" style="float:left">
+                                <div class = "col-xs-12">
+                                    <ul style="'.$style.'">';
+        global $xtemplate;
+        $block = $xtemplate->get_block_from_str($productdetail, $area_display);
+        $flag = 0;
+        for ($i = 0; $i < count($products); ++$i) {
+            $flag ++;
+            $price_encourage = $products[$i]['products_price'];
+            $price_not_discount_product = "<div style='height:50px'> </div>";
+            if ($products[$i]['product_encourage'] != '' && $products[$i]['p_type'] == '') {
+                $price_not_discount_product = $products[$i]['products_price'];
+                $price_encourage = (int) str_replace(".", "", $products[$i]['product_encourage']);
+                $price_of_product = (int) str_replace(".", "", $price_not_discount_product);
+                $priceDiscountVIPCustomer = ($price_of_product * $disCountVIPCustomer) / 100;
+                $priceVIPCustomer = $price_of_product - $priceDiscountVIPCustomer;
+                if ($price_encourage > $priceVIPCustomer) {
+                    $priceVIPCustomer = round($priceVIPCustomer / 1000) * 1000;
+                    $price_encourage = common::convertIntToFormatMoney($priceVIPCustomer);
+                } else {
+                    $price_encourage = common::convertIntToFormatMoney($price_encourage);
+                }
+                $price_not_discount_product = $price_not_discount_product . " VNĐ";
+            }
+
+            $Category = new Category();
+            $category_key = $Category->getCategoryKeyByProductID($products[$i]['products_id']);
+            $tpl_temp .= $xtemplate->assign_vars($block, array(
+                'product_img' => $products[$i]['products_image'],
+                'product_name' => common::limitContent($products[$i]['products_name'], 60),
+                'product_price' => $price_encourage,
+                'price_not_discount_product' => $price_not_discount_product,
+                'product_short' => common::limitContent($products[$i]['description'], 50),
+                'product_key' => $products[$i]['products_key'],
+                'category' => $category_key
+            ));
+            
+            if ($flag % $nb_each_line == 0) {
+                    $tpl_temp .= ' </ul>';
+                    $tpl .= $tpl_temp . '</div></div>';
+                    $tpl_temp = '<div id="product_home" style="float:left">
+                                                <div class = "col-xs-12">
+                                                    <ul style="'.$style.'">';
+            }
+        }
+        $productdetail = $xtemplate->assign_blocks_content($productdetail, array(
+            $area_display => $tpl
+        ));
+    }
+
+    
     $product_key = input($_GET['product_key']);
     $productdetail = $xtemplate->load('product_detail_bootstrap');
     $Product = new Product();
@@ -60,8 +114,10 @@
         <?php
     }
 
-$proType = $Product->getProductsType($product_detail['p_type']);
+    $proType = $Product->getProductsType($product_detail['p_type']);
     $proColor = $Product->getProductsColor($product_detail['p_color']);
+    
+    // Bread crumb
     $breadcrumbs = $Product->getProductPath($_GET['category_key']);
     $breadcrumbs_path = '';
     $breadcrumbs_path .= '<a style = "outline:none" href="{linkS}">NanaPet</a> &raquo; '
@@ -78,7 +134,14 @@ $proType = $Product->getProductsType($product_detail['p_type']);
 
     $category_c = $breadcrumbs[0]['key'] . "/";
     $breadcrumbs_path .= ' &raquo; ' . $product_detail['products_name'];
-
+    
+    // Bread crumb mobile
+    $breadcrumbs_path_mobile = '';
+    $breadcrumbs_path_mobile .= '<a style = "outline:none" href="{linkS}">NanaPet</a>';
+    $breadcrumbs_path_mobile .= ' &raquo; <a style = "outline:none" href="{linkS}' 
+                    . $breadcrumbs[$k-1]['key'] . '/">' . $breadcrumbs[$k-1]['name'] . '</a>';
+    $breadcrumbs_path_mobile .= ' &raquo; ' . $product_detail['products_name'];
+    
     // Title Page
     $title_page = $product_detail['products_name'] . " | ";
     $k = count($title);
@@ -157,17 +220,14 @@ $proType = $Product->getProductsType($product_detail['p_type']);
 
     $price_encourage = $product_detail['products_price'];
 
-    // GIAM GIA CHO NHUNG SAN PHAM KHONG DUOC GIAM GIA	
-    if ($product_detail['product_encourage'] == '' && $disCountVIPCustomer > 0 && $product_detail['p_type'] == '') {
+    // discount for non-discount product
+    if (empty($product_detail['product_encourage']) && $disCountVIPCustomer > 0 && empty($product_detail['p_type'])) {
         $price_not_discount_product = $product_detail['products_price'];
         $price_of_product = (int) str_replace(".", "", $price_not_discount_product);
         $priceDiscountVIPCustomer = ($price_of_product * $disCountVIPCustomer) / 100;
-        $priceVIPCustomer = $price_of_product - $priceDiscountVIPCustomer;
-        $priceVIPCustomer = round($priceVIPCustomer / 1000);
-        $priceVIPCustomer = $priceVIPCustomer * 1000;
+        $priceVIPCustomer = round(($price_of_product - $priceDiscountVIPCustomer) / 1000) * 1000;
         $price_encourage = common::convertIntToFormatMoney($priceVIPCustomer);
-        $price_saleoff = $price_of_product - $priceVIPCustomer;
-        $price_saleoff = common::convertIntToFormatMoney($price_saleoff);
+        $price_saleoff = common::convertIntToFormatMoney($price_of_product - $priceVIPCustomer);
         $levelOfCustomer = $Product->levelOfCustomer($_SESSION['username']);
 
         if ($price_encourage == 0 || $price_encourage == "") {
@@ -187,22 +247,13 @@ $proType = $Product->getProductsType($product_detail['p_type']);
         }
 
         if ($levelOfCustomer != 'normal' && $levelOfCustomer != 'Normal') {
-            $khuyenmai= '<ul style="clear:both; float:left; padding-left: 0px; line-height: 30px">
-                            <li>
-                                <span style = "color:#f24d23; width: 250px; float:left; font-size: 18px">
-                                    Giá khuyến mãi (' . $levelOfCustomer . ')
-                                </span>
-                                <span style="color: #ED1B24; font-size:18px;">' . $price_encourage . '</span>
-                            </li>
-                            <li>
-                                <span style="width: 250px; float: left">Giá sản phẩm</span>
-                                <span style="text-decoration: line-through;">' . $product_detail['products_price'] . '</span>
-                            </li>
-                            <li>
-                                <span style="width: 250px; float:left">Tiết kiệm </span>' 
-                                . $disCountVIPCustomer . '%
-                            </li>
-                        </ul>';
+            $khuyenmai= '<div class="col-xs-6" style = "color:#f24d23; font-size: 18px; padding:0px">
+                            Giá khuyến mãi (' . $levelOfCustomer . ')</div>
+                <div class="col-xs-6" style="color: #ED1B24; font-size:18px; padding:0px">' . $price_encourage . '</div>
+                <div class="col-xs-6" style="padding:0px; clear:both">Giá sản phẩm</div>
+                <div class="col-xs-6" style="text-decoration: line-through; padding:0px">' . $product_detail['products_price'] . '</div>
+                <div class="col-xs-6" style="padding:0px">Tiết kiệm </div>' . 
+                '<div class="col-xs-6" style="padding:0px">'.$disCountVIPCustomer .'%</div>';
         }
         // Get price for SEO
         $price_java_script = $price_encourage;
@@ -212,8 +263,7 @@ $proType = $Product->getProductsType($product_detail['p_type']);
         $priceDiscountVIPCustomer = ($price_of_product * $disCountVIPCustomer) / 100;
         $priceVIPCustomer = $price_of_product - $priceDiscountVIPCustomer;
         if ($price_encourage > $priceVIPCustomer) {
-            $priceVIPCustomer = round($priceVIPCustomer / 1000);
-            $priceVIPCustomer = $priceVIPCustomer * 1000;
+            $priceVIPCustomer = round($priceVIPCustomer / 1000) * 1000;
             $price_encourage = common::convertIntToFormatMoney($priceVIPCustomer);
             $produce_discount = $disCountVIPCustomer . "%";
         } else {
@@ -221,7 +271,7 @@ $proType = $Product->getProductsType($product_detail['p_type']);
             $produce_discount = getpercent($product_detail['products_price'], $price_encourage);
         }
 
-        $produce_save = newFunction($product_detail['products_price'], $price_encourage);
+        $produce_save = discountMoney($product_detail['products_price'], $price_encourage);
         $levelOfCustomer = $Product->levelOfCustomer($_SESSION['username']);
 
         if ($price_encourage == 0 || $price_encourage == "") {
@@ -241,41 +291,22 @@ $proType = $Product->getProductsType($product_detail['p_type']);
         }
 
         if ($levelOfCustomer != 'normal' && $levelOfCustomer != 'Normal' && !empty($levelOfCustomer)) {
-            $khuyenmai= '<ul style="clear:both; float:left; padding-left: 0px; line-height: 30px">
-                            <li>
-                                <span style = "color:#f24d23; font-size: 18px; float:left; width: 250px">
-                                    Giá khuyến mãi <span>(' . $levelOfCustomer . ')</span>
-                                </span>
-                                <span style="color:#f24d23; font-size:18px;">' . $price_encourage . '</span>
-                            </li>
-                            <li>
-                                <span style="width: 250px; float:left">Giá sản phẩm</span>
-                                <span class="promotion" style="text-decoration: line-through;">'
-                                    . $product_detail['products_price'] . '</span>
-                            </li>
-                            <li>
-                                <span style="width: 250px; float:left">Tiết kiệm</span>
-                                <span class="promotion" style="font-size:14px">' . $produce_discount . '</span>
-                            </li>
-                        </ul>';
-        } else {
-            $khuyenmai= '<ul style="clear: both; float:left; padding-left: 0px; line-height: 30px">
-                            <li>
-                                <span style = "color:#f24d23; font-size: 18px; float:left; width: 250px">
-                                    Giá khuyến mãi </span>
-                                <span style="color:#f24d23; font-size:18px;">' . $price_encourage . '</span>
-                            </li>
-                            <li>
-                                <span style="width: 250px; float:left"> Giá sản phẩm </span>
-                                <span style="text-decoration: line-through;">' 
-                                    . $product_detail['products_price'] . '</span>
-                            </li>
-                            <li>
-                                <span style="width: 250px; float:left">Tiết kiệm</span>
-                                <span>' . $produce_discount . '</span>
-                            </li>
-                        </ul>';
-        }
+            $khuyenmai = '<div class="col-xs-6" style = "color:#f24d23; font-size: 18px; padding:0px">
+                            Giá khuyến mãi <span>(' . $levelOfCustomer . ')</span></div>
+            <div class="col-xs-6" style="color:#f24d23; font-size:18px; padding:0px">' . $price_encourage . '</div>
+            <div class="col-xs-6" style="padding:0px; clear:both">Giá sản phẩm</div>
+            <div class="promotion col-xs-6" style="text-decoration: line-through; padding:0px">'
+                . $product_detail['products_price'] . '</div>
+            <div class="col-xs-6" style="padding:0px">Tiết kiệm</div>
+            <div class="promotion col-xs-6" style="padding:0px">' . $produce_discount . '</div>';
+    } else {
+        $khuyenmai = '<div class="col-xs-6" style="color:#f24d23; font-size: 18px; padding:0px">Giá khuyến mãi </div>
+            <div class="col-xs-6" style="color:#f24d23; font-size:18px; padding:0px">' . $price_encourage . '</div>
+            <div class="col-xs-6" style="padding:0px"> Giá sản phẩm </div>
+            <div class="col-xs-6" style="text-decoration: line-through; padding:0px">' . $product_detail['products_price'] . '</div>
+            <div class="col-xs-6" style="padding:0px">Tiết kiệm</div>
+            <div class="col-xs-6" style="padding:0px">' . $produce_discount . '</div>';
+    }
         // Get price for SEO 
         $price_java_script = $price_encourage;
     } else {
@@ -287,13 +318,8 @@ $proType = $Product->getProductsType($product_detail['p_type']);
             $product_detail['products_price'] .= " VNĐ";
         }
 
-        $khuyenmai= '<ul style="clear: both; float:left; padding-left: 0px; line-height: 30px">
-                        <li>
-                            <span style="font-size: 18px; color:#f24d23; width: 250px; float:left">Giá sản phẩm</span>
-                            <span style="font-size: 18px; color:#f24d23;">' 
-                                . $product_detail['products_price'] . '</span>
-                        </li>
-                    </ul>';
+        $khuyenmai='<div class="col-xs-6" style="font-size: 18px; color:#f24d23; padding:0px">Giá sản phẩm</div>
+                    <div class="col-xs-6" style="font-size: 18px; color:#f24d23; padding:0px">' . $product_detail['products_price'] . '</div>';
         // Get price for SEO
         $price_java_script = $product_detail['products_price'];
     }
@@ -324,9 +350,9 @@ $proType = $Product->getProductsType($product_detail['p_type']);
 
     $category_key = input($_GET['category_key']);
     $product_name_prev = $Product->getProductsInfoPrevByProductKey($product_key, 
-                                            $breadcrumbs[0]['key']); // $category_key
+                                            $breadcrumbs[0]['key']);
     $product_name_next = $Product->getProductsInfoNextByProductKey($product_key, 
-                                            $breadcrumbs[0]['key']); //$category_key
+                                            $breadcrumbs[0]['key']);
     $pro_price_nodot = common::convertFormatMoneyToInt($price_encourage);
     $species = $product_detail['species'];
     $img_catdog = '';
@@ -482,21 +508,7 @@ $proType = $Product->getProductsType($product_detail['p_type']);
         $display_product_detail_xuatxu = "none";
     }
 
-    // Change font-family    
-    $product_detail['product_detail'] = str_replace("Arial", "RobotoSlabLight", $product_detail['product_detail']);
-    $product_detail['product_detail_tacdung'] = str_replace("Arial", "RobotoSlabLight", $product_detail['product_detail_tacdung']);
-    $product_detail['product_detail_phuhopcho'] = str_replace("Arial", "RobotoSlabLight", $product_detail['product_detail_phuhopcho']);
-    $product_detail['product_detail_nguyenlieu_thanhphan'] = str_replace("Arial", "RobotoSlabLight", $product_detail['product_detail_nguyenlieu_thanhphan']);
-    $product_detail['product_detail_phantichdambao'] = str_replace("Arial", "RobotoSlabLight", $product_detail['product_detail_phantichdambao']);
-    $product_detail['product_detail_huongdansudung'] = str_replace("Arial", "RobotoSlabLight", $product_detail['product_detail_huongdansudung']);
-    $product_detail['product_detail_huongdanbaoquan'] = str_replace("Arial", "RobotoSlabLight", $product_detail['product_detail_huongdanbaoquan']);
-    $product_detail['product_detail_luuy'] = str_replace("Arial", "RobotoSlabLight", $product_detail['product_detail_luuy']);
-    $product_detail['product_detail_khuyenkhich'] = str_replace("Arial", "RobotoSlabLight", $product_detail['product_detail_khuyenkhich']);
-    $product_detail['product_detail_donggoi_thetich'] = str_replace("Arial", "RobotoSlabLight", $product_detail['product_detail_donggoi_thetich']);
-    $product_detail['product_detail_nhasanxuat'] = str_replace("Arial", "RobotoSlabLight", $product_detail['product_detail_nhasanxuat']);
-    $product_detail['product_detail_xuatxu'] = str_replace("Arial", "RobotoSlabLight", $product_detail['product_detail_xuatxu']);
-
-    // Get relation news
+    // Get relationship news
     $list_news = $news->getNewsOfProduct($product_key);
     $relation_news = "";
     $display_realtion_news = 'style="display:none"';
@@ -526,108 +538,24 @@ $proType = $Product->getProductsType($product_detail['p_type']);
         }
     }
 
-    // Get products by category
+    // begin relationship products
     $products_t = $Product->getProductsByCategoryKey($_GET['category_key']);
     $products = $Product->getProductsByCategoryKeyLimitOrderBy($products_t, $category_key
             , 0, 10, $_SESSION['order_by']);
-    $n = count($products);
-
-    // Begin relationship product
-    $tpl = '';
-    $tpl_temp = '<div class="row" id="product_home" style="float:left">
-                            <div class = "col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                <ul>';
-    $tpl_support = '';
-    $tpl_temp_support = '<div class="row" id="product_home" style="float:left; margin-left: -55px">
-                            <div class = "col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                <ul>';
-    $block = $xtemplate->get_block_from_str($productdetail, 'PRODUCTS');
-    $block_support = $xtemplate->get_block_from_str($productdetail, 'PRODUCTS_SUPPORT');
-    $flag = 0;
-    for ($i = 0; $i < $n; ++$i) {
-        $flag ++;
-        $price_encourage = $products[$i]['products_price'];
-        $price_not_discount_product = "<div style='height:50px'> </div>";
-        if ($products[$i]['product_encourage'] != '' && $products[$i]['p_type'] == '') {
-            $price_not_discount_product = $products[$i]['products_price'];
-            $price_encourage = (int) str_replace(".", "", $products[$i]['product_encourage']);
-            $price_of_product = (int) str_replace(".", "", $price_not_discount_product);
-            $priceDiscountVIPCustomer = ($price_of_product * $disCountVIPCustomer) / 100;
-            $priceVIPCustomer = $price_of_product - $priceDiscountVIPCustomer;
-            if ($price_encourage > $priceVIPCustomer) {
-                $priceVIPCustomer = round($priceVIPCustomer / 1000);
-                $priceVIPCustomer = $priceVIPCustomer * 1000;
-                $price_encourage = common::convertIntToFormatMoney($priceVIPCustomer);
-                $PromotionSale = '<span class="promotion">
-                                            <span class="promotion_sale">-' 
-                                            . $disCountVIPCustomer . '%' . '</span>
-                                        </span>';
-            } else {
-                $price_encourage = common::convertIntToFormatMoney($price_encourage);
-                $percent = getpercent($products[$i]['products_price'], $price_encourage);
-                $PromotionSale = '<span class="promotion">
-                                            <span class="promotion_sale">-' . $percent . '</span>
-                                        </span>';
-            }
-            $price_not_discount_product = $price_not_discount_product . " VNĐ";
-        } else {
-            $PromotionSale = '';
-        }
-
-        $Category = new Category();
-        $category_key = $Category->getCategoryKeyByProductID($products[$i]['products_id']);
-        $tpl_temp .= $xtemplate->assign_vars($block, array(
-            'product_img' => $products[$i]['products_image'],
-            'product_name' => common::limitContent($products[$i]['products_name'], 60),
-            'promotion_Sale' => $PromotionSale,
-            'product_price' => $price_encourage,
-            'price_not_discount_product' => $price_not_discount_product,
-            'product_short' => common::limitContent($products[$i]['description'], 50),
-            'product_key' => $products[$i]['products_key'],
-            'category' => $category_key
-        ));
-        if ($flag % 5 == 0) {
-            $tpl_temp .= ' </ul>';
-            $tpl .= $tpl_temp . '</div></div>';
-            $tpl_temp = '<div class="row" id="product_home" style="float:left">
-                                    <div class = "col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                        <ul>';
-        }
-        
-        $tpl_temp_support .= $xtemplate->assign_vars($block_support, array(
-            'product_img' => $products[$i]['products_image'],
-            'product_name' => common::limitContent($products[$i]['products_name'], 60),
-            'promotion_Sale' => $PromotionSale,
-            'product_price' => $price_encourage,
-            'price_not_discount_product' => $price_not_discount_product,
-            'product_short' => common::limitContent($products[$i]['description'], 50),
-            'product_key' => $products[$i]['products_key'],
-            'category' => $category_key
-        ));
-        if ($i <= 3) {
-            if ($flag % 4 == 0) {
-                $tpl_temp_support .= ' </ul>';
-                $tpl_support .= $tpl_temp_support . '</div></div>';
-                $tpl_temp_support = '<div class="row" id="product_home" style="float:left">
-                                        <div class = "col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                            <ul>';
-            }
-        }
-    }
-    $productdetail = $xtemplate->assign_blocks_content($productdetail, array(
-        'PRODUCTS' => $tpl,
-        'PRODUCTS_SUPPORT' => $tpl_support,
-    ));
-    //End relationship product
+    $products_support = array_slice($products, 0, 4);
+    showRelationProducts($productdetail, $products_support, $disCountVIPCustomer, 'PRODUCTS_SUPPORT', 4, 'padding-left:0px');
+    showRelationProducts($productdetail, $products_support, $disCountVIPCustomer, 'MOBILE_PRODUCTS_SUPPORT', 4, 'padding-left:0px');
+    
+    showRelationProducts($productdetail, $products, $disCountVIPCustomer, 'PRODUCTS', 5, "margin-left: 10px");
+    // end relationship products
     
     // meta description
     // remove all tags in text
     $description = addslashes(strip_tags($product_detail['product_detail']));
-    $description = trim(preg_replace( "/\r|\n/", "", $description ));
-    // $description = preg_replace('/[ ]{2,}|[\t]/', ' ', $description);
+    $description = trim(preg_replace("/\r|\n/", "", $description));
     $description = preg_replace("/[\t\s]+/", " ", $description);
-    
-    if (empty($product_detail['manufacturer'])) {
+
+if (empty($product_detail['manufacturer'])) {
         $product_detail['manufacturer'] = "Đang cập nhật";
     }
 
@@ -705,7 +633,7 @@ $proType = $Product->getProductsType($product_detail['p_type']);
         'display_product_detail_nhasanxuat' => $display_product_detail_nhasanxuat,
         'display_product_detail_xuatxu' => $display_product_detail_xuatxu,
         'product_price' => $price_encourage,
-        'product_save' => newFunction(($product_detail['products_price']), ($price_encourage)),
+        'product_save' => discountMoney(($product_detail['products_price']), ($price_encourage)),
         'product_discount' => getpercent(($product_detail['products_price']), ($price_encourage)),
         'product_color' => $colorTemplate,
         'product_type' => $typeTemplate,
@@ -737,7 +665,8 @@ $proType = $Product->getProductsType($product_detail['p_type']);
         'relation_news' => $relation_news,
         'display_realtion_news' => $display_realtion_news,
         'display_brand_short_description' => $display_brand_short_description,
-        'brand_short_description' => $brand_short_description
+        'brand_short_description' => $brand_short_description,
+        'breadcrumbs_path_mobile' => $breadcrumbs_path_mobile
     ));
     $content = $productdetail;
 ?>

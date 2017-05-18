@@ -129,101 +129,98 @@
 
 <div class = "container">
     <div class="row">                
-        <div class = "col-xs-12 col-sm-12 col-md-9 col-lg-9"
-             style="padding-left: 50px;">
+        <div class = "col-xs-12 col-sm-12 col-md-9 col-lg-9">
             <div id = "user_name" style="display:none"> {user_name}</div>
             <div id = "rate_sum" style="display:none"> {rate_sum}</div>                                  
-            <div id="breakcrumb" style="font-family:RobotoSlabRegular; 
-                                        font-size:14px; 
-                                        margin-top: 5%; 
-                                        line-height: 30px">
+            <div class="hidden-xs hidden-sm hidden-md" 
+                id="breakcrumb" style="font-family:RobotoSlabRegular;
+                                    font-size:14px;
+                                    margin-top: 5%;
+                                    line-height: 30px;
+                                    padding-bottom: 10px">
                 {breadcrumbs_path}
+            </div>
+            <div class="hidden-lg" 
+                id="breakcrumb" style="font-family:RobotoSlabRegular;
+                                    font-size:14px;
+                                    line-height: 30px">
+                {breadcrumbs_path_mobile}
             </div>
             <div class="col1_content">
                 <div class = "col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <div id="detail1">                        
-                        <div style="font-weight:500; 
-                                    text-align:center; 
-                                    padding-top:10px;
-                                    padding-bottom:30px">
-                                <span style="color: #428bca; 
-                                            line-height: 30px;
-                                            text-transform: uppercase;
-                                            font-family: RobotoSlabRegular;">
-                                    <h1 style="font-size: 18px">{product_name}</h1>
-                                </span>
+                        <div style="text-align:center;
+                                    padding-bottom:10px;
+                                    margin-top:-10px">
+                            <span style="color: #428bca; 
+                                        text-transform: uppercase;
+                                        font-family: RobotoSlabRegular;">
+                                <h1 style="font-size: 18px; line-height: 30px">{product_name}</h1>
+                            </span>
                         </div> 
-                    </div><!-- end detail1 -->
+                    </div>
                 </div>                                        
-                <div class = "col-sm-12 col-sx-12 col-md-12 col-lg-12" style="padding:0px">
+                <div class = "col-sm-12 col-sx-12 col-md-12 col-lg-12" 
+                     style="padding:0px">
                     <form name='cart' action="{linkS}gio-hang/{product_key}/add" method="post">                        
                         <div style="font-family:RobotoSlabRegular;">                            
-                            <div class="col-sm-12 col-sx-12 col-md-5 col-lg-5" 
-                                 style="float:left; padding: 0px;">
-                                <img alt="{product_name}"
-                                    src="{linkS}upload/product/thumb/{product_image}"                           
-                                    style="width: 300px;
-                                           height: 300px;">
+                            <div class="col-lg-6" 
+                                style="padding: 0px;">
+                                <img class="img-responsive center-block" 
+                                    alt="{product_name}"
+                                    src="{linkS}upload/product/thumb/{product_image}"
+                                    style="width: 60%">
                                 <div style="font-size: 14px; 
-                                            text-align: left;
-                                            line-height: 50px;
-                                            font-style: italic;">
+                                     text-align: center;
+                                     line-height: 25px;
+                                     font-style: italic;
+                                     margin-top: 10px;
+                                     margin-bottom: 10px">
                                     Hình ảnh mình hoạ được chụp từ sản phẩm thật
                                 </div>
-                                <div class="col-sm-12 col-sx-12 col-md-6 col-lg-6"
-                                     style="padding-left: 0px;
-                                            margin-top: 10px"> 
+                                <div class="col-lg-6 hidden-xs hidden-sm hidden-md"
+                                    style="padding-left: 0px;
+                                           margin-top: 10px">
                                     <div class="fb-like" 
                                          data-href="https://www.facebook.com/NanaPetOnline" 
                                          data-layout="standard" 
                                          data-action="like" 
                                          data-show-faces="true" 
-                                         data-width="380"
+                                         data-width="400"
                                          data-share="true">
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-12 col-sx-12 col-md-7 col-lg-7" 
-                                 style="float:left; 
-                                        font-size: 14px; 
+                            
+                            <div class="col-lg-6"
+                                 style="float:left;
+                                        font-size: 14px;
                                         line-height:35px;
-                                        padding-left:40px">
-                                <table> 
-                                    <tr>
-                                        <td>
-                                            <div style ="width: 250px;
-                                                         float: left;
-                                                         font-size: 14px;
-                                                         line-height: 30px">
-                                                Thương hiệu
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                <a href="{linknsx}"
-                                                   target="_blank" 
-                                                   rel="nofollow"
-                                                   style ="font-size: 17px; 
-                                                           outline:none; 
-                                                           line-height: 25px">{nsx}</a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </table>
-                                <div style ="width: 250px; 
-                                              float:left">
-                                    Xuất xứ
-                                </div>
-                                <div>
-                                    <a href="{linknsx}" 
-                                       rel="nofollow"
-                                       target="_blank" 
-                                       style ="font-size: 14px; outline:none; color:black">{xuatxu}</a>
-                                </div>
-                                <div style="font-size: 14px">
+                                        padding-left: 0px;
+                                        padding-right: 0px">
+                                <div style="padding:0px"> 
+                                    <div class="col-xs-6"
+                                         style="padding:0px">Thương hiệu</div>
+                                    <div class="col-xs-6"
+                                         style="padding:0px">
+                                        <a href="{linknsx}"
+                                           target="_blank"
+                                           rel="nofollow"
+                                           style ="outline:none; padding:0px">{nsx}</a>
+                                    </div>
+                                    <div class="col-xs-6" 
+                                         style="padding:0px">Xuất xứ</div>
+                                    <div class="col-xs-6"
+                                         style="padding:0px">
+                                        <a href="{linknsx}" 
+                                           rel="nofollow"
+                                           target="_blank" 
+                                           style ="outline:none; color:black;">{xuatxu}</a>
+                                    </div>
                                     {khuyenmai}                                                                                                           
                                 </div>
-                                <hr  style = "margin-top: 10px;
+                                    
+                                <hr style = "margin-top: 10px;
                                     margin-bottom: 14px;
                                     border-width:1px;                                                
                                     border-color:#cccccc; width:100%; float:left">    
@@ -236,23 +233,11 @@
                                     </div>
                                     <div style="clear:both; padding-left: 0px;"
                                          class="row">
-                                        <div style="padding-top: 5px;
-                                                   padding-bottom: 10px;
-                                                   float:left;"
-                                            class="col-lg-4 col-md-4">
-                                            <select name='quantity' 
-                                                    id='quantity'
-                                                    style = "-webkit-border-radius: 10px;
-                                                            -moz-border-radius: 10px;                                                                
-                                                            height: 35px;
-                                                            width: 90px;
-                                                            outline: none;
-                                                            padding: 5px;
-                                                            font-family: RobotoSlabRegular;
-                                                            font-size: 14px;
-                                                            border: 1px solid #ddd;
-                                                            font-weight: lighter;"
-                                                    class="form-control">
+                                        <div class="col-xs-3">
+                                            <select name='quantity'
+                                                id='quantity'
+                                                class="form-control"
+                                                style="padding-left:5px">
                                                 <option value="1">1</option>
                                                 <option value="2">2</option>
                                                 <option value="3">3</option>
@@ -265,16 +250,14 @@
                                                 <option value="10">10</option>
                                             </select>   
                                         </div>
-                                        <div style="padding-top: 5px;
-                                                   padding-bottom: 10px;
-                                                   margin-left: 10px"
-                                            class="col-lg-5 col-md-5">
+                                        <div class="col-xs-9">
                                             <input type="submit"
-                                                   class="addcart"
-                                                   name="addcart"                                                   
-                                                   value=""
-                                                   style="outline:none;
-                                                          height:40px;">
+                                                class="addcart"
+                                                name="addcart"                                                   
+                                                value=""
+                                                style="outline:none;
+                                                       height:40px;">
+                                        
                                         </div>
                                     </div>
                                     <hr style = "margin-top: 10px;
@@ -286,20 +269,20 @@
                                         line-height: 25px;
                                         font-family: RobotoSlabRegular;
                                         font-size: 14px;">
-                                - Free ship nội thành HCM cho HĐ NanaPet từ 400K* <br>
-                                - Miễn phí đổi trả sản phẩm đến 10 ngày - 
+                                Free ship nội thành HCM cho HĐ NanaPet từ 400K* <br>
+                                Miễn phí đổi trả sản phẩm đến 10 ngày - 
                                 <a href="{linkS}tro-giup/doi-tra-san-pham.html" target="_blank">chi tiết</a> <br>
-                                - Nhận giao hàng và COD toàn quốc - 
+                                Nhận giao hàng và COD toàn quốc - 
                                 <a href="{linkS}tro-giup/dich-vu-van-chuyen.html" target="_blank">chi tiết</a> <br>
-                                - Khách hàng có thể đến mua trực tiếp tại Văn Phòng Kho, 21/11 Tự Lập P.4 Q. Tân Bình, TP HCM <br>                                
+                                Khách hàng có thể đến mua trực tiếp tại Văn Phòng Kho, 21/11 Tự Lập P.4 Q. Tân Bình, TP HCM <br>                                
                                 </div>
                             </div>
                         </div><!-- end detail2 -->
                     </form>                                                 
                 </div>
-                <div class ="row">
-                    <div class = "col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                        <!--Thong tin san pham 
+                <div class="row">
+                    <div class="col-xs-12">
+                        <!--Thong tin san pham
                         <hr  style = "margin-top: 30px;
                                     margin-bottom: 0px;
                                     border-width:1px;                                                
@@ -357,18 +340,20 @@
                                 </li>
                             </ul>
                         </div>-->
+                                                
+                        <!--Begin product relationship -->
                         <hr  style="margin-top: 30px;
-                                    margin-bottom: 25px;
+                                    margin-bottom: 30px;
                                     border-width:1px;                                                
                                     border-color:#cccccc; width:100%; float:left"/>    
                         <div style=" font-size:14px;
                                     font-family: RobotoSlabBold;
-                                    margin-left: 2px;">
+                                    margin-left: 2px;
+                                    margin-bottom: 30px">
                                 SẢN PHẨM THƯỜNG ĐƯỢC MUA CÙNG
-                            </div>
-                        <!--Begin product relationship -->
-                        <div class="container" style="padding-top: 30px">
-                            <div class="row" style="padding-bottom: 5px">
+                        </div>
+                        <div class="container" style="padding: 0px">
+                            <div class="row hidden-md hidden-xs hidden-sm">
                                 <!--BEGINLIST_PRODUCTS_SUPPORT-->
                                 <!--BEGIN_PRODUCTS_SUPPORT-->
                                 <li>
@@ -377,7 +362,6 @@
                                         style = "outline:none;">
                                         <div class="product_detail" style="width: 210px">
                                             <div class="product_name">
-                                                <!--{promotion_Sale}-->
                                                 <img alt="{product_name}"
                                                     src="{linkS}upload/product/{product_img}"
                                                     width="140"
@@ -391,8 +375,7 @@
                                                         style = "cursor: pointer; 
                                                                  margin-bottom: 5px">
                                                 </div>
-                                            </div><!-- End product_name_col -->
-
+                                            </div>
                                             <div class="product_tit">
                                                 <div style="font-size: 14px;
                                                             color: #929292;
@@ -413,283 +396,298 @@
                                 <!--END_PRODUCTS_SUPPORT-->
                                 <!--ENDLIST_PRODUCTS_SUPPORT-->
                             </div>
+                            <div class="row hidden-lg">
+                                <!--BEGINLIST_MOBILE_PRODUCTS_SUPPORT-->
+                                <!--BEGIN_MOBILE_PRODUCTS_SUPPORT-->
+                                <li class="col-xs-6 col-sm-3 col-md-3">
+                                    <a  class="list_product_name"
+                                        href="{linkS}{category}/{product_key}.htm"
+                                        style="outline:none;">
+                                        <img class="img-responsive center-block"  
+                                            alt="{product_name}"
+                                            src="{linkS}upload/product/{product_img}"
+                                            style="cursor: pointer"/>
+                                        <div style="font-size: 14px;
+                                                color: #929292;
+                                                cursor: pointer;
+                                                font-family: RobotoSlabRegular;
+                                                text-align: center;
+                                                margin-top: 10px">
+                                            {product_name}
+                                        </div>
+                                        <div style="cursor: pointer;
+                                                    font-family:RobotoSlabRegular;
+                                                    font-size: 14px;
+                                                    color: #f24d23;
+                                                    text-align: center;
+                                                    margin-bottom: 20px;
+                                                    margin-top: 10px">
+                                            {product_price} VNĐ
+                                        </div>
+                                    </a>
+                                </li>
+                                <!--END_MOBILE_PRODUCTS_SUPPORT-->
+                                <!--ENDLIST_MOBILE_PRODUCTS_SUPPORT-->
+                            </div>
                         </div>
                         <!--End prouducts relationship-->
 
-                        <div>
-                            <div class="visible-xs-block visible-sm-block">
-                                <a  href="#section1" style="font-size:14px;
-                                                            color:#A00; 
-                                                            font-weight:bold; 
-                                                            margin-right:10px; 
-                                                            padding-top:10px; 
-                                                            padding-bottom:10px; 
-                                                            padding-left: 10px; 
-                                                            padding-right:10px;
-                                                            background:#FFF2F2; 
-                                                            -moz-border-radius: 7px 7px 0px 0px; 
-                                                            border-radius: 7px 7px 0px 0px;
-                                                            font-family: RobotoSlabLight;
-                                                            outline:none">
-                                    Thông tin sản phẩm 
-                                </a>                               
-                            </div>                                                                   
-                            <hr  style="margin-top: 10px;
-                                        margin-bottom: 30px;
-                                        border-width:1px;                                                
-                                        border-color:#cccccc; width:100%; float:left"/>
-                            <div id="tab_container" style="margin-right:5px">
-                                <div>                     
-                                    <a name ="section1"></a>
-                                    <div id = "info_product">
-                                        <div align="justify" 
-                                            style=" margin-bottom:10px;                                                      
-                                                    font-size:14px;
-                                                    font-family: RobotoSlabBold;
-                                                    margin-left: 2px;">
-                                            THÔNG TIN SẢN PHẨM
-                                        </div>
-                                        <div align="justify" 
-                                            style=" margin-bottom:10px;                                                      
-                                                    font-size:14px;
-                                                    display:{display_product_detail};
-                                                    font-family: RobotoSlabRegular;
-                                                    margin-left: 2px;">
-                                            Giới thiệu
-                                        </div>
-                                                    
-                                        <div style="margin-bottom:10px; 
-                                                    margin-left: 2px;
-                                                    font-family: RobotoSlabLight;
-                                                    font-size: 14px;
-                                                    line-height: 25px">
-                                            {product_detail}
-                                        </div>
+                        <div id="tab_container" style="margin-right:5px">
+                            <hr  style="margin-top: 20px;
+                                    margin-bottom: 30px;
+                                    border-width:1px;                                                
+                                    border-color:#cccccc; width:100%; float:left"/>
+                            <div>                     
+                                <a name ="section1"></a>
+                                <div id = "info_product">
+                                    <div align="justify" 
+                                        style=" margin-bottom:10px;                                                      
+                                                font-size:14px;
+                                                font-family: RobotoSlabBold;
+                                                margin-left: 2px;">
+                                        THÔNG TIN SẢN PHẨM
+                                    </div>
+                                    <div align="justify" 
+                                        style=" margin-bottom:10px;                                                      
+                                                font-size:14px;
+                                                display:{display_product_detail};
+                                                font-family: RobotoSlabRegular;
+                                                margin-left: 2px;">
+                                        Giới thiệu
+                                    </div>
 
-                                        <div align="justify" 
-                                             style=" margin-bottom:10px;                                                      
-                                                     font-size:14px;
-                                                     display:{display_product_detail_tacdung};                                                     
-                                                     font-family:RobotoSlabRegular;
-                                                     margin-left:2px">
-                                            Tác Dụng
-                                        </div>                                    
+                                    <div style="margin-bottom:10px; 
+                                                margin-left: 2px;
+                                                font-family: RobotoSlabLight;
+                                                font-size: 14px;
+                                                line-height: 25px">
+                                        {product_detail}
+                                    </div>
 
-                                        <div style="margin-bottom:10px;
-                                                    margin-left: 2px;
-                                                    font-family: RobotoSlabLight;
-                                                    font-size: 14px;
-                                                    line-height: 25px">
-                                            {product_detail_tacdung}
-                                        </div>
+                                    <div align="justify" 
+                                         style=" margin-bottom:10px;                                                      
+                                                 font-size:14px;
+                                                 display:{display_product_detail_tacdung};                                                     
+                                                 font-family:RobotoSlabRegular;
+                                                 margin-left:2px">
+                                        Tác Dụng
+                                    </div>                                    
 
-                                        <div align="justify" 
-                                             style=" margin-bottom:10px;                                                      
-                                                    font-size:14px;
-                                                    display:{display_product_detail_phuhopcho};                                                     
-                                                    font-family: RobotoSlabRegular;
-                                                    margin-left: 2px">
-                                            Phù Hợp Cho
-                                        </div>    
+                                    <div style="margin-bottom:10px;
+                                                margin-left: 2px;
+                                                font-family: RobotoSlabLight;
+                                                font-size: 14px;
+                                                line-height: 25px">
+                                        {product_detail_tacdung}
+                                    </div>
 
-                                        <div style="margin-bottom:10px;
-                                                    margin-left: 2px;
-                                                    font-family: RobotoSlabLight;
-                                                    font-size: 14px;
-                                                    line-height: 25px">
-                                            {product_detail_phuhopcho}
-                                        </div>   
+                                    <div align="justify" 
+                                         style=" margin-bottom:10px;                                                      
+                                                font-size:14px;
+                                                display:{display_product_detail_phuhopcho};                                                     
+                                                font-family: RobotoSlabRegular;
+                                                margin-left: 2px">
+                                        Phù Hợp Cho
+                                    </div>    
 
-                                        <div align="justify" 
-                                             style=" margin-bottom:10px;                                                      
-                                                    font-size:14px;
-                                                    display:{display_product_detail_nguyenlieu_thanhphan};                                                     
-                                                    font-family: RobotoSlabRegular;
-                                                    margin-left: 2px">
-                                            Nguyên Liệu / Thành Phần
-                                        </div>   
+                                    <div style="margin-bottom:10px;
+                                                margin-left: 2px;
+                                                font-family: RobotoSlabLight;
+                                                font-size: 14px;
+                                                line-height: 25px">
+                                        {product_detail_phuhopcho}
+                                    </div>   
 
-                                        <div style="margin-bottom:10px; 
-                                                    margin-left: 2px;
-                                                    font-family: RobotoSlabLight;
-                                                    font-size: 14px;
-                                                    line-height: 25px">
-                                            {product_detail_nguyenlieu_thanhphan}
-                                        </div>   
+                                    <div align="justify" 
+                                         style=" margin-bottom:10px;                                                      
+                                                font-size:14px;
+                                                display:{display_product_detail_nguyenlieu_thanhphan};                                                     
+                                                font-family: RobotoSlabRegular;
+                                                margin-left: 2px">
+                                        Nguyên Liệu / Thành Phần
+                                    </div>   
 
-                                        <div align="justify" 
-                                             style=" margin-bottom:10px;                                                      
-                                                    font-size:14px;
-                                                    display:{display_product_detail_phantichdambao};                                                     
-                                                    font-family: RobotoSlabRegular;
-                                                    margin-left: 2px">
-                                            Phân Tích Đảm Bảo
-                                        </div>  
+                                    <div style="margin-bottom:10px; 
+                                                margin-left: 2px;
+                                                font-family: RobotoSlabLight;
+                                                font-size: 14px;
+                                                line-height: 25px">
+                                        {product_detail_nguyenlieu_thanhphan}
+                                    </div>   
 
-                                        <div style="margin-bottom:10px;
-                                                    margin-left: 2px;
-                                                    font-family: RobotoSlabLight;
-                                                    font-size: 14px;
-                                                    line-height: 25px">
-                                            {product_detail_phantichdambao}
-                                        </div>   
+                                    <div align="justify" 
+                                         style=" margin-bottom:10px;                                                      
+                                                font-size:14px;
+                                                display:{display_product_detail_phantichdambao};                                                     
+                                                font-family: RobotoSlabRegular;
+                                                margin-left: 2px">
+                                        Phân Tích Đảm Bảo
+                                    </div>  
 
-                                        <div align="justify" 
-                                             style="margin-bottom:10px;                                                     
-                                                    font-size:14px;
-                                                    display:{display_product_detail_huongdansudung};
-                                                    font-family: RobotoSlabRegular;
-                                                    margin-left: 2px">
-                                            Hướng Dẫn Sử Dụng
-                                        </div>  
+                                    <div style="margin-bottom:10px;
+                                                margin-left: 2px;
+                                                font-family: RobotoSlabLight;
+                                                font-size: 14px;
+                                                line-height: 25px">
+                                        {product_detail_phantichdambao}
+                                    </div>   
 
-                                        <div style="margin-bottom:10px;
-                                                    margin-left: 2px;
-                                                    font-family: RobotoSlabLight;
-                                                    font-size: 14px;
-                                                    line-height: 25px">
-                                            {product_detail_huongdansudung}
-                                        </div>
+                                    <div align="justify" 
+                                         style="margin-bottom:10px;                                                     
+                                                font-size:14px;
+                                                display:{display_product_detail_huongdansudung};
+                                                font-family: RobotoSlabRegular;
+                                                margin-left: 2px">
+                                        Hướng Dẫn Sử Dụng
+                                    </div>  
 
-                                        <div align="justify" 
-                                              style="margin-bottom:10px;                                                      
-                                                    font-size:14px;
-                                                    display:{display_product_detail_huongdanbaoquan};                                                     
-                                                    font-family: RobotoSlabRegular;
-                                                    margin-left: 2px">
-                                            Hướng Dẫn Bảo Quản
-                                        </div>    
-                                        <div style="margin-bottom:10px;
-                                                    margin-left:2px;
-                                                    font-family: RobotoSlabLight;
-                                                    font-size: 14px;
-                                                    line-height: 25px">
-                                            {product_detail_huongdanbaoquan}
-                                        </div>
+                                    <div style="margin-bottom:10px;
+                                                margin-left: 2px;
+                                                font-family: RobotoSlabLight;
+                                                font-size: 14px;
+                                                line-height: 25px">
+                                        {product_detail_huongdansudung}
+                                    </div>
 
-                                        <div align="justify" 
-                                              style="margin-bottom:10px;                                                      
-                                                    font-size:14px;
-                                                    display:{display_product_detail_luuy};                                                     
-                                                    font-family: RobotoSlabRegular;
-                                                    margin-left: 2px">
-                                            Lưu Ý
-                                        </div> 
+                                    <div align="justify" 
+                                          style="margin-bottom:10px;                                                      
+                                                font-size:14px;
+                                                display:{display_product_detail_huongdanbaoquan};                                                     
+                                                font-family: RobotoSlabRegular;
+                                                margin-left: 2px">
+                                        Hướng Dẫn Bảo Quản
+                                    </div>    
+                                    <div style="margin-bottom:10px;
+                                                margin-left:2px;
+                                                font-family: RobotoSlabLight;
+                                                font-size: 14px;
+                                                line-height: 25px">
+                                        {product_detail_huongdanbaoquan}
+                                    </div>
 
-                                        <div style="margin-bottom:10px; 
-                                                    margin-left: 2px;
-                                                    font-family: RobotoSlabLight;
-                                                    font-size: 14px;
-                                                    line-height: 25px">
-                                            {product_detail_luuy}
-                                        </div>   
+                                    <div align="justify" 
+                                          style="margin-bottom:10px;                                                      
+                                                font-size:14px;
+                                                display:{display_product_detail_luuy};                                                     
+                                                font-family: RobotoSlabRegular;
+                                                margin-left: 2px">
+                                        Lưu Ý
+                                    </div> 
 
-                                        <div align="justify" 
-                                              style="margin-bottom:10px;                                                      
-                                                    font-size:14px;
-                                                    display:{display_product_detail_khuyenkhich};
-                                                    font-family: RobotoSlabRegular;
-                                                    margin-left: 2px">
-                                            Khuyến Khích
-                                        </div>
+                                    <div style="margin-bottom:10px; 
+                                                margin-left: 2px;
+                                                font-family: RobotoSlabLight;
+                                                font-size: 14px;
+                                                line-height: 25px">
+                                        {product_detail_luuy}
+                                    </div>   
 
-                                        <div style="margin-bottom:10px; 
-                                                    margin-left: 2px;
-                                                    font-family: RobotoSlabLight;
-                                                    font-size: 14px;
-                                                    line-height: 25px">
-                                            {product_detail_khuyenkhich}
-                                        </div>   
+                                    <div align="justify" 
+                                          style="margin-bottom:10px;                                                      
+                                                font-size:14px;
+                                                display:{display_product_detail_khuyenkhich};
+                                                font-family: RobotoSlabRegular;
+                                                margin-left: 2px">
+                                        Khuyến Khích
+                                    </div>
 
-                                        <div align="justify" 
-                                              style="margin-bottom:10px;                                                      
-                                                    font-size:14px;
-                                                    display:{display_product_detail_donggoi_thetich};
-                                                    font-family: RobotoSlabRegular;
-                                                    margin-left: 2px">
-                                            Đóng Gói / Thể Tích
-                                        </div>
+                                    <div style="margin-bottom:10px; 
+                                                margin-left: 2px;
+                                                font-family: RobotoSlabLight;
+                                                font-size: 14px;
+                                                line-height: 25px">
+                                        {product_detail_khuyenkhich}
+                                    </div>   
 
-                                        <div style="margin-bottom:10px;
-                                                    margin-left: 2px;
-                                                    font-family: RobotoSlabLight;
-                                                    font-size: 14px;
-                                                    line-height: 25px">
-                                            {product_detail_donggoi_thetich}
-                                        </div>   
+                                    <div align="justify" 
+                                          style="margin-bottom:10px;                                                      
+                                                font-size:14px;
+                                                display:{display_product_detail_donggoi_thetich};
+                                                font-family: RobotoSlabRegular;
+                                                margin-left: 2px">
+                                        Đóng Gói / Thể Tích
+                                    </div>
 
-                                        <div align="justify"
-                                              style="margin-bottom:10px;                                                      
-                                                    font-size:14px;
-                                                    display:{display_product_detail_nhasanxuat};
-                                                    font-family:RobotoSlabRegular;
-                                                    margin-left:2px">
-                                            Nhà Sản Xuất
-                                        </div>
+                                    <div style="margin-bottom:10px;
+                                                margin-left: 2px;
+                                                font-family: RobotoSlabLight;
+                                                font-size: 14px;
+                                                line-height: 25px">
+                                        {product_detail_donggoi_thetich}
+                                    </div>   
 
-                                        <div style="margin-bottom:10px;
-                                                    margin-left: 2px;
-                                                    font-family: RobotoSlabLight;
-                                                    font-size: 14px;
-                                                    line-height: 25px">
-                                            {product_detail_nhasanxuat}
-                                        </div>
-                                        
-                                        <div align="justify"
-                                            style="margin-bottom:10px;                                                      
-                                                  font-size:14px;
-                                                  display:{display_brand_short_description};
-                                                  font-family:RobotoSlabRegular;
-                                                  margin-left:2px">
-                                            Thương hiệu
-                                        </div>
+                                    <div align="justify"
+                                          style="margin-bottom:10px;                                                      
+                                                font-size:14px;
+                                                display:{display_product_detail_nhasanxuat};
+                                                font-family:RobotoSlabRegular;
+                                                margin-left:2px">
+                                        Nhà Sản Xuất
+                                    </div>
 
-                                        <div style="margin-bottom:10px;
-                                                    margin-left: 2px;
-                                                    font-family: RobotoSlabLight;
-                                                    font-size: 14px;
-                                                    line-height: 25px;
-                                                    display:{display_brand_short_description};">
-                                            {brand_short_description}
-                                            <br><a href="{linknsx}">Xem thêm >></a>
-                                        </div>
+                                    <div style="margin-bottom:10px;
+                                                margin-left: 2px;
+                                                font-family: RobotoSlabLight;
+                                                font-size: 14px;
+                                                line-height: 25px">
+                                        {product_detail_nhasanxuat}
+                                    </div>
 
-                                        <div align="justify" 
-                                              style="margin-bottom:10px;                                                      
-                                                     font-size:14px;
-                                                     display:{display_product_detail_xuatxu};                                                     
-                                                     font-family: RobotoSlabRegular;
-                                                     margin-left: 2px">
-                                            Xuất Xứ
-                                        </div>
+                                    <div align="justify"
+                                        style="margin-bottom:10px;                                                      
+                                              font-size:14px;
+                                              display:{display_brand_short_description};
+                                              font-family:RobotoSlabRegular;
+                                              margin-left:2px">
+                                        Thương hiệu
+                                    </div>
 
-                                        <div style="margin-bottom:10px;
-                                                    margin-left: 2px;
-                                                    font-family: RobotoSlabLight;
-                                                    font-size: 14px;
-                                                    line-height: 25px">
-                                            {product_detail_xuatxu}
-                                        </div>                 
-                                        <a name = "section2" > </a>
-                                        <a name = "section3" > </a>
-                                        <hr style="margin-top: 20px;
-                                            margin-bottom: 5px;
-                                            margin-left: auto;
-                                            margin-right: auto;                                                           
-                                            color: #999999">
-                                        <div style="text-align: left;
-                                                    margin-top: 30px;
-                                                    margin-bottom: 10px">
-                                            <span style="font-size: 14px;
-                                                         font-family: RobotoSlabBold;">
-                                                BÌNH LUẬN SẢN PHẨM
-                                            </span>
-                                        </div>                        
-                                        {form_comment}
-                                    </div>                                         
-                                </div><!-- end tab_container -->
-                            </div><!-- end detail3 -->
-                        </div><!-- end col_content -->
+                                    <div style="margin-bottom:10px;
+                                                margin-left: 2px;
+                                                font-family: RobotoSlabLight;
+                                                font-size: 14px;
+                                                line-height: 25px;
+                                                display:{display_brand_short_description};">
+                                        {brand_short_description}
+                                        <br><a href="{linknsx}">Xem thêm >></a>
+                                    </div>
+
+                                    <div align="justify" 
+                                          style="margin-bottom:10px;                                                      
+                                                 font-size:14px;
+                                                 display:{display_product_detail_xuatxu};                                                     
+                                                 font-family: RobotoSlabRegular;
+                                                 margin-left: 2px">
+                                        Xuất Xứ
+                                    </div>
+
+                                    <div style="margin-bottom:10px;
+                                                margin-left: 2px;
+                                                font-family: RobotoSlabLight;
+                                                font-size: 14px;
+                                                line-height: 25px">
+                                        {product_detail_xuatxu}
+                                    </div>                 
+                                    <a name = "section2" > </a>
+                                    <a name = "section3" > </a>
+                                    <hr style="margin-top: 20px;
+                                        margin-bottom: 5px;
+                                        margin-left: auto;
+                                        margin-right: auto;                                                           
+                                        color: #999999">
+                                    <div style="text-align: left;
+                                                margin-top: 30px;
+                                                margin-bottom: 10px">
+                                        <span style="font-size: 14px;
+                                                     font-family: RobotoSlabBold;">
+                                            BÌNH LUẬN SẢN PHẨM
+                                        </span>
+                                    </div>                        
+                                    {form_comment}
+                                </div>                                         
+                            </div><!-- end tab_container -->
+                        </div><!-- end detail3 -->
+                        
                     </div>
                 </div>
             </div><!-- end product -->
@@ -701,10 +699,7 @@
                 <div id="email_hidden">{email}</div>
             </div>    
         </div>
-        <div class = "hidden-xs hidden-sm col-md-3 col-lg-3"
-             style="padding-right: 30px">
-            <!-- <img src="{linkS}layout/bootstrap/images/category.png" style="float: right; clear: both; width: 100%"/>
-            {category}-->
+        <div class = "hidden-xs hidden-sm col-md-3 col-lg-3">
             <a href="{linkS}lien-he">
                 <img alt="liên hệ" 
                     src="{linkS}layout/bootstrap/images/product_contact.png"
@@ -718,77 +713,99 @@
     </div>
 </div>   
 
-<!-- Begin San Pham Theo Nhan Hieu-->
-<div class = "container" style="padding-left: 50px; padding-right: 50px">
-    <br/>    
-    <div class ="row">
-        <div class ="col-xs-12 col-sm-12 col-md-12 col-lg-12">            
-            <img alt="sản phẩm liên quan" 
-                src="{linkS}layout/bootstrap/images/san_pham_lien_quan.png"
-                style = "display:block; 
-                         margin-left: auto; 
-                         margin-right: auto;
-                         width: 100%;
-                         margin-left: -10px"/>
-            
-        </div>
-    </div>
-</div>
-<!-- End San Pham Theo Nhan Hieu-->
-
 <!--Begin product relationship -->
 <div class="container" style="padding-top: 40px">
     <div class="row" style="padding-bottom: 40px">
-        <!--BEGINLIST_PRODUCTS-->
-        <!--BEGIN_PRODUCTS-->
-        <li>
-            <a  class = "list_product_name"
-                href="{linkS}{category}/{product_key}.htm"
-                style = "outline:none;">
-                <div class="product_detail" style="width: 225px">
-                    <div class="product_name">
-                        <!--{promotion_Sale}-->
-                        <img alt="{product_name}"
-                            src="{linkS}upload/product/{product_img}"
-                            width="140"
-                            height="140"
-                            style = "margin-left: 28px; cursor: pointer"/>
-                        <div class="textbox"  
-                             style = "padding-top: 65px; padding-left: 33px">
-                            <img alt="Xem chi tiết" 
-                                src="{linkS}layout/bootstrap/images/xem_chi_tiet.png"
-                                width="110px"
-                                style = "cursor: pointer; 
-                                         margin-bottom: 5px">
-                        </div>
-                    </div><!-- End product_name_col -->
+        <div class="hidden-xs hidden-sm hidden-md col-lg-12">
+            <img alt="sản phẩm liên quan" 
+                src="{linkS}layout/bootstrap/images/san_pham_lien_quan.png"
+                style="display:block; 
+                    margin-left: auto; 
+                    margin-right: auto;
+                    width: 100%;
+                    margin-bottom: 30px">
+            <!--BEGINLIST_PRODUCTS-->
+            <!--BEGIN_PRODUCTS-->
+            <li>
+                <a  class = "list_product_name"
+                    href="{linkS}{category}/{product_key}.htm"
+                    style = "outline:none;">
+                    <div class="product_detail" style="width: 210px !important">
+                        <div class="product_name">
+                            <img alt="{product_name}"
+                                src="{linkS}upload/product/{product_img}"
+                                width="140"
+                                height="140"
+                                style = "margin-left: 28px; cursor: pointer"/>
+                            <div class="textbox"  
+                                 style = "padding-top: 65px; padding-left: 33px">
+                                <img alt="Xem chi tiết" 
+                                    src="{linkS}layout/bootstrap/images/xem_chi_tiet.png"
+                                    width="110px"
+                                    style = "cursor: pointer; 
+                                             margin-bottom: 5px">
+                            </div>
+                        </div><!-- End product_name_col -->
 
-                    <div class="product_tit">
-                        <div style="font-size: 14px;
-                                    color: #929292;
-                                    cursor: pointer;
-                                    font-family: RobotoSlabRegular;">
-                            {product_name}
+                        <div class="product_tit">
+                            <div style="font-size: 14px;
+                                        color: #929292;
+                                        cursor: pointer;
+                                        font-family: RobotoSlabRegular;">
+                                {product_name}
+                            </div>
                         </div>
+                        <div class="product_price"
+                             style = "cursor: pointer;
+                                      font-family:RobotoSlabRegular;
+                                      font-size: 14px;">
+                            {product_price} VNĐ
+                        </div>
+                    </div><!-- end product_detail -->
+                </a>
+            </li>
+            <!--END_PRODUCTS-->
+            <!--ENDLIST_PRODUCTS-->
+        </div>
+        <div class="hidden-lg">
+            <!--BEGINLIST_MOBILE_PRODUCTS-->
+            <!--BEGIN_MOBILE_PRODUCTS-->
+            <li class="col-xs-6 col-sm-3 col-md-3">
+                <a  class="list_product_name"
+                    href="{linkS}{category}/{product_key}.htm"
+                    style="outline:none;">
+                    <img class="img-responsive center-block"  
+                        alt="{product_name}"
+                        src="{linkS}upload/product/{product_img}"
+                        style="cursor: pointer"/>
+                    <div style="font-size: 14px;
+                            color: #929292;
+                            cursor: pointer;
+                            font-family: RobotoSlabRegular;
+                            text-align: center;
+                            margin-top: 10px">
+                        {product_name}
                     </div>
-                    <div class="product_price"
-                         style = "cursor: pointer;
-                                  font-family:RobotoSlabRegular;
-                                  font-size: 14px;">
+                    <div style="cursor: pointer;
+                                font-family:RobotoSlabRegular;
+                                font-size: 14px;
+                                color: #f24d23;
+                                text-align: center;
+                                margin-bottom: 20px;
+                                margin-top: 10px">
                         {product_price} VNĐ
                     </div>
-                </div><!-- end product_detail -->
-            </a>
-        </li>
-        <!--END_PRODUCTS-->
-        <!--ENDLIST_PRODUCTS-->
+                </a>
+            </li>
+            <!--END_MOBILE_PRODUCTS-->
+            <!--ENDLIST_MOBILE_PRODUCTS-->
+        </div>
     </div>
 </div>
 <!--End prouducts relationship-->
 
 <!--News relationship-->
-<div {display_realtion_news} 
-    class="container">
+<div class="container hidden-xs hidden-sm hidden-md" {display_realtion_news}>
     <hr style="margin-top: 10px;
                margin-bottom: 5px;
                margin-left: auto;
