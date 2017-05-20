@@ -106,7 +106,7 @@
             width: 64px;
             position: fixed;
             bottom: 220px;
-            right: 5px;            
+            right: 5px;
             /* image replacement properties */
             overflow: hidden;
             text-indent: 100%;
@@ -117,6 +117,7 @@
             -webkit-transition: opacity .3s 0s, visibility 0s .3s;
             -moz-transition: opacity .3s 0s, visibility 0s .3s;
             transition: opacity .3s 0s, visibility 0s .3s;
+            z-index: 1000;
         }
         .cd-top.cd-is-visible, .cd-top.cd-fade-out, .no-touch .cd-top:hover {
             -webkit-transition: opacity .3s 0s, visibility 0s 0s;
