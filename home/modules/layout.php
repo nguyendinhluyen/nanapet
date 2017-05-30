@@ -1,7 +1,7 @@
 <?php
     // Logo web
     $logo_web = GetOnef('config_value', 'config', 'config_name="logo"');
-
+    
     // Banner web
     $banner = GetOnef('config_value', 'config', 'config_name="banner"');
     $banner_2 = GetOnef('config_value', 'config', 'config_name="banner_2"');
