@@ -41,7 +41,7 @@
     function showRelationProducts(&$productdetail, $products, 
         $disCountVIPCustomer,$area_display, $nb_each_line, $style) {
         $tpl = '';
-        $tpl_temp = '<div id="product_home" style="float:left">
+        $tpl_temp = '<div id="product_home">
                                 <div class = "col-xs-12">
                                     <ul style="'.$style.'">';
         global $xtemplate;
@@ -81,7 +81,7 @@
             if ($flag % $nb_each_line == 0) {
                     $tpl_temp .= ' </ul>';
                     $tpl .= $tpl_temp . '</div></div>';
-                    $tpl_temp = '<div id="product_home" style="float:left">
+                    $tpl_temp = '<div id="product_home">
                                                 <div class = "col-xs-12">
                                                     <ul style="'.$style.'">';
             }
@@ -90,7 +90,6 @@
             $area_display => $tpl
         ));
     }
-
     
     $product_key = input($_GET['product_key']);
     $productdetail = $xtemplate->load('product_detail_bootstrap');
@@ -543,10 +542,13 @@
     $products = $Product->getProductsByCategoryKeyLimitOrderBy($products_t, $category_key
             , 0, 10, $_SESSION['order_by']);
     $products_support = array_slice($products, 0, 4);
-    showRelationProducts($productdetail, $products_support, $disCountVIPCustomer, 'PRODUCTS_SUPPORT', 4, 'padding-left:0px');
-    showRelationProducts($productdetail, $products_support, $disCountVIPCustomer, 'MOBILE_PRODUCTS_SUPPORT', 4, 'padding-left:0px');
+    showRelationProducts($productdetail, $products_support, $disCountVIPCustomer, 'PRODUCTS_SUPPORT', 4, "padding:0px");
+    showRelationProducts($productdetail, $products_support, $disCountVIPCustomer, 'MOBILE_PRODUCTS_SUPPORT', 2, "padding:0px");
+    showRelationProducts($productdetail, $products_support, $disCountVIPCustomer, 'TABLET_PRODUCTS_SUPPORT', 4, "padding:0px");
     
     showRelationProducts($productdetail, $products, $disCountVIPCustomer, 'PRODUCTS', 5, "margin-left: 10px");
+    showRelationProducts($productdetail, $products, $disCountVIPCustomer, 'MOBILE_PRODUCTS', 2, "padding:0px");
+    showRelationProducts($productdetail, $products, $disCountVIPCustomer, 'TABLET_PRODUCTS', 4, "padding:0px");
     // end relationship products
     
     // meta description
@@ -601,6 +603,7 @@ if (empty($product_detail['manufacturer'])) {
         $link_brand_product = "{linkS}thuong-hieu/". $brand_product['adver_id'];
     } 
     // End brand product
+    
     
     $productdetail = $xtemplate->replace($productdetail, array(
         'form_comment' => $facebook_comment,

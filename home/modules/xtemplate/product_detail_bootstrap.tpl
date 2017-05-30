@@ -129,7 +129,7 @@
 
 <div class = "container">
     <div class="row">                
-        <div class = "col-xs-12 col-sm-12 col-md-9 col-lg-9">
+        <div class = "col-xs-12 col-sm-12 col-md-12 col-lg-9">
             <div id = "user_name" style="display:none"> {user_name}</div>
             <div id = "rate_sum" style="display:none"> {rate_sum}</div>                                  
             <div class="hidden-xs hidden-sm hidden-md" 
@@ -192,7 +192,7 @@
                                 </div>
                             </div>
                             
-                            <div class="col-lg-6"
+                            <div class="col-md-12 col-lg-6"
                                  style="float:left;
                                         font-size: 14px;
                                         line-height:35px;
@@ -352,83 +352,115 @@
                                     margin-bottom: 30px">
                                 SẢN PHẨM THƯỜNG ĐƯỢC MUA CÙNG
                         </div>
-                        <div class="container" style="padding: 0px">
-                            <div class="row hidden-md hidden-xs hidden-sm">
-                                <!--BEGINLIST_PRODUCTS_SUPPORT-->
-                                <!--BEGIN_PRODUCTS_SUPPORT-->
-                                <li>
-                                    <a  class = "list_product_name"
-                                        href="{linkS}{category}/{product_key}.htm"
-                                        style = "outline:none;">
-                                        <div class="product_detail" style="width: 210px">
-                                            <div class="product_name">
-                                                <img alt="{product_name}"
-                                                    src="{linkS}upload/product/{product_img}"
-                                                    width="140"
-                                                    height="140"
-                                                    style = "margin-left: 28px; cursor: pointer"/>
-                                                <div class="textbox"  
-                                                     style = "padding-top: 65px; padding-left: 33px">
-                                                    <img alt="Xem chi tiết" 
-                                                        src="{linkS}layout/bootstrap/images/xem_chi_tiet.png"
-                                                        width="110px"
-                                                        style = "cursor: pointer; 
-                                                                 margin-bottom: 5px">
-                                                </div>
+                        
+                        <div class="row hidden-md hidden-xs hidden-sm">
+                            <!--BEGINLIST_PRODUCTS_SUPPORT-->
+                            <!--BEGIN_PRODUCTS_SUPPORT-->
+                            <li>
+                                <a  class = "list_product_name"
+                                    href="{linkS}{category}/{product_key}.htm"
+                                    style = "outline:none;">
+                                    <div class="product_detail" style="width: 210px">
+                                        <div class="product_name">
+                                            <img alt="{product_name}"
+                                                src="{linkS}upload/product/{product_img}"
+                                                width="140"
+                                                height="140"
+                                                style = "margin-left: 28px; cursor: pointer"/>
+                                            <div class="textbox"  
+                                                 style = "padding-top: 65px; padding-left: 33px">
+                                                <img alt="Xem chi tiết" 
+                                                    src="{linkS}layout/bootstrap/images/xem_chi_tiet.png"
+                                                    width="110px"
+                                                    style = "cursor: pointer; 
+                                                             margin-bottom: 5px">
                                             </div>
-                                            <div class="product_tit">
-                                                <div style="font-size: 14px;
-                                                            color: #929292;
-                                                            cursor: pointer;
-                                                            font-family: RobotoSlabRegular;">
-                                                    {product_name}
-                                                </div>
-                                            </div>
-                                            <div class="product_price"
-                                                 style = "cursor: pointer;
-                                                          font-family:RobotoSlabRegular;
-                                                          font-size: 14px;">
-                                                {product_price} VNĐ
-                                            </div>
-                                        </div><!-- end product_detail -->
-                                    </a>
-                                </li>
-                                <!--END_PRODUCTS_SUPPORT-->
-                                <!--ENDLIST_PRODUCTS_SUPPORT-->
-                            </div>
-                            <div class="row hidden-lg">
-                                <!--BEGINLIST_MOBILE_PRODUCTS_SUPPORT-->
-                                <!--BEGIN_MOBILE_PRODUCTS_SUPPORT-->
-                                <li class="col-xs-6 col-sm-3 col-md-3">
-                                    <a  class="list_product_name"
-                                        href="{linkS}{category}/{product_key}.htm"
-                                        style="outline:none;">
-                                        <img class="img-responsive center-block"  
-                                            alt="{product_name}"
-                                            src="{linkS}upload/product/{product_img}"
-                                            style="cursor: pointer"/>
-                                        <div style="font-size: 14px;
-                                                color: #929292;
-                                                cursor: pointer;
-                                                font-family: RobotoSlabRegular;
-                                                text-align: center;
-                                                margin-top: 10px">
-                                            {product_name}
                                         </div>
-                                        <div style="cursor: pointer;
-                                                    font-family:RobotoSlabRegular;
-                                                    font-size: 14px;
-                                                    color: #f24d23;
-                                                    text-align: center;
-                                                    margin-bottom: 20px;
-                                                    margin-top: 10px">
+                                        <div class="product_tit">
+                                            <div style="font-size: 14px;
+                                                        color: #929292;
+                                                        cursor: pointer;
+                                                        font-family: RobotoSlabRegular;">
+                                                {product_name}
+                                            </div>
+                                        </div>
+                                        <div class="product_price"
+                                             style = "cursor: pointer;
+                                                      font-family:RobotoSlabRegular;
+                                                      font-size: 14px;">
                                             {product_price} VNĐ
                                         </div>
-                                    </a>
-                                </li>
-                                <!--END_MOBILE_PRODUCTS_SUPPORT-->
-                                <!--ENDLIST_MOBILE_PRODUCTS_SUPPORT-->
-                            </div>
+                                    </div><!-- end product_detail -->
+                                </a>
+                            </li>
+                            <!--END_PRODUCTS_SUPPORT-->
+                            <!--ENDLIST_PRODUCTS_SUPPORT-->
+                        </div>
+                        <div class="row hidden-lg hidden-md hidden-sm">
+                            <!--BEGINLIST_MOBILE_PRODUCTS_SUPPORT-->
+                            <!--BEGIN_MOBILE_PRODUCTS_SUPPORT-->
+                            <li class="col-xs-6">
+                                <a  class="list_product_name"
+                                    href="{linkS}{category}/{product_key}.htm"
+                                    style="outline:none;">
+                                    <img class="img-responsive center-block"  
+                                        alt="{product_name}"
+                                        src="{linkS}upload/product/{product_img}"
+                                        style="cursor: pointer"/>
+                                    <div style="font-size: 14px;
+                                            color: #929292;
+                                            cursor: pointer;
+                                            font-family: RobotoSlabRegular;
+                                            text-align: center;
+                                            margin-top: 10px">
+                                        {product_name}
+                                    </div>
+                                    <div style="cursor: pointer;
+                                                font-family:RobotoSlabRegular;
+                                                font-size: 14px;
+                                                color: #f24d23;
+                                                text-align: center;
+                                                margin-bottom: 20px;
+                                                margin-top: 10px">
+                                        {product_price} VNĐ
+                                    </div>
+                                </a>
+                            </li>
+                            <!--END_MOBILE_PRODUCTS_SUPPORT-->
+                            <!--ENDLIST_MOBILE_PRODUCTS_SUPPORT-->
+                        </div>
+                        <div class="row hidden-lg hidden-xs">
+                            <!--BEGINLIST_TABLET_PRODUCTS_SUPPORT-->
+                            <!--BEGIN_TABLET_PRODUCTS_SUPPORT-->
+                            <li class="col-sm-3 col-md-3">
+                                <a  class="list_product_name"
+                                    href="{linkS}{category}/{product_key}.htm"
+                                    style="outline:none;">
+                                    <img class="img-responsive center-block"  
+                                        alt="{product_name}"
+                                        src="{linkS}upload/product/{product_img}"
+                                        style="cursor: pointer"/>
+                                    <div style="font-size: 14px;
+                                            color: #929292;
+                                            cursor: pointer;
+                                            font-family: RobotoSlabRegular;
+                                            text-align: center;
+                                            margin-top: 10px">
+                                        {product_name}
+                                    </div>
+                                    <div style="cursor: pointer;
+                                                font-family:RobotoSlabRegular;
+                                                font-size: 14px;
+                                                color: #f24d23;
+                                                text-align: center;
+                                                margin-bottom: 20px;
+                                                margin-top: 10px">
+                                        {product_price} VNĐ
+                                    </div>
+                                </a>
+                            </li>
+                            <!--END_TABLET_PRODUCTS_SUPPORT-->
+                            <!--ENDLIST_TABLET_PRODUCTS_SUPPORT-->
                         </div>
                         <!--End prouducts relationship-->
 
@@ -495,7 +527,7 @@
                                                 font-family: RobotoSlabLight;
                                                 font-size: 14px;
                                                 line-height: 25px">
-                                        {product_detail_phuhopcho}
+                                        {product_detail_phuhopcho}     
                                     </div>   
 
                                     <div align="justify" 
@@ -515,14 +547,14 @@
                                         {product_detail_nguyenlieu_thanhphan}
                                     </div>   
 
-                                    <div align="justify" 
+                                    <div align="justify"
                                          style=" margin-bottom:10px;                                                      
                                                 font-size:14px;
                                                 display:{display_product_detail_phantichdambao};                                                     
                                                 font-family: RobotoSlabRegular;
                                                 margin-left: 2px">
                                         Phân Tích Đảm Bảo
-                                    </div>  
+                                    </div>
 
                                     <div style="margin-bottom:10px;
                                                 margin-left: 2px;
@@ -596,7 +628,7 @@
                                                 font-family: RobotoSlabLight;
                                                 font-size: 14px;
                                                 line-height: 25px">
-                                        {product_detail_khuyenkhich}
+                                        {product_detail_khuyenkhich}     
                                     </div>   
 
                                     <div align="justify" 
@@ -649,7 +681,7 @@
                                                 line-height: 25px;
                                                 display:{display_brand_short_description};">
                                         {brand_short_description}
-                                        <br><a href="{linknsx}">Xem thêm >></a>
+                                        <a href="{linknsx}" style="clear:both">Xem thêm >></a>
                                     </div>
 
                                     <div align="justify" 
@@ -666,7 +698,7 @@
                                                 font-family: RobotoSlabLight;
                                                 font-size: 14px;
                                                 line-height: 25px">
-                                        {product_detail_xuatxu}
+                                        {product_detail_xuatxu}    
                                     </div>                 
                                     <a name = "section2" > </a>
                                     <a name = "section3" > </a>
@@ -699,7 +731,7 @@
                 <div id="email_hidden">{email}</div>
             </div>    
         </div>
-        <div class = "hidden-xs hidden-sm col-md-3 col-lg-3">
+        <div class = "hidden-xs hidden-sm hidden-md col-lg-3">
             <a href="{linkS}lien-he">
                 <img alt="liên hệ" 
                     src="{linkS}layout/bootstrap/images/product_contact.png"
@@ -714,7 +746,7 @@
 </div>   
 
 <!--Begin product relationship -->
-<div class="container" style="padding-top: 40px">
+<div class="container" style="padding-top: 20px">
     <div class="row" style="padding-bottom: 40px">
         <div class="hidden-xs hidden-sm hidden-md col-lg-12">
             <img alt="sản phẩm liên quan" 
@@ -767,10 +799,17 @@
             <!--END_PRODUCTS-->
             <!--ENDLIST_PRODUCTS-->
         </div>
-        <div class="hidden-lg">
+        <div class="hidden-lg" align="justify" 
+            style=" margin-bottom: 30px;
+                    font-size: 14px;
+                    font-family: RobotoSlabBold;
+                    text-align: center">
+            CÓ THỂ BẠN QUAN TÂM
+        </div>
+        <div class="hidden-lg hidden-md hidden-sm">
             <!--BEGINLIST_MOBILE_PRODUCTS-->
             <!--BEGIN_MOBILE_PRODUCTS-->
-            <li class="col-xs-6 col-sm-3 col-md-3">
+            <li class="col-xs-6">
                 <a  class="list_product_name"
                     href="{linkS}{category}/{product_key}.htm"
                     style="outline:none;">
@@ -799,6 +838,39 @@
             </li>
             <!--END_MOBILE_PRODUCTS-->
             <!--ENDLIST_MOBILE_PRODUCTS-->
+        </div>
+        <div class="hidden-lg hidden-xs">
+            <!--BEGINLIST_TABLET_PRODUCTS-->
+            <!--BEGIN_TABLET_PRODUCTS-->
+            <li class="col-sm-3">
+                <a  class="list_product_name"
+                    href="{linkS}{category}/{product_key}.htm"
+                    style="outline:none;">
+                    <img class="img-responsive center-block"  
+                        alt="{product_name}"
+                        src="{linkS}upload/product/{product_img}"
+                        style="cursor: pointer"/>
+                    <div style="font-size: 14px;
+                            color: #929292;
+                            cursor: pointer;
+                            font-family: RobotoSlabRegular;
+                            text-align: center;
+                            margin-top: 10px">
+                        {product_name}
+                    </div>
+                    <div style="cursor: pointer;
+                                font-family:RobotoSlabRegular;
+                                font-size: 14px;
+                                color: #f24d23;
+                                text-align: center;
+                                margin-bottom: 20px;
+                                margin-top: 10px">
+                        {product_price} VNĐ
+                    </div>
+                </a>
+            </li>
+            <!--END_TABLET_PRODUCTS-->
+            <!--ENDLIST_TABLET_PRODUCTS-->
         </div>
     </div>
 </div>
