@@ -546,7 +546,7 @@
     showRelationProducts($productdetail, $products_support, $disCountVIPCustomer, 'MOBILE_PRODUCTS_SUPPORT', 2, "padding:0px");
     showRelationProducts($productdetail, $products_support, $disCountVIPCustomer, 'TABLET_PRODUCTS_SUPPORT', 4, "padding:0px");
     
-    showRelationProducts($productdetail, $products, $disCountVIPCustomer, 'PRODUCTS', 5, "margin-left: 10px");
+    showRelationProducts($productdetail, $products, $disCountVIPCustomer, 'PRODUCTS', 5);
     showRelationProducts($productdetail, $products, $disCountVIPCustomer, 'MOBILE_PRODUCTS', 2, "padding:0px");
     showRelationProducts($productdetail, $products, $disCountVIPCustomer, 'TABLET_PRODUCTS', 4, "padding:0px");
     // end relationship products
