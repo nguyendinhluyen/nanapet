@@ -463,10 +463,8 @@
                  style="background-color: #ff767c;
                         height:auto;
                         padding:0px">
-                <div class ="container"
-                     style ="padding-top: 40px; 
-                            padding-left: 40px; 
-                            padding-right: 40px">
+                <div class="container"
+                    style="padding-top: 40px;">
                     <div class ="row">
                         <!--NanaPet Support-->
                         <div class ="col-lg-3" 
@@ -642,8 +640,7 @@
                         <div class ="col-lg-4" 
                              style="padding-left: 20px; 
                                     line-height: 25px; 
-                                    margin-top:25px; 
-                                    margin-left: -15px">
+                                    margin-top:25px;">
                             <div class="fb-page" 
                                 data-href="https://www.facebook.com/NanaPetOnline" 
                                 data-tabs="timeline" 
