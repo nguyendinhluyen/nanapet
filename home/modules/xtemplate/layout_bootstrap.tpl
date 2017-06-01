@@ -340,22 +340,23 @@
                                        outline:none;">
                         </div>
                         <div class="col-xs-6 col-sm-6 col-md-6">
-                            <span class="cart_score" 
-                                style="float:right; 
-                                      margin-top:7px;
-                                      margin-left:5px;
-                                      color:#ff767c;
-                                      font-family:RobotoSlabRegular;
-                                      font-size:17px">
-                                {giohang}
-                            </span>
-                            <img src="{linkS}layout/bootstrap/images/mobile_basket.png" 
-                                alt="giỏ hàng"
-                                style="width:40px;
-                                       margin-bottom:10px;
-                                       outline:none;
-                                       float:right">
-                            
+                            <a href="{linkS}gio-hang">
+                                <span class="cart_score" 
+                                    style="float:right; 
+                                          margin-top:7px;
+                                          margin-left:5px;
+                                          color:#ff767c;
+                                          font-family:RobotoSlabRegular;
+                                          font-size:17px">
+                                    {giohang}
+                                </span>
+                                <img src="{linkS}layout/bootstrap/images/mobile_basket.png" 
+                                    alt="giỏ hàng"
+                                    style="width:40px;
+                                           margin-bottom:10px;
+                                           outline:none;
+                                           float:right">
+                            </a>
                         </div>
                     </div> 
                     <div class="row">
