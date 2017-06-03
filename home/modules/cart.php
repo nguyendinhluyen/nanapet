@@ -1,4 +1,98 @@
 <?php
+function loadCartList(&$cart, $areadisplay, $linkS, $Product) {
+    global $xtemplate;
+    $blocks = $xtemplate->get_block_from_str($cart, $areadisplay);
+    if (isset($_SESSION['cart'])) {
+        global $total;
+        $total = 0;
+        $cartList = '';
+        $i = 0;
+        $Category = new Category();
+        $list_product = "";
+        foreach ($_SESSION['cart'] as $keys) {
+            $rows_pro_detail = $Product->getProductsByProductKey($keys['product_key']);
+            $category_key = $Category->getCategoryKeyByProductKey($keys['product_key']);
+            if ($keys['price'] != '') {
+                $p_price = $keys['price'];
+            }
+
+            if ($keys['color'] != '') {
+                $color_des = "<li style = 'margin-top: 5px'><span style= 'font-family:RobotoSlabRegular;font-size: 11px; width:65px;'>" .
+                        $rows_pro_detail['p_attribute'] . ":&nbsp;</span> <b style ='font-family:RobotoSlabRegular;font-size:12px'>" .
+                        $keys['color'] . "</b>&nbsp;</li>";
+            }
+
+            if ($keys['type'] != '') {
+                $type_des = "<li style = 'margin-top: 5px'><span style= 'font-family:RobotoSlabRegular;font-size: 11px; width:65px;'>Loại:</span> "
+                        . "<b style ='font-family:RobotoSlabRegular;font-size:12px'>" . $keys['type'] . "</b>&nbsp;</li>";
+            }
+
+            $sua_don_hang = '';
+
+            if (isset($_SESSION['order_id']) && $_SESSION['order_id'] > 0) {
+                $sua_don_hang = '<b style="color: red;">Bạn đang ở chế độ sửa đơn hàng số ' .
+                        $_SESSION['order_id'] . '</b>&nbsp;&nbsp;<a href="' .
+                        $linkS . 'reset-update.chm">Hủy</a>';
+            }
+
+            $tmp_cart = $xtemplate->assign_vars($blocks, array(
+                'product_image' => $rows_pro_detail['products_image'],
+                'product_name' => $rows_pro_detail['products_name'],
+                'price' => $p_price,
+                'product_key' => $rows_pro_detail['products_key'],
+                'price_unit' => "VNĐ",
+                'product_id' => $rows_pro_detail['products_id'],
+                'quantity' => $keys['quantity'],
+                'total_one' => common::convertIntToFormatMoney(common::convertFormatMoneyToInt($p_price) * $keys['quantity']),
+                'type' => $keys['type'],
+                'color' => $keys['color'],
+                'color_des' => $color_des,
+                'type_des' => $type_des,
+                'stt' => $i,
+                'category' => $category_key,
+                'stt_item' => ($i)
+            ));
+            $cartList .= $tmp_cart;
+            $total += common::convertFormatMoneyToInt($p_price) * $keys['quantity'];
+            $i++;
+            $list_product .= $rows_pro_detail['products_name'] . ',';
+        }
+    }
+
+    $_SESSION['total_price'] = common::convertIntToFormatMoney($total);
+    if (count($_SESSION['cart']) == 0) {
+        $cart = '<div class="container">
+                    <div class = "row">        
+                        <div class = "col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <div style="font-size:17px; 
+                                        font-family: RobotoSlabRegular;
+                                        margin-top: 150px;
+                                        margin-bottom: 150px">
+                                <center>
+                                    <i>Hiện chưa có sản phẩm nào trong giỏ hàng của bạn.</i>
+                                </center>
+                            </div>
+                        </div>
+                    </div>
+                </div>';
+
+        $cart.= '<script type="text/javascript">
+                    $(document).ready(function(){
+                    $.ajax({
+                            type: "POST",
+                            url: "{linkS}home/modules/ajax/cart_right.php",
+                            data: {},
+                            success: function(data){
+                                    $("#main-cart").html(data);
+                            }
+                        });
+                    });
+                </script>';
+    }
+    $cart = $xtemplate->assign_blocks_content($cart, array(
+        $areadisplay => $cartList
+    ));
+}
 $display = "style='display:none'";
 $display_code_coupon = "style='color:#F00; display:block'";
 if (isset($_SESSION['username']) && $_SESSION['username'] != '') {
@@ -161,103 +255,10 @@ if (isset($_SESSION['username']) && $_SESSION['username'] != '') {
     }
 
     
-    // bootstrap
+    // load layout
     $cart = $xtemplate->load('cart_bootstrap');
-    $blocks = $xtemplate->get_block_from_str($cart, 'LISTCART');
-    if (isset($_SESSION['cart'])) {
-        $total = 0;
-        $cartList = '';
-        $i = 0;
-        $Category = new Category();
-        $list_product = "";
-        foreach ($_SESSION['cart'] as $keys) {
-            $rows_pro_detail = $Product->getProductsByProductKey($keys['product_key']);
-            $category_key = $Category->getCategoryKeyByProductKey($keys['product_key']);
-            if ($keys['price'] != '') {
-                $p_price = $keys['price'];
-            }
-
-            if ($keys['color'] != '') {
-                $color_des = "<li style = 'margin-top: 5px'><span style= 'font-family:RobotoSlabRegular;font-size: 11px; width:65px;'>" .
-                        $rows_pro_detail['p_attribute'] . ":&nbsp;</span> <b style ='font-family:RobotoSlabRegular;font-size:12px'>" .
-                        $keys['color'] . "</b>&nbsp;</li>";
-            }
-
-            if ($keys['type'] != '') {
-                $type_des = "<li style = 'margin-top: 5px'><span style= 'font-family:RobotoSlabRegular;font-size: 11px; width:65px;'>Loại:</span> "
-                        . "<b style ='font-family:RobotoSlabRegular;font-size:12px'>" . $keys['type'] . "</b>&nbsp;</li>";
-            }
-
-            $sua_don_hang = '';
-
-            if (isset($_SESSION['order_id']) && $_SESSION['order_id'] > 0) {
-                $sua_don_hang = '<b style="color: red;">Bạn đang ở chế độ sửa đơn hàng số ' .
-                        $_SESSION['order_id'] . '</b>&nbsp;&nbsp;<a href="' .
-                        $linkS . 'reset-update.chm">Hủy</a>';
-            }
-
-            $tmp_cart = $xtemplate->assign_vars($blocks, array(
-                'product_image' => $rows_pro_detail['products_image'],
-                'product_name' => $rows_pro_detail['products_name'],
-                'price' => $p_price,
-                'product_key' => $rows_pro_detail['products_key'],
-                'price_unit' => "VNĐ",
-                'product_id' => $rows_pro_detail['products_id'],
-                'quantity' => $keys['quantity'],
-                'total_one' => common::convertIntToFormatMoney(common::convertFormatMoneyToInt($p_price) * $keys['quantity']),
-                'type' => $keys['type'],
-                'color' => $keys['color'],
-                'color_des' => $color_des,
-                'type_des' => $type_des,
-                'stt' => $i,
-                'category' => $category_key,
-                'stt_item' => ($i)
-            ));
-            $cartList .= $tmp_cart;
-            $total += common::convertFormatMoneyToInt($p_price) * $keys['quantity'];
-            $total_product += $keys['quantity'];
-            $total_price = common::convertIntToFormatMoney($total);
-            $i++;
-            $list_product .= $rows_pro_detail['products_name'] . ',';
-        }
-    }
-
-    $_SESSION['total_price'] = common::convertIntToFormatMoney($total);
-
-    if (count($_SESSION['cart']) == 0) {
-        $cart = '<div class="container">
-                        <div class = "row">        
-                            <div class = "col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                <div style="font-size:17px; 
-                                            font-family: RobotoSlabRegular;
-                                            margin-top: 150px;
-                                            margin-bottom: 150px">
-                                    <center>
-                                        <i>Hiện chưa có sản phẩm nào trong giỏ hàng của bạn.</i>
-                                    </center>
-                                </div>
-                            </div>
-                        </div>
-                    </div>';
-
-        $cart.= '<script type="text/javascript">
-                    $(document).ready(function(){
-                    $.ajax({
-                            type: "POST",
-                            url: "{linkS}home/modules/ajax/cart_right.php",
-                            data: {},
-                            success: function(data)
-                            {								
-                                    $("#main-cart").html(data);
-                            }
-                        });
-                    });
-                </script>';
-    }
-    $cart = $xtemplate->assign_blocks_content($cart, array(
-        'LISTCART' => $cartList,
-    ));
-    
+    loadCartList($cart, "LISTCART", $linkS, $Product);
+    loadCartList($cart, "MOBILE_LISTCART", $linkS, $Product);
     $cart = $xtemplate->replace($cart, array(
         'total' => common::convertIntToFormatMoney($total),
         'price_unit' => 'VNĐ',
