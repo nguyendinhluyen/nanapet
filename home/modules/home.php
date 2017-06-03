@@ -175,7 +175,6 @@ function showDesktopLayout() {
                            style = "outline:none;">
                             <div class="product_detail">
                                 <div class="product_name">
-                                    <!--{promotion_Sale}-->     
                                     <img alt="{product_name}" 
                                          src="{linkS}upload/product/{product_img}"
                                          width="140"
