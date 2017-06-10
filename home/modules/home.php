@@ -70,7 +70,7 @@ function showProducts(&$home, $areadisplay, $products, $displayofline, $total_di
     $tpl = '';
     $tpl_temp = '<div class="row" id="product_home" style="'.$style.'">
                                 <div class = "col-xs-12 col-sm-12 col-md-12 col-lg-12" 
-                                    style="padding-right:0px">
+                                    style="padding:0px">
                                     <ul style="padding:0px">';
     global $xtemplate;
     $block = $xtemplate->get_block_from_str($home, $areadisplay);
@@ -126,7 +126,7 @@ function showProducts(&$home, $areadisplay, $products, $displayofline, $total_di
             $tpl .= $tpl_temp . '</div></div>';
             $tpl_temp = '<div class="row" id="product_home" style="'.$style.'">
                                         <div class = "col-xs-12 col-sm-12 col-md-12 col-lg-12" 
-                                             style="padding-right:0px">
+                                             style="padding:0px">
                                             <ul style="padding:0px">';
         }
     }

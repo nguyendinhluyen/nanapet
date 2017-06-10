@@ -260,20 +260,19 @@
 <!--Begin combo Ban Chay Nhat-->
 <div class="container">
     <div class="row"
-         style="padding-bottom: 10px; margin-right: 0px">
+         style="padding-bottom: 10px; margin-left: 0px; margin-right: 0px">
         <div class = "col-xs-12 col-sm-12 col-md-12 col-lg-12" 
             style="padding-right: 0px;
                     padding-left: 0px">
             <img class="hidden-xs" 
                 alt="combo bán chạy"
                 src="{linkS}layout/bootstrap/images/combo_ban_chay_nhat.png"
-                style = "width: 100%; padding-bottom: 40px;">
+                style = "width: 100%; padding-bottom: 40px; padding-top: 20px">
             <img class="hidden-lg hidden-md hidden-sm"
                 alt="combo bán chạy"
                 src="{linkS}layout/bootstrap/images/combo_ban_chay_nhat_mobile.png"
                 style="width: 100%;
                     margin-top: 10px;
-                    padding-left: 15px;
                     padding-bottom: 20px;">
         </div>
         <!--BEGINLIST_BESTCOMBOPRODUCTS-->
@@ -307,7 +306,6 @@
                 src="{linkS}layout/bootstrap/images/san_pham_ban_chay_mobile.png"
                 style="width: 100%;
                     margin-top: 20px;
-                    padding-left: 15px; 
                     padding-bottom: 20px;">
         </div>
         <!--BEGINLIST_HOTPRODUCTSNEW-->
@@ -343,7 +341,6 @@
                     src="{linkS}layout/bootstrap/images/danh_cho_cun_cung_mobile.png"
                     style="width: 100%;
                         margin-top:20px;
-                        padding-left: 15px;
                         padding-bottom: 20px;">
             </a>
         </div>
@@ -353,7 +350,7 @@
                     src="{linkS}layout/bootstrap/images/san_pham_banner_cun_cung.jpg" 
                     width="460" 
                     height="505"
-                    style = "margin-left: -12px; 
+                    style="margin-left: -12px; 
                             cursor: pointer;"
                     class="img-rounded">
             </a>
@@ -467,8 +464,7 @@
                     src="{linkS}layout/bootstrap/images/danh_cho_meo_cung_mobile.png"
                     style="width: 100%;
                         margin-top:20px;
-                        margin-bottom: 20px;
-                        padding-left: 15px">
+                        margin-bottom: 20px;">
             </a>
         </div>
         <div class = "hidden-xs hidden-sm hidden-md col-lg-4">
@@ -592,8 +588,7 @@
                     src="{linkS}layout/bootstrap/images/tu_thuoc_phong_than_mobile.png"
                     style="width: 100%;
                         margin-top:20px;
-                        margin-bottom: 20px;
-                        padding-left: 15px">
+                        margin-bottom: 20px">
             </a>
         </div>
         <!--BEGINLIST_MEDICINEPRODUCTSNEW-->

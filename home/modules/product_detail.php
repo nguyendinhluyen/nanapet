@@ -513,10 +513,7 @@
     $display_realtion_news = 'style="display:none"';
 
     if (!empty($list_news)) {
-        $display_realtion_news = 'style="display:block; '
-                                . 'padding-bottom: 45px; '
-                                . 'padding-left: 50px;'
-                                . 'padding-right: 50px"';
+        $display_realtion_news = 'style="display:block; padding-bottom:45px"';
         for ($i = 0; $i < count($list_news); $i++) {
             $relation_news .= '<td style="padding-right: 42px">'
                             . '<table>'
