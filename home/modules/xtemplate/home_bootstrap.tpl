@@ -49,7 +49,7 @@
 <div class="container-fluid" 
      style="padding:0px;">
     <div class="hidden-xs hidden-sm"
-         style="padding-bottom: 60px">
+         style="padding-bottom: 20px">
         <!-- use jssor.slider.mini.js (40KB) instead for release -->
         <!-- jssor.slider.mini.js = (jssor.js + jssor.slider.js) -->
         <script type="text/javascript" src="{linkS}layout/bootstrap/css/slider/js/jssor.js"></script>
