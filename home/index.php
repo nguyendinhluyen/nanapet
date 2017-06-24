@@ -9,9 +9,9 @@
     include('home_start.php');
     include('process/loadModel.php');
     include('process/process_frame.php');
-    $html = $xtemplate->load('layout_bootstrap');
+    $html = $xtemplate->load('layout_bootstrap');    
     $chatlive = "";
-
+    
     $giohang = '{cart_right}';
     $hidden = "";
     $hiddenbannerleft = 'style="display: none;"';
