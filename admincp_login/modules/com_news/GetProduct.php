@@ -1,9 +1,9 @@
 <?php        
     date_default_timezone_set('Asia/Ho_Chi_Minh');
     // Use localhost
-    $connection  = @mysql_connect('127.0.0.1:3306', 'root', ''); 
+    //$connection  = @mysql_connect('127.0.0.1:3306', 'root', ''); 
     // Use on server
-    // $connection  = @mysql_connect('localhost', 'nanapet_user', '-#cLp.SMaa0J');
+    $connection  = @mysql_connect('localhost', 'nanapet_user', '-#cLp.SMaa0J');
     mysql_set_charset('utf8',$connection);
     $db = "nanapet_db";
     if(!empty($_POST["name"])){                            
