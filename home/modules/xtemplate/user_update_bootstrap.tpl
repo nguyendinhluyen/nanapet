@@ -2713,7 +2713,7 @@
                   <!--Left Col-->
                   <div class="hidden-xs hidden-sm col-md-3 col-lg-3" 
                         style="padding-left: 0px;
-                              padding-right: 60px;
+                              padding-right: 50px;
                               font-family: RobotoSlabRegular">
                         <div class="col-md-12"
                               style="padding:0px;
