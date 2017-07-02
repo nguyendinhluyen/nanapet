@@ -5,62 +5,55 @@
 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 <script>
-    function myFunctionSubmit(){        
+    function myFunctionSubmit() {
         document.getElementById("firstname").required = true;
-        if(document.getElementById("firstname").value === ""){
+        if (document.getElementById("firstname").value === "") {
             document.getElementById("firstname").setCustomValidity("Vui lòng nhập họ tên!");
-        }
-        else{
-            document.getElementById("firstname").setCustomValidity(""); 
+        } else {
+            document.getElementById("firstname").setCustomValidity("");
             document.getElementById("list_city_buy").required = true;
             var city = document.getElementById("list_city_buy");
             var selectedCity = city.options[city.selectedIndex].value;
-            if(selectedCity === "Chưa chọn tỉnh/thành"){
+            if (selectedCity === "Chưa chọn tỉnh/thành") {
                 document.getElementById("list_city_buy").setCustomValidity("Vui lòng chọn thành phố!");
-            }            
-            else{            
+            } else {
                 document.getElementById("list_city_buy").setCustomValidity("");
                 document.getElementById("list_district_buy").required = true;
                 var district = document.getElementById("list_district_buy");
                 var selectedDistrict = district.options[district.selectedIndex].value;
-                if(selectedDistrict === "Chưa chọn quận/huyện"){
+                if (selectedDistrict === "Chưa chọn quận/huyện") {
                     document.getElementById("list_district_buy").setCustomValidity("Vui lòng chọn quận huyện!");
-                }
-                else{               
+                } else {
                     document.getElementById("list_district_buy").setCustomValidity("");
                     document.getElementById("tags").required = true;
-                    if(document.getElementById("tags").value === ""){
+                    if (document.getElementById("tags").value === "") {
                         document.getElementById("tags").setCustomValidity("Vui lòng nhập tên phường!");
-                    }
-                    else{
+                    } else {
                         document.getElementById("tags").setCustomValidity("");
                         document.getElementById("tags_street").required = true;
-                        if(document.getElementById("tags_street").value === ""){
+                        if (document.getElementById("tags_street").value === "") {
                             document.getElementById("tags_street").setCustomValidity("Vui lòng nhập tên đường!");
-                        }
-                        else{
+                        } else {
                             document.getElementById("tags_street").setCustomValidity("");
                             document.getElementById("text_edit_number_address").required = true;
-                            if(document.getElementById("text_edit_number_address").value === ""){
+                            if (document.getElementById("text_edit_number_address").value === "") {
                                 document.getElementById("text_edit_number_address").setCustomValidity("Vui lòng nhập số nhà!");
-                            }
-                            else{
+                            } else {
                                 document.getElementById("text_edit_number_address").setCustomValidity("");
                                 document.getElementById("phone").required = true;
-                                if(document.getElementById("phone").value === ""){
+                                if (document.getElementById("phone").value === "") {
                                     document.getElementById("phone").setCustomValidity("Vui lòng nhập số điện thoại!");
-                                }                                
-                                else{
+                                } else {
                                     document.getElementById("phone").setCustomValidity("");
-                                }                                
+                                }
                             }
                         }
-                    }                    
-                }                                   
+                    }
+                }
             }
         }
     }
-    function functionOninput(){
+    function functionOninput() {
         document.getElementById("firstname").setCustomValidity("");
         document.getElementById("list_city_buy").setCustomValidity("");
         document.getElementById("list_district_buy").setCustomValidity("");
@@ -68,10 +61,10 @@
         document.getElementById("tags_street").setCustomValidity("");
         document.getElementById("text_edit_number_address").setCustomValidity("");
         document.getElementById("phone").setCustomValidity("");
-    }    
+    }
 </script>
 <script>
-    $(function() {
+    $(function () {
         var availableTags = [
             "Phường 1",
             "Phường 2",
@@ -193,25 +186,25 @@
             "Xã Bình Chánh",
             "Xã Bình Hưng",
             "Xã Bình Lợi",
-            "Xã Đa Phước", 
-            "Xã Hưng Long", 
+            "Xã Đa Phước",
+            "Xã Hưng Long",
             "Xã Lê Minh Xuân",
             "Xã Phạm Văn Hai",
             "Xã Phong Phú",
             "Xã Quy Đức",
             "Xã Tân Kiên",
-            "Xã Tân Nhựt", 
+            "Xã Tân Nhựt",
             "Xã Tân Quý Tây",
             "Xã Vĩnh Lộc A",
             "Xã Vĩnh Lộc B",
             //Huyện Cần Giờ
-            "Thị Trấn Cần Thạnh", 
+            "Thị Trấn Cần Thạnh",
             "Xã Bình Khánh",
             "Xã An Thới Đông",
             "Xã Tam Thôn Hiệp",
             "Xã Thạnh An",
             "Xã Lý Nhơn",
-            "Xã Long Hoà",		
+            "Xã Long Hoà",
             //Huyện Củ Chi
             "Thị Trấn Củ Chi",
             "Xã Phú Hòa Đông",
@@ -256,13 +249,13 @@
             "Xã Hiệp Phước",
             "Xã Phước Lộc"
         ];
-        $( "#tags" ).autocomplete({
+        $("#tags").autocomplete({
             source: availableTags
         });
     });
 </script>
 <script>
-    $(function() {
+    $(function () {
         var availableTags_Street = [
             "Alexandre De Rhodes",
             "An Bình",
@@ -306,7 +299,7 @@
             "Bến Đình",
             "Bến Súc",
             "Bến Than",
-            "Bình Đông",	
+            "Bình Đông",
             "Bình Đức",
             "Bình Hưng",
             "Bình Long",
@@ -334,7 +327,7 @@
             "Bùi Thị Điệt",
             "Bùi Thị He",
             "Bùi Thị Xuân",
-            "Bùi Tư Đoàn",		
+            "Bùi Tư Đoàn",
             "Bùi Văn Ba",
             "Bùi Văn Ngữ",
             "Bùi Viện",
@@ -373,7 +366,7 @@
             "Cộng Hòa",
             "Cù Chính Lan",
             "Cư Xá Đô Thành",
-            "Cửu Long",		
+            "Cửu Long",
             "Dạ Nam",
             "Dã Tượng",
             "Dân Chủ",
@@ -1260,7 +1253,7 @@
             "Số 97",
             "Số 98",
             "Số 99",
-            "Số 100",	
+            "Số 100",
             "Số 101",
             "Số 102",
             "Số 103",
@@ -1282,21 +1275,21 @@
             "Số 119",
             "Số 120"
         ];
-        $( "#tags_street" ).autocomplete({
+        $("#tags_street").autocomplete({
             source: availableTags_Street
         });
     });
 </script>
 <script>
-    $(function() {
+    $(function () {
         var availableChungCuTags = [
             '194 Golden Building',
             'A&B Tower',
-            'Abacus Tower', 
-            'Alpha Tower', 
+            'Abacus Tower',
+            'Alpha Tower',
             'An Bình',
             'An Hạ Residence',
-            'An Hòa 1', 
+            'An Hòa 1',
             'An Hòa 2',
             'An Hòa 3',
             'An Hòa 4',
@@ -1314,8 +1307,8 @@
             'An Viên',
             'Anh Tuan Apartment',
             'Âu Cơ Tower',
-            'Avalon Saigon', 
-            'Babylon Residence', 
+            'Avalon Saigon',
+            'Babylon Residence',
             'Bắc Bình',
             'Bắc Lương Bèo',
             'Bắc Rạch Chiếc',
@@ -1327,7 +1320,7 @@
             'Belleza',
             'Ben Thanh Tower',
             'Bình Khán An Phú',
-            'Bình Khánh', 
+            'Bình Khánh',
             'Bình Minh',
             'Bình Phú 1',
             'Bình Tân',
@@ -1338,7 +1331,7 @@
             'BMC Bến Chương Dương',
             //'Bộ Công An',
             'Botanic Towers',
-            'Broadway Office Park', 
+            'Broadway Office Park',
             'Bưu Điện 270B',
             'C&T An Phúc',
             'Cảnh Viên 2',
@@ -1359,7 +1352,7 @@
             'Ji',
             'Citilight Tower',
             'City Garden',
-            'City Gate Towers', 
+            'City Gate Towers',
             'Cô Giang',
             'Công Nghệ Cao Tinh Hoa',
             'Conic Đình Khiêm',
@@ -1372,7 +1365,7 @@
             'Crescent Mall',
             'CT Plaza',
             'Cử Nhân',
-            'Cửu Long', 
+            'Cửu Long',
             'D5',
             'Da Sà',
             'Đại Thế Giới',
@@ -1391,7 +1384,7 @@
             'E-Home 2 Đông Saigon',
             'E-Home 3 Tây Saigon',
             'E-Home 4 Thủ Đức',
-            'Elys Garden', 
+            'Elys Garden',
             'Emerald Apartment',
             'Empire Tower ',
             'Era Town',
@@ -1411,7 +1404,7 @@
             'Giáng Hương',
             'Gò Sao',
             'Gold Hill',
-            'Golden Tower', 
+            'Golden Tower',
             'Green Building',
             'Green Hills',
             'Green View',
@@ -1441,13 +1434,13 @@
             'Hồng Lĩnh',
             'Hồng Tân',
             'Horizon Building',
-            'HPL', 
+            'HPL',
             'Hưng Thuận',
             'Hùng Việt',
             'Hùng Vương Plaza',
             'Impria An Phú',
             'Incomex TP.HCM',
-            'Indochina Park Tower', 
+            'Indochina Park Tower',
             'Infinity Management',
             'International Plaza',
             'Internet New City',
@@ -1489,7 +1482,7 @@
             'Lý Chiêu Hoàng',
             'Lý Thường Kiệt',
             'Maritime Bank Tower',
-            'May Apartment', 
+            'May Apartment',
             'MB Sunny Tower',
             'Melody Tower',
             'Melody Tower 2',
@@ -1527,12 +1520,12 @@
             'Noble Apartment',
             'NVN Court',
             'Opera View',
-            'Orient Apartment', 
+            'Orient Apartment',
             'Parkson CT Plaza',
             'Parkson Flemington',
             'Parkson Hùng Vương',
             'Parkson Lê Thánh Tôn',
-            'Parkson Paragon', 
+            'Parkson Paragon',
             'Pasteur Court',
             'Phạm Viết Chánh',
             'Phan Văn Trị',
@@ -1562,20 +1555,20 @@
             'Resco',
             'Resco Bến Ba Đình',
             'Resco Tô Hiến Thành',
-            'Richard Emarald', 
+            'Richard Emarald',
             'River Garden Executive Residences',
             'Riverpark Residence',
             'Riverside Garden',
             'Riverside Linh Đông',
-            'Riverside Residence', 
-            'Riverview', 
+            'Riverside Residence',
+            'Riverview',
             'Rolanno',
-            'Royal', 
-            'Royal Tower', 
+            'Royal',
+            'Royal Tower',
             'Ruby 1 - Saigon Pearl 1',
             'Ruby 2 - Saigon Pearl 1',
-            'Ruby Garden', 
-            'Sacombank', 
+            'Ruby Garden',
+            'Sacombank',
             'Saigon Airport Plaza',
             'Saigon Center',
             'Saigon ICT Tower',
@@ -1591,9 +1584,9 @@
             'Sapphire 2 - Saigon Pearl 3',
             'Satra Citiland Plaza',
             'Satra Eximland',
-            'Screc Tower', 
+            'Screc Tower',
             'SETCO Tower',
-            'Sherwood Residence', 
+            'Sherwood Residence',
             'Silver Sea Tower',
             'SK Telecom IT Center',
             'Sky Garden 1',
@@ -1603,13 +1596,13 @@
             'Somerset Chancellor',
             'Sơn Kỳ',
             'Sông Đà Riverside',
-            'Sông Đà Tower', 
+            'Sông Đà Tower',
             'Spring Court',
             'Star Hill',
             'Sư Vạn Hạnh Quận 5',
             'Sunny Villa',
             'Sunrise City',
-            'Sunset Sanato', 
+            'Sunset Sanato',
             'Sunview 1',
             'Sunview 2',
             'Sunview 3',
@@ -1619,7 +1612,7 @@
             'Tam Bình',
             'Tản Đà',
             'Tân Mỹ',
-            'Tân Phước', 
+            'Tân Phước',
             'Tân Quy',
             'Tân Sơn Nhì',
             'Tân Thạnh',
@@ -1630,7 +1623,7 @@
             'Tecco Tower',
             'Tenimex',
             'Terra Rosa',
-            'Thái An', 
+            'Thái An',
             'Thái Sơn Building',
             'Thăng Long Building',
             'Thanh Dung Tower',
@@ -1675,8 +1668,8 @@
             'Valentina Court',
             'Vạn Đô',
             'Vạn Hưng Phát',
-            'Văn Phú Victoria', 
-            'Veronica', 
+            'Văn Phú Victoria',
+            'Veronica',
             'Vietcombank - Bonday Bến Thành',
             'Vinaconex Thảo Điền',
             'Vincom Center A',
@@ -1686,88 +1679,86 @@
             'Vĩnh Tân',
             'Vĩnh Tường',
             'VNR Building',
-            'Waseco', 
+            'Waseco',
             'Waterfront Residences',
             'Windsor Plaza',
             'Wonder Town',
             'Xi Riverview Palace',
-            'Zen Plaza'		
+            'Zen Plaza'
         ];
-        $( "#text_edit_number_address_Chung_Cu" ).autocomplete({
+        $("#text_edit_number_address_Chung_Cu").autocomplete({
             source: availableChungCuTags
         });
     });
 </script>  
 <script>
-    function addOption(selectbox,text,value ){
+    function addOption(selectbox, text, value) {
         var optn = document.createElement("OPTION");
         optn.text = text;
         optn.value = value;
         selectbox.options.add(optn);
     }
-
-    function removeAllOptions(selectbox){
+    function removeAllOptions(selectbox) {
         var i;
-        for(i=selectbox.options.length-1;i>=0;i--){
+        for (i = selectbox.options.length - 1; i >= 0; i--) {
             selectbox.remove(i);
         }
     }
-
-    function city_selected(typeofcity, typeoflist){				
+    function city_selected(typeofcity, typeoflist) {
         var list_city = document.getElementById(typeofcity);
-        var list_district = document.getElementById(typeoflist);												
-        removeAllOptions(list_district);						
-        if(list_city.value === "0"){
-            addOption(list_district, "Chọn quận huyện","Chưa chọn quận/huyện");
+        var list_district = document.getElementById(typeoflist);
+        removeAllOptions(list_district);
+        if (list_city.value === "0") {
+            addOption(list_district, "Chọn quận huyện", "Chưa chọn quận/huyện");
         }
         //TP Ha Noi
-        else if(list_city.value === "Hà Nội"){
-            addOption(list_district,"Chọn quận huyện","Chưa chọn quận/huyện");
-            addOption(list_district,"Quận Ba Đình", "Quận Ba Đình");
-            addOption(list_district,"Quận Hoàn Kiếm", "Quận Hoàn Kiếm");
-            addOption(list_district,"Quận Hai Bà Trưng", "Quận Hai Bà Trưng");
-            addOption(list_district,"Quận Đống Đa", "Quận Đống Đa");
-            addOption(list_district,"Quận Tây Hồ", "Quận Tây Hồ");
-            addOption(list_district,"Quận Cầu Giấy", "Quận Cầu Giấy");
-            addOption(list_district,"Quận Thanh Xuân", "Quận Thanh Xuân");
-            addOption(list_district,"Quận Hoàng Mai", "Quận Hoàng Mai");
-            addOption(list_district,"Quận Long Biên", "Quận Long Biên");
-            addOption(list_district,"Huyện Từ Liêm", "Huyện Từ Liêm");
-            addOption(list_district,"Huyện Thanh Trì", "Huyện Thanh Trì");
-            addOption(list_district,"Huyện Gia Lâm", "Huyện Gia Lâm");
-            addOption(list_district,"Huyện Đông Anh", "Huyện Đông Anh");
-            addOption(list_district,"Huyện Sóc Sơn", "Huyện Sóc Sơn");
-            addOption(list_district,"Quận Hà Đông", "Quận Hà Đông");
-            addOption(list_district,"Thị xã Sơn Tây", "Thị xã Sơn Tây");
-            addOption(list_district,"Huyện Ba Vì", "Huyện Ba Vì");
-            addOption(list_district,"Huyện Phúc Thọ", "Huyện Phúc Thọ");
-            addOption(list_district,"Huyện Thạch Thất", "Huyện Thạch Thất");
-            addOption(list_district,"Huyện Quốc Oai", "Huyện Quốc Oai");
-            addOption(list_district,"Huyện Chương Mỹ", "Huyện Chương Mỹ");
-            addOption(list_district,"Huyện Đan Phượng", "Huyện Đan Phượng");
-            addOption(list_district,"Huyện Hoài Đức", "Huyện Hoài Đức");
-            addOption(list_district,"Huyện Thanh Oai", "Huyện Thanh Oai");
-            addOption(list_district,"Huyện Mỹ Đức", "Huyện Mỹ Đức");
-            addOption(list_district,"Huyện Ứng Hoà", "Huyện Ứng Hoà");
-            addOption(list_district,"Huyện Thường Tín", "Huyện Thường Tín");
-            addOption(list_district,"Huyện Phú Xuyên", "Huyện Phú Xuyên");
-            addOption(list_district,"Huyện Mê Linh","Huyện Mê Linh");
+        else if (list_city.value === "Hà Nội") {
+            addOption(list_district, "Chọn quận huyện", "Chưa chọn quận/huyện");
+            addOption(list_district, "Quận Ba Đình", "Quận Ba Đình");
+            addOption(list_district, "Quận Hoàn Kiếm", "Quận Hoàn Kiếm");
+            addOption(list_district, "Quận Hai Bà Trưng", "Quận Hai Bà Trưng");
+            addOption(list_district, "Quận Đống Đa", "Quận Đống Đa");
+            addOption(list_district, "Quận Tây Hồ", "Quận Tây Hồ");
+            addOption(list_district, "Quận Cầu Giấy", "Quận Cầu Giấy");
+            addOption(list_district, "Quận Thanh Xuân", "Quận Thanh Xuân");
+            addOption(list_district, "Quận Hoàng Mai", "Quận Hoàng Mai");
+            addOption(list_district, "Quận Long Biên", "Quận Long Biên");
+            addOption(list_district, "Huyện Từ Liêm", "Huyện Từ Liêm");
+            addOption(list_district, "Huyện Thanh Trì", "Huyện Thanh Trì");
+            addOption(list_district, "Huyện Gia Lâm", "Huyện Gia Lâm");
+            addOption(list_district, "Huyện Đông Anh", "Huyện Đông Anh");
+            addOption(list_district, "Huyện Sóc Sơn", "Huyện Sóc Sơn");
+            addOption(list_district, "Quận Hà Đông", "Quận Hà Đông");
+            addOption(list_district, "Thị xã Sơn Tây", "Thị xã Sơn Tây");
+            addOption(list_district, "Huyện Ba Vì", "Huyện Ba Vì");
+            addOption(list_district, "Huyện Phúc Thọ", "Huyện Phúc Thọ");
+            addOption(list_district, "Huyện Thạch Thất", "Huyện Thạch Thất");
+            addOption(list_district, "Huyện Quốc Oai", "Huyện Quốc Oai");
+            addOption(list_district, "Huyện Chương Mỹ", "Huyện Chương Mỹ");
+            addOption(list_district, "Huyện Đan Phượng", "Huyện Đan Phượng");
+            addOption(list_district, "Huyện Hoài Đức", "Huyện Hoài Đức");
+            addOption(list_district, "Huyện Thanh Oai", "Huyện Thanh Oai");
+            addOption(list_district, "Huyện Mỹ Đức", "Huyện Mỹ Đức");
+            addOption(list_district, "Huyện Ứng Hoà", "Huyện Ứng Hoà");
+            addOption(list_district, "Huyện Thường Tín", "Huyện Thường Tín");
+            addOption(list_district, "Huyện Phú Xuyên", "Huyện Phú Xuyên");
+            addOption(list_district, "Huyện Mê Linh", "Huyện Mê Linh");
         }
         //TP HCM
-        else if(list_city.value === "Hồ Chí Minh"){			
-            addOption(list_district, "Chọn quận huyện","Chưa chọn quận/huyện");			
-            addOption(list_district, "Quận 1" ,"Quận 1");
-            addOption(list_district, "Quận 2" ,"Quận 2");
-            addOption(list_district, "Quận 3" ,"Quận 3");
-            addOption(list_district, "Quận 4" ,"Quận 4");
-            addOption(list_district, "Quận 5" ,"Quận 5");
-            addOption(list_district, "Quận 6" ,"Quận 6");
-            addOption(list_district, "Quận 7" ,"Quận 7");
-            addOption(list_district, "Quận 8" ,"Quận 8");
-            addOption(list_district, "Quận 9" ,"Quận 9");
-            addOption(list_district, "Quận 10","Quận 10");
-            addOption(list_district, "Quận 11","Quận 11");
-            addOption(list_district, "Quận 12","Quận 12");
+        else if (list_city.value === "Hồ Chí Minh") {
+            addOption(list_district, "Chọn quận huyện", "Chưa chọn quận/huyện");
+            addOption(list_district, "Quận 1", "Quận 1");
+            addOption(list_district, "Quận 2", "Quận 2");
+            addOption(list_district, "Quận 3", "Quận 3");
+            addOption(list_district, "Quận 4", "Quận 4");
+            addOption(list_district, "Quận 5", "Quận 5");
+            addOption(list_district, "Quận 6", "Quận 6");
+            addOption(list_district, "Quận 7", "Quận 7");
+            addOption(list_district, "Quận 8", "Quận 8");
+            addOption(list_district, "Quận 9", "Quận 9");
+            addOption(list_district, "Quận 10", "Quận 10");
+            addOption(list_district, "Quận 11", "Quận 11");
+            addOption(list_district, "Quận 12", "Quận 12");
             addOption(list_district, "Quận Thủ Đức", "Quận Thủ Đức");
             addOption(list_district, "Quận Gò Vấp", "Quận Gò Vấp");
             addOption(list_district, "Quận Bình Thạnh", "Quận Bình Thạnh");
@@ -1779,1446 +1770,1372 @@
             addOption(list_district, "Huyện Hóc Môn", "Huyện Hóc Môn");
             addOption(list_district, "Huyện Bình Chánh", "Huyện Bình Chánh");
             addOption(list_district, "Huyện Nhà Bè", "Huyện Nhà Bè");
-            addOption(list_district, "Huyện Cần Giờ", "Huyện Cần Giờ");			
+            addOption(list_district, "Huyện Cần Giờ", "Huyện Cần Giờ");
         }
         //Tinh Ha Giang
-        else if(list_city.value === "Tỉnh Hà Giang"){
-            addOption(list_district, "Chọn quận huyện","Chưa chọn quận/huyện");
-            addOption(list_district, "TP. Hà Giang","TP. Hà Giang");
-            addOption(list_district, "Huyện Đồng Văn","Huyện Đồng Văn");
-            addOption(list_district, "Huyện Mèo Vạc","Huyện Mèo Vạc");
-            addOption(list_district, "Huyện Yên Minh","Huyện Yên Minh");
-            addOption(list_district, "Huyện Quản Bạ","Huyện Quản Bạ");
-            addOption(list_district, "Huyện Vị Xuyên","Huyện Vị Xuyên");
-            addOption(list_district, "Huyện Bắc Mê","Huyện Bắc Mê");
-            addOption(list_district, "Huyện Hoàng Su Phì","Huyện Hoàng Su Phì");
-            addOption(list_district, "Huyện Xín Mần","Huyện Xín Mần");
-            addOption(list_district, "Huyện Bắc Quang","Huyện Bắc Quang");
-            addOption(list_district, "Huyện Quang Bình","Huyện Quang Bình");
+        else if (list_city.value === "Tỉnh Hà Giang") {
+            addOption(list_district, "Chọn quận huyện", "Chưa chọn quận/huyện");
+            addOption(list_district, "TP. Hà Giang", "TP. Hà Giang");
+            addOption(list_district, "Huyện Đồng Văn", "Huyện Đồng Văn");
+            addOption(list_district, "Huyện Mèo Vạc", "Huyện Mèo Vạc");
+            addOption(list_district, "Huyện Yên Minh", "Huyện Yên Minh");
+            addOption(list_district, "Huyện Quản Bạ", "Huyện Quản Bạ");
+            addOption(list_district, "Huyện Vị Xuyên", "Huyện Vị Xuyên");
+            addOption(list_district, "Huyện Bắc Mê", "Huyện Bắc Mê");
+            addOption(list_district, "Huyện Hoàng Su Phì", "Huyện Hoàng Su Phì");
+            addOption(list_district, "Huyện Xín Mần", "Huyện Xín Mần");
+            addOption(list_district, "Huyện Bắc Quang", "Huyện Bắc Quang");
+            addOption(list_district, "Huyện Quang Bình", "Huyện Quang Bình");
         }
         //Tinh Cao Bang
-        else if(list_city.value === "Tỉnh Cao Bằng"){
-            addOption(list_district, "Chọn quận huyện","Chưa chọn quận/huyện");
-            addOption(list_district, "Thị xã Cao Bằng","Thị xã Cao Bằng");
-            addOption(list_district, "Huyện Bảo Lạc","Huyện Bảo Lạc");
-            addOption(list_district, "Huyện Thông Nông","Huyện Thông Nông");
-            addOption(list_district, "Huyện Hà Quảng","Huyện Hà Quảng");
-            addOption(list_district, "Huyện Trà Lĩnh","Huyện Trà Lĩnh");
-            addOption(list_district, "Huyện Trùng Khánh","Huyện Trùng Khánh");
-            addOption(list_district, "Huyện Nguyên Bình","Huyện Nguyên Bình");
-            addOption(list_district, "Huyện Hoà An","Huyện Hoà An");
-            addOption(list_district, "Huyện Quảng Uyên","Huyện Quảng Uyên");	
-            addOption(list_district, "Huyện Thạch An","Huyện Thạch An");   
-            addOption(list_district, "Huyện Hạ Lang","Huyện Hạ Lang");
-            addOption(list_district, "Huyện Bảo Lâm","Huyện Bảo Lâm");
-            addOption(list_district, "Huyện Phục Hoà","Huyện Phục Hoà");	
+        else if (list_city.value === "Tỉnh Cao Bằng") {
+            addOption(list_district, "Chọn quận huyện", "Chưa chọn quận/huyện");
+            addOption(list_district, "Thị xã Cao Bằng", "Thị xã Cao Bằng");
+            addOption(list_district, "Huyện Bảo Lạc", "Huyện Bảo Lạc");
+            addOption(list_district, "Huyện Thông Nông", "Huyện Thông Nông");
+            addOption(list_district, "Huyện Hà Quảng", "Huyện Hà Quảng");
+            addOption(list_district, "Huyện Trà Lĩnh", "Huyện Trà Lĩnh");
+            addOption(list_district, "Huyện Trùng Khánh", "Huyện Trùng Khánh");
+            addOption(list_district, "Huyện Nguyên Bình", "Huyện Nguyên Bình");
+            addOption(list_district, "Huyện Hoà An", "Huyện Hoà An");
+            addOption(list_district, "Huyện Quảng Uyên", "Huyện Quảng Uyên");
+            addOption(list_district, "Huyện Thạch An", "Huyện Thạch An");
+            addOption(list_district, "Huyện Hạ Lang", "Huyện Hạ Lang");
+            addOption(list_district, "Huyện Bảo Lâm", "Huyện Bảo Lâm");
+            addOption(list_district, "Huyện Phục Hoà", "Huyện Phục Hoà");
         }
         //Tinh Bac Kan
-        else if(list_city.value === "Tỉnh Bắc Kạn"){
-            addOption(list_district, "Chọn quận huyện","Chưa chọn quận/huyện");
-            addOption(list_district, "Thị xã Bắc Kạn","Thị xã Bắc Kạn");
-            addOption(list_district, "Huyện Chợ Đồn","Huyện Chợ Đồn");
-            addOption(list_district, "Huyện Bạch Thông","Huyện Bạch Thông");
-            addOption(list_district, "Huyện Na Rì","Huyện Na Rì");
-            addOption(list_district, "Huyện Ngân Sơn","Huyện Ngân Sơn");
-            addOption(list_district, "Huyện Ba Bể","Huyện Ba Bể");
-            addOption(list_district, "Huyện Chợ Mới","Huyện Chợ Mới");
-            addOption(list_district, "Huyện Pác Nặm","Huyện Pác Nặm");		
+        else if (list_city.value === "Tỉnh Bắc Kạn") {
+            addOption(list_district, "Chọn quận huyện", "Chưa chọn quận/huyện");
+            addOption(list_district, "Thị xã Bắc Kạn", "Thị xã Bắc Kạn");
+            addOption(list_district, "Huyện Chợ Đồn", "Huyện Chợ Đồn");
+            addOption(list_district, "Huyện Bạch Thông", "Huyện Bạch Thông");
+            addOption(list_district, "Huyện Na Rì", "Huyện Na Rì");
+            addOption(list_district, "Huyện Ngân Sơn", "Huyện Ngân Sơn");
+            addOption(list_district, "Huyện Ba Bể", "Huyện Ba Bể");
+            addOption(list_district, "Huyện Chợ Mới", "Huyện Chợ Mới");
+            addOption(list_district, "Huyện Pác Nặm", "Huyện Pác Nặm");
         }
         //Tinh Tuyen Quang
-        else if(list_city.value === "Tỉnh Tuyên Quang"){
-            addOption(list_district, "Chọn quận huyện","Chưa chọn quận/huyện");
-            addOption(list_district, "TP. Tuyên Quang","TP. Tuyên Quang");
-            addOption(list_district, "Huyện Lâm Bình","Huyện Lâm Bình");	
-            addOption(list_district, "Huyện Na Hang","Huyện Na Hang");
-            addOption(list_district, "Huyện Chiêm Hoá","Huyện Chiêm Hoá");
-            addOption(list_district, "Huyện Hàm Yên","Huyện Hàm Yên");
-            addOption(list_district, "Huyện Yên Sơn","Huyện Yên Sơn");
-            addOption(list_district, "Huyện Sơn Dương","Huyện Sơn Dương");
+        else if (list_city.value === "Tỉnh Tuyên Quang") {
+            addOption(list_district, "Chọn quận huyện", "Chưa chọn quận/huyện");
+            addOption(list_district, "TP. Tuyên Quang", "TP. Tuyên Quang");
+            addOption(list_district, "Huyện Lâm Bình", "Huyện Lâm Bình");
+            addOption(list_district, "Huyện Na Hang", "Huyện Na Hang");
+            addOption(list_district, "Huyện Chiêm Hoá", "Huyện Chiêm Hoá");
+            addOption(list_district, "Huyện Hàm Yên", "Huyện Hàm Yên");
+            addOption(list_district, "Huyện Yên Sơn", "Huyện Yên Sơn");
+            addOption(list_district, "Huyện Sơn Dương", "Huyện Sơn Dương");
         }
         //Tinh LaoCai
-        else if(list_city.value === "Tỉnh Lào Cai"){
-            addOption(list_district, "Chọn quận huyện","Chưa chọn quận/huyện");
-            addOption(list_district, "TP. Lào Cai","TP. Lào Cai");
-            addOption(list_district, "Huyện Xi Ma Cai","Huyện Xi Ma Cai");
-            addOption(list_district, "Huyện Bát Xát","Huyện Bát Xát");	
-            addOption(list_district, "Huyện Bảo Thắng","Huyện Bảo Thắng");
-            addOption(list_district, "Huyện Sa Pa","Huyện Sa Pa");
-            addOption(list_district, "Huyện Văn Bàn","Huyện Văn Bàn");
-            addOption(list_district, "Huyện Bảo Yên","Huyện Bảo Yên");	
-            addOption(list_district, "Huyện Bắc Hà","Huyện Bắc Hà");
-            addOption(list_district, "Huyện Mường Khương","Huyện Mường Khương");		
+        else if (list_city.value === "Tỉnh Lào Cai") {
+            addOption(list_district, "Chọn quận huyện", "Chưa chọn quận/huyện");
+            addOption(list_district, "TP. Lào Cai", "TP. Lào Cai");
+            addOption(list_district, "Huyện Xi Ma Cai", "Huyện Xi Ma Cai");
+            addOption(list_district, "Huyện Bát Xát", "Huyện Bát Xát");
+            addOption(list_district, "Huyện Bảo Thắng", "Huyện Bảo Thắng");
+            addOption(list_district, "Huyện Sa Pa", "Huyện Sa Pa");
+            addOption(list_district, "Huyện Văn Bàn", "Huyện Văn Bàn");
+            addOption(list_district, "Huyện Bảo Yên", "Huyện Bảo Yên");
+            addOption(list_district, "Huyện Bắc Hà", "Huyện Bắc Hà");
+            addOption(list_district, "Huyện Mường Khương", "Huyện Mường Khương");
         }
         //Tinh Dien Bien
-        else if(list_city.value === "Tỉnh Điện Biên"){
-            addOption(list_district, "Chọn quận huyện","Chưa chọn quận/huyện");
-            addOption(list_district, "TP. Điện Biên Phủ","TP. Điện Biên Phủ");
-            addOption(list_district, "Thị xã Mường Lay","Thị xã Mường Lay");	
-            addOption(list_district, "Huyện Điện Biên","Huyện Điện Biên");
-            addOption(list_district, "Huyện Tuần Giáo","Huyện Tuần Giáo");
-            addOption(list_district, "Huyện Mường Chà","Huyện Mường Chà");	
-            addOption(list_district, "Huyện Tủa Chùa","Huyện Tủa Chùa");
-            addOption(list_district, "Huyện Điện Biên Đông","Huyện Điện Biên Đông");
-            addOption(list_district, "Huyện Mường Nhé","Huyện Mường Nhé");
-            addOption(list_district, "Huyện Mường Ảng","Huyện Mường Ảng");		
+        else if (list_city.value === "Tỉnh Điện Biên") {
+            addOption(list_district, "Chọn quận huyện", "Chưa chọn quận/huyện");
+            addOption(list_district, "TP. Điện Biên Phủ", "TP. Điện Biên Phủ");
+            addOption(list_district, "Thị xã Mường Lay", "Thị xã Mường Lay");
+            addOption(list_district, "Huyện Điện Biên", "Huyện Điện Biên");
+            addOption(list_district, "Huyện Tuần Giáo", "Huyện Tuần Giáo");
+            addOption(list_district, "Huyện Mường Chà", "Huyện Mường Chà");
+            addOption(list_district, "Huyện Tủa Chùa", "Huyện Tủa Chùa");
+            addOption(list_district, "Huyện Điện Biên Đông", "Huyện Điện Biên Đông");
+            addOption(list_district, "Huyện Mường Nhé", "Huyện Mường Nhé");
+            addOption(list_district, "Huyện Mường Ảng", "Huyện Mường Ảng");
         }
         //Tinh LaiChau
-        else if(list_city.value === "Tỉnh Lai Châu"){
-            addOption(list_district, "Chọn quận huyện","Chưa chọn quận/huyện");
-            addOption(list_district, "Thị xã Lai Châu","Thị xã Lai Châu");
-            addOption(list_district, "Huyện Tam Đường","Huyện Tam Đường");	
-            addOption(list_district, "Huyện Phong Thổ","Huyện Phong Thổ");
-            addOption(list_district, "Huyện Sìn Hồ","Huyện Sìn Hồ");
-            addOption(list_district, "Huyện Mường Tè","Huyện Mường Tè");	
-            addOption(list_district, "Huyện Than Uyên","Huyện Than Uyên");
-            addOption(list_district, "Huyện Tân Uyên","Huyện Tân Uyên");
-            addOption(list_district, "Huyện Nậm Nhùn","Huyện Nậm Nhùn");
+        else if (list_city.value === "Tỉnh Lai Châu") {
+            addOption(list_district, "Chọn quận huyện", "Chưa chọn quận/huyện");
+            addOption(list_district, "Thị xã Lai Châu", "Thị xã Lai Châu");
+            addOption(list_district, "Huyện Tam Đường", "Huyện Tam Đường");
+            addOption(list_district, "Huyện Phong Thổ", "Huyện Phong Thổ");
+            addOption(list_district, "Huyện Sìn Hồ", "Huyện Sìn Hồ");
+            addOption(list_district, "Huyện Mường Tè", "Huyện Mường Tè");
+            addOption(list_district, "Huyện Than Uyên", "Huyện Than Uyên");
+            addOption(list_district, "Huyện Tân Uyên", "Huyện Tân Uyên");
+            addOption(list_district, "Huyện Nậm Nhùn", "Huyện Nậm Nhùn");
         }
         //Tinh Son La
-        else if(list_city.value === "Tỉnh Sơn La"){
-            addOption(list_district, "Chọn quận huyện","Chưa chọn quận/huyện");			
-            addOption(list_district, "TP. Sơn La","TP. Sơn La");
-            addOption(list_district, "Huyện Quỳnh Nhai","Huyện Quỳnh Nhai");
-            addOption(list_district, "Huyện Mường La","Huyện Mường La");	
-            addOption(list_district, "Huyện Thuận Châu","Huyện Thuận Châu");
-            addOption(list_district, "Huyện Bắc Yên","Huyện Bắc Yên");
-            addOption(list_district, "Huyện Phù Yên","Huyện Phù Yên");
-            addOption(list_district, "Huyện Mai Sơn","Huyện Mai Sơn");
-            addOption(list_district, "Huyện Yên Châu","Huyện Yên Châu");
-            addOption(list_district, "Huyện Sông Mã","Huyện Sông Mã");
-            addOption(list_district, "Huyện Mộc Châu","Huyện Mộc Châu");
-            addOption(list_district, "Huyện Sốp Cộp","Huyện Sốp Cộp");
+        else if (list_city.value === "Tỉnh Sơn La") {
+            addOption(list_district, "Chọn quận huyện", "Chưa chọn quận/huyện");
+            addOption(list_district, "TP. Sơn La", "TP. Sơn La");
+            addOption(list_district, "Huyện Quỳnh Nhai", "Huyện Quỳnh Nhai");
+            addOption(list_district, "Huyện Mường La", "Huyện Mường La");
+            addOption(list_district, "Huyện Thuận Châu", "Huyện Thuận Châu");
+            addOption(list_district, "Huyện Bắc Yên", "Huyện Bắc Yên");
+            addOption(list_district, "Huyện Phù Yên", "Huyện Phù Yên");
+            addOption(list_district, "Huyện Mai Sơn", "Huyện Mai Sơn");
+            addOption(list_district, "Huyện Yên Châu", "Huyện Yên Châu");
+            addOption(list_district, "Huyện Sông Mã", "Huyện Sông Mã");
+            addOption(list_district, "Huyện Mộc Châu", "Huyện Mộc Châu");
+            addOption(list_district, "Huyện Sốp Cộp", "Huyện Sốp Cộp");
         }
         //Tinh Yen Bai
-        else if(list_city.value === "Tỉnh Yên Bái"){		
-            addOption(list_district, "Chọn quận huyện","Chưa chọn quận/huyện");
-            addOption(list_district, "TP. Yên Bái","TP. Yên Bái");
-            addOption(list_district, "Thị xã Nghĩa Lộ","Thị xã Nghĩa Lộ");
-            addOption(list_district, "Huyện Văn Yên","Huyện Văn Yên");
-            addOption(list_district, "Huyện Yên Bình","Huyện Yên Bình");
-            addOption(list_district, "Huyện Mù Cang Chải","Huyện Mù Cang Chải");
-            addOption(list_district, "Huyện Văn Chấn","Huyện Văn Chấn");
-            addOption(list_district, "Huyện Trấn Yên","Huyện Trấn Yên");
-            addOption(list_district, "Huyện Trạm Tấu","Huyện Trạm Tấu");
-            addOption(list_district, "Huyện Lục Yên","Huyện Lục Yên");
+        else if (list_city.value === "Tỉnh Yên Bái") {
+            addOption(list_district, "Chọn quận huyện", "Chưa chọn quận/huyện");
+            addOption(list_district, "TP. Yên Bái", "TP. Yên Bái");
+            addOption(list_district, "Thị xã Nghĩa Lộ", "Thị xã Nghĩa Lộ");
+            addOption(list_district, "Huyện Văn Yên", "Huyện Văn Yên");
+            addOption(list_district, "Huyện Yên Bình", "Huyện Yên Bình");
+            addOption(list_district, "Huyện Mù Cang Chải", "Huyện Mù Cang Chải");
+            addOption(list_district, "Huyện Văn Chấn", "Huyện Văn Chấn");
+            addOption(list_district, "Huyện Trấn Yên", "Huyện Trấn Yên");
+            addOption(list_district, "Huyện Trạm Tấu", "Huyện Trạm Tấu");
+            addOption(list_district, "Huyện Lục Yên", "Huyện Lục Yên");
         }
         //Tinh Hoa Binh
-        else if(list_city.value === "Tỉnh Hoà Bình"){
-            addOption(list_district, "Chọn quận huyện","Chưa chọn quận/huyện");
-            addOption(list_district, "TP. Hoà Bình","TP. Hoà Bình");
-            addOption(list_district, "Huyện Đà Bắc","Huyện Đà Bắc");
-            addOption(list_district, "Huyện Mai Châu","Huyện Mai Châu");
-            addOption(list_district, "Huyện Tân Lạc","Huyện Tân Lạc");
-            addOption(list_district, "Huyện Lạc Sơn","Huyện Lạc Sơn");
-            addOption(list_district, "Huyện Kỳ Sơn","Huyện Kỳ Sơn");
-            addOption(list_district, "Huyện Lương Sơn","Huyện Lương Sơn");	
-            addOption(list_district, "Huyện Kim Bôi","Huyện Kim Bôi");
-            addOption(list_district, "Huyện Lạc Thuỷ","Huyện Lạc Thuỷ");
-            addOption(list_district, "Huyện Yên Thuỷ","Huyện Yên Thuỷ");
-            addOption(list_district, "Huyện Cao Phong","Huyện Cao Phong");
+        else if (list_city.value === "Tỉnh Hoà Bình") {
+            addOption(list_district, "Chọn quận huyện", "Chưa chọn quận/huyện");
+            addOption(list_district, "TP. Hoà Bình", "TP. Hoà Bình");
+            addOption(list_district, "Huyện Đà Bắc", "Huyện Đà Bắc");
+            addOption(list_district, "Huyện Mai Châu", "Huyện Mai Châu");
+            addOption(list_district, "Huyện Tân Lạc", "Huyện Tân Lạc");
+            addOption(list_district, "Huyện Lạc Sơn", "Huyện Lạc Sơn");
+            addOption(list_district, "Huyện Kỳ Sơn", "Huyện Kỳ Sơn");
+            addOption(list_district, "Huyện Lương Sơn", "Huyện Lương Sơn");
+            addOption(list_district, "Huyện Kim Bôi", "Huyện Kim Bôi");
+            addOption(list_district, "Huyện Lạc Thuỷ", "Huyện Lạc Thuỷ");
+            addOption(list_district, "Huyện Yên Thuỷ", "Huyện Yên Thuỷ");
+            addOption(list_district, "Huyện Cao Phong", "Huyện Cao Phong");
         }
         //Tinh Thai Nguyen
-        else if(list_city.value === "Tỉnh Thái Nguyên"){
-            addOption(list_district, "Chọn quận huyện","Chưa chọn quận/huyện");
-            addOption(list_district, "TP. Thái Nguyên","TP. Thái Nguyên");
-            addOption(list_district, "Thị xã Sông Công","Thị xã Sông Công");
-            addOption(list_district, "Huyện Định Hoá","Huyện Định Hoá");
-            addOption(list_district, "Huyện Phú Lương","Huyện Phú Lương");
-            addOption(list_district, "Huyện Võ Nhai","Huyện Võ Nhai");
-            addOption(list_district, "Huyện Đại Từ","Huyện Đại Từ");
-            addOption(list_district, "Huyện Đồng Hỷ","Huyện Đồng Hỷ");
-            addOption(list_district, "Huyện Phú Bình","Huyện Phú Bình");
-            addOption(list_district, "Huyện Phổ Yên","Huyện Phổ Yên");
+        else if (list_city.value === "Tỉnh Thái Nguyên") {
+            addOption(list_district, "Chọn quận huyện", "Chưa chọn quận/huyện");
+            addOption(list_district, "TP. Thái Nguyên", "TP. Thái Nguyên");
+            addOption(list_district, "Thị xã Sông Công", "Thị xã Sông Công");
+            addOption(list_district, "Huyện Định Hoá", "Huyện Định Hoá");
+            addOption(list_district, "Huyện Phú Lương", "Huyện Phú Lương");
+            addOption(list_district, "Huyện Võ Nhai", "Huyện Võ Nhai");
+            addOption(list_district, "Huyện Đại Từ", "Huyện Đại Từ");
+            addOption(list_district, "Huyện Đồng Hỷ", "Huyện Đồng Hỷ");
+            addOption(list_district, "Huyện Phú Bình", "Huyện Phú Bình");
+            addOption(list_district, "Huyện Phổ Yên", "Huyện Phổ Yên");
         }
         //Tinh Lang Son
-        else if(list_city.value === "Tỉnh Lạng Sơn"){
-            addOption(list_district, "Chọn quận huyện","Chưa chọn quận/huyện");
-            addOption(list_district, "TP. Lạng Sơn","TP. Lạng Sơn");
-            addOption(list_district, "Huyện Tràng Định","Huyện Tràng Định");
-            addOption(list_district, "Huyện Bình Gia","Huyện Bình Gia");
-            addOption(list_district, "Huyện Văn Lãng","Huyện Văn Lãng");
-            addOption(list_district, "Huyện Bắc Sơn","Huyện Bắc Sơn");
-            addOption(list_district, "Huyện Văn Quan","Huyện Văn Quan");
-            addOption(list_district, "Huyện Cao Lộc","Huyện Cao Lộc");
-            addOption(list_district, "Huyện Lộc Bình","Huyện Lộc Bình");
-            addOption(list_district, "Huyện Chi Lăng","Huyện Chi Lăng");
-            addOption(list_district, "Huyện Đình Lập","Huyện Đình Lập");
-            addOption(list_district, "Huyện Hữu Lũng","Huyện Hữu Lũng");
+        else if (list_city.value === "Tỉnh Lạng Sơn") {
+            addOption(list_district, "Chọn quận huyện", "Chưa chọn quận/huyện");
+            addOption(list_district, "TP. Lạng Sơn", "TP. Lạng Sơn");
+            addOption(list_district, "Huyện Tràng Định", "Huyện Tràng Định");
+            addOption(list_district, "Huyện Bình Gia", "Huyện Bình Gia");
+            addOption(list_district, "Huyện Văn Lãng", "Huyện Văn Lãng");
+            addOption(list_district, "Huyện Bắc Sơn", "Huyện Bắc Sơn");
+            addOption(list_district, "Huyện Văn Quan", "Huyện Văn Quan");
+            addOption(list_district, "Huyện Cao Lộc", "Huyện Cao Lộc");
+            addOption(list_district, "Huyện Lộc Bình", "Huyện Lộc Bình");
+            addOption(list_district, "Huyện Chi Lăng", "Huyện Chi Lăng");
+            addOption(list_district, "Huyện Đình Lập", "Huyện Đình Lập");
+            addOption(list_district, "Huyện Hữu Lũng", "Huyện Hữu Lũng");
         }
         //Tinh Quang Ninh
-        else if(list_city.value === "Tỉnh Quảng Ninh"){
-            addOption(list_district, "Chọn quận huyện","Chưa chọn quận/huyện");
-            addOption(list_district, "TP. Hạ Long","TP. Hạ Long");
-            addOption(list_district, "TP. Cẩm Phả","TP. Cẩm Phả");
-            addOption(list_district, "TP. Uông Bí","TP. Uông Bí");
-            addOption(list_district, "TP. Móng Cái","TP. Móng Cái");
-            addOption(list_district, "Huyện Bình Liêu","Huyện Bình Liêu");
-            addOption(list_district, "Huyện Đầm Hà","Huyện Đầm Hà");
-            addOption(list_district, "Huyện Hải Hà","Huyện Hải Hà");
-            addOption(list_district, "Huyện Tiên Yên","Huyện Tiên Yên");
-            addOption(list_district, "Huyện Ba Chẽ","Huyện Ba Chẽ");
-            addOption(list_district, "Huyện Đông Triều","Huyện Đông Triều");
-            addOption(list_district, "Huyện Yên Hưng","Huyện Yên Hưng");
-            addOption(list_district, "Huyện Hoành Bồ","Huyện Hoành Bồ");
-            addOption(list_district, "Huyện Vân Đồn","Huyện Vân Đồn");
-            addOption(list_district, "Huyện Cô Tô","Huyện Cô Tô");
+        else if (list_city.value === "Tỉnh Quảng Ninh") {
+            addOption(list_district, "Chọn quận huyện", "Chưa chọn quận/huyện");
+            addOption(list_district, "TP. Hạ Long", "TP. Hạ Long");
+            addOption(list_district, "TP. Cẩm Phả", "TP. Cẩm Phả");
+            addOption(list_district, "TP. Uông Bí", "TP. Uông Bí");
+            addOption(list_district, "TP. Móng Cái", "TP. Móng Cái");
+            addOption(list_district, "Huyện Bình Liêu", "Huyện Bình Liêu");
+            addOption(list_district, "Huyện Đầm Hà", "Huyện Đầm Hà");
+            addOption(list_district, "Huyện Hải Hà", "Huyện Hải Hà");
+            addOption(list_district, "Huyện Tiên Yên", "Huyện Tiên Yên");
+            addOption(list_district, "Huyện Ba Chẽ", "Huyện Ba Chẽ");
+            addOption(list_district, "Huyện Đông Triều", "Huyện Đông Triều");
+            addOption(list_district, "Huyện Yên Hưng", "Huyện Yên Hưng");
+            addOption(list_district, "Huyện Hoành Bồ", "Huyện Hoành Bồ");
+            addOption(list_district, "Huyện Vân Đồn", "Huyện Vân Đồn");
+            addOption(list_district, "Huyện Cô Tô", "Huyện Cô Tô");
         }
         //Tinh Bac Giang
-        else if(list_city.value === "Tỉnh Bắc Giang"){		
-            addOption(list_district, "Chọn quận huyện","Chưa chọn quận/huyện");
-            addOption(list_district, "TP. Bắc Giang","TP. Bắc Giang");
-            addOption(list_district, "Huyện Yên Thế","Huyện Yên Thế");
-            addOption(list_district, "Huyện Lục Ngạn","Huyện Lục Ngạn");
-            addOption(list_district, "Huyện Sơn Động","Huyện Sơn Động");
-            addOption(list_district, "Huyện Lục Nam","Huyện Lục Nam");
-            addOption(list_district, "Huyện Tân Yên","Huyện Tân Yên");
-            addOption(list_district, "Huyện Hiệp Hoà","Huyện Hiệp Hoà");
-            addOption(list_district, "Huyện Lạng Giang","Huyện Lạng Giang");
-            addOption(list_district, "Huyện Việt Yên","Huyện Việt Yên");
-            addOption(list_district, "Huyện Yên Dũng","Huyện Yên Dũng");
+        else if (list_city.value === "Tỉnh Bắc Giang") {
+            addOption(list_district, "Chọn quận huyện", "Chưa chọn quận/huyện");
+            addOption(list_district, "TP. Bắc Giang", "TP. Bắc Giang");
+            addOption(list_district, "Huyện Yên Thế", "Huyện Yên Thế");
+            addOption(list_district, "Huyện Lục Ngạn", "Huyện Lục Ngạn");
+            addOption(list_district, "Huyện Sơn Động", "Huyện Sơn Động");
+            addOption(list_district, "Huyện Lục Nam", "Huyện Lục Nam");
+            addOption(list_district, "Huyện Tân Yên", "Huyện Tân Yên");
+            addOption(list_district, "Huyện Hiệp Hoà", "Huyện Hiệp Hoà");
+            addOption(list_district, "Huyện Lạng Giang", "Huyện Lạng Giang");
+            addOption(list_district, "Huyện Việt Yên", "Huyện Việt Yên");
+            addOption(list_district, "Huyện Yên Dũng", "Huyện Yên Dũng");
         }
         //Tinh Phu Tho
-        else if(list_city.value === "Tỉnh Phú Thọ"){
-            addOption(list_district, "Chọn quận huyện","Chưa chọn quận/huyện");
-            addOption(list_district, "TP. Việt Trì","TP. Việt Trì");
-            addOption(list_district, "Thị xã Phú Thọ","Thị xã Phú Thọ");
-            addOption(list_district, "Huyện Đoan Hùng","Huyện Đoan Hùng");
-            addOption(list_district, "Huyện Thanh Ba","Huyện Thanh Ba");	
-            addOption(list_district, "Huyện Hạ Hoà","Huyện Hạ Hoà");
-            addOption(list_district, "Huyện Cẩm Khê","Huyện Cẩm Khê");
-            addOption(list_district, "Huyện Yên Lập","Huyện Yên Lập");
-            addOption(list_district, "Huyện Thanh Sơn","Huyện Thanh Sơn");
-            addOption(list_district, "Huyện Phù Ninh","Huyện Phù Ninh");	
-            addOption(list_district, "Huyện Lâm Thao","Huyện Lâm Thao");
-            addOption(list_district, "Huyện Tam Nông","Huyện Tam Nông");
-            addOption(list_district, "Huyện Thanh Thủy","Huyện Thanh Thủy");
-            addOption(list_district, "Huyện Tân Sơn","Huyện Tân Sơn");		
+        else if (list_city.value === "Tỉnh Phú Thọ") {
+            addOption(list_district, "Chọn quận huyện", "Chưa chọn quận/huyện");
+            addOption(list_district, "TP. Việt Trì", "TP. Việt Trì");
+            addOption(list_district, "Thị xã Phú Thọ", "Thị xã Phú Thọ");
+            addOption(list_district, "Huyện Đoan Hùng", "Huyện Đoan Hùng");
+            addOption(list_district, "Huyện Thanh Ba", "Huyện Thanh Ba");
+            addOption(list_district, "Huyện Hạ Hoà", "Huyện Hạ Hoà");
+            addOption(list_district, "Huyện Cẩm Khê", "Huyện Cẩm Khê");
+            addOption(list_district, "Huyện Yên Lập", "Huyện Yên Lập");
+            addOption(list_district, "Huyện Thanh Sơn", "Huyện Thanh Sơn");
+            addOption(list_district, "Huyện Phù Ninh", "Huyện Phù Ninh");
+            addOption(list_district, "Huyện Lâm Thao", "Huyện Lâm Thao");
+            addOption(list_district, "Huyện Tam Nông", "Huyện Tam Nông");
+            addOption(list_district, "Huyện Thanh Thủy", "Huyện Thanh Thủy");
+            addOption(list_district, "Huyện Tân Sơn", "Huyện Tân Sơn");
         }
         //Tinh Vinh Phuc
-        else if(list_city.value === "Tỉnh Vĩnh Phúc"){
-            addOption(list_district, "Chọn quận huyện","Chưa chọn quận/huyện");
-            addOption(list_district, "TP. Vĩnh Yên","TP. Vĩnh Yên");
-            addOption(list_district, "Huyện Tam Dương","Huyện Tam Dương");
-            addOption(list_district, "Huyện Lập Thạch","Huyện Lập Thạch");
-            addOption(list_district, "Huyện Vĩnh Tường","Huyện Vĩnh Tường");
-            addOption(list_district, "Huyện Yên Lạc","Huyện Yên Lạc");
-            addOption(list_district, "Huyện Bình Xuyên","Huyện Bình Xuyên");
-            addOption(list_district, "Huyện Sông Lô","Huyện Sông Lô");
-            addOption(list_district, "Thị xã Phúc Yên","Thị xã Phúc Yên");
-            addOption(list_district, "Huyện Tam Đảo","Huyện Tam Đảo");
+        else if (list_city.value === "Tỉnh Vĩnh Phúc") {
+            addOption(list_district, "Chọn quận huyện", "Chưa chọn quận/huyện");
+            addOption(list_district, "TP. Vĩnh Yên", "TP. Vĩnh Yên");
+            addOption(list_district, "Huyện Tam Dương", "Huyện Tam Dương");
+            addOption(list_district, "Huyện Lập Thạch", "Huyện Lập Thạch");
+            addOption(list_district, "Huyện Vĩnh Tường", "Huyện Vĩnh Tường");
+            addOption(list_district, "Huyện Yên Lạc", "Huyện Yên Lạc");
+            addOption(list_district, "Huyện Bình Xuyên", "Huyện Bình Xuyên");
+            addOption(list_district, "Huyện Sông Lô", "Huyện Sông Lô");
+            addOption(list_district, "Thị xã Phúc Yên", "Thị xã Phúc Yên");
+            addOption(list_district, "Huyện Tam Đảo", "Huyện Tam Đảo");
         }
         //Tinh Bac Ninh
-        else if(list_city.value === "Tỉnh Bắc Ninh"){
-            addOption(list_district, "Chọn quận huyện","Chưa chọn quận/huyện");
-            addOption(list_district, "TP. Bắc Ninh","TP. Bắc Ninh");
-            addOption(list_district, "Huyện Yên Phong","Huyện Yên Phong");	
-            addOption(list_district, "Huyện Quế Võ","Huyện Quế Võ");
-            addOption(list_district, "Huyện Tiên Du","Huyện Tiên Du");
-            addOption(list_district, "Thị xã Từ Sơn","Thị xã Từ Sơn");
-            addOption(list_district, "Huyện Thuận Thành","Huyện Thuận Thành");
-            addOption(list_district, "Huyện Gia Bình","Huyện Gia Bình");
-            addOption(list_district, "Huyện Lương Tài","Huyện Lương Tài");
+        else if (list_city.value === "Tỉnh Bắc Ninh") {
+            addOption(list_district, "Chọn quận huyện", "Chưa chọn quận/huyện");
+            addOption(list_district, "TP. Bắc Ninh", "TP. Bắc Ninh");
+            addOption(list_district, "Huyện Yên Phong", "Huyện Yên Phong");
+            addOption(list_district, "Huyện Quế Võ", "Huyện Quế Võ");
+            addOption(list_district, "Huyện Tiên Du", "Huyện Tiên Du");
+            addOption(list_district, "Thị xã Từ Sơn", "Thị xã Từ Sơn");
+            addOption(list_district, "Huyện Thuận Thành", "Huyện Thuận Thành");
+            addOption(list_district, "Huyện Gia Bình", "Huyện Gia Bình");
+            addOption(list_district, "Huyện Lương Tài", "Huyện Lương Tài");
         }
         //Tinh Hai Duong
-        else if(list_city.value === "Tỉnh Hải Dương"){
-            addOption(list_district, "Chọn quận huyện","Chưa chọn quận/huyện");
-            addOption(list_district, "TP. Hải Dương","TP. Hải Dương");
-            addOption(list_district, "Thị xã Chí Linh","Thị xã Chí Linh");
-            addOption(list_district, "Huyện Nam Sách","Huyện Nam Sách");
-            addOption(list_district, "Huyện Kinh Môn","Huyện Kinh Môn");	
-            addOption(list_district, "Huyện Gia Lộc","Huyện Gia Lộc");
-            addOption(list_district, "Huyện Tứ Kỳ","Huyện Tứ Kỳ");
-            addOption(list_district, "Huyện Thanh Miện","Huyện Thanh Miện");
-            addOption(list_district, "Huyện Ninh Giang","Huyện Ninh Giang");
-            addOption(list_district, "Huyện Cẩm Giàng","Huyện Cẩm Giàng");	
-            addOption(list_district, "Huyện Thanh Hà","Huyện Thanh Hà");
-            addOption(list_district, "Huyện Kim Thành","Huyện Kim Thành");
-            addOption(list_district, "Huyện Bình Giang","Huyện Bình Giang");
+        else if (list_city.value === "Tỉnh Hải Dương") {
+            addOption(list_district, "Chọn quận huyện", "Chưa chọn quận/huyện");
+            addOption(list_district, "TP. Hải Dương", "TP. Hải Dương");
+            addOption(list_district, "Thị xã Chí Linh", "Thị xã Chí Linh");
+            addOption(list_district, "Huyện Nam Sách", "Huyện Nam Sách");
+            addOption(list_district, "Huyện Kinh Môn", "Huyện Kinh Môn");
+            addOption(list_district, "Huyện Gia Lộc", "Huyện Gia Lộc");
+            addOption(list_district, "Huyện Tứ Kỳ", "Huyện Tứ Kỳ");
+            addOption(list_district, "Huyện Thanh Miện", "Huyện Thanh Miện");
+            addOption(list_district, "Huyện Ninh Giang", "Huyện Ninh Giang");
+            addOption(list_district, "Huyện Cẩm Giàng", "Huyện Cẩm Giàng");
+            addOption(list_district, "Huyện Thanh Hà", "Huyện Thanh Hà");
+            addOption(list_district, "Huyện Kim Thành", "Huyện Kim Thành");
+            addOption(list_district, "Huyện Bình Giang", "Huyện Bình Giang");
         }
         //TP Hai Phong
-        else if(list_city.value === "Thành phố Hải Phòng"){
-            addOption(list_district, "Chọn quận huyện","Chưa chọn quận/huyện");
-            addOption(list_district, "Quận Hồng Bàng","Quận Hồng Bàng");
-            addOption(list_district, "Quận Lê Chân","Quận Lê Chân");
-            addOption(list_district, "Quận Ngô Quyền","Quận Ngô Quyền");
-            addOption(list_district, "Quận Kiến An","Quận Kiến An");
-            addOption(list_district, "Quận Hải An","Quận Hải An");
-            addOption(list_district, "Quận Đồ Sơn","Quận Đồ Sơn");
-            addOption(list_district, "Huyện An Lão","Huyện An Lão");
-            addOption(list_district, "Huyện Kiến Thụy","Huyện Kiến Thụy");
-            addOption(list_district, "Huyện Thủy Nguyên","Huyện Thủy Nguyên");
-            addOption(list_district, "Huyện An Dương","Huyện An Dương");
-            addOption(list_district, "Huyện Tiên Lãng","Huyện Tiên Lãng");
-            addOption(list_district, "Huyện Vĩnh Bảo","Huyện Vĩnh Bảo");
-            addOption(list_district, "Huyện Cát Hải","Huyện Cát Hải");
-            addOption(list_district, "Huyện Bạch Long Vĩ","Huyện Bạch Long Vĩ");
-            addOption(list_district, "Quận Dương Kinh","Quận Dương Kinh");
-        }                
+        else if (list_city.value === "Thành phố Hải Phòng") {
+            addOption(list_district, "Chọn quận huyện", "Chưa chọn quận/huyện");
+            addOption(list_district, "Quận Hồng Bàng", "Quận Hồng Bàng");
+            addOption(list_district, "Quận Lê Chân", "Quận Lê Chân");
+            addOption(list_district, "Quận Ngô Quyền", "Quận Ngô Quyền");
+            addOption(list_district, "Quận Kiến An", "Quận Kiến An");
+            addOption(list_district, "Quận Hải An", "Quận Hải An");
+            addOption(list_district, "Quận Đồ Sơn", "Quận Đồ Sơn");
+            addOption(list_district, "Huyện An Lão", "Huyện An Lão");
+            addOption(list_district, "Huyện Kiến Thụy", "Huyện Kiến Thụy");
+            addOption(list_district, "Huyện Thủy Nguyên", "Huyện Thủy Nguyên");
+            addOption(list_district, "Huyện An Dương", "Huyện An Dương");
+            addOption(list_district, "Huyện Tiên Lãng", "Huyện Tiên Lãng");
+            addOption(list_district, "Huyện Vĩnh Bảo", "Huyện Vĩnh Bảo");
+            addOption(list_district, "Huyện Cát Hải", "Huyện Cát Hải");
+            addOption(list_district, "Huyện Bạch Long Vĩ", "Huyện Bạch Long Vĩ");
+            addOption(list_district, "Quận Dương Kinh", "Quận Dương Kinh");
+        }
         //Tinh Hung Yen
-        else if(list_city.value === "Tỉnh Hưng Yên"){
-            addOption(list_district, "Chọn quận huyện","Chưa chọn quận/huyện");
-            addOption(list_district, "TP. Hưng Yên","TP. Hưng Yên");
-            addOption(list_district, "Huyện Kim Động","Huyện Kim Động");
-            addOption(list_district, "Huyện Ân Thi","Huyện Ân Thi");	
-            addOption(list_district, "Huyện Khoái Châu","Huyện Khoái Châu");
-            addOption(list_district, "Huyện Yên Mỹ","Huyện Yên Mỹ");
-            addOption(list_district, "Huyện Tiên Lữ","Huyện Tiên Lữ");
-            addOption(list_district, "Huyện Phù Cừ","Huyện Phù Cừ");	
-            addOption(list_district, "Huyện Mỹ Hào","Huyện Mỹ Hào");
-            addOption(list_district, "Huyện Văn Lâm","Huyện Văn Lâm");
-            addOption(list_district, "Huyện Văn Giang","Huyện Văn Giang");			 
+        else if (list_city.value === "Tỉnh Hưng Yên") {
+            addOption(list_district, "Chọn quận huyện", "Chưa chọn quận/huyện");
+            addOption(list_district, "TP. Hưng Yên", "TP. Hưng Yên");
+            addOption(list_district, "Huyện Kim Động", "Huyện Kim Động");
+            addOption(list_district, "Huyện Ân Thi", "Huyện Ân Thi");
+            addOption(list_district, "Huyện Khoái Châu", "Huyện Khoái Châu");
+            addOption(list_district, "Huyện Yên Mỹ", "Huyện Yên Mỹ");
+            addOption(list_district, "Huyện Tiên Lữ", "Huyện Tiên Lữ");
+            addOption(list_district, "Huyện Phù Cừ", "Huyện Phù Cừ");
+            addOption(list_district, "Huyện Mỹ Hào", "Huyện Mỹ Hào");
+            addOption(list_district, "Huyện Văn Lâm", "Huyện Văn Lâm");
+            addOption(list_district, "Huyện Văn Giang", "Huyện Văn Giang");
         }
         //Tinh Thai Binh
-        else if(list_city.value === "Tỉnh Thái Bình"){
-            addOption(list_district, "Chọn quận huyện","Chưa chọn quận/huyện");
-            addOption(list_district, "TP. Thái Bình","TP. Thái Bình");
-            addOption(list_district, "Huyện Quỳnh Phụ","Huyện Quỳnh Phụ");	
-            addOption(list_district, "Huyện Hưng Hà","Huyện Hưng Hà");
-            addOption(list_district, "Huyện Đông Hưng","Huyện Đông Hưng");
-            addOption(list_district, "Huyện Vũ Thư","Huyện Vũ Thư");	
-            addOption(list_district, "Huyện Kiến Xương","Huyện Kiến Xương");
-            addOption(list_district, "Huyện Tiền Hải","Huyện Tiền Hải");
-            addOption(list_district, "Huyện Thái Thuỵ","Huyện Thái Thuỵ");
+        else if (list_city.value === "Tỉnh Thái Bình") {
+            addOption(list_district, "Chọn quận huyện", "Chưa chọn quận/huyện");
+            addOption(list_district, "TP. Thái Bình", "TP. Thái Bình");
+            addOption(list_district, "Huyện Quỳnh Phụ", "Huyện Quỳnh Phụ");
+            addOption(list_district, "Huyện Hưng Hà", "Huyện Hưng Hà");
+            addOption(list_district, "Huyện Đông Hưng", "Huyện Đông Hưng");
+            addOption(list_district, "Huyện Vũ Thư", "Huyện Vũ Thư");
+            addOption(list_district, "Huyện Kiến Xương", "Huyện Kiến Xương");
+            addOption(list_district, "Huyện Tiền Hải", "Huyện Tiền Hải");
+            addOption(list_district, "Huyện Thái Thuỵ", "Huyện Thái Thuỵ");
         }
         //Tinh Ha Nam
-        else if(list_city.value === "Tỉnh Hà Nam"){
-            addOption(list_district, "Chọn quận huyện","Chưa chọn quận/huyện");
-            addOption(list_district, "TP. Phủ Lý","TP. Phủ Lý");
-            addOption(list_district, "Huyện Duy Tiên","Huyện Duy Tiên");	
-            addOption(list_district, "Huyện Kim Bảng","Huyện Kim Bảng");
-            addOption(list_district, "Huyện Lý Nhân","Huyện Lý Nhân");
-            addOption(list_district, "Huyện Thanh Liêm","Huyện Thanh Liêm");	
-            addOption(list_district, "Huyện Bình Lục","Huyện Bình Lục");
+        else if (list_city.value === "Tỉnh Hà Nam") {
+            addOption(list_district, "Chọn quận huyện", "Chưa chọn quận/huyện");
+            addOption(list_district, "TP. Phủ Lý", "TP. Phủ Lý");
+            addOption(list_district, "Huyện Duy Tiên", "Huyện Duy Tiên");
+            addOption(list_district, "Huyện Kim Bảng", "Huyện Kim Bảng");
+            addOption(list_district, "Huyện Lý Nhân", "Huyện Lý Nhân");
+            addOption(list_district, "Huyện Thanh Liêm", "Huyện Thanh Liêm");
+            addOption(list_district, "Huyện Bình Lục", "Huyện Bình Lục");
         }
         //Tinh Nam Dinh
-        else if(list_city.value === "Tỉnh Nam Định"){
-            addOption(list_district, "Chọn quận huyện","Chưa chọn quận/huyện");
-            addOption(list_district, "TP. Nam Định","TP. Nam Định");
-            addOption(list_district, "Huyện Mỹ Lộc","Huyện Mỹ Lộc");
-            addOption(list_district, "Huyện Xuân Trường","Huyện Xuân Trường");
-            addOption(list_district, "Huyện Giao Thủy","Huyện Giao Thủy");
-            addOption(list_district, "Huyện Ý Yên","Huyện Ý Yên");
-            addOption(list_district, "Huyện Vụ Bản","Huyện Vụ Bản");
-            addOption(list_district, "Huyện Nam Trực","Huyện Nam Trực");	
-            addOption(list_district, "Huyện Trực Ninh","Huyện Trực Ninh");
-            addOption(list_district, "Huyện Nghĩa Hưng","Huyện Nghĩa Hưng");
-            addOption(list_district, "Huyện Hải Hậu","Huyện Hải Hậu");
+        else if (list_city.value === "Tỉnh Nam Định") {
+            addOption(list_district, "Chọn quận huyện", "Chưa chọn quận/huyện");
+            addOption(list_district, "TP. Nam Định", "TP. Nam Định");
+            addOption(list_district, "Huyện Mỹ Lộc", "Huyện Mỹ Lộc");
+            addOption(list_district, "Huyện Xuân Trường", "Huyện Xuân Trường");
+            addOption(list_district, "Huyện Giao Thủy", "Huyện Giao Thủy");
+            addOption(list_district, "Huyện Ý Yên", "Huyện Ý Yên");
+            addOption(list_district, "Huyện Vụ Bản", "Huyện Vụ Bản");
+            addOption(list_district, "Huyện Nam Trực", "Huyện Nam Trực");
+            addOption(list_district, "Huyện Trực Ninh", "Huyện Trực Ninh");
+            addOption(list_district, "Huyện Nghĩa Hưng", "Huyện Nghĩa Hưng");
+            addOption(list_district, "Huyện Hải Hậu", "Huyện Hải Hậu");
         }
         //Tinh Ninh Binh
-        else if(list_city.value === "Tỉnh Ninh Bình"){
-            addOption(list_district, "Chọn quận huyện","Chưa chọn quận/huyện");
-            addOption(list_district, "TP. Ninh Bình","TP. Ninh Bình");
-            addOption(list_district, "Thị xã Tam Điệp","Thị xã Tam Điệp");	
-            addOption(list_district, "Huyện Nho Quan","Huyện Nho Quan");
-            addOption(list_district, "Huyện Gia Viễn","Huyện Gia Viễn");
-            addOption(list_district, "Huyện Hoa Lư","Huyện Hoa Lư");	
-            addOption(list_district, "Huyện Yên Mô","Huyện Yên Mô");     
-            addOption(list_district, "Huyện Kim Sơn","Huyện Kim Sơn");    
-            addOption(list_district, "Huyện Yên Khánh","Huyện Yên Khánh");
+        else if (list_city.value === "Tỉnh Ninh Bình") {
+            addOption(list_district, "Chọn quận huyện", "Chưa chọn quận/huyện");
+            addOption(list_district, "TP. Ninh Bình", "TP. Ninh Bình");
+            addOption(list_district, "Thị xã Tam Điệp", "Thị xã Tam Điệp");
+            addOption(list_district, "Huyện Nho Quan", "Huyện Nho Quan");
+            addOption(list_district, "Huyện Gia Viễn", "Huyện Gia Viễn");
+            addOption(list_district, "Huyện Hoa Lư", "Huyện Hoa Lư");
+            addOption(list_district, "Huyện Yên Mô", "Huyện Yên Mô");
+            addOption(list_district, "Huyện Kim Sơn", "Huyện Kim Sơn");
+            addOption(list_district, "Huyện Yên Khánh", "Huyện Yên Khánh");
         }
         //Tinh Thanh Hoa
-        else if(list_city.value === "Tỉnh Thanh Hoá"){
-            addOption(list_district, "Chọn quận huyện","Chưa chọn quận/huyện");
-            addOption(list_district, "TP. Thanh Hoá","TP. Thanh Hoá");
-            addOption(list_district, "Thị xã Bỉm Sơn","Thị xã Bỉm Sơn");
-            addOption(list_district, "Thị xã Sầm Sơn","Thị xã Sầm Sơn");
-            addOption(list_district, "Huyện Quan Hoá","Huyện Quan Hoá");
-            addOption(list_district, "Huyện Quan Sơn","Huyện Quan Sơn");
-            addOption(list_district, "Huyện Mường Lát","Huyện Mường Lát");
-            addOption(list_district, "Huyện Bá Thước","Huyện Bá Thước");
-            addOption(list_district, "Huyện Thường Xuân","Huyện Thường Xuân");
-            addOption(list_district, "Huyện Như Xuân","Huyện Như Xuân");	
-            addOption(list_district, "Huyện Như Thanh","Huyện Như Thanh");
-            addOption(list_district, "Huyện Lang Chánh","Huyện Lang Chánh");
-            addOption(list_district, "Huyện Ngọc Lặc","Huyện Ngọc Lặc");
-            addOption(list_district, "Huyện Thạch Thành","Huyện Thạch Thành");
-            addOption(list_district, "Huyện Cẩm Thủy","Huyện Cẩm Thủy");
-            addOption(list_district, "Huyện Thọ Xuân","Huyện Thọ Xuân");
-            addOption(list_district, "Huyện Vĩnh Lộc","Huyện Vĩnh Lộc");
-            addOption(list_district, "Huyện Thiệu Hoá","Huyện Thiệu Hoá");
-            addOption(list_district, "Huyện Triệu Sơn","Huyện Triệu Sơn");
-            addOption(list_district, "Huyện Nông Cống","Huyện Nông Cống");	
-            addOption(list_district, "Huyện Đông Sơn","Huyện Đông Sơn");
-            addOption(list_district, "Huyện Hà Trung","Huyện Hà Trung");
-            addOption(list_district, "Huyện Hoằng Hoá","Huyện Hoằng Hoá");
-            addOption(list_district, "Huyện Nga Sơn","Huyện Nga Sơn");
-            addOption(list_district, "Huyện Hậu Lộc","Huyện Hậu Lộc");
-            addOption(list_district, "Huyện Quảng Xương","Huyện Quảng Xương");
-            addOption(list_district, "Huyện Tĩnh Gia","Huyện Tĩnh Gia");
-            addOption(list_district, "Huyện Yên Định","Huyện Yên Định");
+        else if (list_city.value === "Tỉnh Thanh Hoá") {
+            addOption(list_district, "Chọn quận huyện", "Chưa chọn quận/huyện");
+            addOption(list_district, "TP. Thanh Hoá", "TP. Thanh Hoá");
+            addOption(list_district, "Thị xã Bỉm Sơn", "Thị xã Bỉm Sơn");
+            addOption(list_district, "Thị xã Sầm Sơn", "Thị xã Sầm Sơn");
+            addOption(list_district, "Huyện Quan Hoá", "Huyện Quan Hoá");
+            addOption(list_district, "Huyện Quan Sơn", "Huyện Quan Sơn");
+            addOption(list_district, "Huyện Mường Lát", "Huyện Mường Lát");
+            addOption(list_district, "Huyện Bá Thước", "Huyện Bá Thước");
+            addOption(list_district, "Huyện Thường Xuân", "Huyện Thường Xuân");
+            addOption(list_district, "Huyện Như Xuân", "Huyện Như Xuân");
+            addOption(list_district, "Huyện Như Thanh", "Huyện Như Thanh");
+            addOption(list_district, "Huyện Lang Chánh", "Huyện Lang Chánh");
+            addOption(list_district, "Huyện Ngọc Lặc", "Huyện Ngọc Lặc");
+            addOption(list_district, "Huyện Thạch Thành", "Huyện Thạch Thành");
+            addOption(list_district, "Huyện Cẩm Thủy", "Huyện Cẩm Thủy");
+            addOption(list_district, "Huyện Thọ Xuân", "Huyện Thọ Xuân");
+            addOption(list_district, "Huyện Vĩnh Lộc", "Huyện Vĩnh Lộc");
+            addOption(list_district, "Huyện Thiệu Hoá", "Huyện Thiệu Hoá");
+            addOption(list_district, "Huyện Triệu Sơn", "Huyện Triệu Sơn");
+            addOption(list_district, "Huyện Nông Cống", "Huyện Nông Cống");
+            addOption(list_district, "Huyện Đông Sơn", "Huyện Đông Sơn");
+            addOption(list_district, "Huyện Hà Trung", "Huyện Hà Trung");
+            addOption(list_district, "Huyện Hoằng Hoá", "Huyện Hoằng Hoá");
+            addOption(list_district, "Huyện Nga Sơn", "Huyện Nga Sơn");
+            addOption(list_district, "Huyện Hậu Lộc", "Huyện Hậu Lộc");
+            addOption(list_district, "Huyện Quảng Xương", "Huyện Quảng Xương");
+            addOption(list_district, "Huyện Tĩnh Gia", "Huyện Tĩnh Gia");
+            addOption(list_district, "Huyện Yên Định", "Huyện Yên Định");
         }
         //Tinh Nghe An                 
-        else if(list_city.value === "Tỉnh Nghệ An"){
-            addOption(list_district, "Chọn quận huyện","Chưa chọn quận/huyện");
-            addOption(list_district, "TP. Vinh","TP. Vinh");
-            addOption(list_district, "Thị xã Cửa Lò","Thị xã Cửa Lò");
-            addOption(list_district, "Huyện Quỳ Châu","Huyện Quỳ Châu");
-            addOption(list_district, "Huyện Quỳ Hợp","Huyện Quỳ Hợp");
-            addOption(list_district, "Huyện Nghĩa Đàn","Huyện Nghĩa Đàn");
-            addOption(list_district, "Huyện Quỳnh Lưu","Huyện Quỳnh Lưu");	
-            addOption(list_district, "Huyện Kỳ Sơn","Huyện Kỳ Sơn");
-            addOption(list_district, "Huyện Tương Dương","Huyện Tương Dương");
-            addOption(list_district, "Huyện Con Cuông","Huyện Con Cuông");
-            addOption(list_district, "Huyện Tân Kỳ","Huyện Tân Kỳ");
-            addOption(list_district, "Huyện Yên Thành","Huyện Yên Thành");
-            addOption(list_district, "Huyện Diễn Châu","Huyện Diễn Châu");
-            addOption(list_district, "Huyện Anh Sơn","Huyện Anh Sơn");	
-            addOption(list_district, "Huyện Đô Lương","Huyện Đô Lương");
-            addOption(list_district, "Huyện Thanh Chương","Huyện Thanh Chương");
-            addOption(list_district, "Huyện Nghi Lộc","Huyện Nghi Lộc");
-            addOption(list_district, "Huyện Nam Đàn","Huyện Nam Đàn");
-            addOption(list_district, "Huyện Hưng Nguyên","Huyện Hưng Nguyên");
-            addOption(list_district, "Huyện Quế Phong","Huyện Quế Phong");
-            addOption(list_district, "Thị xã Thái Hòa","Thị xã Thái Hòa");
+        else if (list_city.value === "Tỉnh Nghệ An") {
+            addOption(list_district, "Chọn quận huyện", "Chưa chọn quận/huyện");
+            addOption(list_district, "TP. Vinh", "TP. Vinh");
+            addOption(list_district, "Thị xã Cửa Lò", "Thị xã Cửa Lò");
+            addOption(list_district, "Huyện Quỳ Châu", "Huyện Quỳ Châu");
+            addOption(list_district, "Huyện Quỳ Hợp", "Huyện Quỳ Hợp");
+            addOption(list_district, "Huyện Nghĩa Đàn", "Huyện Nghĩa Đàn");
+            addOption(list_district, "Huyện Quỳnh Lưu", "Huyện Quỳnh Lưu");
+            addOption(list_district, "Huyện Kỳ Sơn", "Huyện Kỳ Sơn");
+            addOption(list_district, "Huyện Tương Dương", "Huyện Tương Dương");
+            addOption(list_district, "Huyện Con Cuông", "Huyện Con Cuông");
+            addOption(list_district, "Huyện Tân Kỳ", "Huyện Tân Kỳ");
+            addOption(list_district, "Huyện Yên Thành", "Huyện Yên Thành");
+            addOption(list_district, "Huyện Diễn Châu", "Huyện Diễn Châu");
+            addOption(list_district, "Huyện Anh Sơn", "Huyện Anh Sơn");
+            addOption(list_district, "Huyện Đô Lương", "Huyện Đô Lương");
+            addOption(list_district, "Huyện Thanh Chương", "Huyện Thanh Chương");
+            addOption(list_district, "Huyện Nghi Lộc", "Huyện Nghi Lộc");
+            addOption(list_district, "Huyện Nam Đàn", "Huyện Nam Đàn");
+            addOption(list_district, "Huyện Hưng Nguyên", "Huyện Hưng Nguyên");
+            addOption(list_district, "Huyện Quế Phong", "Huyện Quế Phong");
+            addOption(list_district, "Thị xã Thái Hòa", "Thị xã Thái Hòa");
         }
         //Tinh Ha Tinh
-        else if(list_city.value === "Tỉnh Hà Tĩnh"){
-            addOption(list_district, "Chọn quận huyện","Chưa chọn quận/huyện");
-            addOption(list_district, "TP. Hà Tĩnh","TP. Hà Tĩnh");
-            addOption(list_district, "Thị xã Hồng Lĩnh","Thị xã Hồng Lĩnh");
-            addOption(list_district, "Huyện Hương Sơn","Huyện Hương Sơn");	
-            addOption(list_district, "Huyện Đức Thọ","Huyện Đức Thọ");
-            addOption(list_district, "Huyện Nghi Xuân","Huyện Nghi Xuân");
-            addOption(list_district, "Huyện Can Lộc","Huyện Can Lộc");
-            addOption(list_district, "Huyện Hương Khê","Huyện Hương Khê");	
-            addOption(list_district, "Huyện Thạch Hà","Huyện Thạch Hà");
-            addOption(list_district, "Huyện Cẩm Xuyên","Huyện Cẩm Xuyên");
-            addOption(list_district, "Huyện Kỳ Anh","Huyện Kỳ Anh");
-            addOption(list_district, "Huyện Vũ Quang","Huyện Vũ Quang");
-            addOption(list_district, "Huyện Lộc Hà","Huyện Lộc Hà");
+        else if (list_city.value === "Tỉnh Hà Tĩnh") {
+            addOption(list_district, "Chọn quận huyện", "Chưa chọn quận/huyện");
+            addOption(list_district, "TP. Hà Tĩnh", "TP. Hà Tĩnh");
+            addOption(list_district, "Thị xã Hồng Lĩnh", "Thị xã Hồng Lĩnh");
+            addOption(list_district, "Huyện Hương Sơn", "Huyện Hương Sơn");
+            addOption(list_district, "Huyện Đức Thọ", "Huyện Đức Thọ");
+            addOption(list_district, "Huyện Nghi Xuân", "Huyện Nghi Xuân");
+            addOption(list_district, "Huyện Can Lộc", "Huyện Can Lộc");
+            addOption(list_district, "Huyện Hương Khê", "Huyện Hương Khê");
+            addOption(list_district, "Huyện Thạch Hà", "Huyện Thạch Hà");
+            addOption(list_district, "Huyện Cẩm Xuyên", "Huyện Cẩm Xuyên");
+            addOption(list_district, "Huyện Kỳ Anh", "Huyện Kỳ Anh");
+            addOption(list_district, "Huyện Vũ Quang", "Huyện Vũ Quang");
+            addOption(list_district, "Huyện Lộc Hà", "Huyện Lộc Hà");
         }
         //Tinh Quang Binh
-        else if(list_city.value === "Tỉnh Quảng Bình"){
-            addOption(list_district, "Chọn quận huyện","Chưa chọn quận/huyện");
-            addOption(list_district, "TP. Đồng Hới","TP. Đồng Hới");
-            addOption(list_district, "Huyện Tuyên Hoá","Huyện Tuyên Hoá");	
-            addOption(list_district, "Huyện Minh Hoá","Huyện Minh Hoá");
-            addOption(list_district, "Huyện Quảng Trạch","Huyện Quảng Trạch");
-            addOption(list_district, "Huyện Bố Trạch","Huyện Bố Trạch");	
-            addOption(list_district, "Huyện Quảng Ninh","Huyện Quảng Ninh");
-            addOption(list_district, "Huyện Lệ Thuỷ","Huyện Lệ Thuỷ");
+        else if (list_city.value === "Tỉnh Quảng Bình") {
+            addOption(list_district, "Chọn quận huyện", "Chưa chọn quận/huyện");
+            addOption(list_district, "TP. Đồng Hới", "TP. Đồng Hới");
+            addOption(list_district, "Huyện Tuyên Hoá", "Huyện Tuyên Hoá");
+            addOption(list_district, "Huyện Minh Hoá", "Huyện Minh Hoá");
+            addOption(list_district, "Huyện Quảng Trạch", "Huyện Quảng Trạch");
+            addOption(list_district, "Huyện Bố Trạch", "Huyện Bố Trạch");
+            addOption(list_district, "Huyện Quảng Ninh", "Huyện Quảng Ninh");
+            addOption(list_district, "Huyện Lệ Thuỷ", "Huyện Lệ Thuỷ");
         }
         //Tinh Quang Tri
-        else if(list_city.value === "Tỉnh Quảng Trị"){
-            addOption(list_district, "Chọn quận huyện","Chưa chọn quận/huyện");
-            addOption(list_district, "TP. Đông Hà","TP. Đông Hà");
-            addOption(list_district, "Thị xã Quảng Trị","Thị xã Quảng Trị");
-            addOption(list_district, "Huyện Vĩnh Linh","Huyện Vĩnh Linh");	
-            addOption(list_district, "Huyện Gio Linh","Huyện Gio Linh");
-            addOption(list_district, "Huyện Cam Lộ","Huyện Cam Lộ");
-            addOption(list_district, "Huyện Triệu Phong","Huyện Triệu Phong");
-            addOption(list_district, "Huyện Hải Lăng","Huyện Hải Lăng");	
-            addOption(list_district, "Huyện Hướng Hóa","Huyện Hướng Hóa");
-            addOption(list_district, "Huyện Đăk Rông","Huyện Đăk Rông");
-            addOption(list_district, "Huyện đảo Cồn Cỏ","Huyện đảo Cồn Cỏ");
+        else if (list_city.value === "Tỉnh Quảng Trị") {
+            addOption(list_district, "Chọn quận huyện", "Chưa chọn quận/huyện");
+            addOption(list_district, "TP. Đông Hà", "TP. Đông Hà");
+            addOption(list_district, "Thị xã Quảng Trị", "Thị xã Quảng Trị");
+            addOption(list_district, "Huyện Vĩnh Linh", "Huyện Vĩnh Linh");
+            addOption(list_district, "Huyện Gio Linh", "Huyện Gio Linh");
+            addOption(list_district, "Huyện Cam Lộ", "Huyện Cam Lộ");
+            addOption(list_district, "Huyện Triệu Phong", "Huyện Triệu Phong");
+            addOption(list_district, "Huyện Hải Lăng", "Huyện Hải Lăng");
+            addOption(list_district, "Huyện Hướng Hóa", "Huyện Hướng Hóa");
+            addOption(list_district, "Huyện Đăk Rông", "Huyện Đăk Rông");
+            addOption(list_district, "Huyện đảo Cồn Cỏ", "Huyện đảo Cồn Cỏ");
         }
         //Tinh Thua Thien Hue
-        else if(list_city.value === "Tỉnh Thừa Thiên Huế"){
-            addOption(list_district, "Chọn quận huyện","Chưa chọn quận/huyện");
-            addOption(list_district, "TP. Huế","TP. Huế");
-            addOption(list_district, "Huyện Phong Điền","Huyện Phong Điền");
-            addOption(list_district, "Huyện Quảng Điền","Huyện Quảng Điền");	
-            addOption(list_district, "Huyện Hương Trà","Huyện Hương Trà");
-            addOption(list_district, "Huyện Phú Vang","Huyện Phú Vang");
-            addOption(list_district, "Huyện Hương Thủy","Huyện Hương Thủy");
-            addOption(list_district, "Huyện Phú Lộc","Huyện Phú Lộc");	
-            addOption(list_district, "Huyện Nam Đông","Huyện Nam Đông");
-            addOption(list_district, "Huyện A Lưới","Huyện A Lưới");
+        else if (list_city.value === "Tỉnh Thừa Thiên Huế") {
+            addOption(list_district, "Chọn quận huyện", "Chưa chọn quận/huyện");
+            addOption(list_district, "TP. Huế", "TP. Huế");
+            addOption(list_district, "Huyện Phong Điền", "Huyện Phong Điền");
+            addOption(list_district, "Huyện Quảng Điền", "Huyện Quảng Điền");
+            addOption(list_district, "Huyện Hương Trà", "Huyện Hương Trà");
+            addOption(list_district, "Huyện Phú Vang", "Huyện Phú Vang");
+            addOption(list_district, "Huyện Hương Thủy", "Huyện Hương Thủy");
+            addOption(list_district, "Huyện Phú Lộc", "Huyện Phú Lộc");
+            addOption(list_district, "Huyện Nam Đông", "Huyện Nam Đông");
+            addOption(list_district, "Huyện A Lưới", "Huyện A Lưới");
         }
         //Thanh Pho Da Nang
-        else if(list_city.value === "Thành phố Đà Nẵng"){
-            addOption(list_district, "Chọn quận huyện","Chưa chọn quận/huyện");
-            addOption(list_district, "Quận Hải Châu","Quận Hải Châu");
-            addOption(list_district, "Quận Thanh Khê","Quận Thanh Khê");	
-            addOption(list_district, "Quận Sơn Trà","Quận Sơn Trà");
-            addOption(list_district, "Quận Ngũ Hành Sơn","Quận Ngũ Hành Sơn");
-            addOption(list_district, "Quận Liên Chiểu","Quận Liên Chiểu");	
-            addOption(list_district, "Huyện Hoà Vang","Huyện Hoà Vang");
-            addOption(list_district, "Quận Cẩm Lệ","Quận Cẩm Lệ");
+        else if (list_city.value === "Thành phố Đà Nẵng") {
+            addOption(list_district, "Chọn quận huyện", "Chưa chọn quận/huyện");
+            addOption(list_district, "Quận Hải Châu", "Quận Hải Châu");
+            addOption(list_district, "Quận Thanh Khê", "Quận Thanh Khê");
+            addOption(list_district, "Quận Sơn Trà", "Quận Sơn Trà");
+            addOption(list_district, "Quận Ngũ Hành Sơn", "Quận Ngũ Hành Sơn");
+            addOption(list_district, "Quận Liên Chiểu", "Quận Liên Chiểu");
+            addOption(list_district, "Huyện Hoà Vang", "Huyện Hoà Vang");
+            addOption(list_district, "Quận Cẩm Lệ", "Quận Cẩm Lệ");
         }
         //Tinh Quang Nam
-        else if(list_city.value === "Tỉnh Quảng Nam"){
-            addOption(list_district, "Chọn quận huyện","Chưa chọn quận/huyện");
-            addOption(list_district, "TP. Tam Kỳ","TP. Tam Kỳ");
-            addOption(list_district, "TP. Hội An","TP. Hội An");
-            addOption(list_district, "Huyện Nông Sơn","Huyện Nông Sơn");
-            addOption(list_district, "Huyện Duy Xuyên","Huyện Duy Xuyên");
-            addOption(list_district, "Huyện Điện Bàn","Huyện Điện Bàn");
-            addOption(list_district, "Huyện Đại Lộc","Huyện Đại Lộc");	
-            addOption(list_district, "Huyện Quế Sơn","Huyện Quế Sơn");
-            addOption(list_district, "Huyện Hiệp Đức","Huyện Hiệp Đức");
-            addOption(list_district, "Huyện Thăng Bình","Huyện Thăng Bình");
-            addOption(list_district, "Huyện Núi Thành","Huyện Núi Thành");
-            addOption(list_district, "Huyện Tiên Phước","Huyện Tiên Phước");
-            addOption(list_district, "Huyện Bắc Trà My","Huyện Bắc Trà My");	
-            addOption(list_district, "Huyện Đông Giang","Huyện Đông Giang");
-            addOption(list_district, "Huyện Nam Giang","Huyện Nam Giang");
-            addOption(list_district, "Huyện Phước Sơn","Huyện Phước Sơn");
-            addOption(list_district, "Huyện Nam Trà My","Huyện Nam Trà My");
-            addOption(list_district, "Huyện Tây Giang","Huyện Tây Giang");
-            addOption(list_district, "Huyện Phú Ninh","Huyện Phú Ninh");
-            addOption(list_district, "Huyện Nông Sơn","Huyện Nông Sơn");			
+        else if (list_city.value === "Tỉnh Quảng Nam") {
+            addOption(list_district, "Chọn quận huyện", "Chưa chọn quận/huyện");
+            addOption(list_district, "TP. Tam Kỳ", "TP. Tam Kỳ");
+            addOption(list_district, "TP. Hội An", "TP. Hội An");
+            addOption(list_district, "Huyện Nông Sơn", "Huyện Nông Sơn");
+            addOption(list_district, "Huyện Duy Xuyên", "Huyện Duy Xuyên");
+            addOption(list_district, "Huyện Điện Bàn", "Huyện Điện Bàn");
+            addOption(list_district, "Huyện Đại Lộc", "Huyện Đại Lộc");
+            addOption(list_district, "Huyện Quế Sơn", "Huyện Quế Sơn");
+            addOption(list_district, "Huyện Hiệp Đức", "Huyện Hiệp Đức");
+            addOption(list_district, "Huyện Thăng Bình", "Huyện Thăng Bình");
+            addOption(list_district, "Huyện Núi Thành", "Huyện Núi Thành");
+            addOption(list_district, "Huyện Tiên Phước", "Huyện Tiên Phước");
+            addOption(list_district, "Huyện Bắc Trà My", "Huyện Bắc Trà My");
+            addOption(list_district, "Huyện Đông Giang", "Huyện Đông Giang");
+            addOption(list_district, "Huyện Nam Giang", "Huyện Nam Giang");
+            addOption(list_district, "Huyện Phước Sơn", "Huyện Phước Sơn");
+            addOption(list_district, "Huyện Nam Trà My", "Huyện Nam Trà My");
+            addOption(list_district, "Huyện Tây Giang", "Huyện Tây Giang");
+            addOption(list_district, "Huyện Phú Ninh", "Huyện Phú Ninh");
+            addOption(list_district, "Huyện Nông Sơn", "Huyện Nông Sơn");
         }
         //Tinh Quang Ngai
-        else if(list_city.value === "Tỉnh Quảng Ngãi"){
-            addOption(list_district, "Chọn quận huyện","Chưa chọn quận/huyện");
-            addOption(list_district, "TP. Quảng Ngãi","TP. Quảng Ngãi");
-            addOption(list_district, "Huyện Lý Sơn","Huyện Lý Sơn");
-            addOption(list_district, "Huyện Bình Sơn","Huyện Bình Sơn");
-            addOption(list_district, "Huyện Trà Bồng","Huyện Trà Bồng");	
-            addOption(list_district, "Huyện Sơn Tịnh","Huyện Sơn Tịnh");
-            addOption(list_district, "Huyện Sơn Hà","Huyện Sơn Hà");
-            addOption(list_district, "Huyện Tư Nghĩa","Huyện Tư Nghĩa");
-            addOption(list_district, "Huyện Nghĩa Hành","Huyện Nghĩa Hành");
-            addOption(list_district, "Huyện Minh Long","Huyện Minh Long");	
-            addOption(list_district, "Huyện Mộ Đức","Huyện Mộ Đức");
-            addOption(list_district, "Huyện Đức Phổ","Huyện Đức Phổ");
-            addOption(list_district, "Huyện Ba Tơ","Huyện Ba Tơ");
-            addOption(list_district, "Huyện Sơn Tây","Huyện Sơn Tây");
-            addOption(list_district, "Huyện Tây Trà","Huyện Tây Trà");
-        } 
+        else if (list_city.value === "Tỉnh Quảng Ngãi") {
+            addOption(list_district, "Chọn quận huyện", "Chưa chọn quận/huyện");
+            addOption(list_district, "TP. Quảng Ngãi", "TP. Quảng Ngãi");
+            addOption(list_district, "Huyện Lý Sơn", "Huyện Lý Sơn");
+            addOption(list_district, "Huyện Bình Sơn", "Huyện Bình Sơn");
+            addOption(list_district, "Huyện Trà Bồng", "Huyện Trà Bồng");
+            addOption(list_district, "Huyện Sơn Tịnh", "Huyện Sơn Tịnh");
+            addOption(list_district, "Huyện Sơn Hà", "Huyện Sơn Hà");
+            addOption(list_district, "Huyện Tư Nghĩa", "Huyện Tư Nghĩa");
+            addOption(list_district, "Huyện Nghĩa Hành", "Huyện Nghĩa Hành");
+            addOption(list_district, "Huyện Minh Long", "Huyện Minh Long");
+            addOption(list_district, "Huyện Mộ Đức", "Huyện Mộ Đức");
+            addOption(list_district, "Huyện Đức Phổ", "Huyện Đức Phổ");
+            addOption(list_district, "Huyện Ba Tơ", "Huyện Ba Tơ");
+            addOption(list_district, "Huyện Sơn Tây", "Huyện Sơn Tây");
+            addOption(list_district, "Huyện Tây Trà", "Huyện Tây Trà");
+        }
         //Tinh Binh Dinh
-        else if(list_city.value === "Tỉnh Bình Định"){
-            addOption(list_district, "Chọn quận huyện","Chưa chọn quận/huyện");
-            addOption(list_district, "TP. Quy Nhơn","TP. Quy Nhơn");
-            addOption(list_district, "Huyện An Lão","Huyện An Lão");
-            addOption(list_district, "Huyện Hoài Ân","Huyện Hoài Ân");	
-            addOption(list_district, "Huyện Hoài Nhơn","Huyện Hoài Nhơn");
-            addOption(list_district, "Huyện Phù Mỹ","Huyện Phù Mỹ");
-            addOption(list_district, "Huyện Phù Cát","Huyện Phù Cát");
-            addOption(list_district, "Huyện Vĩnh Thạnh","Huyện Vĩnh Thạnh");	
-            addOption(list_district, "Huyện Tây Sơn","Huyện Tây Sơn");
-            addOption(list_district, "Huyện Vân Canh","Huyện Vân Canh");   
-            addOption(list_district, "Huyện An Nhơn","Huyện An Nhơn");    
-            addOption(list_district, "Huyện Tuy Phước","Huyện Tuy Phước");
-        }    
+        else if (list_city.value === "Tỉnh Bình Định") {
+            addOption(list_district, "Chọn quận huyện", "Chưa chọn quận/huyện");
+            addOption(list_district, "TP. Quy Nhơn", "TP. Quy Nhơn");
+            addOption(list_district, "Huyện An Lão", "Huyện An Lão");
+            addOption(list_district, "Huyện Hoài Ân", "Huyện Hoài Ân");
+            addOption(list_district, "Huyện Hoài Nhơn", "Huyện Hoài Nhơn");
+            addOption(list_district, "Huyện Phù Mỹ", "Huyện Phù Mỹ");
+            addOption(list_district, "Huyện Phù Cát", "Huyện Phù Cát");
+            addOption(list_district, "Huyện Vĩnh Thạnh", "Huyện Vĩnh Thạnh");
+            addOption(list_district, "Huyện Tây Sơn", "Huyện Tây Sơn");
+            addOption(list_district, "Huyện Vân Canh", "Huyện Vân Canh");
+            addOption(list_district, "Huyện An Nhơn", "Huyện An Nhơn");
+            addOption(list_district, "Huyện Tuy Phước", "Huyện Tuy Phước");
+        }
         //Tinh Phu Yen
-        else if(list_city.value === "Tỉnh Phú Yên"){
-            addOption(list_district, "Chọn quận huyện","Chưa chọn quận/huyện");
-            addOption(list_district, "TP. Tuy Hoà","TP. Tuy Hoà");
-            addOption(list_district, "Huyện Đồng Xuân","Huyện Đồng Xuân");	
-            addOption(list_district, "Thị xã Sông Cầu","Thị xã Sông Cầu");
-            addOption(list_district, "Huyện Tuy An","Huyện Tuy An");
-            addOption(list_district, "Huyện Sơn Hoà","Huyện Sơn Hoà");	
-            addOption(list_district, "Huyện Sông Hinh","Huyện Sông Hinh");
-            addOption(list_district, "Huyện Đông Hoà","Huyện Đông Hoà");
-            addOption(list_district, "Huyện Phú Hoà","Huyện Phú Hoà");
-            addOption(list_district, "Huyện Tây Hoà","Huyện Tây Hoà");
-        }     
+        else if (list_city.value === "Tỉnh Phú Yên") {
+            addOption(list_district, "Chọn quận huyện", "Chưa chọn quận/huyện");
+            addOption(list_district, "TP. Tuy Hoà", "TP. Tuy Hoà");
+            addOption(list_district, "Huyện Đồng Xuân", "Huyện Đồng Xuân");
+            addOption(list_district, "Thị xã Sông Cầu", "Thị xã Sông Cầu");
+            addOption(list_district, "Huyện Tuy An", "Huyện Tuy An");
+            addOption(list_district, "Huyện Sơn Hoà", "Huyện Sơn Hoà");
+            addOption(list_district, "Huyện Sông Hinh", "Huyện Sông Hinh");
+            addOption(list_district, "Huyện Đông Hoà", "Huyện Đông Hoà");
+            addOption(list_district, "Huyện Phú Hoà", "Huyện Phú Hoà");
+            addOption(list_district, "Huyện Tây Hoà", "Huyện Tây Hoà");
+        }
         //Tinh Khanh Hoa
-        else if(list_city.value === "Tỉnh Khánh Hoà"){
-            addOption(list_district, "Chọn quận huyện","Chưa chọn quận/huyện");
-            addOption(list_district, "TP. Nha Trang","TP. Nha Trang");
-            addOption(list_district, "Huyện Vạn Ninh","Huyện Vạn Ninh");	
-            addOption(list_district, "Huyện Ninh Hoà","Huyện Ninh Hoà");
-            addOption(list_district, "Huyện Diên Khánh","Huyện Diên Khánh");
-            addOption(list_district, "Huyện Khánh Vĩnh","Huyện Khánh Vĩnh");	
-            addOption(list_district, "Thị xã Cam Ranh","Thị xã Cam Ranh");
-            addOption(list_district, "Huyện Khánh Sơn","Huyện Khánh Sơn");
-            addOption(list_district, "Huyện đảo Trường Sa","Huyện đảo Trường Sa");
-            addOption(list_district, "Huyện Cam Lâm","Huyện Cam Lâm");
-        }  
+        else if (list_city.value === "Tỉnh Khánh Hoà") {
+            addOption(list_district, "Chọn quận huyện", "Chưa chọn quận/huyện");
+            addOption(list_district, "TP. Nha Trang", "TP. Nha Trang");
+            addOption(list_district, "Huyện Vạn Ninh", "Huyện Vạn Ninh");
+            addOption(list_district, "Huyện Ninh Hoà", "Huyện Ninh Hoà");
+            addOption(list_district, "Huyện Diên Khánh", "Huyện Diên Khánh");
+            addOption(list_district, "Huyện Khánh Vĩnh", "Huyện Khánh Vĩnh");
+            addOption(list_district, "Thị xã Cam Ranh", "Thị xã Cam Ranh");
+            addOption(list_district, "Huyện Khánh Sơn", "Huyện Khánh Sơn");
+            addOption(list_district, "Huyện đảo Trường Sa", "Huyện đảo Trường Sa");
+            addOption(list_district, "Huyện Cam Lâm", "Huyện Cam Lâm");
+        }
         //Tinh Ninh Thuan
-        else if(list_city.value === "Tỉnh Ninh Thuận"){
-            addOption(list_district, "Chọn quận huyện","Chưa chọn quận/huyện");
-            addOption(list_district, "TP. Phan Rang -Tháp Chàm","TP. Phan Rang -Tháp Chàm");
-            addOption(list_district, "Huyện Ninh Sơn","Huyện Ninh Sơn");
-            addOption(list_district, "Huyện Ninh Hải","Huyện Ninh Hải");
-            addOption(list_district, "Huyện Ninh Phước","Huyện Ninh Phước");
-            addOption(list_district, "Huyện Bác Ái","Huyện Bác Ái");
-            addOption(list_district, "Huyện Thuận Bắc","Huyện Thuận Bắc");
-            addOption(list_district, "Huyện Thuận Nam","Huyện Thuận Nam");
+        else if (list_city.value === "Tỉnh Ninh Thuận") {
+            addOption(list_district, "Chọn quận huyện", "Chưa chọn quận/huyện");
+            addOption(list_district, "TP. Phan Rang -Tháp Chàm", "TP. Phan Rang -Tháp Chàm");
+            addOption(list_district, "Huyện Ninh Sơn", "Huyện Ninh Sơn");
+            addOption(list_district, "Huyện Ninh Hải", "Huyện Ninh Hải");
+            addOption(list_district, "Huyện Ninh Phước", "Huyện Ninh Phước");
+            addOption(list_district, "Huyện Bác Ái", "Huyện Bác Ái");
+            addOption(list_district, "Huyện Thuận Bắc", "Huyện Thuận Bắc");
+            addOption(list_district, "Huyện Thuận Nam", "Huyện Thuận Nam");
         }
         //Tinh Binh Thuan
-        else if(list_city.value === "Tỉnh Bình Thuận"){
-            addOption(list_district, "Chọn quận huyện","Chưa chọn quận/huyện");
-            addOption(list_district, "TP. Phan Thiết","TP. Phan Thiết");
-            addOption(list_district, "Huyện Tuy Phong","Huyện Tuy Phong");
-            addOption(list_district, "Huyện Bắc Bình","uyện Bắc Bình");	
-            addOption(list_district, "H. Hàm Thuận Bắc","H. Hàm Thuận Bắc");
-            addOption(list_district, "H. Hàm Thuận Nam","H. Hàm Thuận Nam");
-            addOption(list_district, "Huyện Hàm Tân","Huyện Hàm Tân");
-            addOption(list_district, "Huyện Đức Linh","Huyện Đức Linh");	
-            addOption(list_district, "Huyện Tánh Linh","Huyện Tánh Linh");
-            addOption(list_district, "Huyện đảo Phú Quý","Huyện đảo Phú Quý");
-            addOption(list_district, "Thị xã La Gi","Thị xã La Gi");
+        else if (list_city.value === "Tỉnh Bình Thuận") {
+            addOption(list_district, "Chọn quận huyện", "Chưa chọn quận/huyện");
+            addOption(list_district, "TP. Phan Thiết", "TP. Phan Thiết");
+            addOption(list_district, "Huyện Tuy Phong", "Huyện Tuy Phong");
+            addOption(list_district, "Huyện Bắc Bình", "uyện Bắc Bình");
+            addOption(list_district, "H. Hàm Thuận Bắc", "H. Hàm Thuận Bắc");
+            addOption(list_district, "H. Hàm Thuận Nam", "H. Hàm Thuận Nam");
+            addOption(list_district, "Huyện Hàm Tân", "Huyện Hàm Tân");
+            addOption(list_district, "Huyện Đức Linh", "Huyện Đức Linh");
+            addOption(list_district, "Huyện Tánh Linh", "Huyện Tánh Linh");
+            addOption(list_district, "Huyện đảo Phú Quý", "Huyện đảo Phú Quý");
+            addOption(list_district, "Thị xã La Gi", "Thị xã La Gi");
         }
         //Tinh Kon Tum
-        else if(list_city.value === "Tỉnh Kon Tum"){
-            addOption(list_district, "Chọn quận huyện","Chưa chọn quận/huyện");
-            addOption(list_district, "TP. KonTum","TP. KonTum");
-            addOption(list_district, "Huyện Đăk Glei","Huyện Đăk Glei");	
-            addOption(list_district, "Huyện Ngọc Hồi","Huyện Ngọc Hồi");
-            addOption(list_district, "Huyện Đăk Tô","Huyện Đăk Tô");
-            addOption(list_district, "Huyện Sa Thầy","Huyện Sa Thầy");	
-            addOption(list_district, "Huyện Kon Plong","Huyện Kon Plong");
-            addOption(list_district, "Huyện Đăk Hà","Huyện Đăk Hà");
-            addOption(list_district, "Huyện Kon Rẫy","Huyện Kon Rẫy");
-            addOption(list_district, "Huyện Tu Mơ Rông","Huyện Tu Mơ Rông");
+        else if (list_city.value === "Tỉnh Kon Tum") {
+            addOption(list_district, "Chọn quận huyện", "Chưa chọn quận/huyện");
+            addOption(list_district, "TP. KonTum", "TP. KonTum");
+            addOption(list_district, "Huyện Đăk Glei", "Huyện Đăk Glei");
+            addOption(list_district, "Huyện Ngọc Hồi", "Huyện Ngọc Hồi");
+            addOption(list_district, "Huyện Đăk Tô", "Huyện Đăk Tô");
+            addOption(list_district, "Huyện Sa Thầy", "Huyện Sa Thầy");
+            addOption(list_district, "Huyện Kon Plong", "Huyện Kon Plong");
+            addOption(list_district, "Huyện Đăk Hà", "Huyện Đăk Hà");
+            addOption(list_district, "Huyện Kon Rẫy", "Huyện Kon Rẫy");
+            addOption(list_district, "Huyện Tu Mơ Rông", "Huyện Tu Mơ Rông");
         }
         //Tinh Gia Lai
-        else if(list_city.value === "Tỉnh Gia Lai"){
-            addOption(list_district, "Chọn quận huyện","Chưa chọn quận/huyện");
-            addOption(list_district, "TP. Pleiku","TP. Pleiku");
-            addOption(list_district, "Huyện Chư Păh","Huyện Chư Păh");
-            addOption(list_district, "Huyện Mang Yang","Huyện Mang Yang");
-            addOption(list_district, "Huyện Kbang","Huyện Kbang");
-            addOption(list_district, "Thị xã An Khê","Thị xã An Khê");       	
-            addOption(list_district, "Huyện Kông Chro","Huyện Kông Chro");
-            addOption(list_district, "Huyện Đức Cơ","Huyện Đức Cơ");
-            addOption(list_district, "Huyện Chư Prông","Huyện Chư Prông");
-            addOption(list_district, "Huyện Chư Sê","Huyện Chư Sê");
-            addOption(list_district, "Thị xã Ayunpa","Thị xã Ayunpa");
-            addOption(list_district, "Huyện Krông Pa","Huyện Krông Pa");	
-            addOption(list_district, "Huyện Ia Grai","Huyện Ia Grai");
-            addOption(list_district, "Huyện Đăk Đoa","Huyện Đăk Đoa");
-            addOption(list_district, "Huyện Ia Pa","Huyện Ia Pa");
-            addOption(list_district, "Huyện Đăk Pơ","Huyện Đăk Pơ");
-            addOption(list_district, "Huyện Phú Thiện","Huyện Phú Thiện");
-            addOption(list_district, "Huyện Chư Pưh","Huyện Chư Pưh");
+        else if (list_city.value === "Tỉnh Gia Lai") {
+            addOption(list_district, "Chọn quận huyện", "Chưa chọn quận/huyện");
+            addOption(list_district, "TP. Pleiku", "TP. Pleiku");
+            addOption(list_district, "Huyện Chư Păh", "Huyện Chư Păh");
+            addOption(list_district, "Huyện Mang Yang", "Huyện Mang Yang");
+            addOption(list_district, "Huyện Kbang", "Huyện Kbang");
+            addOption(list_district, "Thị xã An Khê", "Thị xã An Khê");
+            addOption(list_district, "Huyện Kông Chro", "Huyện Kông Chro");
+            addOption(list_district, "Huyện Đức Cơ", "Huyện Đức Cơ");
+            addOption(list_district, "Huyện Chư Prông", "Huyện Chư Prông");
+            addOption(list_district, "Huyện Chư Sê", "Huyện Chư Sê");
+            addOption(list_district, "Thị xã Ayunpa", "Thị xã Ayunpa");
+            addOption(list_district, "Huyện Krông Pa", "Huyện Krông Pa");
+            addOption(list_district, "Huyện Ia Grai", "Huyện Ia Grai");
+            addOption(list_district, "Huyện Đăk Đoa", "Huyện Đăk Đoa");
+            addOption(list_district, "Huyện Ia Pa", "Huyện Ia Pa");
+            addOption(list_district, "Huyện Đăk Pơ", "Huyện Đăk Pơ");
+            addOption(list_district, "Huyện Phú Thiện", "Huyện Phú Thiện");
+            addOption(list_district, "Huyện Chư Pưh", "Huyện Chư Pưh");
         }
         //Tinh Dak Lak
-        else if(list_city.value === "Tỉnh Đắk Lắk"){
-            addOption(list_district, "Chọn quận huyện","Chưa chọn quận/huyện");
-            addOption(list_district, "TP. Buôn Ma Thuột","TP. Buôn Ma Thuột");
-            addOption(list_district, "Huyện Ea H Leo","Huyện Ea H Leo");
-            addOption(list_district, "Huyện Krông Buk","Huyện Krông Buk");
-            addOption(list_district, "Huyện Krông Năng","Huyện Krông Năng");
-            addOption(list_district, "Huyện Ea Súp","Huyện Ea Súp");	
-            addOption(list_district, "Huyện Cư M’gar","Huyện Cư M’gar");
-            addOption(list_district, "Huyện Krông Pắc","Huyện Krông Pắc");
-            addOption(list_district, "Huyện Ea Kar","Huyện Ea Kar");
-            addOption(list_district, "Huyện M'Đrăk","Huyện M'Đrăk");
-            addOption(list_district, "Huyện Krông Ana","Huyện Krông Ana");	
-            addOption(list_district, "Huyện Krông Bông","Huyện Krông Bông");
-            addOption(list_district, "Huyện Lăk","Huyện Lăk");
-            addOption(list_district, "Huyện Buôn Đôn","Huyện Buôn Đôn");
-            addOption(list_district, "Huyện Cư Kuin","Huyện Cư Kuin");
-            addOption(list_district, "Thị xã Buôn Hồ","Thị xã Buôn Hồ");
+        else if (list_city.value === "Tỉnh Đắk Lắk") {
+            addOption(list_district, "Chọn quận huyện", "Chưa chọn quận/huyện");
+            addOption(list_district, "TP. Buôn Ma Thuột", "TP. Buôn Ma Thuột");
+            addOption(list_district, "Huyện Ea H Leo", "Huyện Ea H Leo");
+            addOption(list_district, "Huyện Krông Buk", "Huyện Krông Buk");
+            addOption(list_district, "Huyện Krông Năng", "Huyện Krông Năng");
+            addOption(list_district, "Huyện Ea Súp", "Huyện Ea Súp");
+            addOption(list_district, "Huyện Cư M’gar", "Huyện Cư M’gar");
+            addOption(list_district, "Huyện Krông Pắc", "Huyện Krông Pắc");
+            addOption(list_district, "Huyện Ea Kar", "Huyện Ea Kar");
+            addOption(list_district, "Huyện M'Đrăk", "Huyện M'Đrăk");
+            addOption(list_district, "Huyện Krông Ana", "Huyện Krông Ana");
+            addOption(list_district, "Huyện Krông Bông", "Huyện Krông Bông");
+            addOption(list_district, "Huyện Lăk", "Huyện Lăk");
+            addOption(list_district, "Huyện Buôn Đôn", "Huyện Buôn Đôn");
+            addOption(list_district, "Huyện Cư Kuin", "Huyện Cư Kuin");
+            addOption(list_district, "Thị xã Buôn Hồ", "Thị xã Buôn Hồ");
         }
         //Tinh Dak Nong
-        else if(list_city.value === "Tỉnh Đắk Nông"){
-            addOption(list_district, "Chọn quận huyện","Chưa chọn quận/huyện");
-            addOption(list_district, "Thị xã Gia Nghĩa","Thị xã Gia Nghĩa");
-            addOption(list_district, "Huyện Đắk R’Lấp","Huyện Đắk R’Lấp");	
-            addOption(list_district, "Huyện Đắk Mil","Huyện Đắk Mil");
-            addOption(list_district, "Huyện Cư Jút","Huyện Cư Jút");
-            addOption(list_district, "Huyện Đắk Song","Huyện Đắk Song");	
-            addOption(list_district, "Huyện Krông Nô","Huyện Krông Nô");
-            addOption(list_district, "Huyện Đắk GLong","Huyện Đắk GLong");
-            addOption(list_district, "Huyện Tuy Đức","Huyện Tuy Đức");
+        else if (list_city.value === "Tỉnh Đắk Nông") {
+            addOption(list_district, "Chọn quận huyện", "Chưa chọn quận/huyện");
+            addOption(list_district, "Thị xã Gia Nghĩa", "Thị xã Gia Nghĩa");
+            addOption(list_district, "Huyện Đắk R’Lấp", "Huyện Đắk R’Lấp");
+            addOption(list_district, "Huyện Đắk Mil", "Huyện Đắk Mil");
+            addOption(list_district, "Huyện Cư Jút", "Huyện Cư Jút");
+            addOption(list_district, "Huyện Đắk Song", "Huyện Đắk Song");
+            addOption(list_district, "Huyện Krông Nô", "Huyện Krông Nô");
+            addOption(list_district, "Huyện Đắk GLong", "Huyện Đắk GLong");
+            addOption(list_district, "Huyện Tuy Đức", "Huyện Tuy Đức");
         }
         //Tinh Lam Dong
-        else if(list_city.value === "Tỉnh Lâm Đồng"){
-            addOption(list_district, "Chọn quận huyện","Chưa chọn quận/huyện");
-            addOption(list_district, "TP. Đà Lạt","TP. Đà Lạt");
-            addOption(list_district, "Thị xã Bảo Lộc","Thị xã Bảo Lộc");
-            addOption(list_district, "Huyện Đức Trọng","Huyện Đức Trọng");	
-            addOption(list_district, "Huyện Di Linh","Huyện Di Linh");
-            addOption(list_district, "Huyện Đơn Dương","Huyện Đơn Dương");
-            addOption(list_district, "Huyện Lạc Dương","Huyện Lạc Dương");
-            addOption(list_district, "Huyện Đạ Huoai","Huyện Đạ Huoai");	
-            addOption(list_district, "Huyện Đạ Tẻh","Huyện Đạ Tẻh");
-            addOption(list_district, "Huyện Cát Tiên","Huyện Cát Tiên");
-            addOption(list_district, "Huyện Lâm Hà","Huyện Lâm Hà");
-            addOption(list_district, "Huyện Bảo Lâm","Huyện Bảo Lâm");
-            addOption(list_district, "Huyện Đam Rông","Huyện Đam Rông");			
+        else if (list_city.value === "Tỉnh Lâm Đồng") {
+            addOption(list_district, "Chọn quận huyện", "Chưa chọn quận/huyện");
+            addOption(list_district, "TP. Đà Lạt", "TP. Đà Lạt");
+            addOption(list_district, "Thị xã Bảo Lộc", "Thị xã Bảo Lộc");
+            addOption(list_district, "Huyện Đức Trọng", "Huyện Đức Trọng");
+            addOption(list_district, "Huyện Di Linh", "Huyện Di Linh");
+            addOption(list_district, "Huyện Đơn Dương", "Huyện Đơn Dương");
+            addOption(list_district, "Huyện Lạc Dương", "Huyện Lạc Dương");
+            addOption(list_district, "Huyện Đạ Huoai", "Huyện Đạ Huoai");
+            addOption(list_district, "Huyện Đạ Tẻh", "Huyện Đạ Tẻh");
+            addOption(list_district, "Huyện Cát Tiên", "Huyện Cát Tiên");
+            addOption(list_district, "Huyện Lâm Hà", "Huyện Lâm Hà");
+            addOption(list_district, "Huyện Bảo Lâm", "Huyện Bảo Lâm");
+            addOption(list_district, "Huyện Đam Rông", "Huyện Đam Rông");
         }
         //Tinh Binh Phuoc
-        else if(list_city.value === "Tỉnh Bình Phước"){
-            addOption(list_district, "Chọn quận huyện","Chưa chọn quận/huyện");
-            addOption(list_district, "Thị xã Đồng Xoài","Thị xã Đồng Xoài");
-            addOption(list_district, "Huyện Đồng Phú","Huyện Đồng Phú");
-            addOption(list_district, "Huyện Chơn Thành","Huyện Chơn Thành");	
-            addOption(list_district, "Huyện Bình Long","Huyện Bình Long");
-            addOption(list_district, "Huyện Lộc Ninh","Huyện Lộc Ninh");
-            addOption(list_district, "Huyện Bù Đốp","Huyện Bù Đốp");
-            addOption(list_district, "Huyện Phước Long","Huyện Phước Long");	
-            addOption(list_district, "Huyện Bù Đăng","Huyện Bù Đăng");
-            addOption(list_district, "Huyện Hớn Quản","Huyện Hớn Quản");
-            addOption(list_district, "Huyện Bù Gia Mập","Huyện Bù Gia Mập");
+        else if (list_city.value === "Tỉnh Bình Phước") {
+            addOption(list_district, "Chọn quận huyện", "Chưa chọn quận/huyện");
+            addOption(list_district, "Thị xã Đồng Xoài", "Thị xã Đồng Xoài");
+            addOption(list_district, "Huyện Đồng Phú", "Huyện Đồng Phú");
+            addOption(list_district, "Huyện Chơn Thành", "Huyện Chơn Thành");
+            addOption(list_district, "Huyện Bình Long", "Huyện Bình Long");
+            addOption(list_district, "Huyện Lộc Ninh", "Huyện Lộc Ninh");
+            addOption(list_district, "Huyện Bù Đốp", "Huyện Bù Đốp");
+            addOption(list_district, "Huyện Phước Long", "Huyện Phước Long");
+            addOption(list_district, "Huyện Bù Đăng", "Huyện Bù Đăng");
+            addOption(list_district, "Huyện Hớn Quản", "Huyện Hớn Quản");
+            addOption(list_district, "Huyện Bù Gia Mập", "Huyện Bù Gia Mập");
         }
         //Tinh Tay Ninh
-        else if(list_city.value === "Tỉnh Tây Ninh"){
-            addOption(list_district, "Chọn quận huyện","Chưa chọn quận/huyện");
-            addOption(list_district, "Thị xã Tây Ninh","Thị xã Tây Ninh");
-            addOption(list_district, "Huyện Tân Biên","Huyện Tân Biên");
-            addOption(list_district, "Huyện Tân Châu","Huyện Tân Châu");	
-            addOption(list_district, "H. Dương Minh Châu","H. Dương Minh Châu");
-            addOption(list_district, "Huyện Châu Thành","Huyện Châu Thành");
-            addOption(list_district, "Huyện Hòa Thành","Huyện Hòa Thành");	
-            addOption(list_district, "Huyện Bến Cầu","Huyện Bến Cầu");
-            addOption(list_district, "Huyện Gò Dầu","Huyện Gò Dầu");
-            addOption(list_district, "Huyện Trảng Bàng","Huyện Trảng Bàng");
+        else if (list_city.value === "Tỉnh Tây Ninh") {
+            addOption(list_district, "Chọn quận huyện", "Chưa chọn quận/huyện");
+            addOption(list_district, "Thị xã Tây Ninh", "Thị xã Tây Ninh");
+            addOption(list_district, "Huyện Tân Biên", "Huyện Tân Biên");
+            addOption(list_district, "Huyện Tân Châu", "Huyện Tân Châu");
+            addOption(list_district, "H. Dương Minh Châu", "H. Dương Minh Châu");
+            addOption(list_district, "Huyện Châu Thành", "Huyện Châu Thành");
+            addOption(list_district, "Huyện Hòa Thành", "Huyện Hòa Thành");
+            addOption(list_district, "Huyện Bến Cầu", "Huyện Bến Cầu");
+            addOption(list_district, "Huyện Gò Dầu", "Huyện Gò Dầu");
+            addOption(list_district, "Huyện Trảng Bàng", "Huyện Trảng Bàng");
         }
         //Tinh Binh Duong
-        else if(list_city.value === "Tỉnh Bình Dương"){
-            addOption(list_district, "Chọn quận huyện","Chưa chọn quận/huyện");
-            addOption(list_district, "Thị xã Thủ Dầu Một","Thị xã Thủ Dầu Một");
-            addOption(list_district, "Huyện Bến Cát","Huyện Bến Cát");	
-            addOption(list_district, "Huyện Tân Uyên","Huyện Tân Uyên");
-            addOption(list_district, "Huyện Thuận An","Huyện Thuận An");
-            addOption(list_district, "Huyện Dĩ An","Huyện Dĩ An");	
-            addOption(list_district, "Huyện Phú Giáo","Huyện Phú Giáo");
-            addOption(list_district, "Huyện Dầu Tiếng","Huyện Dầu Tiếng");
+        else if (list_city.value === "Tỉnh Bình Dương") {
+            addOption(list_district, "Chọn quận huyện", "Chưa chọn quận/huyện");
+            addOption(list_district, "Thị xã Thủ Dầu Một", "Thị xã Thủ Dầu Một");
+            addOption(list_district, "Huyện Bến Cát", "Huyện Bến Cát");
+            addOption(list_district, "Huyện Tân Uyên", "Huyện Tân Uyên");
+            addOption(list_district, "Huyện Thuận An", "Huyện Thuận An");
+            addOption(list_district, "Huyện Dĩ An", "Huyện Dĩ An");
+            addOption(list_district, "Huyện Phú Giáo", "Huyện Phú Giáo");
+            addOption(list_district, "Huyện Dầu Tiếng", "Huyện Dầu Tiếng");
         }
         //Tinh Dong Nai
-        else if(list_city.value === "Tỉnh Đồng Nai"){
-            addOption(list_district, "Chọn quận huyện","Chưa chọn quận/huyện");
-            addOption(list_district, "TP. Biên Hoà","TP. Biên Hoà");
-            addOption(list_district, "Huyện Vĩnh Cửu","Huyện Vĩnh Cửu");
-            addOption(list_district, "Huyện Tân Phú","Huyện Tân Phú");	
-            addOption(list_district, "Huyện Định Quán","Huyện Định Quán");
-            addOption(list_district, "Huyện Thống Nhất","Huyện Thống Nhất");
-            addOption(list_district, "Thị xã Long Khánh","Thị xã Long Khánh");
-            addOption(list_district, "Huyện Xuân Lộc","Huyện Xuân Lộc");	
-            addOption(list_district, "Huyện Long Thành","Huyện Long Thành");
-            addOption(list_district, "Huyện Nhơn Trạch","Huyện Nhơn Trạch");
-            addOption(list_district, "Huyện Trảng Bom","Huyện Trảng Bom");
-            addOption(list_district, "Huyện Cẩm Mỹ","Huyện Cẩm Mỹ");
+        else if (list_city.value === "Tỉnh Đồng Nai") {
+            addOption(list_district, "Chọn quận huyện", "Chưa chọn quận/huyện");
+            addOption(list_district, "TP. Biên Hoà", "TP. Biên Hoà");
+            addOption(list_district, "Huyện Vĩnh Cửu", "Huyện Vĩnh Cửu");
+            addOption(list_district, "Huyện Tân Phú", "Huyện Tân Phú");
+            addOption(list_district, "Huyện Định Quán", "Huyện Định Quán");
+            addOption(list_district, "Huyện Thống Nhất", "Huyện Thống Nhất");
+            addOption(list_district, "Thị xã Long Khánh", "Thị xã Long Khánh");
+            addOption(list_district, "Huyện Xuân Lộc", "Huyện Xuân Lộc");
+            addOption(list_district, "Huyện Long Thành", "Huyện Long Thành");
+            addOption(list_district, "Huyện Nhơn Trạch", "Huyện Nhơn Trạch");
+            addOption(list_district, "Huyện Trảng Bom", "Huyện Trảng Bom");
+            addOption(list_district, "Huyện Cẩm Mỹ", "Huyện Cẩm Mỹ");
         }
         //Tinh Vung Tau
-        else if(list_city.value === "Tỉnh Bà Rịa - Vũng Tàu"){
-            addOption(list_district, "Chọn quận huyện","Chưa chọn quận/huyện");
-            addOption(list_district, "TP. Vũng Tàu","TP. Vũng Tàu");
-            addOption(list_district, "Thị xã Bà Rịa","Thị xã Bà Rịa");
-            addOption(list_district, "Huyện Xuyên Mộc","Huyện Xuyên Mộc");
-            addOption(list_district, "Huyện Long Điền","Huyện Long Điền");
-            addOption(list_district, "Huyện Côn Đảo","Huyện Côn Đảo");	
-            addOption(list_district, "Huyện Tân Thành","Huyện Tân Thành");
-            addOption(list_district, "Huyện Châu Đức","Huyện Châu Đức");
-            addOption(list_district, "Huyện Đất Đỏ","Huyện Đất Đỏ");
+        else if (list_city.value === "Tỉnh Bà Rịa - Vũng Tàu") {
+            addOption(list_district, "Chọn quận huyện", "Chưa chọn quận/huyện");
+            addOption(list_district, "TP. Vũng Tàu", "TP. Vũng Tàu");
+            addOption(list_district, "Thị xã Bà Rịa", "Thị xã Bà Rịa");
+            addOption(list_district, "Huyện Xuyên Mộc", "Huyện Xuyên Mộc");
+            addOption(list_district, "Huyện Long Điền", "Huyện Long Điền");
+            addOption(list_district, "Huyện Côn Đảo", "Huyện Côn Đảo");
+            addOption(list_district, "Huyện Tân Thành", "Huyện Tân Thành");
+            addOption(list_district, "Huyện Châu Đức", "Huyện Châu Đức");
+            addOption(list_district, "Huyện Đất Đỏ", "Huyện Đất Đỏ");
         }
         //Tinh Long An
-        else if(list_city.value === "Tỉnh Long An"){
-            addOption(list_district, "Chọn quận huyện","Chưa chọn quận/huyện");
-            addOption(list_district, "TP. Tân An","TP. Tân An");
-            addOption(list_district, "Huyện Vĩnh Hưng","Huyện Vĩnh Hưng");
-            addOption(list_district, "Huyện Mộc Hoá","Huyện Mộc Hoá");
-            addOption(list_district, "Huyện Tân Thạnh","Huyện Tân Thạnh");	
-            addOption(list_district, "Huyện Thạnh Hoá","Huyện Thạnh Hoá");
-            addOption(list_district, "Huyện Đức Huệ","Huyện Đức Huệ");
-            addOption(list_district, "Huyện Đức Hoà","Huyện Đức Hoà");
-            addOption(list_district, "Huyện Bến Lức","Huyện Bến Lức");
-            addOption(list_district, "Huyện Thủ Thừa","Huyện Thủ Thừa");	
-            addOption(list_district, "Huyện Châu Thành","Huyện Châu Thành");
-            addOption(list_district, "Huyện Tân Trụ","Huyện Tân Trụ");
-            addOption(list_district, "Huyện Cần Đước","Huyện Cần Đước");
-            addOption(list_district, "Huyện Cần Giuộc","Huyện Cần Giuộc");
-            addOption(list_district, "Huyện Tân Hưng","Huyện Tân Hưng");			
+        else if (list_city.value === "Tỉnh Long An") {
+            addOption(list_district, "Chọn quận huyện", "Chưa chọn quận/huyện");
+            addOption(list_district, "TP. Tân An", "TP. Tân An");
+            addOption(list_district, "Huyện Vĩnh Hưng", "Huyện Vĩnh Hưng");
+            addOption(list_district, "Huyện Mộc Hoá", "Huyện Mộc Hoá");
+            addOption(list_district, "Huyện Tân Thạnh", "Huyện Tân Thạnh");
+            addOption(list_district, "Huyện Thạnh Hoá", "Huyện Thạnh Hoá");
+            addOption(list_district, "Huyện Đức Huệ", "Huyện Đức Huệ");
+            addOption(list_district, "Huyện Đức Hoà", "Huyện Đức Hoà");
+            addOption(list_district, "Huyện Bến Lức", "Huyện Bến Lức");
+            addOption(list_district, "Huyện Thủ Thừa", "Huyện Thủ Thừa");
+            addOption(list_district, "Huyện Châu Thành", "Huyện Châu Thành");
+            addOption(list_district, "Huyện Tân Trụ", "Huyện Tân Trụ");
+            addOption(list_district, "Huyện Cần Đước", "Huyện Cần Đước");
+            addOption(list_district, "Huyện Cần Giuộc", "Huyện Cần Giuộc");
+            addOption(list_district, "Huyện Tân Hưng", "Huyện Tân Hưng");
         }
         //Tinh Tien Giang
-        else if(list_city.value === "Tỉnh Tiền Giang"){
-            addOption(list_district, "Chọn quận huyện","Chưa chọn quận/huyện");
-            addOption(list_district, "TP. Mỹ Tho","TP. Mỹ Tho");
-            addOption(list_district, "Thị xã Gò Công","Thị xã Gò Công");
-            addOption(list_district, "Huyện Cái Bè","Huyện Cái Bè");	
-            addOption(list_district, "Huyện Cai Lậy","Huyện Cai Lậy");
-            addOption(list_district, "Huyện Châu Thành","Huyện Châu Thành");
-            addOption(list_district, "Huyện Chợ Gạo","Huyện Chợ Gạo");
-            addOption(list_district, "Huyện Gò Công Tây","Huyện Gò Công Tây");	
-            addOption(list_district, "Huyện Gò Công Đông","Huyện Gò Công Đông");
-            addOption(list_district, "Huyện Tân Phước","Huyện Tân Phước");
-            addOption(list_district, "Huyện Tân Phú Đông","Huyện Tân Phú Đông");
+        else if (list_city.value === "Tỉnh Tiền Giang") {
+            addOption(list_district, "Chọn quận huyện", "Chưa chọn quận/huyện");
+            addOption(list_district, "TP. Mỹ Tho", "TP. Mỹ Tho");
+            addOption(list_district, "Thị xã Gò Công", "Thị xã Gò Công");
+            addOption(list_district, "Huyện Cái Bè", "Huyện Cái Bè");
+            addOption(list_district, "Huyện Cai Lậy", "Huyện Cai Lậy");
+            addOption(list_district, "Huyện Châu Thành", "Huyện Châu Thành");
+            addOption(list_district, "Huyện Chợ Gạo", "Huyện Chợ Gạo");
+            addOption(list_district, "Huyện Gò Công Tây", "Huyện Gò Công Tây");
+            addOption(list_district, "Huyện Gò Công Đông", "Huyện Gò Công Đông");
+            addOption(list_district, "Huyện Tân Phước", "Huyện Tân Phước");
+            addOption(list_district, "Huyện Tân Phú Đông", "Huyện Tân Phú Đông");
         }
         //Tinh Ben Tre
-        else if(list_city.value === "Tỉnh Bến Tre"){
-            addOption(list_district, "Chọn quận huyện","Chưa chọn quận/huyện");
-            addOption(list_district, "TP. Bến Tre","TP. Bến Tre");
-            addOption(list_district, "Huyện Châu Thành","Huyện Châu Thành");	
-            addOption(list_district, "Huyện Chợ Lách","Huyện Chợ Lách");
-            addOption(list_district, "Huyện Mỏ Cày Bắc","Huyện Mỏ Cày Bắc");
-            addOption(list_district, "Huyện Giồng Trôm","Huyện Giồng Trôm");	
-            addOption(list_district, "Huyện Bình Đại","Huyện Bình Đại");
-            addOption(list_district, "Huyện Ba Tri","Huyện Ba Tri");
-            addOption(list_district, "Huyện Thạnh Phú","Huyện Thạnh Phú");
-            addOption(list_district, "Huyện Mỏ Cày Nam","Huyện Mỏ Cày Nam");
-        }	
+        else if (list_city.value === "Tỉnh Bến Tre") {
+            addOption(list_district, "Chọn quận huyện", "Chưa chọn quận/huyện");
+            addOption(list_district, "TP. Bến Tre", "TP. Bến Tre");
+            addOption(list_district, "Huyện Châu Thành", "Huyện Châu Thành");
+            addOption(list_district, "Huyện Chợ Lách", "Huyện Chợ Lách");
+            addOption(list_district, "Huyện Mỏ Cày Bắc", "Huyện Mỏ Cày Bắc");
+            addOption(list_district, "Huyện Giồng Trôm", "Huyện Giồng Trôm");
+            addOption(list_district, "Huyện Bình Đại", "Huyện Bình Đại");
+            addOption(list_district, "Huyện Ba Tri", "Huyện Ba Tri");
+            addOption(list_district, "Huyện Thạnh Phú", "Huyện Thạnh Phú");
+            addOption(list_district, "Huyện Mỏ Cày Nam", "Huyện Mỏ Cày Nam");
+        }
         //Tinh Tra Vinh
-        else if(list_city.value === "Tỉnh Trà Vinh"){
-            addOption(list_district, "Chọn quận huyện","Chưa chọn quận/huyện");
-            addOption(list_district, "TP. Trà Vinh","TP. Trà Vinh");
-            addOption(list_district, "Huyện Càng Long","Huyện Càng Long");	
-            addOption(list_district, "Huyện Cầu Kè","Huyện Cầu Kè");
-            addOption(list_district, "Huyện Tiểu Cần","Huyện Tiểu Cần");
-            addOption(list_district, "Huyện Châu Thành","Huyện Châu Thành");	
-            addOption(list_district, "Huyện Trà Cú","Huyện Trà Cú");
-            addOption(list_district, "Huyện Cầu Ngang","Huyện Cầu Ngang");
-            addOption(list_district, "Huyện Duyên Hải","Huyện Duyên Hải");
+        else if (list_city.value === "Tỉnh Trà Vinh") {
+            addOption(list_district, "Chọn quận huyện", "Chưa chọn quận/huyện");
+            addOption(list_district, "TP. Trà Vinh", "TP. Trà Vinh");
+            addOption(list_district, "Huyện Càng Long", "Huyện Càng Long");
+            addOption(list_district, "Huyện Cầu Kè", "Huyện Cầu Kè");
+            addOption(list_district, "Huyện Tiểu Cần", "Huyện Tiểu Cần");
+            addOption(list_district, "Huyện Châu Thành", "Huyện Châu Thành");
+            addOption(list_district, "Huyện Trà Cú", "Huyện Trà Cú");
+            addOption(list_district, "Huyện Cầu Ngang", "Huyện Cầu Ngang");
+            addOption(list_district, "Huyện Duyên Hải", "Huyện Duyên Hải");
         }
         //Tinh Vinh Long
-        else if(list_city.value === "Tỉnh Vĩnh Long"){
-            addOption(list_district, "Chọn quận huyện","Chưa chọn quận/huyện");
-            addOption(list_district, "TP. Vĩnh Long","TP. Vĩnh Long");
-            addOption(list_district, "Huyện Long Hồ","Huyện Long Hồ");	
-            addOption(list_district, "Huyện Mang Thít","Huyện Mang Thít");
-            addOption(list_district, "Huyện Bình Minh","Huyện Bình Minh");
-            addOption(list_district, "Huyện Tam Bình","Huyện Tam Bình");	
-            addOption(list_district, "Huyện Trà Ôn","Huyện Trà Ôn");
-            addOption(list_district, "Huyện Vũng Liêm","Huyện Vũng Liêm");
-            addOption(list_district, "Huyện Bình Tân","Huyện Bình Tân");
+        else if (list_city.value === "Tỉnh Vĩnh Long") {
+            addOption(list_district, "Chọn quận huyện", "Chưa chọn quận/huyện");
+            addOption(list_district, "TP. Vĩnh Long", "TP. Vĩnh Long");
+            addOption(list_district, "Huyện Long Hồ", "Huyện Long Hồ");
+            addOption(list_district, "Huyện Mang Thít", "Huyện Mang Thít");
+            addOption(list_district, "Huyện Bình Minh", "Huyện Bình Minh");
+            addOption(list_district, "Huyện Tam Bình", "Huyện Tam Bình");
+            addOption(list_district, "Huyện Trà Ôn", "Huyện Trà Ôn");
+            addOption(list_district, "Huyện Vũng Liêm", "Huyện Vũng Liêm");
+            addOption(list_district, "Huyện Bình Tân", "Huyện Bình Tân");
         }
         //Tinh Dong Thap
-        else if(list_city.value === "Tỉnh Đồng Tháp"){
-            addOption(list_district, "Chọn quận huyện","Chưa chọn quận/huyện");
-            addOption(list_district, "TP. Cao Lãnh","TP. Cao Lãnh");
-            addOption(list_district, "Thị xã Sa Đéc","Thị xã Sa Đéc");
-            addOption(list_district, "Huyện Tân Hồng","Huyện Tân Hồng");	
-            addOption(list_district, "Huyện Hồng Ngự","Huyện Hồng Ngự");
-            addOption(list_district, "Huyện Tam Nông","Huyện Tam Nông");
-            addOption(list_district, "Huyện Thanh Bình","Huyện Thanh Bình");
-            addOption(list_district, "Huyện Cao Lãnh","Huyện Cao Lãnh");	
-            addOption(list_district, "Huyện Lấp Vò","Huyện Lấp Vò");
-            addOption(list_district, "Huyện Tháp Mười","Huyện Tháp Mười");
-            addOption(list_district, "Huyện Lai Vung","Huyện Lai Vung");
-            addOption(list_district, "Huyện Châu Thành","Huyện Châu Thành");
-            addOption(list_district, "Thị xã Hồng Ngự","Thị xã Hồng Ngự");
+        else if (list_city.value === "Tỉnh Đồng Tháp") {
+            addOption(list_district, "Chọn quận huyện", "Chưa chọn quận/huyện");
+            addOption(list_district, "TP. Cao Lãnh", "TP. Cao Lãnh");
+            addOption(list_district, "Thị xã Sa Đéc", "Thị xã Sa Đéc");
+            addOption(list_district, "Huyện Tân Hồng", "Huyện Tân Hồng");
+            addOption(list_district, "Huyện Hồng Ngự", "Huyện Hồng Ngự");
+            addOption(list_district, "Huyện Tam Nông", "Huyện Tam Nông");
+            addOption(list_district, "Huyện Thanh Bình", "Huyện Thanh Bình");
+            addOption(list_district, "Huyện Cao Lãnh", "Huyện Cao Lãnh");
+            addOption(list_district, "Huyện Lấp Vò", "Huyện Lấp Vò");
+            addOption(list_district, "Huyện Tháp Mười", "Huyện Tháp Mười");
+            addOption(list_district, "Huyện Lai Vung", "Huyện Lai Vung");
+            addOption(list_district, "Huyện Châu Thành", "Huyện Châu Thành");
+            addOption(list_district, "Thị xã Hồng Ngự", "Thị xã Hồng Ngự");
         }
         //Tinh An Giang
-        else if(list_city.value === "Tỉnh An Giang"){
-            addOption(list_district, "Chọn quận huyện","Chưa chọn quận/huyện");
-            addOption(list_district, "TP. Long Xuyên","TP. Long Xuyên");
-            addOption(list_district, "Thị xã Châu Đốc","Thị xã Châu Đốc");
-            addOption(list_district, "Huyện An Phú","Huyện An Phú");	
-            addOption(list_district, "Huyện Tân Châu","Huyện Tân Châu");
-            addOption(list_district, "Huyện Phú Tân","Huyện Phú Tân");
-            addOption(list_district, "Huyện Tịnh Biên","Huyện Tịnh Biên");
-            addOption(list_district, "Huyện Tri Tôn","Huyện Tri Tôn");	
-            addOption(list_district, "Huyện Châu Phú","Huyện Châu Phú");
-            addOption(list_district, "Huyện Chợ Mới","Huyện Chợ Mới");
-            addOption(list_district, "Huyện Châu Thành","Huyện Châu Thành");
-            addOption(list_district, "Huyện Thoại Sơn","Huyện Thoại Sơn");
+        else if (list_city.value === "Tỉnh An Giang") {
+            addOption(list_district, "Chọn quận huyện", "Chưa chọn quận/huyện");
+            addOption(list_district, "TP. Long Xuyên", "TP. Long Xuyên");
+            addOption(list_district, "Thị xã Châu Đốc", "Thị xã Châu Đốc");
+            addOption(list_district, "Huyện An Phú", "Huyện An Phú");
+            addOption(list_district, "Huyện Tân Châu", "Huyện Tân Châu");
+            addOption(list_district, "Huyện Phú Tân", "Huyện Phú Tân");
+            addOption(list_district, "Huyện Tịnh Biên", "Huyện Tịnh Biên");
+            addOption(list_district, "Huyện Tri Tôn", "Huyện Tri Tôn");
+            addOption(list_district, "Huyện Châu Phú", "Huyện Châu Phú");
+            addOption(list_district, "Huyện Chợ Mới", "Huyện Chợ Mới");
+            addOption(list_district, "Huyện Châu Thành", "Huyện Châu Thành");
+            addOption(list_district, "Huyện Thoại Sơn", "Huyện Thoại Sơn");
         }
         //Tinh Kien Giang
-        else if(list_city.value === "Tỉnh Kiên Giang"){
-            addOption(list_district, "Chọn quận huyện","Chưa chọn quận/huyện");
-            addOption(list_district, "TP. Rạch Giá","TP. Rạch Giá");
-            addOption(list_district, "Thị xã Hà Tiên","Thị xã Hà Tiên");
-            addOption(list_district, "Huyện Kiên Lương","Huyện Kiên Lương");
-            addOption(list_district, "Huyện Hòn Đất","Huyện Hòn Đất");	
-            addOption(list_district, "Huyện Tân Hiệp","Huyện Tân Hiệp");
-            addOption(list_district, "Huyện Châu Thành","Huyện Châu Thành");
-            addOption(list_district, "Huyện Giồng Riềng","Huyện Giồng Riềng");
-            addOption(list_district, "Huyện Gò Quao","Huyện Gò Quao");
-            addOption(list_district, "Huyện An Biên","Huyện An Biên");	
-            addOption(list_district, "Huyện An Minh","Huyện An Minh");
-            addOption(list_district, "Huyện Vĩnh Thuận","Huyện Vĩnh Thuận");
-            addOption(list_district, "Huyện đảo Phú Quốc","Huyện đảo Phú Quốc");
-            addOption(list_district, "Huyện Kiên Hải","Huyện Kiên Hải");
-            addOption(list_district, "Huyện U Minh Thượng","Huyện U Minh Thượng");
-            addOption(list_district, "Huyện Giang Thành","Huyện Giang Thành");
+        else if (list_city.value === "Tỉnh Kiên Giang") {
+            addOption(list_district, "Chọn quận huyện", "Chưa chọn quận/huyện");
+            addOption(list_district, "TP. Rạch Giá", "TP. Rạch Giá");
+            addOption(list_district, "Thị xã Hà Tiên", "Thị xã Hà Tiên");
+            addOption(list_district, "Huyện Kiên Lương", "Huyện Kiên Lương");
+            addOption(list_district, "Huyện Hòn Đất", "Huyện Hòn Đất");
+            addOption(list_district, "Huyện Tân Hiệp", "Huyện Tân Hiệp");
+            addOption(list_district, "Huyện Châu Thành", "Huyện Châu Thành");
+            addOption(list_district, "Huyện Giồng Riềng", "Huyện Giồng Riềng");
+            addOption(list_district, "Huyện Gò Quao", "Huyện Gò Quao");
+            addOption(list_district, "Huyện An Biên", "Huyện An Biên");
+            addOption(list_district, "Huyện An Minh", "Huyện An Minh");
+            addOption(list_district, "Huyện Vĩnh Thuận", "Huyện Vĩnh Thuận");
+            addOption(list_district, "Huyện đảo Phú Quốc", "Huyện đảo Phú Quốc");
+            addOption(list_district, "Huyện Kiên Hải", "Huyện Kiên Hải");
+            addOption(list_district, "Huyện U Minh Thượng", "Huyện U Minh Thượng");
+            addOption(list_district, "Huyện Giang Thành", "Huyện Giang Thành");
         }
         //TP Can Tho
-        else if(list_city.value === "Thành phố Cần Thơ"){
-            addOption(list_district, "Chọn quận huyện","Chưa chọn quận/huyện");
-            addOption(list_district, "Quận Ninh Kiều","Quận Ninh Kiều");
-            addOption(list_district, "Quận Bình Thuỷ","Quận Bình Thuỷ");	
-            addOption(list_district, "Quận Cái Răng","Quận Cái Răng");
-            addOption(list_district, "Quận Ô Môn","Quận Ô Môn");
-            addOption(list_district, "Huyện Phong Điền","Huyện Phong Điền");	
-            addOption(list_district, "Huyện Cờ Đỏ","Huyện Cờ Đỏ");
-            addOption(list_district, "Huyện Vĩnh Thạnh","Huyện Vĩnh Thạnh");
-            addOption(list_district, "Quận Thốt Nốt","Quận Thốt Nốt");
-            addOption(list_district, "Huyện Thới Lai","Huyện Thới Lai");
+        else if (list_city.value === "Thành phố Cần Thơ") {
+            addOption(list_district, "Chọn quận huyện", "Chưa chọn quận/huyện");
+            addOption(list_district, "Quận Ninh Kiều", "Quận Ninh Kiều");
+            addOption(list_district, "Quận Bình Thuỷ", "Quận Bình Thuỷ");
+            addOption(list_district, "Quận Cái Răng", "Quận Cái Răng");
+            addOption(list_district, "Quận Ô Môn", "Quận Ô Môn");
+            addOption(list_district, "Huyện Phong Điền", "Huyện Phong Điền");
+            addOption(list_district, "Huyện Cờ Đỏ", "Huyện Cờ Đỏ");
+            addOption(list_district, "Huyện Vĩnh Thạnh", "Huyện Vĩnh Thạnh");
+            addOption(list_district, "Quận Thốt Nốt", "Quận Thốt Nốt");
+            addOption(list_district, "Huyện Thới Lai", "Huyện Thới Lai");
         }
         //Tinh Hau Giang
-        else if(list_city.value === "Tỉnh Hậu Giang"){
-            addOption(list_district, "Chọn quận huyện","Chưa chọn quận/huyện");
-            addOption(list_district, "TP. Vị Thanh","TP. Vị Thanh");
-            addOption(list_district, "Huyện Vị Thuỷ","Huyện Vị Thuỷ");	
-            addOption(list_district, "Huyện Long Mỹ","Huyện Long Mỹ");
-            addOption(list_district, "Huyện Phụng Hiệp","Huyện Phụng Hiệp");
-            addOption(list_district, "Huyện Châu Thành","Huyện Châu Thành");	
-            addOption(list_district, "Huyện Châu Thành A","Huyện Châu Thành A");
-            addOption(list_district, "Thị xã Ngã Bảy","Thị xã Ngã Bảy");
+        else if (list_city.value === "Tỉnh Hậu Giang") {
+            addOption(list_district, "Chọn quận huyện", "Chưa chọn quận/huyện");
+            addOption(list_district, "TP. Vị Thanh", "TP. Vị Thanh");
+            addOption(list_district, "Huyện Vị Thuỷ", "Huyện Vị Thuỷ");
+            addOption(list_district, "Huyện Long Mỹ", "Huyện Long Mỹ");
+            addOption(list_district, "Huyện Phụng Hiệp", "Huyện Phụng Hiệp");
+            addOption(list_district, "Huyện Châu Thành", "Huyện Châu Thành");
+            addOption(list_district, "Huyện Châu Thành A", "Huyện Châu Thành A");
+            addOption(list_district, "Thị xã Ngã Bảy", "Thị xã Ngã Bảy");
         }
         //Tinh Soc Trang
-        else if(list_city.value === "Tỉnh Sóc Trăng"){
-            addOption(list_district, "Chọn quận huyện","Chưa chọn quận/huyện");
-            addOption(list_district, "TP. Sóc Trăng","TP. Sóc Trăng");
-            addOption(list_district, "Huyện Kế Sách","Huyện Kế Sách");
-            addOption(list_district, "Huyện Mỹ Tú","Huyện Mỹ Tú");	
-            addOption(list_district, "Huyện Mỹ Xuyên","Huyện Mỹ Xuyên");
-            addOption(list_district, "Huyện Thạnh Trị","Huyện Thạnh Trị");
-            addOption(list_district, "Huyện Long Phú","Huyện Long Phú");
-            addOption(list_district, "Thị xã Vĩnh Châu","Thị xã Vĩnh Châu");	
-            addOption(list_district, "Huyện Cù Lao Dung","Huyện Cù Lao Dung");
-            addOption(list_district, "Huyện Ngã Năm","Huyện Ngã Năm");
-            addOption(list_district, "Huyện Châu Thành","Huyện Châu Thành");
-            addOption(list_district, "Huyện Trần Đề","Huyện Trần Đề");
+        else if (list_city.value === "Tỉnh Sóc Trăng") {
+            addOption(list_district, "Chọn quận huyện", "Chưa chọn quận/huyện");
+            addOption(list_district, "TP. Sóc Trăng", "TP. Sóc Trăng");
+            addOption(list_district, "Huyện Kế Sách", "Huyện Kế Sách");
+            addOption(list_district, "Huyện Mỹ Tú", "Huyện Mỹ Tú");
+            addOption(list_district, "Huyện Mỹ Xuyên", "Huyện Mỹ Xuyên");
+            addOption(list_district, "Huyện Thạnh Trị", "Huyện Thạnh Trị");
+            addOption(list_district, "Huyện Long Phú", "Huyện Long Phú");
+            addOption(list_district, "Thị xã Vĩnh Châu", "Thị xã Vĩnh Châu");
+            addOption(list_district, "Huyện Cù Lao Dung", "Huyện Cù Lao Dung");
+            addOption(list_district, "Huyện Ngã Năm", "Huyện Ngã Năm");
+            addOption(list_district, "Huyện Châu Thành", "Huyện Châu Thành");
+            addOption(list_district, "Huyện Trần Đề", "Huyện Trần Đề");
         }
         //Tinh Bac Lieu
-        else if(list_city.value === "Tỉnh Bạc Liêu"){
-            addOption(list_district, "Chọn quận huyện","Chưa chọn quận/huyện");
-            addOption(list_district, "TP. Bạc Liêu","TP. Bạc Liêu");
-            addOption(list_district, "Huyện Vĩnh Lợi","Huyện Vĩnh Lợi");	
-            addOption(list_district, "Huyện Hồng Dân","Huyện Hồng Dân");
-            addOption(list_district, "Huyện Giá Rai","Huyện Giá Rai");
-            addOption(list_district, "Huyện Phước Long","Huyện Phước Long");	
-            addOption(list_district, "Huyện Đông Hải","Huyện Đông Hải");
-            addOption(list_district, "Huyện Hoà Bình","Huyện Hoà Bình");
+        else if (list_city.value === "Tỉnh Bạc Liêu") {
+            addOption(list_district, "Chọn quận huyện", "Chưa chọn quận/huyện");
+            addOption(list_district, "TP. Bạc Liêu", "TP. Bạc Liêu");
+            addOption(list_district, "Huyện Vĩnh Lợi", "Huyện Vĩnh Lợi");
+            addOption(list_district, "Huyện Hồng Dân", "Huyện Hồng Dân");
+            addOption(list_district, "Huyện Giá Rai", "Huyện Giá Rai");
+            addOption(list_district, "Huyện Phước Long", "Huyện Phước Long");
+            addOption(list_district, "Huyện Đông Hải", "Huyện Đông Hải");
+            addOption(list_district, "Huyện Hoà Bình", "Huyện Hoà Bình");
         }
         //Tinh Ca Mau
-        else if(list_city.value === "Tỉnh Cà Mau"){
-            addOption(list_district, "Chọn quận huyện","Chưa chọn quận/huyện");			
-            addOption(list_district, "TP. Cà Mau","TP. Cà Mau");
-            addOption(list_district, "Huyện Thới Bình","Huyện Thới Bình");
-            addOption(list_district, "Huyện U Minh","Huyện U Minh");	
-            addOption(list_district, "Huyện Trần Văn Thời","Huyện Trần Văn Thời");
-            addOption(list_district, "Huyện Cái Nước","Huyện Cái Nước");
-            addOption(list_district, "Huyện Đầm Dơi","Huyện Đầm Dơi");
-            addOption(list_district, "Huyện Ngọc Hiển","Huyện Ngọc Hiển");	
-            addOption(list_district, "Huyện Năm Căn","Huyện Năm Căn");
-            addOption(list_district, "Huyện Phú Tân","Huyện Phú Tân");
-        }		
+        else if (list_city.value === "Tỉnh Cà Mau") {
+            addOption(list_district, "Chọn quận huyện", "Chưa chọn quận/huyện");
+            addOption(list_district, "TP. Cà Mau", "TP. Cà Mau");
+            addOption(list_district, "Huyện Thới Bình", "Huyện Thới Bình");
+            addOption(list_district, "Huyện U Minh", "Huyện U Minh");
+            addOption(list_district, "Huyện Trần Văn Thời", "Huyện Trần Văn Thời");
+            addOption(list_district, "Huyện Cái Nước", "Huyện Cái Nước");
+            addOption(list_district, "Huyện Đầm Dơi", "Huyện Đầm Dơi");
+            addOption(list_district, "Huyện Ngọc Hiển", "Huyện Ngọc Hiển");
+            addOption(list_district, "Huyện Năm Căn", "Huyện Năm Căn");
+            addOption(list_district, "Huyện Phú Tân", "Huyện Phú Tân");
+        }
         //Tinh Ha Tay
-        else if(list_city.value === "Tỉnh Hà Tây"){
-            addOption(list_district, "Chọn quận huyện","Chưa chọn quận/huyện");			
-            addOption(list_district, "TP. Hà Đông","TP. Hà Đông");			
-            addOption(list_district, "TP. Sơn Tây","TP. Sơn Tây");			
-            addOption(list_district, "Huyện Ba Vì","Huyện Ba Vì");			
-            addOption(list_district, "Huyện Chương Mỹ","Huyện Chương Mỹ");			
-            addOption(list_district, "Huyện Đan Phượng","Huyện Đan Phượng");			
-            addOption(list_district, "Huyện Hoài Đức","Huyện Hoài Đức");			
-            addOption(list_district, "Huyện Mỹ Đức","Huyện Mỹ Đức");			
-            addOption(list_district, "Huyện Phú Xuyên","Huyện Phú Xuyên");			
-            addOption(list_district, "Huyện Phúc Thọ","Huyện Phúc Thọ");			
-            addOption(list_district, "Huyện Quốc Oai","Huyện Quốc Oai");			
-            addOption(list_district, "Huyện Thạch Thất","Huyện Thạch Thất");			
-            addOption(list_district, "Huyện Thanh Oai","Huyện Thanh Oai");			
-            addOption(list_district, "Huyện Thường Tín","Huyện Thường Tín");			
-            addOption(list_district, "Huyện Ứng Hòa","Huyện Ứng Hòa");			
-        }		
-        else{
+        else if (list_city.value === "Tỉnh Hà Tây") {
+            addOption(list_district, "Chọn quận huyện", "Chưa chọn quận/huyện");
+            addOption(list_district, "TP. Hà Đông", "TP. Hà Đông");
+            addOption(list_district, "TP. Sơn Tây", "TP. Sơn Tây");
+            addOption(list_district, "Huyện Ba Vì", "Huyện Ba Vì");
+            addOption(list_district, "Huyện Chương Mỹ", "Huyện Chương Mỹ");
+            addOption(list_district, "Huyện Đan Phượng", "Huyện Đan Phượng");
+            addOption(list_district, "Huyện Hoài Đức", "Huyện Hoài Đức");
+            addOption(list_district, "Huyện Mỹ Đức", "Huyện Mỹ Đức");
+            addOption(list_district, "Huyện Phú Xuyên", "Huyện Phú Xuyên");
+            addOption(list_district, "Huyện Phúc Thọ", "Huyện Phúc Thọ");
+            addOption(list_district, "Huyện Quốc Oai", "Huyện Quốc Oai");
+            addOption(list_district, "Huyện Thạch Thất", "Huyện Thạch Thất");
+            addOption(list_district, "Huyện Thanh Oai", "Huyện Thanh Oai");
+            addOption(list_district, "Huyện Thường Tín", "Huyện Thường Tín");
+            addOption(list_district, "Huyện Ứng Hòa", "Huyện Ứng Hòa");
+        } else {
             removeAllOptions(list_district);
         }
     }
 </script>
+<style> 
+.form-group {
+      /*trick bootstraps framework*/
+      margin-right: 0px !important;
+}
+</style>
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="padding-left: 50px">
-                <div id="breakcrumb"
+            <div class="col-xs-12">
+                  <div id="breakcrumb"
                      style="font-family: RobotoSlabRegular;
-                            font-size:14px;
-                            margin-top: 30px;
-                            margin-bottom: 25px">
-                    {breadcrumbs_path}
-                </div>
-                <div class="news_main">                                        
-                    <div style=" font-family:PoetsenOne;
-                                 font-size: 22px;
-                                 clear:both;
-                                 margin-bottom: 30px"> 
+                        font-size:14px;
+                        margin-top: 10px;
+                        margin-bottom: 15px">
+                        {breadcrumbs_path}
+                  </div>
+                  <div class="news_main">
+                  <div style="font-family:PoetsenOne;
+                        font-size: 20px;
+                        clear:both;
+                        margin-bottom: 20px">
                         <span style="color: #989898">Xin chào, </span>
                         <span style="color: #019cfd">{name_hello}</span>
-                    </div>
-                    <!--Left Col-->
-                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4" 
-                         style ="padding-left: 0px;">                        
-                        <table style="text-align: left;
-                                      background-color: #f2fbff;
-                                      -webkit-border-radius:25px;
-                                      -moz-border-radius:25px;
-                                      border-radius:25px;
-                                      -webkit-box-shadow: 0px 10px 10px -5px rgba(146,159,165,1);
-                                      -moz-box-shadow: 0px 10px 10px -5px rgba(146,159,165,1);
-                                      box-shadow: 0px 10px 10px -5px rgba(146,159,165,1);">                             
-                            <tr>
-                                <td>
+                   </div>
+
+                  <!--Left Col-->
+                  <div class="hidden-xs hidden-sm col-md-3 col-lg-3" 
+                        style="padding-left: 0px;
+                              padding-right: 60px;
+                              font-family: RobotoSlabRegular">
+                        <div class="col-md-12"
+                              style="padding:0px;
+                                    background-color: #f2fbff;
+                                    -webkit-border-radius:25px;
+                                    -moz-border-radius:25px;
+                                    border-radius:25px;
+                                    -webkit-box-shadow: 0px 10px 10px -5px rgba(146,159,165,1);
+                                    -moz-box-shadow: 0px 10px 10px -5px rgba(146,159,165,1);
+                                    box-shadow: 0px 10px 10px -5px rgba(146,159,165,1);">
+                              <div class="col-md-12" style="padding:0px">
                                     <img alt="{name_hello}"
-                                        src="{linkS}upload/avatar/{avatar}" 
-                                        width="220px" 
-                                        height="240px;"
-                                        style = "-webkit-border-radius:25px;
-                                                 -moz-border-radius:25px;
-                                                 border-radius:25px;">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>&nbsp;</td>
-                            </tr>
-                            <tr>
-                                <td>                                                                                                            
-                                    <table cellspacing="0" 
-                                           cellpadding="0" 
-                                           width="100%" 
-                                           id="contact_form" 
-                                           border="0">
-                                        <tr>
-                                            <td style = "padding-left: 25px">
-                                                <img alt="tài khoản"
-                                                    src="{linkS}layout/bootstrap/images/thong_tin_tai_khoan_1.png" 
-                                                    height="20px"/>
-                                            </td>
-                                            <td>                                                    
-                                                <a href="{linkS}thong-tin-tai-khoan"
-                                                   style="font-family: RobotoSlabLight; 
-                                                          font-size: 14px;
-                                                          margin-left: 10px;
-                                                          line-height: 35px;
-                                                          color: #000">
-                                                    Thông tin của bạn
-                                                </a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td style = "padding-left: 25px">
-                                                <img alt="sổ địa chỉ"
-                                                    src="{linkS}layout/bootstrap/images/thong_tin_tai_khoan_2.png" 
-                                                    height="20px"/>
-                                            </td>
-                                            <td>                                                
-                                                <a href="{linkS}so-dia-chi"
-                                                   style="font-family: RobotoSlabLight; 
-                                                          font-size: 14px; 
-                                                          margin-left: 10px;
-                                                          line-height: 35px;
-                                                          color: #000">
-                                                    Sổ địa chỉ
-                                                </a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td style = "padding-left: 25px">
-                                                <img alt="đơn hàng" 
-                                                    src="{linkS}layout/bootstrap/images/thong_tin_tai_khoan_3.png" 
-                                                    height="20px"/>
-                                            </td>
-                                            <td>                                                
-                                                <a href="{linkS}danh-sach-don-hang"
-                                                   style="font-family: RobotoSlabLight; 
-                                                          font-size: 14px; 
-                                                          margin-left: 10px;
-                                                          line-height: 35px;
-                                                          color: #000">
-                                                    Đơn hàng của tôi
-                                                </a>
-                                            </td>
-                                        </tr>
-                                        <!--<tr>
-                                            <td>
-                                                <a href="{linkS}san-pham-danh-gia">
-                                                    Sản phẩm ưa thích
-                                                </a>
-                                            </td>
-                                        </tr>-->
-                                        <tr>
-                                            <td style = "padding-left: 25px">
-                                                <img alt="sản phẩm ưa thích"
-                                                    src="{linkS}layout/bootstrap/images/thong_tin_tai_khoan_4.png" 
-                                                    height="20px"/>
-                                            </td>
-                                            <td>                                                
-                                                <a href="{linkS}san-pham-ua-thich"
-                                                   style="font-family: RobotoSlabLight; 
-                                                          font-size: 14px; 
-                                                          margin-left: 10px;
-                                                          line-height: 35px;
-                                                          color: #000">
-                                                    Sản phẩm ưa thích
-                                                </a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td style = "padding-left: 25px">
-                                                <img alt="thú cưng"
-                                                    src="{linkS}layout/bootstrap/images/thong_tin_tai_khoan_5.png" 
-                                                    height="20px"/>
-                                            <td>                                                
-                                                <a href="{linkS}thu-cung-cua-toi"
-                                                   style="font-family: RobotoSlabLight; 
-                                                          font-size: 14px; 
-                                                          margin-left: 10px;
-                                                          line-height: 35px;
-                                                          color: #000">
-                                                    Thú cưng của tôi
-                                                </a>
-                                            </td>
-                                        </tr>
-                                        <tr> 
-                                            <td>
-                                                <hr style = "border-color: #93a4ac;  border-width: 1px;"/>
-                                            </td>
-                                            <td>
-                                                <hr style = "border-color: #93a4ac;  border-width: 1px;"/>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td style = "padding-left: 25px"> 
-                                                <img alt="mật khẩu" 
-                                                    src="{linkS}layout/bootstrap/images/thong_tin_tai_khoan_6.png" 
-                                                    height="20px"/>
-                                            </td>
-                                            <td>
-                                                <a href="{linkS}doi-mat-khau"
-                                                   style="font-family: RobotoSlabLight; 
-                                                          font-size: 14px; 
-                                                          margin-left: 10px;
-                                                          line-height: 35px;
-                                                          color: #000;">
-                                                    Đổi mật khẩu
-                                                </a>                                                           
-                                            </td>
-                                        </tr>
-                                    </table>                                                                            
-                                </td>                                
-                            </tr>
-                            <tr>
-                                <td>&nbsp;</td>
-                            </tr>
-                        </table>																
-                    </div>
-                    <!--Right Col-->
-                    <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
-                        <form method='POST' id = "frm1" name = "frm1" enctype='multipart/form-data' action="{linkS}cap-nhat-thong-tin" >
-                            <div>
-                                <div class="newsPersonal_inside">
+                                       src="{linkS}upload/avatar/{avatar}" 
+                                       width="100%"
+                                       style="-webkit-border-radius:25px;
+                                              -moz-border-radius:25px;
+                                              border-radius:25px;
+                                              margin-bottom: 20px">
+                              </div>
+                              <div class="col-md-12">
+                                  <img alt="thông tin tài khoản"
+                                       src="{linkS}layout/bootstrap/images/thong_tin_tai_khoan_1.png" 
+                                       height="20px">
+                                    <a href="{linkS}thong-tin-tai-khoan"
+                                     style="font-family: RobotoSlabLight; 
+                                          font-size: 14px;
+                                          margin-left: 10px;
+                                          line-height: 35px;
+                                          padding-top: 10px;
+                                          color: #000">Thông tin của bạn</a>
+                              </div>    
+                              <div class="col-md-12">
+                                    <img alt="sổ địa chỉ"
+                                         src="{linkS}layout/bootstrap/images/thong_tin_tai_khoan_2.png" 
+                                         height="20px">
+                                    <a href="{linkS}so-dia-chi"
+                                       style="font-family: RobotoSlabLight; 
+                                            font-size: 14px; 
+                                            margin-left: 10px;
+                                            line-height: 35px;
+                                            color: #000">Sổ địa chỉ</a>
+                              </div>
+                              <div class="col-md-12">
+                                    <img alt="đơn hàng" 
+                                         src="{linkS}layout/bootstrap/images/thong_tin_tai_khoan_3.png" 
+                                         height="20px">
+                                    <a href="{linkS}danh-sach-don-hang"
+                                       style="font-family: RobotoSlabLight; 
+                                            font-size: 14px; 
+                                            margin-left: 10px;
+                                            line-height: 35px;
+                                            color: #000">Đơn hàng của tôi</a>
+                                    <!--<a href="{linkS}san-pham-danh-gia">
+                                        Sản phẩm ưa thích
+                                    </a>-->
+                              </div>
+                              <div class="col-md-12">
+                                    <img alt="sản phẩm ưa thích"
+                                         src="{linkS}layout/bootstrap/images/thong_tin_tai_khoan_4.png" 
+                                         height="20px">
+                                    <a href="{linkS}san-pham-ua-thich"
+                                       style="font-family: RobotoSlabLight; 
+                                       font-size: 14px; 
+                                       margin-left: 10px;
+                                       line-height: 35px;
+                                       color: #000">Sản phẩm ưa thích</a>
+                              </div>
+                              <div class="col-md-12">
+                                    <img alt="thú cưng"
+                                         src="{linkS}layout/bootstrap/images/thong_tin_tai_khoan_5.png" 
+                                         height="20px">
+                                    <a href="{linkS}thu-cung-cua-toi"
+                                       style="font-family: RobotoSlabLight; 
+                                       font-size: 14px; 
+                                       margin-left: 5px;
+                                       line-height: 35px;
+                                       color: #000">Thú cưng của tôi</a>
+                              </div>
+                              <div class="col-md-12" style="margin-bottom: 30px">
+                                    <hr style = "border-color: #93a4ac; border-width: 1px;">
+                                    <img alt="mật khẩu" 
+                                         src="{linkS}layout/bootstrap/images/thong_tin_tai_khoan_6.png" 
+                                         height="20px">
+                                    <a href="{linkS}doi-mat-khau"
+                                       style="font-family: RobotoSlabLight; 
+                                       font-size: 14px; 
+                                       margin-left: 10px;
+                                       line-height: 20px;
+                                       color: #000;
+                                       padding-bottom: 30px">Đổi mật khẩu</a>
+                              </div>
+                        </div>      
+                  </div>
+                  <!--Right Col-->
+                  <div class="col-xs-12 col-md-9" style="padding:0px">
+                        <form method='POST' id="frm1" name="frm1" enctype='multipart/form-data' 
+                        action="{linkS}cap-nhat-thong-tin">
+                              <div class="newsPersonal_inside">
                                     <div class="group_listing_input" id="group_listing_input">
-                                        <div style= "text-align: center;
-                                                    margin-bottom: -15px;
-                                                    font-family: Cambria;
-                                                    color: #A00;
-                                                    font-size: 15px;
-                                                    font-family: RobotoSlabLight;
-                                                    line-height: 30px">
-                                            {message_notice}
-                                        </div>
-                                        <br/>
-                                        <div style="font-family:RobotoSlabRegular; 
-                                                    font-size: 17px;
-                                                    color:#393939;
-                                                    margin-bottom: 20px">                                                                                                    
-                                            <span>THÔNG TIN CÁ NHÂN</span>
-                                        </div>                 
-                                        <div class ="form-horizontal">
-                                            <div class ="form-group">
+                                          <div style="text-align: center;
+                                                font-family: RobotoSlabRegular;
+                                                color: #A00;
+                                                font-size: 15px;
+                                                font-family: RobotoSlabLight;
+                                                line-height: 30px">{message_notice}</div>
+                                          <div style="font-family:RobotoSlabRegular; 
+                                                font-size: 17px;
+                                                color:#393939;
+                                                margin-bottom: 20px">THÔNG TIN CÁ NHÂN</div>
+                                          <div class="form-horizontal">
+                                          <div class="form-group">
                                                 <span for="firstname" 
-                                                       class="col-xs-12 col-sm-12 col-md-2 col-lg-2 control-label"
-                                                       style="text-align: left; 
-                                                              font-family: RobotoSlabRegular;
-                                                              font-size: 14px">
-                                                    Họ và tên: <span style="color:red">*</span> 
+                                                class="col-xs-12 col-sm-2 col-md-2 control-label"
+                                                style="text-align: left; 
+                                                      font-family: RobotoSlabRegular;
+                                                      font-size: 14px">Họ và tên: 
+                                                      <span style="color:red">*</span> 
                                                 </span>
-                                                <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
-                                                    <input  type="text"          
-                                                            class ="form-control"
-                                                            oninput="functionOninput();"
-                                                            id="firstname"
-                                                            name="name"  
-                                                            value="{name}"                                                                                                                
-                                                            style = "-webkit-border-radius: 10px;
-                                                                     -moz-border-radius: 10px;
-                                                                     border-radius: 10px;
-                                                                     height: 40px;
-                                                                     outline: none;
-                                                                     padding: 5px;
-                                                                     font-family: RobotoSlabRegular;
-                                                                     font-size: 14px;                                            
-                                                                     border: 1px solid #ddd;
-                                                                     font-weight: lighter;
-                                                                     color: #adadad;
-                                                                     width: 96%"
-                                                            maxlength="50"/>
+                                                <div class="col-xs-12 col-sm-7 col-md-9" 
+                                                      style="padding-right: 0px">
+                                                      <input type="text"          
+                                                      class="form-control"
+                                                      oninput="functionOninput();"
+                                                      id="firstname"
+                                                      name="name"  
+                                                      value="{name}"
+                                                      style="-webkit-border-radius: 10px;
+                                                      -moz-border-radius: 10px;
+                                                      border-radius: 10px;
+                                                      height: 40px;
+                                                      outline: none;
+                                                      padding: 5px;
+                                                      font-family: RobotoSlabRegular;
+                                                      font-size: 14px;     
+                                                      border: 1px solid #ddd;
+                                                      font-weight: lighter;
+                                                      color: #adadad;
+                                                      width: %"
+                                                      maxlength="50">
                                                 </div>
-                                            </div>
-                                                                                                                                                                                                    
-                                            <div class ="form-group">
+                                          </div>
+                                          <div class="form-group">
                                                 <span for="birthday" 
-                                                       class="col-xs-12 col-sm-12 col-md-2 col-lg-2 control-label"
-                                                       style="text-align: left; 
-                                                              font-family: RobotoSlabRegular;
-                                                              font-size: 14px">
-                                                    Ngày sinh:
-                                                </span> 
-                                                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-                                                    <input class ="form-control"
+                                                class="col-xs-12 col-sm-2 col-md-2 control-label"
+                                                style="text-align: left; 
+                                                font-family: RobotoSlabRegular;
+                                                font-size: 14px">Ngày sinh:</span> 
+                                                <div class="col-xs-6 col-sm-2 col-md-3">
+                                                      <input class="form-control"
                                                            id="birthday" 
                                                            name="birthday" 
                                                            type="text" 
-                                                           value="{birthday}"                                                        
-                                                           maxlength="10"                                                       
-                                                           style = "-webkit-border-radius: 10px;
-                                                                    -moz-border-radius: 10px;
-                                                                    border-radius: 10px;
-                                                                    height: 40px;
-                                                                    outline:none;
-                                                                    padding: 5px;
-                                                                    font-family: RobotoSlabRegular;
-                                                                    font-size: 14px;                                            
-                                                                    border: 1px solid #ddd;
-                                                                    font-weight: lighter;
-                                                                    color: #adadad">     
+                                                           value="{birthday}"
+                                                           maxlength="10" 
+                                                           style="-webkit-border-radius: 10px;
+                                                           -moz-border-radius: 10px;
+                                                           border-radius: 10px;
+                                                           height: 40px;
+                                                           outline:none;
+                                                           padding: 5px;
+                                                           font-family: RobotoSlabRegular;
+                                                           font-size: 14px;
+                                                           border: 1px solid #ddd;
+                                                           font-weight: lighter;
+                                                           color: #adadad">
                                                 </div>
-                                            </div>
-                                                           
-                                            <div class ="form-group">                                            
+                                          </div>
+                                          <div class="form-group">
                                                 <span for="gender" 
-                                                       class="col-xs-12 col-sm-12 col-md-2 col-lg-2 control-label"
-                                                       style="text-align: left; 
-                                                              font-family: RobotoSlabRegular;
-                                                              font-size: 14px">
-                                                    Giới tính:
-                                                </span>
-                                                <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
-                                                    <select id="gender" 
-                                                            name="gender"                                                         
-                                                            class ="form-control"
-                                                            style = "-webkit-border-radius: 10px;
-                                                                    -moz-border-radius: 10px;                                                                    
-                                                                    height: 35px;
-                                                                    outline:none;
-                                                                    padding: 5px;
-                                                                    font-family: RobotoSlabRegular;
-                                                                    font-size: 14px;                                            
-                                                                    border: 1px solid #ddd;
-                                                                    font-weight: lighter;
-                                                                    color: #adadad;">
-                                                        <option value="1" selected {selected1}>Anh</option>
-                                                        <option value="0" {selected2}>Chị</option>                       
-                                                    </select>
-                                                </div>
-                                            </div>     
-                                                    
-                                            <div class ="form-group">
-                                                <span for="address" 
-                                                       class="col-xs-12 col-sm-12 col-md-2 col-lg-2 control-label"
-                                                       style="text-align: left; 
-                                                              font-family: RobotoSlabRegular;
-                                                              font-size: 14px">
-                                                    Địa chỉ:
-                                                </span>
-                                                <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
-                                                    <textarea name="address" 
-                                                            id="address"  
+                                                class="col-xs-12 col-sm-2 col-md-2 control-label"
+                                                style="text-align: left; 
+                                                      font-family: RobotoSlabRegular;
+                                                      font-size: 14px">Giới tính:</span>
+                                                <div class="col-xs-6 col-sm-2 col-md-2">
+                                                      <select id="gender" 
+                                                            name="gender"
                                                             class="form-control"
-                                                            style = "-webkit-border-radius: 10px;
-                                                                    -moz-border-radius: 10px;
-                                                                    border-radius: 10px;
-                                                                    height: 70px;
-                                                                    outline:none;
-                                                                    padding: 5px;
-                                                                    font-family: RobotoSlabRegular;
-                                                                    font-size: 14px;
-                                                                    border: 1px solid #ddd;
-                                                                    font-weight: lighter;
-                                                                    color: #adadad;
-                                                                    line-height: 25px;
-                                                                    width: 96%"
-                                                            disabled>{address}
-                                                    </textarea>
+                                                            style="-webkit-border-radius: 10px;
+                                                            -moz-border-radius: 10px;
+                                                            height: 35px;
+                                                            outline:none;
+                                                            padding: 5px;
+                                                            font-family: RobotoSlabRegular;
+                                                            font-size: 14px;
+                                                            border: 1px solid #ddd;
+                                                            font-weight: lighter;
+                                                            color: #adadad">
+                                                      <option value="1" selected {selected1}>Anh</option>
+                                                      <option value="0" {selected2}>Chị</option>
+                                                      </select>
                                                 </div>
-                                            </div>
-                                                    
-                                            <div class ="form-inline">
-                                                <div class ="form-group col-xs-12 col-sm-12 col-md-4 col-lg-4" 
+                                          </div> 
+                                          <div class="form-group">
+                                                <span for="address" 
+                                                class="col-xs-12 col-sm-2 col-md-2 control-label"
+                                                style="text-align: left; 
+                                                font-family: RobotoSlabRegular;
+                                                font-size: 14px">Địa chỉ:</span>
+                                                <div class="col-xs-12 col-sm-7 col-md-9"
+                                                      style="padding-right: 0px">
+                                                      <textarea name="address"
+                                                      id="address"
+                                                      class="form-control"
+                                                      style="-webkit-border-radius: 10px;
+                                                      -moz-border-radius: 10px;
+                                                      border-radius: 10px;
+                                                      height: 70px;
+                                                      outline:none;
+                                                      padding: 5px;
+                                                      font-family: RobotoSlabRegular;
+                                                      font-size: 14px;
+                                                      border: 1px solid #ddd;
+                                                      color: #adadad;
+                                                      line-height: 25px;
+                                                      width: 100%"
+                                                      disabled>{address}</textarea>
+                                                </div>
+                                          </div>
+                                          <div class="form-inline">
+                                                <div class="form-group col-xs-12 col-sm-4 col-md-4"
                                                      style="padding-left: 0px">
-                                                    <span for="country" 
-                                                          class="col-xs-12 col-sm-12 col-md-12 col-lg-12 control-label"                                                          
+                                                <span for="country"
+                                                      class="col-xs-12 control-label"
+                                                      style="text-align: left;
+                                                      font-family: RobotoSlabRegular;
+                                                      font-size: 14px;
+                                                      margin-bottom: 10px">
+                                                      Quốc gia<span style="color:red">*</span>
+                                                      </span>
+                                                      <div class="col-xs-12">
+                                                            <select id = "country"
+                                                                class="form-control"
+                                                                style = "-webkit-border-radius: 10px;
+                                                                -moz-border-radius: 10px;  
+                                                                height: 35px;
+                                                                outline:none;
+                                                                padding: 5px;
+                                                                font-family: RobotoSlabRegular;
+                                                                font-size: 14px;
+                                                                border: 1px solid #ddd;
+                                                                font-weight: lighter;
+                                                                color: #adadad;
+                                                                width: 100%">
+                                                            <option>Việt Nam</option>
+                                                            </select>
+                                                      </div>
+                                                </div>
+                                                <div class="form-group col-xs-12 col-sm-4 col-md-4"
+                                                     style="padding-left: 0px">
+                                                      <span for="list_city_buy" 
+                                                          class="col-xs-12 control-label"
+                                                          style="text-align: left; 
+                                                          font-family: RobotoSlabRegular;
+                                                          font-size: 14px;
+                                                          margin-bottom: 10px">
+                                                            Thành phố <span style="color:red">*</span>
+                                                      </span>
+                                                      <div class="col-xs-12">
+                                                            <select id="list_city_buy" 
+                                                                  name="list_city_buy"     
+                                                                  class="form-control"
+                                                                  oninput="functionOninput();"
+                                                                  onChange="city_selected('list_city_buy', 'list_district_buy')" 
+                                                                  style="-webkit-border-radius: 10px;
+                                                                      -moz-border-radius: 10px;         
+                                                                      height: 35px;
+                                                                      outline:none;
+                                                                      padding: 5px;
+                                                                      font-family: RobotoSlabRegular;
+                                                                      font-size: 14px;
+                                                                      border: 1px solid #ddd;
+                                                                      font-weight: lighter;
+                                                                      color: #adadad;
+                                                                      width: 100%">      
+                                                <option value="Chưa chọn tỉnh/thành">Chọn tỉnh thành</option>
+                                                <option value="Hà Nội" {selected_Hà Nội}>Hà Nội</option>
+                                                <option value="Hồ Chí Minh" {selected_Hồ Chí Minh}>Hồ Chí Minh</option>
+                                                <option value="Tỉnh Hà Giang" {selected_Tỉnh Hà Giang}>Tỉnh Hà Giang</option>
+                                                <option value="Tỉnh Cao Bằng" {selected_Tỉnh Cao Bằng}>Tỉnh Cao Bằng</option>
+                                                <option value="Tỉnh Bắc Kạn" {selected_Tỉnh Bắc Kạn}>Tỉnh Bắc Kạn</option>
+                                                <option value="Tỉnh Tuyên Quang" {selected_Tỉnh Tuyên Quang}>Tỉnh Tuyên Quang</option>
+                                                <option value="Tỉnh Lào Cai" {selected_Tỉnh Lào Cai}>Tỉnh Lào Cai</option>
+                                                <option value="Tỉnh Điện Biên" {selected_Tỉnh Điện Biên}>Tỉnh Điện Biên</option>
+                                                <option value="Tỉnh Lai Châu" {selected_Tỉnh Lai Châu}>Tỉnh Lai Châu</option>
+                                                <option value="Tỉnh Sơn La" {selected_Tỉnh Sơn La}>Tỉnh Sơn La</option>
+                                                <option value="Tỉnh Yên Bái" {selected_Tỉnh Yên Bái}>Tỉnh Yên Bái</option>
+                                                <option value="Tỉnh Hoà Bình" {selected_Tỉnh Hòa Bình}>Tỉnh Hoà Bình</option>
+                                                <option value="Tỉnh Thái Nguyên" {selected_Tỉnh Thái Nguyên}>Tỉnh Thái Nguyên</option>
+                                                <option value="Tỉnh Lạng Sơn" {selected_Tỉnh Lạng Sơn}>Tỉnh Lạng Sơn</option>
+                                                <option value="Tỉnh Quảng Ninh" {selected_Tỉnh Quảng Ninh}>Tỉnh Quảng Ninh</option>
+                                                <option value="Tỉnh Bắc Giang" {selected_Tỉnh Bắc Giang}>Tỉnh Bắc Giang</option>
+                                                <option value="Tỉnh Phú Thọ" {selected_Tỉnh Phú Thọ}>Tỉnh Phú Thọ</option>
+                                                <option value="Tỉnh Vĩnh Phúc" {selected_Tỉnh Vĩnh Phúc}>Tỉnh Vĩnh Phúc</option>
+                                                <option value="Tỉnh Bắc Ninh" {selected_Tỉnh Bắc Ninh}>Tỉnh Bắc Ninh</option>
+                                                <option value="Tỉnh Hải Dương" {selected_Tỉnh Hải Dương}>Tỉnh Hải Dương</option>
+                                                <option value="Thành phố Hải Phòng" {selected_Thành phố Hải Phòng}>Thành phố Hải Phòng</option>
+                                                <option value="Tỉnh Hưng Yên" {selected_Tỉnh Hưng Yên}>Tỉnh Hưng Yên</option>
+                                                <option value="Tỉnh Thái Bình" {selected_Tỉnh Thái Bình}>Tỉnh Thái Bình</option>
+                                                <option value="Tỉnh Hà Nam" {selected_Tỉnh Hà Nam}>Tỉnh Hà Nam</option>
+                                                <option value="Tỉnh Nam Định" {selected_Tỉnh Nam Định}>Tỉnh Nam Định</option>
+                                                <option value="Tỉnh Ninh Bình" {selected_Tỉnh Ninh Bình}>Tỉnh Ninh Bình</option>
+                                                <option value="Tỉnh Thanh Hoá" {selected_Tỉnh Thanh Hóa}>Tỉnh Thanh Hoá</option>
+                                                <option value="Tỉnh Nghệ An" {selected_Tỉnh Nghệ An}>Tỉnh Nghệ An</option>
+                                                <option value="Tỉnh Hà Tĩnh" {selected_Tỉnh Hà Tĩnh}>Tỉnh Hà Tĩnh</option>
+                                                <option value="Tỉnh Quảng Bình" {selected_Tỉnh Quảng Bình}>Tỉnh Quảng Bình</option>
+                                                <option value="Tỉnh Quảng Trị" {selected_Tỉnh Quảng Trị}>Tỉnh Quảng Trị</option>
+                                                <option value="Tỉnh Thừa Thiên Huế" {selected_Tỉnh Thừa Thiên Huế}>Tỉnh Thừa Thiên Huế</option>
+                                                <option value="Thành phố Đà Nẵng" {selected_Thành phố Đà Nẵng}>Thành phố Đà Nẵng</option>
+                                                <option value="Tỉnh Quảng Nam" {selected_Tỉnh Quảng Nam}>Tỉnh Quảng Nam</option>
+                                                <option value="Tỉnh Quảng Ngãi" {selected_Tỉnh Quảng Ngãi}>Tỉnh Quảng Ngãi</option>
+                                                <option value="Tỉnh Bình Định" {selected_Tỉnh Bình Định}>Tỉnh Bình Định</option>
+                                                <option value="Tỉnh Phú Yên" {selected_Tỉnh Phú Yên}>Tỉnh Phú Yên</option>
+                                                <option value="Tỉnh Khánh Hoà" {selected_Tỉnh Khánh Hòa}>Tỉnh Khánh Hoà</option>
+                                                <option value="Tỉnh Ninh Thuận" {selected_Tỉnh Ninh Thuận}>Tỉnh Ninh Thuận</option>
+                                                <option value="Tỉnh Bình Thuận" {selected_Tỉnh Bình Thuận}>Tỉnh Bình Thuận</option>
+                                                <option value="Tỉnh Kon Tum" {selected_Tỉnh Kon Tum}>Tỉnh Kon Tum</option>
+                                                <option value="Tỉnh Gia Lai" {selected_Tỉnh Gia Lai}>Tỉnh Gia Lai</option>
+                                                <option value="Tỉnh Đắk Lắk" {selected_Tỉnh Đắk Lắk}>Tỉnh Đắk Lắk</option>
+                                                <option value="Tỉnh Đắk Nông" {selected_Tỉnh Đắk Nông}>Tỉnh Đắk Nông</option>
+                                                <option value="Tỉnh Lâm Đồng" {selected_Tỉnh Lâm Đồng}>Tỉnh Lâm Đồng</option>
+                                                <option value="Tỉnh Bình Phước" {selected_Tỉnh Bình Phước}>Tỉnh Bình Phước</option>
+                                                <option value="Tỉnh Tây Ninh" {selected_Tỉnh Tây Ninh}>Tỉnh Tây Ninh</option>
+                                                <option value="Tỉnh Bình Dương" {selected_Tỉnh Bình Dương}>Tỉnh Bình Dương</option>
+                                                <option value="Tỉnh Đồng Nai" {selected_Tỉnh Đồng Nai}>Tỉnh Đồng Nai</option>
+                                                <option value="Tỉnh Bà Rịa - Vũng Tàu" {selected_Tỉnh Bà Rịa - Vũng Tàu}>Tỉnh Bà Rịa - Vũng Tàu</option>
+                                                <option value="Tỉnh Long An" {selected_Tỉnh Long An}>Tỉnh Long An</option>
+                                                <option value="Tỉnh Tiền Giang" {selected_Tỉnh Tiền Giang}>Tỉnh Tiền Giang</option>
+                                                <option value="Tỉnh Bến Tre" {selected_Tỉnh Bến Tre}>Tỉnh Bến Tre</option>
+                                                <option value="Tỉnh Trà Vinh" {selected_Tỉnh Trà Vinh}>Tỉnh Trà Vinh</option>
+                                                <option value="Tỉnh Vĩnh Long" {selected_Tỉnh Vĩnh Long}>Tỉnh Vĩnh Long</option>
+                                                <option value="Tỉnh Đồng Tháp" {selected_Tỉnh Đồng Tháp}>Tỉnh Đồng Tháp</option>
+                                                <option value="Tỉnh An Giang" {selected_Tỉnh An Giang}>Tỉnh An Giang</option>
+                                                <option value="Tỉnh Kiên Giang" {selected_Tỉnh Kiên Giang}>Tỉnh Kiên Giang</option>
+                                                <option value="Thành phố Cần Thơ" {selected_Thành phố Cần Thơ}>Thành phố Cần Thơ</option>
+                                                <option value="Tỉnh Hậu Giang" {selected_Tỉnh Hậu Giang} >Tỉnh Hậu Giang</option>
+                                                <option value="Tỉnh Sóc Trăng" {selected_Tỉnh Sóc Trăng}>Tỉnh Sóc Trăng</option>
+                                                <option value="Tỉnh Bạc Liêu" {selected_Tỉnh Bạc Liêu}>Tỉnh Bạc Liêu</option>
+                                                <option value="Tỉnh Cà Mau" {selected_Tỉnh Cà Mau}>Tỉnh Cà Mau</option>
+                                                <option value="Tỉnh Hà Tây" {selected_Tỉnh Hà Tây}>Tỉnh Hà Tây</option>
+                                                </select>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-xs-12 col-sm-4 col-md-4"
+                                                     style="padding-left: 0px">
+                                                      <span for="list_district_buy" 
+                                                          class="col-xs-12 control-label"
                                                           style="text-align: left; 
                                                                 font-family: RobotoSlabRegular;
                                                                 font-size: 14px;
                                                                 margin-bottom: 10px">
-                                                        Quốc gia<span style="color:red"> *</span>                                                        
-                                                    </span>
-                                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                                        <select id = "country"
+                                                          Quận/Huyện<span style="color:red">*</span>
+                                                      </span>
+                                                    <div class="col-xs-12">
+                                                        <select id="list_district_buy" 
                                                                 class="form-control"
-                                                                style = "-webkit-border-radius: 10px;
-                                                                          -moz-border-radius: 10px;                                                                          
-                                                                          height: 35px;
-                                                                          outline:none;
-                                                                          padding: 5px;
-                                                                          font-family: RobotoSlabRegular;
-                                                                          font-size: 14px;
-                                                                          border: 1px solid #ddd;
-                                                                          font-weight: lighter;
-                                                                          color: #adadad;
-                                                                          width: 100%">
-                                                            <option>Việt Nam</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                
-                                                <div class ="form-group col-xs-12 col-sm-12 col-md-4 col-lg-4"
-                                                     style="padding-left: 0px">
-                                                    <span for="list_city_buy" 
-                                                           class="col-xs-12 col-sm-12 col-md-12 col-lg-12 control-label"
-                                                           style="text-align: left; 
-                                                                  font-family: RobotoSlabRegular;
-                                                                  font-size: 14px;
-                                                                  margin-bottom: 10px">
-                                                        Thành phố <span style="color:red"> *</span>
-                                                    </span>
-                                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                                        <select id = "list_city_buy" 
-                                                                name = "list_city_buy"     
-                                                                class="form-control"
+                                                                name="list_district_buy"
                                                                 oninput="functionOninput();"
-                                                                onChange="city_selected('list_city_buy','list_district_buy')" 
-                                                                style = "-webkit-border-radius: 10px;
-                                                                          -moz-border-radius: 10px;                                                                          
-                                                                          height: 35px;
-                                                                          outline:none;
-                                                                          padding: 5px;
-                                                                          font-family: RobotoSlabRegular;
-                                                                          font-size: 14px;
-                                                                          border: 1px solid #ddd;
-                                                                          font-weight: lighter;
-                                                                          color: #adadad;
-                                                                          width: 100%">      
-                                                            <option value = "Chưa chọn tỉnh/thành">
-                                                                Chọn tỉnh thành
-                                                            </option>                                       
-                                                            <option value = "Hà Nội" {selected_Hà Nội}>Hà Nội</option>                                   
-                                                            <option value = "Hồ Chí Minh" {selected_Hồ Chí Minh}>Hồ Chí Minh</option>
-                                                            <option value = "Tỉnh Hà Giang" {selected_Tỉnh Hà Giang}>Tỉnh Hà Giang</option>
-                                                            <option value = "Tỉnh Cao Bằng" {selected_Tỉnh Cao Bằng}>Tỉnh Cao Bằng</option>
-                                                            <option value = "Tỉnh Bắc Kạn" {selected_Tỉnh Bắc Kạn}>Tỉnh Bắc Kạn</option>
-                                                            <option value = "Tỉnh Tuyên Quang" {selected_Tỉnh Tuyên Quang}>Tỉnh Tuyên Quang</option>
-                                                            <option value = "Tỉnh Lào Cai" {selected_Tỉnh Lào Cai}>Tỉnh Lào Cai</option>
-                                                            <option value = "Tỉnh Điện Biên" {selected_Tỉnh Điện Biên}>Tỉnh Điện Biên</option>
-                                                            <option value = "Tỉnh Lai Châu" {selected_Tỉnh Lai Châu}>Tỉnh Lai Châu</option>
-                                                            <option value = "Tỉnh Sơn La" {selected_Tỉnh Sơn La}>Tỉnh Sơn La</option>
-                                                            <option value = "Tỉnh Yên Bái" {selected_Tỉnh Yên Bái}>Tỉnh Yên Bái</option>
-                                                            <option value = "Tỉnh Hoà Bình" {selected_Tỉnh Hòa Bình}>Tỉnh Hoà Bình</option>
-                                                            <option value = "Tỉnh Thái Nguyên" {selected_Tỉnh Thái Nguyên}>Tỉnh Thái Nguyên</option>
-                                                            <option value = "Tỉnh Lạng Sơn" {selected_Tỉnh Lạng Sơn}>Tỉnh Lạng Sơn</option>
-                                                            <option value = "Tỉnh Quảng Ninh" {selected_Tỉnh Quảng Ninh}>Tỉnh Quảng Ninh</option>
-                                                            <option value = "Tỉnh Bắc Giang" {selected_Tỉnh Bắc Giang}>Tỉnh Bắc Giang</option>
-                                                            <option value = "Tỉnh Phú Thọ" {selected_Tỉnh Phú Thọ}>Tỉnh Phú Thọ</option>
-                                                            <option value = "Tỉnh Vĩnh Phúc" {selected_Tỉnh Vĩnh Phúc}>Tỉnh Vĩnh Phúc</option>
-                                                            <option value = "Tỉnh Bắc Ninh" {selected_Tỉnh Bắc Ninh}>Tỉnh Bắc Ninh</option>
-                                                            <option value = "Tỉnh Hải Dương" {selected_Tỉnh Hải Dương}>Tỉnh Hải Dương</option>
-                                                            <option value = "Thành phố Hải Phòng" {selected_Thành phố Hải Phòng}>Thành phố Hải Phòng</option>
-                                                            <option value = "Tỉnh Hưng Yên" {selected_Tỉnh Hưng Yên}>Tỉnh Hưng Yên</option>
-                                                            <option value = "Tỉnh Thái Bình" {selected_Tỉnh Thái Bình}>Tỉnh Thái Bình</option>
-                                                            <option value = "Tỉnh Hà Nam" {selected_Tỉnh Hà Nam}>Tỉnh Hà Nam</option>
-                                                            <option value = "Tỉnh Nam Định" {selected_Tỉnh Nam Định}>Tỉnh Nam Định</option>
-                                                            <option value = "Tỉnh Ninh Bình" {selected_Tỉnh Ninh Bình}>Tỉnh Ninh Bình</option>
-                                                            <option value = "Tỉnh Thanh Hoá" {selected_Tỉnh Thanh Hóa}>Tỉnh Thanh Hoá</option>
-                                                            <option value = "Tỉnh Nghệ An" {selected_Tỉnh Nghệ An}>Tỉnh Nghệ An</option>
-                                                            <option value = "Tỉnh Hà Tĩnh" {selected_Tỉnh Hà Tĩnh}>Tỉnh Hà Tĩnh</option>
-                                                            <option value = "Tỉnh Quảng Bình" {selected_Tỉnh Quảng Bình}>Tỉnh Quảng Bình</option>
-                                                            <option value = "Tỉnh Quảng Trị" {selected_Tỉnh Quảng Trị}>Tỉnh Quảng Trị</option>
-                                                            <option value = "Tỉnh Thừa Thiên Huế" {selected_Tỉnh Thừa Thiên Huế}>Tỉnh Thừa Thiên Huế</option>
-                                                            <option value = "Thành phố Đà Nẵng" {selected_Thành phố Đà Nẵng}>Thành phố Đà Nẵng</option>
-                                                            <option value = "Tỉnh Quảng Nam" {selected_Tỉnh Quảng Nam}>Tỉnh Quảng Nam</option>
-                                                            <option value = "Tỉnh Quảng Ngãi" {selected_Tỉnh Quảng Ngãi}>Tỉnh Quảng Ngãi</option>
-                                                            <option value = "Tỉnh Bình Định" {selected_Tỉnh Bình Định}>Tỉnh Bình Định</option>
-                                                            <option value = "Tỉnh Phú Yên" {selected_Tỉnh Phú Yên}>Tỉnh Phú Yên</option>
-                                                            <option value = "Tỉnh Khánh Hoà" {selected_Tỉnh Khánh Hòa}>Tỉnh Khánh Hoà</option>
-                                                            <option value = "Tỉnh Ninh Thuận" {selected_Tỉnh Ninh Thuận}>Tỉnh Ninh Thuận</option>
-                                                            <option value = "Tỉnh Bình Thuận" {selected_Tỉnh Bình Thuận}>Tỉnh Bình Thuận</option>
-                                                            <option value = "Tỉnh Kon Tum" {selected_Tỉnh Kon Tum}>Tỉnh Kon Tum</option>
-                                                            <option value = "Tỉnh Gia Lai" {selected_Tỉnh Gia Lai}>Tỉnh Gia Lai</option>
-                                                            <option value = "Tỉnh Đắk Lắk" {selected_Tỉnh Đắk Lắk}>Tỉnh Đắk Lắk</option>
-                                                            <option value = "Tỉnh Đắk Nông" {selected_Tỉnh Đắk Nông}>Tỉnh Đắk Nông</option>
-                                                            <option value = "Tỉnh Lâm Đồng" {selected_Tỉnh Lâm Đồng}>Tỉnh Lâm Đồng</option>
-                                                            <option value = "Tỉnh Bình Phước" {selected_Tỉnh Bình Phước}>Tỉnh Bình Phước</option>
-                                                            <option value = "Tỉnh Tây Ninh" {selected_Tỉnh Tây Ninh}>Tỉnh Tây Ninh</option>
-                                                            <option value = "Tỉnh Bình Dương" {selected_Tỉnh Bình Dương}>Tỉnh Bình Dương</option>
-                                                            <option value = "Tỉnh Đồng Nai" {selected_Tỉnh Đồng Nai}>Tỉnh Đồng Nai</option>
-                                                            <option value = "Tỉnh Bà Rịa - Vũng Tàu" {selected_Tỉnh Bà Rịa - Vũng Tàu}>Tỉnh Bà Rịa - Vũng Tàu</option>
-                                                            <option value = "Tỉnh Long An" {selected_Tỉnh Long An}>Tỉnh Long An</option>
-                                                            <option value = "Tỉnh Tiền Giang" {selected_Tỉnh Tiền Giang}>Tỉnh Tiền Giang</option>
-                                                            <option value = "Tỉnh Bến Tre" {selected_Tỉnh Bến Tre}>Tỉnh Bến Tre</option>
-                                                            <option value = "Tỉnh Trà Vinh" {selected_Tỉnh Trà Vinh}>Tỉnh Trà Vinh</option>
-                                                            <option value = "Tỉnh Vĩnh Long" {selected_Tỉnh Vĩnh Long}>Tỉnh Vĩnh Long</option>
-                                                            <option value = "Tỉnh Đồng Tháp" {selected_Tỉnh Đồng Tháp}>Tỉnh Đồng Tháp</option>
-                                                            <option value = "Tỉnh An Giang" {selected_Tỉnh An Giang}>Tỉnh An Giang</option>
-                                                            <option value = "Tỉnh Kiên Giang" {selected_Tỉnh Kiên Giang}>Tỉnh Kiên Giang</option>
-                                                            <option value = "Thành phố Cần Thơ" {selected_Thành phố Cần Thơ}>Thành phố Cần Thơ</option>
-                                                            <option value = "Tỉnh Hậu Giang" {selected_Tỉnh Hậu Giang} >Tỉnh Hậu Giang</option>
-                                                            <option value = "Tỉnh Sóc Trăng" {selected_Tỉnh Sóc Trăng}>Tỉnh Sóc Trăng</option>
-                                                            <option value = "Tỉnh Bạc Liêu" {selected_Tỉnh Bạc Liêu}>Tỉnh Bạc Liêu</option>
-                                                            <option value = "Tỉnh Cà Mau" {selected_Tỉnh Cà Mau}>Tỉnh Cà Mau</option>
-                                                            <option value = "Tỉnh Hà Tây" {selected_Tỉnh Hà Tây}>Tỉnh Hà Tây</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                        
-                                                <div class ="form-group col-xs-12 col-sm-12 col-md-4 col-lg-4"
-                                                     style="padding-left: 0px">
-                                                    <span for="list_district_buy" 
-                                                        class="col-xs-12 col-sm-12 col-md-12 col-lg-12 control-label"
-                                                        style="text-align: left; 
-                                                               font-family: RobotoSlabRegular;
-                                                               font-size: 14px;
-                                                               margin-bottom: 10px">
-                                                        Quận/Huyện<span style="color:red"> *</span>
-                                                    </span>
-                                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                                        <select id = "list_district_buy" 
-                                                                class="form-control"
-                                                                name = "list_district_buy"       
-                                                                oninput="functionOninput();"
-                                                                style = "-webkit-border-radius: 10px;
-                                                                          -moz-border-radius: 10px;                                                                          
-                                                                          height: 35px;
-                                                                          outline:none;
-                                                                          padding: 5px;
-                                                                          font-family: RobotoSlabRegular;
-                                                                          font-size: 14px;
-                                                                          border: 1px solid #ddd;
-                                                                          font-weight: lighter;
-                                                                          color: #adadad;
-                                                                          width: 100%">
+                                                                style="-webkit-border-radius: 10px;
+                                                                      -moz-border-radius: 10px;
+                                                                      height: 35px;
+                                                                      outline:none;
+                                                                      padding: 5px;
+                                                                      font-family: RobotoSlabRegular;
+                                                                      font-size: 14px;
+                                                                      border: 1px solid #ddd;
+                                                                      font-weight: lighter;
+                                                                      color: #adadad;
+                                                                      width: 100%">
                                                             <option value = "Chưa chọn quận/huyện" selected {selected_district}> Chọn quận huyện</option>
                                                             <option value = "{district_value}"  {selected_district_value}>{district_value}</option>       
                                                         </select>     
                                                     </div>
-                                                </div>                                                                                                                                                                                                                      
-                                            </div>                                                                                                                                                            
+                                                </div>
+                                            </div>                          
                                             <div class="form-inline">
-                                                <div class ="form-group col-xs-12 col-sm-12 col-md-4 col-lg-4"
+                                                <div class="form-group col-xs-12 col-sm-4 col-md-4"
                                                      style="padding-left: 0px">
-                                                    <span for="tags" 
-                                                           class="col-xs-12 col-sm-12 col-md-12 col-lg-12 control-label"
-                                                           style="text-align: left; 
-                                                                  font-family: RobotoSlabRegular;
-                                                                  font-size: 14px;
-                                                                  margin-bottom: 10px;
-                                                                  margin-top: 10px">
-                                                        Phường<span style="color:red"> *</span>
-                                                    </span>
-                                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                                        <input type="text" 
-                                                               id ="tags" 
-                                                               oninput="functionOninput();"
-                                                               class="form-control"                                                                                                                          
-                                                               name="text_edit_number_ward" 
-                                                               value="{text_ward}"
-                                                               maxlength="20"
-                                                               style = "-webkit-border-radius: 10px;
-                                                                         -moz-border-radius: 10px;
-                                                                         border-radius: 10px;
-                                                                         height: 40px;
-                                                                         outline: none;
-                                                                         padding: 5px;
-                                                                         font-family: RobotoSlabRegular;
-                                                                         font-size: 14px;                                            
-                                                                         border: 1px solid #ddd;
-                                                                         font-weight: lighter;
-                                                                         color: #adadad;
-                                                                         width: 100%">    
-                                                    </div>
+                                                      <span for="tags" 
+                                                          class="col-xs-12 control-label"
+                                                          style="text-align: left; 
+                                                          font-family: RobotoSlabRegular;
+                                                          font-size: 14px;
+                                                          margin-bottom: 10px;
+                                                          margin-top: 10px">
+                                                        Phường<span style="color:red">*</span>
+                                                      </span>
+                                                      <div class="col-xs-12">
+                                                            <input type="text" 
+                                                            id="tags" 
+                                                            oninput="functionOninput();"
+                                                            class="form-control"  
+                                                            name="text_edit_number_ward" 
+                                                            value="{text_ward}"
+                                                            maxlength="20"
+                                                            style="-webkit-border-radius: 10px;
+                                                            -moz-border-radius: 10px;
+                                                            border-radius: 10px;
+                                                            height: 40px;
+                                                            outline: none;
+                                                            padding: 5px;
+                                                            font-family: RobotoSlabRegular;
+                                                            font-size: 14px;
+                                                            border: 1px solid #ddd;
+                                                            font-weight: lighter;
+                                                            color: #adadad;
+                                                            width: 100%"></div>
                                                 </div>
                                             </div>
                                             <div class="form-inline">
-                                                <div class ="form-group col-xs-12 col-sm-12 col-md-4 col-lg-4"
+                                                <div class="form-group col-xs-12 col-sm-4 col-md-4"
                                                      style="padding-left: 0px">
-                                                    <span for="tags_street" 
-                                                           class="col-xs-12 col-sm-12 col-md-12 col-lg-12 control-label"
-                                                           style="text-align: left; 
-                                                                  font-family: RobotoSlabRegular;
-                                                                  font-size: 14px;
-                                                                  margin-bottom: 10px;
-                                                                  margin-top: 10px">
-                                                        Đường<span style="color:red"> *</span>
-                                                    </span>
-                                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                                        <input type="text" 
+                                                      <span for="tags_street" 
+                                                            class="col-xs-12 control-label"
+                                                            style="text-align: left; 
+                                                            font-family: RobotoSlabRegular;
+                                                            font-size: 14px;
+                                                            margin-bottom: 10px;
+                                                            margin-top: 10px">
+                                                          Đường<span style="color:red">*</span>
+                                                      </span>
+                                                      <div class="col-xs-12">
+                                                            <input type="text" 
                                                                class="form-control"
                                                                id="tags_street"
                                                                oninput="functionOninput();"
@@ -3226,358 +3143,330 @@
                                                                value="{text_street}"
                                                                maxlength="40"
                                                                style = "-webkit-border-radius: 10px;
-                                                                        -moz-border-radius: 10px;
-                                                                        border-radius: 10px;
-                                                                        height: 40px;
-                                                                        outline: none;
-                                                                        padding: 5px;
-                                                                        font-family: RobotoSlabRegular;
-                                                                        font-size: 14px;                                            
-                                                                        border: 1px solid #ddd;
-                                                                        font-weight: lighter;
-                                                                        color: #adadad;
-                                                                        width: 100%">    
+                                                               -moz-border-radius: 10px;
+                                                               border-radius: 10px;
+                                                               height: 40px;
+                                                               outline: none;
+                                                               padding: 5px;
+                                                               font-family: RobotoSlabRegular;
+                                                               font-size: 14px;          
+                                                               border: 1px solid #ddd;
+                                                               font-weight: lighter;
+                                                               color: #adadad;
+                                                               width: 100%">    
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="form-inline">
-                                                <div class ="form-group col-xs-12 col-sm-12 col-md-4 col-lg-4"
+                                                <div class="form-group col-xs-12 col-sm-4 col-md-4"
                                                      style="padding-left: 0px">
-                                                    <span for="tags_street" 
-                                                           class="col-xs-12 col-sm-12 col-md-12 col-lg-12 control-label"
-                                                           style="text-align: left; 
-                                                                  font-family: RobotoSlabRegular;
-                                                                  font-size: 14px;
-                                                                  margin-bottom: 10px;
-                                                                  margin-top: 10px">
-                                                        Số nhà<span style="color:red"> *</span>
-                                                    </span>
-                                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                                        <input type="text"
+                                                      <span for="tags_street" 
+                                                          class="col-xs-12 control-label"
+                                                          style="text-align: left; 
+                                                          font-family: RobotoSlabRegular;
+                                                          font-size: 14px;
+                                                          margin-bottom: 10px;
+                                                          margin-top: 10px">
+                                                          Số nhà<span style="color:red">*</span>
+                                                      </span>
+                                                      <div class="col-xs-12">
+                                                            <input type="text"
                                                                class="form-control" 
-                                                               id ="text_edit_number_address"
+                                                               id="text_edit_number_address"
                                                                oninput="functionOninput();"
-                                                               name ="text_edit_number_address"
+                                                               name="text_edit_number_address"
                                                                value="{text_address}"
                                                                maxlength="10"
-                                                               style = "-webkit-border-radius: 10px;
-                                                                        -moz-border-radius: 10px;
-                                                                        border-radius: 10px;
-                                                                        height: 40px;
-                                                                        outline: none;
-                                                                        padding: 5px;
-                                                                        font-family: RobotoSlabRegular;
-                                                                        font-size: 14px;                                            
-                                                                        border: 1px solid #ddd;
-                                                                        font-weight: lighter;
-                                                                        color: #adadad;
-                                                                        width: 100%">    
-                                                    </div>
+                                                               style="-webkit-border-radius: 10px;
+                                                               -moz-border-radius: 10px;
+                                                               border-radius: 10px;
+                                                               height: 40px;
+                                                               outline: none;
+                                                               padding: 5px;
+                                                               font-family: RobotoSlabRegular;
+                                                               font-size: 14px;    
+                                                               border: 1px solid #ddd;
+                                                               font-weight: lighter;
+                                                               color: #adadad;
+                                                               width: 100%"> 
+                                                      </div>
                                                 </div>
                                             </div>
                                             <div class="form-inline">
-                                                <div class ="form-group col-xs-12 col-sm-12 col-md-4 col-lg-4"
+                                                <div class="form-group col-xs-12 col-sm-4 col-md-4"
                                                      style="padding-left: 0px">
-                                                    <span for="text_edit_number_address_Chung_Cu" 
-                                                           class="col-xs-12 col-sm-12 col-md-12 col-lg-12 control-label"
-                                                           style="text-align: left; 
-                                                                  font-family: RobotoSlabRegular;
-                                                                  font-size: 14px;
-                                                                  margin-bottom: 10px;
-                                                                  margin-top: 10px">
+                                                      <span for="text_edit_number_address_Chung_Cu" 
+                                                          class="col-xs-12 control-label"
+                                                          style="text-align: left; 
+                                                          font-family: RobotoSlabRegular;
+                                                          font-size: 14px;
+                                                          margin-bottom: 10px;
+                                                          margin-top: 10px">
                                                         Chung cư / Tòa nhà
-                                                    </span>
-                                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                                      </span>
+                                                      <div class="col-xs-12">
                                                         <input type="text"
                                                                class="form-control" 
-                                                               id ="text_edit_number_address_Chung_Cu" 
+                                                               id="text_edit_number_address_Chung_Cu" 
                                                                name ="text_edit_number_address_Chung_Cu" 
                                                                value="{text_address_Chung_Cu}" 
                                                                maxlength="40"
                                                                style = "-webkit-border-radius: 10px;
-                                                                        -moz-border-radius: 10px;
-                                                                        border-radius: 10px;
-                                                                        height: 40px;
-                                                                        outline: none;
-                                                                        padding: 5px;
-                                                                        font-family: RobotoSlabRegular;
-                                                                        font-size: 14px;                                            
-                                                                        border: 1px solid #ddd;
-                                                                        font-weight: lighter;
-                                                                        color: #adadad;
-                                                                        width: 100%">    
-                                                    </div>
+                                                               -moz-border-radius: 10px;
+                                                               border-radius: 10px;
+                                                               height: 40px;
+                                                               outline: none;
+                                                               padding: 5px;
+                                                               font-family: RobotoSlabRegular;
+                                                               font-size: 14px;    
+                                                               border: 1px solid #ddd;
+                                                               font-weight: lighter;
+                                                               color: #adadad;
+                                                               width: 100%">    
+                                                      </div>
                                                 </div>
                                             </div>   
-                                            
                                             <div class="form-inline">
-                                                <div class ="form-group col-xs-12 col-sm-12 col-md-4 col-lg-4"
+                                                <div class="form-group col-xs-12 col-sm-4 col-md-4"
                                                      style="padding-left: 0px">
-                                                    <span for="text_edit_floor_Chung_Cu" 
-                                                           class="col-xs-12 col-sm-12 col-md-12 col-lg-12 control-label"
-                                                           style="text-align: left; 
-                                                                  font-family: RobotoSlabRegular;
-                                                                  font-size: 14px;
-                                                                  margin-bottom: 10px;
-                                                                  margin-top: 10px">
-                                                        Lầu
-                                                    </span>
-                                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                                        <input type="text"
-                                                               class="form-control" 
-                                                               id ="text_edit_floor_Chung_Cu"                                                                 
-                                                               name="text_edit_floor_Chung_Cu" 
-                                                               value="{text_edit_floor_Chung_Cu}"
-                                                               maxlength="10"
-                                                               style = "-webkit-border-radius: 10px;
-                                                                        -moz-border-radius: 10px;
-                                                                        border-radius: 10px;
-                                                                        height: 40px;
-                                                                        outline: none;
-                                                                        padding: 5px;
-                                                                        font-family: RobotoSlabRegular;
-                                                                        font-size: 14px;                                            
-                                                                        border: 1px solid #ddd;
-                                                                        font-weight: lighter;
-                                                                        color: #adadad;
-                                                                        width: 100%">
+                                                      <span for="text_edit_floor_Chung_Cu" 
+                                                          class="col-xs-12 control-label"
+                                                          style="text-align: left; 
+                                                          font-family: RobotoSlabRegular;
+                                                          font-size: 14px;
+                                                          margin-bottom: 10px;
+                                                          margin-top: 10px">
+                                                            Lầu
+                                                      </span>
+                                                      <div class="col-xs-12">
+                                                            <input type="text"
+                                                                  class="form-control" 
+                                                                  id="text_edit_floor_Chung_Cu"
+                                                                  name="text_edit_floor_Chung_Cu" 
+                                                                  value="{text_edit_floor_Chung_Cu}"
+                                                                  maxlength="10"
+                                                                  style="-webkit-border-radius: 10px;
+                                                                     -moz-border-radius: 10px;
+                                                                     border-radius: 10px;
+                                                                     height: 40px;
+                                                                     outline: none;
+                                                                     padding: 5px;
+                                                                     font-family: RobotoSlabRegular;
+                                                                     font-size: 14px;
+                                                                     border: 1px solid #ddd;
+                                                                     font-weight: lighter;
+                                                                     color: #adadad;
+                                                                     width: 100%">
                                                     </div>
                                                 </div>
                                             </div> 
                                             <div class="form-inline">
-                                                <div class ="form-group col-xs-12 col-sm-12 col-md-4 col-lg-4"
+                                                <div class="form-group col-xs-12 col-sm-4 col-md-4"
                                                      style="padding-left: 0px">
-                                                    <span for="text_edit_room_Chung_Cu" 
-                                                           class="col-xs-12 col-sm-12 col-md-12 col-lg-12 control-label"
-                                                           style="text-align: left; 
-                                                                  font-family: RobotoSlabRegular;
-                                                                  font-size: 14px;
-                                                                  margin-bottom: 10px;
-                                                                  margin-top: 10px">
-                                                        Căn hộ
-                                                    </span>
-                                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                                        <input type="text"
+                                                      <span for="text_edit_room_Chung_Cu" 
+                                                          class="col-xs-12 control-label"
+                                                          style="text-align: left; 
+                                                          font-family: RobotoSlabRegular;
+                                                          font-size: 14px;
+                                                          margin-bottom: 10px;
+                                                          margin-top: 10px">Căn hộ</span>
+                                                      <div class="col-xs-12">
+                                                            <input type="text"
                                                                class="form-control" 
                                                                id ="text_edit_room_Chung_Cu"
                                                                name="text_edit_room_Chung_Cu"
                                                                value="{text_edit_room_Chung_Cu}"
                                                                maxlength="40"
-                                                               style = "-webkit-border-radius: 10px;
-                                                                        -moz-border-radius: 10px;
-                                                                        border-radius: 10px;
-                                                                        height: 40px;
-                                                                        outline: none;
-                                                                        padding: 5px;
-                                                                        font-family: RobotoSlabRegular;
-                                                                        font-size: 14px;                                            
-                                                                        border: 1px solid #ddd;
-                                                                        font-weight: lighter;
-                                                                        color: #adadad;
-                                                                        width: 100%">
+                                                               style="-webkit-border-radius: 10px;
+                                                               -moz-border-radius: 10px;
+                                                               border-radius: 10px;
+                                                               height: 40px;
+                                                               outline: none;
+                                                               padding: 5px;
+                                                               font-family: RobotoSlabRegular;
+                                                               font-size: 14px; 
+                                                               border: 1px solid #ddd;
+                                                               font-weight: lighter;
+                                                               color: #adadad;
+                                                               width: 100%">
                                                     </div>
                                                 </div>
-                                            </div>                   
-                                            
-                                            <div class ="form-group">
-                                                <span for="firstname" 
-                                                       class="col-xs-12 col-sm-12 col-md-2 col-lg-2 control-label"
-                                                       style="text-align: left; 
-                                                              font-family: RobotoSlabRegular;
-                                                              font-size: 14px;
-                                                              margin-top: 25px">
-                                                    Điện thoại:<span style="color:red"> *</span>
+                                            </div>
+                                            <div class="form-group">
+                                                <span for="firstname"
+                                                      class="col-xs-12 col-sm-2 col-md-2 control-label"
+                                                      style="text-align: left; 
+                                                      font-family: RobotoSlabRegular;
+                                                      font-size: 14px;
+                                                      margin-top: 25px">
+                                                      Điện thoại:<span style="color:red">*</span>
                                                 </span>
-                                                <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5" style ="margin-top: 20px">
-                                                    <input  type="text"          
-                                                            class ="form-control"
+                                                <div class="col-xs-8 col-sm-4 col-md-5"
+                                                      style="margin-top: 20px">
+                                                      <input type="text" 
+                                                            class="form-control"
                                                             id="phone"
                                                             oninput="functionOninput();"
                                                             name="phone"
                                                             type="text" 
-                                                            value="{phone}"                                                                                                               
-                                                            style = "-webkit-border-radius: 10px;
-                                                                     -moz-border-radius: 10px;
-                                                                     border-radius: 10px;
-                                                                     height: 40px;
-                                                                     outline: none;
-                                                                     padding: 5px;
-                                                                     font-family: RobotoSlabRegular;
-                                                                     font-size: 14px;                                            
-                                                                     border: 1px solid #ddd;
-                                                                     font-weight: lighter;
-                                                                     color: #adadad;
-                                                                     width: 103%"
+                                                            value="{phone}"
+                                                            style="-webkit-border-radius: 10px;
+                                                            -moz-border-radius: 10px;
+                                                            border-radius: 10px;
+                                                            height: 40px;
+                                                            outline: none;
+                                                            padding: 5px;
+                                                            font-family: RobotoSlabRegular;
+                                                            font-size: 14px;      
+                                                            border: 1px solid #ddd;
+                                                            font-weight: lighter;
+                                                            color: #adadad;
+                                                            width: 103%"
                                                             maxlength="11">
                                                 </div>
-                                            </div>
-                                                            
-                                            <div class ="form-group">
+                                          </div>
+                                          <div class="form-group">
                                                 <span for="firstname" 
-                                                       class="col-xs-12 col-sm-12 col-md-2 col-lg-2 control-label"
-                                                       style="text-align: left; 
-                                                              font-family: RobotoSlabRegular;
-                                                              font-size: 14px;
-                                                              margin-top: 5px">
-                                                    Ảnh:
-                                                </span>
-                                                <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5" style ="margin-top: 5px">
-                                                    <input type="file" 
+                                                      class="col-xs-12 col-sm-2 col-md-2 control-label"
+                                                      style="text-align: left; 
+                                                      font-family: RobotoSlabRegular;
+                                                      font-size: 14px;
+                                                      margin-top: 5px">Ảnh:</span>
+                                                <div class="col-xs-8 col-sm-4 col-md-5" 
+                                                      style="margin-top: 5px">
+                                                      <input type="file" 
                                                            name="avatar" 
                                                            class="form-control"
-                                                           style = "-webkit-border-radius: 10px;
-                                                                     -moz-border-radius: 10px;
-                                                                     border-radius: 10px;
-                                                                     height: 40px;
-                                                                     outline: none;
-                                                                     padding: 5px;
-                                                                     font-family: RobotoSlabRegular;
-                                                                     font-size: 14px;                                            
-                                                                     border: 1px solid #ddd;
-                                                                     font-weight: lighter;
-                                                                     color: #adadad;
-                                                                     width: 103%">                                                    
+                                                           style="-webkit-border-radius: 10px;
+                                                           -moz-border-radius: 10px;
+                                                           border-radius: 10px;
+                                                           height: 40px;
+                                                           outline: none;
+                                                           padding: 5px;
+                                                           font-family: RobotoSlabRegular;
+                                                           font-size: 14px;
+                                                           border: 1px solid #ddd;
+                                                           font-weight: lighter;
+                                                           color: #adadad;
+                                                           width: 103%">
                                                 </div>
-                                            </div>
-                                            <div class ="form-group">                                               
-                                                <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 col-md-offset-7 col-lg-offset-7" 
-                                                     style ="float:left; padding-left: 10%;">
-                                                    <input id="cmd_submit_update_user" 
+                                          </div>
+                                          <div class ="form-group">
+                                                <div class="col-xs-12">
+                                                      <input id="cmd_submit_update_user" 
                                                            name="cmd_submit_update_user" 
                                                            class="button_update"
-                                                           value = "Lưu thay đổi"                 			
+                                                           value = "Lưu thay đổi"
                                                            type="submit"
                                                            onclick="myFunctionSubmit();"
-                                                           style="outline:none;                                                                  
-                                                                  background-color: #ff767c;
-                                                                  border: none;
-                                                                  color: #fff;
-                                                                  font-family:PoetsenOne;
-                                                                  -webkit-border-radius: 20px;
-                                                                  -moz-border-radius: 20px;
-                                                                  border-radius: 20px;
-                                                                  padding: 10px;
-                                                                  width: 120px;
-                                                                  font-size: 14px">                                 
+                                                           style="outline:none; 
+                                                           background-color: #ff767c;
+                                                           border: none;
+                                                           color: #fff;
+                                                           font-family:PoetsenOne;
+                                                           -webkit-border-radius: 20px;
+                                                           -moz-border-radius: 20px;
+                                                           border-radius: 20px;
+                                                           padding: 10px;
+                                                           width: 120px;
+                                                           font-size: 14px;
+                                                           float: left">
                                                 </div>
-                                            </div>                                                            
-                                        </div>                                                                              
-                                    </div>	
-                                </div>                                  							
-                            </form>                   
-                        </div>                        
-                        <hr style = "width: 87%; float:left; margin-left: 0px"/>
-                        <div class="newsPersonal_inside" style="clear: both">
-                            <br/>
-                            <div style= "text-align:left; 
-                                         margin-bottom:-15px; 
-                                         font-family:RobotoSlabLight;
-                                         color:#A00;
-                                         font-size:14px;
-                                         line-height: 25px;">
-                                {happy_birthday}
-                            </div>
-                            <br/>
-                            <div style= "text-align:left; 
-                                         margin-bottom:-15px; 
-                                         font-family:RobotoSlabLight;
-                                         color:#A00;
-                                         font-size:14px;
-                                         line-height: 25px;">
-                                {happy_birthday_nanapet}
-                            </div>
-                            <br/>
-                            <div style= "text-align:left; 
-                                         margin-bottom:-15px; 
-                                         font-family:RobotoSlabLight;
-                                         color:#A00;
-                                         font-size:14px;
-                                         line-height: 25px;
-                                         margin-bottom: 10px">
-                                {happy_new_year}
-                            </div>
-                            
-                            <div class="col-sx-12 col-sm-12 col-md-12 col-lg-12" 
-                                 style="padding-left:0px; 
-                                        font-family: RobotoSlabRegular; 
-                                        font-size: 17px;
-                                        margin-bottom: 10px">
-                                <span>
-                                    THÔNG TIN ĐIỂM THƯỞNG
-                                </span>
-                            </div>                                 
-                            <div class="col-sx-12 col-sm-12 col-md-12 col-lg-12" 
-                                 style="padding-left:0px; 
-                                        font-family: RobotoSlabRegular; 
-                                        font-size: 14px;
-                                        line-height: 30px">
-                                <span>
-                                    Tên đăng nhập : <span style="color:blue;">{name}</span>
-                                </span>
-                            </div>                                    
-                            <div class="col-sx-12 col-sm-12 col-md-12 col-lg-12" 
-                                 style="padding-left:0px; 
-                                        font-family: RobotoSlabRegular; 
-                                        font-size: 14px;
-                                        line-height: 30px">
-                                <span>
-                                    Thành viên : <span style="color:red">{level}</span>
-                                </span>
-                            </div>                                    
-                            <div class="col-sx-12 col-sm-12 col-md-12 col-lg-12" 
-                                 style="padding-left:0px; 
-                                        font-family: RobotoSlabRegular; 
-                                        font-size: 14px;
-                                        line-height: 30px">
-                                <span>
-                                    Chiết khấu thành viên : <span style="color:red">{discount_level}</span>
-                                </span>
-                            </div>                                
-                            <div class="col-sx-12 col-sm-12 col-md-12 col-lg-12" 
-                                 style="padding-left:0px; 
-                                        font-family: RobotoSlabRegular; 
-                                        font-size: 14px;
-                                        line-height: 30px">
-                                <span>
-                                    Điểm thưởng : <span style="color:red">{awardscore}</span>
-                                </span>
-                            </div>                                  
-                            <div class="col-sx-12 col-sm-12 col-md-12 col-lg-12" 
-                                 style="padding-left:0px; 
-                                        font-family: RobotoSlabRegular; 
-                                        font-size: 14px;
-                                        line-height: 30px">
-                                <span>
-                                    Điểm được sử dụng : <span style="color:red">{score}</span>
-                                </span>
-                            </div>                                                                  
-                            <div class="col-sx-12 col-sm-12 col-md-12 col-lg-12" 
-                                 style="padding-left:0px; 
-                                        font-family: RobotoSlabRegular; 
-                                        font-size: 14px;
-                                        line-height: 30px;
-                                        margin-bottom: 20px">
-                                <span>
-                                    Điểm chưa được sử dụng : <span style="color:red">{unusedscore}</span>
-                                </span>
-                            </div>                                  
+                                            </div>
+                                          </div>
+                                    </div>
+                        </form> 
+                  </div>
+                  <hr class="hidden-xs hidden-sm" style="width: 90%; margin-left: 0px">
+                  <hr class="hidden-md hidden-lg" style="width: 100%; margin-left: 0px">
+                  <div class="newsPersonal_inside" style="line-height: 30px">
+                        <div class="col-sx-12" 
+                              style= "text-align:left; 
+                                   font-family:RobotoSlabLight;
+                                   color:#A00;
+                                   font-size:14px">{happy_birthday}</div>
+                        <div class="col-sx-12"
+                              style="text-align:left; 
+                             font-family:RobotoSlabLight;
+                             color:#A00;
+                             font-size:14px">{happy_birthday_nanapet}</div>
+                        <div class="col-sx-12" 
+                              style="text-align:left; 
+                             font-family:RobotoSlabLight;
+                             color:#A00;
+                             font-size:14px">{happy_new_year}</div>
+                        <div class="col-sx-12" 
+                             style="padding-left:0px; 
+                             font-family: RobotoSlabRegular; 
+                             font-size: 17px;
+                             margin-bottom: 10px">THÔNG TIN ĐIỂM THƯỞNG
                         </div>
+                        <div class="col-sx-12" 
+                             style="padding-left:0px; 
+                             font-family: RobotoSlabRegular; 
+                             font-size: 14px;
+                             line-height: 30px">
+                            <span>
+                                Tên đăng nhập : <span style="color:blue;">{name}</span>
+                            </span>
+                        </div> 
+                        <div class="col-sx-12" 
+                             style="padding-left:0px; 
+                             font-family: RobotoSlabRegular; 
+                             font-size: 14px;
+                             line-height: 30px">
+                            <span>
+                                Thành viên : <span style="color:red">{level}</span>
+                            </span>
+                        </div>
+                        <div class="col-sx-12" 
+                             style="padding-left:0px; 
+                             font-family: RobotoSlabRegular; 
+                             font-size: 14px;
+                             line-height: 30px">
+                            <span>
+                                Chiết khấu thành viên : <span style="color:red">{discount_level}</span>
+                            </span>
+                        </div>
+                        <div class="col-sx-12" 
+                             style="padding-left:0px; 
+                             font-family: RobotoSlabRegular; 
+                             font-size: 14px;
+                             line-height: 30px">
+                            <span>
+                                Điểm thưởng : <span style="color:red">{awardscore}</span>
+                            </span>
+                        </div>
+                        <div class="col-sx-12" 
+                             style="padding-left:0px; 
+                             font-family: RobotoSlabRegular; 
+                             font-size: 14px;
+                             line-height: 30px">
+                            <span>
+                                Điểm được sử dụng : <span style="color:red">{score}</span>
+                            </span>
+                        </div>
+                        <div class="col-sx-12" 
+                             style="padding-left:0px; 
+                             font-family: RobotoSlabRegular; 
+                             font-size: 14px;
+                             line-height: 30px;
+                             margin-bottom: 20px">
+                            <span>
+                                Điểm chưa được sử dụng : <span style="color:red">{unusedscore}</span>
+                            </span>
+                        </div> 
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 </body>			
 <script>
-    $(function() {
-        $("#birthday" ).datepicker({dateFormat: 'dd-mm-yy',
-                                    changeMonth:true,
-                                    changeYear: true});
+    $(function () {
+        $("#birthday").datepicker({dateFormat: 'dd-mm-yy',
+                        changeMonth:true,
+                        changeYear: true});
     });
 </script>
-
-<!--<a style="margin-left:140px" 
-       target="_blank"
-       href="http://nanapet.com/tro-giup/cau-lac-bo-nanaclub.html">
-       >>> Chi tiết điểm thưởng
-</a>-->
