@@ -4,6 +4,792 @@
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css"/>
 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<style> 
+.form-group {
+      /*trick bootstraps framework*/
+      margin-right: 0px !important;
+}
+</style>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                  <div id="breakcrumb"
+                     style="font-family: RobotoSlabRegular;
+                        font-size:14px;
+                        margin-top: 10px;
+                        margin-bottom: 15px">
+                        {breadcrumbs_path}
+                  </div>
+                  <div class="news_main">
+                  <div style="font-family:PoetsenOne;
+                        font-size: 20px;
+                        clear:both;
+                        margin-bottom: 20px">
+                        <span style="color: #989898">Xin chào, </span>
+                        <span style="color: #019cfd">{name_hello}</span>
+                   </div>
+
+                  <!--Left Col-->
+                  <div class="hidden-xs hidden-sm col-md-3 col-lg-3" 
+                        style="padding-left: 0px;
+                              padding-right: 50px;
+                              font-family: RobotoSlabRegular">
+                        <div class="col-md-12"
+                              style="padding:0px;
+                                    background-color: #f2fbff;
+                                    -webkit-border-radius:25px;
+                                    -moz-border-radius:25px;
+                                    border-radius:25px;
+                                    -webkit-box-shadow: 0px 10px 10px -5px rgba(146,159,165,1);
+                                    -moz-box-shadow: 0px 10px 10px -5px rgba(146,159,165,1);
+                                    box-shadow: 0px 10px 10px -5px rgba(146,159,165,1);">
+                              <div class="col-md-12" style="padding:0px">
+                                    <img alt="{name_hello}"
+                                       src="{linkS}upload/avatar/{avatar}" 
+                                       width="100%"
+                                       style="-webkit-border-radius:25px;
+                                              -moz-border-radius:25px;
+                                              border-radius:25px;
+                                              margin-bottom: 20px">
+                              </div>
+                              <div class="col-md-12">
+                                  <img alt="thông tin tài khoản"
+                                       src="{linkS}layout/bootstrap/images/thong_tin_tai_khoan_1.png" 
+                                       height="20px">
+                                    <a href="{linkS}thong-tin-tai-khoan"
+                                     style="font-family: RobotoSlabLight; 
+                                          font-size: 14px;
+                                          margin-left: 10px;
+                                          line-height: 35px;
+                                          padding-top: 10px;
+                                          color: #000">Thông tin của bạn</a>
+                              </div>    
+                              <div class="col-md-12">
+                                    <img alt="sổ địa chỉ"
+                                         src="{linkS}layout/bootstrap/images/thong_tin_tai_khoan_2.png" 
+                                         height="20px">
+                                    <a href="{linkS}so-dia-chi"
+                                       style="font-family: RobotoSlabLight; 
+                                            font-size: 14px; 
+                                            margin-left: 10px;
+                                            line-height: 35px;
+                                            color: #000">Sổ địa chỉ</a>
+                              </div>
+                              <div class="col-md-12">
+                                    <img alt="đơn hàng" 
+                                         src="{linkS}layout/bootstrap/images/thong_tin_tai_khoan_3.png" 
+                                         height="20px">
+                                    <a href="{linkS}danh-sach-don-hang"
+                                       style="font-family: RobotoSlabLight; 
+                                            font-size: 14px; 
+                                            margin-left: 10px;
+                                            line-height: 35px;
+                                            color: #000">Đơn hàng của tôi</a>
+                                    <!--<a href="{linkS}san-pham-danh-gia">
+                                        Sản phẩm ưa thích
+                                    </a>-->
+                              </div>
+                              <div class="col-md-12">
+                                    <img alt="sản phẩm ưa thích"
+                                         src="{linkS}layout/bootstrap/images/thong_tin_tai_khoan_4.png" 
+                                         height="20px">
+                                    <a href="{linkS}san-pham-ua-thich"
+                                       style="font-family: RobotoSlabLight; 
+                                       font-size: 14px; 
+                                       margin-left: 10px;
+                                       line-height: 35px;
+                                       color: #000">Sản phẩm ưa thích</a>
+                              </div>
+                              <div class="col-md-12">
+                                    <img alt="thú cưng"
+                                         src="{linkS}layout/bootstrap/images/thong_tin_tai_khoan_5.png" 
+                                         height="20px">
+                                    <a href="{linkS}thu-cung-cua-toi"
+                                       style="font-family: RobotoSlabLight; 
+                                       font-size: 14px; 
+                                       margin-left: 5px;
+                                       line-height: 35px;
+                                       color: #000">Thú cưng của tôi</a>
+                              </div>
+                              <div class="col-md-12" style="margin-bottom: 30px">
+                                    <hr style = "border-color: #93a4ac; border-width: 1px;">
+                                    <img alt="mật khẩu" 
+                                         src="{linkS}layout/bootstrap/images/thong_tin_tai_khoan_6.png" 
+                                         height="20px">
+                                    <a href="{linkS}doi-mat-khau"
+                                       style="font-family: RobotoSlabLight; 
+                                       font-size: 14px; 
+                                       margin-left: 10px;
+                                       line-height: 20px;
+                                       color: #000;
+                                       padding-bottom: 30px">Đổi mật khẩu</a>
+                              </div>
+                        </div>      
+                  </div>
+                  <!--Right Col-->
+                  <div class="col-xs-12 col-md-9" style="padding:0px">
+                        <form method='POST' id="frm1" name="frm1" enctype='multipart/form-data' 
+                        action="{linkS}cap-nhat-thong-tin">
+                              <div class="newsPersonal_inside">
+                                    <div class="group_listing_input" id="group_listing_input">
+                                          <div style="text-align: center;
+                                                font-family: RobotoSlabRegular;
+                                                color: #A00;
+                                                font-size: 15px;
+                                                font-family: RobotoSlabLight;
+                                                line-height: 30px">{message_notice}</div>
+                                          <div style="font-family:RobotoSlabRegular; 
+                                                font-size: 17px;
+                                                color:#393939;
+                                                margin-bottom: 20px">THÔNG TIN CÁ NHÂN</div>
+                                          <div class="form-horizontal">
+                                          <div class="form-group">
+                                                <span for="firstname" 
+                                                class="col-xs-12 col-sm-2 col-md-2 control-label"
+                                                style="text-align: left; 
+                                                      font-family: RobotoSlabRegular;
+                                                      font-size: 14px">Họ và tên: 
+                                                      <span style="color:red">*</span> 
+                                                </span>
+                                                <div class="col-xs-12 col-sm-7 col-md-9" 
+                                                      style="padding-right: 0px">
+                                                      <input type="text"          
+                                                      class="form-control"
+                                                      oninput="functionOninput();"
+                                                      id="firstname"
+                                                      name="name"  
+                                                      value="{name}"
+                                                      style="-webkit-border-radius: 10px;
+                                                      -moz-border-radius: 10px;
+                                                      border-radius: 10px;
+                                                      height: 40px;
+                                                      outline: none;
+                                                      padding: 5px;
+                                                      font-family: RobotoSlabRegular;
+                                                      font-size: 14px;     
+                                                      border: 1px solid #ddd;
+                                                      font-weight: lighter;
+                                                      color: #adadad;
+                                                      width: %"
+                                                      maxlength="50">
+                                                </div>
+                                          </div>
+                                          <div class="form-group">
+                                                <span for="birthday" 
+                                                class="col-xs-12 col-sm-2 col-md-2 control-label"
+                                                style="text-align: left; 
+                                                font-family: RobotoSlabRegular;
+                                                font-size: 14px">Ngày sinh:</span> 
+                                                <div class="col-xs-6 col-sm-2 col-md-3">
+                                                      <input class="form-control"
+                                                           id="birthday" 
+                                                           name="birthday" 
+                                                           type="text" 
+                                                           value="{birthday}"
+                                                           maxlength="10" 
+                                                           style="-webkit-border-radius: 10px;
+                                                           -moz-border-radius: 10px;
+                                                           border-radius: 10px;
+                                                           height: 40px;
+                                                           outline:none;
+                                                           padding: 5px;
+                                                           font-family: RobotoSlabRegular;
+                                                           font-size: 14px;
+                                                           border: 1px solid #ddd;
+                                                           font-weight: lighter;
+                                                           color: #adadad">
+                                                </div>
+                                          </div>
+                                          <div class="form-group">
+                                                <span for="gender" 
+                                                class="col-xs-12 col-sm-2 col-md-2 control-label"
+                                                style="text-align: left; 
+                                                      font-family: RobotoSlabRegular;
+                                                      font-size: 14px">Giới tính:</span>
+                                                <div class="col-xs-6 col-sm-2 col-md-2">
+                                                      <select id="gender" 
+                                                            name="gender"
+                                                            class="form-control"
+                                                            style="-webkit-border-radius: 10px;
+                                                            -moz-border-radius: 10px;
+                                                            height: 35px;
+                                                            outline:none;
+                                                            padding: 5px;
+                                                            font-family: RobotoSlabRegular;
+                                                            font-size: 14px;
+                                                            border: 1px solid #ddd;
+                                                            font-weight: lighter;
+                                                            color: #adadad">
+                                                      <option value="1" selected {selected1}>Anh</option>
+                                                      <option value="0" {selected2}>Chị</option>
+                                                      </select>
+                                                </div>
+                                          </div> 
+                                          <div class="form-group">
+                                                <span for="address" 
+                                                class="col-xs-12 col-sm-2 col-md-2 control-label"
+                                                style="text-align: left; 
+                                                font-family: RobotoSlabRegular;
+                                                font-size: 14px">Địa chỉ:</span>
+                                                <div class="col-xs-12 col-sm-7 col-md-9"
+                                                      style="padding-right: 0px">
+                                                      <textarea name="address"
+                                                      id="address"
+                                                      class="form-control"
+                                                      style="-webkit-border-radius: 10px;
+                                                      -moz-border-radius: 10px;
+                                                      border-radius: 10px;
+                                                      height: 70px;
+                                                      outline:none;
+                                                      padding: 5px;
+                                                      font-family: RobotoSlabRegular;
+                                                      font-size: 14px;
+                                                      border: 1px solid #ddd;
+                                                      color: #adadad;
+                                                      line-height: 25px;
+                                                      width: 100%"
+                                                      disabled>{address}</textarea>
+                                                </div>
+                                          </div>
+                                          <div class="form-inline">
+                                                <div class="form-group col-xs-12 col-sm-4 col-md-4"
+                                                     style="padding-left: 0px">
+                                                <span for="country"
+                                                      class="col-xs-12 control-label"
+                                                      style="text-align: left;
+                                                      font-family: RobotoSlabRegular;
+                                                      font-size: 14px;
+                                                      margin-bottom: 10px">
+                                                      Quốc gia<span style="color:red">*</span>
+                                                      </span>
+                                                      <div class="col-xs-12">
+                                                            <select id = "country"
+                                                                class="form-control"
+                                                                style = "-webkit-border-radius: 10px;
+                                                                -moz-border-radius: 10px;  
+                                                                height: 35px;
+                                                                outline:none;
+                                                                padding: 5px;
+                                                                font-family: RobotoSlabRegular;
+                                                                font-size: 14px;
+                                                                border: 1px solid #ddd;
+                                                                font-weight: lighter;
+                                                                color: #adadad;
+                                                                width: 100%">
+                                                            <option>Việt Nam</option>
+                                                            </select>
+                                                      </div>
+                                                </div>
+                                                <div class="form-group col-xs-12 col-sm-4 col-md-4"
+                                                     style="padding-left: 0px">
+                                                      <span for="list_city_buy" 
+                                                          class="col-xs-12 control-label"
+                                                          style="text-align: left; 
+                                                          font-family: RobotoSlabRegular;
+                                                          font-size: 14px;
+                                                          margin-bottom: 10px">
+                                                            Thành phố <span style="color:red">*</span>
+                                                      </span>
+                                                      <div class="col-xs-12">
+                                                            <select id="list_city_buy" 
+                                                                  name="list_city_buy"     
+                                                                  class="form-control"
+                                                                  oninput="functionOninput();"
+                                                                  onChange="city_selected('list_city_buy', 'list_district_buy')" 
+                                                                  style="-webkit-border-radius: 10px;
+                                                                      -moz-border-radius: 10px;         
+                                                                      height: 35px;
+                                                                      outline:none;
+                                                                      padding: 5px;
+                                                                      font-family: RobotoSlabRegular;
+                                                                      font-size: 14px;
+                                                                      border: 1px solid #ddd;
+                                                                      font-weight: lighter;
+                                                                      color: #adadad;
+                                                                      width: 100%">      
+                                                <option value="Chưa chọn tỉnh/thành">Chọn tỉnh thành</option>
+                                                <option value="Hà Nội" {selected_Hà Nội}>Hà Nội</option>
+                                                <option value="Hồ Chí Minh" {selected_Hồ Chí Minh}>Hồ Chí Minh</option>
+                                                <option value="Tỉnh Hà Giang" {selected_Tỉnh Hà Giang}>Tỉnh Hà Giang</option>
+                                                <option value="Tỉnh Cao Bằng" {selected_Tỉnh Cao Bằng}>Tỉnh Cao Bằng</option>
+                                                <option value="Tỉnh Bắc Kạn" {selected_Tỉnh Bắc Kạn}>Tỉnh Bắc Kạn</option>
+                                                <option value="Tỉnh Tuyên Quang" {selected_Tỉnh Tuyên Quang}>Tỉnh Tuyên Quang</option>
+                                                <option value="Tỉnh Lào Cai" {selected_Tỉnh Lào Cai}>Tỉnh Lào Cai</option>
+                                                <option value="Tỉnh Điện Biên" {selected_Tỉnh Điện Biên}>Tỉnh Điện Biên</option>
+                                                <option value="Tỉnh Lai Châu" {selected_Tỉnh Lai Châu}>Tỉnh Lai Châu</option>
+                                                <option value="Tỉnh Sơn La" {selected_Tỉnh Sơn La}>Tỉnh Sơn La</option>
+                                                <option value="Tỉnh Yên Bái" {selected_Tỉnh Yên Bái}>Tỉnh Yên Bái</option>
+                                                <option value="Tỉnh Hoà Bình" {selected_Tỉnh Hòa Bình}>Tỉnh Hoà Bình</option>
+                                                <option value="Tỉnh Thái Nguyên" {selected_Tỉnh Thái Nguyên}>Tỉnh Thái Nguyên</option>
+                                                <option value="Tỉnh Lạng Sơn" {selected_Tỉnh Lạng Sơn}>Tỉnh Lạng Sơn</option>
+                                                <option value="Tỉnh Quảng Ninh" {selected_Tỉnh Quảng Ninh}>Tỉnh Quảng Ninh</option>
+                                                <option value="Tỉnh Bắc Giang" {selected_Tỉnh Bắc Giang}>Tỉnh Bắc Giang</option>
+                                                <option value="Tỉnh Phú Thọ" {selected_Tỉnh Phú Thọ}>Tỉnh Phú Thọ</option>
+                                                <option value="Tỉnh Vĩnh Phúc" {selected_Tỉnh Vĩnh Phúc}>Tỉnh Vĩnh Phúc</option>
+                                                <option value="Tỉnh Bắc Ninh" {selected_Tỉnh Bắc Ninh}>Tỉnh Bắc Ninh</option>
+                                                <option value="Tỉnh Hải Dương" {selected_Tỉnh Hải Dương}>Tỉnh Hải Dương</option>
+                                                <option value="Thành phố Hải Phòng" {selected_Thành phố Hải Phòng}>Thành phố Hải Phòng</option>
+                                                <option value="Tỉnh Hưng Yên" {selected_Tỉnh Hưng Yên}>Tỉnh Hưng Yên</option>
+                                                <option value="Tỉnh Thái Bình" {selected_Tỉnh Thái Bình}>Tỉnh Thái Bình</option>
+                                                <option value="Tỉnh Hà Nam" {selected_Tỉnh Hà Nam}>Tỉnh Hà Nam</option>
+                                                <option value="Tỉnh Nam Định" {selected_Tỉnh Nam Định}>Tỉnh Nam Định</option>
+                                                <option value="Tỉnh Ninh Bình" {selected_Tỉnh Ninh Bình}>Tỉnh Ninh Bình</option>
+                                                <option value="Tỉnh Thanh Hoá" {selected_Tỉnh Thanh Hóa}>Tỉnh Thanh Hoá</option>
+                                                <option value="Tỉnh Nghệ An" {selected_Tỉnh Nghệ An}>Tỉnh Nghệ An</option>
+                                                <option value="Tỉnh Hà Tĩnh" {selected_Tỉnh Hà Tĩnh}>Tỉnh Hà Tĩnh</option>
+                                                <option value="Tỉnh Quảng Bình" {selected_Tỉnh Quảng Bình}>Tỉnh Quảng Bình</option>
+                                                <option value="Tỉnh Quảng Trị" {selected_Tỉnh Quảng Trị}>Tỉnh Quảng Trị</option>
+                                                <option value="Tỉnh Thừa Thiên Huế" {selected_Tỉnh Thừa Thiên Huế}>Tỉnh Thừa Thiên Huế</option>
+                                                <option value="Thành phố Đà Nẵng" {selected_Thành phố Đà Nẵng}>Thành phố Đà Nẵng</option>
+                                                <option value="Tỉnh Quảng Nam" {selected_Tỉnh Quảng Nam}>Tỉnh Quảng Nam</option>
+                                                <option value="Tỉnh Quảng Ngãi" {selected_Tỉnh Quảng Ngãi}>Tỉnh Quảng Ngãi</option>
+                                                <option value="Tỉnh Bình Định" {selected_Tỉnh Bình Định}>Tỉnh Bình Định</option>
+                                                <option value="Tỉnh Phú Yên" {selected_Tỉnh Phú Yên}>Tỉnh Phú Yên</option>
+                                                <option value="Tỉnh Khánh Hoà" {selected_Tỉnh Khánh Hòa}>Tỉnh Khánh Hoà</option>
+                                                <option value="Tỉnh Ninh Thuận" {selected_Tỉnh Ninh Thuận}>Tỉnh Ninh Thuận</option>
+                                                <option value="Tỉnh Bình Thuận" {selected_Tỉnh Bình Thuận}>Tỉnh Bình Thuận</option>
+                                                <option value="Tỉnh Kon Tum" {selected_Tỉnh Kon Tum}>Tỉnh Kon Tum</option>
+                                                <option value="Tỉnh Gia Lai" {selected_Tỉnh Gia Lai}>Tỉnh Gia Lai</option>
+                                                <option value="Tỉnh Đắk Lắk" {selected_Tỉnh Đắk Lắk}>Tỉnh Đắk Lắk</option>
+                                                <option value="Tỉnh Đắk Nông" {selected_Tỉnh Đắk Nông}>Tỉnh Đắk Nông</option>
+                                                <option value="Tỉnh Lâm Đồng" {selected_Tỉnh Lâm Đồng}>Tỉnh Lâm Đồng</option>
+                                                <option value="Tỉnh Bình Phước" {selected_Tỉnh Bình Phước}>Tỉnh Bình Phước</option>
+                                                <option value="Tỉnh Tây Ninh" {selected_Tỉnh Tây Ninh}>Tỉnh Tây Ninh</option>
+                                                <option value="Tỉnh Bình Dương" {selected_Tỉnh Bình Dương}>Tỉnh Bình Dương</option>
+                                                <option value="Tỉnh Đồng Nai" {selected_Tỉnh Đồng Nai}>Tỉnh Đồng Nai</option>
+                                                <option value="Tỉnh Bà Rịa - Vũng Tàu" {selected_Tỉnh Bà Rịa - Vũng Tàu}>Tỉnh Bà Rịa - Vũng Tàu</option>
+                                                <option value="Tỉnh Long An" {selected_Tỉnh Long An}>Tỉnh Long An</option>
+                                                <option value="Tỉnh Tiền Giang" {selected_Tỉnh Tiền Giang}>Tỉnh Tiền Giang</option>
+                                                <option value="Tỉnh Bến Tre" {selected_Tỉnh Bến Tre}>Tỉnh Bến Tre</option>
+                                                <option value="Tỉnh Trà Vinh" {selected_Tỉnh Trà Vinh}>Tỉnh Trà Vinh</option>
+                                                <option value="Tỉnh Vĩnh Long" {selected_Tỉnh Vĩnh Long}>Tỉnh Vĩnh Long</option>
+                                                <option value="Tỉnh Đồng Tháp" {selected_Tỉnh Đồng Tháp}>Tỉnh Đồng Tháp</option>
+                                                <option value="Tỉnh An Giang" {selected_Tỉnh An Giang}>Tỉnh An Giang</option>
+                                                <option value="Tỉnh Kiên Giang" {selected_Tỉnh Kiên Giang}>Tỉnh Kiên Giang</option>
+                                                <option value="Thành phố Cần Thơ" {selected_Thành phố Cần Thơ}>Thành phố Cần Thơ</option>
+                                                <option value="Tỉnh Hậu Giang" {selected_Tỉnh Hậu Giang} >Tỉnh Hậu Giang</option>
+                                                <option value="Tỉnh Sóc Trăng" {selected_Tỉnh Sóc Trăng}>Tỉnh Sóc Trăng</option>
+                                                <option value="Tỉnh Bạc Liêu" {selected_Tỉnh Bạc Liêu}>Tỉnh Bạc Liêu</option>
+                                                <option value="Tỉnh Cà Mau" {selected_Tỉnh Cà Mau}>Tỉnh Cà Mau</option>
+                                                <option value="Tỉnh Hà Tây" {selected_Tỉnh Hà Tây}>Tỉnh Hà Tây</option>
+                                                </select>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-xs-12 col-sm-4 col-md-4"
+                                                     style="padding-left: 0px">
+                                                      <span for="list_district_buy" 
+                                                          class="col-xs-12 control-label"
+                                                          style="text-align: left; 
+                                                                font-family: RobotoSlabRegular;
+                                                                font-size: 14px;
+                                                                margin-bottom: 10px">
+                                                          Quận/Huyện<span style="color:red">*</span>
+                                                      </span>
+                                                    <div class="col-xs-12">
+                                                        <select id="list_district_buy" 
+                                                                class="form-control"
+                                                                name="list_district_buy"
+                                                                oninput="functionOninput();"
+                                                                style="-webkit-border-radius: 10px;
+                                                                      -moz-border-radius: 10px;
+                                                                      height: 35px;
+                                                                      outline:none;
+                                                                      padding: 5px;
+                                                                      font-family: RobotoSlabRegular;
+                                                                      font-size: 14px;
+                                                                      border: 1px solid #ddd;
+                                                                      font-weight: lighter;
+                                                                      color: #adadad;
+                                                                      width: 100%">
+                                                            <option value = "Chưa chọn quận/huyện" selected {selected_district}> Chọn quận huyện</option>
+                                                            <option value = "{district_value}"  {selected_district_value}>{district_value}</option>       
+                                                        </select>     
+                                                    </div>
+                                                </div>
+                                            </div>                          
+                                            <div class="form-inline">
+                                                <div class="form-group col-xs-12 col-sm-4 col-md-4"
+                                                     style="padding-left: 0px">
+                                                      <span for="tags" 
+                                                          class="col-xs-12 control-label"
+                                                          style="text-align: left; 
+                                                          font-family: RobotoSlabRegular;
+                                                          font-size: 14px;
+                                                          margin-bottom: 10px;
+                                                          margin-top: 10px">
+                                                        Phường<span style="color:red">*</span>
+                                                      </span>
+                                                      <div class="col-xs-12">
+                                                            <input type="text" 
+                                                            id="tags" 
+                                                            oninput="functionOninput();"
+                                                            class="form-control"  
+                                                            name="text_edit_number_ward" 
+                                                            value="{text_ward}"
+                                                            maxlength="20"
+                                                            style="-webkit-border-radius: 10px;
+                                                            -moz-border-radius: 10px;
+                                                            border-radius: 10px;
+                                                            height: 40px;
+                                                            outline: none;
+                                                            padding: 5px;
+                                                            font-family: RobotoSlabRegular;
+                                                            font-size: 14px;
+                                                            border: 1px solid #ddd;
+                                                            font-weight: lighter;
+                                                            color: #adadad;
+                                                            width: 100%"></div>
+                                                </div>
+                                            </div>
+                                            <div class="form-inline">
+                                                <div class="form-group col-xs-12 col-sm-4 col-md-4"
+                                                     style="padding-left: 0px">
+                                                      <span for="tags_street" 
+                                                            class="col-xs-12 control-label"
+                                                            style="text-align: left; 
+                                                            font-family: RobotoSlabRegular;
+                                                            font-size: 14px;
+                                                            margin-bottom: 10px;
+                                                            margin-top: 10px">
+                                                          Đường<span style="color:red">*</span>
+                                                      </span>
+                                                      <div class="col-xs-12">
+                                                            <input type="text" 
+                                                               class="form-control"
+                                                               id="tags_street"
+                                                               oninput="functionOninput();"
+                                                               name="text_edit_number_street"
+                                                               value="{text_street}"
+                                                               maxlength="40"
+                                                               style = "-webkit-border-radius: 10px;
+                                                               -moz-border-radius: 10px;
+                                                               border-radius: 10px;
+                                                               height: 40px;
+                                                               outline: none;
+                                                               padding: 5px;
+                                                               font-family: RobotoSlabRegular;
+                                                               font-size: 14px;          
+                                                               border: 1px solid #ddd;
+                                                               font-weight: lighter;
+                                                               color: #adadad;
+                                                               width: 100%">    
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-inline">
+                                                <div class="form-group col-xs-12 col-sm-4 col-md-4"
+                                                     style="padding-left: 0px">
+                                                      <span for="tags_street" 
+                                                          class="col-xs-12 control-label"
+                                                          style="text-align: left; 
+                                                          font-family: RobotoSlabRegular;
+                                                          font-size: 14px;
+                                                          margin-bottom: 10px;
+                                                          margin-top: 10px">
+                                                          Số nhà<span style="color:red">*</span>
+                                                      </span>
+                                                      <div class="col-xs-12">
+                                                            <input type="text"
+                                                               class="form-control" 
+                                                               id="text_edit_number_address"
+                                                               oninput="functionOninput();"
+                                                               name="text_edit_number_address"
+                                                               value="{text_address}"
+                                                               maxlength="10"
+                                                               style="-webkit-border-radius: 10px;
+                                                               -moz-border-radius: 10px;
+                                                               border-radius: 10px;
+                                                               height: 40px;
+                                                               outline: none;
+                                                               padding: 5px;
+                                                               font-family: RobotoSlabRegular;
+                                                               font-size: 14px;    
+                                                               border: 1px solid #ddd;
+                                                               font-weight: lighter;
+                                                               color: #adadad;
+                                                               width: 100%"> 
+                                                      </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-inline">
+                                                <div class="form-group col-xs-12 col-sm-4 col-md-4"
+                                                     style="padding-left: 0px">
+                                                      <span for="text_edit_number_address_Chung_Cu" 
+                                                          class="col-xs-12 control-label"
+                                                          style="text-align: left; 
+                                                          font-family: RobotoSlabRegular;
+                                                          font-size: 14px;
+                                                          margin-bottom: 10px;
+                                                          margin-top: 10px">
+                                                        Chung cư / Tòa nhà
+                                                      </span>
+                                                      <div class="col-xs-12">
+                                                        <input type="text"
+                                                               class="form-control" 
+                                                               id="text_edit_number_address_Chung_Cu" 
+                                                               name ="text_edit_number_address_Chung_Cu" 
+                                                               value="{text_address_Chung_Cu}" 
+                                                               maxlength="40"
+                                                               style = "-webkit-border-radius: 10px;
+                                                               -moz-border-radius: 10px;
+                                                               border-radius: 10px;
+                                                               height: 40px;
+                                                               outline: none;
+                                                               padding: 5px;
+                                                               font-family: RobotoSlabRegular;
+                                                               font-size: 14px;    
+                                                               border: 1px solid #ddd;
+                                                               font-weight: lighter;
+                                                               color: #adadad;
+                                                               width: 100%">    
+                                                      </div>
+                                                </div>
+                                            </div>   
+                                            <div class="form-inline">
+                                                <div class="form-group col-xs-12 col-sm-4 col-md-4"
+                                                     style="padding-left: 0px">
+                                                      <span for="text_edit_floor_Chung_Cu" 
+                                                          class="col-xs-12 control-label"
+                                                          style="text-align: left; 
+                                                          font-family: RobotoSlabRegular;
+                                                          font-size: 14px;
+                                                          margin-bottom: 10px;
+                                                          margin-top: 10px">
+                                                            Lầu
+                                                      </span>
+                                                      <div class="col-xs-12">
+                                                            <input type="text"
+                                                                  class="form-control" 
+                                                                  id="text_edit_floor_Chung_Cu"
+                                                                  name="text_edit_floor_Chung_Cu" 
+                                                                  value="{text_edit_floor_Chung_Cu}"
+                                                                  maxlength="10"
+                                                                  style="-webkit-border-radius: 10px;
+                                                                     -moz-border-radius: 10px;
+                                                                     border-radius: 10px;
+                                                                     height: 40px;
+                                                                     outline: none;
+                                                                     padding: 5px;
+                                                                     font-family: RobotoSlabRegular;
+                                                                     font-size: 14px;
+                                                                     border: 1px solid #ddd;
+                                                                     font-weight: lighter;
+                                                                     color: #adadad;
+                                                                     width: 100%">
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                            <div class="form-inline">
+                                                <div class="form-group col-xs-12 col-sm-4 col-md-4"
+                                                     style="padding-left: 0px">
+                                                      <span for="text_edit_room_Chung_Cu" 
+                                                          class="col-xs-12 control-label"
+                                                          style="text-align: left; 
+                                                          font-family: RobotoSlabRegular;
+                                                          font-size: 14px;
+                                                          margin-bottom: 10px;
+                                                          margin-top: 10px">Căn hộ</span>
+                                                      <div class="col-xs-12">
+                                                            <input type="text"
+                                                               class="form-control" 
+                                                               id ="text_edit_room_Chung_Cu"
+                                                               name="text_edit_room_Chung_Cu"
+                                                               value="{text_edit_room_Chung_Cu}"
+                                                               maxlength="40"
+                                                               style="-webkit-border-radius: 10px;
+                                                               -moz-border-radius: 10px;
+                                                               border-radius: 10px;
+                                                               height: 40px;
+                                                               outline: none;
+                                                               padding: 5px;
+                                                               font-family: RobotoSlabRegular;
+                                                               font-size: 14px; 
+                                                               border: 1px solid #ddd;
+                                                               font-weight: lighter;
+                                                               color: #adadad;
+                                                               width: 100%">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <span for="firstname"
+                                                      class="col-xs-12 col-sm-2 col-md-2 control-label"
+                                                      style="text-align: left; 
+                                                      font-family: RobotoSlabRegular;
+                                                      font-size: 14px;
+                                                      margin-top: 25px">
+                                                      Điện thoại:<span style="color:red">*</span>
+                                                </span>
+                                                <div class="col-xs-8 col-sm-4 col-md-5"
+                                                      style="margin-top: 20px">
+                                                      <input type="text" 
+                                                            class="form-control"
+                                                            id="phone"
+                                                            oninput="functionOninput();"
+                                                            name="phone"
+                                                            type="text" 
+                                                            value="{phone}"
+                                                            style="-webkit-border-radius: 10px;
+                                                            -moz-border-radius: 10px;
+                                                            border-radius: 10px;
+                                                            height: 40px;
+                                                            outline: none;
+                                                            padding: 5px;
+                                                            font-family: RobotoSlabRegular;
+                                                            font-size: 14px;      
+                                                            border: 1px solid #ddd;
+                                                            font-weight: lighter;
+                                                            color: #adadad;
+                                                            width: 103%"
+                                                            maxlength="11">
+                                                </div>
+                                          </div>
+                                          <div class="form-group">
+                                                <span for="firstname" 
+                                                      class="col-xs-12 col-sm-2 col-md-2 control-label"
+                                                      style="text-align: left; 
+                                                      font-family: RobotoSlabRegular;
+                                                      font-size: 14px;
+                                                      margin-top: 5px">Ảnh:</span>
+                                                <div class="col-xs-8 col-sm-4 col-md-5" 
+                                                      style="margin-top: 5px">
+                                                      <input type="file" 
+                                                           name="avatar" 
+                                                           class="form-control"
+                                                           style="-webkit-border-radius: 10px;
+                                                           -moz-border-radius: 10px;
+                                                           border-radius: 10px;
+                                                           height: 40px;
+                                                           outline: none;
+                                                           padding: 5px;
+                                                           font-family: RobotoSlabRegular;
+                                                           font-size: 14px;
+                                                           border: 1px solid #ddd;
+                                                           font-weight: lighter;
+                                                           color: #adadad;
+                                                           width: 103%">
+                                                </div>
+                                          </div>
+                                          <div class ="form-group">
+                                                <div class="col-xs-12">
+                                                      <input id="cmd_submit_update_user" 
+                                                           name="cmd_submit_update_user" 
+                                                           class="button_update"
+                                                           value = "Lưu thay đổi"
+                                                           type="submit"
+                                                           onclick="myFunctionSubmit();"
+                                                           style="outline:none; 
+                                                           background-color: #ff767c;
+                                                           border: none;
+                                                           color: #fff;
+                                                           font-family:PoetsenOne;
+                                                           -webkit-border-radius: 20px;
+                                                           -moz-border-radius: 20px;
+                                                           border-radius: 20px;
+                                                           padding: 10px;
+                                                           width: 120px;
+                                                           font-size: 14px;
+                                                           float: left">
+                                                </div>
+                                            </div>
+                                          </div>
+                                    </div>
+                        </form> 
+                  </div>
+                  <hr class="hidden-xs hidden-sm" style="width: 90%; margin-left: 0px">
+                  <hr class="hidden-md hidden-lg" style="width: 100%; margin-left: 0px">
+                  <div class="newsPersonal_inside" style="line-height: 30px">
+                        <div class="col-sx-12" 
+                              style= "text-align:left; 
+                                   font-family:RobotoSlabLight;
+                                   color:#A00;
+                                   font-size:14px">{happy_birthday}</div>
+                        <div class="col-sx-12"
+                              style="text-align:left; 
+                             font-family:RobotoSlabLight;
+                             color:#A00;
+                             font-size:14px">{happy_birthday_nanapet}</div>
+                        <div class="col-sx-12" 
+                              style="text-align:left; 
+                             font-family:RobotoSlabLight;
+                             color:#A00;
+                             font-size:14px">{happy_new_year}</div>
+                        <div class="col-sx-12" 
+                             style="padding-left:0px; 
+                             font-family: RobotoSlabRegular; 
+                             font-size: 17px;
+                             margin-bottom: 10px">THÔNG TIN ĐIỂM THƯỞNG
+                        </div>
+                        <div class="col-sx-12" 
+                             style="padding-left:0px; 
+                             font-family: RobotoSlabRegular; 
+                             font-size: 14px;
+                             line-height: 30px">
+                            <span>
+                                Tên đăng nhập : <span style="color:blue;">{name}</span>
+                            </span>
+                        </div> 
+                        <div class="col-sx-12" 
+                             style="padding-left:0px; 
+                             font-family: RobotoSlabRegular; 
+                             font-size: 14px;
+                             line-height: 30px">
+                            <span>
+                                Thành viên : <span style="color:red">{level}</span>
+                            </span>
+                        </div>
+                        <div class="col-sx-12" 
+                             style="padding-left:0px; 
+                             font-family: RobotoSlabRegular; 
+                             font-size: 14px;
+                             line-height: 30px">
+                            <span>
+                                Chiết khấu thành viên : <span style="color:red">{discount_level}</span>
+                            </span>
+                        </div>
+                        <div class="col-sx-12" 
+                             style="padding-left:0px; 
+                             font-family: RobotoSlabRegular; 
+                             font-size: 14px;
+                             line-height: 30px">
+                            <span>
+                                Điểm thưởng : <span style="color:red">{awardscore}</span>
+                            </span>
+                        </div>
+                        <div class="col-sx-12" 
+                             style="padding-left:0px; 
+                             font-family: RobotoSlabRegular; 
+                             font-size: 14px;
+                             line-height: 30px">
+                            <span>
+                                Điểm được sử dụng : <span style="color:red">{score}</span>
+                            </span>
+                        </div>
+                        <div class="col-sx-12" 
+                             style="padding-left:0px; 
+                             font-family: RobotoSlabRegular; 
+                             font-size: 14px;
+                             line-height: 30px;
+                             margin-bottom: 20px">
+                            <span>
+                                Điểm chưa được sử dụng : <span style="color:red">{unusedscore}</span>
+                            </span>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>			
+<script>
+    $(function () {
+        $("#birthday").datepicker({dateFormat: 'dd-mm-yy',
+                        changeMonth:true,
+                        changeYear: true});
+    });
+</script>
 <script>
     function myFunctionSubmit() {
         document.getElementById("firstname").required = true;
@@ -2683,790 +3469,4 @@
             removeAllOptions(list_district);
         }
     }
-</script>
-<style> 
-.form-group {
-      /*trick bootstraps framework*/
-      margin-right: 0px !important;
-}
-</style>
-<body>
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12">
-                  <div id="breakcrumb"
-                     style="font-family: RobotoSlabRegular;
-                        font-size:14px;
-                        margin-top: 10px;
-                        margin-bottom: 15px">
-                        {breadcrumbs_path}
-                  </div>
-                  <div class="news_main">
-                  <div style="font-family:PoetsenOne;
-                        font-size: 20px;
-                        clear:both;
-                        margin-bottom: 20px">
-                        <span style="color: #989898">Xin chào, </span>
-                        <span style="color: #019cfd">{name_hello}</span>
-                   </div>
-
-                  <!--Left Col-->
-                  <div class="hidden-xs hidden-sm col-md-3 col-lg-3" 
-                        style="padding-left: 0px;
-                              padding-right: 50px;
-                              font-family: RobotoSlabRegular">
-                        <div class="col-md-12"
-                              style="padding:0px;
-                                    background-color: #f2fbff;
-                                    -webkit-border-radius:25px;
-                                    -moz-border-radius:25px;
-                                    border-radius:25px;
-                                    -webkit-box-shadow: 0px 10px 10px -5px rgba(146,159,165,1);
-                                    -moz-box-shadow: 0px 10px 10px -5px rgba(146,159,165,1);
-                                    box-shadow: 0px 10px 10px -5px rgba(146,159,165,1);">
-                              <div class="col-md-12" style="padding:0px">
-                                    <img alt="{name_hello}"
-                                       src="{linkS}upload/avatar/{avatar}" 
-                                       width="100%"
-                                       style="-webkit-border-radius:25px;
-                                              -moz-border-radius:25px;
-                                              border-radius:25px;
-                                              margin-bottom: 20px">
-                              </div>
-                              <div class="col-md-12">
-                                  <img alt="thông tin tài khoản"
-                                       src="{linkS}layout/bootstrap/images/thong_tin_tai_khoan_1.png" 
-                                       height="20px">
-                                    <a href="{linkS}thong-tin-tai-khoan"
-                                     style="font-family: RobotoSlabLight; 
-                                          font-size: 14px;
-                                          margin-left: 10px;
-                                          line-height: 35px;
-                                          padding-top: 10px;
-                                          color: #000">Thông tin của bạn</a>
-                              </div>    
-                              <div class="col-md-12">
-                                    <img alt="sổ địa chỉ"
-                                         src="{linkS}layout/bootstrap/images/thong_tin_tai_khoan_2.png" 
-                                         height="20px">
-                                    <a href="{linkS}so-dia-chi"
-                                       style="font-family: RobotoSlabLight; 
-                                            font-size: 14px; 
-                                            margin-left: 10px;
-                                            line-height: 35px;
-                                            color: #000">Sổ địa chỉ</a>
-                              </div>
-                              <div class="col-md-12">
-                                    <img alt="đơn hàng" 
-                                         src="{linkS}layout/bootstrap/images/thong_tin_tai_khoan_3.png" 
-                                         height="20px">
-                                    <a href="{linkS}danh-sach-don-hang"
-                                       style="font-family: RobotoSlabLight; 
-                                            font-size: 14px; 
-                                            margin-left: 10px;
-                                            line-height: 35px;
-                                            color: #000">Đơn hàng của tôi</a>
-                                    <!--<a href="{linkS}san-pham-danh-gia">
-                                        Sản phẩm ưa thích
-                                    </a>-->
-                              </div>
-                              <div class="col-md-12">
-                                    <img alt="sản phẩm ưa thích"
-                                         src="{linkS}layout/bootstrap/images/thong_tin_tai_khoan_4.png" 
-                                         height="20px">
-                                    <a href="{linkS}san-pham-ua-thich"
-                                       style="font-family: RobotoSlabLight; 
-                                       font-size: 14px; 
-                                       margin-left: 10px;
-                                       line-height: 35px;
-                                       color: #000">Sản phẩm ưa thích</a>
-                              </div>
-                              <div class="col-md-12">
-                                    <img alt="thú cưng"
-                                         src="{linkS}layout/bootstrap/images/thong_tin_tai_khoan_5.png" 
-                                         height="20px">
-                                    <a href="{linkS}thu-cung-cua-toi"
-                                       style="font-family: RobotoSlabLight; 
-                                       font-size: 14px; 
-                                       margin-left: 5px;
-                                       line-height: 35px;
-                                       color: #000">Thú cưng của tôi</a>
-                              </div>
-                              <div class="col-md-12" style="margin-bottom: 30px">
-                                    <hr style = "border-color: #93a4ac; border-width: 1px;">
-                                    <img alt="mật khẩu" 
-                                         src="{linkS}layout/bootstrap/images/thong_tin_tai_khoan_6.png" 
-                                         height="20px">
-                                    <a href="{linkS}doi-mat-khau"
-                                       style="font-family: RobotoSlabLight; 
-                                       font-size: 14px; 
-                                       margin-left: 10px;
-                                       line-height: 20px;
-                                       color: #000;
-                                       padding-bottom: 30px">Đổi mật khẩu</a>
-                              </div>
-                        </div>      
-                  </div>
-                  <!--Right Col-->
-                  <div class="col-xs-12 col-md-9" style="padding:0px">
-                        <form method='POST' id="frm1" name="frm1" enctype='multipart/form-data' 
-                        action="{linkS}cap-nhat-thong-tin">
-                              <div class="newsPersonal_inside">
-                                    <div class="group_listing_input" id="group_listing_input">
-                                          <div style="text-align: center;
-                                                font-family: RobotoSlabRegular;
-                                                color: #A00;
-                                                font-size: 15px;
-                                                font-family: RobotoSlabLight;
-                                                line-height: 30px">{message_notice}</div>
-                                          <div style="font-family:RobotoSlabRegular; 
-                                                font-size: 17px;
-                                                color:#393939;
-                                                margin-bottom: 20px">THÔNG TIN CÁ NHÂN</div>
-                                          <div class="form-horizontal">
-                                          <div class="form-group">
-                                                <span for="firstname" 
-                                                class="col-xs-12 col-sm-2 col-md-2 control-label"
-                                                style="text-align: left; 
-                                                      font-family: RobotoSlabRegular;
-                                                      font-size: 14px">Họ và tên: 
-                                                      <span style="color:red">*</span> 
-                                                </span>
-                                                <div class="col-xs-12 col-sm-7 col-md-9" 
-                                                      style="padding-right: 0px">
-                                                      <input type="text"          
-                                                      class="form-control"
-                                                      oninput="functionOninput();"
-                                                      id="firstname"
-                                                      name="name"  
-                                                      value="{name}"
-                                                      style="-webkit-border-radius: 10px;
-                                                      -moz-border-radius: 10px;
-                                                      border-radius: 10px;
-                                                      height: 40px;
-                                                      outline: none;
-                                                      padding: 5px;
-                                                      font-family: RobotoSlabRegular;
-                                                      font-size: 14px;     
-                                                      border: 1px solid #ddd;
-                                                      font-weight: lighter;
-                                                      color: #adadad;
-                                                      width: %"
-                                                      maxlength="50">
-                                                </div>
-                                          </div>
-                                          <div class="form-group">
-                                                <span for="birthday" 
-                                                class="col-xs-12 col-sm-2 col-md-2 control-label"
-                                                style="text-align: left; 
-                                                font-family: RobotoSlabRegular;
-                                                font-size: 14px">Ngày sinh:</span> 
-                                                <div class="col-xs-6 col-sm-2 col-md-3">
-                                                      <input class="form-control"
-                                                           id="birthday" 
-                                                           name="birthday" 
-                                                           type="text" 
-                                                           value="{birthday}"
-                                                           maxlength="10" 
-                                                           style="-webkit-border-radius: 10px;
-                                                           -moz-border-radius: 10px;
-                                                           border-radius: 10px;
-                                                           height: 40px;
-                                                           outline:none;
-                                                           padding: 5px;
-                                                           font-family: RobotoSlabRegular;
-                                                           font-size: 14px;
-                                                           border: 1px solid #ddd;
-                                                           font-weight: lighter;
-                                                           color: #adadad">
-                                                </div>
-                                          </div>
-                                          <div class="form-group">
-                                                <span for="gender" 
-                                                class="col-xs-12 col-sm-2 col-md-2 control-label"
-                                                style="text-align: left; 
-                                                      font-family: RobotoSlabRegular;
-                                                      font-size: 14px">Giới tính:</span>
-                                                <div class="col-xs-6 col-sm-2 col-md-2">
-                                                      <select id="gender" 
-                                                            name="gender"
-                                                            class="form-control"
-                                                            style="-webkit-border-radius: 10px;
-                                                            -moz-border-radius: 10px;
-                                                            height: 35px;
-                                                            outline:none;
-                                                            padding: 5px;
-                                                            font-family: RobotoSlabRegular;
-                                                            font-size: 14px;
-                                                            border: 1px solid #ddd;
-                                                            font-weight: lighter;
-                                                            color: #adadad">
-                                                      <option value="1" selected {selected1}>Anh</option>
-                                                      <option value="0" {selected2}>Chị</option>
-                                                      </select>
-                                                </div>
-                                          </div> 
-                                          <div class="form-group">
-                                                <span for="address" 
-                                                class="col-xs-12 col-sm-2 col-md-2 control-label"
-                                                style="text-align: left; 
-                                                font-family: RobotoSlabRegular;
-                                                font-size: 14px">Địa chỉ:</span>
-                                                <div class="col-xs-12 col-sm-7 col-md-9"
-                                                      style="padding-right: 0px">
-                                                      <textarea name="address"
-                                                      id="address"
-                                                      class="form-control"
-                                                      style="-webkit-border-radius: 10px;
-                                                      -moz-border-radius: 10px;
-                                                      border-radius: 10px;
-                                                      height: 70px;
-                                                      outline:none;
-                                                      padding: 5px;
-                                                      font-family: RobotoSlabRegular;
-                                                      font-size: 14px;
-                                                      border: 1px solid #ddd;
-                                                      color: #adadad;
-                                                      line-height: 25px;
-                                                      width: 100%"
-                                                      disabled>{address}</textarea>
-                                                </div>
-                                          </div>
-                                          <div class="form-inline">
-                                                <div class="form-group col-xs-12 col-sm-4 col-md-4"
-                                                     style="padding-left: 0px">
-                                                <span for="country"
-                                                      class="col-xs-12 control-label"
-                                                      style="text-align: left;
-                                                      font-family: RobotoSlabRegular;
-                                                      font-size: 14px;
-                                                      margin-bottom: 10px">
-                                                      Quốc gia<span style="color:red">*</span>
-                                                      </span>
-                                                      <div class="col-xs-12">
-                                                            <select id = "country"
-                                                                class="form-control"
-                                                                style = "-webkit-border-radius: 10px;
-                                                                -moz-border-radius: 10px;  
-                                                                height: 35px;
-                                                                outline:none;
-                                                                padding: 5px;
-                                                                font-family: RobotoSlabRegular;
-                                                                font-size: 14px;
-                                                                border: 1px solid #ddd;
-                                                                font-weight: lighter;
-                                                                color: #adadad;
-                                                                width: 100%">
-                                                            <option>Việt Nam</option>
-                                                            </select>
-                                                      </div>
-                                                </div>
-                                                <div class="form-group col-xs-12 col-sm-4 col-md-4"
-                                                     style="padding-left: 0px">
-                                                      <span for="list_city_buy" 
-                                                          class="col-xs-12 control-label"
-                                                          style="text-align: left; 
-                                                          font-family: RobotoSlabRegular;
-                                                          font-size: 14px;
-                                                          margin-bottom: 10px">
-                                                            Thành phố <span style="color:red">*</span>
-                                                      </span>
-                                                      <div class="col-xs-12">
-                                                            <select id="list_city_buy" 
-                                                                  name="list_city_buy"     
-                                                                  class="form-control"
-                                                                  oninput="functionOninput();"
-                                                                  onChange="city_selected('list_city_buy', 'list_district_buy')" 
-                                                                  style="-webkit-border-radius: 10px;
-                                                                      -moz-border-radius: 10px;         
-                                                                      height: 35px;
-                                                                      outline:none;
-                                                                      padding: 5px;
-                                                                      font-family: RobotoSlabRegular;
-                                                                      font-size: 14px;
-                                                                      border: 1px solid #ddd;
-                                                                      font-weight: lighter;
-                                                                      color: #adadad;
-                                                                      width: 100%">      
-                                                <option value="Chưa chọn tỉnh/thành">Chọn tỉnh thành</option>
-                                                <option value="Hà Nội" {selected_Hà Nội}>Hà Nội</option>
-                                                <option value="Hồ Chí Minh" {selected_Hồ Chí Minh}>Hồ Chí Minh</option>
-                                                <option value="Tỉnh Hà Giang" {selected_Tỉnh Hà Giang}>Tỉnh Hà Giang</option>
-                                                <option value="Tỉnh Cao Bằng" {selected_Tỉnh Cao Bằng}>Tỉnh Cao Bằng</option>
-                                                <option value="Tỉnh Bắc Kạn" {selected_Tỉnh Bắc Kạn}>Tỉnh Bắc Kạn</option>
-                                                <option value="Tỉnh Tuyên Quang" {selected_Tỉnh Tuyên Quang}>Tỉnh Tuyên Quang</option>
-                                                <option value="Tỉnh Lào Cai" {selected_Tỉnh Lào Cai}>Tỉnh Lào Cai</option>
-                                                <option value="Tỉnh Điện Biên" {selected_Tỉnh Điện Biên}>Tỉnh Điện Biên</option>
-                                                <option value="Tỉnh Lai Châu" {selected_Tỉnh Lai Châu}>Tỉnh Lai Châu</option>
-                                                <option value="Tỉnh Sơn La" {selected_Tỉnh Sơn La}>Tỉnh Sơn La</option>
-                                                <option value="Tỉnh Yên Bái" {selected_Tỉnh Yên Bái}>Tỉnh Yên Bái</option>
-                                                <option value="Tỉnh Hoà Bình" {selected_Tỉnh Hòa Bình}>Tỉnh Hoà Bình</option>
-                                                <option value="Tỉnh Thái Nguyên" {selected_Tỉnh Thái Nguyên}>Tỉnh Thái Nguyên</option>
-                                                <option value="Tỉnh Lạng Sơn" {selected_Tỉnh Lạng Sơn}>Tỉnh Lạng Sơn</option>
-                                                <option value="Tỉnh Quảng Ninh" {selected_Tỉnh Quảng Ninh}>Tỉnh Quảng Ninh</option>
-                                                <option value="Tỉnh Bắc Giang" {selected_Tỉnh Bắc Giang}>Tỉnh Bắc Giang</option>
-                                                <option value="Tỉnh Phú Thọ" {selected_Tỉnh Phú Thọ}>Tỉnh Phú Thọ</option>
-                                                <option value="Tỉnh Vĩnh Phúc" {selected_Tỉnh Vĩnh Phúc}>Tỉnh Vĩnh Phúc</option>
-                                                <option value="Tỉnh Bắc Ninh" {selected_Tỉnh Bắc Ninh}>Tỉnh Bắc Ninh</option>
-                                                <option value="Tỉnh Hải Dương" {selected_Tỉnh Hải Dương}>Tỉnh Hải Dương</option>
-                                                <option value="Thành phố Hải Phòng" {selected_Thành phố Hải Phòng}>Thành phố Hải Phòng</option>
-                                                <option value="Tỉnh Hưng Yên" {selected_Tỉnh Hưng Yên}>Tỉnh Hưng Yên</option>
-                                                <option value="Tỉnh Thái Bình" {selected_Tỉnh Thái Bình}>Tỉnh Thái Bình</option>
-                                                <option value="Tỉnh Hà Nam" {selected_Tỉnh Hà Nam}>Tỉnh Hà Nam</option>
-                                                <option value="Tỉnh Nam Định" {selected_Tỉnh Nam Định}>Tỉnh Nam Định</option>
-                                                <option value="Tỉnh Ninh Bình" {selected_Tỉnh Ninh Bình}>Tỉnh Ninh Bình</option>
-                                                <option value="Tỉnh Thanh Hoá" {selected_Tỉnh Thanh Hóa}>Tỉnh Thanh Hoá</option>
-                                                <option value="Tỉnh Nghệ An" {selected_Tỉnh Nghệ An}>Tỉnh Nghệ An</option>
-                                                <option value="Tỉnh Hà Tĩnh" {selected_Tỉnh Hà Tĩnh}>Tỉnh Hà Tĩnh</option>
-                                                <option value="Tỉnh Quảng Bình" {selected_Tỉnh Quảng Bình}>Tỉnh Quảng Bình</option>
-                                                <option value="Tỉnh Quảng Trị" {selected_Tỉnh Quảng Trị}>Tỉnh Quảng Trị</option>
-                                                <option value="Tỉnh Thừa Thiên Huế" {selected_Tỉnh Thừa Thiên Huế}>Tỉnh Thừa Thiên Huế</option>
-                                                <option value="Thành phố Đà Nẵng" {selected_Thành phố Đà Nẵng}>Thành phố Đà Nẵng</option>
-                                                <option value="Tỉnh Quảng Nam" {selected_Tỉnh Quảng Nam}>Tỉnh Quảng Nam</option>
-                                                <option value="Tỉnh Quảng Ngãi" {selected_Tỉnh Quảng Ngãi}>Tỉnh Quảng Ngãi</option>
-                                                <option value="Tỉnh Bình Định" {selected_Tỉnh Bình Định}>Tỉnh Bình Định</option>
-                                                <option value="Tỉnh Phú Yên" {selected_Tỉnh Phú Yên}>Tỉnh Phú Yên</option>
-                                                <option value="Tỉnh Khánh Hoà" {selected_Tỉnh Khánh Hòa}>Tỉnh Khánh Hoà</option>
-                                                <option value="Tỉnh Ninh Thuận" {selected_Tỉnh Ninh Thuận}>Tỉnh Ninh Thuận</option>
-                                                <option value="Tỉnh Bình Thuận" {selected_Tỉnh Bình Thuận}>Tỉnh Bình Thuận</option>
-                                                <option value="Tỉnh Kon Tum" {selected_Tỉnh Kon Tum}>Tỉnh Kon Tum</option>
-                                                <option value="Tỉnh Gia Lai" {selected_Tỉnh Gia Lai}>Tỉnh Gia Lai</option>
-                                                <option value="Tỉnh Đắk Lắk" {selected_Tỉnh Đắk Lắk}>Tỉnh Đắk Lắk</option>
-                                                <option value="Tỉnh Đắk Nông" {selected_Tỉnh Đắk Nông}>Tỉnh Đắk Nông</option>
-                                                <option value="Tỉnh Lâm Đồng" {selected_Tỉnh Lâm Đồng}>Tỉnh Lâm Đồng</option>
-                                                <option value="Tỉnh Bình Phước" {selected_Tỉnh Bình Phước}>Tỉnh Bình Phước</option>
-                                                <option value="Tỉnh Tây Ninh" {selected_Tỉnh Tây Ninh}>Tỉnh Tây Ninh</option>
-                                                <option value="Tỉnh Bình Dương" {selected_Tỉnh Bình Dương}>Tỉnh Bình Dương</option>
-                                                <option value="Tỉnh Đồng Nai" {selected_Tỉnh Đồng Nai}>Tỉnh Đồng Nai</option>
-                                                <option value="Tỉnh Bà Rịa - Vũng Tàu" {selected_Tỉnh Bà Rịa - Vũng Tàu}>Tỉnh Bà Rịa - Vũng Tàu</option>
-                                                <option value="Tỉnh Long An" {selected_Tỉnh Long An}>Tỉnh Long An</option>
-                                                <option value="Tỉnh Tiền Giang" {selected_Tỉnh Tiền Giang}>Tỉnh Tiền Giang</option>
-                                                <option value="Tỉnh Bến Tre" {selected_Tỉnh Bến Tre}>Tỉnh Bến Tre</option>
-                                                <option value="Tỉnh Trà Vinh" {selected_Tỉnh Trà Vinh}>Tỉnh Trà Vinh</option>
-                                                <option value="Tỉnh Vĩnh Long" {selected_Tỉnh Vĩnh Long}>Tỉnh Vĩnh Long</option>
-                                                <option value="Tỉnh Đồng Tháp" {selected_Tỉnh Đồng Tháp}>Tỉnh Đồng Tháp</option>
-                                                <option value="Tỉnh An Giang" {selected_Tỉnh An Giang}>Tỉnh An Giang</option>
-                                                <option value="Tỉnh Kiên Giang" {selected_Tỉnh Kiên Giang}>Tỉnh Kiên Giang</option>
-                                                <option value="Thành phố Cần Thơ" {selected_Thành phố Cần Thơ}>Thành phố Cần Thơ</option>
-                                                <option value="Tỉnh Hậu Giang" {selected_Tỉnh Hậu Giang} >Tỉnh Hậu Giang</option>
-                                                <option value="Tỉnh Sóc Trăng" {selected_Tỉnh Sóc Trăng}>Tỉnh Sóc Trăng</option>
-                                                <option value="Tỉnh Bạc Liêu" {selected_Tỉnh Bạc Liêu}>Tỉnh Bạc Liêu</option>
-                                                <option value="Tỉnh Cà Mau" {selected_Tỉnh Cà Mau}>Tỉnh Cà Mau</option>
-                                                <option value="Tỉnh Hà Tây" {selected_Tỉnh Hà Tây}>Tỉnh Hà Tây</option>
-                                                </select>
-                                                    </div>
-                                                </div>
-                                                <div class="form-group col-xs-12 col-sm-4 col-md-4"
-                                                     style="padding-left: 0px">
-                                                      <span for="list_district_buy" 
-                                                          class="col-xs-12 control-label"
-                                                          style="text-align: left; 
-                                                                font-family: RobotoSlabRegular;
-                                                                font-size: 14px;
-                                                                margin-bottom: 10px">
-                                                          Quận/Huyện<span style="color:red">*</span>
-                                                      </span>
-                                                    <div class="col-xs-12">
-                                                        <select id="list_district_buy" 
-                                                                class="form-control"
-                                                                name="list_district_buy"
-                                                                oninput="functionOninput();"
-                                                                style="-webkit-border-radius: 10px;
-                                                                      -moz-border-radius: 10px;
-                                                                      height: 35px;
-                                                                      outline:none;
-                                                                      padding: 5px;
-                                                                      font-family: RobotoSlabRegular;
-                                                                      font-size: 14px;
-                                                                      border: 1px solid #ddd;
-                                                                      font-weight: lighter;
-                                                                      color: #adadad;
-                                                                      width: 100%">
-                                                            <option value = "Chưa chọn quận/huyện" selected {selected_district}> Chọn quận huyện</option>
-                                                            <option value = "{district_value}"  {selected_district_value}>{district_value}</option>       
-                                                        </select>     
-                                                    </div>
-                                                </div>
-                                            </div>                          
-                                            <div class="form-inline">
-                                                <div class="form-group col-xs-12 col-sm-4 col-md-4"
-                                                     style="padding-left: 0px">
-                                                      <span for="tags" 
-                                                          class="col-xs-12 control-label"
-                                                          style="text-align: left; 
-                                                          font-family: RobotoSlabRegular;
-                                                          font-size: 14px;
-                                                          margin-bottom: 10px;
-                                                          margin-top: 10px">
-                                                        Phường<span style="color:red">*</span>
-                                                      </span>
-                                                      <div class="col-xs-12">
-                                                            <input type="text" 
-                                                            id="tags" 
-                                                            oninput="functionOninput();"
-                                                            class="form-control"  
-                                                            name="text_edit_number_ward" 
-                                                            value="{text_ward}"
-                                                            maxlength="20"
-                                                            style="-webkit-border-radius: 10px;
-                                                            -moz-border-radius: 10px;
-                                                            border-radius: 10px;
-                                                            height: 40px;
-                                                            outline: none;
-                                                            padding: 5px;
-                                                            font-family: RobotoSlabRegular;
-                                                            font-size: 14px;
-                                                            border: 1px solid #ddd;
-                                                            font-weight: lighter;
-                                                            color: #adadad;
-                                                            width: 100%"></div>
-                                                </div>
-                                            </div>
-                                            <div class="form-inline">
-                                                <div class="form-group col-xs-12 col-sm-4 col-md-4"
-                                                     style="padding-left: 0px">
-                                                      <span for="tags_street" 
-                                                            class="col-xs-12 control-label"
-                                                            style="text-align: left; 
-                                                            font-family: RobotoSlabRegular;
-                                                            font-size: 14px;
-                                                            margin-bottom: 10px;
-                                                            margin-top: 10px">
-                                                          Đường<span style="color:red">*</span>
-                                                      </span>
-                                                      <div class="col-xs-12">
-                                                            <input type="text" 
-                                                               class="form-control"
-                                                               id="tags_street"
-                                                               oninput="functionOninput();"
-                                                               name="text_edit_number_street"
-                                                               value="{text_street}"
-                                                               maxlength="40"
-                                                               style = "-webkit-border-radius: 10px;
-                                                               -moz-border-radius: 10px;
-                                                               border-radius: 10px;
-                                                               height: 40px;
-                                                               outline: none;
-                                                               padding: 5px;
-                                                               font-family: RobotoSlabRegular;
-                                                               font-size: 14px;          
-                                                               border: 1px solid #ddd;
-                                                               font-weight: lighter;
-                                                               color: #adadad;
-                                                               width: 100%">    
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="form-inline">
-                                                <div class="form-group col-xs-12 col-sm-4 col-md-4"
-                                                     style="padding-left: 0px">
-                                                      <span for="tags_street" 
-                                                          class="col-xs-12 control-label"
-                                                          style="text-align: left; 
-                                                          font-family: RobotoSlabRegular;
-                                                          font-size: 14px;
-                                                          margin-bottom: 10px;
-                                                          margin-top: 10px">
-                                                          Số nhà<span style="color:red">*</span>
-                                                      </span>
-                                                      <div class="col-xs-12">
-                                                            <input type="text"
-                                                               class="form-control" 
-                                                               id="text_edit_number_address"
-                                                               oninput="functionOninput();"
-                                                               name="text_edit_number_address"
-                                                               value="{text_address}"
-                                                               maxlength="10"
-                                                               style="-webkit-border-radius: 10px;
-                                                               -moz-border-radius: 10px;
-                                                               border-radius: 10px;
-                                                               height: 40px;
-                                                               outline: none;
-                                                               padding: 5px;
-                                                               font-family: RobotoSlabRegular;
-                                                               font-size: 14px;    
-                                                               border: 1px solid #ddd;
-                                                               font-weight: lighter;
-                                                               color: #adadad;
-                                                               width: 100%"> 
-                                                      </div>
-                                                </div>
-                                            </div>
-                                            <div class="form-inline">
-                                                <div class="form-group col-xs-12 col-sm-4 col-md-4"
-                                                     style="padding-left: 0px">
-                                                      <span for="text_edit_number_address_Chung_Cu" 
-                                                          class="col-xs-12 control-label"
-                                                          style="text-align: left; 
-                                                          font-family: RobotoSlabRegular;
-                                                          font-size: 14px;
-                                                          margin-bottom: 10px;
-                                                          margin-top: 10px">
-                                                        Chung cư / Tòa nhà
-                                                      </span>
-                                                      <div class="col-xs-12">
-                                                        <input type="text"
-                                                               class="form-control" 
-                                                               id="text_edit_number_address_Chung_Cu" 
-                                                               name ="text_edit_number_address_Chung_Cu" 
-                                                               value="{text_address_Chung_Cu}" 
-                                                               maxlength="40"
-                                                               style = "-webkit-border-radius: 10px;
-                                                               -moz-border-radius: 10px;
-                                                               border-radius: 10px;
-                                                               height: 40px;
-                                                               outline: none;
-                                                               padding: 5px;
-                                                               font-family: RobotoSlabRegular;
-                                                               font-size: 14px;    
-                                                               border: 1px solid #ddd;
-                                                               font-weight: lighter;
-                                                               color: #adadad;
-                                                               width: 100%">    
-                                                      </div>
-                                                </div>
-                                            </div>   
-                                            <div class="form-inline">
-                                                <div class="form-group col-xs-12 col-sm-4 col-md-4"
-                                                     style="padding-left: 0px">
-                                                      <span for="text_edit_floor_Chung_Cu" 
-                                                          class="col-xs-12 control-label"
-                                                          style="text-align: left; 
-                                                          font-family: RobotoSlabRegular;
-                                                          font-size: 14px;
-                                                          margin-bottom: 10px;
-                                                          margin-top: 10px">
-                                                            Lầu
-                                                      </span>
-                                                      <div class="col-xs-12">
-                                                            <input type="text"
-                                                                  class="form-control" 
-                                                                  id="text_edit_floor_Chung_Cu"
-                                                                  name="text_edit_floor_Chung_Cu" 
-                                                                  value="{text_edit_floor_Chung_Cu}"
-                                                                  maxlength="10"
-                                                                  style="-webkit-border-radius: 10px;
-                                                                     -moz-border-radius: 10px;
-                                                                     border-radius: 10px;
-                                                                     height: 40px;
-                                                                     outline: none;
-                                                                     padding: 5px;
-                                                                     font-family: RobotoSlabRegular;
-                                                                     font-size: 14px;
-                                                                     border: 1px solid #ddd;
-                                                                     font-weight: lighter;
-                                                                     color: #adadad;
-                                                                     width: 100%">
-                                                    </div>
-                                                </div>
-                                            </div> 
-                                            <div class="form-inline">
-                                                <div class="form-group col-xs-12 col-sm-4 col-md-4"
-                                                     style="padding-left: 0px">
-                                                      <span for="text_edit_room_Chung_Cu" 
-                                                          class="col-xs-12 control-label"
-                                                          style="text-align: left; 
-                                                          font-family: RobotoSlabRegular;
-                                                          font-size: 14px;
-                                                          margin-bottom: 10px;
-                                                          margin-top: 10px">Căn hộ</span>
-                                                      <div class="col-xs-12">
-                                                            <input type="text"
-                                                               class="form-control" 
-                                                               id ="text_edit_room_Chung_Cu"
-                                                               name="text_edit_room_Chung_Cu"
-                                                               value="{text_edit_room_Chung_Cu}"
-                                                               maxlength="40"
-                                                               style="-webkit-border-radius: 10px;
-                                                               -moz-border-radius: 10px;
-                                                               border-radius: 10px;
-                                                               height: 40px;
-                                                               outline: none;
-                                                               padding: 5px;
-                                                               font-family: RobotoSlabRegular;
-                                                               font-size: 14px; 
-                                                               border: 1px solid #ddd;
-                                                               font-weight: lighter;
-                                                               color: #adadad;
-                                                               width: 100%">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <span for="firstname"
-                                                      class="col-xs-12 col-sm-2 col-md-2 control-label"
-                                                      style="text-align: left; 
-                                                      font-family: RobotoSlabRegular;
-                                                      font-size: 14px;
-                                                      margin-top: 25px">
-                                                      Điện thoại:<span style="color:red">*</span>
-                                                </span>
-                                                <div class="col-xs-8 col-sm-4 col-md-5"
-                                                      style="margin-top: 20px">
-                                                      <input type="text" 
-                                                            class="form-control"
-                                                            id="phone"
-                                                            oninput="functionOninput();"
-                                                            name="phone"
-                                                            type="text" 
-                                                            value="{phone}"
-                                                            style="-webkit-border-radius: 10px;
-                                                            -moz-border-radius: 10px;
-                                                            border-radius: 10px;
-                                                            height: 40px;
-                                                            outline: none;
-                                                            padding: 5px;
-                                                            font-family: RobotoSlabRegular;
-                                                            font-size: 14px;      
-                                                            border: 1px solid #ddd;
-                                                            font-weight: lighter;
-                                                            color: #adadad;
-                                                            width: 103%"
-                                                            maxlength="11">
-                                                </div>
-                                          </div>
-                                          <div class="form-group">
-                                                <span for="firstname" 
-                                                      class="col-xs-12 col-sm-2 col-md-2 control-label"
-                                                      style="text-align: left; 
-                                                      font-family: RobotoSlabRegular;
-                                                      font-size: 14px;
-                                                      margin-top: 5px">Ảnh:</span>
-                                                <div class="col-xs-8 col-sm-4 col-md-5" 
-                                                      style="margin-top: 5px">
-                                                      <input type="file" 
-                                                           name="avatar" 
-                                                           class="form-control"
-                                                           style="-webkit-border-radius: 10px;
-                                                           -moz-border-radius: 10px;
-                                                           border-radius: 10px;
-                                                           height: 40px;
-                                                           outline: none;
-                                                           padding: 5px;
-                                                           font-family: RobotoSlabRegular;
-                                                           font-size: 14px;
-                                                           border: 1px solid #ddd;
-                                                           font-weight: lighter;
-                                                           color: #adadad;
-                                                           width: 103%">
-                                                </div>
-                                          </div>
-                                          <div class ="form-group">
-                                                <div class="col-xs-12">
-                                                      <input id="cmd_submit_update_user" 
-                                                           name="cmd_submit_update_user" 
-                                                           class="button_update"
-                                                           value = "Lưu thay đổi"
-                                                           type="submit"
-                                                           onclick="myFunctionSubmit();"
-                                                           style="outline:none; 
-                                                           background-color: #ff767c;
-                                                           border: none;
-                                                           color: #fff;
-                                                           font-family:PoetsenOne;
-                                                           -webkit-border-radius: 20px;
-                                                           -moz-border-radius: 20px;
-                                                           border-radius: 20px;
-                                                           padding: 10px;
-                                                           width: 120px;
-                                                           font-size: 14px;
-                                                           float: left">
-                                                </div>
-                                            </div>
-                                          </div>
-                                    </div>
-                        </form> 
-                  </div>
-                  <hr class="hidden-xs hidden-sm" style="width: 90%; margin-left: 0px">
-                  <hr class="hidden-md hidden-lg" style="width: 100%; margin-left: 0px">
-                  <div class="newsPersonal_inside" style="line-height: 30px">
-                        <div class="col-sx-12" 
-                              style= "text-align:left; 
-                                   font-family:RobotoSlabLight;
-                                   color:#A00;
-                                   font-size:14px">{happy_birthday}</div>
-                        <div class="col-sx-12"
-                              style="text-align:left; 
-                             font-family:RobotoSlabLight;
-                             color:#A00;
-                             font-size:14px">{happy_birthday_nanapet}</div>
-                        <div class="col-sx-12" 
-                              style="text-align:left; 
-                             font-family:RobotoSlabLight;
-                             color:#A00;
-                             font-size:14px">{happy_new_year}</div>
-                        <div class="col-sx-12" 
-                             style="padding-left:0px; 
-                             font-family: RobotoSlabRegular; 
-                             font-size: 17px;
-                             margin-bottom: 10px">THÔNG TIN ĐIỂM THƯỞNG
-                        </div>
-                        <div class="col-sx-12" 
-                             style="padding-left:0px; 
-                             font-family: RobotoSlabRegular; 
-                             font-size: 14px;
-                             line-height: 30px">
-                            <span>
-                                Tên đăng nhập : <span style="color:blue;">{name}</span>
-                            </span>
-                        </div> 
-                        <div class="col-sx-12" 
-                             style="padding-left:0px; 
-                             font-family: RobotoSlabRegular; 
-                             font-size: 14px;
-                             line-height: 30px">
-                            <span>
-                                Thành viên : <span style="color:red">{level}</span>
-                            </span>
-                        </div>
-                        <div class="col-sx-12" 
-                             style="padding-left:0px; 
-                             font-family: RobotoSlabRegular; 
-                             font-size: 14px;
-                             line-height: 30px">
-                            <span>
-                                Chiết khấu thành viên : <span style="color:red">{discount_level}</span>
-                            </span>
-                        </div>
-                        <div class="col-sx-12" 
-                             style="padding-left:0px; 
-                             font-family: RobotoSlabRegular; 
-                             font-size: 14px;
-                             line-height: 30px">
-                            <span>
-                                Điểm thưởng : <span style="color:red">{awardscore}</span>
-                            </span>
-                        </div>
-                        <div class="col-sx-12" 
-                             style="padding-left:0px; 
-                             font-family: RobotoSlabRegular; 
-                             font-size: 14px;
-                             line-height: 30px">
-                            <span>
-                                Điểm được sử dụng : <span style="color:red">{score}</span>
-                            </span>
-                        </div>
-                        <div class="col-sx-12" 
-                             style="padding-left:0px; 
-                             font-family: RobotoSlabRegular; 
-                             font-size: 14px;
-                             line-height: 30px;
-                             margin-bottom: 20px">
-                            <span>
-                                Điểm chưa được sử dụng : <span style="color:red">{unusedscore}</span>
-                            </span>
-                        </div> 
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</body>			
-<script>
-    $(function () {
-        $("#birthday").datepicker({dateFormat: 'dd-mm-yy',
-                        changeMonth:true,
-                        changeYear: true});
-    });
 </script>
