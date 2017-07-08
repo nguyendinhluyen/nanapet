@@ -14,12 +14,40 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
-                  <div id="breakcrumb"
+                  <div id="breakcrumb" class="hidden-xs hidden-sm"
                      style="font-family: RobotoSlabRegular;
                         font-size:14px;
                         margin-top: 10px;
-                        margin-bottom: 15px">
-                        {breadcrumbs_path}
+                        margin-bottom: 15px">{breadcrumbs_path}</div>
+                  <div class="col-xs-12 hidden-md hidden-lg" 
+                    style="padding-left: 0px; margin-bottom: 10px; margin-top: 10px">
+                    <img src="{linkS}layout/bootstrap/images/icon_category_mobile.png"
+                        data-toggle="collapse"
+                        href="#collapsinfo"
+                        aria-expanded="false"
+                        aria-controls="collapsinfo"
+                        width="30px"
+                        height="30px"
+                        style="margin-right:10px; cursor: pointer;"> 
+                    <span style="font-family: RobotoSlabBold; 
+                                font-size: 15px; 
+                                vertical-align: middle;">THÔNG TIN CỦA BẠN</span>
+                  </div>
+                  <div class="collapse col-xs-12" id="collapsinfo" 
+                      style="padding: 0px; line-height: 30px">
+                    <ul style="font-family: RobotoSlabBold;
+                              padding-left: 0px">
+                      <li><a href="{linkS}thong-tin-tai-khoan" 
+                            style="color: #000" rel='nofollow'>THÔNG TIN CỦA BẠN</a></li>
+                      <li><a href="{linkS}so-dia-chi" 
+                            style="color: #000" rel='nofollow'>SỔ ĐỊA CHỈ</a></li>
+                      <li><a href="{linkS}danh-sach-don-hang" 
+                            style="color: #000" rel='nofollow'>ĐƠN HÀNG CỦA BẠN</a></li>
+                      <li><a href="{linkS}thu-cung-cua-toi" 
+                            style="color: #000" rel='nofollow'>THÚ CƯNG CỦA BẠN</a></li>
+                      <li><a href="{linkS}logout" 
+                            style="" rel='nofollow'>ĐĂNG XUẤT</a></li>
+                    </ul>
                   </div>
                   <div class="news_main">
                   <div style="font-family:PoetsenOne;
@@ -90,7 +118,7 @@
                                         Sản phẩm ưa thích
                                     </a>-->
                               </div>
-                              <div class="col-md-12">
+                              <!--<div class="col-md-12">
                                     <img alt="sản phẩm ưa thích"
                                          src="{linkS}layout/bootstrap/images/thong_tin_tai_khoan_4.png" 
                                          height="20px">
@@ -100,7 +128,7 @@
                                        margin-left: 10px;
                                        line-height: 35px;
                                        color: #000">Sản phẩm ưa thích</a>
-                              </div>
+                              </div>-->
                               <div class="col-md-12">
                                     <img alt="thú cưng"
                                          src="{linkS}layout/bootstrap/images/thong_tin_tai_khoan_5.png" 
@@ -152,7 +180,7 @@
                                                       font-size: 14px">Họ và tên: 
                                                       <span style="color:red">*</span> 
                                                 </span>
-                                                <div class="col-xs-12 col-sm-7 col-md-9" 
+                                                <div class="col-xs-11 col-sm-7 col-md-9" 
                                                       style="padding-right: 0px">
                                                       <input type="text"          
                                                       class="form-control"
@@ -232,7 +260,7 @@
                                                 style="text-align: left; 
                                                 font-family: RobotoSlabRegular;
                                                 font-size: 14px">Địa chỉ:</span>
-                                                <div class="col-xs-12 col-sm-7 col-md-9"
+                                                <div class="col-xs-11 col-sm-7 col-md-9"
                                                       style="padding-right: 0px">
                                                       <textarea name="address"
                                                       id="address"
