@@ -22,7 +22,7 @@
         border-width: 2px;        
         margin-left: -35px;
         border-radius: 15px;      
-        height: 220px;
+        height: 190px;
     }      
 
     #acount_menu ul li ul li a {
@@ -97,11 +97,11 @@ $acount = " <div id='acount_menu' style = 'color: #a88c79;
                                        style = 'outline: none'
                                        rel='nofollow'>Đơn hàng của tôi</a>
                                 </li>                                
-                                <li>
+                                <!--<li>
                                     <a href='{linkS}san-pham-ua-thich' 
                                        style = 'outline: none'
                                        rel='nofollow'>Sản phẩm ưa thích</a>
-                                </li>
+                                </li>-->
                                 <li>
                                     <a href='{linkS}thu-cung-cua-toi' 
                                        style = 'outline: none'
@@ -165,11 +165,11 @@ if (isset($_SESSION['username']) && $_SESSION['username'] != '') {
                                        style='outline: none'
                                        rel='nofollow'>Đơn hàng của tôi</a>
                                 </li>                                
-                                <li>
+                                <!--<li>
                                     <a href='{linkS}san-pham-ua-thich' 
                                        style='outline: none'
                                        rel='nofollow'>Sản phẩm ưa thích</a>
-                                </li>
+                                </li>-->
                                 <li>
                                     <a href='{linkS}thu-cung-cua-toi' 
                                        style = 'outline: none'
