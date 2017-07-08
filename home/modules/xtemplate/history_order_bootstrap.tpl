@@ -1,38 +1,32 @@
 <script type="text/javascript">
 function xoa(){
-    return confirm("Bạn thực chắc chắn muốn xóa");
+    return confirm("Bạn muốn xóa?");
 }
 </script>
-<p align="center"
-   style="color: #ff00cc; font-size: 15px">
-    Lịch sử mua hàng
-</p>
-<table width="100%" style="font-size: 14px">
-     <tr>
-        <td style ="padding:10px 0px 10px 0px;">Mã đơn hàng</td>
-        <td style ="padding:10px 20px 10px 20px;">Ngày đặt hàng</td>
-        <td style ="padding:10px 20px 10px 20px;">Tổng tiền</td>
-        <td style ="padding:10px 20px 10px 20px;">Trạng thái</td>
-        <td style ="padding:10px 20px 10px 20px;">Thao tác</td>
-     </tr>
-     <!--BEGINLIST_ORDER-->
-     <!--BEGIN_ORDER-->			
-     <tr>
-        <td style="text-align: center; padding: 10px">
-            <div class="show">
-                <a href="{madonhang}">{madonhang}</a>
-            </div>
-        </td>
-        <td style="text-align: center; padding: 10px">{ngaydat}</td>
-        <td style="text-align: right;">{tongtien} VNĐ</td>
-        <td style="text-align: center;padding: 10px">{trangthai}</td>
-        <td style="text-align: center;padding: 10px">{edit_html}</td>
-     </tr>
-     <!--END_ORDER-->
-     <!--ENDLIST_ORDER-->
-</table>
-                        
-                       
-                       
-                
-                
+<div class="hidden-xs col-sm-12" style="text-align: left; padding-left: 0px">
+    <div class="col-sm-2" style="padding-left: 0px">Mã ĐH</div>
+    <div class="col-sm-2">Đặt hàng</div>
+    <div class="col-sm-3">Tổng tiền</div>
+    <div class="col-sm-3">Trạng thái</div>
+    <div class="col-sm-2">Thao tác</div>
+</div>
+<!--BEGINLIST_ORDER-->
+<!--BEGIN_ORDER-->
+<div class="col-sm-12 hidden-xs" style="padding-left: 0px">
+    <div class="col-sm-2" style="padding-left: 0px">{madonhang}</div>
+    <div class="col-sm-2">{ngaydat}</div>
+    <div class="col-sm-3">{tongtien} VNĐ</div>
+    <div class="col-sm-3">{trangthai}</div>
+    <div class="col-sm-2">{edit_html}</div>
+</div>
+<div class="col-xs-12 hidden-sm hidden-md hidden-lg" style="padding: 0px">
+    <hr class="col-xs-12" style="padding:0px">
+    <div class="col-xs-12" style="padding: 0px">Mã đơn hàng: {madonhang}</div>
+    <div class="col-xs-12" style="padding: 0px">Ngày đặt hàng: {ngaydat}</div>
+    <div class="col-xs-12" style="padding: 0px">Tổng tiền: {tongtien} VNĐ</div>
+    <div class="col-xs-12" style="padding: 0px">Trạng thái: {trangthai}</div>
+    <div class="col-xs-12" style="padding: 0px">{edit_html}</div>
+</div>
+<!--END_ORDER-->
+<!--ENDLIST_ORDER-->
+<div class="col-xs-12" style="margin-bottom: 20px"></div>
