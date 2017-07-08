@@ -2,7 +2,7 @@
 <html lang="vi">
     <head>
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=9">        
+        <meta http-equiv="X-UA-Compatible" content="IE=9">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="{linkS}layout/bootstrap/css/style.css"/>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -54,15 +54,15 @@
               })(window,document,'script','//www.google-analytics.com/analytics.js','ga');	
               ga('create', 'UA-48947150-1', 'nanapet.com');
               ga('send', 'pageview');
-        </script>    	
-        <script type="text/javascript">		
+        </script> 
+        <script type="text/javascript">
             jQuery(function($)
-            {														
+            {
                 $('#phone_2_field').mask('(999) 999 - 9999?9',{placeholder:" "});
                 $('#phone').mask('(999) 999 - 9999?9',{placeholder:" "});
                 $('#text_mobile_receiver').mask('(999) 999 - 9999?9',{placeholder:" "});
                 $('#text_mobile_buy').mask('(999) 999 - 9999?9',{placeholder:" "});
-            });       									 
+            });
         </script>
         <!-- Facebook -->
         <div id="fb-root"></div>
@@ -80,7 +80,7 @@
     <style>        
         input[type=search], div.button {
             -moz-box-sizing: border-box;
-            height: 35px;            
+            height: 35px;
             box-sizing: border-box;  
             font-family: inherit;
             font-size: inherit;
@@ -193,7 +193,7 @@
                                                    type="submit" 
                                                    value=""
                                                    name="submit"
-                                                   style="outline:none;                                              
+                                                   style="outline:none; 
                                                           border:0px;  
                                                           width: 35px;
                                                           height: 32px;
@@ -216,24 +216,21 @@
                                             </span>
                                         </td>
                                     </tr>
-                                </table>                                                                
+                                </table>
                             </form>
                         </div><!-- end search -->
                     </div>
-                    <div class ="col-lg-2">                                                            
+                    <div class ="col-lg-2"> 
                         <div id ="account" style="padding-left: 40px">
-                            <span>
-                                {acount}                            
-                            </span>                        
-                        </div>                                                                                                                             
+                            <span>{acount} </span> 
+                        </div>
                     </div>
-
                     <div class ="col-lg-2"
                          style="padding-right: 0px">
                         <a href ="{linkS}gio-hang" 
                            class ="hidden-xs hidden-sm"
                            rel='nofollow'
-                           style="color:#bba799;                                               
+                           style="color:#bba799; 
                                   font-size: 14px;
                                   font-weight: 300;
                                   font-family: RobotoSlabRegular;
@@ -244,7 +241,6 @@
                                  style = "float:left; margin-top: -2px;">
                             &nbsp;Giỏ hàng <span class="cart_score">{giohang}</span>
                         </a>
-
                         <a href ="{linkS}gio-hang"
                            rel='nofollow'
                            class ="hidden-md hidden-lg"
@@ -265,7 +261,6 @@
                 </div>
             </div> 
             <!-- end div header-->
-
             <!-- begin div menu-->
             <div class ="container-fluid hidden-xs hidden-sm hidden-md"
                  style="background:url({linkS}layout/bootstrap/images/background_header.png) repeat;
@@ -284,7 +279,7 @@
                             </a>
                         </span>                    
                         <span class="col-lg-9" style="padding: 0px">
-                            <span id="menu">                             
+                            <span id="menu"> 
                                 <ul class="nav">
                                     <li style="width: 50px; margin-top: 10px; margin-left: 60px">
                                         <a class="home" href="{linkS}" style ="outline:none">
@@ -366,52 +361,61 @@
                                            margin-top: 7px">
                                     <li><a class="home" 
                                            href="{linkS}"
-                                           style="outline: none; color: #000">Trang chủ</a></li>
+                                           style="outline: none; color: #000">TRANG CHỦ</a></li>
                                     <li><hr style = "margin-top: 10px;
                                                     margin-bottom: 10px;
-                                                    border-width:1px;                                                
+                                                    border-width:1px;
                                                     border-color:#f0f0f0;  
                                                     float:left;
                                                     width: 100%;"></li>
                                     <li><a class="introduce" 
                                            href="{linkS}gioi-thieu" 
-                                           style="outline: none; color: #000">Giới thiệu</a></li>
+                                           style="outline: none; color: #000">GIỚI THIỆU</a></li>
                                     <li><hr style = "margin-top: 10px;
                                                     margin-bottom: 10px;
-                                                    border-width:1px;                                                
+                                                    border-width:1px; 
                                                     border-color:#f0f0f0;  
                                                     float:left;
                                                     width: 100%;"></li>
                                     <li><a class="product" 
                                            href="{linkS}san-pham/"
-                                           style="outline: none; color: #000">Sản phẩm</a></li>                                                
+                                           style="outline: none; color: #000">SẢN PHẨM</a></li>
                                     <li><hr style = "margin-top: 10px;
                                                     margin-bottom: 10px;
-                                                    border-width:1px;                                                
-                                                    border-color:#f0f0f0;  
+                                                    border-width:1px;
+                                                    border-color:#f0f0f0;
                                                     float:left;
                                                     width: 100%;"></li>
                                     <li><a class="blog" 
                                            href="{linkS}doi-song-pets"
-                                           style="outline: none; color: #000">Đời sống Pets</a></li>                 
+                                           style="outline: none; color: #000">ĐỜI SỐNG PETS</a></li>
                                     <li><hr style = "margin-top: 10px;
                                                     margin-bottom: 10px;
-                                                    border-width:1px;                                                
+                                                    border-width:1px; 
                                                     border-color:#f0f0f0;  
                                                     float:left;
                                                     width: 100%;"></li>
                                     <li><a class="service" 
                                            href="{linkS}tro-giup"
-                                           style="outline: none; color: #000">Hỗ trợ</a></li>
+                                           style="outline: none; color: #000">HỖ TRỢ</a></li>
                                     <li><hr style = "margin-top: 10px;
                                                     margin-bottom: 10px;
-                                                    border-width:1px;                                                
+                                                    border-width:1px; 
                                                     border-color:#f0f0f0;  
                                                     float:left;
                                                     width: 100%;"></li>
                                     <li><a class="contact" 
                                            href="{linkS}lien-he" rel='nofollow'
-                                           style="outline: none; color: #000">Liên hệ</a></li>
+                                           style="outline: none; color: #000">LIÊN HỆ</a></li>
+                                    <li><hr style = "margin-top: 10px;
+                                                    margin-bottom: 10px;
+                                                    border-width:1px; 
+                                                    border-color:#f0f0f0;  
+                                                    float:left;
+                                                    width: 100%;"></li>
+                                    <li><a class="contact" 
+                                           href="{linkS}thong-tin-tai-khoan" rel='nofollow'
+                                           style="outline: none">TÀI KHOẢN CỦA BẠN</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -438,7 +442,7 @@
                                     type="submit" 
                                     value=""
                                     name="submit"
-                                    style="outline:none;                                              
+                                    style="outline:none;
                                            float: left;
                                            width: 35px;
                                            border: 0px;
@@ -451,11 +455,9 @@
                 </div>
             </div>
         </header>
-                                          
         <!-- content-->
         {content}
         <!--End content-->
-        
         <!-- footer -->
         <footer>
             <div class="container-fluid hidden-xs hidden-sm hidden-md"
@@ -473,9 +475,7 @@
                                         margin-bottom: 10px;
                                         padding-right: 20px;
                                         font-weight: bold;
-                                        color:#000;">
-                                HỖ TRỢ KHÁCH HÀNG
-                            </div>
+                                        color:#000;">HỖ TRỢ KHÁCH HÀNG</div>
                             <div style="font-family:RobotoSlabRegular; 
                                         font-size:14px;
                                         outline:none;
@@ -494,7 +494,6 @@
                                 </ul>
                             </div>
                         </div>
-
                         <!--NanaPet Shop-->
                         <div class ="col-lg-3" 
                              style="padding-left: 30px; line-height: 25px">
@@ -503,9 +502,7 @@
                                         margin-bottom: 10px;
                                         padding-right: 20px;
                                         font-weight: bold;
-                                        color:#000;">
-                                VỀ NANAPET SHOP
-                            </div>
+                                        color:#000;">VỀ NANAPET SHOP</div>
                             <div style="font-family:RobotoSlabRegular; 
                                         font-size:14px;
                                         outline:none;
@@ -530,9 +527,7 @@
                                         margin-bottom: 10px;
                                         padding-right: 20px;
                                         font-weight: bold;
-                                        color:#000;">
-                                LIÊN KẾT & HỢP TÁC
-                            </div>
+                                        color:#000;">LIÊN KẾT & HỢP TÁC</div>
                             <div style="font-family:RobotoSlabRegular; 
                                         font-size:14px;
                                         outline:none;
@@ -559,9 +554,7 @@
                                         margin-bottom: 10px;
                                         padding-right: 20px;
                                         font-weight: bold;
-                                        color:#000;">
-                                THÔNG TIN LIÊN HỆ
-                            </div>
+                                        color:#000;">THÔNG TIN LIÊN HỆ</div>
                             <div style ="margin-top: 5px; clear:both">
                                 <span style ="font-family:RobotoSlabRegular; 
                                            color:#000;
@@ -601,9 +594,7 @@
                                         margin-bottom: 10px;
                                         padding-right: 20px;
                                         font-weight: bold;
-                                        color:#000;">
-                                CHẤP NHẬN THANH TOÁN VỚI NGÂN HÀNG
-                            </div>
+                                        color:#000;">CHẤP NHẬN THANH TOÁN VỚI NGÂN HÀNG</div>
                             <div style="clear:both">
                                 <a href="{linkS}tro-giup/cach-thuc-thanh-toan.html"
                                    target ="_blank">
@@ -622,9 +613,7 @@
                                         padding-right: 20px;
                                         font-weight: bold;
                                         color:#000;
-                                        clear:both">
-                                ĐỐI TÁC / DỊCH VỤ GIAO HÀNG 
-                            </div>
+                                        clear:both">ĐỐI TÁC / DỊCH VỤ GIAO HÀNG</div>
                             <div style="clear:both">
                                 <a href="{linkS}tro-giup/dich-vu-van-chuyen.html"
                                     target ="_blank">
@@ -633,7 +622,7 @@
                                          style = "float:left; 
                                                   margin-top: -2px;
                                                   margin-left: -10px"> 
-                                </a>                            
+                                </a>
                             </div>
                         </div>
                         <div class ="col-lg-4" 
@@ -657,7 +646,7 @@
                     </div>       
                     <hr style = "margin-top: 40px;
                                 margin-bottom: 20px;
-                                border-width:1px;                                                
+                                border-width:1px; 
                                 border-color:white;  
                                 float:left;
                                 width: 98%;
@@ -675,11 +664,11 @@
                             <li><a href=""
                                    style="height: 50px; outline: none; width:3px">|</a></li>
                             <li><a  href="{linkS}san-pham/"
-                                   style="height: 50px; outline: none; width:90px">Sản phẩm</a></li>                                        
+                                   style="height: 50px; outline: none; width:90px">Sản phẩm</a></li>
                             <li><a href=""
                                    style="height: 50px; outline: none; width:4px">|</a></li>
                             <li><a href="{linkS}doi-song-pets"
-                                   style="height: 50px; outline: none; width:115px">Đời sống Pets</a></li>                 
+                                   style="height: 50px; outline: none; width:115px">Đời sống Pets</a></li>
                             <li><a href=""
                                    style="height: 50px; outline: none; width:3px">|</a></li>
                             <li><a href="{linkS}tro-giup"
@@ -779,7 +768,7 @@
                                        style="color: #000">Hướng dẫn đặt hàng</a></li>
                             </ul>
                         </div>
-                        <hr  style = "border-width:1px;                                                
+                        <hr  style = "border-width:1px; 
                                     border-color: #f26d71; 
                                     width:100%; 
                                     float:left;
@@ -811,7 +800,7 @@
                                        style="color: #000">Điều khoản sử dụng</a></li>
                             </ul>
                         </div>  
-                        <hr style="border-width:1px;                                                
+                        <hr style="border-width:1px;
                                 border-color: #f26d71; 
                                 width:100%; 
                                 float:left;
@@ -843,7 +832,7 @@
                                        style="color:#000">Gia nhập NaCol Team</a></li>
                             </ul>
                         </div>
-                        <hr style="border-width:1px;                                                
+                        <hr style="border-width:1px;
                                 border-color: #f26d71;
                                 width:100%; 
                                 float:left;
@@ -923,10 +912,8 @@
                    </a>
                </div>
            </div>
-                                       
         </footer>
         <a href="#0" class="cd-top">Top</a>
-        
         <!--Facebook message-->
         <style>
             #cfacebook{
