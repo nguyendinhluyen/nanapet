@@ -21,7 +21,7 @@
                         vertical-align: middle;">THÚ CƯNG CỦA BẠN</span>
           </div>
           <div class="collapse col-xs-12" id="collapsinfo" 
-              style="padding: 0px; line-height: 30px">
+              style="padding: 0px; line-height: 35px">
             <ul style="font-family: RobotoSlabBold;
                       padding-left: 0px">
               <li><a href="{linkS}thong-tin-tai-khoan" 
@@ -34,6 +34,7 @@
                     style="color: #000" rel='nofollow'>THÚ CƯNG CỦA BẠN</a></li>
               <li><a href="{linkS}logout" 
                     style="" rel='nofollow'>ĐĂNG XUẤT</a></li>
+              <li><hr></li>
             </ul>
           </div>
         <div class="hidden-xs hidden-sm col-md-3 col-lg-3" 
