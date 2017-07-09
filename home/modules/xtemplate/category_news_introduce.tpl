@@ -31,9 +31,10 @@
     <ul style = "padding-left:0px">
         <!--BEGINLIST_CATEGORY-->
         <!--BEGIN_CATEGORY-->
-        <li class="danhmuc_main">
+        <li class="danhmuc_main col-xs-12"
+            style="padding:0px; font-family: RobotoSlabBold">
             <a href="{linkS}gioi-thieu/{category_key}.htm" 
-               style = "outline:none" 
+               style = "outline:none"
                class="{id_danhmuc_main}">{category_name}</a>
         </li>
         <!--END_CATEGORY-->

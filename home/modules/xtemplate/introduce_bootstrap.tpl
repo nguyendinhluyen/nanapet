@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row">   
         <div class="col-xs-12 col-md-3">
-            <img class="hidden-xs hidden-md" 
+            <img class="hidden-xs hidden-sm"
                 alt="giới thiệu" 
                 src="{linkS}layout/bootstrap/images/gioi_thieu.png"
                 style="clear: both;
