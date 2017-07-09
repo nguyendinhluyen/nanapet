@@ -61,20 +61,7 @@
 
     //Thay cho toppage
     $news_detail['newsintroduce_content'] = str_replace('toppage', '<A href="#section0" style="text-decoration:underline;">'
-            . '<span style="outline:none">Về đầu trang</span> </A>', $news_detail['newsintroduce_content']);
-
-    $news_detail['newsintroduce_content'] = str_replace('Arial', 'RobotoSlabLight', $news_detail['newsintroduce_content']);
-    $news_detail['newsintroduce_content'] = str_replace('size="2"', "", $news_detail['newsintroduce_content']);
-    $news_detail['newsintroduce_content'] = str_replace('size="3"', "", $news_detail['newsintroduce_content']);
-
-    //Change line height
-    $news_detail['newsintroduce_content'] = str_replace('line-height:1.5', 'line-height:2.0', $news_detail['newsintroduce_content']);
-    $news_detail['newsintroduce_content'] = str_replace('line-height: 1.5', 'line-height:2.0', $news_detail['newsintroduce_content']);
-    $news_detail['newsintroduce_content'] = str_replace('line-height:1.15', 'line-height:2.0', $news_detail['newsintroduce_content']);
-    $news_detail['newsintroduce_content'] = str_replace('line-height: 150%', 'line-height:2.0', $news_detail['newsintroduce_content']);
-    $news_detail['newsintroduce_content'] = str_replace('line-height:150%', 'line-height:2.0', $news_detail['newsintroduce_content']);
-    $news_detail['newsintroduce_content'] = str_replace('line-height: 18px', 'line-height:2.0', $news_detail['newsintroduce_content']);
-
+            . '<span style="outline:none">Về đầu trang</span> </A>', $news_detail['newsintroduce_content']);    
     $content = $xtemplate->load('introduce_bootstrap');
     $content = $xtemplate->replace($content, array(
         'tieude' => $news_detail['newsintroduce_name'],
