@@ -55,8 +55,8 @@
                         margin-right: auto;
                         font-size:14px;
                         font-family:RobotoSlabRegular;
-                        margin-top: 20px;
-                        margin-bottom: 30px">{page}
+                        margin-top: 10px;
+                        margin-bottom: 10px">{page}
                 </div> 
             </div>
             <!-- END PAGE NAVIGATION -->
