@@ -102,7 +102,6 @@ RewriteRule ^khuyen-mai$ home/index.php?show=info&flag=4&page=1 [L]
 RewriteRule ^khuyen-mai/page=([0-9]*)$ home/index.php?show=info&flag=4&page=$1 [L]
 
 RewriteRule ^thu-gian$ home/index.php?show=info&flag=5 [L]
-#RewriteRule ^lien-he$ home/index.php?show=info&flag=6 [L]
 RewriteRule ^tin-tuc$ home/index.php?show=info&flag=7 [L]
 RewriteRule ^cau-hoi-thuong-gap$ home/index.php?show=info&flag=8 [L]
 RewriteRule ^huong-dan-mua-hang$ home/index.php?show=info&flag=9 [L]
