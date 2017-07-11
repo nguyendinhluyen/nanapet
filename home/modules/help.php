@@ -3,21 +3,18 @@
     $news_key = '';
     if (isset($_GET['news_key'])) {
         $news_key = $_GET['news_key'];
-    }
-
-    if ($news_key == '') {
+    }    
+    if (empty($news_key)) {
         $news_key = $News->getFistRowsOfHelpByCategory();
     } else {
         $news_key = $News->getDetailofHelpByCategory($news_key);
     }
-
     $news_detail = $News->getDetailNews($news_key);
     if (empty($news_detail['news_content'])) {
         $news_detail['news_name'] = "NanaPet";
         $news_detail['news_content'] = 'Hiện đang cập nhật ... </br>';
     }
-    
-    // Title for SEO
+    // title for SEO
     if (empty($title_page)) {
         if (!empty($news_detail['news_name'])) {
             $title_page =  $news_detail['news_name'];
@@ -25,17 +22,13 @@
             $title_page =  "Hỗ trợ";
         }
     }
-    
-    // Description
+        
     if (empty($description)) {
         $description = $title_page;
-    }
-    
-    // Keywords
+    }        
     if (empty($keywords)) {
         $keywords = $title_page;
     }
-
     $breadcrumbs_path .= '<a href="{linkS}">NanaPet</a>';
     if ($news_key != '') {
         $breadcrumbs_path .= ' &raquo; ' . '<a href="{linkS}tro-giup">Hỗ Trợ</a>';
@@ -57,24 +50,10 @@
             $news_detail['news_content'] = str_replace('endreference0' . $i, '</A>', $news_detail['news_content']);
         }
     }
-
-    //Thay cho toppage
+    //toppage
     $news_detail['news_content'] = str_replace('toppage', '<A href="#section0" style="outline:none"> '
-            . 'Về đầu trang</A>', $news_detail['news_content']);
-
-    $news_detail['news_content'] = str_replace('Arial', 'RobotoSlabLight', $news_detail['news_content']);
-    $news_detail['news_content'] = str_replace('size="2"', "", $news_detail['news_content']);
-    $news_detail['news_content'] = str_replace('size="3"', "", $news_detail['news_content']);
-
-    //Change line height    
-    $news_detail['news_content'] = str_replace('line-height:1.5', 'line-height:2.0', $news_detail['news_content']);
-    $news_detail['news_content'] = str_replace('line-height: 1.5', 'line-height:2.0', $news_detail['news_content']);
-    $news_detail['news_content'] = str_replace('line-height:1.15', 'line-height:2.0', $news_detail['news_content']);
-    $news_detail['news_content'] = str_replace('line-height: 150%', 'line-height:2.0', $news_detail['news_content']);
-    $news_detail['news_content'] = str_replace('line-height:150%', 'line-height:2.0', $news_detail['news_content']);
-    $news_detail['news_content'] = str_replace('line-height: 18px', 'line-height:2.0', $news_detail['news_content']);
-    $content = $xtemplate->load('help_bootstrap');
-
+            . 'Về đầu trang</A>', $news_detail['news_content']);    
+    $content = $xtemplate->load('help_bootstrap');    
     $content = $xtemplate->replace($content, array(
         'tieude' => $news_detail['news_name'],
         'noidung' => $news_detail['news_content'],
