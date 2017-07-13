@@ -354,11 +354,12 @@
                         </div>
                     </div> 
                     <div class="row">
-                        <div class="col-xs-12 col-sm-12 col-md-12">
+                        <div class="col-xs-12">
                             <div class="collapse" id="collapsemenu">
                                 <ul style="font-family: RobotoSlabBold;
                                            padding-left: 0px;
-                                           margin-top: 7px">
+                                           margin-top: 7px;
+                                           font-size: 14px">
                                     <li><a class="home" 
                                            href="{linkS}"
                                            style="outline: none; color: #000">TRANG CHỦ</a></li>
