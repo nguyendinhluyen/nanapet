@@ -15,8 +15,7 @@
             $selected_category = 'Tất cả sản phẩm';
             for($i=0 ; $i<$n ; ++$i) {
                 if($i !=0 ) {
-                    $tpl .= "<hr class='hidden-md hidden-sm hidden-xs' style='margin-top: 10px;"
-                                . "margin-bottom: 10px;"
+                    $tpl .= "<hr style='margin-top: 10px;"                                
                                 . "border-width:1px;"
                                 . "border-color:#79afc4; width:100%; float:left'>";
                 }        
@@ -72,15 +71,11 @@
                 $sale_off = "selected";
                 $selected_category = "Sale Off - Mua Ngay Kẻo Lỡ";
             }
-            $tpl = $tpl."<hr class='hidden-md hidden-sm hidden-xs' "
-                        . "style='margin-top: 10px;"
-                                . "margin-bottom: 10px;"
-                                . "border-width:1px;"
-                                . "border-color:#79afc4;"
-                                . "width:100%;"
-                                . "float:left'>"
-                                .'<li class="danhmuc_main"><a href="{linkS}sale-off/" class="'
-                    .$sale_off.'">Sale Off - Mua Ngay Kẻo Lỡ</a></li>';
+            $tpl .= "<hr style='margin-top: 10px;"
+                            . "border-width:1px;"
+                            . "border-color:#79afc4; width:100%; float:left'>"
+                            .'<li class="danhmuc_main"><a href="{linkS}sale-off/" class="'
+                .$sale_off.'">Sale Off - Mua Ngay Kẻo Lỡ</a></li>';
             $category = $xtemplate -> assign_blocks_content($category,array(
                 'CATEGORY'  =>  $tpl,
             

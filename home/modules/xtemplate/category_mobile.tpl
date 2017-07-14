@@ -8,7 +8,7 @@
         width="30px"
         height="30px"
         style="margin-right:10px; cursor: pointer;">
-    <span class="selected_category_text">{selected_category}</span>
+    <span class="selected_category_text" style="line-height: 50px">{selected_category}</span>
 </div>
 <div class="danhmuc collapse" id="collapsecategoryparent">
     <!--BEGINLIST_CATEGORY-->
@@ -20,7 +20,7 @@
             aria-expanded="false"
             aria-controls="collapsecategory_{id_danhmuc_main}">
             <div href="{linkS}{category_key}/" 
-                 style="outline:none; cursor: pointer"
+                 style="outline:none; cursor: pointer; line-height: 10px"
                  class="{id_danhmuc_main}">{category_name} &nbsp<span class="caret"></span></div>
         </li>
         <ul class="main_sub_mobile collapse" id="collapsecategory_{id_danhmuc_main}">
