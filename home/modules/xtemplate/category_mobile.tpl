@@ -13,12 +13,13 @@
 <div class="danhmuc collapse" id="collapsecategoryparent">
     <!--BEGINLIST_CATEGORY-->
     <!--BEGIN_CATEGORY-->
-    <ul class = "main_category_mobile">
+    <ul class = "main_category_mobile" style="margin-bottom: 0px">
         <li class="danhmuc_main_mobile"
             data-toggle="collapse"
             href="#collapsecategory_{id_danhmuc_main}"
             aria-expanded="false"
-            aria-controls="collapsecategory_{id_danhmuc_main}">
+            aria-controls="collapsecategory_{id_danhmuc_main}"
+            style="margin-bottom: 10px">
             <div href="{linkS}{category_key}/" 
                  style="outline:none; cursor: pointer; line-height: 10px"
                  class="{id_danhmuc_main}">{category_name} &nbsp<span class="caret"></span></div>
