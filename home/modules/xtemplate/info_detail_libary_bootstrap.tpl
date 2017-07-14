@@ -69,8 +69,7 @@
 
 <div class="container">
     <div class ="row">        
-        <div class="col-sx-12 col-sm-12 col-md-9 col-lg-9"
-             style="padding-left: 50px">
+        <div class="col-sx-12 col-sm-12 col-md-9 col-lg-9">
             <div id="breakcrumb" 
                  style="font-family: RobotoSlabRegular; 
                         font-size:14px;
@@ -568,8 +567,7 @@
             </div><!-- end product_main -->
             <!--End main content page-->
         </div>
-        <div class = "hidden-xs hidden-sm col-md-3 col-lg-3" 
-             style="padding-right: 50px">
+        <div class = "hidden-xs hidden-sm col-md-3">
             <div>
                 <img alt="đọc nhiều nhất" 
                     src="{linkS}layout/bootstrap/images/doc_nhieu_nhat.png"

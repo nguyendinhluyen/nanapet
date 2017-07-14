@@ -114,7 +114,8 @@
 
     $info = $xtemplate->replace($info, array(
         'category' => $category_libary,
-        'category_selected' => $category_selected
+        'category_selected' => $category_selected,
+        'category_mobile' => $category_libary_mobile
     ));
 
     if (!empty($_GET['choose'])) {
