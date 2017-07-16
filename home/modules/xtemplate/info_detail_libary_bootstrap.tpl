@@ -1,29 +1,29 @@
 <style>
     a:hover, a:link{
         text-decoration: none;
-    }    
+    }
     #sharefacebook_icon a img{
         opacity: 0.8;
-    }    
-    #sharefacebook_icon a:hover img{                
+    }
+    #sharefacebook_icon a:hover img {
         opacity: 1;
-    }    
+    }
     #sharefacebook_icon a:hover {
         text-decoration: none;
-    }    
+    } 
     #sharefacebook_icon a:active {
         text-decoration: none;
     }
     #sharefacebook_icon a:link {
         text-decoration: none;
-    }    
-    #ShareButton{        
-        padding-bottom: 10px;     
-    }    
-    #stretch{        
+    }
+    #ShareButton{
         padding-bottom: 10px;
-    }    
-    #line{        
+    }
+    #stretch{
+        padding-bottom: 10px;
+    }   
+    #line{
         height:1px;
         margin-left: 100px;
         margin-right: 100px;
@@ -35,13 +35,22 @@
     }
     #twitter-widget-0{
         width:80px !important;
-    }    
+    }  
     #___plusone_0{
         width:57px !important;
-    }    
+    }
     #___plusone_1{
         width:55px !important;
-    }    
+    }   
+    .fb_iframe_widget_fluid {
+        display: inline-block !important;
+    }
+    .article-content-container img {
+        width: 90%;
+        display:block;
+        margin-left: auto;
+        margin-right: auto
+    }
 </style>
 
 <script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
@@ -50,8 +59,7 @@
 </script>
 
 <script>
-    !function(d,s,id)
-    {
+    !function(d,s,id) {
         var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
         if(!d.getElementById(id))
         {
@@ -68,30 +76,27 @@
 </script>
 
 <div class="container">
-    <div class ="row">        
-        <div class="col-sx-12 col-sm-12 col-md-9 col-lg-9">
+    <div class ="row">
+        <div class="col-sx-12 col-lg-9">
             <div id="breakcrumb" 
-                 style="font-family: RobotoSlabRegular; 
-                        font-size:14px;
-                        margin-top: 30px;
-                        margin-bottom: 15px">
-                {breadcrumbs_path}
-            </div>            
+                class="hidden-xs hidden-sm hidden-md"
+                style="font-family: RobotoSlabRegular; 
+                    font-size:14px;
+                    margin-top: 30px;
+                    margin-bottom: 15px">{breadcrumbs_path}</div>
             <!--Main content page-->
             <div class="news_main_libary">
                 <h1 class="contentheading"
-                    style="padding-top:5px;
-                           font-family:PoetsenOne;
-                           font-size: 30px">
-                    {news_name}
-                </h1>
+                    style="font-family:PoetsenOne;
+                           font-size: 30px">{news_name}</h1>
                 <div style="margin-bottom:10px;
-                            color:black;
-                            font-size:14px;
-                            font-family: RobotoSlabRegular">                            
-                    <span style="color:#999999; font-family:RobotoSlabLight">{date_added}</span>
+                        color:black;
+                        font-size:14px;
+                        font-family: RobotoSlabRegular">
+                    <span style="color:#999999; 
+                                font-family:RobotoSlabLight">{date_added}</span>
                 </div>
-                <div style="color:blue;                                    
+                <div style="color:blue;
                            font-size:14px;
                            font-family:RobotoSlabRegular;
                            margin-top:20px">
@@ -100,7 +105,7 @@
                                  line-height: 20px;
                                  color: #999999">{chuyen_muc}</span>
                 </div>
-                <div style="color:blue;                                    
+                <div style="color:blue;
                            font-size:14px;
                            font-family:RobotoSlabRegular;
                            margin-top: 10px">
@@ -109,8 +114,9 @@
                                  line-height: 20px;
                                  color: #999999">{author}</span>
                 </div>
-                <div style="margin-top:10px; float:left; padding-left: 0px"
-                     class="col-lg-8">
+                <div style="margin-top:10px; 
+                            padding-left: 0px"
+                    class="col-lg-8">
                     <span class="fb-like"
                           data-href="{linkSf}{news_key}.htm"
                           data-layout="button_count" 
@@ -120,17 +126,15 @@
                     </span>
                     <span class="g-plusone" data-size="medium"></span>
                     <span>
-                        <a href="{linkSf}{news_key}.htm" class="twitter-share-button">Tweet</a>               
+                        <a href="{linkSf}{news_key}.htm" class="twitter-share-button">Tweet</a> 
                     </span>
                 </div> 
-                <div style="float:left;                                 
-                            margin-right: 0px;
-                            text-align: right;
+                <div style="text-align: right;
                             padding-right: 0px;
-                            padding-bottom: 10px"
-                    class="col-lg-4">
-                    <span id = "sharefacebook_icon" 
-                          style = "margin-right:5px">
+                            padding-bottom: 20px"
+                    class="hidden-xs hidden-sm hidden-md col-lg-4">
+                    <span id="sharefacebook_icon" 
+                          style="margin-right:5px">
                         <a  target="_blank"
                             href="http://www.facebook.com/sharer/sharer.php?s=100&amp;p[url]={linkSf}{news_key}.htm&amp;p[images][0]= {linkSf}layout/images/logo/banner01.jpg&amp;p[title]={news_name}+&amp;p[summary]={news_shortcontent}"
                             ref="nofollow">
@@ -140,19 +144,19 @@
                                 width="40px"/>
                         </a>
                     </span>
-                    <span id = "sharefacebook_icon" 
-                          style = "margin-right:5px">
+                    <span id="sharefacebook_icon" 
+                          style="margin-right:5px">
                         <a  href="https://plus.google.com/share?url={linkSf}{news_key}.htm"
                             onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');;return false;"
                             ref="nofollow">
                             <img alt="google+" 
-                                src="{linkS}layout/images/google-plus-icon.png"                                
+                                src="{linkS}layout/images/google-plus-icon.png"
                                 title="Chia sẻ Google+"
                                 width="40px"/>
                         </a>
                     </span>
-                    <span id = "sharefacebook_icon"
-                          style = "margin-right:5px">
+                    <span id="sharefacebook_icon"
+                          style="margin-right:5px">
                         <a href="https://twitter.com/intent/tweet?text={news_name_twitter}&url={linkSf}{news_key}.htm&related=episod"
                            ref="nofollow">
                             <img alt="tweet" 
@@ -160,8 +164,8 @@
                                 title="Chia sẻ Tweet"
                                 width="40px"/>
                         </a>
-                    </span>		                                                                    
-                    <span id = "sharefacebook_icon">
+                    </span>
+                    <span id="sharefacebook_icon">
                         <a href="http://www.linkedin.com/shareArticle?mini=true&url={linkSf}{news_key}.htm&title={news_name}&summary={news_shortcontent}&source=nanapet.com" 
                            onclick="NewWindow(this.href,'template_window','550','400','yes','center');return false" 
                            onfocus="this.blur()"
@@ -174,23 +178,31 @@
                         </a>
                     </span>   
                 </div>
-                <div class ="row" style="float:left">
-                    <hr style="margin-top: 0.5em;
-                               margin-bottom: 0.5em;
-                               margin-left: auto;
-                               margin-right: auto;                                                           
-                               color: #999999;
-                               margin-left: 15px;
-                               margin-right: 15px">
-                    
-                    <div class="col-sx-12 col-sm-12 col-md-3 col-lg-3" style="float:left; padding-top: 45px">
+                <div class="row">
+                    <hr style="color: #999999;
+                            margin-left: 15px;
+                            margin-right: 15px;
+                            clear: both">
+                    <div class="col-sx-6 col-md-3">
                         <a href="{linkS}cong-tac-vien/{idadmin}.html/page=0"
                            ref="nofollow">
-                            <img alt="{name}"
-                                class="img-circle"
+                            <img class="img-circle hidden-xs hidden-sm" 
+                                alt="{name}"
                                 src="{linkS}upload/avatar/{avata}"
-                                style="width: 100%; clear: both">
-                        </a>                                                        
+                                style="width: 100%; 
+                                    clear: both;
+                                    display: block;
+                                    margin-left: auto;
+                                    margin-right: auto">
+                            <img class="img-circle hidden-md hidden-lg"
+                                alt="{name}"
+                                src="{linkS}upload/avatar/{avata}"
+                                style="width: 30%; 
+                                    clear: both;
+                                    display: block;
+                                    margin-left: auto;
+                                    margin-right: auto">
+                        </a>
                         <div style="font-family: PoetsenOne; 
                                     text-align: center; 
                                     font-size: 17px; 
@@ -198,8 +210,7 @@
                                     margin-top: 10px">
                             <a style="color: black; text-transform: uppercase"
                                href="{linkS}cong-tac-vien/{idadmin}.html/page=0"
-                               ref="nofollow">
-                                {name}
+                               ref="nofollow">{name}
                             </a>
                         </div>
                         <div style="text-transform: uppercase; 
@@ -216,8 +227,8 @@
                                     padding-bottom: 10px">
                             {short_content}
                         </div>
-                        <div style="padding-bottom: 10px">
-                            <span {display_1}>
+                        <div {display_1}>
+                            <span>
                                 <img alt="blue point" 
                                     src="{linkS}layout/bootstrap/images/bluePoint.png" 
                                     style="width: 15px; margin-right: 10px">
@@ -230,8 +241,8 @@
                                     href="{linkS}doi-song-pets/{relation_news_key_1}/">{relation_news_1}</a>
                             </span>
                         </div>
-                        <div style="padding-bottom: 10px">
-                            <span {display_2}>
+                        <div {display_2}>
+                            <span>
                                 <img alt="blue point" 
                                     src="{linkS}layout/bootstrap/images/bluePoint.png" 
                                     style="width: 15px; margin-right: 10px">
@@ -244,8 +255,8 @@
                                     href="{linkS}doi-song-pets/{relation_news_key_2}/">{relation_news_2}</a>
                             </span>
                         </div>
-                        <div style="padding-bottom: 10px">
-                            <span {display_3}>
+                        <div {display_3}>
+                            <span>
                                 <img alt="blue point"
                                     src="{linkS}layout/bootstrap/images/bluePoint.png" 
                                     style="width: 15px; margin-right: 10px">
@@ -258,8 +269,8 @@
                                     href="{linkS}doi-song-pets/{relation_news_key_3}/">{relation_news_3}</a>
                             </span>
                         </div>
-                        <div style="padding-bottom: 10px">
-                            <span {display_4}>
+                        <div {display_4}>
+                            <span>
                                 <img alt="blue point" 
                                     src="{linkS}layout/bootstrap/images/bluePoint.png" 
                                     style="width: 15px; margin-right: 10px">
@@ -272,31 +283,30 @@
                                     href="{linkS}doi-song-pets/{relation_news_key_4}/">{relation_news_4}</a>
                             </span>
                         </div>
-                        <div style="padding-bottom: 10px">
-                            <span {display_5}>
+                        <div {display_5}>
+                            <span>
                                 <img alt="blue point"
                                     src="{linkS}layout/bootstrap/images/bluePoint.png" 
                                     style="width: 15px; margin-right: 10px">
                             </span>
                             <span>
                                 <a style="font-family: RobotoSlabRegular; 
-                                          text-align: justify; 
-                                          font-size: 14px;
-                                          line-height: 25px;" 
+                                        text-align: justify; 
+                                        font-size: 14px;
+                                        line-height: 25px" 
                                     href="{linkS}doi-song-pets/{relation_news_key_5}/">{relation_news_5}</a>
                             </span>
-                        </div>                    
+                        </div>
                     </div>
-                    <div class="article-content col-sm-12 col-xs-12 col-md-9 col-lg-9"
+                    <div class="article-content col-sm-12 col-md-9"
                          style="line-height:25px;
                                 font-size: 14px;
                                 padding-top: 5px;">
-                        <p>
-                            <span style="text-align:justify;
-                                         font-family:RobotoSlabRegular;">
-                                {news_content}
-                            </span>
-                        </p>
+                        <span class="article-content-container"
+                              style="text-align:justify;
+                                    font-family:RobotoSlabRegular;">
+                            {news_content}
+                        </span>
                         <div style="margin-bottom:10px; 
                                 padding-top:10px;
                                 color:#7F1F00; 
@@ -306,7 +316,7 @@
                                 <hr style="margin-top: 0.5em;
                                            margin-bottom: 0.5em;
                                            margin-left: auto;
-                                           margin-right: auto;                                                           
+                                           margin-right: auto;
                                            color: #999999;
                                            {display_disclaimer}">
                                 <div style="{display_disclaimer}">
@@ -317,15 +327,13 @@
                                             width="25px"/>
                                     </span>
                                     <span style="color:black;
-                                        font-size:15px; 
-                                        width: 100%; 
-                                        line-height: 25px;
-                                        font-family: RobotoSlabLight;
-                                        text-align: justify;
-                                        font-style: italic;
-                                        padding-left: 10px">
-                                        Thông báo
-                                    </span>
+                                            font-size:15px; 
+                                            width: 100%; 
+                                            line-height: 25px;
+                                            font-family: RobotoSlabLight;
+                                            text-align: justify;
+                                            font-style: italic;
+                                            padding-left: 10px">Thông báo</span>
                                 </div>
                                 <div style="color:black;
                                            font-size:13px; 
@@ -338,42 +346,38 @@
                                 <div style="{display_disclaimer}">
                                     <div>
                                         <hr style="margin-top: 0.5em;
-                                                  margin-bottom: 0.5em;
-                                                  margin-left: auto;
-                                                  margin-right: auto;                                                           
-                                                  color: #999999;">  
+                                                margin-bottom: 0.5em;
+                                                margin-left: auto;
+                                                margin-right: auto;
+                                                color: #999999;">  
                                     </div>
                                 </div>
                                 <hr style="margin-top: 0.5em;
                                         margin-bottom: 0.5em;
                                         margin-left: auto;
-                                        margin-right: auto;                                                           
+                                        margin-right: auto;
                                         color: #999999;
                                         {display_resource}">
-                                <div>
-                                    <div style="color:black;                                                                                       
-                                               font-size:14px; 
-                                               width: 100%; 
-                                               line-height: 35px">
-                                        Nguồn tham khảo:&nbsp;
-                                    </div>
+                                <div style="color:black;
+                                       font-size:14px; 
+                                       width: 100%; 
+                                       line-height: 35px">
+                                    Nguồn tham khảo:&nbsp;
                                 </div>
-                                <div>
-                                    <div style = "font-size:14px;
-                                                 color:#337ab7;
-                                                 line-height:25px;">
-                                        {linkResource}
-                                    </div>
-                                </div>                                    
+                                <div style="font-size:14px;
+                                             color:#337ab7;
+                                             line-height:25px;">
+                                    {linkResource}
+                                </div>
                             </div>
                             <hr style="margin-top: 0.5em;
                                     margin-bottom: 0.5em;
                                     margin-left: auto;
-                                    margin-right: auto;                                                           
+                                    margin-right: auto; 
                                     color: #999999">
                             <div class="col-sm-12 col-sx-12 col-md-8 col-lg-8" 
                                  style="padding-left: 0px; margin-top: 10px">
-                                <span class="fb-like"                                     
+                                <span class="fb-like"
                                       data-href="{linkSf}{news_key}.htm"
                                       data-layout="button_count" 
                                       data-action="like" 
@@ -382,10 +386,12 @@
                                 </span>   
                                 <span class="g-plusone" data-size="medium" ></span>
                                 <span>
-                                    <a href="{linkSf}{news_key}.htm" class="twitter-share-button">Tweet</a>               
+                                    <a href="{linkSf}{news_key}.htm" class="twitter-share-button">Tweet</a>
                                 </span>
                             </div>
-                            <div class="col-sm-12 col-sx-12 col-md-4 col-lg-4" style="padding-right: 0px">
+                            <div class="hidden-xs hidden-sm col-md-4" 
+                                style="padding-right:0px;
+                                        text-align: right">
                                 <div style="margin-bottom: 10px; margin-top: 10px">
                                     <span id = "sharefacebook_icon" 
                                           style = "margin-right:5px">
@@ -397,18 +403,18 @@
                                                 title="Chia sẻ Facebook"
                                                 width="40px"/>
                                         </a>
-                                    </span>                                                                           
+                                    </span>
                                     <span id = "sharefacebook_icon" 
                                           style = "margin-right:5px">
                                         <a  href="https://plus.google.com/share?url={linkSf}{news_key}.htm"
                                             onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');;return false;"
                                             ref="nofollow">
                                             <img alt="google+" 
-                                                src="{linkS}layout/images/google-plus-icon.png"                                
+                                                src="{linkS}layout/images/google-plus-icon.png"
                                                 title="Chia sẻ Google+"
                                                 width="40px"/>
                                         </a>
-                                    </span>                                       
+                                    </span>
                                     <span id = "sharefacebook_icon"
                                           style = "margin-right:5px">
                                         <a href="https://twitter.com/intent/tweet?text={news_name_twitter}&url={linkSf}{news_key}.htm&related=episod"
@@ -418,7 +424,7 @@
                                                 title="Chia sẻ Tweet"
                                                 width="40px"/>
                                         </a>
-                                    </span>		                                                                    
+                                    </span>
                                     <span id = "sharefacebook_icon">
                                         <a href="http://www.linkedin.com/shareArticle?mini=true&url={linkSf}{news_key}.htm&title={news_name}&summary={news_shortcontent}&source=nanapet.com" 
                                            onclick="NewWindow(this.href,'template_window','550','400','yes','center');return false" 
@@ -432,32 +438,32 @@
                                         </a>
                                     </span>   
                                 </div>
-                            </div>                                                            
+                            </div>
                         </div>
-                    </div>    
-                </div>
-                <hr style="margin-top: 10px;
-                           margin-bottom: 5px;
-                           margin-left: auto;
-                           margin-right: auto;                                                           
-                           color: #999999">
-                <div id = "stretch">                    
-                    <div class="relation_product" {display_realtion_product}>
+                    </div>
+                </div>  
+                <div id = "stretch">
+                    <div class="relation_product hidden-xs hidden-sm" {display_realtion_product}>
                         <hr style="margin-top: 10px;
                                    margin-bottom: 5px;
                                    margin-left: auto;
-                                   margin-right: auto;                                                           
+                                   margin-right: auto;
                                    color: #999999;
                                    clear: both">
-                        <div style="background-color: #f1fdfb; padding-top: 10px; padding-bottom: 10px; clear:both">
+                        <div style="background-color: #f1fdfb; 
+                                padding-top: 10px; 
+                                padding-bottom: 10px; 
+                                clear:both">
                             <span style="color: #48817a;
-                                         font-size: 14px;
-                                         font-family: RobotoSlabRegular;
-                                         margin-left: 10px;">
+                                    font-size: 14px;
+                                    font-family: RobotoSlabRegular;
+                                    margin-left: 10px;">
                                 SẢN PHẨN LIÊN QUAN
                             </span>
                         </div>  
-                        <div style="padding-top: 30px ; padding-bottom: 40px">
+                        <div class="hidden-xs hidden-sm" 
+                            style="padding-top: 30px; 
+                                    padding-bottom: 40px">
                             <table>
                                 <tr>
                                     {relation_product}
@@ -467,26 +473,23 @@
                                 </tr>
                             </table>
                         </div>
-                    </div>
-                                
+                    </div>                            
                     <div class="relation_chuyen_muc row">
                         <div class="col-lg-6 col-md-6">
                             <hr style="margin-top: 10px;
                                        margin-bottom: 5px;
                                        margin-left: auto;
                                        margin-right: auto;
-                                       color: #999999">                    
-                            <div style="background-color: #f1fdfb; 
+                                       color: #999999">
+                            <div style="background-color: #f1fdfb;
                                         padding-top: 10px; 
                                         padding-bottom: 10px;
-                                        margin-bottom: 15px">
-                                <span style="color: #48817a;
-                                            font-size: 14px;
-                                            font-family: RobotoSlabRegular;
-                                            margin-left: 10px;">
-                                    BÀI CÙNG CHUYÊN MỤC
-                                </span>                     
-                            </div>
+                                        margin-bottom: 15px;
+                                        color: #48817a;
+                                        font-size: 14px;
+                                        font-family: RobotoSlabRegular;
+                                        clear:both;
+                                        padding-left: 10px">BÀI CÙNG CHUYÊN MỤC</div>
                             <div>
                                 <ul style = "padding-left: 0px; clear:both">
                                     <!--BEGINLIST_NEWSCHUYENMUC-->
@@ -505,14 +508,14 @@
                                     <!--END_NEWSCHUYENMUC-->
                                     <!--ENDLIST_NEWSCHUYENMUC-->
                                 </ul>
-                            </div>                            
+                            </div>
                         </div>
                         <div class="col-lg-6 col-md-6">
                             <hr style="margin-top: 10px;
                                        margin-bottom: 5px;
                                        margin-left: auto;
                                        margin-right: auto;
-                                       color: #999999">                    
+                                       color: #999999">
                             <div style="background-color: #f1fdfb; 
                                         padding-top: 10px; 
                                         padding-bottom: 10px;
@@ -520,9 +523,7 @@
                                 <span style="color: #48817a;
                                             font-size: 14px;
                                             font-family: RobotoSlabRegular;
-                                            margin-left: 10px;">
-                                    BÀI MỚI ĐĂNG
-                                </span>                     
+                                            margin-left: 10px;">BÀI MỚI ĐĂNG</span>
                             </div>
                             <div>
                                 <ul style = "padding-left: 0px; clear:both">
@@ -535,39 +536,37 @@
                                                  font-family: RobotoSlabLight;
                                                  color: black;
                                                  text-transform: initial;
-                                                 color: #337ab7">
-                                            {news_name}
-                                        </a>   
+                                                 color: #337ab7">{news_name}</a>
                                     </li>
                                     <!--END_LASTETSNEWS-->
                                     <!--ENDLIST_LASTETSNEWS-->
                                 </ul>
-                            </div>                            
+                            </div> 
                         </div>
                     </div>
-                    <hr style="margin-top: 10px;
-                               margin-bottom: 5px;
-                               margin-left: auto;
-                               margin-right: auto;                                                           
-                               color: #999999;">
-                    <div style="background-color: #f1fdfb; padding-top: 10px; padding-bottom: 10px">
-                        <span style="color: #48817a;
-                                     font-size: 14px;
-                                     font-family: RobotoSlabRegular;
-                                     margin-left: 10px;">
-                            THẢO LUẬN BÀI VIẾT
-                        </span>
-                    </div>
-                    <div class="fb-comments"                       
-                        data-href="{linkSf}{news_key}.htm"
-                        data-numposts="5"
-                        data-width ="810">
+                    <div class="hidden-xs hidden-sm hidden-md">
+                        <hr style="margin-top: 10px;
+                                   margin-bottom: 5px;
+                                   margin-left: auto;
+                                   margin-right: auto;
+                                   color: #999999;">
+                        <div style="background-color: #f1fdfb; padding-top: 10px; padding-bottom: 10px">
+                            <span style="color: #48817a;
+                                         font-size: 14px;
+                                         font-family: RobotoSlabRegular;
+                                         margin-left: 10px;">THẢO LUẬN BÀI VIẾT</span>
+                        </div>
+                        <div class="fb-comments"
+                            data-href="{linkSf}{news_key}.htm"
+                            data-numposts="5"
+                            data-width ="810">
+                        </div>
                     </div>
                 </div>
             </div><!-- end product_main -->
             <!--End main content page-->
         </div>
-        <div class = "hidden-xs hidden-sm col-md-3">
+        <div class="hidden-xs hidden-sm hidden-md col-lg-3">
             <div>
                 <img alt="đọc nhiều nhất" 
                     src="{linkS}layout/bootstrap/images/doc_nhieu_nhat.png"
@@ -615,11 +614,10 @@
                        clear: both; 
                        width: 100%; 
                        margin-top: 30px;
-                       margin-bottom: 20px;"/>
-            {category}
+                       margin-bottom: 20px;"/>{category}
             <div id="banner_left" style="margin-left: 15px; margin-top: 15px">
                 <div id="sliderBannerLeft">
-                    <div id="SliderNameBannerLeft" class="SliderNameBannerLeft">                                                      
+                    <div id="SliderNameBannerLeft" class="SliderNameBannerLeft">
                         {left_banner_1}
                     </div>
                     <script type="text/javascript">
@@ -638,35 +636,11 @@
                                 }
                         });
                     </script>
-                </div>                                     
+                </div> 
             </div>
-            <!--<div id="banner_left_2" style="margin-left: 15px; margin-top: 15px">
-                <div id="sliderBannerLeft_2">
-                    <div id="SliderNameBannerLeft_2" class="SliderNameBannerLeft_2">                                                         
-                        {left_banner_2}
-                    </div>
-                    <script type="text/javascript">
-                        effectsDemo2_2 = 'fades,traight,swirl,snake';
-                        var demoSlider_2_2 = Sliderman2.slider({container: 'SliderNameBannerLeft_2', 
-                                                                width: 235, 
-                                                                height: 500, 
-                                                                effects: effectsDemo2_2,
-                        display:{
-                                autoplay: 3500,
-                                loading: {background: '#000000', opacity: 0.5},
-                                buttons: {hide: true, opacity: 1,
-                                prev: {className: 'SliderNamePrevBannerLeft_2', label: ''}, 
-                                next: {className: 'SliderNameNextBannerLeft_2', label: ''}}
-                            }
-                        });
-                    </script>
-                </div>                                                           
-            </div>-->
             <div style="margin-left: 5px;
-                        margin-bottom: 40px;
-                        width: 245px">
-                {left_facebook_page_plugin}
-            </div>
-        </div>                        
-    </div>    
+                    margin-bottom: 40px;
+                    width: 245px">{left_facebook_page_plugin}</div>
+        </div> 
+    </div>
 </div><!-- end blog -->
