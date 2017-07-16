@@ -1,18 +1,13 @@
 <script type="text/javascript">
-    $(document).ready(function () 
-    {
+    $(document).ready(function () {
         // Create jqxRating
-        $("#jqxRating").jqxRating({ width: 100, height: 35, theme: 'classic'});			
-        $('#jqxRating').jqxRating({singleVote:true});											
-        $("#jqxRating").on('change', function (event)
-        {																					
-            var user_name = document.getElementById("user_name").innerHTML;								
-            if(user_name === " ")
-            {																										  						
-                alert( "Bạn phải đăng nhập để đánh giá sản phẩm!");					
-            }				
-            else if(user_name !== " ")
-            {
+        $("#jqxRating").jqxRating({ width: 100, height: 35, theme: 'classic'});
+        $('#jqxRating').jqxRating({singleVote:true});
+        $("#jqxRating").on('change', function (event) {
+            var user_name = document.getElementById("user_name").innerHTML;
+            if(user_name === " "){
+                alert( "Bạn phải đăng nhập để đánh giá sản phẩm!");
+            } else if(user_name !== " ") {
                 rate_count = 0;
                 rate_sum = 0;
                 rate_avg = 0;
@@ -23,76 +18,68 @@
                 rate_sum += parseInt(ketqua);
                 rate_count = parseInt(document.getElementById("rate_count").innerHTML);
                 rate_count++;
-                rate_avg = Math.ceil(rate_sum / rate_count);																
+                rate_avg = Math.ceil(rate_sum / rate_count);
                 var rating = document.getElementById("count_rates");
                 listrate = "";
-                for( i = 0 ; i < rate_avg; i++)
-                {
+                for( i = 0 ; i < rate_avg; i++) {
                     listrate += '<img alt="hình ngôi sao" src = {linkS}layout/images/star.png>';
-                }		
+                }
                 rating.innerHTML = listrate;
                 document.getElementById("rate_count").innerHTML	= rate_count;
-                alert("Bạn đánh giá sản phẩm " + ketqua + " sao!");					
-                addVoteForProduct();										
-            }				
+                alert("Bạn đánh giá sản phẩm " + ketqua + " sao!");
+                addVoteForProduct();
+            }
         });
    });
 </script>
-
 <style>
-    a:hover, a:link{
+    a:hover, a:link {
         text-decoration: none;
     }
-    .showrate{
+    .showrate {
         height: 20px;
         float: left;
     }
-    .list_images{
+    .list_images {
         margin-top:10px;
         margin-left: auto;
         margin-right: auto;
         text-align: center;
         width:220px !important;
     }
-    .cloud-zoom-gallery{
+    .cloud-zoom-gallery {
         width: 60px;
         height: 70px;
         padding : 3px;
     }
-    .share{
+    .share {
         float: left;
         width: 19px;
     }
-</style>
-
-
-<style>
-    a.list_product_name:hover{
+    a.list_product_name:hover {
         text-decoration: none;
     }
-    a.list_product_name:link{
+    a.list_product_name:link {
         text-decoration: none;
     }
-    a.news_name{
+    a.news_name {
         color: #929292;
     }
-    a.news_name:hover{
+    a.news_name:hover {
         text-decoration: none;
         color:#ff767c;
     }
-    a.news_name:link{
+    a.news_name:link {
         text-decoration: none;
     }
-    a.news_name_destail:hover{
+    a.news_name_destail:hover {
         text-decoration: none;
     }
-    .product_detail
-    {
+    .product_detail {
         position:relative;
         overflow:hidden;
     }
-    .product_detail .textbox
-    {
+    .product_detail .textbox {
         width:195px;
         height:215px;
         position:absolute;
@@ -105,18 +92,21 @@
         border-width: 10px;
         border-color: #e0f8ff;
     }
-    .product_detail:hover .textbox
-    {
+    .product_detail:hover .textbox {
         margin-top:0;
     }
-    .textbox
-    {
+    .textbox {
         -webkit-transition: all 0.5s ease;
         transition: all 0.5s ease;
         cursor: pointer;
     }
+    #info_product img {
+        width: 90%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto
+    }
 </style>
-
 <script>
     (function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
@@ -126,29 +116,28 @@
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
 </script>
-
-<div class = "container">
-    <div class="row">                
-        <div class = "col-xs-12 col-sm-12 col-md-12 col-lg-9">
-            <div id = "user_name" style="display:none"> {user_name}</div>
-            <div id = "rate_sum" style="display:none"> {rate_sum}</div>                                  
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-lg-9">
+            <div id="user_name" style="display:none"> {user_name}</div>
+            <div id="rate_sum" style="display:none"> {rate_sum}</div> 
             <div class="hidden-xs hidden-sm hidden-md" 
-                id="breakcrumb" style="font-family:RobotoSlabRegular;
-                                    font-size:14px;
-                                    margin-top: 5%;
-                                    line-height: 30px;
-                                    padding-bottom: 10px">
-                {breadcrumbs_path}
+                id="breakcrumb" 
+                style="font-family:RobotoSlabRegular;
+                    font-size:14px;
+                    margin-top: 5%;
+                    line-height: 30px;
+                    padding-bottom: 10px">{breadcrumbs_path}
             </div>
-            <div class="hidden-lg" 
-                id="breakcrumb" style="font-family:RobotoSlabRegular;
-                                    font-size:14px;
-                                    line-height: 30px">
-                {breadcrumbs_path_mobile}
+            <div class="hidden-lg"
+                id="breakcrumb" 
+                style="font-family:RobotoSlabRegular;
+                    font-size:14px;
+                    line-height: 30px">{breadcrumbs_path_mobile}
             </div>
             <div class="col1_content">
-                <div class = "col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <div id="detail1">                        
+                <div class="col-xs-12">
+                    <div id="detail1">
                         <div style="text-align:center;
                                     padding-bottom:10px;
                                     margin-top:-10px">
@@ -159,11 +148,12 @@
                             </span>
                         </div> 
                     </div>
-                </div>                                        
-                <div class = "col-sm-12 col-sx-12 col-md-12 col-lg-12" 
+                </div>
+                <div class="col-sx-12" 
                      style="padding:0px">
-                    <form name='cart' action="{linkS}gio-hang/{product_key}/add" method="post">                        
-                        <div style="font-family:RobotoSlabRegular;">                            
+                    <form name='cart' 
+                        action="{linkS}gio-hang/{product_key}/add" method="post">
+                        <div style="font-family:RobotoSlabRegular;">
                             <div class="col-lg-6" 
                                 style="padding: 0px;">
                                 <img class="img-responsive center-block" 
@@ -191,7 +181,6 @@
                                     </div>
                                 </div>
                             </div>
-                            
                             <div class="col-md-12 col-lg-6"
                                  style="float:left;
                                         font-size: 14px;
@@ -217,13 +206,13 @@
                                            target="_blank" 
                                            style ="outline:none; color:black;">{xuatxu}</a>
                                     </div>
-                                    {khuyenmai}                                                                                                           
+                                    {khuyenmai}
                                 </div>
                                     
                                 <hr style = "margin-top: 10px;
-                                    margin-bottom: 14px;
-                                    border-width:1px;                                                
-                                    border-color:#cccccc; width:100%; float:left">    
+                                        margin-bottom: 14px;
+                                        border-width:1px;
+                                        border-color:#cccccc; width:100%; float:left">
                                 <div style=" clear:both" {hidden}>
                                     <div style="clear:both; padding-left: 0px">
                                         <span style="font-size: 14px; 
@@ -253,17 +242,18 @@
                                         <div class="col-xs-9">
                                             <input type="submit"
                                                 class="addcart"
-                                                name="addcart"                                                   
+                                                name="addcart"
                                                 value=""
                                                 style="outline:none;
                                                        height:40px;">
-                                        
                                         </div>
                                     </div>
-                                    <hr style = "margin-top: 10px;
+                                    <hr style="margin-top: 10px;
                                                 margin-bottom: 14px;
-                                                border-width:1px;                                                
-                                                border-color:#cccccc; width:100%; float:left">
+                                                border-width:1px;
+                                                border-color:#cccccc; 
+                                                width:100%; 
+                                                float:left">
                                 </div>
                                 <div style="float:left;
                                         line-height: 25px;
@@ -274,19 +264,21 @@
                                 <a href="{linkS}tro-giup/doi-tra-san-pham.html" target="_blank">chi tiết</a> <br>
                                 Nhận giao hàng và COD toàn quốc - 
                                 <a href="{linkS}tro-giup/dich-vu-van-chuyen.html" target="_blank">chi tiết</a> <br>
-                                Khách hàng có thể đến mua trực tiếp tại Văn Phòng Kho, 21/11 Tự Lập P.4 Q. Tân Bình, TP HCM <br>                                
+                                Khách hàng có thể đến mua trực tiếp tại Văn Phòng Kho, 21/11 Tự Lập P.4 Q. Tân Bình, TP HCM <br>
                                 </div>
                             </div>
-                        </div><!-- end detail2 -->
-                    </form>                                                 
+                        </div>
+                    </form>
                 </div>
                 <div class="row">
                     <div class="col-xs-12">
                         <!--Thong tin san pham
                         <hr  style = "margin-top: 30px;
                                     margin-bottom: 0px;
-                                    border-width:1px;                                                
-                                    border-color:#cccccc; width:100%; float:left"/>    
+                                    border-width:1px;
+                                    border-color:#cccccc; 
+                                    width:100%; 
+                                    float:left"/>    
                         <div style = "line-height: 25px; 
                                     width: 100%; 
                                     float: left;
@@ -297,7 +289,8 @@
                             <ul style="padding-left: 0px; clear: both">
                                 <li>
                                     <span style="color: #101010;">
-                                        <h2 style="font-size: 14px; font-family: RobotoSlabBold">
+                                        <h2 style="font-size: 14px; 
+                                                font-family: RobotoSlabBold">
                                             CHI TIẾT SẢN PHẤM</h2>
                                     </span>
                                 </li>
@@ -340,19 +333,17 @@
                                 </li>
                             </ul>
                         </div>-->
-                                                
                         <!--Begin product relationship -->
                         <hr  style="margin-top: 30px;
                                     margin-bottom: 30px;
-                                    border-width:1px;                                                
+                                    border-width:1px;
                                     border-color:#cccccc; width:100%; float:left"/>    
                         <div style=" font-size:14px;
                                     font-family: RobotoSlabBold;
                                     margin-left: 2px;
                                     margin-bottom: 30px">
                                 SẢN PHẨM THƯỜNG ĐƯỢC MUA CÙNG
-                        </div>
-                        
+                        </div> 
                         <div class="row hidden-md hidden-xs hidden-sm">
                             <!--BEGINLIST_PRODUCTS_SUPPORT-->
                             <!--BEGIN_PRODUCTS_SUPPORT-->
@@ -463,31 +454,31 @@
                             <!--ENDLIST_TABLET_PRODUCTS_SUPPORT-->
                         </div>
                         <!--End prouducts relationship-->
-
                         <div id="tab_container" style="margin-right:5px">
                             <hr  style="margin-top: 20px;
                                     margin-bottom: 30px;
-                                    border-width:1px;                                                
-                                    border-color:#cccccc; width:100%; float:left"/>
+                                    border-width:1px;
+                                    border-color:#cccccc; 
+                                    width:100%; 
+                                    float:left"/>
                             <div>                     
-                                <a name ="section1"></a>
-                                <div id = "info_product">
+                                <a name="section1"></a>
+                                <div id="info_product">
                                     <div align="justify" 
-                                        style=" margin-bottom:10px;                                                      
+                                        style=" margin-bottom:10px;
                                                 font-size:14px;
                                                 font-family: RobotoSlabBold;
                                                 margin-left: 2px;">
                                         THÔNG TIN SẢN PHẨM
                                     </div>
                                     <div align="justify" 
-                                        style=" margin-bottom:10px;                                                      
+                                        style=" margin-bottom:10px;
                                                 font-size:14px;
                                                 display:{display_product_detail};
                                                 font-family: RobotoSlabRegular;
                                                 margin-left: 2px;">
                                         Giới thiệu
                                     </div>
-
                                     <div style="margin-bottom:10px; 
                                                 margin-left: 2px;
                                                 font-family: RobotoSlabLight;
@@ -495,16 +486,14 @@
                                                 line-height: 25px">
                                         {product_detail}
                                     </div>
-
                                     <div align="justify" 
-                                         style=" margin-bottom:10px;                                                      
+                                         style=" margin-bottom:10px;
                                                  font-size:14px;
-                                                 display:{display_product_detail_tacdung};                                                     
+                                                 display:{display_product_detail_tacdung};
                                                  font-family:RobotoSlabRegular;
                                                  margin-left:2px">
                                         Tác Dụng
-                                    </div>                                    
-
+                                    </div>
                                     <div style="margin-bottom:10px;
                                                 margin-left: 2px;
                                                 font-family: RobotoSlabLight;
@@ -512,33 +501,29 @@
                                                 line-height: 25px">
                                         {product_detail_tacdung}
                                     </div>
-
                                     <div align="justify" 
-                                         style=" margin-bottom:10px;                                                      
+                                         style=" margin-bottom:10px;
                                                 font-size:14px;
-                                                display:{display_product_detail_phuhopcho};                                                     
+                                                display:{display_product_detail_phuhopcho};
                                                 font-family: RobotoSlabRegular;
                                                 margin-left: 2px">
                                         Phù Hợp Cho
-                                    </div>    
-
+                                    </div>
                                     <div style="margin-bottom:10px;
                                                 margin-left: 2px;
                                                 font-family: RobotoSlabLight;
                                                 font-size: 14px;
                                                 line-height: 25px">
-                                        {product_detail_phuhopcho}     
+                                        {product_detail_phuhopcho}
                                     </div>   
-
                                     <div align="justify" 
-                                         style=" margin-bottom:10px;                                                      
+                                         style=" margin-bottom:10px;
                                                 font-size:14px;
-                                                display:{display_product_detail_nguyenlieu_thanhphan};                                                     
+                                                display:{display_product_detail_nguyenlieu_thanhphan};
                                                 font-family: RobotoSlabRegular;
                                                 margin-left: 2px">
                                         Nguyên Liệu / Thành Phần
-                                    </div>   
-
+                                    </div>
                                     <div style="margin-bottom:10px; 
                                                 margin-left: 2px;
                                                 font-family: RobotoSlabLight;
@@ -546,33 +531,29 @@
                                                 line-height: 25px">
                                         {product_detail_nguyenlieu_thanhphan}
                                     </div>   
-
                                     <div align="justify"
-                                         style=" margin-bottom:10px;                                                      
+                                         style=" margin-bottom:10px;
                                                 font-size:14px;
-                                                display:{display_product_detail_phantichdambao};                                                     
+                                                display:{display_product_detail_phantichdambao};
                                                 font-family: RobotoSlabRegular;
                                                 margin-left: 2px">
                                         Phân Tích Đảm Bảo
                                     </div>
-
                                     <div style="margin-bottom:10px;
                                                 margin-left: 2px;
                                                 font-family: RobotoSlabLight;
                                                 font-size: 14px;
                                                 line-height: 25px">
                                         {product_detail_phantichdambao}
-                                    </div>   
-
+                                    </div>
                                     <div align="justify" 
-                                         style="margin-bottom:10px;                                                     
+                                         style="margin-bottom:10px;
                                                 font-size:14px;
                                                 display:{display_product_detail_huongdansudung};
                                                 font-family: RobotoSlabRegular;
                                                 margin-left: 2px">
                                         Hướng Dẫn Sử Dụng
                                     </div>  
-
                                     <div style="margin-bottom:10px;
                                                 margin-left: 2px;
                                                 font-family: RobotoSlabLight;
@@ -580,15 +561,14 @@
                                                 line-height: 25px">
                                         {product_detail_huongdansudung}
                                     </div>
-
                                     <div align="justify" 
-                                          style="margin-bottom:10px;                                                      
+                                          style="margin-bottom:10px;
                                                 font-size:14px;
-                                                display:{display_product_detail_huongdanbaoquan};                                                     
+                                                display:{display_product_detail_huongdanbaoquan};
                                                 font-family: RobotoSlabRegular;
                                                 margin-left: 2px">
                                         Hướng Dẫn Bảo Quản
-                                    </div>    
+                                    </div> 
                                     <div style="margin-bottom:10px;
                                                 margin-left:2px;
                                                 font-family: RobotoSlabLight;
@@ -596,33 +576,29 @@
                                                 line-height: 25px">
                                         {product_detail_huongdanbaoquan}
                                     </div>
-
                                     <div align="justify" 
-                                          style="margin-bottom:10px;                                                      
+                                          style="margin-bottom:10px;
                                                 font-size:14px;
-                                                display:{display_product_detail_luuy};                                                     
+                                                display:{display_product_detail_luuy};
                                                 font-family: RobotoSlabRegular;
                                                 margin-left: 2px">
                                         Lưu Ý
                                     </div> 
-
                                     <div style="margin-bottom:10px; 
                                                 margin-left: 2px;
                                                 font-family: RobotoSlabLight;
                                                 font-size: 14px;
                                                 line-height: 25px">
                                         {product_detail_luuy}
-                                    </div>   
-
+                                    </div>
                                     <div align="justify" 
-                                          style="margin-bottom:10px;                                                      
+                                          style="margin-bottom:10px;
                                                 font-size:14px;
                                                 display:{display_product_detail_khuyenkhich};
                                                 font-family: RobotoSlabRegular;
                                                 margin-left: 2px">
                                         Khuyến Khích
                                     </div>
-
                                     <div style="margin-bottom:10px; 
                                                 margin-left: 2px;
                                                 font-family: RobotoSlabLight;
@@ -630,33 +606,29 @@
                                                 line-height: 25px">
                                         {product_detail_khuyenkhich}     
                                     </div>   
-
                                     <div align="justify" 
-                                          style="margin-bottom:10px;                                                      
+                                          style="margin-bottom:10px;
                                                 font-size:14px;
                                                 display:{display_product_detail_donggoi_thetich};
                                                 font-family: RobotoSlabRegular;
                                                 margin-left: 2px">
                                         Đóng Gói / Thể Tích
                                     </div>
-
                                     <div style="margin-bottom:10px;
                                                 margin-left: 2px;
                                                 font-family: RobotoSlabLight;
                                                 font-size: 14px;
                                                 line-height: 25px">
                                         {product_detail_donggoi_thetich}
-                                    </div>   
-
+                                    </div>
                                     <div align="justify"
-                                          style="margin-bottom:10px;                                                      
+                                          style="margin-bottom:10px;
                                                 font-size:14px;
                                                 display:{display_product_detail_nhasanxuat};
                                                 font-family:RobotoSlabRegular;
                                                 margin-left:2px">
                                         Nhà Sản Xuất
                                     </div>
-
                                     <div style="margin-bottom:10px;
                                                 margin-left: 2px;
                                                 font-family: RobotoSlabLight;
@@ -664,16 +636,14 @@
                                                 line-height: 25px">
                                         {product_detail_nhasanxuat}
                                     </div>
-
                                     <div align="justify"
-                                        style="margin-bottom:10px;                                                      
+                                        style="margin-bottom:10px;
                                               font-size:14px;
                                               display:{display_brand_short_description};
                                               font-family:RobotoSlabRegular;
                                               margin-left:2px">
                                         Thương hiệu
                                     </div>
-
                                     <div style="margin-bottom:10px;
                                                 margin-left: 2px;
                                                 font-family: RobotoSlabLight;
@@ -683,29 +653,27 @@
                                         {brand_short_description}
                                         <a href="{linknsx}" style="clear:both">Xem thêm >></a>
                                     </div>
-
                                     <div align="justify" 
-                                          style="margin-bottom:10px;                                                      
+                                          style="margin-bottom:10px;
                                                  font-size:14px;
-                                                 display:{display_product_detail_xuatxu};                                                     
+                                                 display:{display_product_detail_xuatxu};
                                                  font-family: RobotoSlabRegular;
                                                  margin-left: 2px">
                                         Xuất Xứ
                                     </div>
-
                                     <div style="margin-bottom:10px;
                                                 margin-left: 2px;
                                                 font-family: RobotoSlabLight;
                                                 font-size: 14px;
                                                 line-height: 25px">
-                                        {product_detail_xuatxu}    
-                                    </div>                 
-                                    <a name = "section2" > </a>
-                                    <a name = "section3" > </a>
+                                        {product_detail_xuatxu}   
+                                    </div>
+                                    <a name="section2"> </a>
+                                    <a name="section3"> </a>
                                     <hr style="margin-top: 20px;
                                         margin-bottom: 5px;
                                         margin-left: auto;
-                                        margin-right: auto;                                                           
+                                        margin-right: auto;
                                         color: #999999">
                                     <div style="text-align: left;
                                                 margin-top: 30px;
@@ -714,16 +682,14 @@
                                                      font-family: RobotoSlabBold;">
                                             BÌNH LUẬN SẢN PHẨM
                                         </span>
-                                    </div>                        
+                                    </div>
                                     {form_comment}
-                                </div>                                         
-                            </div><!-- end tab_container -->
-                        </div><!-- end detail3 -->
-                        
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div><!-- end product -->
-            
+            </div>            
             <div style="display: none;">
                 <div id="product_name_hidden">{product_name}</div>
                 <div id="product_quantity_hidden">{product_quantity}</div>
@@ -741,7 +707,7 @@
                            margin-top: 45px;
                            padding-left: 8px"/>
             </a>
-        </div>                                        
+        </div>
     </div>
 </div>   
 
@@ -777,8 +743,7 @@
                                     style = "cursor: pointer; 
                                              margin-bottom: 5px">
                             </div>
-                        </div><!-- End product_name_col -->
-
+                        </div>
                         <div class="product_tit">
                             <div style="font-size: 14px;
                                         color: #929292;
@@ -793,7 +758,7 @@
                                       font-size: 14px;">
                             {product_price} VNĐ
                         </div>
-                    </div><!-- end product_detail -->
+                    </div>
                 </a>
             </li>
             <!--END_PRODUCTS-->
@@ -846,7 +811,7 @@
                 <a  class="list_product_name"
                     href="{linkS}{category}/{product_key}.htm"
                     style="outline:none;">
-                    <img class="img-responsive center-block"  
+                    <img class="img-responsive center-block"
                         alt="{product_name}"
                         src="{linkS}upload/product/{product_img}"
                         style="cursor: pointer"/>
@@ -881,14 +846,14 @@
     <hr style="margin-top: 10px;
                margin-bottom: 5px;
                margin-left: auto;
-               margin-right: auto;                                                           
+               margin-right: auto;
                color: #999999">
     <div style="background-color: #f1fdfb; padding-top: 10px; padding-bottom: 10px">
         <span style="color: #48817a;
                     font-size: 14px;
                     font-family: RobotoSlabRegular;
                     margin-left: 10px;">BÀI VIẾT LIÊN QUAN
-        </span>                      
+        </span>
     </div>   
     <table style="margin-top: 20px">
         <tr>
@@ -902,14 +867,13 @@
 <link rel="stylesheet" href="{linkS}plugins/jrating_v2.1/jquery/jRating.jquery.css" type="text/css" />
 <script type="text/javascript" src="{linkS}plugins/jrating_v2.1/jquery/jRating.jquery.js"></script>
 <script type="text/javascript">
-    $(document).ready(function(){			
+    $(document).ready(function(){
         $('.rating').jRating({
             step:false,
             length:5,
             decimalLength:1,
             rateMax:5,
-            onSuccess : function()
-            {
+            onSuccess : function() {
                 var mail = $("#email_hidden").text();
                 if(mail !== "")
                     alert('Bạn đánh giá cho sản phầm '+ rateProduct + ' sao.');
@@ -922,26 +886,20 @@
             }
         });
     });
-</script>		
-	
+</script>
 <script type="text/javascript">  
-    function addToMyFavorite()
-    {
-        if ($("#type").index() !== -1) 
-        {
-                var product_type = $("input[name='type']:checked").val();
-                var subvalues = product_type.split('::');
-                product_type =subvalues[0];
-        }
-        else
-        {
+    function addToMyFavorite() {
+        if ($("#type").index() !== -1) {
+            var product_type = $("input[name='type']:checked").val();
+            var subvalues = product_type.split('::');
+            product_type =subvalues[0];
+        } else {
                 var product_type = '';
         }
         var product_color = $("input[name='color']:checked").val();
         var product_price = $('.show_price').text();
         var product_quantity =  $('#quantity').val();
-        $.ajax
-        ({
+        $.ajax ({
             type: "POST",
             url: "{linkS}home/modules/ajax/addMyFavorite.php",
             data: {
@@ -953,17 +911,14 @@
                 "product_price" : product_price,
                 "product_quantity" : product_quantity,
             },
-            success: function(msg)
-            {
+            success: function(msg) {
                 alert(msg);
             }
         });
     }
-    function addVoteForProduct()
-    {		    
+    function addVoteForProduct() {
         var value = $('#jqxRating').jqxRating('value');
-        $.ajax
-        ({
+        $.ajax ({
             type: "POST",
             url: "{linkS}home/modules/ajax/VoteForCustomer.php",
             data: {
@@ -971,8 +926,7 @@
                 "rate" : value,
                 "user_name" : "{user_name}"
             },
-            success: function(msg)
-            {
+            success: function(msg) {
                 alert(msg);
             }			
         });
