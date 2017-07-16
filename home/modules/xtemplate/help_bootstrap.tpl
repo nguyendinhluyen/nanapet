@@ -1,7 +1,15 @@
+<style>
+    .noidung_help img {
+        display: block;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto
+    }
+</style>
 <div class ="container">
     <div class ="row">
         <div class="col-xs-12 col-md-3"
-             style="padding-left: 20px"> 
+             style="padding-left: 20px">
             <img class="hidden-xs hidden-sm" 
                 alt="Hỗ trợ" 
                 src="{linkS}layout/bootstrap/images/ho_tro.png"
