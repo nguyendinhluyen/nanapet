@@ -33,13 +33,15 @@ if ($sum_product == 1) {
     header('Location: ' . $linkS . $category_key . "/" . $products[0]['products_key'] . ".htm");
     exit;
 }
-
 $tpl = '';
-$tpl_temp = '<ul class="col-xs-12" style="padding: 0px">';
+$tpl_mobile = '';
+$tpl_tablet = '';
+$tpl_temp = '<ul class="col-sm-12 hidden-xs" style="padding: 0px">';
+$tpl_temp_mobile = '<ul class="col-xs-12 hidden-sm hidden-md hidden-lg" style="padding: 0px">';
+$tpl_temp_tablet = '<ul class="col-xs-12 hidden-xs hidden-lg" style="padding: 0px">';
 // Load searching layout
 $template = $xtemplate->load('search_bootstrap');
 $block = $xtemplate->get_block_from_str($template, 'PRODUCT');
-
 // Discount VIP
 $disCountVIPCustomer = 0;
 if (!empty($_SESSION['username'])) {
@@ -59,7 +61,9 @@ for ($i = 0; $i < $sum_product; ++$i) {
     } else {
         $pro_price = "";
     }
-    if (!empty($products[$i]['product_encourage']) && intval($products[$i]['product_encourage']) > 0 && $products[$i]['p_type'] == '') {
+    if (!empty($products[$i]['product_encourage']) 
+            && intval($products[$i]['product_encourage']) > 0 
+            && $products[$i]['p_type'] == '') {
         if ($disCountVIPCustomer != 0) {
             // Initialize values
             $encourage_price = 0;
@@ -83,24 +87,47 @@ for ($i = 0; $i < $sum_product; ++$i) {
         $pro_price = "";
     }
     $category_key = $Category->getCategoryKeyByProductKey($products[$i]['products_key']);
-    $tpl_temp .= $xtemplate->assign_vars($block, array(
+    $tpl_temp .= '<li class="hidden-xs hidden-sm hidden-md col-lg-2">';
+    $tpl_temp_mobile .= '<li class="col-xs-6 hidden-sm hidden-md hidden-lg">';
+    $tpl_temp_tablet .= '<li class="col-sm-3 hidden-xs hidden-lg">';
+    $var_tpl_temp = $xtemplate->assign_vars($block, array(
         'product_img' => $products[$i]['products_image'],
         'product_name' => $products[$i]['products_name'],
         'product_key' => $products[$i]['products_key'],
         'product_price' => $pro_price,
         'category' => $category_key,
         'encourage_price' => $encourage_price
-    ));
-
-    if ($flag % 6 == 0 || $i > $sum_product - 2) {
-        $tpl_temp .= ' </ul>';
-        $line = '<div class="line"> </div>';
-        $tpl .= $tpl_temp . $line;
-        $tpl_temp = '<ul class="col-xs-12" style="padding: 0px">';
+    ));    
+    $tpl_temp .= $var_tpl_temp.'</li>';
+    $tpl_temp_mobile .= $var_tpl_temp.'</li>';
+    $tpl_temp_tablet .= $var_tpl_temp.'</li>';
+    // desktop
+    if ($flag % 6 == 0 || $i == $sum_product - 1) {
+        $tpl_temp .= '</ul>';
+        $tpl .= $tpl_temp;
+        $tpl_temp = '<ul class="col-xs-12 hidden-xs hidden-sm hidden-md" style="padding: 0px">';
     }
+    // mobile
+    if ($flag % 2 == 0 || $i == $sum_product - 1) {
+        $tpl_temp_mobile .= '</ul>';
+        $tpl_mobile .= $tpl_temp_mobile;
+        $tpl_temp_mobile = '<ul class="col-xs-12 hidden-sm hidden-md hidden-lg" style="padding: 0px">';
+    }    
+    // tablet
+    if ($flag % 4 == 0 || $i == $sum_product - 1) {
+        $tpl_temp_tablet .= '</ul>';
+        $tpl_tablet .= $tpl_temp_tablet;
+        $tpl_temp_tablet = '<ul class="col-xs-12 hidden-xs hidden-lg" style="padding: 0px">';
+    }   
 }
 $template = $xtemplate->assign_blocks_content($template, array(
     'PRODUCTS' => $tpl
+));
+$template = $xtemplate->assign_blocks_content($template, array(
+    'PRODUCTS_MOBILES' => $tpl_mobile
+));
+$template = $xtemplate->assign_blocks_content($template, array(
+    'PRODUCTS_TABLETS' => $tpl_tablet
 ));
 
 $elements = 'news_id,
@@ -170,7 +197,7 @@ if ($sum_news == 0) {
     $sum_news = count($listnews);
 }
 $tpl = '';
-$tpl_temp = '<ul style="padding-left:0px; padding-bottom:20px">';
+$tpl_temp = '<ul style="padding-left:0px;">';
 $block = $xtemplate->get_block_from_str($template, 'NEWS');
 for ($i = 0; $i < $sum_news; ++$i) {
     if ($listnews[$i]['help_flag'] == 1) {
@@ -189,7 +216,7 @@ for ($i = 0; $i < $sum_news; ++$i) {
     $tpl_temp .= ' </ul>';
     $line = '<div class="line"> </div>';
     $tpl .= $tpl_temp . $line;
-    $tpl_temp = '<ul style="padding-left:0px; padding-bottom:20px">';
+    $tpl_temp = '<ul style="padding-left:0px;">';
 }
 $template = $xtemplate->assign_blocks_content($template, array(
     'NEWS' => $tpl
