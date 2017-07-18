@@ -32,6 +32,8 @@
                     style="color: #000" rel='nofollow'>ĐƠN HÀNG CỦA BẠN</a></li>
               <li><a href="{linkS}thu-cung-cua-toi" 
                     style="color: #000" rel='nofollow'>THÚ CƯNG CỦA BẠN</a></li>
+              <li><a href="{linkS}doi-mat-khau"
+                    style="color: #000" rel='nofollow'>ĐỔI MẬT KHẨU</a></li>                        
               <li><a href="{linkS}logout" 
                     style="" rel='nofollow'>ĐĂNG XUẤT</a></li>
               <li><hr></li>

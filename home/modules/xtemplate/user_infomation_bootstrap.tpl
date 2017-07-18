@@ -26,20 +26,22 @@
                 </div>
                 <div class="collapse col-xs-12" id="collapsinfo" 
                     style="padding: 0px; line-height: 35px">
-                  <ul style="font-family: RobotoSlabBold;
+                    <ul style="font-family: RobotoSlabBold;
                             padding-left: 0px">
-                    <li><a href="{linkS}thong-tin-tai-khoan" 
-                          style="color: #000" rel='nofollow'>THÔNG TIN CỦA BẠN</a></li>
-                    <li><a href="{linkS}so-dia-chi" 
-                          style="color: #000" rel='nofollow'>SỔ ĐỊA CHỈ</a></li>
-                    <li><a href="{linkS}danh-sach-don-hang" 
-                          style="color: #000" rel='nofollow'>ĐƠN HÀNG CỦA BẠN</a></li>
-                    <li><a href="{linkS}thu-cung-cua-toi" 
-                          style="color: #000" rel='nofollow'>THÚ CƯNG CỦA BẠN</a></li>
-                    <li><a href="{linkS}logout" 
+                        <li><a href="{linkS}thong-tin-tai-khoan" 
+                            style="color: #000" rel='nofollow'>THÔNG TIN CỦA BẠN</a></li>
+                        <li><a href="{linkS}so-dia-chi" 
+                            style="color: #000" rel='nofollow'>SỔ ĐỊA CHỈ</a></li>
+                        <li><a href="{linkS}danh-sach-don-hang" 
+                            style="color: #000" rel='nofollow'>ĐƠN HÀNG CỦA BẠN</a></li>
+                        <li><a href="{linkS}thu-cung-cua-toi" 
+                            style="color: #000" rel='nofollow'>THÚ CƯNG CỦA BẠN</a></li>
+                        <li><a href="{linkS}doi-mat-khau" 
+                            style="color: #000" rel='nofollow'>ĐỔI MẬT KHẨU</a></li>
+                        <li><a href="{linkS}logout" 
                             style="" rel='nofollow'>ĐĂNG XUẤT</a></li>
-                    <li><hr></li>
-                  </ul>
+                        <li><hr></li>
+                    </ul>
                 </div>  
                 <div style="font-family:PoetsenOne;
                       font-size: 20px;

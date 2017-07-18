@@ -1,123 +1,88 @@
 <style>
-    a.product_name:hover, a.product_name:link, a.product_name:visited {
+    a.product_name:hover, 
+    a.product_name:link, 
+    a.product_name:visited {
         text-decoration: none;
         color:#646464;
     }
-    a.list_product_name:hover, a.list_product_name:link, a.list_product_name:visited {
+    a.list_product_name:hover, 
+    a.list_product_name:link, 
+    a.list_product_name:visited {
         text-decoration: none;
     }
-    .product_detail{
-        position:relative;
-        overflow:hidden;
-        height: 270px;
-    }
-    .product_detail .textbox {
-        width:180px;
-        height:205px;
-        position:absolute;
-        top:0;
-        left:0;
-        margin-top:-215px;
-        border-radius:15px;
-        background-color: #66d0f1;
-        border-style:solid;
-        border-width: 10px;
-        border-color: #e0f8ff;
-    }
-    .product_detail:hover .textbox {
-        margin-top:0;
-    }
-    .textbox {
-        -webkit-transition: all 0.5s ease;
-        transition: all 0.5s ease;
-        cursor: pointer;
-    }
 </style>
-<div class="container"
-     style="padding-left: 50px; padding-right: 50px">
-    <div class="row">
-        <div class="col-sx-12 col-sm-12 col-md-12 col-lg-12">
-            <div id="breakcrumb"
-                 style="font-family: RobotoSlabRegular;
-                        margin-top: 40px;
-                        margin-bottom: 30px;
-                        margin-left: 40px">
-               {breadcrumbs_path}
-           </div>
+<div class="container">
+    <div class="row" style="margin:0px">
+        <div class="col-sx-12">
+            <div class="hidden-lg" 
+                id="breakcrumb"
+                style="font-family: RobotoSlabRegular;
+                    margin-top: 10px;
+                    margin-bottom: 10px">{breadcrumbs_path}</div>
+            <div class="hidden-xs hidden-sm hidden-md"
+                id="breakcrumb"
+                style="font-family: RobotoSlabRegular;
+                    margin-top: 20px;
+                    margin-bottom: 20px">{breadcrumbs_path}</div>
         </div>
-        <div class ="col-sx-12 col-sm-12 col-md-12 col-lg-12">
+        
+        <div class ="col-sx-12">
             <div class="product_main">
                 <!--BEGINLIST_PRODUCTS-->
                 <!--BEGIN_PRODUCT-->
-                <li>
-                    <a class = "list_product_name"
-                                   href="{linkS}{category}/{product_key}.htm"
-                                   style = "outline:none;">
-                        <div class="product_detail"
-                              style="width: 205px; 
-                                    margin-left: -3px; 
-                                    margin-bottom: 30px">
-                            <div class="product_col">
-                                <img src="{linkS}upload/product/thumb/{product_img}"
-                                     width="125"
-                                     height="125"
-                                     alt="{product_name}"
-                                     style = "margin-left: 25px;
-                                              cursor: pointer;
-                                              margin-bottom: 10px">
-                                <div class="textbox"  
-                                     style = "padding-top: 60px; padding-left: 25px">
-                                    <img alt="Xem chi tiết" 
-                                        src="{linkS}layout/bootstrap/images/xem_chi_tiet.png"
-                                        width="110px"
-                                        style = "cursor: pointer; 
-                                                 margin-bottom: 5px">
-                                </div>
-                                <div class="product_tit">
-                                    <div style="font-size: 14px;
-                                                color: #929292;
-                                                cursor: pointer;
-                                                font-family: RobotoSlabRegular;
-                                                width: 180px">
-                                            {product_name}
-                                    </div>
-                                </div>
-                                <div class="product_price"
-                                    style=" cursor: pointer;
-                                            font-family:RobotoSlabRegular;
-                                            font-size: 14px;
-                                            margin-top: 5px;
-                                            width: 180px">
-                                   {encourage_price}
-                                </div>
-                                <div class="product_price"
-                                    style=" cursor: pointer;
-                                            font-family:RobotoSlabRegular;
-                                            font-size: 14px;
-                                            margin-top: -15px;
-                                            color:black;
-                                            text-decoration:line-through;
-                                            width: 180px">
-                                   {product_price}
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </li>
+                <a class="list_product_name"
+                   href="{linkS}{category}/{product_key}.htm"
+                   style = "outline:none;">
+                    <div class="product_detail"
+                        style="width: 100%;
+                            height: auto">
+                        <img class="img-responsive center-block" 
+                           src="{linkS}upload/product/thumb/{product_img}" 
+                           width="100%"
+                           alt="{product_name}"
+                           style="cursor: pointer;
+                                margin-bottom: 10px">
+                    </div> 
+                    <div class="product_tit col-xs-12"
+                        style="height: 90px">
+                       <div style="font-size: 14px;
+                            color: #929292;
+                            cursor: pointer;
+                            font-family: RobotoSlabRegular;">{product_name}
+                       </div>
+                    </div>
+                    <div class="product_price col-xs-12" 
+                        style="cursor: pointer;
+                            font-family:RobotoSlabRegular;
+                            font-size: 14px;
+                            padding-top: 0px;
+                            padding-bottom: 0px">{encourage_price}
+                    </div>
+                    <div class="product_price col-xs-12"
+                        style="cursor: pointer;
+                            font-family:RobotoSlabRegular;
+                            font-size: 14px;
+                            color:black;
+                            text-decoration:line-through;
+                            padding-top: 0px;
+                            padding-bottom: 0px">{product_price}
+                    </div>
+                </a>
                 <!--END_PRODUCT-->
                 <!--ENDLIST_PRODUCTS-->
+                <!--BEGINLIST_PRODUCTS_MOBILES-->
+                <!--ENDLIST_PRODUCTS_MOBILES-->
+                <!--BEGINLIST_PRODUCTS_TABLETS-->
+                <!--ENDLIST_PRODUCTS_TABLETS-->
             </div>
             <div class="pagination"
-                 align="center"
-                 style="margin-left: auto;
-                        margin-right: auto;
-                        font-size: 14px;
-                        font-family: RobotoSlabRegular;
-                        display: block;
-                        clear:both;
-                        margin-bottom: 40px">
-                {page}
-            </div>
+                align="center"
+                style="margin-left: auto;
+                    margin-right: auto;
+                    font-size: 14px;
+                    font-family: RobotoSlabRegular;
+                    display: block;
+                    clear:both;">{page}</div>
         </div>
     </div>
 </div>
