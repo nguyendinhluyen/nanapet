@@ -101,7 +101,7 @@
         cursor: pointer;
     }
     #info_product img {
-        width: 90% !important;
+        width: 50% !important;
         display: block;
         margin-left: auto;
         margin-right: auto
