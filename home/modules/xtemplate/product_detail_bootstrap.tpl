@@ -101,10 +101,7 @@
         cursor: pointer;
     }
     #info_product img {
-        width: 50% !important;
-        display: block;
-        margin-left: auto;
-        margin-right: auto
+        width: 80% !important;
     }
 </style>
 <script>
