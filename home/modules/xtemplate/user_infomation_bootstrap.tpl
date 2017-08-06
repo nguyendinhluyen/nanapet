@@ -90,7 +90,12 @@
                                     <img alt="sổ địa chỉ"
                                          src="{linkS}layout/bootstrap/images/thong_tin_tai_khoan_2.png" 
                                          height="20px">
-                                    sô
+                                    <a href="{linkS}so-dia-chi"
+                                       style="font-family: RobotoSlabLight; 
+                                            font-size: 14px; 
+                                            margin-left: 10px;
+                                            line-height: 35px;
+                                            color: #000">Sổ địa chỉ</a>
                               </div>
                               <div class="col-md-12">
                                     <img alt="đơn hàng" 
