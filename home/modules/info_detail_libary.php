@@ -190,7 +190,7 @@
     }
 
     $more = "...";
-    if (empty(trim($info_author['short_content']))) {
+    if (empty($info_author['short_content'])) {
         $more = "";
     }
 
