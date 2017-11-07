@@ -1,10 +1,10 @@
 <?php
     date_default_timezone_set('Asia/Ho_Chi_Minh');
     // localhost
-    /*$dbHost = '127.0.0.1:3306';
-    $dbUsername = 'root';
-    $dbPassword = '';
-    $dbName = 'nanapet_db';*/
+//    $dbHost = '127.0.0.1:3306';
+//    $dbUsername = 'root';
+//    $dbPassword = '';
+//    $dbName = 'nanapet_db';
 
     // nanapet server
     $dbHost = 'localhost';
@@ -28,5 +28,6 @@
     }
     
     //return json data
-    echo json_encode($data,JSON_UNESCAPED_UNICODE);
+    //echo json_encode($data,JSON_UNESCAPED_UNICODE);
+    echo json_encode($data);
 ?>
