@@ -107,7 +107,7 @@
         return $html_category;
     }
 
-function showMobileLayout() {
+    function showMobileLayout() {
         $html_mobile = '<div class = "container hidden-lg hidden-sm hidden-md">
                             <div class="product_main" style="margin-top:-10px">
                                 <!--BEGINLIST_PRODUCTS_MOBILE-->
@@ -186,7 +186,6 @@ function showMobileLayout() {
                                 <!-- END PAGE NAVIGATION -->
                             </div>';
         return $html_pagination;
-                                
     }
 
     $Product = new Product();
@@ -199,7 +198,7 @@ function showMobileLayout() {
     }
     
     // Get category of products
-    $category_key = input($_GET['category_key']);
+    $category_key = !empty($_GET['category_key']) ? input($_GET['category_key']) : '';
     if (isset($_GET['category_sub_key'])) {
         $category_key = input($_GET['category_sub_key']);
     }
@@ -223,7 +222,7 @@ function showMobileLayout() {
     $description = $category_desktop[3];
     $keywords = $category_desktop[4];
     
-    $page_now = intval($_GET['trang']);
+    $page_now = !empty($_GET['trang']) ? intval(input($_GET['trang'])) : '';
     if(empty($title_page)) {
         if (!empty($breadcrumbs[0]['name'])
                 && (!isset($page_now) || $page_now == 1 || $page_now == 0)) {
@@ -410,13 +409,14 @@ function showMobileLayout() {
     }
     
     $nav_page = str_replace("page=", "trang-", pagination($linkS . $linkPage , ceil($numofpages), $page));
-    $category_mobile = $categoryProduct->generateCategory("category_mobile")[0];
+    $arr_category_mobile = $categoryProduct->generateCategory("category_mobile");
+    $category_mobile = $arr_category_mobile[0];
     $content = $xtemplate->replace($content, array(
         'page' => $nav_page,
         'category' => $category,
         'category_mobile' => $category_mobile,
         'list_advs' => $list_advs,
-        'category_name' => $category_name,
+        'category_name' => !empty($category_name) ? $category_name : '',
         'display_seo' => $display_seo,
         'text_seo' => $text_seo // Check category.php for data text seo
     ));
