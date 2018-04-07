@@ -1,37 +1,3 @@
-<script type="text/javascript">
-    $(document).ready(function () {
-        // Create jqxRating
-        $("#jqxRating").jqxRating({ width: 100, height: 35, theme: 'classic'});
-        $('#jqxRating').jqxRating({singleVote:true});
-        $("#jqxRating").on('change', function (event) {
-            var user_name = document.getElementById("user_name").innerHTML;
-            if(user_name === " "){
-                alert( "Bạn phải đăng nhập để đánh giá sản phẩm!");
-            } else if(user_name !== " ") {
-                rate_count = 0;
-                rate_sum = 0;
-                rate_avg = 0;
-                $("#rate").find('span').remove();
-                $("#rate").append('<span>' + event.value + '</span');
-                var ketqua = event.value;
-                rate_sum = parseInt(document.getElementById("rate_sum").innerHTML);
-                rate_sum += parseInt(ketqua);
-                rate_count = parseInt(document.getElementById("rate_count").innerHTML);
-                rate_count++;
-                rate_avg = Math.ceil(rate_sum / rate_count);
-                var rating = document.getElementById("count_rates");
-                listrate = "";
-                for( i = 0 ; i < rate_avg; i++) {
-                    listrate += '<img alt="hình ngôi sao" src = {linkS}layout/images/star.png>';
-                }
-                rating.innerHTML = listrate;
-                document.getElementById("rate_count").innerHTML	= rate_count;
-                alert("Bạn đánh giá sản phẩm " + ketqua + " sao!");
-                addVoteForProduct();
-            }
-        });
-   });
-</script>
 <style>
     a:hover, a:link {
         text-decoration: none;
@@ -104,15 +70,6 @@
         width: 80% !important;
     }
 </style>
-<script>
-    (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-</script>
 <div class="container">
     <div class="row">
         <div class="col-xs-12 col-lg-9">

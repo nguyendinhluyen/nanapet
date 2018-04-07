@@ -429,28 +429,7 @@
                                         . $product_detail['products_name'];
     }
 
-    $facebook_comment = '<table>
-                            <tr>
-                                <td>
-                                    <span style="font-family:RobotoSlabRegular; 
-                                                 font-size: 14px;                                                                                                  
-                                                 float:left;">
-                                        Đánh giá sản phẩm :&nbsp;&nbsp;                                        
-                                    </span>                                    
-                                </td>
-                                <td>
-                                    <div id="jqxRating" style="float:left; padding-top: 5px"/> 
-                                </td>
-                            </tr>
-                        </table>    
-                        <div style="padding-top:5px">                                                                      
-                            <span style="font-family:RobotoSlabRegular;
-                                        font-size:14px;                                                                                                
-                                        width: 100%;">
-                                Hãy cho ý kiến về sản phẩm
-                            </span>	                                    
-                        </div>							                                
-                        <div class="fb-comments"
+    $facebook_comment = '<div class="fb-comments"
                                 data-href="{linkSf}{link_san-pham}"
                                 data-numposts="3"
                                 data-width ="100%"

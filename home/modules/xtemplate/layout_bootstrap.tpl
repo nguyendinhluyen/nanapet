@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=9">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="{linkS}layout/bootstrap/css/style.css"/>
+        <link rel="stylesheet" type="text/css" href="{linkS}layout/bootstrap/css/style.min.css"/>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <title>{title}</title>
         <meta name="description" content="{description}">
@@ -18,8 +18,7 @@
         <link rel="shortcut icon" href="{linkS}layout/images/favicon.png"/>
         <!-- End control message facebook-->        
         <!--Begin Banner-->        
-        <script type="text/javascript" src="{linkS}layout/js/sliderman.js"></script>
-        
+        <script type="text/javascript" src="{linkS}layout/js/sliderman.min.js"></script>        
         <!--End Banner-->
         <!--Begin Logo Slick-->
         <link rel="stylesheet" type="text/css" href="{linkS}layout/bootstrap/css/slick/slick/slick.css"/>
@@ -30,23 +29,13 @@
         <!--Bootstrap-->
         <link href="{linkS}layout/bootstrap/css/bootstrap.min.css" rel="stylesheet">
         <script src="{linkS}layout/bootstrap/js/bootstrap.min.js"></script>
-        <!--End Bootstrap-->
-        <!--Begin Zoom Image-->
-        <link rel="stylesheet" type="text/css" href="{linkS}layout/css/cloud-zoom.css"/>
-        <script type="text/javascript" src="{linkS}layout/js/cloud-zoom.1.0.2.js"></script>
-        <!--End Zoom Image-->
+        <!--End Bootstrap-->        
         <!--Begin Mask Phone-->
-        <script type="text/javascript" src="{linkS}layout/js/jquery.maskedinput.js"></script>                 
+        <script type="text/javascript" src="{linkS}layout/js/jquery.maskedinput.min.js"></script>                 
         <!--End Mask Phone-->
         <!--Begin product navigation-->
         {link_product_navigation}
-        <!--End product navigation-->
-        <!--Begin jqxRating-->   
-        <link rel="stylesheet" href="{linkS}layout/jqwidgets/styles/jqx.base.css" type="text/css"/>
-        <link rel="stylesheet" href="{linkS}layout/jqwidgets/styles/jqx.arctic.css" type="text/css"/>
-        <script type="text/javascript" src="{linkS}layout/jqwidgets/jqxcore.js"></script>
-        <script type="text/javascript" src="{linkS}layout/jqwidgets/jqxrating.js"></script>
-        <!--End jqxRating-->
+        <!--End product navigation-->        
         <script>
               (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
               (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
