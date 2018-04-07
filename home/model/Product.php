@@ -1,5 +1,5 @@
 <?php
-    class Product {			
+    class Product {
         public static function getDiscountOfCustomer($user){
             $honorUser_GroupMember = GetRows('GroupMember','user','email="'.$user.'"');
             if($honorUser_GroupMember[0]['GroupMember'] != 'Chưa là thành viên') {
@@ -18,21 +18,21 @@
             return 0;
         }
 
-        public static function levelOfCustomer($user){		
+        public static function levelOfCustomer($user){
             $GroupMemberUser = GetRows('GroupMember','user','email="'.$user.'"');
             if($GroupMemberUser[0]['GroupMember'] == 'Chưa là thành viên'){
-                $honorUser = GetRows('honors','scores','user = "'.$user.'"');		
+                $honorUser = GetRows('honors','scores','user = "'.$user.'"');
                 return $honorUser[0]['honors'];
             }
             else{
                 return $GroupMemberUser[0]['GroupMember'];
-            }				
+            }
             return 0;
         }
 
         public static function getPriceOfUnit(){
             $products  = GetRows('PriceScore','PriceOfUnit','1=1');
-            return $products;		
+            return $products;
         }
 
         public static function getGalaryTransportFee(){
@@ -42,12 +42,12 @@
                                             galary_end_price,
                                             galary_fee'
                                             ,'img_galary'
-                                            ,'_delete = 0');	
+                                            ,'_delete = 0');
             return $galaryTransportFees;
         }
 
         public static function getProductsByCategoryKey($category_key){
-            if($category_key == 'sale-off'){	
+            if($category_key == 'sale-off'){
                 $products  = GetRows('products_id',
                                     'products',
                                     "products_status = '1' AND product_encourage <> ''");
@@ -58,7 +58,7 @@
                 $list_where = '( ';
                 $category = $Category -> getCategoryByKey($category_key);
 
-                if($category['level'] == 1){										
+                if($category['level'] == 1){
                     $category_list = GetRows('categories_id',
                                             'categories',
                                             'parent_id = '.$category['categories_id'].
@@ -72,17 +72,17 @@
                             $list_where .= ' category_id = ' . $category_list[$i]['categories_id']. " )";
                         }
                     }
-                    $products =  GetRows ('product_id', 
+                    $products =  GetRows ('product_id',
                                           'product_category',
                                         $list_where . " AND status = '1' GROUP BY product_id" );
-                }	
+                }
                 else
                 {
-                    $products =  GetRows ('product_id', 
+                    $products =  GetRows ('product_id',
                                           'product_category',
                                         "status = '1' AND category_id = " .$category['categories_id']. " GROUP BY product_id");
-                }	
-            }	
+                }
+            }
             return $products;
         }
 
@@ -90,7 +90,7 @@
         public static function getProductsByCategoryKeyLimitOrderBy($products_list,
                                                                     $category_key,
                                                                     $limit_start,
-                                                                    $limit_end, 
+                                                                    $limit_end,
                                                                     $order_by_type = 1){
             //$order_by = 'products_date_added';
             //$sort_type = "DESC";
@@ -116,7 +116,7 @@
                 $sort_type = 'DESC';
             }
 
-            if($category_key == 'sale-off'){	
+            if($category_key == 'sale-off'){
                 $products  = GetRows('products_id,
                                     products_key,
                                     products_name,
@@ -140,7 +140,7 @@
                                     ,"products_status = '1'
                                         AND product_encourage <> '' order by ".$order_by." ".$sort_type." limit ".$limit_start.','.$limit_end);
             }
-            else{	
+            else{
                 $Category =  new Category();
                 $products = array();
                 $list_products_id = "( ";
@@ -173,11 +173,11 @@
                                        manufacturer'
                                        ,'products'
                                        , $list_products_id . " AND products_status = '1' ".' ORDER BY '.$order_by." ".$sort_type.' limit '.$limit_start.','.$limit_end);
-            }        
+            }
             return $products;
         }
 
-        public static function getProductsNew(){	
+        public static function getProductsNew(){
             $products  = GetRows('products_id,
                                 products_key,
                                 products_name,
@@ -196,8 +196,8 @@
                                 categories_id,
                                 manufacturer'
                                 ,'products'
-                                ,'products_status = 1  ORDER BY products_date_added DESC');	
-            return $products;	
+                                ,'products_status = 1  ORDER BY products_date_added DESC');
+            return $products;
         }
 
         public static function getProductsNewCount(){
@@ -206,8 +206,8 @@
                                 ,'products_status = 1  ORDER BY products_date_added DESC');
             return $products[0]['total'];
         }
-        
-        public static function getProductsPromotion(){	
+
+        public static function getProductsPromotion(){
             $products = GetRows('products_id,
                                 products_key,
                                 products_name,
@@ -229,7 +229,7 @@
                                 ,"products_status = 1 AND product_encourage <> '' ORDER BY products_date_added DESC");
             return $products;
         }
-        
+
         public static function getProductsLastestByCategory($product_category){
             $products = GetRows('products_id,
                                 products_key,
@@ -253,7 +253,7 @@
             return $products;
         }
 
-        public static function getProductsNewLimit($limit_start,$limit_end){	
+        public static function getProductsNewLimit($limit_start,$limit_end){
             $products = GetRows('products_id,
                                 products_key,
                                 products_name,
@@ -276,7 +276,7 @@
             return $products;
         }
 
-        public static function getProductsPromotionLimit($limit_start,$limit_end){	
+        public static function getProductsPromotionLimit($limit_start,$limit_end){
             $products = GetRows('products_id,
                                 products_key,
                                 products_name,
@@ -296,10 +296,10 @@
                                 manufacturer'
                                 ,'products'
                                 ,"products_status = 1 AND product_encourage <> '' ORDER BY products_date_added DESC limit ".$limit_start.','.$limit_end);
-            return $products;	
+            return $products;
         }
 
-        public static function getProductsBestSellLimit($limit_start,$limit_end){	
+        public static function getProductsBestSellLimit($limit_start,$limit_end){
             $products = GetRows('products_id,
                                 products_key,
                                 products_name,
@@ -319,7 +319,7 @@
                                 manufacturer'
                                 ,'products'
                                 ,'products_status = 1 AND p_bestsell = 1 ORDER BY products_date_added DESC  limit '.$limit_start.','.$limit_end);
-            return $products;	
+            return $products;
         }
 
         public static function getProductsByProductKey($product_key){
@@ -359,15 +359,15 @@
                                 upgrade_categories_id',
                                 'products',"products_status = 1 AND products_key = '".$product_key."'");
             return $product;
-        }	
+        }
 
-        public static function getProductsColor($product_color)	{	
+        public static function getProductsColor($product_color)	{
             $result = array();
             $result = explode('---',$product_color);
             return $result;
         }
 
-        public static function getProductsType($product_type){	
+        public static function getProductsType($product_type){
             $result = array();
             $result = explode('---',$product_type);
             $arrProType = array();
@@ -395,7 +395,7 @@
             $arr['name'] = $cate['categories_name'];
             $arr['key'] = $cate['categories_key'];
             $result[] = $arr;
-            if($cate['parent_id'] > 0){	
+            if($cate['parent_id'] > 0){
                 $cates = GetOneRow('categories_id,
                                     categories_name,
                                     categories_key,
@@ -408,8 +408,8 @@
                 $arr2['key'] = $cates['categories_key'];
                 $result[] = $arr2;
             }
-            return $result;	
-        }		
+            return $result;
+        }
 
         public static function getProductsByKeySearch($key_search){
             $products = GetRows('products_id,
@@ -431,10 +431,10 @@
                                 p_encourage,manufacturer'
                                 ,'products'
                                 ,"products_status = 1 AND products_name like '%".$key_search."%'");
-            return $products;	
+            return $products;
         }
 
-        public static function getProductsByKeySearchLimit($key_search,$limit_start,$limit_end){	
+        public static function getProductsByKeySearchLimit($key_search,$limit_start,$limit_end){
             $products = GetRows('products_id,
                                 products_key,
                                 products_name,
@@ -473,16 +473,16 @@
 
         public function calculationRate($product_id){
             $result = GetRows('rate,count(rate) as total, sum(rate) as sum','rate_product',"product_id = ".$product_id);
-            return $result;	
-        }	
+            return $result;
+        }
 
-        public function calculationAvgRate($product_id){	
+        public function calculationAvgRate($product_id){
             $result = GetRows('rate','rate_product',"product_id = ".$product_id);
             $rate = 0;
             if(!empty($result)){
                 $total = 0;
-                foreach ($result as $val){	
-                    $total += $val['rate'];	
+                foreach ($result as $val){
+                    $total += $val['rate'];
                 }
                 $n = count($result);
                 $rate = $total/$n;
@@ -504,7 +504,7 @@
                                 ,'image_product'
                                 ,'product_id = '.$product_id .' order by id DESC limit 0,4');
             return $products;
-        }	
+        }
 
         public function resetPromotion(){
             global $mysql;
@@ -513,7 +513,7 @@
             if($mysql -> query()){
                 SetConfig('time_encourage','');
             }
-        }		
+        }
 
         public static function getProductsInfoNextByProductKey($product_key , $category_key = ''){
             $Cate = new Category();
@@ -565,8 +565,8 @@
                                 product_color,
                                 product_price,
                                 product_quantity'
-                                ,'tbl_favorite' 
-                                , "email = '".$email."'");	
+                                ,'tbl_favorite'
+                                , "email = '".$email."'");
             return $favorites;
         }
 
@@ -583,7 +583,7 @@
                                     ,"code_coupon='".$code_coupon."' AND status_coupon = '1'");
             return $couponResult;
         }
-        
+
         public static function getProductsLimitOrderById($limit_start,$limit_end, $condition){
             $products = GetRows('products_id,
                                 products_key,
@@ -604,9 +604,9 @@
                                 manufacturer'
                                 ,'products'
                                 ,'products_status=1 '.$condition.' ORDER BY products_id ASC LIMIT '.$limit_start.','.$limit_end);
-            return $products;	
+            return $products;
         }
-        
+
         public static function getLastestProductsOnWeek($date_range){
             $products = GetRows('products_id,
                                 products_key,
@@ -627,9 +627,9 @@
                                 manufacturer'
                                 ,'products'
                                 ,'products_status=1 AND from_unixtime(products_date_added,"%Y-%m-%d") BETWEEN DATE(DATE_SUB(NOW(),INTERVAL '. $date_range .' DAY)) AND DATE(NOW()) ORDER BY products_id DESC');
-            return $products;	
+            return $products;
         }
-        
+
         public static function getProductsInWeek($date_range, $condition){
             $products = GetRows('products_id,
                                 products_key,
@@ -655,7 +655,7 @@
                                 .' ORDER BY products_id DESC');
             return $products;
         }
-        
+
         public static function getPreviousLimitProduct($config_name){
             $config = GetRows('config_name,
                                config_value,
@@ -664,21 +664,21 @@
                                ,'config_name="'.$config_name.'"');
             return $config;
         }
-        
+
         public static function countAllProduct(){
             $products = GetRows('products_id'
                                 ,'products'
                                 ,'products_status = 1');
             return count($products);
         }
-        
+
         public static function countAllWithConditionProduct($condition){
             $products = GetRows('products_id'
                                 ,'products'
                                 ,'products_status = 1 '. $condition);
             return count($products);
         }
-        
+
         public static function updateLimitProduct($limitValue, $config_name){
             global $mysql;
             $sql = "UPDATE config SET config_value ='".$limitValue."'"." , date_added='".date('Y-m-d')."' WHERE config_name='".$config_name."'";
@@ -686,6 +686,30 @@
             if($mysql -> query()){
                 return true;
             }
+        }
+
+        public static function getLatestProducts($condition, $limit) {
+            $products = GetRows('products_id,
+                                products_key,
+                                products_name,
+                                keywords,
+                                description,
+                                products_description,
+                                product_detail,
+                                products_image,
+                                products_price,
+                                product_encourage,
+                                price_unit,
+                                p_attribute,
+                                p_type,
+                                p_unit,
+                                p_color,
+                                categories_id,
+                                manufacturer'
+                                ,'products'
+                                ,'products_status = 1 '. $condition
+                                .' ORDER BY products_id DESC LIMIT '. $limit);
+            return $products;
         }
     }
 ?>
