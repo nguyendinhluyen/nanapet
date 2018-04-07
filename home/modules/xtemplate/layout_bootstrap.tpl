@@ -75,7 +75,7 @@
         }(document, 'script', 'facebook-jssdk'));</script>
         <!--End Facebook Code-->
         <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-        <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+        <script src="//code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
     </head>
     <style>        
         input[type=search], div.button {
@@ -586,7 +586,7 @@
                         </div>
                     </div> 
                     <div class ="row">
-                        <div class ="col-lg-8" 
+                        <div class ="col-lg-6" 
                              style="padding-left: 20px; line-height: 25px">
                             <div style ="font-family:RobotoSlabBold;
                                         font-weight:bold;
@@ -605,7 +605,10 @@
                                                  margin-top: -2px;
                                                  margin-left: -10px"> 
                                 </a>
-                            </div>
+                            </div>                            
+                        </div>  
+                        <div class="col-lg-6"
+                            style="padding-left: 30px; padding-top: 10px; line-height: 25px">
                             <div style ="font-family:RobotoSlabBold;
                                         font-weight:bold;
                                         font-size:14px;
@@ -625,25 +628,7 @@
                                                   margin-left: -10px"> 
                                 </a>
                             </div>
-                        </div>
-                        <div class ="col-lg-4" 
-                             style="padding-left: 20px; 
-                                    line-height: 25px; 
-                                    margin-top:25px;">
-                            <div class="fb-page" 
-                                data-href="https://www.facebook.com/NanaPetOnline" 
-                                data-tabs="timeline" 
-                                data-small-header="false" 
-                                data-adapt-container-width="true" 
-                                data-hide-cover="false" 
-                                data-show-facepile="true"
-                                data-width = "338"
-                                data-height = "370">
-                                <blockquote cite="https://www.facebook.com/NanaPetOnline" 
-                                class="fb-xfbml-parse-ignore">
-                                <a href="https://www.facebook.com/NanaPetOnline">NanaPet</a></blockquote>
-                            </div>
-                        </div>
+                        </div>                      
                     </div>       
                     <hr style = "margin-top: 40px;
                                 margin-bottom: 20px;
@@ -698,7 +683,7 @@
                                 line-height: 20px;
                                 text-align: center;
                                 font-size: 14px">
-                        © 2017 - Bản quyền thuộc về Hộ Kinh Doanh Thú Cưng Na Na - NanaPet.com
+                        © 2012-2018 - Bản quyền thuộc về Hộ Kinh Doanh Thú Cưng Na Na - NanaPet.com
                         <br>Giấy chứng nhận Đăng ký Hộ kinh doanh số 41N8033112 do Ủy Ban Nhân Dân Quận Tân Bình cấp ngày 11/01/2017
                     </div>
                     <div class="row center-block hidden-xs hidden-sm hidden-md" 
@@ -886,7 +871,7 @@
                        background-color: #b2d9d4;
                        padding-top: 20px;
                        padding-bottom: 20px;">
-               © 2017 - Bản quyền thuộc về Hộ Kinh Doanh Thú Cưng Na Na - NanaPet.com
+               © 2012-2018 - Bản quyền thuộc về Hộ Kinh Doanh Thú Cưng Na Na - NanaPet.com
                <br>Giấy chứng nhận Đăng ký Hộ kinh doanh số 41N8033112 do Ủy Ban Nhân Dân Quận Tân Bình cấp ngày 11/01/2017
                <div class="row center-block" 
                     style="width: 280px; margin-top: 10px; padding-bottom: 30px">
