@@ -1,41 +1,4 @@
 <?php
-function getOldProducts($lastest_products, $max_number_product, $config_name, $n_all_product, $condition) {
-    // Get top lastest products
-    $n_lastest_product = count($lastest_products);
-    if ($n_lastest_product > $max_number_product) {
-        $products = $lastest_products;
-    } else {
-        // Count number of old products
-        $n_old_product = $max_number_product - $n_lastest_product;
-
-        // Get index of previous products
-        $Product = new Product();
-        $old_pro = $Product->getPreviousLimitProduct($config_name);
-        $start_limit_old_product = $old_pro[0]["config_value"];
-
-        // Calculate end limit products
-        $end_limit_old_product = $start_limit_old_product + $n_old_product;
-
-        // Reset start limit old product in case show full product
-        if (intval($end_limit_old_product + $max_number_product) > intval($n_all_product - $n_lastest_product)) {
-            $end_limit_old_product = 0;
-            $start_limit_old_product = 0;
-        }
-
-        // Update config limit products
-        $date_added_pro = $old_pro[0]["date_added"];
-        if ($date_added_pro != date('Y-m-d')) {
-            $Product->updateLimitProduct($end_limit_old_product, $config_name);
-        }
-
-        // Load old products
-        $old_products = $Product->getProductsLimitOrderById($start_limit_old_product
-                , $n_old_product, $condition);
-        $products = array_merge($lastest_products, $old_products);
-    }
-    return $products;
-}
-
 function getpercent($str1, $str2) {
     $encourage = (int) str_replace(".", "", $str1);
     $price = (int) str_replace(".", "", $str2);
@@ -47,7 +10,7 @@ function getpercent($str1, $str2) {
 }
 
 $disCountVIPCustomer = 0;
-if ($_SESSION['username'] != '') {
+if (!empty($_SESSION['username'])) {
     // discount info
     $Discount_honorUser = $Product->getDiscountOfCustomer($_SESSION['username']);
     if (intval($Discount_honorUser) > 0) {
@@ -55,13 +18,9 @@ if ($_SESSION['username'] != '') {
     }
 }
 
-function getProducts($condition, $config_name, $n_display_product) {
-    $Product = new Product();
-    $week_days = 7;
-    $lastest_best_sale_products = $Product->getProductsInWeek($week_days, $condition);
-    $n_all_best_sale_product = $Product->countAllWithConditionProduct($condition);
-    $products = getOldProducts($lastest_best_sale_products, $n_display_product
-            , $config_name, $n_all_best_sale_product, $condition);
+function getProducts($condition, $n_display_product) {
+    $product = new Product();
+    $products = $product->getLatestProducts($condition, $n_display_product);        
     return $products;
 }
 
@@ -296,7 +255,7 @@ $Product = new Product();
 $condition_combo = " AND upgrade_categories_id LIKE '%,337,%' ";
 $configname_combo = "pre_limit_combo_best_sale";
 $totaldisplayproduct_combo = 5;
-$products_combo = getProducts($condition_combo, $configname_combo, $totaldisplayproduct_combo);
+$products_combo = getProducts($condition_combo, $totaldisplayproduct_combo);
 $areadisplay_combo = 'BESTCOMBOPRODUCTS';
 showProducts($home, $areadisplay_combo, $products_combo, $totaldisplayproduct_combo, $totaldisplayproduct_combo);
 // End combo ban chay nhat
@@ -321,7 +280,7 @@ showProducts($home, $areadisplay_combo_mobile, $products_combo_mobile, $displayo
 $condition_bestsale = " AND p_bestsell = 1 ";
 $configname_bestsale = "pre_limit_product";
 $totaldisplayproduct_bestsale = 10;
-$products_bestsale = getProducts($condition_bestsale, $configname_bestsale, $totaldisplayproduct_bestsale);
+$products_bestsale = getProducts($condition_bestsale, $totaldisplayproduct_bestsale);
 $areadisplay_bestsale = 'HOTPRODUCTSNEW';
 $displayofline_bestsale = 5;
 showProducts($home, $areadisplay_bestsale, $products_bestsale, $displayofline_bestsale, $totaldisplayproduct_bestsale);
@@ -345,7 +304,7 @@ showProducts($home, $areadisplay_bestsale_mobile, $products_bestsale_mobile, $di
 $condition_dog = " AND species='10' ";
 $configname_dog = "pre_limit_product_dog";
 $totaldisplayproduct_dog = 8;
-$products_dog = getProducts($condition_dog, $configname_dog, $totaldisplayproduct_dog);
+$products_dog = getProducts($condition_dog, $totaldisplayproduct_dog);
 $products_dog_desktop = array_slice($products_dog, 0, 6);
 $areadisplay_dog = 'DOGPRODUCTSNEW';
 $displayofline_dog = 3;
@@ -371,7 +330,7 @@ showNews($home, 'DOGNEWS', "27");
 $condition_cat = " AND species='01' "; 
 $configname_cat = "pre_limit_product_cat";
 $totaldisplayproduct_cat = 8;
-$products_cat = getProducts($condition_cat, $configname_cat, $totaldisplayproduct_cat);
+$products_cat = getProducts($condition_cat, $totaldisplayproduct_cat);
 $products_cat_desktop = array_slice($products_cat, 0, 6);
 $areadisplay_cat = 'CATPRODUCTSNEW';
 $displayofline_cat = 3;
@@ -397,7 +356,7 @@ showNews($home, 'CATNEWS', "28");
 $condition_medicine = " AND CONCAT(' ',upgrade_categories_id,' ') LIKE '%,271,%'";
 $configname_medicine = "pre_limit_product_medicine";
 $totaldisplayproduct_medicine = 5;
-$products_medicine = getProducts($condition_medicine, $configname_medicine, $totaldisplayproduct_medicine);
+$products_medicine = getProducts($condition_medicine, $totaldisplayproduct_medicine);
 $areadisplay_medicine = 'MEDICINEPRODUCTSNEW';
 showProducts($home, $areadisplay_medicine, $products_medicine, $totaldisplayproduct_medicine, $totaldisplayproduct_medicine);
 // End tu thuoc phong than
@@ -423,7 +382,7 @@ foreach ($arrAdvs as $adv) {
     $list_advs .= '<div>'
             . '<a rel="nofollow" target="_blank" style = "outline: none" href="{linkS}thuong-hieu/'
             . $adv['adver_id'] . '">'
-            . '<img alt="' . $adv['adver_webname'] . '" src="{linkS}upload/adver/thumb/'
+            . '<img alt="' . $adv['adver_webname'] . '" src="{linkS}upload/adver/'
             . $adv['adver_logo'] . '" width = "100px" height= "75px"/>'
             . '</a> '
             . '</div>';

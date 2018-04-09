@@ -224,7 +224,7 @@
         $list_advs .= '<div>'
                 . '<a rel="nofollow" target="_blank" style = "outline: none" href="{linkS}thuong-hieu/' 
                 . $adv['adver_id']. '">'
-                . '<img alt="' . $adv['adver_webname'] . '" src="{linkS}upload/adver/thumb/' 
+                . '<img alt="' . $adv['adver_webname'] . '" src="{linkS}upload/adver/' 
                 . $adv['adver_logo'] . '" width = "90px" height= "70px"/>'
                 . '</a> '
                 . '</div>';
