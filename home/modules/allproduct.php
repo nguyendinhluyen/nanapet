@@ -44,7 +44,7 @@
             $Category = new Category();
             $category_key = $Category->getCategoryKeyByProductKey($products[$i]['products_key']);
             $tpl_temp .= $xtemplate->assign_vars($block, array(
-                'product_img' => $products[$i]['products_image'],
+                'product_img' => !empty($products[$i]['products_image']) ? $products[$i]['products_image'] : 'no_image.jpg',
                 'product_name' => $products[$i]['products_name'],
                 'product_price' => $price_encourage,
                 'product_price_old' => $price_not_discount_product,

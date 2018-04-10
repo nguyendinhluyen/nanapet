@@ -71,7 +71,7 @@ function showProducts(&$home, $areadisplay, $products, $displayofline, $total_di
         $Category = new Category();
         $category_key = $Category->getCategoryKeyByProductID($products[$i]['products_id']);
         $tpl_temp .= $xtemplate->assign_vars($block, array(
-            'product_img' => $products[$i]['products_image'],
+            'product_img' => !empty($products[$i]['products_image']) ? $products[$i]['products_image'] : 'no_image.jpg',
             'product_name' => common::limitContent($products[$i]['products_name'], 100),
             'promotion_Sale' => $PromotionSale,
             'product_price' => $price_encourage,

@@ -112,7 +112,7 @@
                                 style="padding: 0px;">
                                 <img class="img-responsive center-block" 
                                     alt="{product_name}"
-                                    src="{linkS}upload/product/thumb/{product_image}"
+                                    src="{linkS}upload/product/{product_image}"
                                     style="width: 60%">
                                 <div style="font-size: 14px; 
                                      text-align: center;

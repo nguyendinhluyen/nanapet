@@ -69,7 +69,7 @@
             $Category = new Category();
             $category_key = $Category->getCategoryKeyByProductID($products[$i]['products_id']);
             $tpl_temp .= $xtemplate->assign_vars($block, array(
-                'product_img' => $products[$i]['products_image'],
+                'product_img' => !empty($products[$i]['products_image']) ? $products[$i]['products_image'] : 'no_image.jpg',
                 'product_name' => common::limitContent($products[$i]['products_name'], 60),
                 'product_price' => $price_encourage,
                 'price_not_discount_product' => $price_not_discount_product,
@@ -322,31 +322,7 @@
         // Get price for SEO
         $price_java_script = $product_detail['products_price'];
     }
-   
-    if ($product_detail['products_id'] > 0) {
-        $imgs = $Product->getProductImagessByProductId($product_detail['products_id']);
-        $k = count($imgs);
-        $tpl_imgs = '';
-        for ($p = 0; $p < $k;  ++$p) {
-            $tpl_imgs .= '<a href="' . $linkS . 'upload/product_detail/'
-                    . $imgs[$p]['image_path']
-                    . '" class="cloud-zoom-gallery" title="Red" rel="useZoom: \'zoom1\', smallImage: \''
-                    . $linkS . 'upload/product_detail/image.php?file='
-                    . $imgs[$p]['image_path'] . '&sizex=200\' "><img  src="'
-                    . $linkS . 'upload/product_detail/image.php?file='
-                    . $imgs[$p]['image_path'] . '&sizex=40&sizey=50" /></a>';
-        }
-        if ($k > 0) {
-            $tpl_imgs = '<a href="' . $linkS . 'upload/product/thumb/'
-                    . $product_detail['products_image'] . '" class="cloud-zoom-gallery" title="Red" rel="useZoom: \'zoom1\', smallImage: \''
-                    . $linkS . 'upload/product/thumb/image.php?file=' 
-                    . $product_detail['products_image'] . '&sizex=200\' "><img  src="'
-                    . $linkS . 'upload/product/thumb/image.php?file=' 
-                    . $product_detail['products_image'] . '&sizex=40&sizey=50" /></a>'
-                    . $tpl_imgs;
-        }
-    }
-
+       
     $category_key = input($_GET['category_key']);
     $product_name_prev = $Product->getProductsInfoPrevByProductKey($product_key, 
                                             $breadcrumbs[0]['key']);
@@ -586,7 +562,7 @@ if (empty($product_detail['manufacturer'])) {
         'link_san-pham' => $category_key . "/" . $product_detail['products_key'] . ".htm",
         'khuyenmai' => $khuyenmai,
         'product_name' => $product_detail['products_name'],
-        'product_image' => $product_detail['products_image'],
+        'product_image' => !empty($product_detail['products_image']) ? 'thumb/' . $product_detail['products_image'] : 'no_image.jpg',
         'product_detail' => $product_detail['product_detail'],
         'product_detail_tacdung' => $product_detail['product_detail_tacdung'],
         'product_detail_phuhopcho' => $product_detail['product_detail_phuhopcho'],
@@ -624,8 +600,7 @@ if (empty($product_detail['manufacturer'])) {
         'total_amount' => $pro_price_nodot,
         'product_price_nodot' => $pro_price_nodot,
         'product_quantity' => '1',
-        'count_rates' => $listrate,
-        'list_img_product' => $tpl_imgs,
+        'count_rates' => $lisrtrate,        
         'product_name_prev' => $pre_name,
         'product_name_next' => $next_name,
         'img_catdog' => $img_catdog,
