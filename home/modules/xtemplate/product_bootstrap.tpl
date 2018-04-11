@@ -59,7 +59,7 @@
                 <a href="{linkS}combo-sieu-tiet-kiem-317/">
                     <img class="img-reponsive" 
                         alt="compo siêu tiết kiệm"
-                        src="{linkS}layout/bootstrap/images/product_combo.png" 
+                        src="{linkS}layout/bootstrap/images/product_combo.jpg" 
                         alt="combo tiết kiệm"
                         width="100%"
                         style = "cursor: pointer;">
