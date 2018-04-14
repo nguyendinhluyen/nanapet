@@ -107,8 +107,8 @@
                                             <h4>
                                                 <a href="{linkS}{category}/{product_key}.htm" class="preview">
                                                     <img src="{linkS}upload/product/{product_img}" 
-                                                        width="160"
-                                                        height="160"
+                                                        width="140"
+                                                        height="140"
                                                         alt="{product_name_nocut}"
                                                         style="display: block;
                                                                margin-left: auto;
