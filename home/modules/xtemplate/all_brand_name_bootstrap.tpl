@@ -37,7 +37,7 @@
                         <a href="{linkS}thuong-hieu/{adver_id}" 
                            target="_blank"  
                            class="img-responsive">
-                            <img src="{linkS}upload/adver/{brand_img}"
+                            <img src="{linkS}upload/adver/thumb/{brand_img}"
                                 alt="{brand_name}"
                                 width="100%"
                                 style="display: block; 
