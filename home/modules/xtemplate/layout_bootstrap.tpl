@@ -3,8 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=9">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="{linkS}layout/bootstrap/css/style.min.css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">        
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <title>{title}</title>
         <meta name="description" content="{description}">
@@ -17,6 +16,7 @@
         <meta property="fb:app_id" content="1491869401059003"/>
         <link rel="shortcut icon" href="{linkS}layout/images/favicon.png"/>
         <!-- End control message facebook-->        
+        <link rel="stylesheet" type="text/css" href="{linkS}layout/bootstrap/css/style.min.css"/>
         <!--Begin Banner-->        
         <script type="text/javascript" src="{linkS}layout/js/sliderman.min.js"></script>        
         <!--End Banner-->
@@ -63,7 +63,7 @@
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));</script>
         <!--End Facebook Code-->
-        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.min.css">
         <script src="//code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
     </head>
     <style>        
@@ -923,8 +923,7 @@
                 text-decoration:none;
                 height:40px;
                 line-height:40px;
-                text-shadow:0 1px 0 rgba(0,0,0,0.1);
-                background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAqCAMAAABFoMFOAAAAWlBMV…8/UxBxQDQuFwlpqgBZBq6+P+unVY1GnDgwqbD2zGz5e1lBdwvGGPE6OgAAAABJRU5ErkJggg==);
+                text-shadow:0 1px 0 rgba(0,0,0,0.1);                
                 background-repeat:repeat-x;
                 background-size:auto;
                 background-position:0 0;
