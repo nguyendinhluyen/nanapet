@@ -16,7 +16,7 @@
         width:200px;
         height:230px;
         position:absolute;
-        top:30px;
+        top:10px;
         left:0;
         margin-top:-265px;
         border-radius:15px;
