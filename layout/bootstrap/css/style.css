@@ -363,7 +363,6 @@ ul li.danhmuc_sub_mobile a {
     text-transform: uppercase;
     margin-bottom: 10px;
     margin-top: 10px;
-    margin-left: 15px;
 }
 
 .selected_category_text {
@@ -692,8 +691,4 @@ ul.nav_menu_bottom li a:hover {
 
 #cfacebook {
     right: 0px !important;
-}
-
-#collapsecategoryparent {
-    margin-left: 15px;
 }

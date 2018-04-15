@@ -78,28 +78,30 @@
                                     style="cursor: pointer; margin-top:5px">
                             </a>
                             <!--BEGIN SEO CATEGORY-->
-                            <div class ="col-lg-12 hidden-lg" style="{display_seo};">
-                                <p style="text-align:left;
-                                        font-family: RobotoSlabBold;
-                                        font-size: 15px;
-                                        color:#929292;
-                                        line-height: 25px;
-                                        margin-top:20px">
-                                    CÓ THỂ BẠN CHƯA BIẾT
-                                </p>
-                                <p style="text-align:left;
-                                        font-family:RobotoSlabRegular;
-                                        font-size:15px;
-                                        color:#929292;
-                                        line-height:25px">
-                                    {text_seo}
-                                </p>
-                                <hr style = "border-width:1px;                               
-                                            border-color:#eee; 
-                                            width:100%; 
-                                            float:left;
-                                            margin-top:10px;
-                                            margin-bottom: 10px">
+                            <div class ="hidden-lg" style="{display_seo};">
+                                <div class="container">
+                                    <p style="text-align:left;
+                                            font-family: RobotoSlabBold;
+                                            font-size: 15px;
+                                            color:#929292;
+                                            line-height: 25px;
+                                            margin-top:20px">
+                                        CÓ THỂ BẠN CHƯA BIẾT
+                                    </p>
+                                    <p style="text-align:left;
+                                            font-family:RobotoSlabRegular;
+                                            font-size:15px;
+                                            color:#929292;
+                                            line-height:25px">
+                                        {text_seo}
+                                    </p>
+                                    <hr style = "border-width:1px;                               
+                                                border-color:#eee; 
+                                                width:100%; 
+                                                float:left;
+                                                margin-top:10px;
+                                                margin-bottom: 10px">
+                                </div>
                             </div>
                             <!--END SEO CATEGORY-->
                             {category_mobile}
