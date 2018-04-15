@@ -1,4 +1,4 @@
-<div class="selected_category" id="selected_category" 
+<div class="selected_category hidden-lg" id="selected_category" 
      data-toggle="collapse">
     <img src="{linkS}layout/bootstrap/images/icon_category_mobile.png"
         data-toggle="collapse"

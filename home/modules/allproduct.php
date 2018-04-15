@@ -72,13 +72,13 @@
                             <a href="{linkS}combo-sieu-tiet-kiem-317/">
                                 <img class="img-reponsive" 
                                     alt="combo siêu tiết kiệm"
-                                    src="{linkS}layout/bootstrap/images/product_combo.png" 
+                                    src="{linkS}layout/bootstrap/images/product_combo.jpg" 
                                     alt="combo tiết kiệm"
                                     width="100%"
                                     style="cursor: pointer; margin-top:5px">
                             </a>
                             <!--BEGIN SEO CATEGORY-->
-                            <div class ="col-lg-12" style="{display_seo}; padding-left:0px; padding-right:0px">
+                            <div class ="col-lg-12 hidden-lg" style="{display_seo};">
                                 <p style="text-align:left;
                                         font-family: RobotoSlabBold;
                                         font-size: 15px;
@@ -109,6 +109,13 @@
 
     function showMobileLayout() {
         $html_mobile = '<div class = "container hidden-lg hidden-sm hidden-md">
+                            <div style = "text-align:left;
+                                font-family: RobotoSlabRegular;
+                                font-size: 15px;
+                                color:#929292;
+                                line-height: 25px;">
+                                {no_products}
+                            </div>
                             <div class="product_main" style="margin-top:-10px">
                                 <!--BEGINLIST_PRODUCTS_MOBILE-->
                                 <!--BEGIN_PRODUCT_MOBILE-->
@@ -140,6 +147,13 @@
     
     function showTabletLayout() {
         $html_tablet = '<div class = "container hidden-lg hidden-xs">
+                            <div style = "text-align:left;
+                                font-family: RobotoSlabRegular;
+                                font-size: 15px;
+                                color:#929292;
+                                line-height: 25px;">
+                                {no_products}
+                            </div>
                             <div class="product_main" style="margin-top:-10px">
                                 <!--BEGINLIST_PRODUCTS_TABLET-->
                                 <!--BEGIN_PRODUCT_TABLET-->
@@ -279,14 +293,6 @@
         $products_t = $Product->getProductsByCategoryKey($category_key); 
         $total = count($products_t);
     }
-    
-    if ($total == 0) {
-        ?>
-        <script>
-            window.location = "<?php echo $linkS; ?>";
-        </script>
-        <?php
-    }
 
     $p_now = 0;
     $pp = 24;
@@ -411,6 +417,9 @@
     $nav_page = str_replace("page=", "trang-", pagination($linkS . $linkPage , ceil($numofpages), $page));
     $arr_category_mobile = $categoryProduct->generateCategory("category_mobile");
     $category_mobile = $arr_category_mobile[0];
+    if($total == 0) {
+        $no_products = "Không có sản phẩm";
+    }
     $content = $xtemplate->replace($content, array(
         'page' => $nav_page,
         'category' => $category,
@@ -418,6 +427,7 @@
         'list_advs' => $list_advs,
         'category_name' => !empty($category_name) ? $category_name : '',
         'display_seo' => $display_seo,
-        'text_seo' => $text_seo // Check category.php for data text seo
+        'text_seo' => $text_seo, // Check category.php for data text seo
+        'no_products' => $no_products
     ));
 ?>
