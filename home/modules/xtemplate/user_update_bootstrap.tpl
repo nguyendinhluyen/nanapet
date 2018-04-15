@@ -1,12 +1,13 @@
-<link rel="stylesheet" type="text/css" href="{linkS}layout/css/template.css"/>
-<link rel="stylesheet" type="text/css" href="{linkS}layout/css/jquery-ui-1.8.16.custom.css"/>
-<script type="text/javascript" src="{linkS}layout/js/jquery-ui-1.8.16.custom.min.js"></script>
-<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css"/>
-<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-<style> 
+<!--Begin Mask Phone-->
+<script type="text/javascript" src="{linkS}layout/js/jquery.maskedinput.min.js"></script>
+<script type="text/javascript">
+    jQuery(function($) {
+        $('#phone').mask('(999) 999 - 9999?9',{placeholder:" "});
+    });
+</script>
+<!--End Mask Phone-->
+<style>
 .form-group {
-      /*trick bootstraps framework*/
       margin-right: 0px !important;
 }
 </style>
@@ -19,7 +20,7 @@
                         font-size:14px;
                         margin-top: 10px;
                         margin-bottom: 15px">{breadcrumbs_path}</div>
-                  <div class="col-xs-12 hidden-md hidden-lg" 
+                  <div class="col-xs-12 hidden-md hidden-lg"
                     style="padding-left: 0px; margin-bottom: 10px; margin-top: 10px">
                     <img src="{linkS}layout/bootstrap/images/icon_category_mobile.png"
                         data-toggle="collapse"
@@ -28,26 +29,26 @@
                         aria-controls="collapsinfo"
                         width="30px"
                         height="30px"
-                        style="margin-right:10px; cursor: pointer;"> 
-                    <span style="font-family: RobotoSlabBold; 
-                                font-size: 15px; 
+                        style="margin-right:10px; cursor: pointer;">
+                    <span style="font-family: RobotoSlabBold;
+                                font-size: 15px;
                                 vertical-align: middle;">THÔNG TIN CỦA BẠN</span>
                   </div>
-                  <div class="collapse col-xs-12" id="collapsinfo" 
+                  <div class="collapse col-xs-12" id="collapsinfo"
                       style="padding: 0px; line-height: 35px">
                     <ul style="font-family: RobotoSlabBold;
                               padding-left: 0px">
-                        <li><a href="{linkS}thong-tin-tai-khoan" 
+                        <li><a href="{linkS}thong-tin-tai-khoan"
                             style="color: #000" rel='nofollow'>THÔNG TIN CỦA BẠN</a></li>
-                        <li><a href="{linkS}so-dia-chi" 
+                        <li><a href="{linkS}so-dia-chi"
                             style="color: #000" rel='nofollow'>SỔ ĐỊA CHỈ</a></li>
-                        <li><a href="{linkS}danh-sach-don-hang" 
+                        <li><a href="{linkS}danh-sach-don-hang"
                             style="color: #000" rel='nofollow'>ĐƠN HÀNG CỦA BẠN</a></li>
-                        <li><a href="{linkS}thu-cung-cua-toi" 
+                        <li><a href="{linkS}thu-cung-cua-toi"
                             style="color: #000" rel='nofollow'>THÚ CƯNG CỦA BẠN</a></li>
-                        <li><a href="{linkS}doi-mat-khau" 
+                        <li><a href="{linkS}doi-mat-khau"
                             style="color: #000" rel='nofollow'>ĐỔI MẬT KHẨU</a></li>
-                        <li><a href="{linkS}logout" 
+                        <li><a href="{linkS}logout"
                             style="" rel='nofollow'>ĐĂNG XUẤT</a></li>
                         <li><hr></li>
                     </ul>
@@ -62,7 +63,7 @@
                    </div>
 
                   <!--Left Col-->
-                  <div class="hidden-xs hidden-sm col-md-3 col-lg-3" 
+                  <div class="hidden-xs hidden-sm col-md-3 col-lg-3"
                         style="padding-left: 0px;
                               padding-right: 50px;
                               font-family: RobotoSlabRegular">
@@ -77,7 +78,7 @@
                                     box-shadow: 0px 10px 10px -5px rgba(146,159,165,1);">
                               <div class="col-md-12" style="padding:0px">
                                     <img alt="{name_hello}"
-                                       src="{linkS}upload/avatar/{avatar}" 
+                                       src="{linkS}upload/avatar/{avatar}"
                                        width="100%"
                                        style="-webkit-border-radius:25px;
                                               -moz-border-radius:25px;
@@ -86,34 +87,34 @@
                               </div>
                               <div class="col-md-12">
                                   <img alt="thông tin tài khoản"
-                                       src="{linkS}layout/bootstrap/images/thong_tin_tai_khoan_1.png" 
+                                       src="{linkS}layout/bootstrap/images/thong_tin_tai_khoan_1.png"
                                        height="20px">
                                     <a href="{linkS}thong-tin-tai-khoan"
-                                     style="font-family: RobotoSlabLight; 
+                                     style="font-family: RobotoSlabLight;
                                           font-size: 14px;
                                           margin-left: 10px;
                                           line-height: 35px;
                                           padding-top: 10px;
                                           color: #000">Thông tin của bạn</a>
-                              </div>    
+                              </div>
                               <div class="col-md-12">
                                     <img alt="sổ địa chỉ"
-                                         src="{linkS}layout/bootstrap/images/thong_tin_tai_khoan_2.png" 
+                                         src="{linkS}layout/bootstrap/images/thong_tin_tai_khoan_2.png"
                                          height="20px">
                                     <a href="{linkS}so-dia-chi"
-                                       style="font-family: RobotoSlabLight; 
-                                            font-size: 14px; 
+                                       style="font-family: RobotoSlabLight;
+                                            font-size: 14px;
                                             margin-left: 10px;
                                             line-height: 35px;
                                             color: #000">Sổ địa chỉ</a>
                               </div>
                               <div class="col-md-12">
-                                    <img alt="đơn hàng" 
-                                         src="{linkS}layout/bootstrap/images/thong_tin_tai_khoan_3.png" 
+                                    <img alt="đơn hàng"
+                                         src="{linkS}layout/bootstrap/images/thong_tin_tai_khoan_3.png"
                                          height="20px">
                                     <a href="{linkS}danh-sach-don-hang"
-                                       style="font-family: RobotoSlabLight; 
-                                            font-size: 14px; 
+                                       style="font-family: RobotoSlabLight;
+                                            font-size: 14px;
                                             margin-left: 10px;
                                             line-height: 35px;
                                             color: #000">Đơn hàng của tôi</a>
@@ -123,44 +124,44 @@
                               </div>
                               <!--<div class="col-md-12">
                                     <img alt="sản phẩm ưa thích"
-                                         src="{linkS}layout/bootstrap/images/thong_tin_tai_khoan_4.png" 
+                                         src="{linkS}layout/bootstrap/images/thong_tin_tai_khoan_4.png"
                                          height="20px">
                                     <a href="{linkS}san-pham-ua-thich"
-                                       style="font-family: RobotoSlabLight; 
-                                       font-size: 14px; 
+                                       style="font-family: RobotoSlabLight;
+                                       font-size: 14px;
                                        margin-left: 10px;
                                        line-height: 35px;
                                        color: #000">Sản phẩm ưa thích</a>
                               </div>-->
                               <div class="col-md-12">
                                     <img alt="thú cưng"
-                                         src="{linkS}layout/bootstrap/images/thong_tin_tai_khoan_5.png" 
+                                         src="{linkS}layout/bootstrap/images/thong_tin_tai_khoan_5.png"
                                          height="20px">
                                     <a href="{linkS}thu-cung-cua-toi"
-                                       style="font-family: RobotoSlabLight; 
-                                       font-size: 14px; 
+                                       style="font-family: RobotoSlabLight;
+                                       font-size: 14px;
                                        margin-left: 5px;
                                        line-height: 35px;
                                        color: #000">Thú cưng của tôi</a>
                               </div>
                               <div class="col-md-12" style="margin-bottom: 30px">
                                     <hr style = "border-color: #93a4ac; border-width: 1px;">
-                                    <img alt="mật khẩu" 
-                                         src="{linkS}layout/bootstrap/images/thong_tin_tai_khoan_6.png" 
+                                    <img alt="mật khẩu"
+                                         src="{linkS}layout/bootstrap/images/thong_tin_tai_khoan_6.png"
                                          height="20px">
                                     <a href="{linkS}doi-mat-khau"
-                                       style="font-family: RobotoSlabLight; 
-                                       font-size: 14px; 
+                                       style="font-family: RobotoSlabLight;
+                                       font-size: 14px;
                                        margin-left: 10px;
                                        line-height: 20px;
                                        color: #000;
                                        padding-bottom: 30px">Đổi mật khẩu</a>
                               </div>
-                        </div>      
+                        </div>
                   </div>
                   <!--Right Col-->
                   <div class="col-xs-12 col-md-9" style="padding:0px">
-                        <form method='POST' id="frm1" name="frm1" enctype='multipart/form-data' 
+                        <form method='POST' id="frm1" name="frm1" enctype='multipart/form-data'
                         action="{linkS}cap-nhat-thong-tin">
                               <div class="newsPersonal_inside">
                                     <div class="group_listing_input" id="group_listing_input">
@@ -170,26 +171,26 @@
                                                 font-size: 15px;
                                                 font-family: RobotoSlabLight;
                                                 line-height: 30px">{message_notice}</div>
-                                          <div style="font-family:RobotoSlabRegular; 
+                                          <div style="font-family:RobotoSlabRegular;
                                                 font-size: 17px;
                                                 color:#393939;
                                                 margin-bottom: 20px">THÔNG TIN CÁ NHÂN</div>
                                           <div class="form-horizontal">
                                           <div class="form-group">
-                                                <span for="firstname" 
+                                                <span for="firstname"
                                                 class="col-xs-12 col-sm-2 col-md-2 control-label"
-                                                style="text-align: left; 
+                                                style="text-align: left;
                                                       font-family: RobotoSlabRegular;
-                                                      font-size: 14px">Họ và tên: 
-                                                      <span style="color:red">*</span> 
+                                                      font-size: 14px">Họ và tên:
+                                                      <span style="color:red">*</span>
                                                 </span>
-                                                <div class="col-xs-11 col-sm-7 col-md-9" 
+                                                <div class="col-xs-11 col-sm-7 col-md-9"
                                                       style="padding-right: 0px">
-                                                      <input type="text"          
+                                                      <input type="text"
                                                       class="form-control"
                                                       oninput="functionOninput();"
                                                       id="firstname"
-                                                      name="name"  
+                                                      name="name"
                                                       value="{name}"
                                                       style="-webkit-border-radius: 10px;
                                                       -moz-border-radius: 10px;
@@ -198,7 +199,7 @@
                                                       outline: none;
                                                       padding: 5px;
                                                       font-family: RobotoSlabRegular;
-                                                      font-size: 14px;     
+                                                      font-size: 14px;
                                                       border: 1px solid #ddd;
                                                       font-weight: lighter;
                                                       color: #adadad;
@@ -207,18 +208,18 @@
                                                 </div>
                                           </div>
                                           <div class="form-group">
-                                                <span for="birthday" 
+                                                <span for="birthday"
                                                 class="col-xs-12 col-sm-2 col-md-2 control-label"
-                                                style="text-align: left; 
+                                                style="text-align: left;
                                                 font-family: RobotoSlabRegular;
-                                                font-size: 14px">Ngày sinh:</span> 
+                                                font-size: 14px">Ngày sinh:</span>
                                                 <div class="col-xs-6 col-sm-2 col-md-3">
                                                       <input class="form-control"
-                                                           id="birthday" 
-                                                           name="birthday" 
-                                                           type="text" 
+                                                           id="birthday"
+                                                           name="birthday"
+                                                           type="text"
                                                            value="{birthday}"
-                                                           maxlength="10" 
+                                                           maxlength="10"
                                                            style="-webkit-border-radius: 10px;
                                                            -moz-border-radius: 10px;
                                                            border-radius: 10px;
@@ -233,13 +234,13 @@
                                                 </div>
                                           </div>
                                           <div class="form-group">
-                                                <span for="gender" 
+                                                <span for="gender"
                                                 class="col-xs-12 col-sm-2 col-md-2 control-label"
-                                                style="text-align: left; 
+                                                style="text-align: left;
                                                       font-family: RobotoSlabRegular;
                                                       font-size: 14px">Giới tính:</span>
                                                 <div class="col-xs-6 col-sm-2 col-md-2">
-                                                      <select id="gender" 
+                                                      <select id="gender"
                                                             name="gender"
                                                             class="form-control"
                                                             style="-webkit-border-radius: 10px;
@@ -256,11 +257,11 @@
                                                       <option value="0" {selected2}>Chị</option>
                                                       </select>
                                                 </div>
-                                          </div> 
+                                          </div>
                                           <div class="form-group">
-                                                <span for="address" 
+                                                <span for="address"
                                                 class="col-xs-12 col-sm-2 col-md-2 control-label"
-                                                style="text-align: left; 
+                                                style="text-align: left;
                                                 font-family: RobotoSlabRegular;
                                                 font-size: 14px">Địa chỉ:</span>
                                                 <div class="col-xs-11 col-sm-7 col-md-9"
@@ -298,7 +299,7 @@
                                                             <select id = "country"
                                                                 class="form-control"
                                                                 style = "-webkit-border-radius: 10px;
-                                                                -moz-border-radius: 10px;  
+                                                                -moz-border-radius: 10px;
                                                                 height: 35px;
                                                                 outline:none;
                                                                 padding: 5px;
@@ -314,22 +315,22 @@
                                                 </div>
                                                 <div class="form-group col-xs-12 col-sm-4 col-md-4"
                                                      style="padding-left: 0px">
-                                                      <span for="list_city_buy" 
+                                                      <span for="list_city_buy"
                                                           class="col-xs-12 control-label"
-                                                          style="text-align: left; 
+                                                          style="text-align: left;
                                                           font-family: RobotoSlabRegular;
                                                           font-size: 14px;
                                                           margin-bottom: 10px">
                                                             Thành phố <span style="color:red">*</span>
                                                       </span>
                                                       <div class="col-xs-12">
-                                                            <select id="list_city_buy" 
-                                                                  name="list_city_buy"     
+                                                            <select id="list_city_buy"
+                                                                  name="list_city_buy"
                                                                   class="form-control"
                                                                   oninput="functionOninput();"
-                                                                  onChange="city_selected('list_city_buy', 'list_district_buy')" 
+                                                                  onChange="city_selected('list_city_buy', 'list_district_buy')"
                                                                   style="-webkit-border-radius: 10px;
-                                                                      -moz-border-radius: 10px;         
+                                                                      -moz-border-radius: 10px;
                                                                       height: 35px;
                                                                       outline:none;
                                                                       padding: 5px;
@@ -338,7 +339,7 @@
                                                                       border: 1px solid #ddd;
                                                                       font-weight: lighter;
                                                                       color: #adadad;
-                                                                      width: 100%">      
+                                                                      width: 100%">
                                                 <option value="Chưa chọn tỉnh/thành">Chọn tỉnh thành</option>
                                                 <option value="Hà Nội" {selected_Hà Nội}>Hà Nội</option>
                                                 <option value="Hồ Chí Minh" {selected_Hồ Chí Minh}>Hồ Chí Minh</option>
@@ -409,16 +410,16 @@
                                                 </div>
                                                 <div class="form-group col-xs-12 col-sm-4 col-md-4"
                                                      style="padding-left: 0px">
-                                                      <span for="list_district_buy" 
+                                                      <span for="list_district_buy"
                                                           class="col-xs-12 control-label"
-                                                          style="text-align: left; 
+                                                          style="text-align: left;
                                                                 font-family: RobotoSlabRegular;
                                                                 font-size: 14px;
                                                                 margin-bottom: 10px">
                                                           Quận/Huyện<span style="color:red">*</span>
                                                       </span>
                                                     <div class="col-xs-12">
-                                                        <select id="list_district_buy" 
+                                                        <select id="list_district_buy"
                                                                 class="form-control"
                                                                 name="list_district_buy"
                                                                 oninput="functionOninput();"
@@ -434,17 +435,17 @@
                                                                       color: #adadad;
                                                                       width: 100%">
                                                             <option value = "Chưa chọn quận/huyện" selected {selected_district}> Chọn quận huyện</option>
-                                                            <option value = "{district_value}"  {selected_district_value}>{district_value}</option>       
-                                                        </select>     
+                                                            <option value = "{district_value}"  {selected_district_value}>{district_value}</option>
+                                                        </select>
                                                     </div>
                                                 </div>
-                                            </div>                          
+                                            </div>
                                             <div class="form-inline">
                                                 <div class="form-group col-xs-12 col-sm-4 col-md-4"
                                                      style="padding-left: 0px">
-                                                      <span for="tags" 
+                                                      <span for="tags"
                                                           class="col-xs-12 control-label"
-                                                          style="text-align: left; 
+                                                          style="text-align: left;
                                                           font-family: RobotoSlabRegular;
                                                           font-size: 14px;
                                                           margin-bottom: 10px;
@@ -452,11 +453,11 @@
                                                         Phường<span style="color:red">*</span>
                                                       </span>
                                                       <div class="col-xs-12">
-                                                            <input type="text" 
-                                                            id="tags" 
+                                                            <input type="text"
+                                                            id="tags"
                                                             oninput="functionOninput();"
-                                                            class="form-control"  
-                                                            name="text_edit_number_ward" 
+                                                            class="form-control"
+                                                            name="text_edit_number_ward"
                                                             value="{text_ward}"
                                                             maxlength="20"
                                                             style="-webkit-border-radius: 10px;
@@ -476,9 +477,9 @@
                                             <div class="form-inline">
                                                 <div class="form-group col-xs-12 col-sm-4 col-md-4"
                                                      style="padding-left: 0px">
-                                                      <span for="tags_street" 
+                                                      <span for="tags_street"
                                                             class="col-xs-12 control-label"
-                                                            style="text-align: left; 
+                                                            style="text-align: left;
                                                             font-family: RobotoSlabRegular;
                                                             font-size: 14px;
                                                             margin-bottom: 10px;
@@ -486,7 +487,7 @@
                                                           Đường<span style="color:red">*</span>
                                                       </span>
                                                       <div class="col-xs-12">
-                                                            <input type="text" 
+                                                            <input type="text"
                                                                class="form-control"
                                                                id="tags_street"
                                                                oninput="functionOninput();"
@@ -500,20 +501,20 @@
                                                                outline: none;
                                                                padding: 5px;
                                                                font-family: RobotoSlabRegular;
-                                                               font-size: 14px;          
+                                                               font-size: 14px;
                                                                border: 1px solid #ddd;
                                                                font-weight: lighter;
                                                                color: #adadad;
-                                                               width: 100%">    
+                                                               width: 100%">
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="form-inline">
                                                 <div class="form-group col-xs-12 col-sm-4 col-md-4"
                                                      style="padding-left: 0px">
-                                                      <span for="tags_street" 
+                                                      <span for="tags_street"
                                                           class="col-xs-12 control-label"
-                                                          style="text-align: left; 
+                                                          style="text-align: left;
                                                           font-family: RobotoSlabRegular;
                                                           font-size: 14px;
                                                           margin-bottom: 10px;
@@ -522,7 +523,7 @@
                                                       </span>
                                                       <div class="col-xs-12">
                                                             <input type="text"
-                                                               class="form-control" 
+                                                               class="form-control"
                                                                id="text_edit_number_address"
                                                                oninput="functionOninput();"
                                                                name="text_edit_number_address"
@@ -535,20 +536,20 @@
                                                                outline: none;
                                                                padding: 5px;
                                                                font-family: RobotoSlabRegular;
-                                                               font-size: 14px;    
+                                                               font-size: 14px;
                                                                border: 1px solid #ddd;
                                                                font-weight: lighter;
                                                                color: #adadad;
-                                                               width: 100%"> 
+                                                               width: 100%">
                                                       </div>
                                                 </div>
                                             </div>
                                             <div class="form-inline">
                                                 <div class="form-group col-xs-12 col-sm-4 col-md-4"
                                                      style="padding-left: 0px">
-                                                      <span for="text_edit_number_address_Chung_Cu" 
+                                                      <span for="text_edit_number_address_Chung_Cu"
                                                           class="col-xs-12 control-label"
-                                                          style="text-align: left; 
+                                                          style="text-align: left;
                                                           font-family: RobotoSlabRegular;
                                                           font-size: 14px;
                                                           margin-bottom: 10px;
@@ -557,10 +558,10 @@
                                                       </span>
                                                       <div class="col-xs-12">
                                                         <input type="text"
-                                                               class="form-control" 
-                                                               id="text_edit_number_address_Chung_Cu" 
-                                                               name ="text_edit_number_address_Chung_Cu" 
-                                                               value="{text_address_Chung_Cu}" 
+                                                               class="form-control"
+                                                               id="text_edit_number_address_Chung_Cu"
+                                                               name ="text_edit_number_address_Chung_Cu"
+                                                               value="{text_address_Chung_Cu}"
                                                                maxlength="40"
                                                                style = "-webkit-border-radius: 10px;
                                                                -moz-border-radius: 10px;
@@ -569,20 +570,20 @@
                                                                outline: none;
                                                                padding: 5px;
                                                                font-family: RobotoSlabRegular;
-                                                               font-size: 14px;    
+                                                               font-size: 14px;
                                                                border: 1px solid #ddd;
                                                                font-weight: lighter;
                                                                color: #adadad;
-                                                               width: 100%">    
+                                                               width: 100%">
                                                       </div>
                                                 </div>
-                                            </div>   
+                                            </div>
                                             <div class="form-inline">
                                                 <div class="form-group col-xs-12 col-sm-4 col-md-4"
                                                      style="padding-left: 0px">
-                                                      <span for="text_edit_floor_Chung_Cu" 
+                                                      <span for="text_edit_floor_Chung_Cu"
                                                           class="col-xs-12 control-label"
-                                                          style="text-align: left; 
+                                                          style="text-align: left;
                                                           font-family: RobotoSlabRegular;
                                                           font-size: 14px;
                                                           margin-bottom: 10px;
@@ -591,9 +592,9 @@
                                                       </span>
                                                       <div class="col-xs-12">
                                                             <input type="text"
-                                                                  class="form-control" 
+                                                                  class="form-control"
                                                                   id="text_edit_floor_Chung_Cu"
-                                                                  name="text_edit_floor_Chung_Cu" 
+                                                                  name="text_edit_floor_Chung_Cu"
                                                                   value="{text_edit_floor_Chung_Cu}"
                                                                   maxlength="10"
                                                                   style="-webkit-border-radius: 10px;
@@ -610,20 +611,20 @@
                                                                      width: 100%">
                                                     </div>
                                                 </div>
-                                            </div> 
+                                            </div>
                                             <div class="form-inline">
                                                 <div class="form-group col-xs-12 col-sm-4 col-md-4"
                                                      style="padding-left: 0px">
-                                                      <span for="text_edit_room_Chung_Cu" 
+                                                      <span for="text_edit_room_Chung_Cu"
                                                           class="col-xs-12 control-label"
-                                                          style="text-align: left; 
+                                                          style="text-align: left;
                                                           font-family: RobotoSlabRegular;
                                                           font-size: 14px;
                                                           margin-bottom: 10px;
                                                           margin-top: 10px">Căn hộ</span>
                                                       <div class="col-xs-12">
                                                             <input type="text"
-                                                               class="form-control" 
+                                                               class="form-control"
                                                                id ="text_edit_room_Chung_Cu"
                                                                name="text_edit_room_Chung_Cu"
                                                                value="{text_edit_room_Chung_Cu}"
@@ -635,7 +636,7 @@
                                                                outline: none;
                                                                padding: 5px;
                                                                font-family: RobotoSlabRegular;
-                                                               font-size: 14px; 
+                                                               font-size: 14px;
                                                                border: 1px solid #ddd;
                                                                font-weight: lighter;
                                                                color: #adadad;
@@ -646,7 +647,7 @@
                                             <div class="form-group">
                                                 <span for="firstname"
                                                       class="col-xs-12 col-sm-2 col-md-2 control-label"
-                                                      style="text-align: left; 
+                                                      style="text-align: left;
                                                       font-family: RobotoSlabRegular;
                                                       font-size: 14px;
                                                       margin-top: 25px">
@@ -654,12 +655,12 @@
                                                 </span>
                                                 <div class="col-xs-8 col-sm-4 col-md-5"
                                                       style="margin-top: 20px">
-                                                      <input type="text" 
+                                                      <input type="text"
                                                             class="form-control"
                                                             id="phone"
                                                             oninput="functionOninput();"
                                                             name="phone"
-                                                            type="text" 
+                                                            type="text"
                                                             value="{phone}"
                                                             style="-webkit-border-radius: 10px;
                                                             -moz-border-radius: 10px;
@@ -668,7 +669,7 @@
                                                             outline: none;
                                                             padding: 5px;
                                                             font-family: RobotoSlabRegular;
-                                                            font-size: 14px;      
+                                                            font-size: 14px;
                                                             border: 1px solid #ddd;
                                                             font-weight: lighter;
                                                             color: #adadad;
@@ -677,16 +678,16 @@
                                                 </div>
                                           </div>
                                           <div class="form-group">
-                                                <span for="firstname" 
+                                                <span for="firstname"
                                                       class="col-xs-12 col-sm-2 col-md-2 control-label"
-                                                      style="text-align: left; 
+                                                      style="text-align: left;
                                                       font-family: RobotoSlabRegular;
                                                       font-size: 14px;
                                                       margin-top: 5px">Ảnh:</span>
-                                                <div class="col-xs-8 col-sm-4 col-md-5" 
+                                                <div class="col-xs-8 col-sm-4 col-md-5"
                                                       style="margin-top: 5px">
-                                                      <input type="file" 
-                                                           name="avatar" 
+                                                      <input type="file"
+                                                           name="avatar"
                                                            class="form-control"
                                                            style="-webkit-border-radius: 10px;
                                                            -moz-border-radius: 10px;
@@ -704,13 +705,13 @@
                                           </div>
                                           <div class ="form-group">
                                                 <div class="col-xs-12">
-                                                      <input id="cmd_submit_update_user" 
-                                                           name="cmd_submit_update_user" 
+                                                      <input id="cmd_submit_update_user"
+                                                           name="cmd_submit_update_user"
                                                            class="button_update"
                                                            value = "Lưu thay đổi"
                                                            type="submit"
                                                            onclick="myFunctionSubmit();"
-                                                           style="outline:none; 
+                                                           style="outline:none;
                                                            background-color: #ff767c;
                                                            border: none;
                                                            color: #fff;
@@ -726,94 +727,94 @@
                                             </div>
                                           </div>
                                     </div>
-                        </form> 
+                        </form>
                   </div>
                   <hr class="hidden-xs hidden-sm" style="width: 90%; margin-left: 0px">
                   <hr class="hidden-md hidden-lg" style="width: 100%; margin-left: 0px">
                   <div class="newsPersonal_inside" style="line-height: 30px">
-                        <div class="col-sx-12" 
-                              style= "text-align:left; 
+                        <div class="col-sx-12"
+                              style= "text-align:left;
                                    font-family:RobotoSlabLight;
                                    color:#A00;
                                    font-size:14px">{happy_birthday}</div>
                         <div class="col-sx-12"
-                              style="text-align:left; 
+                              style="text-align:left;
                              font-family:RobotoSlabLight;
                              color:#A00;
                              font-size:14px">{happy_birthday_nanapet}</div>
-                        <div class="col-sx-12" 
-                              style="text-align:left; 
+                        <div class="col-sx-12"
+                              style="text-align:left;
                              font-family:RobotoSlabLight;
                              color:#A00;
                              font-size:14px">{happy_new_year}</div>
-                        <div class="col-sx-12" 
-                             style="padding-left:0px; 
-                             font-family: RobotoSlabRegular; 
+                        <div class="col-sx-12"
+                             style="padding-left:0px;
+                             font-family: RobotoSlabRegular;
                              font-size: 17px;
                              margin-bottom: 10px">THÔNG TIN ĐIỂM THƯỞNG
                         </div>
-                        <div class="col-sx-12" 
-                             style="padding-left:0px; 
-                             font-family: RobotoSlabRegular; 
+                        <div class="col-sx-12"
+                             style="padding-left:0px;
+                             font-family: RobotoSlabRegular;
                              font-size: 14px;
                              line-height: 30px">
                             <span>
                                 Tên đăng nhập : <span style="color:blue;">{name}</span>
                             </span>
-                        </div> 
-                        <div class="col-sx-12" 
-                             style="padding-left:0px; 
-                             font-family: RobotoSlabRegular; 
+                        </div>
+                        <div class="col-sx-12"
+                             style="padding-left:0px;
+                             font-family: RobotoSlabRegular;
                              font-size: 14px;
                              line-height: 30px">
                             <span>
                                 Thành viên : <span style="color:red">{level}</span>
                             </span>
                         </div>
-                        <div class="col-sx-12" 
-                             style="padding-left:0px; 
-                             font-family: RobotoSlabRegular; 
+                        <div class="col-sx-12"
+                             style="padding-left:0px;
+                             font-family: RobotoSlabRegular;
                              font-size: 14px;
                              line-height: 30px">
                             <span>
                                 Chiết khấu thành viên : <span style="color:red">{discount_level}</span>
                             </span>
                         </div>
-                        <div class="col-sx-12" 
-                             style="padding-left:0px; 
-                             font-family: RobotoSlabRegular; 
+                        <div class="col-sx-12"
+                             style="padding-left:0px;
+                             font-family: RobotoSlabRegular;
                              font-size: 14px;
                              line-height: 30px">
                             <span>
                                 Điểm thưởng : <span style="color:red">{awardscore}</span>
                             </span>
                         </div>
-                        <div class="col-sx-12" 
-                             style="padding-left:0px; 
-                             font-family: RobotoSlabRegular; 
+                        <div class="col-sx-12"
+                             style="padding-left:0px;
+                             font-family: RobotoSlabRegular;
                              font-size: 14px;
                              line-height: 30px">
                             <span>
                                 Điểm được sử dụng : <span style="color:red">{score}</span>
                             </span>
                         </div>
-                        <div class="col-sx-12" 
-                             style="padding-left:0px; 
-                             font-family: RobotoSlabRegular; 
+                        <div class="col-sx-12"
+                             style="padding-left:0px;
+                             font-family: RobotoSlabRegular;
                              font-size: 14px;
                              line-height: 30px;
                              margin-bottom: 20px">
                             <span>
                                 Điểm chưa được sử dụng : <span style="color:red">{unusedscore}</span>
                             </span>
-                        </div> 
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-</body>			
+</body>
 <script>
     $(function () {
         $("#birthday").datepicker({dateFormat: 'dd-mm-yy',
@@ -2507,7 +2508,7 @@
             source: availableChungCuTags
         });
     });
-</script>  
+</script>
 <script>
     function addOption(selectbox, text, value) {
         var optn = document.createElement("OPTION");
@@ -2955,7 +2956,7 @@
             addOption(list_district, "Huyện Tĩnh Gia", "Huyện Tĩnh Gia");
             addOption(list_district, "Huyện Yên Định", "Huyện Yên Định");
         }
-        //Tinh Nghe An                 
+        //Tinh Nghe An
         else if (list_city.value === "Tỉnh Nghệ An") {
             addOption(list_district, "Chọn quận huyện", "Chưa chọn quận/huyện");
             addOption(list_district, "TP. Vinh", "TP. Vinh");

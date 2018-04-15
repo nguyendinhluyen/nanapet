@@ -34,7 +34,10 @@
         cursor: pointer;
     }
 </style>
-
+<!--Begin logo slick-->
+    <link rel="stylesheet" type="text/css" href="{linkS}layout/bootstrap/css/slick/slick/slick.css"/>    
+    <script type="text/javascript" src="{linkS}layout/bootstrap/css/slick/slick/slick.min.js"></script>
+<!--End logo slick-->
 <!-- Begin product desktop -->
 <div class = "container hidden-xs hidden-sm hidden-md">
     <div class ="row">

@@ -57,7 +57,7 @@
                         style="width: 100%; 
                             height: 170px">
                         <img class="img-responsive center-block" 
-                           src="{linkS}upload/product/thumb/{product_img}" 
+                           src="{linkS}upload/product/{product_img}" 
                            width="100%"
                            alt="{product_name}"
                            style="cursor: pointer;

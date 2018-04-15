@@ -1,10 +1,10 @@
 <style>
     a.list_product_name:hover {
         text-decoration: none;
-    }    
+    }
     a.list_product_name:link {
         text-decoration: none;
-    }    
+    }
     a.news_name {
         color: #929292;
     }
@@ -32,26 +32,29 @@
         border-radius:15px;
         background-color: #66d0f1;
         border-style:solid;
-        border-width: 10px;        
-        border-color: #e0f8ff;        
-    }       
+        border-width: 10px;
+        border-color: #e0f8ff;
+    }
     .product_detail:hover .textbox {
         margin-top:0;
-    }   
+    }
     .textbox {
         -webkit-transition: all 0.5s ease;
         transition: all 0.5s ease;
-        cursor: pointer;        
+        cursor: pointer;
     }
 
 </style>
 <!-- Begin banner-->
-<div class="container-fluid" 
+<div class="container-fluid"
      style="padding:0px;">
     <div class="hidden-xs hidden-sm"
          style="padding-bottom: 20px">
-        <!-- use jssor.slider.mini.js (40KB) instead for release -->
-        <!-- jssor.slider.mini.js = (jssor.js + jssor.slider.js) -->
+        <!--Begin logo slick-->
+        <link rel="stylesheet" type="text/css" href="{linkS}layout/bootstrap/css/slick/slick/slick.css"/>
+        <script type="text/javascript" src="{linkS}layout/bootstrap/css/slick/slick/slick.min.js"></script>
+        <!--End logo slick-->
+        <script type="text/javascript" src="{linkS}layout/js/sliderman.min.js"></script>
         <script type="text/javascript" src="{linkS}layout/bootstrap/css/slider/js/jssor.js"></script>
         <script type="text/javascript" src="{linkS}layout/bootstrap/css/slider/js/jssor.slider.js"></script>
         <script>
@@ -132,21 +135,21 @@
             });
         </script>
         <!-- Jssor Slider Begin -->
-        <!-- To move inline styles to css file/block, please specify a class name for each element. --> 
+        <!-- To move inline styles to css file/block, please specify a class name for each element. -->
         <div id="slider1_container"
              style="position: relative;
              margin: 0 auto;
              top: 0px;
              left: 0px;
              width: 1300px;
-             height: 410px; 
+             height: 410px;
              overflow: hidden;
              margin-top: -5px">
             <!-- Loading Screen -->
-            <div u="loading" style="position: absolute; 
-                 top: 0px; 
+            <div u="loading" style="position: absolute;
+                 top: 0px;
                  left: 0px;">
-                <div style="filter: alpha(opacity=70); 
+                <div style="filter: alpha(opacity=70);
                      opacity: 0.7;
                      position: absolute;
                      display: block;
@@ -253,7 +256,7 @@
             <a style="display: none" href="http://www.jssor.com">Image Slider</a>
         </div>
         <!-- Jssor Slider End -->
-    </div>        
+    </div>
 </div>
 <!-- End banner-->
 
@@ -261,10 +264,10 @@
 <div class="container">
     <div class="row"
          style="padding-bottom: 10px; margin-left: 0px; margin-right: 0px">
-        <div class = "col-xs-12 col-sm-12 col-md-12 col-lg-12" 
+        <div class = "col-xs-12 col-sm-12 col-md-12 col-lg-12"
             style="padding-right: 0px;
                     padding-left: 0px">
-            <img class="hidden-xs" 
+            <img class="hidden-xs"
                 alt="combo bán chạy"
                 src="{linkS}layout/bootstrap/images/combo_ban_chay_nhat.png"
                 style = "width: 100%; padding-bottom: 40px; padding-top: 20px">
@@ -280,13 +283,13 @@
         {desktop_layout}
         <!--END_BESTCOMBOPRODUCTS-->
         <!--ENDLIST_BESTCOMBOPRODUCTS-->
-        
+
         <!--BEGINLIST_BESTCOMBOPRODUCTS_TABLET-->
         <!--BEGIN_BESTCOMBOPRODUCTS_TABLET-->
         {tablet_layout}
         <!--END_BESTCOMBOPRODUCTS_TABLET-->
         <!--ENDLIST_BESTCOMBOPRODUCTS_TABLET-->
-        
+
         <!--BEGINLIST_BESTCOMBOPRODUCTS_MOBILE-->
         <!--BEGIN_BESTCOMBOPRODUCTS_MOBILE-->
         {mobile_layout}
@@ -294,7 +297,7 @@
         <!--ENDLIST_BESTCOMBOPRODUCTS_MOBILE-->
 
         <!--Begin San Pham Ban Chay-->
-        <div class = "col-xs-12 col-sm-12 col-md-12 col-lg-12" 
+        <div class = "col-xs-12 col-sm-12 col-md-12 col-lg-12"
             style = "padding-right: 0px;
                     padding-left: 0px">
             <img class="hidden-xs"
@@ -313,13 +316,13 @@
         {desktop_layout}
         <!--END_HOTPRODUCTSNEW-->
         <!--ENDLIST_HOTPRODUCTSNEW-->
-        
+
         <!--BEGINLIST_HOTPRODUCTSNEW_TABLET-->
         <!--BEGIN_HOTPRODUCTSNEW_TABLET-->
         {tablet_layout}
         <!--END_HOTPRODUCTSNEW_TABLET-->
         <!--ENDLIST_HOTPRODUCTSNEW_TABLET-->
-        
+
         <!--BEGINLIST_HOTPRODUCTSNEW_MOBILE-->
         <!--BEGIN_HOTPRODUCTSNEW_MOBILE-->
         {mobile_layout}
@@ -346,11 +349,11 @@
         </div>
         <div class="hidden-xs hidden-sm hidden-md col-lg-4">
             <a href="{linkS}danh-rieng-cho-cho-cung-319/">
-                <img alt="{brand_dog}" 
-                    src="{linkS}layout/bootstrap/images/san_pham_banner_cun_cung.jpg" 
-                    width="460" 
+                <img alt="{brand_dog}"
+                    src="{linkS}layout/bootstrap/images/san_pham_banner_cun_cung.jpg"
+                    width="460"
                     height="505"
-                    style="margin-left: -12px; 
+                    style="margin-left: -12px;
                             cursor: pointer;"
                     class="img-rounded">
             </a>
@@ -363,7 +366,7 @@
             <!--END_DOGPRODUCTSNEW-->
             <!--ENDLIST_DOGPRODUCTSNEW-->
         </div>
-                        
+
         <!--BEGINLIST_DOGPRODUCTSNEW_TABLET-->
         <!--BEGIN_DOGPRODUCTSNEW_TABLET-->
         {tablet_layout}
@@ -372,7 +375,7 @@
         <div style="font-family: PoetsenOne;">
             <div style="text-align: right; font-size: 15px;">
                 <a  class="hidden-xs hidden-sm"
-                    href="{linkS}danh-rieng-cho-cho-cung-319/" 
+                    href="{linkS}danh-rieng-cho-cho-cung-319/"
                     style="color:#ff767d;">
                     Xem tất cả sản phẩm cún cưng >>
                 </a>
@@ -383,13 +386,13 @@
         {mobile_layout}
         <!--END_DOGPRODUCTSNEW_MOBILE-->
         <!--ENDLIST_DOGPRODUCTSNEW_MOBILE-->
-        
-        <div class = "col-lg-12 hidden-xs hidden-sm hidden-md" 
-             style="background-color:#e9f4f6; 
+
+        <div class = "col-lg-12 hidden-xs hidden-sm hidden-md"
+             style="background-color:#e9f4f6;
              margin-top: 10px;
              padding-bottom: 50px;
              margin-right: 0px">
-            <div style="font-size: 17px; 
+            <div style="font-size: 17px;
                  font-family: PoetsenOne;
                  padding-top: 20px;
                  padding-left: 25px">
@@ -406,7 +409,7 @@
                                 border-width: 1px;"/>
                         </td>
                     </tr>
-                </table> 
+                </table>
             </div>
             <div class="container"
                  id="news_container"
@@ -414,8 +417,8 @@
                 <!--BEGINLIST_DOGNEWS-->
                 <!--BEGIN_DOGNEWS-->
                 <li>
-                    <div class="news_detail">                                            
-                        <div class="news_col" style = "float:left">                    
+                    <div class="news_detail">
+                        <div class="news_col" style = "float:left">
                             <a href="{linkS}doi-song-pets/{news_key}/" style = "outline:none">
                                 <img src="{linkS}upload/news/{news_image}"
                                      width="130"
@@ -426,8 +429,8 @@
                         </div><!-- end product_right_col -->
                         <div class="news_title">
                             <div style="font-size: 14px; color: #929292;">
-                                <a class = "news_name" href="{linkS}doi-song-pets/{news_key}/" 
-                                   style="line-height: 25px;                                
+                                <a class = "news_name" href="{linkS}doi-song-pets/{news_key}/"
+                                   style="line-height: 25px;
                                    font-family: RobotoSlabRegular;
                                    font-size: 14px;
                                    outline:none">
@@ -436,11 +439,11 @@
                             </div>
                         </div>
                     </div><!-- end news_detail -->
-                </li>  	
-                <!--END_DOGNEWS-->        
+                </li>
+                <!--END_DOGNEWS-->
                 <!--ENDLIST_DOGNEWS-->
             </div>
-        </div>        
+        </div>
         <!--End San Pham Cun Cung-->
 
         <!--Begin San Pham Meo Cung-->
@@ -470,10 +473,10 @@
         <div class = "hidden-xs hidden-sm hidden-md col-lg-4">
             <a href="{linkS}danh-rieng-cho-meo-yeu-321/">
                 <img src="{linkS}layout/bootstrap/images/san_pham_banner_meo_cung.jpg"
-                     width="460" 
+                     width="460"
                      height="505"
                      alt="{brand_cat}"
-                     style="margin-left: -12px; 
+                     style="margin-left: -12px;
                             cursor: pointer;"
                      class="img-rounded">
             </a>
@@ -482,11 +485,11 @@
              style="padding-right: 0px; padding-left: 10px">
             <!--BEGINLIST_CATPRODUCTSNEW-->
             <!--BEGIN_CATPRODUCTSNEW-->
-            {desktop_layout}	
+            {desktop_layout}
             <!--END_CATPRODUCTSNEW-->
             <!--ENDLIST_CATPRODUCTSNEW-->
         </div>
-                        
+
         <!--BEGINLIST_CATPRODUCTSNEW_TABLET-->
         <!--BEGIN_CATPRODUCTSNEW_TABLET-->
         {tablet_layout}
@@ -495,7 +498,7 @@
         <div style="font-family: PoetsenOne;">
             <div style="text-align: right; font-size: 15px;">
                 <a  class="hidden-xs hidden-sm"
-                    href="{linkS}danh-rieng-cho-cho-cung-319/" 
+                    href="{linkS}danh-rieng-cho-cho-cung-319/"
                     style="color:#ff767d;">
                     Xem tất cả sản phẩm mèo cưng >>
                 </a>
@@ -506,18 +509,18 @@
         {mobile_layout}
         <!--END_CATPRODUCTSNEW_MOBILE-->
         <!--ENDLIST_CATPRODUCTSNEW_MOBILE-->
-        
-        <div class = "col-lg-12 hidden-xs hidden-sm hidden-md" 
-             style="background-color:#e9f4f6; 
-             margin-top: 20px; 
+
+        <div class = "col-lg-12 hidden-xs hidden-sm hidden-md"
+             style="background-color:#e9f4f6;
+             margin-top: 20px;
              padding-bottom: 50px;
              margin-right: 0px">
-            <div style="font-size: 17px; 
+            <div style="font-size: 17px;
                  font-family: PoetsenOne;
                  padding-top: 20px;
                  padding-left: 25px">
                 <table>
-                    <tr>                        
+                    <tr>
                         <td style="padding-right: 25px;">
                             <span style="color: #fb7224;">
                                 Tin tức về mèo cưng
@@ -529,7 +532,7 @@
                                 border-width: 1px;"/>
                         </td>
                     </tr>
-                </table>                                
+                </table>
             </div>
             <div class="container"
                  id="news_container"
@@ -537,8 +540,8 @@
                 <!--BEGINLIST_CATNEWS-->
                 <!--BEGIN_CATNEWS-->
                 <li>
-                    <div class="news_detail">                                            
-                        <div class="news_col" style = "float:left">                    
+                    <div class="news_detail">
+                        <div class="news_col" style = "float:left">
                             <a href="{linkS}doi-song-pets/{news_key}/" style = "outline:none">
                                 <img src="{linkS}upload/news/{news_image}"
                                     width="130"
@@ -550,8 +553,8 @@
 
                         <div class="news_title">
                             <div style="font-size: 14px; color: #929292;">
-                                <a class = "news_name" href="{linkS}doi-song-pets/{news_key}/" 
-                                   style="line-height: 25px;                                
+                                <a class = "news_name" href="{linkS}doi-song-pets/{news_key}/"
+                                   style="line-height: 25px;
                                         font-family: RobotoSlabRegular;
                                         font-size: 14px;
                                         outline:none">
@@ -560,19 +563,19 @@
                             </div>
                         </div>
                     </div><!-- end news_detail -->
-                </li>  	
-                <!--END_CATNEWS-->        
+                </li>
+                <!--END_CATNEWS-->
                 <!--ENDLIST_CATNEWS-->
             </div>
-        </div>        
+        </div>
         <!--End San Pham Meo Cung-->
 
         <!--Begin tu thuoc phong than cho-->
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" 
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"
              style="padding-right: 0px;
                     padding-left: 0px">
             <a href="{linkS}tu-thuoc-pet-phong-than-339/">
-                <img class="hidden-xs hidden-sm hidden-md" 
+                <img class="hidden-xs hidden-sm hidden-md"
                     alt="tủ thuốc phòng thân cho thú cưng"
                     src="{linkS}layout/bootstrap/images/tu_thuoc_phong_than.png"
                     style="width: 100%;
@@ -596,43 +599,43 @@
         {desktop_layout}
         <!--END_MEDICINEPRODUCTSNEW-->
         <!--ENDLIST_MEDICINEPRODUCTSNEW-->
-        
+
         <!--BEGINLIST_MEDICINEPRODUCTSNEW_TABLET-->
         <!--BEGIN_MEDICINEPRODUCTSNEW_TABLET-->
         {tablet_layout}
         <!--END_MEDICINEPRODUCTSNEW_TABLET-->
         <!--ENDLIST_MEDICINEPRODUCTSNEW_TABLET-->
-        
+
         <!--BEGINLIST_MEDICINEPRODUCTSNEW_MOBILE-->
         <!--BEGIN_MEDICINEPRODUCTSNEW_MOBILE-->
         {mobile_layout}
         <!--END_MEDICINEPRODUCTSNEW_MOBILE-->
         <!--ENDLIST_MEDICINEPRODUCTSNEW_MOBILE-->
-        
+
         <div class = "col-xs-12 col-sm-12 col-md-12 col-lg-12"
-             style="font-family: PoetsenOne; 
-                    font-size: 17px;                     
-                    text-align: center;                    
+             style="font-family: PoetsenOne;
+                    font-size: 17px;
+                    text-align: center;
                     line-height: 50px;
                     width: 100%;
                     margin-right: 0px;">
-            <a href="{linkS}tu-thuoc-pet-phong-than-339/" 
+            <a href="{linkS}tu-thuoc-pet-phong-than-339/"
                style="color:#ff767d;">
-                <img class="hidden-xs hidden-sm" 
+                <img class="hidden-xs hidden-sm"
                     alt="xem tất cả"
-                    src="{linkS}layout/bootstrap/images/xem_tat_ca_thuoc.png" 
-                    style= "display:block; 
-                       margin-left: auto; 
+                    src="{linkS}layout/bootstrap/images/xem_tat_ca_thuoc.png"
+                    style= "display:block;
+                       margin-left: auto;
                        margin-right: auto;">
             </a>
         </div>
         <!--End Tu thuoc phong than cho-->
 
         <!-- Begin San Pham Theo Nhan Hieu-->
-        <div class ="col-lg-12 hidden-md hidden-xs hidden-sm" 
+        <div class ="col-lg-12 hidden-md hidden-xs hidden-sm"
             style="margin-right: 0px; margin-top: 40px">
             <img alt="sản phẩm theo nhãn hàng"
-                src="{linkS}layout/bootstrap/images/cac_san_pham_theo_nhan_hang.png" 
+                src="{linkS}layout/bootstrap/images/cac_san_pham_theo_nhan_hang.png"
                 style="display:block;
                     margin-left: auto;
                     margin-right: auto;
@@ -641,16 +644,16 @@
         <!-- End San Pham Theo Nhan Hieu-->
         <!-- Begin Logo Slider-->
         <div class ="col-lg-12 hidden-md hidden-xs hidden-sm" style="height: 80px;margin-right: 0px">
-            <div class="responsive" style="height: 80px;">                
-                {list_advs}                             
+            <div class="responsive" style="height: 80px;">
+                {list_advs}
             </div>
             <style>
                 .slick-prev
-                {                    
+                {
                     background-image: url({linkS}layout/bootstrap/images/line.png);
                     height: 40px;
                     margin-top: -20px;
-                    border-radius: 5px;                    
+                    border-radius: 5px;
                 }
                 .slick-prev:hover
                 {
@@ -658,8 +661,8 @@
                     border-radius: 5px;
                 }
 
-                .slick-next 
-                {                    
+                .slick-next
+                {
                     background-image: url({linkS}layout/bootstrap/images/line.png);
                     height: 40px;
                     margin-top: -20px;
@@ -678,25 +681,25 @@
                     autoplay: true,
                     autoplaySpeed: 2000,
                 });
-            </script>                      
+            </script>
         </div>
         <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" 
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"
                  style="margin-right: 0px;
-                        margin-top: 10px">                  
-                <div style="height: 2px; 
+                        margin-top: 10px">
+                <div style="height: 2px;
                         background-color:#edf8fb;
-                        margin-left: 10px; 
+                        margin-left: 10px;
                         margin-right: 10px;
-                        margin-top: 10px">                    
-                </div>                                
+                        margin-top: 10px">
+                </div>
             </div>
         </div>
         <!-- End Logo Slider-->
 
         <!--Begin introduce page-->
-        <div class ="col-xs-12 col-sm-12 col-md-12 col-lg-12" 
-             style="margin-bottom: 20px; 
+        <div class ="col-xs-12 col-sm-12 col-md-12 col-lg-12"
+             style="margin-bottom: 20px;
                 margin-top: 20px;
                 text-align: center;
                 color: #929292;
