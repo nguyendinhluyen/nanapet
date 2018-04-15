@@ -8,11 +8,11 @@
 </style>
 
 <style>
-    .product_main_col {
+    .product_detail {
         position:relative;
         overflow:hidden;
     }
-    .product_main_col .textbox {
+    .product_detail .textbox {
         width:200px;
         height:230px;
         position:absolute;
@@ -25,7 +25,7 @@
         border-width: 10px;
         border-color: #e0f8ff;
     }
-    .product_main_col:hover .textbox {
+    .product_detail:hover .textbox {
         margin-top:0;
     }
     .textbox {
@@ -103,62 +103,33 @@
             <div class="product_main">
                 <!--BEGINLIST_PRODUCTS-->
                 <!--BEGIN_PRODUCT-->
-                <li>
-                    <a class = "product_name" href="{linkS}{category}/{product_key}.htm" style = "outline:none">
-                        <div class="product_main_detail">
-                            <div class="product_main_col">
-                                <table border="0">
-                                    <tr>
-                                        <td>
-                                            <h4>
-                                                <a href="{linkS}{category}/{product_key}.htm" class="preview">
-                                                    <img src="{linkS}upload/product/{product_img}"
-                                                        width="140"
-                                                        height="140"
-                                                        alt="{product_name_nocut}"
-                                                        style="display: block;
-                                                               margin-left: auto;
-                                                               margin-right: auto;
-                                                               margin-top: 30px">
-                                                </a>
-                                            </h4>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <h3 style="margin-top: 0px;">
-                                                <div class="product_main_title">
-                                                    <span class = "product_name"
-                                                       style = "color:#929292;">
-                                                        {product_name}
-                                                    </span>
-                                                </div>
-                                            </h3>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="product_main_price">{product_price} VNĐ</div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="product_main_price_en">{product_price_old}</div>
-                                        </td>
-                                    </tr>
-                                </table>
-                                <div class="textbox"
-                                     style = "padding-top: 70px; padding-left: 35px">
-                                    <img alt="Xem chi tiết"
-                                        src="{linkS}layout/bootstrap/images/xem_chi_tiet.png"
-                                        width="110px"
-                                        style = "cursor: pointer;
-                                                 margin-bottom: 5px">
-                                </div>
-                            </div><!-- end product_col -->
-                        </div><!-- end product_detail -->
+                <div class="col-lg-3 product_detail" style="margin-top:20px">
+                    <a href="{linkS}{category}/{product_key}.htm" style = "outline:none">
+                        <h4>
+                            <a href="{linkS}{category}/{product_key}.htm" class="preview">
+                                <img class="img-responsive center-block"
+                                    src="{linkS}upload/product/{product_img}"
+                                    alt="{product_name_nocut}"
+                                    style="width:140px">
+                            </a>
+                            <div class="textbox"
+                                style = "padding-top: 65px; padding-left: 35px">
+                                <img alt="Xem chi tiết"
+                                    src="{linkS}layout/bootstrap/images/xem_chi_tiet.png"
+                                    width="110px"
+                                    style = "cursor: pointer;
+                                        margin-bottom: 5px">
+                            </div>
+                        </h4>
+                        <h3 style="text-align:center">
+                            <span class="product_main_title_mobile">
+                                {product_name}
+                            </span>
+                        </h3>
+                        <div class="product_main_price_mobile">{product_price} VNĐ</div>
+                        <div class="product_main_price_en_mobile">{product_price_old}</div>
                     </a>
-                 </li>
+                </div>
                 <!--END_PRODUCT-->
                 <!--ENDLIST_PRODUCTS-->
             </div><!-- end product_main -->

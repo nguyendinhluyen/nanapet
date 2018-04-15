@@ -9,14 +9,13 @@
         $saleoff = $saleoff . '%';
         return $saleoff;
     }
-    
-    function showProducts(&$content, $areadisplayline, $areadisplay, $products, 
+
+    function showProducts(&$content, $areadisplayline, $areadisplay, $products,
                         $nbdisplayofline, $style="margin-left: -43px") {
         $n = count($products);
         $tpl = '';
         $tpl_temp = '<div class="row" id="product_main">
-                        <div class = "col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                            <ul style ="'.$style.'">';
+                        <div class = "col-xs-12">';
         $flag = 0;
         global $xtemplate;
         $block = $xtemplate->get_block_from_str($content, $areadisplayline);
@@ -39,7 +38,7 @@
                     $price_encourage = common::convertIntToFormatMoney($price_encourage);
                 }
                 $price_not_discount_product = $price_not_discount_product . " VNĐ";
-            } 
+            }
 
             $Category = new Category();
             $category_key = $Category->getCategoryKeyByProductKey($products[$i]['products_key']);
@@ -55,24 +54,22 @@
             ));
 
             if ($flag % $nbdisplayofline == 0 || $i > $n - 2) {
-                $tpl_temp .= ' </ul>';
                 $tpl .= $tpl_temp . '</div></div>';
                 $tpl_temp = '<div class="row" id="product_main">
-                                <div class = "col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                    <ul style ="'.$style.'">';
+                                <div class = "col-xs-12">';
             }
         }
         $content = $xtemplate->assign_blocks_content($content, array(
             $areadisplay => $tpl,
         ));
     }
-    
+
     function showCategory() {
         $html_category = '<div class = "container hidden-lg">
                             <a href="{linkS}combo-sieu-tiet-kiem-317/">
-                                <img class="img-reponsive" 
+                                <img class="img-reponsive"
                                     alt="combo siêu tiết kiệm"
-                                    src="{linkS}layout/bootstrap/images/product_combo.jpg" 
+                                    src="{linkS}layout/bootstrap/images/product_combo.jpg"
                                     alt="combo tiết kiệm"
                                     width="100%"
                                     style="cursor: pointer; margin-top:5px">
@@ -95,9 +92,9 @@
                                             line-height:25px">
                                         {text_seo}
                                     </p>
-                                    <hr style = "border-width:1px;                               
-                                                border-color:#eee; 
-                                                width:100%; 
+                                    <hr style = "border-width:1px;
+                                                border-color:#eee;
+                                                width:100%;
                                                 float:left;
                                                 margin-top:10px;
                                                 margin-bottom: 10px">
@@ -125,19 +122,19 @@
                                     <a href="{linkS}{category}/{product_key}.htm" style = "outline:none">
                                         <h4>
                                             <a href="{linkS}{category}/{product_key}.htm" class="preview">
-                                                <img class="img-responsive center-block" 
-                                                    src="{linkS}upload/product/{product_img}" 
+                                                <img class="img-responsive center-block"
+                                                    src="{linkS}upload/product/{product_img}"
                                                     alt="{product_name_nocut}"
                                                     style="width:100%">
                                             </a>
-                                        </h4>                                       
+                                        </h4>
                                         <h3 style="text-align:center">
                                             <span class="product_main_title_mobile">
                                                 {product_name}
                                             </span>
                                         </h3>
-                                        <div class="product_main_price_mobile">{product_price} VNĐ</div> 
-                                        <div class="product_main_price_en_mobile">{product_price_old}</div>                                
+                                        <div class="product_main_price_mobile">{product_price} VNĐ</div>
+                                        <div class="product_main_price_en_mobile">{product_price_old}</div>
                                     </a>
                                  </li>
                                 <!--END_PRODUCT_MOBILE-->
@@ -146,7 +143,7 @@
                         </div>';
         return $html_mobile;
     }
-    
+
     function showTabletLayout() {
         $html_tablet = '<div class = "container hidden-lg hidden-xs">
                             <div style = "text-align:left;
@@ -163,19 +160,19 @@
                                     <a href="{linkS}{category}/{product_key}.htm" style = "outline:none">
                                         <h4>
                                             <a href="{linkS}{category}/{product_key}.htm" class="preview">
-                                                <img class="img-responsive center-block" 
-                                                    src="{linkS}upload/product/{product_img}" 
+                                                <img class="img-responsive center-block"
+                                                    src="{linkS}upload/product/{product_img}"
                                                     alt="{product_name_nocut}"
                                                     style="width:100%">
                                             </a>
-                                        </h4>                                       
+                                        </h4>
                                         <h3 style="text-align:center">
                                             <span class="product_main_title_mobile">
                                                 {product_name}
                                             </span>
                                         </h3>
-                                        <div class="product_main_price_mobile">{product_price} VNĐ</div> 
-                                        <div class="product_main_price_en_mobile">{product_price_old}</div>                                
+                                        <div class="product_main_price_mobile">{product_price} VNĐ</div>
+                                        <div class="product_main_price_en_mobile">{product_price_old}</div>
                                     </a>
                                  </li>
                                 <!--END_PRODUCT_TABLET-->
@@ -184,12 +181,12 @@
                         </div>';
         return $html_tablet;
     }
-    
+
     function showPagination() {
         $html_pagination ='<div class="hidden-lg">
                                 <!-- BEGIN PAGE NAVIGATION -->
                                     <div align="center">
-                                        <div class="pagination" align="center" 
+                                        <div class="pagination" align="center"
                                              style="margin-left: auto;
                                                     margin-right: auto;
                                                     font-size:14px;
@@ -197,7 +194,7 @@
                                                     margin-top: 20px;
                                                     margin-bottom: 20px">
                                             {page}
-                                        </div> 
+                                        </div>
                                     </div>
                                 <!-- END PAGE NAVIGATION -->
                             </div>';
@@ -212,13 +209,13 @@
             $disCountVIPCustomer = (int) $Discount_honorUser;
         }
     }
-    
+
     // Get category of products
     $category_key = !empty($_GET['category_key']) ? input($_GET['category_key']) : '';
     if (isset($_GET['category_sub_key'])) {
         $category_key = input($_GET['category_sub_key']);
     }
-    
+
     // Bread crumbs
     $Category = new Category();
      if (!empty($category_key)) {
@@ -226,7 +223,7 @@
         $breadcrumbs_path = '<a style = "outline:none" href="{linkS}">NanaPet</a> &raquo; '
                 . '<a style = "outline:none" href="{linkS}san-pham/">Sản Phẩm</a>';
     } else {
-        $breadcrumbs_path = '<a href="{linkS}">NanaPet</a> » Sản Phẩm';     
+        $breadcrumbs_path = '<a href="{linkS}">NanaPet</a> » Sản Phẩm';
     }
 
     // Title for page all product SEO
@@ -237,7 +234,7 @@
     $title_page = $category_desktop[2];
     $description = $category_desktop[3];
     $keywords = $category_desktop[4];
-    
+
     $page_now = !empty($_GET['trang']) ? intval(input($_GET['trang'])) : '';
     if(empty($title_page)) {
         if (!empty($breadcrumbs[0]['name'])
@@ -249,7 +246,7 @@
             if (!isset($page_now) || $page_now == 1 || $page_now == 0) {
                 $title_page = 'Thức ăn cho chó và mèo';
             } else {
-                $title_page = "Thức ăn cho chó và mèo - trang $page_now";     
+                $title_page = "Thức ăn cho chó và mèo - trang $page_now";
             }
         }
     } else {
@@ -257,7 +254,7 @@
             $title_page .= " - trang $page_now";
         }
     }
-    
+
     // Description
     if(empty($description)) {
         $description = $title_page;
@@ -270,7 +267,7 @@
     if (empty($keywords)) {
         $keywords = "thức ăn cho chó, thức ăn cho mèo";
     }
-    
+
     // Check link page for navigation
     if (empty($category_key)) {
         $linkPage = 'san-pham/';
@@ -287,12 +284,12 @@
             $linkPage = 'sale-off/';
         }
     }
-    
+
     // Begin navigation
     if(empty($category_key)) {
         $total = intval($Product->getProductsNewCount());
     } else {
-        $products_t = $Product->getProductsByCategoryKey($category_key); 
+        $products_t = $Product->getProductsByCategoryKey($category_key);
         $total = count($products_t);
     }
 
@@ -317,12 +314,12 @@
 
     // load products
     if (empty($category_key)) {
-        $products = $Product->getProductsNewLimit($limitvalue, $pp);     
+        $products = $Product->getProductsNewLimit($limitvalue, $pp);
     } else {
-        $products = $Product->getProductsByCategoryKeyLimitOrderBy($products_t, 
+        $products = $Product->getProductsByCategoryKeyLimitOrderBy($products_t,
                             $category_key, $limitvalue, $pp);
     }
-    
+
     $content = $xtemplate->load('product_bootstrap');
     $content = $xtemplate->replace($content, array(
         'category_mobile' => showCategory(),
@@ -339,17 +336,17 @@
     $areadisplayline_mobile = "PRODUCT_MOBILE";
     $areadisplay_mobile = "PRODUCTS_MOBILE";
     $nbdisplayofline_mobile = 2;
-    showProducts($content, $areadisplayline_mobile, $areadisplay_mobile, 
+    showProducts($content, $areadisplayline_mobile, $areadisplay_mobile,
             $products, $nbdisplayofline_mobile,"padding:0px");
-    
+
     // show tablet
     $areadisplayline_tablet = "PRODUCT_TABLET";
     $areadisplay_tablet = "PRODUCTS_TABLET";
     $nbdisplayofline_tablet = 4;
-    showProducts($content, $areadisplayline_tablet, $areadisplay_tablet, 
+    showProducts($content, $areadisplayline_tablet, $areadisplay_tablet,
             $products, $nbdisplayofline_tablet,"padding:0px");
-    
-    // begin load news
+
+    // load news
     $News = new News();
     $news = $News->getNewsNewest("4");
     $n = count($news);
@@ -377,20 +374,20 @@
         'NEWS' => $tpl
     ));
     // end load news
-    
+
     // load advs
     $list_advs = '';
     $arrAdvs = GetRows('adver_id, adver_logo, adver_link, adver_webname', 'ads', "adver_status = 1");
     foreach ($arrAdvs as $adv) {
         $list_advs .= '<div>'
-                . '<a rel="nofollow" target="_blank" style = "outline: none" href="{linkS}thuong-hieu/' 
+                . '<a rel="nofollow" target="_blank" style = "outline: none" href="{linkS}thuong-hieu/'
                 . $adv['adver_id']. '">'
-                . '<img alt="' . $adv['adver_webname'] . '" src="{linkS}upload/adver/' 
+                . '<img alt="' . $adv['adver_webname'] . '" src="{linkS}upload/adver/'
                 . $adv['adver_logo'] . '" width = "90px" height= "70px"/>'
                 . '</a> '
                 . '</div>';
     }
-    
+
     // pagination product for SEO - Please check home/index.php for more info
     if (ceil($numofpages) > 1) {
         if ($page == 1) {
@@ -409,13 +406,13 @@
             $link_product_navigation .= "<meta name='robots' content='noindex,follow'/>";
         }
     }
-    
+
     if (empty($text_seo)) {
         $display_seo ="display:none";
     } else {
         $display_seo ="display:block";
     }
-    
+
     $nav_page = str_replace("page=", "trang-", pagination($linkS . $linkPage , ceil($numofpages), $page));
     $arr_category_mobile = $categoryProduct->generateCategory("category_mobile");
     $category_mobile = $arr_category_mobile[0];
