@@ -103,32 +103,32 @@
             <div class="product_main">
                 <!--BEGINLIST_PRODUCTS-->
                 <!--BEGIN_PRODUCT-->
-                <div class="col-lg-3 product_detail" style="margin-top:20px">
-                    <a href="{linkS}{category}/{product_key}.htm" style = "outline:none">
-                        <h4>
-                            <a href="{linkS}{category}/{product_key}.htm" class="preview">
-                                <img class="img-responsive center-block"
-                                    src="{linkS}upload/product/{product_img}"
-                                    alt="{product_name_nocut}"
-                                    style="width:140px">
-                            </a>
-                            <div class="textbox"
-                                style = "padding-top: 65px; padding-left: 35px">
-                                <img alt="Xem chi tiết"
-                                    src="{linkS}layout/bootstrap/images/xem_chi_tiet.png"
-                                    width="110px"
-                                    style = "cursor: pointer;
-                                        margin-bottom: 5px">
-                            </div>
-                        </h4>
-                        <h3 style="text-align:center">
-                            <span class="product_main_title_mobile">
-                                {product_name}
-                            </span>
-                        </h3>
-                        <div class="product_main_price_mobile">{product_price} VNĐ</div>
-                        <div class="product_main_price_en_mobile">{product_price_old}</div>
-                    </a>
+                <div class="col-lg-3 product_detail" style="margin-top:20px">                    
+                    <h4>
+                        <a href="{linkS}{category}/{product_key}.htm" class="preview">
+                            <img class="img-responsive center-block"
+                                src="{linkS}upload/product/{product_img}"
+                                alt="{product_name_nocut}"
+                                style="width:140px">
+                        </a>
+                        <a href="{linkS}{category}/{product_key}.htm" style = "outline:none">
+                        <div class="textbox"
+                            style = "padding-top: 65px; padding-left: 35px">
+                            <img alt="Xem chi tiết"
+                                src="{linkS}layout/bootstrap/images/xem_chi_tiet.png"
+                                width="110px"
+                                style = "cursor: pointer;
+                                    margin-bottom: 5px">
+                        </div>
+                        </a>
+                    </h4>
+                    <h3 style="text-align:center">
+                        <span class="product_main_title_mobile">
+                            {product_name}
+                        </span>
+                    </h3>
+                    <div class="product_main_price_mobile">{product_price} VNĐ</div>
+                    <div class="product_main_price_en_mobile">{product_price_old}</div>                    
                 </div>
                 <!--END_PRODUCT-->
                 <!--ENDLIST_PRODUCTS-->
