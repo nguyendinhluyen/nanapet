@@ -44,17 +44,16 @@
                         font-size: 14px">
                {breadcrumbs_path}
            </div>
-        </div>
-           
+        </div>           
         <div class ="col-lg-12" style="margin-bottom: 20px">
             <div class ="col-lg-4" style="padding-left: 0px">
                 <img alt="{adver_webname}" src="{linkS}upload/adver/thumb/{adver_logo}" 
                      width = "250"
                      height="200"/>
             </div>
-            <div class ="col-lg-8" 
+            <div class ="col-lg-8"
                  style="font-family: RobotoSlabLight; ">
-                <h1 style="font-size: 14px !important;">{description_ads}</h1>
+                <h1 style="font-size: 14px !important; margin-top: 0px">{description_ads}</h1>
             </div>
         </div>
            
@@ -78,7 +77,7 @@
                                     margin-left: -3px; 
                                     margin-bottom: 30px"> 
                             <div class="product_col" style="height:500px">
-                                <img src="{linkS}upload/product/thumb/{product_img}" 
+                                <img src="{linkS}upload/product/{product_img}" 
                                      width="125"
                                      height="125" 
                                      alt="{product_name}"
@@ -110,12 +109,11 @@
                                             width: 180px">
                                    {encourage_price}
                                 </div>
-
                                 <div class="product_price" 
                                     style=" cursor: pointer;
                                             font-family:RobotoSlabRegular;
                                             font-size: 14px;
-                                            margin-top: -15px;
+                                            margin-top: -25px;
                                             color:black;
                                             text-decoration:line-through;
                                             width: 180px">
