@@ -14,7 +14,7 @@
     }
     .product_detail .textbox {
         width:200px;
-        height:230px;
+        height:220px;
         position:absolute;
         top:10px;
         left:0;
@@ -125,13 +125,13 @@
                         </div>
                         </a>
                     </h4>
-                    <h3 style="text-align:center">
-                        <span class="product_main_title_mobile">
+                    <h3 style="text-align:center; height: 50px">
+                        <span class="product_main_title">
                             {product_name}
                         </span>
                     </h3>
-                    <div class="product_main_price_mobile">{product_price} VNĐ</div>
-                    <div class="product_main_price_en_mobile">{product_price_old}</div>                    
+                    <div class="product_main_price">{product_price} VNĐ</div>
+                    <div class="product_main_price_en">{product_price_old}</div>                    
                 </div>
                 <!--END_PRODUCT-->
                 <!--ENDLIST_PRODUCTS-->

@@ -204,8 +204,6 @@ ul.nav li a.contact:focus {
 }
 
 .product_detail {
-    width: 220px;
-    height: 260px;
     float: left;
 }
 
@@ -424,7 +422,6 @@ ul li.danhmuc_sub_mobile a {
 }
 
 .product_main_price {
-    width: 200px;
     font-size: 14px;
     font-family: RobotoSlabRegular;
     text-align: center;
@@ -442,14 +439,12 @@ ul li.danhmuc_sub_mobile a {
 }
 
 .product_main_price_en {
-    width: 200px;
     font-size: 14px;
     font-family: RobotoSlabRegular;
     text-align: center;
     font-weight: 500;
     text-decoration: line-through;
     color: #646464;
-    margin-top: 5px;
 }
 
 .product_main_price_en_mobile {
