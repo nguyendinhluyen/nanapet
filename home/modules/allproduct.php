@@ -293,8 +293,9 @@
         $total = count($products_t);
     }
 
+    // pagination
     $p_now = 0;
-    $pp = 24;
+    $pp = 28;
     if (isset($page_now)) {
         $p_now = intval($page_now);
     }

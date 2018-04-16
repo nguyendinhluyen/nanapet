@@ -87,7 +87,7 @@
 
     // Navigation
     // Total products display
-    $pp = 24; 
+    $pp = 28;
     $p_now = 0;
     if (isset($page_now)) {
         $p_now = intval($page_now);
