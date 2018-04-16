@@ -217,18 +217,18 @@
         'NEWS' => $tpl
     ));
 
-    //List advs
-    $arrAdvs = GetRows('adver_id,adver_logo,adver_link', 'ads', "adver_status = 1");
-    $list_advs = '';
-    foreach ($arrAdvs as $adv) {
-        $list_advs .= '<div>'
-                . '<a rel="nofollow" target="_blank" style = "outline: none" href="{linkS}thuong-hieu/' 
-                . $adv['adver_id']. '">'
-                . '<img alt="' . $adv['adver_webname'] . '" src="{linkS}upload/adver/' 
-                . $adv['adver_logo'] . '" width = "90px" height= "70px"/>'
-                . '</a> '
-                . '</div>';
-    }
+    // List advs
+    // $arrAdvs = GetRows('adver_id,adver_logo,adver_link', 'ads', "adver_status = 1");
+    // $list_advs = '';
+    // foreach ($arrAdvs as $adv) {
+    //     $list_advs .= '<div>'
+    //             . '<a rel="nofollow" target="_blank" style = "outline: none" href="{linkS}thuong-hieu/' 
+    //             . $adv['adver_id']. '">'
+    //             . '<img alt="' . $adv['adver_webname'] . '" src="{linkS}upload/adver/' 
+    //             . $adv['adver_logo'] . '" width = "90px" height= "70px"/>'
+    //             . '</a> '
+    //             . '</div>';
+    // }
     
     // Pagination product for SEO 
     // Please check index.php for more info $link_product_navigation
@@ -268,7 +268,7 @@
         'self_total' => ((($page - 1) * $pp) + 1) 
                         . ' - ' . (((($page - 1) * $pp + $pp) <= $total) ? (($page - 1) * $pp + $pp) : $total),
         'category' => $category,
-        'list_advs' => $list_advs,
+        //'list_advs' => $list_advs,
         'category_name' => $category_name,
         'display_seo' => $display_seo,
         'text_seo' => $text_seo // Check category.php for SEO

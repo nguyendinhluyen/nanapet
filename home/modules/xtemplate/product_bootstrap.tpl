@@ -34,7 +34,7 @@
         cursor: pointer;
     }
 </style>
-<!--Begin logo slick-->
+<!--Begin logo slick
     <link rel="stylesheet" type="text/css" href="{linkS}layout/bootstrap/css/slick/slick/slick.css"/>    
     <script type="text/javascript" src="{linkS}layout/bootstrap/css/slick/slick/slick.min.js"></script>
 <!--End logo slick-->
@@ -164,7 +164,7 @@
 {pagination_mobile}
 <!-- End product mobile - tablet -->
 
-<!-- Begin Logo Slider-->
+<!-- Begin Logo Slider
 <div class = "container hidden-xs hidden-sm hidden-md">
     <div class ="row" style="margin-top: 10px">
         <div class ="col-lg-12"
