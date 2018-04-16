@@ -376,7 +376,7 @@
                         $image = renameFile($_FILES["image"]["name"], 'p-' . input($products_key) . '-' . $lastId);
                         // resize image and move to the folder 
                         if (move_uploaded_file($_FILES ["image"]["tmp_name"], _UPLOAD_IMG_THUMB . $image)) {
-                            @imagejpeg(resize(_UPLOAD_IMG_THUMB . $image, 200, 200), _UPLOAD_IMG . $image);
+                            @imagejpeg(resize(_UPLOAD_IMG_THUMB . $image, 140, 140), _UPLOAD_IMG . $image);
                             $sql = "UPDATE products
                                     SET products_image = '" . $image
                                     . "' WHERE products_id = '" . $lastId . "'";
