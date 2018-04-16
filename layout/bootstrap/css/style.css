@@ -204,6 +204,8 @@ ul.nav li a.contact:focus {
 }
 
 .product_detail {
+    width: 220px;
+    height: 260px;
     float: left;
 }
 
