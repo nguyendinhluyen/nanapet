@@ -127,13 +127,13 @@
     <body>
         <header style="padding-top: 10px;">
             <!-- begin div header-->
-            <div class ="container hidden-xs hidden-sm hidden-md">
+            <div class ="container hidden-xs hidden-sm">
                 <div class ="row"
                      style="margin-left: auto;
                             margin-right: auto;
                             display: block;
                             margin-top: 5px">
-                    <div class ="col-lg-2" style="padding-left:0px">
+                    <div class ="col-lg-2 hidden-md" style="padding-left:0px">
                         <A name="section0">
                             <img src="{linkS}layout/bootstrap/images/support_free.jpg"
                                  alt="Tư vấn miễn phí">
@@ -174,7 +174,7 @@
                                                    onclick="checkForm();">
                                         </td>
                                     </tr>
-                                    <tr>
+                                    <tr class="hidden-md">
                                         <td style="color: #a88c79;
                                                     padding-top: 15px;
                                                     font-family: RobotoSlabLight;
@@ -192,12 +192,12 @@
                             </form>
                         </div><!-- end search -->
                     </div>
-                    <div class ="col-lg-2">
+                    <div class ="col-lg-2 hidden-md">
                         <div id ="account" style="padding-left: 40px">
                             <span>{acount} </span>
                         </div>
                     </div>
-                    <div class ="col-lg-2"
+                    <div class ="col-lg-2 hidden-md"
                          style="padding-right: 0px">
                         <a href ="{linkS}gio-hang"
                            class ="hidden-xs hidden-sm"
