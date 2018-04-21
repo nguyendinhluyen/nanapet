@@ -587,3 +587,28 @@
 [23-Aug-2017 23:25:54 Asia/Ho_Chi_Minh] PHP Notice:  Undefined index: file in /home/nanapet/public_html/upload/website/thumb/image.php on line 34
 [23-Aug-2017 23:25:54 Asia/Ho_Chi_Minh] PHP Warning:  file(/home/nanapet/public_html/home/nanapet/public_html/upload/website/thumb/image.phpsite/default.jpg): failed to open stream: No such file or directory in /home/nanapet/public_html/upload/website/thumb/image.php on line 71
 [23-Aug-2017 23:25:54 Asia/Ho_Chi_Minh] PHP Warning:  join(): Invalid arguments passed in /home/nanapet/public_html/upload/website/thumb/image.php on line 71
+[07-Sep-2017 10:08:36 Asia/Ho_Chi_Minh] PHP Notice:  Undefined index: p in /home/nanapet/public_html/upload/website/thumb/image.php on line 6
+[07-Sep-2017 10:08:36 Asia/Ho_Chi_Minh] PHP Notice:  Undefined index: file in /home/nanapet/public_html/upload/website/thumb/image.php on line 31
+[07-Sep-2017 10:08:36 Asia/Ho_Chi_Minh] PHP Notice:  Undefined index: file in /home/nanapet/public_html/upload/website/thumb/image.php on line 34
+[07-Sep-2017 10:08:36 Asia/Ho_Chi_Minh] PHP Warning:  file(/home/nanapet/public_html/home/nanapet/public_html/upload/website/thumb/image.phpsite/default.jpg): failed to open stream: No such file or directory in /home/nanapet/public_html/upload/website/thumb/image.php on line 71
+[07-Sep-2017 10:08:36 Asia/Ho_Chi_Minh] PHP Warning:  join(): Invalid arguments passed in /home/nanapet/public_html/upload/website/thumb/image.php on line 71
+[30-Sep-2017 17:11:04 Asia/Ho_Chi_Minh] PHP Notice:  Undefined index: p in /home/nanapet/public_html/upload/website/thumb/image.php on line 6
+[30-Sep-2017 17:11:04 Asia/Ho_Chi_Minh] PHP Notice:  Undefined index: file in /home/nanapet/public_html/upload/website/thumb/image.php on line 31
+[30-Sep-2017 17:11:04 Asia/Ho_Chi_Minh] PHP Notice:  Undefined index: file in /home/nanapet/public_html/upload/website/thumb/image.php on line 34
+[30-Sep-2017 17:11:04 Asia/Ho_Chi_Minh] PHP Warning:  file(/home/nanapet/public_html/home/nanapet/public_html/upload/website/thumb/image.phpsite/default.jpg): failed to open stream: No such file or directory in /home/nanapet/public_html/upload/website/thumb/image.php on line 71
+[30-Sep-2017 17:11:04 Asia/Ho_Chi_Minh] PHP Warning:  join(): Invalid arguments passed in /home/nanapet/public_html/upload/website/thumb/image.php on line 71
+[29-Nov-2017 06:14:58 UTC] PHP Notice:  Undefined index: p in /home/nanapet/public_html/upload/website/thumb/image.php on line 6
+[29-Nov-2017 06:14:58 UTC] PHP Notice:  Undefined index: file in /home/nanapet/public_html/upload/website/thumb/image.php on line 31
+[29-Nov-2017 06:14:58 UTC] PHP Notice:  Undefined index: file in /home/nanapet/public_html/upload/website/thumb/image.php on line 34
+[29-Nov-2017 06:14:58 UTC] PHP Warning:  file(/home/nanapet/public_html/home/nanapet/public_html/upload/website/thumb/image.phpsite/default.jpg): failed to open stream: No such file or directory in /home/nanapet/public_html/upload/website/thumb/image.php on line 71
+[29-Nov-2017 06:14:58 UTC] PHP Warning:  join(): Invalid arguments passed in /home/nanapet/public_html/upload/website/thumb/image.php on line 71
+[07-Dec-2017 05:31:14 UTC] PHP Notice:  Undefined index: p in /home/nanapet/public_html/upload/website/thumb/image.php on line 6
+[07-Dec-2017 05:31:15 UTC] PHP Notice:  Undefined index: file in /home/nanapet/public_html/upload/website/thumb/image.php on line 31
+[07-Dec-2017 05:31:15 UTC] PHP Notice:  Undefined index: file in /home/nanapet/public_html/upload/website/thumb/image.php on line 34
+[07-Dec-2017 05:31:15 UTC] PHP Warning:  file(/home/nanapet/public_html/home/nanapet/public_html/upload/website/thumb/image.phpsite/default.jpg): failed to open stream: No such file or directory in /home/nanapet/public_html/upload/website/thumb/image.php on line 71
+[07-Dec-2017 05:31:15 UTC] PHP Warning:  join(): Invalid arguments passed in /home/nanapet/public_html/upload/website/thumb/image.php on line 71
+[13-Jan-2018 03:59:29 UTC] PHP Notice:  Undefined index: p in /home/nanapet/public_html/upload/website/thumb/image.php on line 6
+[13-Jan-2018 03:59:29 UTC] PHP Notice:  Undefined index: file in /home/nanapet/public_html/upload/website/thumb/image.php on line 31
+[13-Jan-2018 03:59:29 UTC] PHP Notice:  Undefined index: file in /home/nanapet/public_html/upload/website/thumb/image.php on line 34
+[13-Jan-2018 03:59:29 UTC] PHP Warning:  file(/home/nanapet/public_html/home/nanapet/public_html/upload/website/thumb/image.phpsite/default.jpg): failed to open stream: No such file or directory in /home/nanapet/public_html/upload/website/thumb/image.php on line 71
+[13-Jan-2018 03:59:29 UTC] PHP Warning:  join(): Invalid arguments passed in /home/nanapet/public_html/upload/website/thumb/image.php on line 71
